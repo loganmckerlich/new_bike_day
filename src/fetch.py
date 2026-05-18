@@ -38,7 +38,7 @@ def _extract_lat_lon(activity: Any) -> tuple[Optional[float], Optional[float]]:
         return _to_float(lat), _to_float(lon)
     try:
         return _to_float(latlng[0]), _to_float(latlng[1])
-    except Exception:
+    except (TypeError, IndexError, KeyError):
         return None, None
 
 

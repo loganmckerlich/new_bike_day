@@ -2,11 +2,10 @@
 
 from __future__ import annotations
 
-import argparse
 import logging
 import os
-from datetime import datetime
-from typing import Any, Dict, Optional
+import argparse
+from typing import Optional
 
 import requests
 from stravalib import Client
@@ -44,7 +43,7 @@ def ingest(db_path: str = "data/strava.db", max_activities: Optional[int] = None
             try:
                 streams = get_streams(client=client, activity_id=activity_id)
                 save_streams(conn, activity_id=activity_id, streams=streams)
-            except Exception as exc:  # pragma: no cover
+            except (requests.RequestException, ValueError, TypeError, KeyError) as exc:
                 logging.warning("Unable to fetch streams for activity %s: %s", activity_id, exc)
 
             lat = activity.get("start_lat")
