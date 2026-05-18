@@ -69,9 +69,13 @@ def ingest(data_path: str = "data/activities.csv", max_activities: Optional[int]
 
         try:
             streams = get_streams(client=client, activity_id=activity_id)
-            row["streams_json"] = json.dumps(streams)
         except requests.RequestException as exc:
             logging.warning("Unable to fetch streams for activity %s: %s", activity_id, exc)
+        else:
+            try:
+                row["streams_json"] = json.dumps(streams)
+            except (TypeError, ValueError) as exc:
+                logging.warning("Unable to serialize streams for activity %s: %s", activity_id, exc)
 
         lat = activity.get("start_lat")
         lon = activity.get("start_lon")
