@@ -16,7 +16,6 @@ new-bike-day/
 │   ├── auth.py
 │   ├── fetch.py
 │   ├── weather.py
-│   ├── database.py
 │   └── ingest.py
 ├── app/streamlit_app.py
 └── tests/
@@ -46,10 +45,10 @@ new-bike-day/
 
 ## Ingestion
 
-Run the ingestion script to refresh a token, fetch activities and streams, enrich weather, and write to SQLite:
+Run the ingestion script to refresh a token, fetch activities and streams, enrich weather, and write to a CSV file:
 
 ```bash
-python src/ingest.py --db-path data/strava.db
+python src/ingest.py --data-path data/activities.csv
 ```
 
 Optional arguments:

@@ -3,18 +3,17 @@
 from __future__ import annotations
 
 from pathlib import Path
-import sqlite3
 
 import pandas as pd
 import streamlit as st
 
 
-def load_data(db_path: str = "data/strava.db") -> pd.DataFrame:
-    """Load activities data for display from SQLite."""
-    if not Path(db_path).exists():
+@st.cache_data
+def load_data(data_path: str = "data/activities.csv") -> pd.DataFrame:
+    """Load activities data for display from a cached CSV file."""
+    if not Path(data_path).exists():
         return pd.DataFrame()
-    with sqlite3.connect(db_path) as conn:
-        return pd.read_sql_query("SELECT * FROM activities", conn)
+    return pd.read_csv(data_path)
 
 
 def main() -> None:
@@ -22,7 +21,7 @@ def main() -> None:
     st.set_page_config(page_title="New Bike Day", layout="wide")
     st.title("🚴 New Bike Day")
     st.caption("Compare ride performance between bikes using Strava data.")
-    st.info("Run `python src/ingest.py` first to populate `data/strava.db`.")
+    st.info("Run `python src/ingest.py` first to populate `data/activities.csv`.")
 
     data = load_data()
     if data.empty:
