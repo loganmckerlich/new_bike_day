@@ -139,7 +139,7 @@ def save_weather(conn: sqlite3.Connection, activity_id: int, weather: Dict[str, 
 def load_activities(conn: sqlite3.Connection, gear_id: Optional[str] = None) -> pd.DataFrame:
     """Load all stored activities or only those for a given gear ID."""
     query = "SELECT * FROM activities"
-    params: tuple[Any, ...] = ()
+    params: Optional[tuple[Any, ...]] = None
     if gear_id:
         query += " WHERE gear_id = ?"
         params = (gear_id,)
