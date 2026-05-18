@@ -10,10 +10,16 @@ from typing import Optional
 import requests
 from stravalib import Client
 
-from auth import get_access_token
-from database import activity_exists, get_connection, init_db, save_activities, save_streams, save_weather
-from fetch import get_activities, get_streams
-from weather import get_weather
+try:
+    from .auth import get_access_token
+    from .database import activity_exists, get_connection, init_db, save_activities, save_streams, save_weather
+    from .fetch import get_activities, get_streams
+    from .weather import get_weather
+except ImportError:  # pragma: no cover
+    from auth import get_access_token
+    from database import activity_exists, get_connection, init_db, save_activities, save_streams, save_weather
+    from fetch import get_activities, get_streams
+    from weather import get_weather
 
 
 def ingest(db_path: str = "data/strava.db", max_activities: Optional[int] = None) -> int:
