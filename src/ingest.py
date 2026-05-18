@@ -31,6 +31,10 @@ def ingest(db_path: str = "data/strava.db", max_activities: Optional[int] = None
 
     Returns:
         Number of newly inserted activities.
+
+    Notes:
+        Existing activities are skipped based on `activity_id` in SQLite, so repeated
+        runs do not duplicate already ingested activity rows.
     """
     access_token = get_access_token()
     client = Client(access_token=access_token)
