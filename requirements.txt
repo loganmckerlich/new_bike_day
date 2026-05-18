@@ -1,0 +1,11 @@
+stravalib
+requests
+pandas
+numpy
+scipy
+pymc
+matplotlib
+seaborn
+plotly
+streamlit
+python-dotenv
