@@ -153,7 +153,7 @@ def main() -> None:
                         max_activities=selected_max_activities,
                     )
                 except PremiumOnlyError as exc:
-                    st.error(f"Premium Membership Required: {exc}")
+                    st.error(str(exc))
                     return
                 except (requests.RequestException, ValueError) as exc:
                     st.error(f"Unable to process data: {exc}")
@@ -186,7 +186,7 @@ def main() -> None:
                     max_activities=selected_max_activities,
                 )
             except PremiumOnlyError as exc:
-                st.error(f"Premium Membership Required: {exc}")
+                st.error(str(exc))
                 return
             except (requests.RequestException, ValueError) as exc:
                 st.error(f"Unable to process data: {exc}")
