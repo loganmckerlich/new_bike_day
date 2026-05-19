@@ -135,7 +135,7 @@ def get_gear(client: Client, gear_id: str) -> Dict[str, Any]:
     strava_total_miles = round(raw_distance * _METERS_TO_MILES, 1) if raw_distance is not None else None
 
     weight_kg = _to_float(getattr(gear, "weight", None))
-    weight_lbs = round(weight_kg * _KG_TO_LBS, 1) if weight_kg else None
+    weight_lbs = round(weight_kg * _KG_TO_LBS, 1) if weight_kg is not None else None
 
     def _clean(val: Any) -> Optional[str]:
         s = str(val or "").strip()
