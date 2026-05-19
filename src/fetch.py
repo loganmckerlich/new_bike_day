@@ -16,7 +16,10 @@ _PREMIUM_ONLY_ERROR_MESSAGE: str = (
 
 
 class PremiumOnlyError(Exception):
-    """Raised when API endpoints require Strava premium membership."""
+    """Raised when API endpoints require Strava premium membership.
+
+    The error message will be: `_PREMIUM_ONLY_ERROR_MESSAGE`
+    """
 
 
 # Segment classification thresholds
