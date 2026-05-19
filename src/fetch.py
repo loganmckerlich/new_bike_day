@@ -115,6 +115,11 @@ def get_starred_segments(access_token: str) -> pd.DataFrame:
             break
 
         for seg in data:
+            # Only include cycling segments (skip if activity_type is explicitly non-cycling)
+            activity_type: str = seg.get("activity_type") or ""
+            if activity_type and activity_type.lower() not in {"ride", "cycling"}:
+                continue
+
             distance: Optional[float] = seg.get("distance")
             average_grade: Optional[float] = seg.get("average_grade")
             start_latlng: list[float] = seg.get("start_latlng") or []

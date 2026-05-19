@@ -19,17 +19,14 @@ if str(_REPO_ROOT) not in sys.path:
 from src.auth import exchange_code_for_token, get_authorization_url
 from src.fetch import ingest_all, PremiumOnlyError
 
-DEFAULT_MAX_ACTIVITIES = 2000
-
 
 def _process_data(
     access_token: str,
-    max_activities: int,
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str]]:
     """Fetch bikes, activities, starred segments and efforts from Strava."""
     progress = st.progress(0, text="Starting…")
     progress.progress(20, text="Fetching data from Strava (bikes, activities, segments, efforts)…")
-    result = ingest_all(access_token, max_activities=max_activities)
+    result = ingest_all(access_token)
     progress.progress(100, text="Complete.")
     return result["efforts"], result["segments"], result.get("bikes", {})
 
@@ -131,16 +128,44 @@ def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame, bikes:
     if not segments.empty:
         st.markdown("---")
         st.subheader("⭐ Starred Segments")
+
+        # Build attempts data from efforts
+        seg_display = segments.copy()
+        if not efforts.empty and "segment_id" in efforts.columns:
+            # Total attempts per segment
+            total_attempts = (
+                efforts.groupby("segment_id")["effort_id"].count().rename("Total Attempts")
+            )
+            seg_display = seg_display.merge(total_attempts, on="segment_id", how="left")
+
+            # Per-bike attempts (using bike names)
+            if "gear_id" in efforts.columns:
+                bike_attempts = (
+                    efforts.groupby(["segment_id", "gear_id"])["effort_id"]
+                    .count()
+                    .unstack(fill_value=0)
+                )
+                bike_attempts.columns = [
+                    _gear_label(c, bikes) for c in bike_attempts.columns
+                ]
+                seg_display = seg_display.merge(bike_attempts, on="segment_id", how="left")
+
         preferred_seg = [
             "name", "segment_type", "distance", "average_grade",
             "climb_category", "total_elevation_gain",
         ]
-        display_cols = [c for c in preferred_seg if c in segments.columns]
-        seg_display = segments[display_cols].copy()
+        _internal_cols = {"segment_id", "start_lat", "start_lng"}
+        display_cols = [c for c in preferred_seg if c in seg_display.columns]
+        # Append attempts columns (everything not in the preferred list or internal-only columns)
+        attempts_cols = [c for c in seg_display.columns if c not in preferred_seg and c not in _internal_cols]
+        display_cols = display_cols + attempts_cols
+
+        seg_display = seg_display[display_cols].copy()
         if "distance" in seg_display.columns:
             seg_display["distance"] = (seg_display["distance"] / 1000).round(2).astype(str) + " km"
         if "average_grade" in seg_display.columns:
             seg_display["average_grade"] = seg_display["average_grade"].round(1).astype(str) + "%"
+        # Apply title-casing to all columns (bike name columns from _gear_label are already readable)
         seg_display.columns = [c.replace("_", " ").title() for c in seg_display.columns]
         st.dataframe(seg_display, use_container_width=True, hide_index=True)
 
@@ -150,13 +175,11 @@ def _save_session(
     segments: pd.DataFrame,
     bikes: dict[str, str],
     code: str | None,
-    max_activities: int,
     access_token: str,
 ) -> None:
     st.session_state["efforts"] = data
     st.session_state["segments"] = segments
     st.session_state["bikes"] = bikes
-    st.session_state["last_loaded_max_activities"] = max_activities
     st.session_state["access_token"] = access_token
     if code:
         st.session_state["last_processed_code"] = code
@@ -194,25 +217,16 @@ def main() -> None:
 
     code_from_params = st.query_params.get("code")
     error_from_params = st.query_params.get("error")
-    max_activities = st.number_input(
-        "Max Activities to Load",
-        min_value=1,
-        max_value=10000,
-        value=DEFAULT_MAX_ACTIVITIES,
-        help="Limit how many recent activities are fetched from Strava.",
-    )
 
     if error_from_params:
         st.error(f"Strava authorization failed: {error_from_params}")
         return
 
     code = _query_param_value(code_from_params)
-    selected_max_activities = int(max_activities)
 
     if code:
         last_processed_code = st.session_state.get("last_processed_code")
-        last_loaded_max_activities = st.session_state.get("last_loaded_max_activities")
-        should_process = code != last_processed_code or last_loaded_max_activities != selected_max_activities
+        should_process = code != last_processed_code
         if should_process:
             with st.spinner("Fetching your Strava data…"):
                 try:
@@ -221,7 +235,6 @@ def main() -> None:
                         access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
                     data, gear_frame, bikes = _process_data(
                         access_token=access_token,
-                        max_activities=selected_max_activities,
                     )
                 except PremiumOnlyError as exc:
                     st.error(str(exc))
@@ -229,7 +242,7 @@ def main() -> None:
                 except (requests.RequestException, ValueError) as exc:
                     st.error(f"Unable to process data: {exc}")
                     return
-            _save_session(data, gear_frame, bikes, code, selected_max_activities, access_token)
+            _save_session(data, gear_frame, bikes, code, access_token)
             with status_col:
                 st.success("✅ Connected to Strava — data loaded!")
         else:
@@ -259,7 +272,6 @@ def main() -> None:
                 try:
                     data, gear_frame, bikes = _process_data(
                         access_token=access_token,
-                        max_activities=selected_max_activities,
                     )
                 except PremiumOnlyError as exc:
                     st.error(str(exc))
@@ -267,7 +279,7 @@ def main() -> None:
                 except (requests.RequestException, ValueError) as exc:
                     st.error(f"Unable to process data: {exc}")
                     return
-            _save_session(data, gear_frame, bikes, code, selected_max_activities, access_token)
+            _save_session(data, gear_frame, bikes, code, access_token)
             st.success("Activities reloaded.")
 
     data = st.session_state.get("efforts")
