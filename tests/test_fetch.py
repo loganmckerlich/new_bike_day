@@ -77,7 +77,18 @@ class GetAthleteActivitiesTests(unittest.TestCase):
 
     @patch("src.fetch.requests.get")
     def test_max_activities_limits_fetch(self, mock_get: MagicMock) -> None:
-        page1 = [{"id": i, "sport_type": "Ride", "average_watts": 200.0, "device_watts": True, "gear_id": "b1", "name": f"Ride {i}", "start_date": "2024-01-01T00:00:00Z"} for i in range(1, 4)]
+        page1 = [
+            {
+                "id": i,
+                "sport_type": "Ride",
+                "average_watts": 200.0,
+                "device_watts": True,
+                "gear_id": "b1",
+                "name": f"Ride {i}",
+                "start_date": "2024-01-01T00:00:00Z",
+            }
+            for i in range(1, 4)
+        ]
         mock_get.return_value = _mock_response(page1)
         # max_activities=3 should fetch exactly one batch of 3 and stop
         result = get_athlete_activities("token", max_activities=3)
