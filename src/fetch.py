@@ -1,4 +1,4 @@
-"""Data fetching helpers for Strava segment-first architecture."""
+"""Data fetching helpers for Strava API."""
 
 from __future__ import annotations
 
@@ -12,6 +12,20 @@ _STRAVA_API_BASE: str = "https://www.strava.com/api/v3"
 _PREMIUM_ONLY_ERROR_MESSAGE: str = (
     "This feature requires a Strava premium membership. "
     "The segment data endpoints used by this tool are only available to premium members."
+)
+
+# Strava sport types that represent cycling activities.
+_BIKE_SPORT_TYPES: frozenset[str] = frozenset(
+    {
+        "Ride",
+        "MountainBikeRide",
+        "GravelRide",
+        "VirtualRide",
+        "EBikeRide",
+        "EMountainBikeRide",
+        "Handcycle",
+        "Velomobile",
+    }
 )
 
 
@@ -137,9 +151,10 @@ def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
 
     Returns:
         DataFrame with columns: ``effort_id``, ``segment_id``,
-        ``start_date``, ``elapsed_time``, ``moving_time``,
-        ``average_watts``, ``average_heartrate``, ``gear_id``.
-        ``gear_id`` is sourced from ``activity.gear_id`` on each effort.
+        ``activity_id``, ``start_date``, ``elapsed_time``, ``moving_time``,
+        ``average_watts``, ``average_heartrate``.
+        ``gear_id`` is resolved later by joining against the activities dict
+        (see :func:`ingest_all`).
 
     Raises:
         PremiumOnlyError: If the endpoint returns a 402 Payment Required error,
@@ -175,12 +190,12 @@ def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
                 {
                     "effort_id": effort.get("id"),
                     "segment_id": segment_id,
+                    "activity_id": activity.get("id"),
                     "start_date": effort.get("start_date"),
                     "elapsed_time": effort.get("elapsed_time"),
                     "moving_time": effort.get("moving_time"),
                     "average_watts": effort.get("average_watts"),
                     "average_heartrate": effort.get("average_heartrate"),
-                    "gear_id": activity.get("gear_id"),
                 }
             )
 
@@ -304,6 +319,86 @@ def get_segment_streams(access_token: str, segment_id: int) -> dict[str, list[fl
     return {"distance": distances, "altitude": altitudes}
 
 
+def get_athlete_activities(
+    access_token: str,
+    max_activities: Optional[int] = None,
+) -> dict[int, dict[str, Any]]:
+    """Fetch bike activities that have power data for the authenticated athlete.
+
+    Paginates ``GET /athlete/activities`` and filters client-side to only
+    activities whose ``sport_type`` is one of the known cycling types **and**
+    that contain power data (``average_watts > 0`` or ``device_watts`` is
+    ``True``).
+
+    Args:
+        access_token: Valid Strava OAuth access token.
+        max_activities: Upper bound on the total number of activities fetched
+            from the API before filtering.  ``None`` means no limit (fetch
+            everything).
+
+    Returns:
+        A dict mapping ``activity_id`` (``int``) to a dict with keys:
+        ``gear_id`` (``str | None``), ``name`` (``str``),
+        ``start_date`` (``str``), ``average_watts`` (``float | None``).
+    """
+    url = f"{_STRAVA_API_BASE}/athlete/activities"
+    headers = _auth_headers(access_token)
+    activities: dict[int, dict[str, Any]] = {}
+    page = 1
+    per_page = 200
+    fetched = 0
+
+    while True:
+        batch_size = per_page
+        if max_activities is not None:
+            remaining = max_activities - fetched
+            if remaining <= 0:
+                break
+            batch_size = min(per_page, remaining)
+
+        resp = requests.get(
+            url,
+            headers=headers,
+            params={"page": page, "per_page": batch_size},
+            timeout=30,
+        )
+        resp.raise_for_status()
+
+        data: list[dict[str, Any]] = resp.json()
+        if not data:
+            break
+
+        fetched += len(data)
+
+        for act in data:
+            sport_type: str = act.get("sport_type") or act.get("type") or ""
+            if sport_type not in _BIKE_SPORT_TYPES:
+                continue
+
+            average_watts: Optional[float] = act.get("average_watts")
+            device_watts: bool = bool(act.get("device_watts"))
+            has_power = (average_watts is not None and average_watts > 0) or device_watts
+            if not has_power:
+                continue
+
+            activity_id = act.get("id")
+            if activity_id is None:
+                continue
+
+            activities[int(activity_id)] = {
+                "gear_id": act.get("gear_id"),
+                "name": act.get("name") or "",
+                "start_date": act.get("start_date") or "",
+                "average_watts": average_watts,
+            }
+
+        if len(data) < batch_size:
+            break
+        page += 1
+
+    return activities
+
+
 def get_athlete_bikes(access_token: str) -> dict[str, str]:
     """Fetch the authenticated athlete's bikes and return a gear_id → name mapping.
 
@@ -331,25 +426,44 @@ def get_athlete_bikes(access_token: str) -> dict[str, str]:
     }
 
 
-def ingest_all(access_token: str) -> dict[str, pd.DataFrame | dict[str, str]]:
-    """Ingest all starred segments, their efforts, and athlete bikes from Strava.
+def ingest_all(
+    access_token: str,
+    max_activities: Optional[int] = None,
+) -> dict[str, pd.DataFrame | dict[str, str]]:
+    """Ingest all data needed to compare segment efforts by bike.
 
-    Fetches every starred segment, then fetches efforts for each one,
-    sleeping one second between effort calls to respect Strava rate limits.
-    Also fetches the athlete's bikes for gear name resolution.
+    Follows the ordered API flow:
+
+    1. ``GET /athlete`` — fetch the athlete's bike inventory.
+    2. ``GET /athlete/activities`` — fetch cycling activities that have power
+       data; build an ``activity_id → gear_id`` lookup.
+    3. ``GET /segments/starred`` — fetch the athlete's starred segments.
+    4. ``GET /segment_efforts`` — fetch efforts for every starred segment.
+    5. Join efforts to activities on ``activity_id`` to resolve ``gear_id``.
 
     Args:
         access_token: Valid Strava OAuth access token.
+        max_activities: Upper bound on the number of activities fetched before
+            filtering (passed through to :func:`get_athlete_activities`).
 
     Returns:
         A dict with keys:
-        - ``"segments"``: :class:`pandas.DataFrame` of starred segments.
-        - ``"efforts"``: :class:`pandas.DataFrame` of all efforts.
         - ``"bikes"``: ``dict[str, str]`` mapping gear_id to bike name.
+        - ``"segments"``: :class:`pandas.DataFrame` of starred segments.
+        - ``"efforts"``: :class:`pandas.DataFrame` of all efforts, with a
+          ``gear_id`` column resolved from the power-filtered activities.
     """
-    segments_df = get_starred_segments(access_token)
-    all_efforts: list[pd.DataFrame] = []
+    # Step 1: bike inventory
+    bikes = get_athlete_bikes(access_token)
 
+    # Step 2: cycling activities with power — build activity_id → gear_id map
+    activities = get_athlete_activities(access_token, max_activities=max_activities)
+
+    # Step 3: starred segments
+    segments_df = get_starred_segments(access_token)
+
+    # Step 4: segment efforts for each starred segment
+    all_efforts: list[pd.DataFrame] = []
     if not segments_df.empty:
         for segment_id in segments_df["segment_id"]:
             efforts_df = get_segment_efforts(access_token, int(segment_id))
@@ -358,5 +472,13 @@ def ingest_all(access_token: str) -> dict[str, pd.DataFrame | dict[str, str]]:
             time.sleep(1)
 
     efforts = pd.concat(all_efforts, ignore_index=True) if all_efforts else pd.DataFrame()
-    bikes = get_athlete_bikes(access_token)
-    return {"segments": segments_df, "efforts": efforts, "bikes": bikes}
+
+    # Step 5: resolve gear_id from the activities lookup
+    if not efforts.empty and activities:
+        efforts["gear_id"] = efforts["activity_id"].map(
+            lambda aid: activities.get(int(aid), {}).get("gear_id") if pd.notna(aid) else None
+        )
+    elif not efforts.empty:
+        efforts["gear_id"] = None
+
+    return {"bikes": bikes, "segments": segments_df, "efforts": efforts}
