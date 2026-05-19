@@ -33,6 +33,7 @@ new-bike-day/
     - `STRAVA_CLIENT_ID`
     - `STRAVA_CLIENT_SECRET`
     - `STRAVA_REDIRECT_URI` (example: `http://localhost:8501`)
+    - `STRAVA_ACCESS_TOKEN` (optional, used by **Reload Activities**)
 
 ## Strava API Credentials
 
@@ -51,9 +52,9 @@ streamlit run app/streamlit_app.py
 
 At app startup:
 
-1. Enter your Strava client ID/secret and redirect URI (or preload from `.env`).
+1. Configure `.env` with your Strava client ID, client secret, and redirect URI.
 2. Click **Sign in with Strava SSO**.
-3. Authorize and return with a `code`.
-4. Click **Process Data** to fetch, process, and analyze data in memory.
+3. Authorize Strava access and return to the app.
+4. The app automatically exchanges the returned code and loads activity data in memory.
 
 Data is not persisted and will reset with app/session restarts.
