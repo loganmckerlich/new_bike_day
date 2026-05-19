@@ -24,12 +24,13 @@ DEFAULT_MAX_ACTIVITIES = 2000
 
 def _process_data(
     access_token: str,
-    max_activities: int,  # noqa: ARG001 — kept for signature compatibility
+    max_activities: int,
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str]]:
-    """Fetch starred segments, all efforts, and bike names from Strava."""
+    """Fetch bikes, activities, starred segments and efforts from Strava."""
     progress = st.progress(0, text="Starting…")
-    progress.progress(20, text="Fetching starred segments and efforts from Strava…")
-    result = ingest_all(access_token)
+    progress.progress(10, text="Fetching bike list…")
+    progress.progress(20, text="Fetching cycling activities with power data…")
+    result = ingest_all(access_token, max_activities=max_activities)
     progress.progress(100, text="Complete.")
     return result["efforts"], result["segments"], result.get("bikes", {})
 
