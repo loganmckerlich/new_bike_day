@@ -16,9 +16,12 @@ _PREMIUM_ONLY_ERROR_MESSAGE: str = (
 
 
 class PremiumOnlyError(Exception):
-    """Raised when API endpoints require Strava premium membership.
+    """Raised when a 402 Payment Required response is received from Strava API.
 
-    The error message will be: `_PREMIUM_ONLY_ERROR_MESSAGE`
+    This occurs when segment data endpoints are accessed by non-premium Strava users,
+    as these endpoints are only available to premium members. The error message
+    from this exception should be displayed to the user to explain that a premium
+    membership is required.
     """
 
 
