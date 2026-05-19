@@ -14,9 +14,9 @@ from dotenv import load_dotenv
 from stravalib import Client
 
 # Ensure `src` imports work when launching Streamlit from different working directories.
-REPO_ROOT = Path(__file__).resolve().parents[1]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 from src.auth import exchange_code_for_token, get_authorization_url
 from src.fetch import get_activities

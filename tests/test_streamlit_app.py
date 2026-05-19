@@ -6,7 +6,7 @@ from app.streamlit_app import _normalized_redirect_uri
 
 
 class RedirectUriNormalizationTests(unittest.TestCase):
-    def test_empty_or_whitespace_falls_back_to_localhost_root(self) -> None:
+    def test_empty_or_whitespace_returns_localhost_root(self) -> None:
         self.assertEqual(_normalized_redirect_uri(""), "http://localhost:8501/")
         self.assertEqual(_normalized_redirect_uri("   "), "http://localhost:8501/")
 
