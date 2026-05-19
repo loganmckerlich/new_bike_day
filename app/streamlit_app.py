@@ -16,7 +16,7 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from src.auth import exchange_code_for_token, get_authorization_url
-from src.fetch import ingest_all
+from src.fetch import ingest_all, PremiumOnlyError
 
 DEFAULT_MAX_ACTIVITIES = 2000
 
@@ -152,6 +152,9 @@ def main() -> None:
                         access_token=access_token,
                         max_activities=selected_max_activities,
                     )
+                except PremiumOnlyError as exc:
+                    st.error(f"Premium Membership Required: {exc}")
+                    return
                 except (requests.RequestException, ValueError) as exc:
                     st.error(f"Unable to process data: {exc}")
                     return
@@ -182,6 +185,9 @@ def main() -> None:
                     access_token=access_token,
                     max_activities=selected_max_activities,
                 )
+            except PremiumOnlyError as exc:
+                st.error(f"Premium Membership Required: {exc}")
+                return
             except (requests.RequestException, ValueError) as exc:
                 st.error(f"Unable to process data: {exc}")
                 return
