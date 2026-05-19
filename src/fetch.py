@@ -86,7 +86,7 @@ def get_starred_segments(access_token: str) -> pd.DataFrame:
             )
             resp.raise_for_status()
         except requests.exceptions.HTTPError as exc:
-            if exc.response.status_code == 402:
+            if exc.response is not None and exc.response.status_code == 402:
                 raise PremiumOnlyError(_PREMIUM_ONLY_ERROR_MESSAGE) from exc
             raise
 
@@ -155,7 +155,7 @@ def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
             )
             resp.raise_for_status()
         except requests.exceptions.HTTPError as exc:
-            if exc.response.status_code == 402:
+            if exc.response is not None and exc.response.status_code == 402:
                 raise PremiumOnlyError(_PREMIUM_ONLY_ERROR_MESSAGE) from exc
             raise
 
