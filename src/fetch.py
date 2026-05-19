@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import time
-from typing import Any, Optional
+from typing import Any, Callable, Optional
 
 import pandas as pd
 import requests
@@ -434,6 +434,7 @@ def get_athlete_bikes(access_token: str) -> dict[str, str]:
 def ingest_all(
     access_token: str,
     max_activities: Optional[int] = None,
+    progress_callback: Optional[Callable[[str, int], None]] = None,
 ) -> dict[str, pd.DataFrame | dict[str, str]]:
     """Ingest all data needed to compare segment efforts by bike.
 
@@ -450,6 +451,9 @@ def ingest_all(
         access_token: Valid Strava OAuth access token.
         max_activities: Upper bound on the number of activities fetched before
             filtering (passed through to :func:`get_athlete_activities`).
+        progress_callback: Optional callable ``(message, percent)`` invoked at
+            key steps so callers can display a progress bar or log progress.
+            ``percent`` is an integer in ``[0, 100]``.
 
     Returns:
         A dict with keys:
@@ -458,24 +462,41 @@ def ingest_all(
         - ``"efforts"``: :class:`pandas.DataFrame` of all efforts, with a
           ``gear_id`` column resolved from the power-filtered activities.
     """
+
+    def _progress(msg: str, pct: int) -> None:
+        if progress_callback is not None:
+            progress_callback(msg, pct)
+
     # Step 1: bike inventory
+    _progress("🚴 GET /athlete — fetching your bike inventory…", 5)
     bikes = get_athlete_bikes(access_token)
 
     # Step 2: cycling activities with power — build activity_id → gear_id map
+    _progress("📋 GET /athlete/activities — fetching cycling activities with power data…", 15)
     activities = get_athlete_activities(access_token, max_activities=max_activities)
 
     # Step 3: starred segments
+    _progress("⭐ GET /segments/starred — fetching your starred segments…", 38)
     segments_df = get_starred_segments(access_token)
 
     # Step 4: segment efforts for each starred segment
     all_efforts: list[pd.DataFrame] = []
     if not segments_df.empty:
-        for segment_id in segments_df["segment_id"]:
+        n_segments = len(segments_df)
+        segment_names: dict = segments_df.set_index("segment_id")["name"].to_dict()
+        for i, segment_id in enumerate(segments_df["segment_id"]):
+            seg_name = segment_names.get(segment_id, str(segment_id))
+            pct = 42 + (int(50 * i / n_segments) if n_segments > 0 else 0)
+            _progress(
+                f"💪 GET /segment_efforts — '{seg_name}' ({i + 1} of {n_segments})…",
+                pct,
+            )
             efforts_df = get_segment_efforts(access_token, int(segment_id))
             if not efforts_df.empty:
                 all_efforts.append(efforts_df)
             time.sleep(1)
 
+    _progress("🔗 Joining effort data with activity info…", 93)
     efforts = pd.concat(all_efforts, ignore_index=True) if all_efforts else pd.DataFrame()
 
     # Step 5: resolve gear_id from the activities lookup

@@ -1,0 +1,79 @@
+[
+  {
+    "effort_id": 200001,
+    "segment_id": 100001,
+    "activity_id": 300001,
+    "start_date": "2024-01-15T09:30:00Z",
+    "elapsed_time": 520,
+    "moving_time": 515,
+    "average_watts": 245.0,
+    "average_heartrate": 162.0,
+    "gear_id": "b111111"
+  },
+  {
+    "effort_id": 200002,
+    "segment_id": 100001,
+    "activity_id": 300005,
+    "start_date": "2024-02-20T10:00:00Z",
+    "elapsed_time": 510,
+    "moving_time": 505,
+    "average_watts": 252.0,
+    "average_heartrate": 165.0,
+    "gear_id": "b111111"
+  },
+  {
+    "effort_id": 200003,
+    "segment_id": 100001,
+    "activity_id": 300008,
+    "start_date": "2024-03-10T08:45:00Z",
+    "elapsed_time": 545,
+    "moving_time": 540,
+    "average_watts": 238.0,
+    "average_heartrate": 158.0,
+    "gear_id": "b222222"
+  },
+  {
+    "effort_id": 200004,
+    "segment_id": 100002,
+    "activity_id": 300001,
+    "start_date": "2024-01-15T09:05:00Z",
+    "elapsed_time": 32,
+    "moving_time": 32,
+    "average_watts": 580.0,
+    "average_heartrate": 185.0,
+    "gear_id": "b111111"
+  },
+  {
+    "effort_id": 200005,
+    "segment_id": 100002,
+    "activity_id": 300008,
+    "start_date": "2024-03-10T08:20:00Z",
+    "elapsed_time": 34,
+    "moving_time": 34,
+    "average_watts": 565.0,
+    "average_heartrate": 183.0,
+    "gear_id": "b222222"
+  },
+  {
+    "effort_id": 200006,
+    "segment_id": 100003,
+    "activity_id": 300003,
+    "start_date": "2024-02-05T11:00:00Z",
+    "elapsed_time": 420,
+    "moving_time": 418,
+    "average_watts": 195.0,
+    "average_heartrate": 148.0,
+    "gear_id": "b111111"
+  },
+  {
+    "effort_id": 200007,
+    "segment_id": 100003,
+    "activity_id": 300008,
+    "start_date": "2024-03-10T09:15:00Z",
+    "elapsed_time": 415,
+    "moving_time": 413,
+    "average_watts": 201.0,
+    "average_heartrate": 150.0,
+    "gear_id": "b222222"
+  }
+]
