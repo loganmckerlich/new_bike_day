@@ -9,6 +9,21 @@ import pandas as pd
 import requests
 
 _STRAVA_API_BASE: str = "https://www.strava.com/api/v3"
+_PREMIUM_ONLY_ERROR_MESSAGE: str = (
+    "This feature requires a Strava premium membership. "
+    "The segment data endpoints used by this tool are only available to premium members."
+)
+
+
+class PremiumOnlyError(Exception):
+    """Raised when a 402 Payment Required response is received from Strava API.
+
+    This occurs when segment data endpoints are accessed by non-premium Strava users,
+    as these endpoints are only available to premium members. The error message
+    from this exception should be displayed to the user to explain that a premium
+    membership is required.
+    """
+
 
 # Segment classification thresholds
 _SPRINT_MAX_DISTANCE: float = 500.0   # metres
@@ -56,6 +71,10 @@ def get_starred_segments(access_token: str) -> pd.DataFrame:
         DataFrame with columns: ``segment_id``, ``name``, ``distance``,
         ``average_grade``, ``climb_category``, ``total_elevation_gain``,
         ``start_lat``, ``start_lng``, ``segment_type``.
+
+    Raises:
+        PremiumOnlyError: If the endpoint returns a 402 Payment Required error,
+            indicating the user needs Strava premium membership.
     """
     url = f"{_STRAVA_API_BASE}/segments/starred"
     headers = _auth_headers(access_token)
@@ -64,13 +83,19 @@ def get_starred_segments(access_token: str) -> pd.DataFrame:
     per_page = 200
 
     while True:
-        resp = requests.get(
-            url,
-            headers=headers,
-            params={"page": page, "per_page": per_page},
-            timeout=30,
-        )
-        resp.raise_for_status()
+        try:
+            resp = requests.get(
+                url,
+                headers=headers,
+                params={"page": page, "per_page": per_page},
+                timeout=30,
+            )
+            resp.raise_for_status()
+        except requests.exceptions.HTTPError as exc:
+            if exc.response is not None and exc.response.status_code == 402:
+                raise PremiumOnlyError(_PREMIUM_ONLY_ERROR_MESSAGE) from exc
+            raise
+
         data: list[dict[str, Any]] = resp.json()
         if not data:
             break
@@ -115,6 +140,10 @@ def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
         ``start_date``, ``elapsed_time``, ``moving_time``,
         ``average_watts``, ``average_heartrate``, ``gear_id``.
         ``gear_id`` is sourced from ``activity.gear_id`` on each effort.
+
+    Raises:
+        PremiumOnlyError: If the endpoint returns a 402 Payment Required error,
+            indicating the user needs Strava premium membership.
     """
     url = f"{_STRAVA_API_BASE}/segment_efforts"
     headers = _auth_headers(access_token)
@@ -123,13 +152,19 @@ def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
     per_page = 200
 
     while True:
-        resp = requests.get(
-            url,
-            headers=headers,
-            params={"segment_id": segment_id, "page": page, "per_page": per_page},
-            timeout=30,
-        )
-        resp.raise_for_status()
+        try:
+            resp = requests.get(
+                url,
+                headers=headers,
+                params={"segment_id": segment_id, "page": page, "per_page": per_page},
+                timeout=30,
+            )
+            resp.raise_for_status()
+        except requests.exceptions.HTTPError as exc:
+            if exc.response is not None and exc.response.status_code == 402:
+                raise PremiumOnlyError(_PREMIUM_ONLY_ERROR_MESSAGE) from exc
+            raise
+
         data: list[dict[str, Any]] = resp.json()
         if not data:
             break
