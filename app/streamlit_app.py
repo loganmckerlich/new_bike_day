@@ -108,8 +108,8 @@ def main() -> None:
     if code:
         last_processed_code = st.session_state.get("last_processed_code")
         last_loaded_max_activities = st.session_state.get("last_loaded_max_activities")
-        should_reload = code != last_processed_code or last_loaded_max_activities != selected_max_activities
-        if should_reload:
+        should_process = code != last_processed_code or last_loaded_max_activities != selected_max_activities
+        if should_process:
             with st.spinner("Working…"):
                 try:
                     access_token = st.session_state.get("access_token")
@@ -126,7 +126,9 @@ def main() -> None:
             st.session_state["last_processed_code"] = code
             st.session_state["last_loaded_max_activities"] = selected_max_activities
             st.session_state["access_token"] = access_token
-        st.success("Strava validated. Activities loaded.")
+            st.success("Strava validated. Activities loaded.")
+        else:
+            st.info("Using already-loaded activities for this authorization and activity limit.")
     else:
         st.info("Click Sign in with Strava SSO, authorize access, and return here to auto-load data.")
 
