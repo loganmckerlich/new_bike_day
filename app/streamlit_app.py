@@ -52,7 +52,7 @@ def _process_data(
 
     progress.progress(90, text="Running algorithms…")
     if not frame.empty:
-        frame["speed_to_power_ratio"] = frame["avg_speed_kph"] / frame["average_watts"].replace({0: pd.NA})
+        frame["kph_per_watt"] = frame["avg_speed_kph"] / frame["average_watts"].replace({0: pd.NA})
 
     progress.progress(100, text="Complete.")
     return frame
@@ -100,22 +100,20 @@ def main() -> None:
         st.session_state["activities"] = data
 
     data = st.session_state.get("activities")
-    if data is None:
-        st.info("No in-memory data yet. Complete Strava SSO and click Process Data.")
-        return
-    if data.empty:
+    if data is None or data.empty:
         st.info("No in-memory data yet. Complete Strava SSO and click Process Data.")
         return
 
     st.subheader("Activity Preview")
     st.dataframe(data.head(200), use_container_width=True)
     st.subheader("Bike Comparison")
-    bike_stats = (
-        data.groupby("gear_id", dropna=False)
-        .agg(rides=("id", "count"), total_distance_km=("distance_km", "sum"), avg_speed_kph=("avg_speed_kph", "mean"))
-        .reset_index()
-        .sort_values("total_distance_km", ascending=False)
-    )
+    metrics = {
+        "rides": ("id", "count"),
+        "total_distance_km": ("distance_km", "sum"),
+        "avg_speed_kph": ("avg_speed_kph", "mean"),
+    }
+    bike_stats = data.groupby("gear_id", dropna=False).agg(**metrics).reset_index()
+    bike_stats = bike_stats.sort_values("total_distance_km", ascending=False)
     st.dataframe(bike_stats, use_container_width=True)
 
 
