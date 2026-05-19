@@ -5,11 +5,14 @@ from __future__ import annotations
 import os
 
 import pandas as pd
+import requests
 import streamlit as st
 from stravalib import Client
 
 from src.auth import exchange_code_for_token, get_authorization_url
 from src.fetch import get_activities
+
+DEFAULT_MAX_ACTIVITIES = 200
 
 
 def _build_analysis_frame(raw_activities: list[dict[str, object]]) -> pd.DataFrame:
@@ -52,7 +55,10 @@ def _process_data(
 
     progress.progress(90, text="Running algorithms…")
     if not frame.empty:
-        frame["kph_per_watt"] = frame["avg_speed_kph"] / frame["average_watts"].replace({0: pd.NA})
+        watts = pd.to_numeric(frame["average_watts"], errors="coerce")
+        # Zero/negative watts are excluded to avoid invalid division in this derived metric.
+        valid_watts = watts.mask(watts <= 0)
+        frame["kph_per_watt"] = frame["avg_speed_kph"] / valid_watts
 
     progress.progress(100, text="Complete.")
     return frame
@@ -77,9 +83,9 @@ def main() -> None:
         auth_url = get_authorization_url(client_id=client_id, redirect_uri=redirect_uri)
         st.link_button("Sign in with Strava SSO", auth_url)
 
-    query_code = st.query_params.get("code")
-    code = st.text_input("Authorization Code", value=query_code or "")
-    max_activities = st.number_input("Max Activities", min_value=1, max_value=500, value=200)
+    code_from_params = st.query_params.get("code")
+    code = st.text_input("Authorization Code", value=code_from_params or "")
+    max_activities = st.number_input("Max Activities", min_value=1, max_value=500, value=DEFAULT_MAX_ACTIVITIES)
 
     if st.button("Process Data", type="primary"):
         if not client_id or not client_secret or not code:
@@ -94,7 +100,7 @@ def main() -> None:
                     code=code,
                     max_activities=int(max_activities),
                 )
-            except Exception as exc:  # pragma: no cover
+            except (requests.RequestException, ValueError) as exc:
                 st.error(f"Unable to process data: {exc}")
                 return
         st.session_state["activities"] = data
