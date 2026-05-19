@@ -3,7 +3,7 @@ requests
 pandas
 numpy
 scipy
-pymc
+# pymc
 matplotlib
 seaborn
 plotly

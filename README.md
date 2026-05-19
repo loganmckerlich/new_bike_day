@@ -14,9 +14,7 @@ new-bike-day/
 ├── notebooks/01_eda.ipynb
 ├── src/
 │   ├── auth.py
-│   ├── fetch.py
-│   ├── weather.py
-│   └── ingest.py
+│   └── fetch.py
 ├── app/streamlit_app.py
 └── tests/
 ```
@@ -32,35 +30,31 @@ new-bike-day/
 
 3. Copy `.env.example` to `.env` and set:
 
-   - `STRAVA_CLIENT_ID`
-   - `STRAVA_CLIENT_SECRET`
-   - `STRAVA_REFRESH_TOKEN`
+    - `STRAVA_CLIENT_ID`
+    - `STRAVA_CLIENT_SECRET`
+    - `STRAVA_REDIRECT_URI` (example: `http://localhost:8501`)
+    - `STRAVA_ACCESS_TOKEN` (optional, used by **Reload Activities**)
 
 ## Strava API Credentials
 
 1. Create an app at https://www.strava.com/settings/api.
 2. Save your app client ID and client secret in `.env`.
-3. Generate a refresh token from Strava OAuth and place it in `.env`.
+3. Set your Strava app callback URL to match `STRAVA_REDIRECT_URI`.
 4. Do not commit `.env` or hardcode credentials.
-
-## Ingestion
-
-Run the ingestion script to refresh a token, fetch activities and streams, enrich weather, and write to a CSV file:
-
-```bash
-python src/ingest.py --data-path data/activities.csv
-```
-
-Optional arguments:
-
-- `--max-activities <int>`: limit number of fetched activities.
-
-The ingestion is idempotent for activities: already-saved activities are skipped.
 
 ## Streamlit
 
-After ingesting data, start the app:
+Start the app:
 
 ```bash
 streamlit run app/streamlit_app.py
 ```
+
+At app startup:
+
+1. Configure `.env` with your Strava client ID, client secret, and redirect URI.
+2. Click **Sign in with Strava SSO**.
+3. Authorize Strava access and return to the app.
+4. The app automatically exchanges the returned code and loads activity data in memory.
+
+Data is not persisted and will reset with app/session restarts.

@@ -2,51 +2,60 @@
 
 from __future__ import annotations
 
-import os
-from typing import Final, Optional
+from urllib.parse import urlencode
+from typing import Final
 
 import requests
-from dotenv import load_dotenv
 
 TOKEN_URL: Final[str] = "https://www.strava.com/oauth/token"
+AUTHORIZE_URL: Final[str] = "https://www.strava.com/oauth/authorize"
 
 
-def get_access_token(
-    client_id: Optional[str] = None,
-    client_secret: Optional[str] = None,
-    refresh_token: Optional[str] = None,
+def get_authorization_url(
+    client_id: str,
+    redirect_uri: str,
+    scope: str = "read,activity:read_all",
 ) -> str:
-    """Refresh a Strava access token and return it.
+    """Build the Strava OAuth authorization URL for SSO."""
+    params = {
+        "client_id": client_id,
+        "redirect_uri": redirect_uri,
+        "response_type": "code",
+        "approval_prompt": "auto",
+        "scope": scope,
+    }
+    return f"{AUTHORIZE_URL}?{urlencode(params)}"
+
+
+def exchange_code_for_token(
+    client_id: str,
+    client_secret: str,
+    code: str,
+    redirect_uri: str,
+) -> str:
+    """Exchange a Strava OAuth authorization code for an access token.
 
     Args:
-        client_id: Optional Strava client ID. Falls back to STRAVA_CLIENT_ID.
-        client_secret: Optional Strava client secret. Falls back to STRAVA_CLIENT_SECRET.
-        refresh_token: Optional Strava refresh token. Falls back to STRAVA_REFRESH_TOKEN.
+        client_id: Strava client ID.
+        client_secret: Strava client secret.
+        code: OAuth authorization code.
+        redirect_uri: Redirect URI configured in Strava app settings.
 
     Returns:
         A valid Strava access token.
 
     Raises:
-        ValueError: If required credentials are missing.
         requests.HTTPError: If Strava token refresh fails.
+        ValueError: If Strava token response does not include access token.
     """
-    load_dotenv()
-    resolved_client_id: str = client_id or os.getenv("STRAVA_CLIENT_ID", "")
-    resolved_client_secret: str = client_secret or os.getenv("STRAVA_CLIENT_SECRET", "")
-    resolved_refresh_token: str = refresh_token or os.getenv("STRAVA_REFRESH_TOKEN", "")
-
-    if not resolved_client_id or not resolved_client_secret or not resolved_refresh_token:
-        raise ValueError(
-            "Missing Strava credentials. Set STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, and STRAVA_REFRESH_TOKEN."
-        )
-
     response = requests.post(
         TOKEN_URL,
         data={
-            "client_id": resolved_client_id,
-            "client_secret": resolved_client_secret,
-            "refresh_token": resolved_refresh_token,
-            "grant_type": "refresh_token",
+            "client_id": client_id,
+            "client_secret": client_secret,
+            "code": code,
+            "redirect_uri": redirect_uri,
+            "grant_type": "authorization_code",
         },
         timeout=30,
     )
