@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import os
 import sys
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
@@ -10,7 +9,6 @@ from urllib.parse import urlsplit, urlunsplit
 import pandas as pd
 import requests
 import streamlit as st
-from dotenv import load_dotenv
 
 # Ensure `src` imports work when launching Streamlit from different working directories.
 _REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -107,19 +105,18 @@ def _save_session(data: pd.DataFrame, segments: pd.DataFrame, code: str | None, 
 
 def main() -> None:
     """Render the home page: Strava sign-in and bike summaries."""
-    load_dotenv()
     st.set_page_config(page_title="New Bike Day", layout="wide")
     st.title("🚴 New Bike Day")
     st.caption("Sign in with Strava to load your activities and see your bike summaries.")
 
-    env_client_id = os.getenv("STRAVA_CLIENT_ID", "")
-    env_client_secret = os.getenv("STRAVA_CLIENT_SECRET", "")
-    default_redirect_uri = _normalized_redirect_uri(os.getenv("STRAVA_REDIRECT_URI", "http://localhost:8501"))
-    env_access_token = os.getenv("STRAVA_ACCESS_TOKEN", "")
+    env_client_id = st.secrets.get("STRAVA_CLIENT_ID", "")
+    env_client_secret = st.secrets.get("STRAVA_CLIENT_SECRET", "")
+    default_redirect_uri = _normalized_redirect_uri(st.secrets.get("STRAVA_REDIRECT_URI", "http://localhost:8501"))
+    env_access_token = st.secrets.get("STRAVA_ACCESS_TOKEN", "")
 
     st.subheader("1) Connect Strava")
     if not env_client_id or not env_client_secret:
-        st.error("Set STRAVA_CLIENT_ID and STRAVA_CLIENT_SECRET in .env to enable SSO.")
+        st.error("Set STRAVA_CLIENT_ID and STRAVA_CLIENT_SECRET in .streamlit/secrets.toml to enable SSO.")
         return
 
     auth_url = get_authorization_url(client_id=env_client_id, redirect_uri=default_redirect_uri)
@@ -176,7 +173,7 @@ def main() -> None:
         if not access_token:
             st.warning(
                 "Please authorize with Strava using the Sign in button above, "
-                "or set STRAVA_ACCESS_TOKEN in your .env file to enable reloading."
+                "or set STRAVA_ACCESS_TOKEN in your .streamlit/secrets.toml file to enable reloading."
             )
             return
         with st.spinner("Working…"):

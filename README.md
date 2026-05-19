@@ -6,7 +6,8 @@ Analyze Strava cycling data to compare ride performance between bikes.
 
 ```text
 new-bike-day/
-├── .env.example
+├── .streamlit/
+│   └── secrets.example.toml
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
@@ -28,7 +29,14 @@ new-bike-day/
    pip install -r requirements.txt
    ```
 
-3. Copy `.env.example` to `.env` and set:
+3. Create Streamlit secrets directory and file:
+
+   ```bash
+   mkdir -p .streamlit
+   cp .streamlit/secrets.example.toml .streamlit/secrets.toml
+   ```
+
+4. Edit `.streamlit/secrets.toml` and set:
 
     - `STRAVA_CLIENT_ID`
     - `STRAVA_CLIENT_SECRET`
@@ -38,9 +46,9 @@ new-bike-day/
 ## Strava API Credentials
 
 1. Create an app at https://www.strava.com/settings/api.
-2. Save your app client ID and client secret in `.env`.
+2. Save your app client ID and client secret in `.streamlit/secrets.toml`.
 3. Set your Strava app callback URL to match `STRAVA_REDIRECT_URI`.
-4. Do not commit `.env` or hardcode credentials.
+4. Do not commit `.streamlit/secrets.toml` (it is automatically gitignored by Streamlit).
 
 ## Streamlit
 
@@ -52,7 +60,7 @@ streamlit run app/streamlit_app.py
 
 At app startup:
 
-1. Configure `.env` with your Strava client ID, client secret, and redirect URI.
+1. Configure `.streamlit/secrets.toml` with your Strava client ID, client secret, and redirect URI.
 2. Click **Sign in with Strava SSO**.
 3. Authorize Strava access and return to the app.
 4. The app automatically exchanges the returned code and loads activity data in memory.
