@@ -1,36 +1,126 @@
-"""Streamlit app entrypoint for new-bike-day analysis."""
+"""Streamlit app entrypoint for cloud-ready Strava analysis."""
 
 from __future__ import annotations
 
-from pathlib import Path
-import sqlite3
+import os
 
 import pandas as pd
+import requests
 import streamlit as st
+from stravalib import Client
+
+from src.auth import exchange_code_for_token, get_authorization_url
+from src.fetch import get_activities
+
+DEFAULT_MAX_ACTIVITIES = 200
 
 
-def load_data(db_path: str = "data/strava.db") -> pd.DataFrame:
-    """Load activities data for display from SQLite."""
-    if not Path(db_path).exists():
+def _build_analysis_frame(raw_activities: list[dict[str, object]]) -> pd.DataFrame:
+    """Transform Strava activity payload into an analysis-friendly dataframe."""
+    if not raw_activities:
         return pd.DataFrame()
-    with sqlite3.connect(db_path) as conn:
-        return pd.read_sql_query("SELECT * FROM activities", conn)
+
+    frame = pd.DataFrame(raw_activities)
+    frame["distance_km"] = frame["distance_m"] / 1000
+    frame["moving_time_h"] = frame["moving_time_s"] / 3600
+    frame["avg_speed_kph"] = frame["average_speed_mps"] * 3.6
+    frame["date"] = pd.to_datetime(frame["start_date_local"], errors="coerce")
+    return frame
+
+
+def _process_data(
+    client_id: str,
+    client_secret: str,
+    redirect_uri: str,
+    code: str,
+    max_activities: int,
+) -> pd.DataFrame:
+    """Authenticate, fetch Strava activities, and run in-memory data processing."""
+    progress = st.progress(0, text="Starting…")
+
+    progress.progress(15, text="Loading data: authenticating with Strava…")
+    access_token = exchange_code_for_token(
+        client_id=client_id,
+        client_secret=client_secret,
+        code=code,
+        redirect_uri=redirect_uri,
+    )
+
+    progress.progress(45, text="Loading data: pulling activities from Strava API…")
+    client = Client(access_token=access_token)
+    activities = get_activities(client=client, limit=max_activities)
+
+    progress.progress(70, text="Processing data…")
+    frame = _build_analysis_frame(activities)
+
+    progress.progress(90, text="Running algorithms…")
+    if not frame.empty:
+        watts = pd.to_numeric(frame["average_watts"], errors="coerce")
+        # Zero/negative watts are excluded to avoid invalid division in this derived metric.
+        valid_watts = watts.mask(watts <= 0)
+        frame["kph_per_watt"] = frame["avg_speed_kph"] / valid_watts
+
+    progress.progress(100, text="Complete.")
+    return frame
 
 
 def main() -> None:
-    """Render the Streamlit dashboard scaffold."""
+    """Render the cloud-ready Streamlit workflow."""
     st.set_page_config(page_title="New Bike Day", layout="wide")
     st.title("🚴 New Bike Day")
-    st.caption("Compare ride performance between bikes using Strava data.")
-    st.info("Run `python src/ingest.py` first to populate `data/strava.db`.")
+    st.caption("Sign in with Strava SSO, process data, and run analysis in-memory.")
 
-    data = load_data()
-    if data.empty:
-        st.warning("No activity data found yet.")
+    env_client_id = os.getenv("STRAVA_CLIENT_ID", "")
+    env_client_secret = os.getenv("STRAVA_CLIENT_SECRET", "")
+    default_redirect_uri = os.getenv("STRAVA_REDIRECT_URI", "http://localhost:8501")
+
+    st.subheader("1) Connect Strava")
+    client_id = st.text_input("Strava Client ID", value=env_client_id)
+    client_secret = st.text_input("Strava Client Secret", value=env_client_secret, type="password")
+    redirect_uri = st.text_input("Redirect URI", value=default_redirect_uri)
+
+    if client_id and redirect_uri:
+        auth_url = get_authorization_url(client_id=client_id, redirect_uri=redirect_uri)
+        st.link_button("Sign in with Strava SSO", auth_url)
+
+    code_from_params = st.query_params.get("code")
+    code = st.text_input("Authorization Code", value=code_from_params or "")
+    max_activities = st.number_input("Max Activities", min_value=1, max_value=500, value=DEFAULT_MAX_ACTIVITIES)
+
+    if st.button("Process Data", type="primary"):
+        if not client_id or not client_secret or not code:
+            st.error("Client ID, client secret, and authorization code are required.")
+            return
+        with st.spinner("Working…"):
+            try:
+                data = _process_data(
+                    client_id=client_id,
+                    client_secret=client_secret,
+                    redirect_uri=redirect_uri,
+                    code=code,
+                    max_activities=int(max_activities),
+                )
+            except (requests.RequestException, ValueError) as exc:
+                st.error(f"Unable to process data: {exc}")
+                return
+        st.session_state["activities"] = data
+
+    data = st.session_state.get("activities")
+    if data is None or data.empty:
+        st.info("No in-memory data yet. Complete Strava SSO and click Process Data.")
         return
 
     st.subheader("Activity Preview")
-    st.dataframe(data.head(100), use_container_width=True)
+    st.dataframe(data.head(200), use_container_width=True)
+    st.subheader("Bike Comparison")
+    metrics = {
+        "rides": ("id", "count"),
+        "total_distance_km": ("distance_km", "sum"),
+        "avg_speed_kph": ("avg_speed_kph", "mean"),
+    }
+    bike_stats = data.groupby("gear_id", dropna=False).agg(**metrics).reset_index()
+    bike_stats = bike_stats.sort_values("total_distance_km", ascending=False)
+    st.dataframe(bike_stats, use_container_width=True)
 
 
 if __name__ == "__main__":
