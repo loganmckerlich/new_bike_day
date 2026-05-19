@@ -212,7 +212,7 @@ def get_athlete_bikes(access_token: str) -> dict[str, str]:
     data = resp.json()
     bikes: list[dict[str, Any]] = data.get("bikes") or []
     return {
-        bike["id"]: bike.get("name") or bike.get("model_name") or bike["id"]
+        str(bike["id"]): bike.get("name") or bike.get("model_name") or str(bike["id"])
         for bike in bikes
         if bike.get("id")
     }

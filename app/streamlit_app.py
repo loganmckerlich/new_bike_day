@@ -71,6 +71,13 @@ def _fmt_time(seconds: float) -> str:
     return f"{seconds // 60}:{seconds % 60:02d}"
 
 
+def _gear_label(gear_id: str | None, bikes: dict[str, str]) -> str:
+    """Return a human-readable bike name, falling back to the gear_id."""
+    if not gear_id:
+        return "Unknown"
+    return bikes.get(str(gear_id), str(gear_id))
+
+
 def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame, bikes: dict[str, str]) -> None:
     """Render the bike summaries section."""
     st.markdown("---")
@@ -86,7 +93,7 @@ def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame, bikes:
     bike_stats["total_moving_hours"] = (bike_stats["total_moving_hours"] / 3600).round(1)
     bike_stats["avg_watts"] = bike_stats["avg_watts"].round(0)
     bike_stats["avg_heartrate"] = bike_stats["avg_heartrate"].round(0)
-    bike_stats["bike_name"] = bike_stats["gear_id"].map(lambda g: bikes.get(g, g or "Unknown"))
+    bike_stats["bike_name"] = bike_stats["gear_id"].map(lambda g: _gear_label(g, bikes))
     bike_stats = bike_stats.sort_values("total_efforts", ascending=False)
 
     # Metric cards for top bikes

@@ -94,8 +94,9 @@ if seg_efforts.empty:
 
 # Derive pace (seconds/km) from moving_time and segment distance
 if seg_distance_m > 0:
-    seg_efforts["pace_sec_per_km"] = (seg_efforts["moving_time"] / (seg_distance_m / 1000))
-    seg_efforts["speed_kmh"] = (seg_distance_m / seg_efforts["moving_time"] * 3.6)
+    safe_time = seg_efforts["moving_time"].replace(0, pd.NA)
+    seg_efforts["pace_sec_per_km"] = safe_time / (seg_distance_m / 1000)
+    seg_efforts["speed_kmh"] = (seg_distance_m / safe_time * 3.6)
 else:
     seg_efforts["pace_sec_per_km"] = None
     seg_efforts["speed_kmh"] = None
@@ -175,9 +176,10 @@ if chart_tab_labels:
                 points="all",
             )
             fig.update_layout(showlegend=False, plot_bgcolor="rgba(0,0,0,0)")
+            max_pace_tick = int(seg_efforts["pace_sec_per_km"].max() or 300) + 30
             fig.update_yaxes(
-                tickvals=list(range(0, int(seg_efforts["pace_sec_per_km"].max() or 300) + 30, 30)),
-                ticktext=[_fmt_pace(v) for v in range(0, int(seg_efforts["pace_sec_per_km"].max() or 300) + 30, 30)],
+                tickvals=list(range(0, max_pace_tick, 30)),
+                ticktext=[_fmt_pace(v) for v in range(0, max_pace_tick, 30)],
             )
             st.plotly_chart(fig, use_container_width=True)
         tab_idx += 1
