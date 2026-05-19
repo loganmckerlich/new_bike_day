@@ -188,5 +188,5 @@ def _parse_token_response(payload: dict[str, Any]) -> dict[str, Any]:
         "access_token": str(access_token),
         "refresh_token": str(refresh_token),
         "expires_at": int(expires_at),
-        "athlete_id": int(athlete_id) if athlete_id is not None else None,
+        "athlete_id": athlete_id,
     }

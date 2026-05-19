@@ -196,7 +196,8 @@ def create_app(
 
         if object_type == "athlete" and aspect_type == "update":
             updates: dict[str, Any] = event.get("updates") or {}
-            if updates.get("authorized") == "false" and owner_id is not None:
+            # authorized may be the string "false" or the boolean False depending on Strava's version
+            if updates.get("authorized") in ("false", False) and owner_id is not None:
                 # Athlete revoked access — clear their cached data.
                 logger.info("Athlete %s deauthorized; clearing cache.", owner_id)
                 clear_efforts()

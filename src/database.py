@@ -383,7 +383,7 @@ def load_segment_geo(segment_id: int) -> dict[str, Any] | None:
     end_lat, end_lng = row[5], row[6]
 
     return {
-        "polyline_points": [tuple(p) for p in polyline_points],
+        "polyline_points": [tuple(p) for p in polyline_points if hasattr(p, "__iter__")],
         "elevation_low": row[1],
         "elevation_high": row[2],
         "start_latlng": [start_lat, start_lng] if start_lat is not None else [],

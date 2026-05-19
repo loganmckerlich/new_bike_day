@@ -128,7 +128,7 @@ def _exchange_access_token(client_id: str, client_secret: str, redirect_uri: str
         redirect_uri=redirect_uri,
     )
     # Persist refresh token so the webhook server can re-ingest without user interaction.
-    if token.get("athlete_id") and token.get("refresh_token"):
+    if token.get("athlete_id") and token.get("refresh_token") and token.get("access_token") and token.get("expires_at") is not None:
         init_db()
         save_athlete_token(
             athlete_id=token["athlete_id"],
