@@ -17,18 +17,56 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from src.auth import exchange_code_for_token, get_authorization_url
+from src.dev_data import load_dev_data
 from src.fetch import ingest_all, PremiumOnlyError
+
+
+# ---------------------------------------------------------------------------
+# Caching
+# ---------------------------------------------------------------------------
+
+@st.cache_data(ttl=3600, show_spinner="⏳ Fetching your Strava data…")
+def _cached_ingest(access_token: str) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str]]:
+    """Fetch Strava data and cache the result for up to 1 hour.
+
+    Keyed by *access_token* so each user's data is cached independently.
+    The cache persists across browser refreshes as long as the Streamlit
+    process stays alive (standard behaviour on Streamlit Community Cloud).
+    """
+    result = ingest_all(access_token)
+    return result["efforts"], result["segments"], result.get("bikes", {})
 
 
 def _process_data(
     access_token: str,
+    *,
+    force_refresh: bool = False,
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str]]:
-    """Fetch bikes, activities, starred segments and efforts from Strava."""
-    progress = st.progress(0, text="Starting…")
-    progress.progress(20, text="Fetching data from Strava (bikes, activities, segments, efforts)…")
-    result = ingest_all(access_token)
-    progress.progress(100, text="Complete.")
-    return result["efforts"], result["segments"], result.get("bikes", {})
+    """Return efforts, segments, bikes — using cache unless *force_refresh* is True.
+
+    On a cache hit ``_cached_ingest`` returns instantly.  When *force_refresh*
+    is ``True`` the cache is cleared and ``ingest_all`` is called directly so
+    that a detailed per-endpoint progress bar can be displayed.
+
+    Note: ``_cached_ingest.clear()`` clears cached data for **all** tokens.
+    This is acceptable for a personal Strava deployment with a single user.
+    """
+    if force_refresh:
+        # Invalidate the stale cache entry, then fetch fresh data with a live
+        # progress bar so the user can see exactly which endpoint is running.
+        _cached_ingest.clear()
+        progress = st.progress(0, text="Starting…")
+
+        def on_progress(msg: str, pct: int) -> None:
+            progress.progress(pct, text=msg)
+
+        result = ingest_all(access_token, progress_callback=on_progress)
+        progress.progress(100, text="✅ Complete!")
+        return result["efforts"], result["segments"], result.get("bikes", {})
+
+    # Normal path: let st.cache_data handle hit/miss transparently.
+    # On cache miss the decorator shows its own spinner; on hit it returns instantly.
+    return _cached_ingest(access_token)
 
 
 def _query_param_value(value: object) -> str | None:
@@ -189,6 +227,19 @@ def main() -> None:
     """Render the home page: Strava sign-in and bike summaries."""
     st.set_page_config(page_title="New Bike Day", page_icon="🚴", layout="wide")
 
+    # ---------------------------------------------------------------------------
+    # Dev mode toggle (sidebar so it's always accessible)
+    # ---------------------------------------------------------------------------
+    with st.sidebar:
+        dev_mode = st.toggle(
+            "🛠️ Dev Mode",
+            value=False,
+            help=(
+                "Load static sample data stored in the repository instead of "
+                "hitting the Strava API. No network calls are made."
+            ),
+        )
+
     # Hero header
     col_title, col_logo = st.columns([4, 1])
     with col_title:
@@ -197,7 +248,34 @@ def main() -> None:
             "Compare your rides across different bikes on the same Strava segments. "
             "Sign in with Strava to get started."
         )
+        if dev_mode:
+            st.info(
+                "🛠️ **Dev Mode is ON** — showing static sample data. "
+                "No Strava API calls are made.",
+                icon="🛠️",
+            )
 
+    # ---------------------------------------------------------------------------
+    # Dev mode: load static JSON and skip all OAuth / API logic
+    # ---------------------------------------------------------------------------
+    if dev_mode:
+        result = load_dev_data()
+        _save_session(
+            result["efforts"],
+            result["segments"],
+            result["bikes"],
+            code=None,
+            access_token="",
+        )
+        data = st.session_state.get("efforts")
+        segments = st.session_state.get("segments", pd.DataFrame())
+        bikes = st.session_state.get("bikes", {})
+        _render_bike_summaries(data, segments, bikes)
+        return
+
+    # ---------------------------------------------------------------------------
+    # Live mode: OAuth → Strava API
+    # ---------------------------------------------------------------------------
     env_client_id = st.secrets.get("STRAVA_CLIENT_ID", "")
     env_client_secret = st.secrets.get("STRAVA_CLIENT_SECRET", "")
     default_redirect_uri = _normalized_redirect_uri(st.secrets.get("STRAVA_REDIRECT_URI", "http://localhost:8501"))
@@ -228,20 +306,22 @@ def main() -> None:
         last_processed_code = st.session_state.get("last_processed_code")
         should_process = code != last_processed_code
         if should_process:
-            with st.spinner("Fetching your Strava data…"):
+            with st.spinner("Connecting to Strava…"):
                 try:
                     access_token = st.session_state.get("access_token")
                     if code != last_processed_code or not access_token:
                         access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
-                    data, gear_frame, bikes = _process_data(
-                        access_token=access_token,
-                    )
-                except PremiumOnlyError as exc:
-                    st.error(str(exc))
-                    return
                 except (requests.RequestException, ValueError) as exc:
-                    st.error(f"Unable to process data: {exc}")
+                    st.error(f"Unable to exchange token: {exc}")
                     return
+            try:
+                data, gear_frame, bikes = _process_data(access_token=access_token)
+            except PremiumOnlyError as exc:
+                st.error(str(exc))
+                return
+            except (requests.RequestException, ValueError) as exc:
+                st.error(f"Unable to process data: {exc}")
+                return
             _save_session(data, gear_frame, bikes, code, access_token)
             with status_col:
                 st.success("✅ Connected to Strava — data loaded!")
@@ -268,17 +348,17 @@ def main() -> None:
                     "or set STRAVA_ACCESS_TOKEN in your `.streamlit/secrets.toml`."
                 )
                 return
-            with st.spinner("Reloading…"):
-                try:
-                    data, gear_frame, bikes = _process_data(
-                        access_token=access_token,
-                    )
-                except PremiumOnlyError as exc:
-                    st.error(str(exc))
-                    return
-                except (requests.RequestException, ValueError) as exc:
-                    st.error(f"Unable to process data: {exc}")
-                    return
+            try:
+                data, gear_frame, bikes = _process_data(
+                    access_token=access_token,
+                    force_refresh=True,
+                )
+            except PremiumOnlyError as exc:
+                st.error(str(exc))
+                return
+            except (requests.RequestException, ValueError) as exc:
+                st.error(f"Unable to process data: {exc}")
+                return
             _save_session(data, gear_frame, bikes, code, access_token)
             st.success("Activities reloaded.")
 

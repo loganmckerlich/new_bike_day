@@ -1,0 +1,35 @@
+[
+  {
+    "segment_id": 100001,
+    "name": "Box Hill",
+    "distance": 2354.0,
+    "average_grade": 5.2,
+    "climb_category": 2,
+    "total_elevation_gain": 122.0,
+    "start_lat": 51.249,
+    "start_lng": -0.342,
+    "segment_type": "ascent"
+  },
+  {
+    "segment_id": 100002,
+    "name": "Town Sprint",
+    "distance": 320.0,
+    "average_grade": 0.5,
+    "climb_category": 0,
+    "total_elevation_gain": 1.6,
+    "start_lat": 51.505,
+    "start_lng": -0.092,
+    "segment_type": "sprint"
+  },
+  {
+    "segment_id": 100003,
+    "name": "River Road Flat",
+    "distance": 5200.0,
+    "average_grade": 0.1,
+    "climb_category": 0,
+    "total_elevation_gain": 5.0,
+    "start_lat": 51.512,
+    "start_lng": -0.087,
+    "segment_type": "flat"
+  }
+]
