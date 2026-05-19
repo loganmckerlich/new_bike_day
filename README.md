@@ -32,7 +32,7 @@ new-bike-day/
 
     - `STRAVA_CLIENT_ID`
     - `STRAVA_CLIENT_SECRET`
-    - `STRAVA_REDIRECT_URI` (example: `http://localhost:8501`)
+    - `STRAVA_REDIRECT_URI` (example: `http://localhost:8501/`)
     - `STRAVA_ACCESS_TOKEN` (optional, used by **Reload Activities**)
 
 ## Strava API Credentials

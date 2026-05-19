@@ -3,12 +3,20 @@
 from __future__ import annotations
 
 import os
+import sys
+from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
 
 import pandas as pd
 import requests
 import streamlit as st
 from dotenv import load_dotenv
 from stravalib import Client
+
+# Ensure `src` imports work when launching Streamlit from different working directories.
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 from src.auth import exchange_code_for_token, get_authorization_url
 from src.fetch import get_activities
@@ -73,6 +81,18 @@ def _exchange_access_token(client_id: str, client_secret: str, redirect_uri: str
     )
 
 
+def _normalized_redirect_uri(raw_value: str) -> str:
+    """Normalize redirect URI to reduce callback mismatches for localhost defaults."""
+    value = raw_value.strip() if raw_value else ""
+    if not value:
+        return "http://localhost:8501/"
+
+    parsed = urlsplit(value)
+    if parsed.scheme and parsed.netloc and not parsed.path:
+        return urlunsplit((parsed.scheme, parsed.netloc, "/", parsed.query, parsed.fragment))
+    return value
+
+
 def main() -> None:
     """Render the cloud-ready Streamlit workflow."""
     load_dotenv()
@@ -82,7 +102,7 @@ def main() -> None:
 
     env_client_id = os.getenv("STRAVA_CLIENT_ID", "")
     env_client_secret = os.getenv("STRAVA_CLIENT_SECRET", "")
-    default_redirect_uri = os.getenv("STRAVA_REDIRECT_URI", "http://localhost:8501")
+    default_redirect_uri = _normalized_redirect_uri(os.getenv("STRAVA_REDIRECT_URI", "http://localhost:8501"))
     env_access_token = os.getenv("STRAVA_ACCESS_TOKEN", "")
 
     st.subheader("1) Connect Strava")
