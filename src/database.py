@@ -2,12 +2,16 @@
 
 from __future__ import annotations
 
+import os
 import sqlite3
 from pathlib import Path
 
 import pandas as pd
 
-_DB_PATH: Path = Path(__file__).resolve().parents[1] / "data" / "new_bike_day.db"
+_DEFAULT_DB_PATH: Path = Path(__file__).resolve().parents[1] / "data" / "new_bike_day.db"
+
+# Allow override via environment variable for testing or alternate deployments.
+_DB_PATH: Path = Path(os.environ["NEW_BIKE_DAY_DB_PATH"]) if "NEW_BIKE_DAY_DB_PATH" in os.environ else _DEFAULT_DB_PATH
 
 _CREATE_STARRED_SEGMENTS: str = """
 CREATE TABLE IF NOT EXISTS starred_segments (
@@ -123,7 +127,7 @@ def load_segments() -> pd.DataFrame:
     with _connect() as conn:
         try:
             return pd.read_sql_query("SELECT * FROM starred_segments", conn)
-        except Exception:
+        except sqlite3.OperationalError:
             return pd.DataFrame(columns=_SEGMENTS_COLS)
 
 
@@ -137,5 +141,5 @@ def load_efforts() -> pd.DataFrame:
     with _connect() as conn:
         try:
             return pd.read_sql_query("SELECT * FROM segment_efforts", conn)
-        except Exception:
+        except sqlite3.OperationalError:
             return pd.DataFrame(columns=_EFFORTS_COLS)

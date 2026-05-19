@@ -24,7 +24,8 @@ def _auth_headers(access_token: str) -> dict[str, str]:
 def _classify_segment(distance: Optional[float], average_grade: Optional[float]) -> str:
     """Return a segment type label based on distance and average grade.
 
-    Sprint is checked first, then ascent, then descent; everything else is flat.
+    Sprint is checked first (per specification), meaning a short but steep
+    segment is always classified as ``"sprint"`` regardless of grade.
 
     Args:
         distance: Segment length in metres.
