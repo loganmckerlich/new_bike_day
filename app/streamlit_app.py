@@ -55,6 +55,25 @@ def _process_data(
     return frame
 
 
+def _query_param_value(value: object) -> str | None:
+    """Normalize Streamlit query param values into a single string."""
+    if isinstance(value, list):
+        return str(value[0]) if value else None
+    if value is None:
+        return None
+    return str(value)
+
+
+def _exchange_access_token(client_id: str, client_secret: str, redirect_uri: str, code: str) -> str:
+    """Exchange a Strava auth code for an access token."""
+    return exchange_code_for_token(
+        client_id=client_id,
+        client_secret=client_secret,
+        code=code,
+        redirect_uri=redirect_uri,
+    )
+
+
 def main() -> None:
     """Render the cloud-ready Streamlit workflow."""
     st.set_page_config(page_title="New Bike Day", layout="wide")
@@ -82,18 +101,14 @@ def main() -> None:
         st.error(f"Strava authorization failed: {error_from_params}")
         return
 
-    if code_from_params:
-        code = str(code_from_params[0] if isinstance(code_from_params, list) else code_from_params)
+    code = _query_param_value(code_from_params)
+
+    if code:
         last_processed_code = st.session_state.get("last_processed_code")
         if code != last_processed_code:
             with st.spinner("Working…"):
                 try:
-                    access_token = exchange_code_for_token(
-                        client_id=env_client_id,
-                        client_secret=env_client_secret,
-                        code=code,
-                        redirect_uri=default_redirect_uri,
-                    )
+                    access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
                     data = _process_data(
                         access_token=access_token,
                         max_activities=int(max_activities),
@@ -109,15 +124,9 @@ def main() -> None:
 
     if st.button("Reload Activities", type="secondary"):
         access_token = env_access_token
-        if code_from_params:
-            code = str(code_from_params[0] if isinstance(code_from_params, list) else code_from_params)
+        if code:
             try:
-                access_token = exchange_code_for_token(
-                    client_id=env_client_id,
-                    client_secret=env_client_secret,
-                    code=code,
-                    redirect_uri=default_redirect_uri,
-                )
+                access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
             except (requests.RequestException, ValueError) as exc:
                 st.error(f"Unable to process data: {exc}")
                 return
@@ -134,7 +143,7 @@ def main() -> None:
                 st.error(f"Unable to process data: {exc}")
                 return
         st.session_state["activities"] = data
-        if code_from_params:
+        if code:
             st.session_state["last_processed_code"] = code
 
     data = st.session_state.get("activities")
