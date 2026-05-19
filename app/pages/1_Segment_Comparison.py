@@ -16,6 +16,7 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from src.fetch import get_segment_detail, get_segment_streams
+from src.database import init_db, load_segment_geo, save_segment_geo
 
 st.set_page_config(page_title="Segment Comparison – New Bike Day", page_icon="📊", layout="wide")
 st.title("📊 Segment Comparison")
@@ -57,18 +58,33 @@ def _fmt_duration(seconds: float) -> str:
 
 
 def _get_segment_geo(segment_id: int) -> dict:
-    """Return cached segment geo data, fetching from Strava if needed."""
+    """Return segment geo data, using the SQLite cache and only fetching from Strava if needed.
+
+    Segment geometry (polyline, elevation, streams) is static data — it never
+    changes after a segment is created.  We cache it permanently in the SQLite
+    database so the Strava API is only called once per segment.
+    """
+    # 1. Check in-process session cache first (fastest).
     cache_key = f"segment_geo_{segment_id}"
     cached = st.session_state.get(cache_key)
     if cached is not None:
         return cached
 
+    # 2. Check the on-disk SQLite cache.
+    init_db()
+    db_cached = load_segment_geo(segment_id)
+    if db_cached is not None:
+        st.session_state[cache_key] = db_cached
+        return db_cached
+
+    # 3. Cache miss — fetch from Strava API and persist to SQLite.
     if not access_token:
         st.session_state[cache_key] = {}
         return {}
 
     detail = get_segment_detail(access_token, segment_id)
     streams = get_segment_streams(access_token, segment_id)
+    save_segment_geo(segment_id, detail, streams)
     result = {**detail, "streams": streams}
     st.session_state[cache_key] = result
     return result
