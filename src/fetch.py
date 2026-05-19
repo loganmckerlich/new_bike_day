@@ -1,180 +1,182 @@
-"""Data fetching helpers for Strava activities and streams."""
+"""Data fetching helpers for Strava segment-first architecture."""
 
 from __future__ import annotations
 
-from datetime import datetime
-from typing import Any, Dict, Iterable, List, Optional, Sequence
+import time
+from typing import Any, Optional
 
-from stravalib import Client
+import pandas as pd
+import requests
 
-_KG_TO_LBS: float = 2.20462
-_METERS_TO_MILES: float = 0.000621371
+_STRAVA_API_BASE: str = "https://www.strava.com/api/v3"
 
-# Strava frame-type integer → human-readable label
-_FRAME_TYPE_LABELS: Dict[int, str] = {
-    1: "Mountain",
-    2: "Cross",
-    3: "Road",
-    4: "Time Trial",
-    5: "Triathlon",
-}
+# Segment classification thresholds
+_SPRINT_MAX_DISTANCE: float = 500.0   # metres
+_ASCENT_MIN_GRADE: float = 2.0        # percent
+_DESCENT_MAX_GRADE: float = -1.0      # percent
 
 
-def _to_seconds(value: Any) -> Optional[int]:
-    """Convert a timedelta-like value to seconds."""
-    if value is None:
-        return None
-    seconds = getattr(value, "total_seconds", None)
-    if callable(seconds):
-        return int(seconds())
-    return int(value)
+def _auth_headers(access_token: str) -> dict[str, str]:
+    """Return HTTP headers required to authenticate against the Strava API."""
+    return {"Authorization": f"Bearer {access_token}"}
 
 
-def _to_float(value: Any) -> Optional[float]:
-    """Convert a value to float when possible."""
-    if value is None:
-        return None
-    return float(value)
+def _classify_segment(distance: Optional[float], average_grade: Optional[float]) -> str:
+    """Return a segment type label based on distance and average grade.
 
-
-def _extract_lat_lon(activity: Any) -> tuple[Optional[float], Optional[float]]:
-    """Extract latitude and longitude from an activity."""
-    latlng = getattr(activity, "start_latlng", None)
-    if not latlng:
-        return None, None
-    if isinstance(latlng, (list, tuple)) and len(latlng) >= 2:
-        return _to_float(latlng[0]), _to_float(latlng[1])
-    lat = getattr(latlng, "lat", None)
-    lon = getattr(latlng, "lon", None)
-    if lat is not None and lon is not None:
-        return _to_float(lat), _to_float(lon)
-    try:
-        return _to_float(latlng[0]), _to_float(latlng[1])
-    except (TypeError, IndexError, KeyError):
-        return None, None
-
-
-def get_activities(
-    client: Client,
-    after: Optional[datetime] = None,
-    before: Optional[datetime] = None,
-    limit: Optional[int] = None,
-) -> List[Dict[str, Any]]:
-    """Fetch activities from Strava and normalize them into dictionaries.
+    Sprint is checked first, then ascent, then descent; everything else is flat.
 
     Args:
-        client: Authenticated Strava client.
-        after: Optional lower timestamp bound.
-        before: Optional upper timestamp bound.
-        limit: Optional maximum number of activities to return.
+        distance: Segment length in metres.
+        average_grade: Average gradient in percent.
 
     Returns:
-        A list of normalized activity dictionaries.
+        One of ``"sprint"``, ``"ascent"``, ``"descent"``, or ``"flat"``.
     """
-    activities_iter: Iterable[Any] = client.get_activities(after=after, before=before, limit=limit)
-    activities: List[Dict[str, Any]] = []
-    for activity in activities_iter:
-        lat, lon = _extract_lat_lon(activity)
-        start_date_local = getattr(activity, "start_date_local", None)
-        activities.append(
-            {
-                "id": int(activity.id),
-                "name": str(getattr(activity, "name", "")),
-                "distance_m": _to_float(getattr(activity, "distance", None)),
-                "moving_time_s": _to_seconds(getattr(activity, "moving_time", None)),
-                "elapsed_time_s": _to_seconds(getattr(activity, "elapsed_time", None)),
-                "total_elevation_gain_m": _to_float(getattr(activity, "total_elevation_gain", None)),
-                "average_speed_mps": _to_float(getattr(activity, "average_speed", None)),
-                "max_speed_mps": _to_float(getattr(activity, "max_speed", None)),
-                "average_heartrate": _to_float(getattr(activity, "average_heartrate", None)),
-                "max_heartrate": _to_float(getattr(activity, "max_heartrate", None)),
-                "average_watts": _to_float(getattr(activity, "average_watts", None)),
-                "weighted_average_watts": _to_float(getattr(activity, "weighted_average_watts", None)),
-                "kilojoules": _to_float(getattr(activity, "kilojoules", None)),
-                "suffer_score": _to_float(getattr(activity, "suffer_score", None)),
-                "start_date_local": start_date_local.isoformat() if start_date_local else None,
-                "timezone": str(getattr(activity, "timezone", "")) or None,
-                "gear_id": str(getattr(activity, "gear_id", "")) or None,
-                "type": str(getattr(activity, "type", "")) or None,
-                "sport_type": str(getattr(activity, "sport_type", "")) or None,
-                "start_lat": lat,
-                "start_lon": lon,
-            }
+    if distance is not None and distance < _SPRINT_MAX_DISTANCE:
+        return "sprint"
+    if average_grade is not None and average_grade > _ASCENT_MIN_GRADE:
+        return "ascent"
+    if average_grade is not None and average_grade < _DESCENT_MAX_GRADE:
+        return "descent"
+    return "flat"
+
+
+def get_starred_segments(access_token: str) -> pd.DataFrame:
+    """Fetch all starred segments for the authenticated athlete.
+
+    Paginates through ``GET /segments/starred`` until the API returns an
+    empty page.
+
+    Args:
+        access_token: Valid Strava OAuth access token.
+
+    Returns:
+        DataFrame with columns: ``segment_id``, ``name``, ``distance``,
+        ``average_grade``, ``climb_category``, ``total_elevation_gain``,
+        ``start_lat``, ``start_lng``, ``segment_type``.
+    """
+    url = f"{_STRAVA_API_BASE}/segments/starred"
+    headers = _auth_headers(access_token)
+    rows: list[dict[str, Any]] = []
+    page = 1
+    per_page = 200
+
+    while True:
+        resp = requests.get(
+            url,
+            headers=headers,
+            params={"page": page, "per_page": per_page},
+            timeout=30,
         )
-    return activities
+        resp.raise_for_status()
+        data: list[dict[str, Any]] = resp.json()
+        if not data:
+            break
+
+        for seg in data:
+            distance: Optional[float] = seg.get("distance")
+            average_grade: Optional[float] = seg.get("average_grade")
+            start_latlng: list[float] = seg.get("start_latlng") or []
+            rows.append(
+                {
+                    "segment_id": seg.get("id"),
+                    "name": seg.get("name"),
+                    "distance": distance,
+                    "average_grade": average_grade,
+                    "climb_category": seg.get("climb_category"),
+                    "total_elevation_gain": seg.get("total_elevation_gain"),
+                    "start_lat": start_latlng[0] if len(start_latlng) > 0 else None,
+                    "start_lng": start_latlng[1] if len(start_latlng) > 1 else None,
+                    "segment_type": _classify_segment(distance, average_grade),
+                }
+            )
+
+        if len(data) < per_page:
+            break
+        page += 1
+
+    return pd.DataFrame(rows)
 
 
-def get_gear(client: Client, gear_id: str) -> Dict[str, Any]:
-    """Fetch detailed gear information from Strava for a single gear ID.
+def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
+    """Fetch all efforts recorded on a single segment.
 
-    Args:
-        client: Authenticated Strava client.
-        gear_id: Strava gear identifier (e.g. ``"b12345678"``).
-
-    Returns:
-        A dictionary of gear attributes.  On API error only ``gear_id`` and
-        ``gear_name`` are guaranteed to be present.
-    """
-    try:
-        gear = client.get_gear(gear_id)
-    except Exception:
-        return {"gear_id": gear_id, "gear_name": gear_id}
-
-    raw_frame_type = getattr(gear, "frame_type", None)
-    try:
-        frame_type_int = int(raw_frame_type) if raw_frame_type is not None else None
-    except (TypeError, ValueError):
-        frame_type_int = None
-    frame_type_label = (
-        _FRAME_TYPE_LABELS.get(frame_type_int, str(raw_frame_type))
-        if frame_type_int is not None
-        else None
-    )
-
-    raw_distance = _to_float(getattr(gear, "distance", None))
-    strava_total_miles = round(raw_distance * _METERS_TO_MILES, 1) if raw_distance is not None else None
-
-    weight_kg = _to_float(getattr(gear, "weight", None))
-    weight_lbs = round(weight_kg * _KG_TO_LBS, 1) if weight_kg is not None else None
-
-    def _clean(val: Any) -> Optional[str]:
-        s = str(val or "").strip()
-        return s if s else None
-
-    return {
-        "gear_id": gear_id,
-        "gear_name": _clean(getattr(gear, "name", None)) or gear_id,
-        "brand_name": _clean(getattr(gear, "brand_name", None)),
-        "model_name": _clean(getattr(gear, "model_name", None)),
-        "frame_type": frame_type_label,
-        "description": _clean(getattr(gear, "description", None)),
-        "weight_lbs": weight_lbs,
-        "strava_total_miles": strava_total_miles,
-        "primary": bool(getattr(gear, "primary", False)),
-    }
-
-
-def get_streams(
-    client: Client,
-    activity_id: int,
-    keys: Optional[Sequence[str]] = None,
-) -> Dict[str, List[Any]]:
-    """Fetch time series streams for a Strava activity.
+    Paginates through ``GET /segment_efforts`` until the API returns an
+    empty page.
 
     Args:
-        client: Authenticated Strava client.
-        activity_id: Activity identifier.
-        keys: Optional stream keys to request.
+        access_token: Valid Strava OAuth access token.
+        segment_id: Strava segment identifier.
 
     Returns:
-        A mapping from stream key to stream data list.
+        DataFrame with columns: ``effort_id``, ``segment_id``,
+        ``start_date``, ``elapsed_time``, ``moving_time``,
+        ``average_watts``, ``average_heartrate``, ``gear_id``.
+        ``gear_id`` is sourced from ``activity.gear_id`` on each effort.
     """
-    requested_keys = list(keys) if keys else ["time", "distance", "latlng", "velocity_smooth", "heartrate", "watts"]
-    stream_set = client.get_activity_streams(activity_id=activity_id, types=requested_keys)
-    normalized: Dict[str, List[Any]] = {}
-    for key in requested_keys:
-        stream = stream_set.get(key)
-        if stream is None:
-            continue
-        normalized[key] = list(getattr(stream, "data", []) or [])
-    return normalized
+    url = f"{_STRAVA_API_BASE}/segment_efforts"
+    headers = _auth_headers(access_token)
+    rows: list[dict[str, Any]] = []
+    page = 1
+    per_page = 200
+
+    while True:
+        resp = requests.get(
+            url,
+            headers=headers,
+            params={"segment_id": segment_id, "page": page, "per_page": per_page},
+            timeout=30,
+        )
+        resp.raise_for_status()
+        data: list[dict[str, Any]] = resp.json()
+        if not data:
+            break
+
+        for effort in data:
+            activity: dict[str, Any] = effort.get("activity") or {}
+            rows.append(
+                {
+                    "effort_id": effort.get("id"),
+                    "segment_id": segment_id,
+                    "start_date": effort.get("start_date"),
+                    "elapsed_time": effort.get("elapsed_time"),
+                    "moving_time": effort.get("moving_time"),
+                    "average_watts": effort.get("average_watts"),
+                    "average_heartrate": effort.get("average_heartrate"),
+                    "gear_id": activity.get("gear_id"),
+                }
+            )
+
+        if len(data) < per_page:
+            break
+        page += 1
+
+    return pd.DataFrame(rows)
+
+
+def ingest_all(access_token: str) -> dict[str, pd.DataFrame]:
+    """Ingest all starred segments and their efforts from Strava.
+
+    Fetches every starred segment, then fetches efforts for each one,
+    sleeping one second between effort calls to respect Strava rate limits.
+
+    Args:
+        access_token: Valid Strava OAuth access token.
+
+    Returns:
+        A dict with keys ``"segments"`` and ``"efforts"``, each a
+        :class:`pandas.DataFrame`.
+    """
+    segments_df = get_starred_segments(access_token)
+    all_efforts: list[pd.DataFrame] = []
+
+    if not segments_df.empty:
+        for segment_id in segments_df["segment_id"]:
+            efforts_df = get_segment_efforts(access_token, int(segment_id))
+            if not efforts_df.empty:
+                all_efforts.append(efforts_df)
+            time.sleep(1)
+
+    efforts = pd.concat(all_efforts, ignore_index=True) if all_efforts else pd.DataFrame()
+    return {"segments": segments_df, "efforts": efforts}

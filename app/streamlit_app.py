@@ -11,7 +11,6 @@ import pandas as pd
 import requests
 import streamlit as st
 from dotenv import load_dotenv
-from stravalib import Client
 
 # Ensure `src` imports work when launching Streamlit from different working directories.
 _REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -19,59 +18,23 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from src.auth import exchange_code_for_token, get_authorization_url
-from src.fetch import get_activities, get_gear
+from src.fetch import ingest_all
 
 DEFAULT_MAX_ACTIVITIES = 2000
-
-# Unit-conversion constants
-_METERS_TO_MILES: float = 0.000621371
-_MPS_TO_MPH: float = 2.23694
-_METERS_TO_FEET: float = 3.28084
-
-
-def _build_analysis_frame(raw_activities: list[dict[str, object]]) -> pd.DataFrame:
-    """Transform Strava activity payload into an analysis-friendly dataframe."""
-    if not raw_activities:
-        return pd.DataFrame()
-
-    frame = pd.DataFrame(raw_activities)
-    frame["distance_miles"] = frame["distance_m"] * _METERS_TO_MILES
-    frame["moving_time_h"] = frame["moving_time_s"] / 3600
-    frame["avg_speed_mph"] = frame["average_speed_mps"] * _MPS_TO_MPH
-    frame["elevation_gain_ft"] = frame["total_elevation_gain_m"] * _METERS_TO_FEET
-    frame["date"] = pd.to_datetime(frame["start_date_local"], errors="coerce")
-    return frame
 
 
 def _process_data(
     access_token: str,
-    max_activities: int,
+    max_activities: int,  # noqa: ARG001 — kept for signature compatibility
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Fetch Strava activities and gear, returning both as DataFrames."""
+    """Fetch starred segments and all efforts from Strava, returning both as DataFrames."""
     progress = st.progress(0, text="Starting…")
 
-    progress.progress(20, text="Pulling activities from Strava API…")
-    client = Client(access_token=access_token)
-    activities = get_activities(client=client, limit=max_activities)
-
-    progress.progress(55, text="Processing activity data…")
-    frame = _build_analysis_frame(activities)
-
-    if not frame.empty:
-        watts = pd.to_numeric(frame["average_watts"], errors="coerce")
-        # Zero/negative watts are excluded to avoid invalid division in this derived metric.
-        valid_watts = watts.mask(watts <= 0)
-        frame["mph_per_watt"] = frame["avg_speed_mph"] / valid_watts
-
-    progress.progress(75, text="Fetching equipment details…")
-    gear_ids: list[str] = (
-        [g for g in frame["gear_id"].dropna().unique() if g] if not frame.empty else []
-    )
-    gear_rows = [get_gear(client=client, gear_id=gid) for gid in gear_ids]
-    gear_frame = pd.DataFrame(gear_rows) if gear_rows else pd.DataFrame(columns=["gear_id"])
+    progress.progress(20, text="Fetching starred segments from Strava API…")
+    result = ingest_all(access_token)
 
     progress.progress(100, text="Complete.")
-    return frame, gear_frame
+    return result["efforts"], result["segments"]
 
 
 def _query_param_value(value: object) -> str | None:
@@ -105,44 +68,37 @@ def _normalized_redirect_uri(raw_value: str) -> str:
     return value
 
 
-def _render_bike_summaries(activities: pd.DataFrame, gear_frame: pd.DataFrame) -> None:
-    """Render the bike summaries section."""
+def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame) -> None:
+    """Render the bike summaries section based on segment efforts grouped by gear."""
     st.subheader("🚲 Bike Summaries")
 
     agg_metrics = {
-        "rides": ("id", "count"),
-        "total_miles": ("distance_miles", "sum"),
-        "avg_speed_mph": ("avg_speed_mph", "mean"),
-        "total_elevation_ft": ("elevation_gain_ft", "sum"),
-        "total_moving_hours": ("moving_time_h", "sum"),
+        "total_efforts": ("effort_id", "count"),
+        "total_moving_hours": ("moving_time", "sum"),
         "avg_watts": ("average_watts", "mean"),
+        "avg_heartrate": ("average_heartrate", "mean"),
     }
-    bike_stats = activities.groupby("gear_id", dropna=False).agg(**agg_metrics).reset_index()
-    bike_stats["total_miles"] = bike_stats["total_miles"].round(1)
-    bike_stats["avg_speed_mph"] = bike_stats["avg_speed_mph"].round(1)
-    bike_stats["total_elevation_ft"] = bike_stats["total_elevation_ft"].round(0)
-    bike_stats["total_moving_hours"] = bike_stats["total_moving_hours"].round(1)
+    bike_stats = efforts.groupby("gear_id", dropna=False).agg(**agg_metrics).reset_index()
+    bike_stats["total_moving_hours"] = (bike_stats["total_moving_hours"] / 3600).round(1)
     bike_stats["avg_watts"] = bike_stats["avg_watts"].round(0)
+    bike_stats["avg_heartrate"] = bike_stats["avg_heartrate"].round(0)
+    bike_stats = bike_stats.sort_values("total_efforts", ascending=False)
 
-    if not gear_frame.empty and "gear_id" in gear_frame.columns:
-        bike_stats = bike_stats.merge(gear_frame, on="gear_id", how="left")
+    st.dataframe(bike_stats, use_container_width=True)
 
-    bike_stats = bike_stats.sort_values("total_miles", ascending=False)
-
-    # Preferred column order – only show columns that actually exist
-    preferred = [
-        "gear_name", "brand_name", "model_name", "frame_type",
-        "rides", "total_miles", "avg_speed_mph",
-        "total_elevation_ft", "total_moving_hours", "avg_watts",
-        "weight_lbs", "strava_total_miles", "primary", "description",
-    ]
-    display_cols = [c for c in preferred if c in bike_stats.columns]
-    st.dataframe(bike_stats[display_cols], use_container_width=True)
+    if not segments.empty:
+        st.subheader("⭐ Starred Segments")
+        preferred_seg = [
+            "name", "segment_type", "distance", "average_grade",
+            "climb_category", "total_elevation_gain", "start_lat", "start_lng",
+        ]
+        display_cols = [c for c in preferred_seg if c in segments.columns]
+        st.dataframe(segments[display_cols], use_container_width=True)
 
 
-def _save_session(data: pd.DataFrame, gear_frame: pd.DataFrame, code: str | None, max_activities: int, access_token: str) -> None:
-    st.session_state["activities"] = data
-    st.session_state["gear"] = gear_frame
+def _save_session(data: pd.DataFrame, segments: pd.DataFrame, code: str | None, max_activities: int, access_token: str) -> None:
+    st.session_state["efforts"] = data
+    st.session_state["segments"] = segments
     st.session_state["last_loaded_max_activities"] = max_activities
     st.session_state["access_token"] = access_token
     if code:
@@ -203,7 +159,7 @@ def main() -> None:
                     st.error(f"Unable to process data: {exc}")
                     return
             _save_session(data, gear_frame, code, selected_max_activities, access_token)
-            st.success("Strava validated. Activities loaded.")
+            st.success("Strava validated. Segment data loaded.")
         else:
             st.info("Using already-loaded activities for this authorization and activity limit.")
     else:
@@ -234,13 +190,13 @@ def main() -> None:
                 return
         _save_session(data, gear_frame, code, selected_max_activities, access_token)
 
-    data = st.session_state.get("activities")
+    data = st.session_state.get("efforts")
     if data is None or data.empty:
-        st.info("No data yet. Complete Strava SSO above to load activities.")
+        st.info("No data yet. Complete Strava SSO above to load segment data.")
         return
 
-    gear_frame = st.session_state.get("gear", pd.DataFrame(columns=["gear_id"]))
-    _render_bike_summaries(data, gear_frame)
+    segments = st.session_state.get("segments", pd.DataFrame())
+    _render_bike_summaries(data, segments)
 
 
 if __name__ == "__main__":
