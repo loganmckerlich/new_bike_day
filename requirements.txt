@@ -8,4 +8,3 @@ matplotlib
 seaborn
 plotly
 streamlit
-python-dotenv
