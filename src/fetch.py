@@ -191,6 +191,119 @@ def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def _decode_polyline(encoded: str) -> list[tuple[float, float]]:
+    """Decode a Google encoded polyline string into a list of (lat, lng) tuples.
+
+    Uses the standard algorithm described at
+    https://developers.google.com/maps/documentation/utilities/polylinealgorithm
+
+    Args:
+        encoded: The encoded polyline string.
+
+    Returns:
+        List of ``(latitude, longitude)`` float tuples.
+    """
+    points: list[tuple[float, float]] = []
+    idx = lat = lng = 0
+    while idx < len(encoded):
+        coords: list[int] = [0, 0]
+        for i in range(2):
+            shift = result = 0
+            while True:
+                b = ord(encoded[idx]) - 63
+                idx += 1
+                result |= (b & 0x1F) << shift
+                shift += 5
+                if b < 0x20:
+                    break
+            coords[i] = ~(result >> 1) if result & 1 else result >> 1
+        lat += coords[0]
+        lng += coords[1]
+        points.append((lat / 1e5, lng / 1e5))
+    return points
+
+
+def get_segment_detail(access_token: str, segment_id: int) -> dict[str, Any]:
+    """Fetch detailed information for a single segment, including its route polyline.
+
+    Calls ``GET /segments/{segment_id}`` to retrieve the full segment data
+    including the encoded route polyline and elevation bounds.
+
+    Args:
+        access_token: Valid Strava OAuth access token.
+        segment_id: Strava segment identifier.
+
+    Returns:
+        A dict with keys:
+        - ``"polyline_points"``: list of ``(lat, lng)`` tuples decoded from the
+          segment's ``map.polyline`` (may be empty if unavailable).
+        - ``"elevation_low"``: minimum elevation in metres, or ``None``.
+        - ``"elevation_high"``: maximum elevation in metres, or ``None``.
+        - ``"start_latlng"``: ``[lat, lng]`` or ``[]``.
+        - ``"end_latlng"``: ``[lat, lng]`` or ``[]``.
+
+        Returns an empty dict on request failure.
+    """
+    url = f"{_STRAVA_API_BASE}/segments/{segment_id}"
+    headers = _auth_headers(access_token)
+    try:
+        resp = requests.get(url, headers=headers, timeout=30)
+        resp.raise_for_status()
+    except requests.RequestException:
+        return {}
+
+    data = resp.json()
+    seg_map: dict[str, Any] = data.get("map") or {}
+    encoded = seg_map.get("polyline") or seg_map.get("summary_polyline") or ""
+    points = _decode_polyline(encoded) if encoded else []
+    return {
+        "polyline_points": points,
+        "elevation_low": data.get("elevation_low"),
+        "elevation_high": data.get("elevation_high"),
+        "start_latlng": data.get("start_latlng") or [],
+        "end_latlng": data.get("end_latlng") or [],
+    }
+
+
+def get_segment_streams(access_token: str, segment_id: int) -> dict[str, list[float]]:
+    """Fetch distance and altitude streams for a segment.
+
+    Calls ``GET /segments/{segment_id}/streams`` with keys ``distance`` and
+    ``altitude``.  Returns an empty dict on any failure (including premium-only
+    402 errors) so callers can degrade gracefully.
+
+    Args:
+        access_token: Valid Strava OAuth access token.
+        segment_id: Strava segment identifier.
+
+    Returns:
+        A dict with keys ``"distance"`` and ``"altitude"``, each a list of
+        float values.  Both lists are guaranteed to have the same length.
+        Returns ``{}`` on any error.
+    """
+    url = f"{_STRAVA_API_BASE}/segments/{segment_id}/streams"
+    headers = _auth_headers(access_token)
+    try:
+        resp = requests.get(
+            url,
+            headers=headers,
+            params={"keys": "distance,altitude", "key_by_type": "true"},
+            timeout=30,
+        )
+        resp.raise_for_status()
+    except requests.RequestException:
+        return {}
+
+    data = resp.json()
+    distance_stream = data.get("distance") or {}
+    altitude_stream = data.get("altitude") or {}
+    distances: list[float] = distance_stream.get("data") or []
+    altitudes: list[float] = altitude_stream.get("data") or []
+    if len(distances) != len(altitudes) or not distances:
+        return {}
+    return {"distance": distances, "altitude": altitudes}
+
+
 def get_athlete_bikes(access_token: str) -> dict[str, str]:
     """Fetch the authenticated athlete's bikes and return a gear_id → name mapping.
 
