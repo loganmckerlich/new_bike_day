@@ -9,12 +9,15 @@ import pandas as pd
 import requests
 
 _STRAVA_API_BASE: str = "https://www.strava.com/api/v3"
+_PREMIUM_ONLY_ERROR_MESSAGE: str = (
+    "This feature requires a Strava premium membership. "
+    "The segment data endpoints used by this tool are only available to premium members."
+)
 
 
 class PremiumOnlyError(Exception):
     """Raised when API endpoints require Strava premium membership."""
 
-    pass
 
 # Segment classification thresholds
 _SPRINT_MAX_DISTANCE: float = 500.0   # metres
@@ -84,10 +87,7 @@ def get_starred_segments(access_token: str) -> pd.DataFrame:
             resp.raise_for_status()
         except requests.exceptions.HTTPError as exc:
             if exc.response.status_code == 402:
-                raise PremiumOnlyError(
-                    "This feature requires a Strava premium membership. "
-                    "The segment data endpoints used by this tool are only available to premium members."
-                ) from exc
+                raise PremiumOnlyError(_PREMIUM_ONLY_ERROR_MESSAGE) from exc
             raise
 
         data: list[dict[str, Any]] = resp.json()
@@ -156,10 +156,7 @@ def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
             resp.raise_for_status()
         except requests.exceptions.HTTPError as exc:
             if exc.response.status_code == 402:
-                raise PremiumOnlyError(
-                    "This feature requires a Strava premium membership. "
-                    "The segment data endpoints used by this tool are only available to premium members."
-                ) from exc
+                raise PremiumOnlyError(_PREMIUM_ONLY_ERROR_MESSAGE) from exc
             raise
 
         data: list[dict[str, Any]] = resp.json()
