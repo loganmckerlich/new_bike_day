@@ -14,7 +14,6 @@ from src.auth import exchange_code_for_token, get_authorization_url
 from src.fetch import get_activities
 
 DEFAULT_MAX_ACTIVITIES = 200
-load_dotenv()
 
 
 def _build_analysis_frame(raw_activities: list[dict[str, object]]) -> pd.DataFrame:
@@ -76,6 +75,7 @@ def _exchange_access_token(client_id: str, client_secret: str, redirect_uri: str
 
 def main() -> None:
     """Render the cloud-ready Streamlit workflow."""
+    load_dotenv()
     st.set_page_config(page_title="New Bike Day", layout="wide")
     st.title("🚴 New Bike Day")
     st.caption("One-click Strava SSO to validate access and load all activities in-memory.")
@@ -103,46 +103,59 @@ def main() -> None:
 
     code = _query_param_value(code_from_params)
 
+    selected_max_activities = int(max_activities)
+
     if code:
         last_processed_code = st.session_state.get("last_processed_code")
-        if code != last_processed_code:
+        last_loaded_max_activities = st.session_state.get("last_loaded_max_activities")
+        should_reload = code != last_processed_code or last_loaded_max_activities != selected_max_activities
+        if should_reload:
             with st.spinner("Working…"):
                 try:
-                    access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
+                    access_token = st.session_state.get("access_token")
+                    if code != last_processed_code or not access_token:
+                        access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
                     data = _process_data(
                         access_token=access_token,
-                        max_activities=int(max_activities),
+                        max_activities=selected_max_activities,
                     )
                 except (requests.RequestException, ValueError) as exc:
                     st.error(f"Unable to process data: {exc}")
                     return
             st.session_state["activities"] = data
             st.session_state["last_processed_code"] = code
+            st.session_state["last_loaded_max_activities"] = selected_max_activities
+            st.session_state["access_token"] = access_token
         st.success("Strava validated. Activities loaded.")
     else:
         st.info("Click Sign in with Strava SSO, authorize access, and return here to auto-load data.")
 
     if st.button("Reload Activities", type="secondary"):
-        access_token = env_access_token
-        if code:
+        access_token = st.session_state.get("access_token") or env_access_token
+        if not access_token and code:
             try:
                 access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
             except (requests.RequestException, ValueError) as exc:
                 st.error(f"Unable to process data: {exc}")
                 return
         if not access_token:
-            st.warning("Authorize with Strava first, or set STRAVA_ACCESS_TOKEN in .env.")
+            st.warning(
+                "Please authorize with Strava using the Sign in button above, "
+                "or set STRAVA_ACCESS_TOKEN in your .env file to enable reloading."
+            )
             return
         with st.spinner("Working…"):
             try:
                 data = _process_data(
                     access_token=access_token,
-                    max_activities=int(max_activities),
+                    max_activities=selected_max_activities,
                 )
             except (requests.RequestException, ValueError) as exc:
                 st.error(f"Unable to process data: {exc}")
                 return
         st.session_state["activities"] = data
+        st.session_state["access_token"] = access_token
+        st.session_state["last_loaded_max_activities"] = selected_max_activities
         if code:
             st.session_state["last_processed_code"] = code
 
