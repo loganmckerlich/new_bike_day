@@ -228,7 +228,7 @@ def _render_segment_analysis(
     if "average_heartrate" in efforts_df.columns:
         agg_spec["avg_hr"] = ("average_heartrate", "mean")
 
-    summary = efforts_df.groupby("gear_label", dropna=False).agg(**agg_spec).reset_index()
+    summary = efforts_df.groupby("gear_label").agg(**agg_spec).reset_index()
     summary = summary.sort_values("efforts", ascending=False)
 
     display = summary.copy()
@@ -314,7 +314,13 @@ def _render_segment_analysis(
 
 
 def _save_session(
-    data: pd.DataFrame, gear_frame: pd.DataFrame, starred: list[dict], code: str | None, max_activities: int, access_token: str) -> None:
+    data: pd.DataFrame,
+    gear_frame: pd.DataFrame,
+    starred: list[dict],
+    code: str | None,
+    max_activities: int,
+    access_token: str,
+) -> None:
     st.session_state["activities"] = data
     st.session_state["gear"] = gear_frame
     st.session_state["starred_segments"] = starred
