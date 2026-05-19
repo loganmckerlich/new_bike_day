@@ -9,6 +9,7 @@ from urllib.parse import urlsplit, urlunsplit
 
 import pandas as pd
 import requests
+import plotly.express as px
 import streamlit as st
 from dotenv import load_dotenv
 from stravalib import Client
@@ -19,7 +20,7 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from src.auth import exchange_code_for_token, get_authorization_url
-from src.fetch import get_activities, get_gear
+from src.fetch import get_activities, get_gear, get_segment_efforts, get_starred_segments
 
 DEFAULT_MAX_ACTIVITIES = 2000
 
@@ -46,15 +47,15 @@ def _build_analysis_frame(raw_activities: list[dict[str, object]]) -> pd.DataFra
 def _process_data(
     access_token: str,
     max_activities: int,
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Fetch Strava activities and gear, returning both as DataFrames."""
+) -> tuple[pd.DataFrame, pd.DataFrame, list[dict]]:
+    """Fetch Strava activities, gear, and starred segments, returning all three."""
     progress = st.progress(0, text="Starting…")
 
     progress.progress(20, text="Pulling activities from Strava API…")
     client = Client(access_token=access_token)
     activities = get_activities(client=client, limit=max_activities)
 
-    progress.progress(55, text="Processing activity data…")
+    progress.progress(50, text="Processing activity data…")
     frame = _build_analysis_frame(activities)
 
     if not frame.empty:
@@ -63,15 +64,18 @@ def _process_data(
         valid_watts = watts.mask(watts <= 0)
         frame["mph_per_watt"] = frame["avg_speed_mph"] / valid_watts
 
-    progress.progress(75, text="Fetching equipment details…")
+    progress.progress(70, text="Fetching equipment details…")
     gear_ids: list[str] = (
         [g for g in frame["gear_id"].dropna().unique() if g] if not frame.empty else []
     )
     gear_rows = [get_gear(client=client, gear_id=gid) for gid in gear_ids]
     gear_frame = pd.DataFrame(gear_rows) if gear_rows else pd.DataFrame(columns=["gear_id"])
 
+    progress.progress(85, text="Fetching starred segments…")
+    starred = get_starred_segments(client=client)
+
     progress.progress(100, text="Complete.")
-    return frame, gear_frame
+    return frame, gear_frame, starred
 
 
 def _query_param_value(value: object) -> str | None:
@@ -140,9 +144,180 @@ def _render_bike_summaries(activities: pd.DataFrame, gear_frame: pd.DataFrame) -
     st.dataframe(bike_stats[display_cols], use_container_width=True)
 
 
-def _save_session(data: pd.DataFrame, gear_frame: pd.DataFrame, code: str | None, max_activities: int, access_token: str) -> None:
+def _fmt_pace(minutes: float) -> str:
+    """Format a decimal-minutes pace value as 'mm:ss'."""
+    if pd.isna(minutes):
+        return "—"
+    m = int(minutes)
+    s = int(round((minutes - m) * 60))
+    return f"{m}:{s:02d}"
+
+
+def _render_segment_analysis(
+    activities: pd.DataFrame,
+    gear_frame: pd.DataFrame,
+    starred_segments: list[dict],
+    access_token: str,
+) -> None:
+    """Render the starred segment comparison section."""
+    st.subheader("🏁 Starred Segment Analysis")
+
+    if not starred_segments:
+        st.info("No starred segments found for your account.")
+        return
+
+    # Build display labels and lookup map
+    seg_labels = [
+        f"{s['name']}  ({(s['distance_m'] or 0) * _METERS_TO_MILES:.2f} mi)"
+        for s in starred_segments
+    ]
+    seg_by_label = dict(zip(seg_labels, starred_segments))
+
+    selected_label = st.selectbox("Select a segment", seg_labels, key="segment_select")
+    selected_seg = seg_by_label[selected_label]
+    segment_id = selected_seg["segment_id"]
+    distance_m = selected_seg.get("distance_m") or 0.0
+
+    # Fetch efforts lazily, cached per segment
+    cache_key = f"segment_efforts_{segment_id}"
+    if cache_key not in st.session_state:
+        with st.spinner("Fetching segment efforts…"):
+            try:
+                client = Client(access_token=access_token)
+                efforts = get_segment_efforts(client=client, segment_id=segment_id)
+            except Exception as exc:
+                st.error(f"Unable to fetch efforts for this segment: {exc}")
+                return
+        st.session_state[cache_key] = efforts
+
+    efforts = st.session_state[cache_key]
+    if not efforts:
+        st.info("No efforts recorded for this segment yet.")
+        return
+
+    efforts_df = pd.DataFrame(efforts)
+    efforts_df["date"] = pd.to_datetime(efforts_df["start_date_local"], errors="coerce")
+
+    # Cross-reference with activities to get gear_id
+    if not activities.empty and "id" in activities.columns:
+        act_lookup = activities[["id", "gear_id"]].rename(columns={"id": "activity_id"})
+        efforts_df = efforts_df.merge(act_lookup, on="activity_id", how="left")
+    else:
+        efforts_df["gear_id"] = None
+
+    # Attach gear names
+    gear_name_map: dict[str, str] = {}
+    if not gear_frame.empty and "gear_id" in gear_frame.columns and "gear_name" in gear_frame.columns:
+        gear_name_map = dict(zip(gear_frame["gear_id"], gear_frame["gear_name"]))
+    efforts_df["gear_label"] = efforts_df["gear_id"].map(gear_name_map).fillna("Unknown gear")
+
+    # Compute pace (min/mile) from elapsed time and segment distance
+    if distance_m > 0:
+        distance_miles = distance_m * _METERS_TO_MILES
+        efforts_df["pace_min_per_mile"] = (efforts_df["elapsed_time_s"] / 60) / distance_miles
+
+    # ── Summary stats table ───────────────────────────────────────────────────
+    st.markdown("#### Summary by Gear")
+    agg_spec: dict = {"efforts": ("effort_id", "count")}
+    if "pace_min_per_mile" in efforts_df.columns:
+        agg_spec["avg_pace"] = ("pace_min_per_mile", "mean")
+        agg_spec["best_pace"] = ("pace_min_per_mile", "min")
+    if "average_watts" in efforts_df.columns:
+        agg_spec["avg_watts"] = ("average_watts", "mean")
+        agg_spec["max_watts"] = ("average_watts", "max")
+    if "average_heartrate" in efforts_df.columns:
+        agg_spec["avg_hr"] = ("average_heartrate", "mean")
+
+    summary = efforts_df.groupby("gear_label", dropna=False).agg(**agg_spec).reset_index()
+    summary = summary.sort_values("efforts", ascending=False)
+
+    display = summary.copy()
+    if "avg_pace" in display.columns:
+        display["avg_pace"] = display["avg_pace"].apply(_fmt_pace)
+        display["best_pace"] = display["best_pace"].apply(_fmt_pace)
+    for col in ("avg_watts", "max_watts", "avg_hr"):
+        if col in display.columns:
+            display[col] = display[col].round(1)
+
+    display = display.rename(columns={
+        "gear_label": "Gear",
+        "efforts": "Efforts",
+        "avg_pace": "Avg Pace (min/mi)",
+        "best_pace": "Best Pace (min/mi)",
+        "avg_watts": "Avg Watts",
+        "max_watts": "Max Watts",
+        "avg_hr": "Avg HR",
+    })
+    st.dataframe(display, use_container_width=True, hide_index=True)
+
+    # ── Plots ─────────────────────────────────────────────────────────────────
+    has_pace = "pace_min_per_mile" in efforts_df.columns
+    has_watts = (
+        "average_watts" in efforts_df.columns
+        and efforts_df["average_watts"].notna().any()
+    )
+
+    if has_pace or has_watts:
+        st.markdown("#### Distributions by Gear")
+        cols = st.columns(2 if (has_pace and has_watts) else 1)
+
+        if has_pace:
+            pace_df = efforts_df.dropna(subset=["pace_min_per_mile"])
+            fig_pace = px.box(
+                pace_df,
+                x="gear_label",
+                y="pace_min_per_mile",
+                color="gear_label",
+                labels={"gear_label": "Gear", "pace_min_per_mile": "Pace (min/mi)"},
+                title="Pace by Gear",
+            )
+            fig_pace.update_layout(showlegend=False)
+            cols[0].plotly_chart(fig_pace, use_container_width=True)
+
+        if has_watts:
+            watts_df = efforts_df.dropna(subset=["average_watts"])
+            fig_watts = px.box(
+                watts_df,
+                x="gear_label",
+                y="average_watts",
+                color="gear_label",
+                labels={"gear_label": "Gear", "average_watts": "Avg Watts"},
+                title="Power by Gear",
+            )
+            fig_watts.update_layout(showlegend=False)
+            cols[-1].plotly_chart(fig_watts, use_container_width=True)
+
+    # ── Efforts over time ─────────────────────────────────────────────────────
+    if has_pace and efforts_df["date"].notna().any():
+        st.markdown("#### Efforts Over Time")
+        scatter_df = efforts_df.dropna(subset=["pace_min_per_mile", "date"])
+        fig_time = px.scatter(
+            scatter_df,
+            x="date",
+            y="pace_min_per_mile",
+            color="gear_label",
+            hover_data={
+                "date": "|%Y-%m-%d",
+                "pace_min_per_mile": ":.2f",
+                "average_watts": True,
+                "gear_label": False,
+            },
+            labels={
+                "date": "Date",
+                "pace_min_per_mile": "Pace (min/mi)",
+                "gear_label": "Gear",
+                "average_watts": "Avg Watts",
+            },
+            title="Segment Pace Over Time",
+        )
+        st.plotly_chart(fig_time, use_container_width=True)
+
+
+def _save_session(
+    data: pd.DataFrame, gear_frame: pd.DataFrame, starred: list[dict], code: str | None, max_activities: int, access_token: str) -> None:
     st.session_state["activities"] = data
     st.session_state["gear"] = gear_frame
+    st.session_state["starred_segments"] = starred
     st.session_state["last_loaded_max_activities"] = max_activities
     st.session_state["access_token"] = access_token
     if code:
@@ -195,14 +370,14 @@ def main() -> None:
                     access_token = st.session_state.get("access_token")
                     if code != last_processed_code or not access_token:
                         access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
-                    data, gear_frame = _process_data(
+                    data, gear_frame, starred = _process_data(
                         access_token=access_token,
                         max_activities=selected_max_activities,
                     )
                 except (requests.RequestException, ValueError) as exc:
                     st.error(f"Unable to process data: {exc}")
                     return
-            _save_session(data, gear_frame, code, selected_max_activities, access_token)
+            _save_session(data, gear_frame, starred, code, selected_max_activities, access_token)
             st.success("Strava validated. Activities loaded.")
         else:
             st.info("Using already-loaded activities for this authorization and activity limit.")
@@ -225,14 +400,14 @@ def main() -> None:
             return
         with st.spinner("Working…"):
             try:
-                data, gear_frame = _process_data(
+                data, gear_frame, starred = _process_data(
                     access_token=access_token,
                     max_activities=selected_max_activities,
                 )
             except (requests.RequestException, ValueError) as exc:
                 st.error(f"Unable to process data: {exc}")
                 return
-        _save_session(data, gear_frame, code, selected_max_activities, access_token)
+        _save_session(data, gear_frame, starred, code, selected_max_activities, access_token)
 
     data = st.session_state.get("activities")
     if data is None or data.empty:
@@ -241,6 +416,11 @@ def main() -> None:
 
     gear_frame = st.session_state.get("gear", pd.DataFrame(columns=["gear_id"]))
     _render_bike_summaries(data, gear_frame)
+
+    starred_segments = st.session_state.get("starred_segments", [])
+    access_token = st.session_state.get("access_token") or env_access_token
+    if access_token:
+        _render_segment_analysis(data, gear_frame, starred_segments, access_token)
 
 
 if __name__ == "__main__":

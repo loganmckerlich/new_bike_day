@@ -154,6 +154,66 @@ def get_gear(client: Client, gear_id: str) -> Dict[str, Any]:
     }
 
 
+def get_starred_segments(client: Client) -> List[Dict[str, Any]]:
+    """Fetch the authenticated athlete's starred segments.
+
+    Args:
+        client: Authenticated Strava client.
+
+    Returns:
+        A list of segment summary dictionaries.
+    """
+    segments: List[Dict[str, Any]] = []
+    for seg in client.get_starred_segments():
+        segments.append(
+            {
+                "segment_id": int(seg.id),
+                "name": str(getattr(seg, "name", "")),
+                "distance_m": _to_float(getattr(seg, "distance", None)),
+                "activity_type": str(getattr(seg, "activity_type", "")) or None,
+                "climb_category": int(getattr(seg, "climb_category", 0) or 0),
+                "city": str(getattr(seg, "city", "") or "").strip() or None,
+                "state": str(getattr(seg, "state", "") or "").strip() or None,
+            }
+        )
+    return segments
+
+
+def get_segment_efforts(
+    client: Client,
+    segment_id: int,
+    limit: Optional[int] = None,
+) -> List[Dict[str, Any]]:
+    """Fetch all of the authenticated athlete's efforts on a given segment.
+
+    Args:
+        client: Authenticated Strava client.
+        segment_id: Strava segment identifier.
+        limit: Optional maximum number of efforts to return.
+
+    Returns:
+        A list of effort dictionaries.
+    """
+    efforts: List[Dict[str, Any]] = []
+    for effort in client.get_segment_efforts(segment_id=segment_id, limit=limit):
+        start_date_local = getattr(effort, "start_date_local", None)
+        activity = getattr(effort, "activity", None)
+        activity_id = int(activity.id) if activity is not None else None
+        efforts.append(
+            {
+                "effort_id": int(effort.id),
+                "activity_id": activity_id,
+                "elapsed_time_s": _to_seconds(getattr(effort, "elapsed_time", None)),
+                "moving_time_s": _to_seconds(getattr(effort, "moving_time", None)),
+                "start_date_local": start_date_local.isoformat() if start_date_local else None,
+                "average_watts": _to_float(getattr(effort, "average_watts", None)),
+                "average_heartrate": _to_float(getattr(effort, "average_heartrate", None)),
+                "average_cadence": _to_float(getattr(effort, "average_cadence", None)),
+            }
+        )
+    return efforts
+
+
 def get_streams(
     client: Client,
     activity_id: int,
