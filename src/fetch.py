@@ -191,18 +191,48 @@ def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def ingest_all(access_token: str) -> dict[str, pd.DataFrame]:
-    """Ingest all starred segments and their efforts from Strava.
-
-    Fetches every starred segment, then fetches efforts for each one,
-    sleeping one second between effort calls to respect Strava rate limits.
+def get_athlete_bikes(access_token: str) -> dict[str, str]:
+    """Fetch the authenticated athlete's bikes and return a gear_id → name mapping.
 
     Args:
         access_token: Valid Strava OAuth access token.
 
     Returns:
-        A dict with keys ``"segments"`` and ``"efforts"``, each a
-        :class:`pandas.DataFrame`.
+        Dict mapping gear_id (e.g. ``"b1234567"``) to a human-readable name
+        (e.g. ``"Trek Domane SL5"``).  Returns an empty dict on error.
+    """
+    url = f"{_STRAVA_API_BASE}/athlete"
+    headers = _auth_headers(access_token)
+    try:
+        resp = requests.get(url, headers=headers, timeout=30)
+        resp.raise_for_status()
+    except requests.RequestException:
+        return {}
+
+    data = resp.json()
+    bikes: list[dict[str, Any]] = data.get("bikes") or []
+    return {
+        bike["id"]: bike.get("name") or bike.get("model_name") or bike["id"]
+        for bike in bikes
+        if bike.get("id")
+    }
+
+
+def ingest_all(access_token: str) -> dict[str, pd.DataFrame | dict[str, str]]:
+    """Ingest all starred segments, their efforts, and athlete bikes from Strava.
+
+    Fetches every starred segment, then fetches efforts for each one,
+    sleeping one second between effort calls to respect Strava rate limits.
+    Also fetches the athlete's bikes for gear name resolution.
+
+    Args:
+        access_token: Valid Strava OAuth access token.
+
+    Returns:
+        A dict with keys:
+        - ``"segments"``: :class:`pandas.DataFrame` of starred segments.
+        - ``"efforts"``: :class:`pandas.DataFrame` of all efforts.
+        - ``"bikes"``: ``dict[str, str]`` mapping gear_id to bike name.
     """
     segments_df = get_starred_segments(access_token)
     all_efforts: list[pd.DataFrame] = []
@@ -215,4 +245,5 @@ def ingest_all(access_token: str) -> dict[str, pd.DataFrame]:
             time.sleep(1)
 
     efforts = pd.concat(all_efforts, ignore_index=True) if all_efforts else pd.DataFrame()
-    return {"segments": segments_df, "efforts": efforts}
+    bikes = get_athlete_bikes(access_token)
+    return {"segments": segments_df, "efforts": efforts, "bikes": bikes}
