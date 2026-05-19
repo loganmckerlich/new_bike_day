@@ -7,6 +7,18 @@ from typing import Any, Dict, Iterable, List, Optional, Sequence
 
 from stravalib import Client
 
+_KG_TO_LBS: float = 2.20462
+_METERS_TO_MILES: float = 0.000621371
+
+# Strava frame-type integer → human-readable label
+_FRAME_TYPE_LABELS: Dict[int, str] = {
+    1: "Mountain",
+    2: "Cross",
+    3: "Road",
+    4: "Time Trial",
+    5: "Triathlon",
+}
+
 
 def _to_seconds(value: Any) -> Optional[int]:
     """Convert a timedelta-like value to seconds."""
@@ -90,6 +102,56 @@ def get_activities(
             }
         )
     return activities
+
+
+def get_gear(client: Client, gear_id: str) -> Dict[str, Any]:
+    """Fetch detailed gear information from Strava for a single gear ID.
+
+    Args:
+        client: Authenticated Strava client.
+        gear_id: Strava gear identifier (e.g. ``"b12345678"``).
+
+    Returns:
+        A dictionary of gear attributes.  On API error only ``gear_id`` and
+        ``gear_name`` are guaranteed to be present.
+    """
+    try:
+        gear = client.get_gear(gear_id)
+    except Exception:
+        return {"gear_id": gear_id, "gear_name": gear_id}
+
+    raw_frame_type = getattr(gear, "frame_type", None)
+    try:
+        frame_type_int = int(raw_frame_type) if raw_frame_type is not None else None
+    except (TypeError, ValueError):
+        frame_type_int = None
+    frame_type_label = (
+        _FRAME_TYPE_LABELS.get(frame_type_int, str(raw_frame_type))
+        if frame_type_int is not None
+        else None
+    )
+
+    raw_distance = _to_float(getattr(gear, "distance", None))
+    strava_total_miles = round(raw_distance * _METERS_TO_MILES, 1) if raw_distance is not None else None
+
+    weight_kg = _to_float(getattr(gear, "weight", None))
+    weight_lbs = round(weight_kg * _KG_TO_LBS, 1) if weight_kg else None
+
+    def _clean(val: Any) -> Optional[str]:
+        s = str(val or "").strip()
+        return s if s else None
+
+    return {
+        "gear_id": gear_id,
+        "gear_name": _clean(getattr(gear, "name", None)) or gear_id,
+        "brand_name": _clean(getattr(gear, "brand_name", None)),
+        "model_name": _clean(getattr(gear, "model_name", None)),
+        "frame_type": frame_type_label,
+        "description": _clean(getattr(gear, "description", None)),
+        "weight_lbs": weight_lbs,
+        "strava_total_miles": strava_total_miles,
+        "primary": bool(getattr(gear, "primary", False)),
+    }
 
 
 def get_streams(
