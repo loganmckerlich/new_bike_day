@@ -102,7 +102,7 @@ def main() -> None:
 
     env_client_id = os.getenv("STRAVA_CLIENT_ID", "")
     env_client_secret = os.getenv("STRAVA_CLIENT_SECRET", "")
-    default_redirect_uri = _normalized_redirect_uri(os.getenv("STRAVA_REDIRECT_URI", "http://localhost:8501/"))
+    default_redirect_uri = _normalized_redirect_uri(os.getenv("STRAVA_REDIRECT_URI", "http://localhost:8501"))
     env_access_token = os.getenv("STRAVA_ACCESS_TOKEN", "")
 
     st.subheader("1) Connect Strava")
