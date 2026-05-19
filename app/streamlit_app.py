@@ -52,11 +52,7 @@ def _process_data(
 
     progress.progress(90, text="Running algorithms…")
     if not frame.empty:
-        _ = (
-            frame.groupby("gear_id", dropna=False)
-            .agg(total_distance_km=("distance_km", "sum"), avg_speed_kph=("avg_speed_kph", "mean"))
-            .sort_values("total_distance_km", ascending=False)
-        )
+        frame["speed_to_power_ratio"] = frame["avg_speed_kph"] / frame["average_watts"].replace({0: pd.NA})
 
     progress.progress(100, text="Complete.")
     return frame
@@ -104,7 +100,10 @@ def main() -> None:
         st.session_state["activities"] = data
 
     data = st.session_state.get("activities")
-    if data is None or data.empty:
+    if data is None:
+        st.info("No in-memory data yet. Complete Strava SSO and click Process Data.")
+        return
+    if data.empty:
         st.info("No in-memory data yet. Complete Strava SSO and click Process Data.")
         return
 
