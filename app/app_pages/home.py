@@ -30,6 +30,7 @@ from src.database import (
     save_segments,
 )
 from src.fetch import ingest_all, PremiumOnlyError, get_athlete_bikes
+from src.home_personality import build_cheeky_conclusion, load_dev_athlete_profile
 from src.utils import link_button_no_tab
 
 
@@ -354,6 +355,33 @@ def _save_session(
         st.session_state["last_processed_code"] = code
 
 
+def _render_cheeky_conclusion_form(athlete_name: str | None = None) -> None:
+    st.divider()
+    st.subheader("😏 Cheeky conclusion form")
+    with st.form("cheeky_conclusion_form"):
+        legs_status = st.selectbox(
+            "How are the legs feeling?",
+            ["Fresh-ish", "Spicy", "Crispy", "Utterly betrayed me"],
+            index=1,
+        )
+        vibe = st.selectbox(
+            "Ride vibe",
+            ["Smooth and smug", "Questionable pacing", "Chaos, but fun"],
+            index=0,
+        )
+        takeaway = st.text_input("One-line recap", placeholder="What's your story today?")
+        submitted = st.form_submit_button("Generate cheeky summary")
+    if submitted:
+        st.success(
+            build_cheeky_conclusion(
+                athlete_name=athlete_name,
+                legs_status=legs_status,
+                vibe=vibe,
+                takeaway=takeaway,
+            )
+        )
+
+
 def main() -> None:
     # ── Dev mode toggle ───────────────────────────────────────────────────────
     with st.sidebar:
@@ -365,14 +393,37 @@ def main() -> None:
 
     # Hero header
     col_title, col_logo = st.columns([4, 1])
+    athlete_profile = load_dev_athlete_profile()
+    athlete_name = athlete_profile.get("first_name") or None
     with col_title:
         st.title("🚴 New Bike Day")
+        if athlete_name:
+            st.header(f"Hello, {athlete_name} 👋")
         st.markdown(
             "Compare your rides across different bikes on the same Strava segments. "
             "Sign in with Strava to get started."
         )
+        if athlete_profile:
+            profile_bits = []
+            full_name = athlete_profile.get("full_name")
+            if full_name:
+                profile_bits.append(f"Rider: **{full_name}**")
+            primary_bike = athlete_profile.get("primary_bike")
+            if primary_bike:
+                profile_bits.append(f"Primary bike: **{primary_bike}**")
+            location = ", ".join(
+                part
+                for part in [athlete_profile.get("city", ""), athlete_profile.get("country", "")]
+                if part
+            )
+            if location:
+                profile_bits.append(f"Home base: **{location}**")
+            if profile_bits:
+                st.caption(" • ".join(profile_bits))
         if dev_mode:
             st.caption("🛠️ Dev mode is on — showing static sample data.")
+
+    _render_cheeky_conclusion_form(athlete_name=athlete_name)
 
     # ── Dev mode: load static JSON and skip all OAuth / API logic ─────────────
     if dev_mode:
