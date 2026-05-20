@@ -7,6 +7,7 @@ from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
+from plotly.colors import hex_to_rgb
 import plotly.graph_objects as go
 import streamlit as st
 
@@ -39,13 +40,39 @@ if segments is None or segments.empty:
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 SEGMENT_TYPES: list[str] = ["sprint", "flat", "ascent", "descent"]
+SEGMENT_TYPE_DETAILS: list[str] = [
+    "sprint_flat",
+    "sprint_uphill",
+    "sprint_downhill",
+    "flat_short",
+    "flat_long",
+    "ascent_shallow",
+    "ascent_moderate",
+    "ascent_steep",
+    "descent_gentle",
+    "descent_steep",
+]
 TYPE_ICONS: dict[str, str] = {
     "sprint": "⚡",
     "flat": "➡️",
     "ascent": "⬆️",
     "descent": "⬇️",
 }
+TYPE_DETAIL_LABELS: dict[str, str] = {
+    "sprint_flat": "Sprint • Flat",
+    "sprint_uphill": "Sprint • Uphill",
+    "sprint_downhill": "Sprint • Downhill",
+    "flat_short": "Flat • Short",
+    "flat_long": "Flat • Long",
+    "ascent_shallow": "Ascent • Shallow",
+    "ascent_moderate": "Ascent • Moderate",
+    "ascent_steep": "Ascent • Steep",
+    "descent_gentle": "Descent • Gentle",
+    "descent_steep": "Descent • Steep",
+}
 _COLOR_SEQ: list[str] = px.colors.qualitative.Set2
+_SPIDER_POLYGON_LINE_WIDTH: int = 3
+_SPIDER_POLYGON_FILL_ALPHA: float = 0.20
 
 # ── Unit helpers ─────────────────────────────────────────────────────────────
 
@@ -78,6 +105,11 @@ def _convert_dist_m(meters: float) -> float:
 def _convert_elev_m(meters: float) -> float:
     """Convert metres to display unit (m or ft)."""
     return meters if _use_metric() else meters * 3.28084
+
+
+def _rgba(hex_color: str, alpha: float) -> str:
+    r, g, b = hex_to_rgb(hex_color)
+    return f"rgba({r},{g},{b},{alpha})"
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -276,9 +308,19 @@ if watt_efforts.empty:
 
 watt_efforts["bike_name"] = watt_efforts["gear_id"].map(_gear_label)
 
-seg_meta = segments[
-    ["segment_id", "name", "distance", "average_grade", "total_elevation_gain", "segment_type"]
+seg_meta_cols = [
+    "segment_id",
+    "name",
+    "distance",
+    "average_grade",
+    "total_elevation_gain",
+    "segment_type",
 ]
+if "segment_type_detail" in segments.columns:
+    seg_meta_cols.append("segment_type_detail")
+seg_meta = segments[seg_meta_cols].copy()
+if "segment_type_detail" not in seg_meta.columns:
+    seg_meta["segment_type_detail"] = seg_meta["segment_type"]
 watt_efforts = watt_efforts.merge(seg_meta, on="segment_id", how="inner")
 watt_efforts["speed_kmh"] = _compute_speed_kmh(watt_efforts)
 
@@ -318,6 +360,12 @@ with st.sidebar:
         ),
     )
 
+    spider_use_subcategories = st.toggle(
+        "Use subcategories in spider charts",
+        value=False,
+        help="Show spider charts by segment subcategory instead of parent category.",
+    )
+
     bikes_to_compare = st.multiselect(
         "Bikes to compare",
         options=available_bikes,
@@ -349,6 +397,8 @@ valid_segment_ids = seg_counts[valid_mask].index.tolist()
 # Per-bike rides columns for the segment table
 rides_cols: dict[str, str] = {b: f"Rides ({b})" for b in bikes_to_compare}
 valid_segs = segments[segments["segment_id"].isin(valid_segment_ids)].copy()
+if "segment_type_detail" not in valid_segs.columns:
+    valid_segs["segment_type_detail"] = valid_segs["segment_type"]
 if valid_segment_ids:
     valid_segs = valid_segs.merge(
         seg_counts[bikes_to_compare].rename(columns=rides_cols),
@@ -362,7 +412,8 @@ bikes_label = " vs ".join(f"**{b}**" for b in bikes_to_compare)
 # ── Performance profile (spider charts) ──────────────────────────────────────
 st.subheader("Performance profile")
 st.caption(
-    f"{bikes_label} — left chart shows raw speed by segment type; "
+    f"{bikes_label} — left chart shows raw speed by segment "
+    f"{'subcategory' if spider_use_subcategories else 'type'}; "
     "right chart shows speed per watt (power-normalised efficiency) "
     "after removing outlier efforts."
 )
@@ -371,10 +422,18 @@ spider_efforts = selected_efforts[selected_efforts["segment_id"].isin(valid_segm
 spider_efforts = compute_speed_per_watt(spider_efforts)
 spider_filtered, _ = filter_outliers_by_power_speed(spider_efforts, z_threshold=z_threshold)
 
+spider_dimension_col = "segment_type_detail" if spider_use_subcategories else "segment_type"
+spider_dimensions = SEGMENT_TYPE_DETAILS if spider_use_subcategories else SEGMENT_TYPES
+if spider_use_subcategories:
+    categories = [TYPE_DETAIL_LABELS.get(t, t.replace("_", " ").title()) for t in spider_dimensions]
+else:
+    categories = [f"{TYPE_ICONS.get(t, '')} {t.capitalize()}" for t in spider_dimensions]
+categories_closed = categories + [categories[0]]
+
 # ── Chart 1: raw speed ────────────────────────────────────────────────────────
 speed_profile: dict[str, list[float]] = {b: [] for b in bikes_to_compare}
-for seg_type in SEGMENT_TYPES:
-    _type_eff = spider_efforts[spider_efforts["segment_type"] == seg_type].copy()
+for seg_type in spider_dimensions:
+    _type_eff = spider_efforts[spider_efforts[spider_dimension_col] == seg_type].copy()
     for b in bikes_to_compare:
         _b_eff = _type_eff[_type_eff["bike_name"] == b].copy()
         if _b_eff.empty or _b_eff["speed_kmh"].isna().all():
@@ -383,60 +442,62 @@ for seg_type in SEGMENT_TYPES:
             per_seg_avg = _b_eff.groupby("segment_id")["speed_kmh"].mean()
             speed_profile[b].append(_convert_speed(float(per_seg_avg.mean())))
 
-categories = [f"{TYPE_ICONS.get(t, '')} {t.capitalize()}" for t in SEGMENT_TYPES]
-categories_closed = categories + [categories[0]]
 _spd = _spd_label()
 
 fig_spider = go.Figure()
 for idx, b in enumerate(bikes_to_compare):
     vals = speed_profile[b]
     vals_closed = vals + [vals[0]]
+    color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
     fig_spider.add_trace(
         go.Scatterpolar(
             r=vals_closed,
             theta=categories_closed,
             fill="toself",
             name=b,
-            opacity=0.45,
-            line={"color": _COLOR_SEQ[idx % len(_COLOR_SEQ)], "width": 2},
-            fillcolor=_COLOR_SEQ[idx % len(_COLOR_SEQ)],
+            line={"color": color, "width": _SPIDER_POLYGON_LINE_WIDTH},
+            fillcolor=_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
             hovertemplate="%{theta}: %{r:.1f} " + _spd + "<extra>" + b + "</extra>",
         )
     )
 fig_spider.update_layout(
-    polar={"radialaxis": {"visible": True, "title": {"text": f"Avg speed ({_spd})"}}},
+    polar={"radialaxis": {"visible": True}},
     showlegend=True,
     legend={"orientation": "h", "yanchor": "bottom", "y": -0.15},
-    title="Speed profile by segment type",
+    title=f"Speed profile by segment {'subcategory' if spider_use_subcategories else 'type'}",
     height=500,
 )
 
 # ── Chart 2: power-normalised efficiency ──────────────────────────────────────
 eff_profile = power_normalized_profile(
-    spider_filtered, bikes_to_compare, SEGMENT_TYPES, valid_segment_ids
+    spider_filtered,
+    bikes_to_compare,
+    spider_dimensions,
+    valid_segment_ids,
+    segment_type_col=spider_dimension_col,
 )
 
 fig_efficiency = go.Figure()
 for idx, b in enumerate(bikes_to_compare):
-    vals = eff_profile[b]
+    vals = [_convert_speed(v) for v in eff_profile[b]]
     vals_closed = vals + [vals[0]]
+    color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
     fig_efficiency.add_trace(
         go.Scatterpolar(
             r=vals_closed,
             theta=categories_closed,
             fill="toself",
             name=b,
-            opacity=0.45,
-            line={"color": _COLOR_SEQ[idx % len(_COLOR_SEQ)], "width": 2},
-            fillcolor=_COLOR_SEQ[idx % len(_COLOR_SEQ)],
-            hovertemplate="%{theta}: %{r:.4f} km/h/W<extra>" + b + "</extra>",
+            line={"color": color, "width": _SPIDER_POLYGON_LINE_WIDTH},
+            fillcolor=_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
+            hovertemplate="%{theta}: %{r:.4f} " + _spd + "/W<extra>" + b + "</extra>",
             showlegend=False,
         )
     )
 fig_efficiency.update_layout(
-    polar={"radialaxis": {"visible": True, "title": {"text": "Speed/W (km/h per W)"}}},
+    polar={"radialaxis": {"visible": True}},
     showlegend=False,
-    title="Efficiency profile by segment type (power-normalised)",
+    title=f"Efficiency profile by segment {'subcategory' if spider_use_subcategories else 'type'} (power-normalised)",
     height=500,
 )
 
@@ -739,7 +800,14 @@ for row_types in [SEGMENT_TYPES[:2], SEGMENT_TYPES[2:]]:
                 continue
 
             display = type_segs[
-                ["segment_id", "name", *all_rides_cols, "distance", "average_grade"]
+                [
+                    "segment_id",
+                    "name",
+                    "segment_type_detail",
+                    *all_rides_cols,
+                    "distance",
+                    "average_grade",
+                ]
             ].copy()
             _dist_col = f"Dist ({_dist_label()})"
             display["distance"] = (
@@ -752,6 +820,7 @@ for row_types in [SEGMENT_TYPES[:2], SEGMENT_TYPES[2:]]:
             display = display.rename(
                 columns={
                     "name": "Segment",
+                    "segment_type_detail": "Subtype",
                     "distance": _dist_col,
                     "average_grade": "Grade (%)",
                 }
@@ -766,7 +835,7 @@ for row_types in [SEGMENT_TYPES[:2], SEGMENT_TYPES[2:]]:
                 hide_index=True,
                 width="stretch",
                 key=f"table_{seg_type}",
-                disabled=["Segment", *all_rides_cols, _dist_col, "Grade (%)"],
+                disabled=["Segment", "Subtype", *all_rides_cols, _dist_col, "Grade (%)"],
             )
 
 
@@ -1023,5 +1092,3 @@ else:
                     detail.rename(columns={"Time (s)": "Time"}, inplace=True)
 
                 st.dataframe(detail, width="stretch", hide_index=True)
-
-

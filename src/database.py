@@ -30,7 +30,8 @@ CREATE TABLE IF NOT EXISTS starred_segments (
     total_elevation_gain REAL,
     start_lat            REAL,
     start_lng            REAL,
-    segment_type         TEXT
+    segment_type         TEXT,
+    segment_type_detail  TEXT
 )
 """
 
@@ -89,6 +90,7 @@ _SEGMENTS_COLS: list[str] = [
     "start_lat",
     "start_lng",
     "segment_type",
+    "segment_type_detail",
 ]
 
 _EFFORTS_COLS: list[str] = [
@@ -123,6 +125,10 @@ def init_db() -> None:
         # before this column was introduced.
         try:
             conn.execute("ALTER TABLE segment_efforts ADD COLUMN activity_id INTEGER")
+        except sqlite3.OperationalError:
+            pass  # Column already exists — nothing to do.
+        try:
+            conn.execute("ALTER TABLE starred_segments ADD COLUMN segment_type_detail TEXT")
         except sqlite3.OperationalError:
             pass  # Column already exists — nothing to do.
 
