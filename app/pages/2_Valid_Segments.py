@@ -45,6 +45,10 @@ def _gear_label(gear_id: str | None) -> str:
     return bikes.get(str(gear_id), str(gear_id))
 
 
+# Consistent color palette used for all charts on this page.
+_COLOR_SEQ: list[str] = px.colors.qualitative.Set2
+
+
 def _fmt_duration(seconds: float) -> str:
     """Format a duration in seconds as m:ss."""
     total = int(round(seconds))
@@ -265,11 +269,7 @@ for tab, seg_id in zip(tabs, selected_segment_ids):
             continue
 
         # Compute speed if segment distance is known
-        if seg_distance_m > 0:
-            safe_time = seg_efforts["moving_time"].replace(0, pd.NA)
-            seg_efforts["speed_kmh"] = seg_distance_m / safe_time * 3.6
-        else:
-            seg_efforts["speed_kmh"] = None
+        seg_efforts["speed_kmh"] = _compute_speed_kmh(seg_efforts, distance_m=seg_distance_m if seg_distance_m > 0 else None)
 
         # ── Segment info metrics
         info_cols = st.columns(4)
@@ -316,7 +316,6 @@ for tab, seg_id in zip(tabs, selected_segment_ids):
         st.dataframe(summary, use_container_width=True, hide_index=True)
 
         # ── Charts
-        color_seq = px.colors.qualitative.Set2
         chart_cols = st.columns(2)
 
         with chart_cols[0]:
@@ -326,7 +325,7 @@ for tab, seg_id in zip(tabs, selected_segment_ids):
                     x="bike_name",
                     y="average_watts",
                     color="bike_name",
-                    color_discrete_sequence=color_seq,
+                    color_discrete_sequence=_COLOR_SEQ,
                     labels={"bike_name": "Bike", "average_watts": "Power (W)"},
                     title="Power Distribution",
                     points="all",
@@ -341,7 +340,7 @@ for tab, seg_id in zip(tabs, selected_segment_ids):
                     x="bike_name",
                     y="speed_kmh",
                     color="bike_name",
-                    color_discrete_sequence=color_seq,
+                    color_discrete_sequence=_COLOR_SEQ,
                     labels={"bike_name": "Bike", "speed_kmh": "Speed (km/h)"},
                     title="Speed Distribution",
                     points="all",
@@ -370,7 +369,6 @@ categories = [t.capitalize() for t in SEGMENT_TYPES]
 # Close the polygon by repeating the first value
 categories_closed = categories + [categories[0]]
 
-color_seq = px.colors.qualitative.Set2
 fig_spider = go.Figure()
 
 for idx, b in enumerate([bike_a, bike_b]):
@@ -382,8 +380,8 @@ for idx, b in enumerate([bike_a, bike_b]):
             fill="toself",
             name=b,
             opacity=0.45,
-            line={"color": color_seq[idx % len(color_seq)], "width": 2},
-            fillcolor=color_seq[idx % len(color_seq)],
+            line={"color": _COLOR_SEQ[idx % len(_COLOR_SEQ)], "width": 2},
+            fillcolor=_COLOR_SEQ[idx % len(_COLOR_SEQ)],
         )
     )
 
