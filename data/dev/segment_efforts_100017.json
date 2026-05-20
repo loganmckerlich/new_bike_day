@@ -196,5 +196,71 @@
     "pr_rank": null,
     "achievements": [],
     "hidden": false
+  },
+  {
+    "id": 230033,
+    "resource_state": 2,
+    "name": "Quarry Wall",
+    "activity": {
+      "id": 320001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 518,
+    "moving_time": 517,
+    "start_date": "2024-04-08T07:39:00Z",
+    "start_date_local": "2024-04-08T08:39:00Z",
+    "distance": 1700.0,
+    "start_index": 320,
+    "end_index": 888,
+    "average_cadence": 67.0,
+    "device_watts": true,
+    "average_watts": 308.8,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100017,
+      "resource_state": 2,
+      "name": "Quarry Wall"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230034,
+    "resource_state": 2,
+    "name": "Quarry Wall",
+    "activity": {
+      "id": 320006,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 509,
+    "moving_time": 508,
+    "start_date": "2024-07-03T07:29:00Z",
+    "start_date_local": "2024-07-03T08:29:00Z",
+    "distance": 1700.0,
+    "start_index": 370,
+    "end_index": 939,
+    "average_cadence": 65.5,
+    "device_watts": true,
+    "average_watts": 302.1,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100017,
+      "resource_state": 2,
+      "name": "Quarry Wall"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
   }
 ]

@@ -196,5 +196,71 @@
     "pr_rank": null,
     "achievements": [],
     "hidden": false
+  },
+  {
+    "id": 230031,
+    "resource_state": 2,
+    "name": "Beacon Rise",
+    "activity": {
+      "id": 320005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 570,
+    "moving_time": 569,
+    "start_date": "2024-06-15T07:37:00Z",
+    "start_date_local": "2024-06-15T08:37:00Z",
+    "distance": 2600.0,
+    "start_index": 310,
+    "end_index": 930,
+    "average_cadence": 69.8,
+    "device_watts": true,
+    "average_watts": 285.5,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100016,
+      "resource_state": 2,
+      "name": "Beacon Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230032,
+    "resource_state": 2,
+    "name": "Beacon Rise",
+    "activity": {
+      "id": 320010,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 560,
+    "moving_time": 559,
+    "start_date": "2024-10-05T07:42:00Z",
+    "start_date_local": "2024-10-05T08:42:00Z",
+    "distance": 2600.0,
+    "start_index": 360,
+    "end_index": 980,
+    "average_cadence": 68.2,
+    "device_watts": true,
+    "average_watts": 279.4,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100016,
+      "resource_state": 2,
+      "name": "Beacon Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
   }
 ]

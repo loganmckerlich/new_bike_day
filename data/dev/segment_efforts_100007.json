@@ -196,5 +196,71 @@
     "pr_rank": null,
     "achievements": [],
     "hidden": false
+  },
+  {
+    "id": 230013,
+    "resource_state": 2,
+    "name": "Cobble Kick Sprint",
+    "activity": {
+      "id": 320001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 39,
+    "moving_time": 38,
+    "start_date": "2024-04-08T07:19:00Z",
+    "start_date_local": "2024-04-08T08:19:00Z",
+    "distance": 280.0,
+    "start_index": 220,
+    "end_index": 309,
+    "average_cadence": 80.9,
+    "device_watts": true,
+    "average_watts": 439.0,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100007,
+      "resource_state": 2,
+      "name": "Cobble Kick Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230014,
+    "resource_state": 2,
+    "name": "Cobble Kick Sprint",
+    "activity": {
+      "id": 320006,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 38,
+    "moving_time": 37,
+    "start_date": "2024-07-03T07:09:00Z",
+    "start_date_local": "2024-07-03T08:09:00Z",
+    "distance": 280.0,
+    "start_index": 270,
+    "end_index": 368,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 429.5,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100007,
+      "resource_state": 2,
+      "name": "Cobble Kick Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
   }
 ]

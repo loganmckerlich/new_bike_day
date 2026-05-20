@@ -196,5 +196,71 @@
     "pr_rank": null,
     "achievements": [],
     "hidden": false
+  },
+  {
+    "id": 230039,
+    "resource_state": 2,
+    "name": "Moorland Glide",
+    "activity": {
+      "id": 320002,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 213,
+    "moving_time": 212,
+    "start_date": "2024-04-22T09:45:00Z",
+    "start_date_local": "2024-04-22T10:45:00Z",
+    "distance": 2400.0,
+    "start_index": 350,
+    "end_index": 613,
+    "average_cadence": 70.7,
+    "device_watts": true,
+    "average_watts": 169.3,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100020,
+      "resource_state": 2,
+      "name": "Moorland Glide"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230040,
+    "resource_state": 2,
+    "name": "Moorland Glide",
+    "activity": {
+      "id": 320008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 209,
+    "moving_time": 208,
+    "start_date": "2024-08-10T08:50:00Z",
+    "start_date_local": "2024-08-10T09:50:00Z",
+    "distance": 2400.0,
+    "start_index": 400,
+    "end_index": 669,
+    "average_cadence": 69.2,
+    "device_watts": true,
+    "average_watts": 165.6,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100020,
+      "resource_state": 2,
+      "name": "Moorland Glide"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
   }
 ]

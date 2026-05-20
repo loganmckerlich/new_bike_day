@@ -196,5 +196,71 @@
     "pr_rank": null,
     "achievements": [],
     "hidden": false
+  },
+  {
+    "id": 230037,
+    "resource_state": 2,
+    "name": "Pine Bend Descent",
+    "activity": {
+      "id": 320003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 168,
+    "moving_time": 167,
+    "start_date": "2024-05-11T08:43:00Z",
+    "start_date_local": "2024-05-11T09:43:00Z",
+    "distance": 1900.0,
+    "start_index": 340,
+    "end_index": 558,
+    "average_cadence": 68.8,
+    "device_watts": true,
+    "average_watts": 169.3,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100019,
+      "resource_state": 2,
+      "name": "Pine Bend Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230038,
+    "resource_state": 2,
+    "name": "Pine Bend Descent",
+    "activity": {
+      "id": 320007,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 165,
+    "moving_time": 164,
+    "start_date": "2024-07-20T13:48:00Z",
+    "start_date_local": "2024-07-20T14:48:00Z",
+    "distance": 1900.0,
+    "start_index": 390,
+    "end_index": 615,
+    "average_cadence": 67.3,
+    "device_watts": true,
+    "average_watts": 165.6,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100019,
+      "resource_state": 2,
+      "name": "Pine Bend Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
   }
 ]
