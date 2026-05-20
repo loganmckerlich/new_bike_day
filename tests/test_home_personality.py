@@ -40,6 +40,7 @@ class HomePersonalityTests(unittest.TestCase):
             takeaway="Still smiling somehow.",
         )
         self.assertIn("The rider says:", empty_name)
+        self.assertIn("Still smiling somehow.", empty_name)
 
 
 if __name__ == "__main__":
