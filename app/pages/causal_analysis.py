@@ -240,7 +240,10 @@ def main() -> None:
         )
         _fig_overlap.update_layout(plot_bgcolor="rgba(0,0,0,0)")
         st.plotly_chart(_fig_overlap, width="stretch")
-        st.caption("Smoothed lines use LOWESS to show the average trend between power and speed-per-watt for each bike.")
+        st.caption(
+            "Smoothed lines use LOWESS (Locally Weighted Scatterplot Smoothing) "
+            "to show the average trend between power and speed-per-watt for each bike."
+        )
 
         st.markdown("### 3) Estimate the adjusted effect")
         st.markdown(
