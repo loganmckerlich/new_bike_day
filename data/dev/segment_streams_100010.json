@@ -1,0 +1,30 @@
+{
+  "distance": {
+    "type": "distance",
+    "data": [
+      0.0,
+      164.0,
+      328.0,
+      492.0,
+      656.0,
+      820.0
+    ],
+    "series_type": "distance",
+    "original_size": 6,
+    "resolution": "high"
+  },
+  "altitude": {
+    "type": "altitude",
+    "data": [
+      18.0,
+      18.2,
+      18.4,
+      18.6,
+      18.8,
+      19.0
+    ],
+    "series_type": "distance",
+    "original_size": 6,
+    "resolution": "high"
+  }
+}

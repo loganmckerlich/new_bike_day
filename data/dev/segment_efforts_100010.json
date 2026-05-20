@@ -1,0 +1,200 @@
+[
+  {
+    "id": 210051,
+    "resource_state": 2,
+    "name": "Canal Towpath Drag",
+    "activity": {
+      "id": 300001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 88,
+    "moving_time": 86,
+    "start_date": "2024-04-06T07:10:00Z",
+    "start_date_local": "2024-04-06T07:10:00Z",
+    "distance": 820.0,
+    "start_index": 100,
+    "end_index": 264,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 292.0,
+    "average_heartrate": 150.0,
+    "segment": {
+      "id": 100010,
+      "resource_state": 2,
+      "name": "Canal Towpath Drag"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210052,
+    "resource_state": 2,
+    "name": "Canal Towpath Drag",
+    "activity": {
+      "id": 300003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 84,
+    "start_date": "2024-04-07T07:11:00Z",
+    "start_date_local": "2024-04-07T07:11:00Z",
+    "distance": 820.0,
+    "start_index": 105,
+    "end_index": 269,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 300.0,
+    "average_heartrate": 151.0,
+    "segment": {
+      "id": 100010,
+      "resource_state": 2,
+      "name": "Canal Towpath Drag"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210053,
+    "resource_state": 2,
+    "name": "Canal Towpath Drag",
+    "activity": {
+      "id": 300005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 83,
+    "start_date": "2024-04-08T07:12:00Z",
+    "start_date_local": "2024-04-08T07:12:00Z",
+    "distance": 820.0,
+    "start_index": 110,
+    "end_index": 274,
+    "average_cadence": 86.0,
+    "device_watts": true,
+    "average_watts": 308.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100010,
+      "resource_state": 2,
+      "name": "Canal Towpath Drag"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210054,
+    "resource_state": 2,
+    "name": "Canal Towpath Drag",
+    "activity": {
+      "id": 300008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 84,
+    "moving_time": 82,
+    "start_date": "2024-04-06T08:10:00Z",
+    "start_date_local": "2024-04-06T08:10:00Z",
+    "distance": 820.0,
+    "start_index": 100,
+    "end_index": 264,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 282.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100010,
+      "resource_state": 2,
+      "name": "Canal Towpath Drag"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210055,
+    "resource_state": 2,
+    "name": "Canal Towpath Drag",
+    "activity": {
+      "id": 310050,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 84,
+    "moving_time": 81,
+    "start_date": "2024-04-07T08:11:00Z",
+    "start_date_local": "2024-04-07T08:11:00Z",
+    "distance": 820.0,
+    "start_index": 105,
+    "end_index": 269,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 290.0,
+    "average_heartrate": 153.0,
+    "segment": {
+      "id": 100010,
+      "resource_state": 2,
+      "name": "Canal Towpath Drag"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210056,
+    "resource_state": 2,
+    "name": "Canal Towpath Drag",
+    "activity": {
+      "id": 310051,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 79,
+    "start_date": "2024-04-08T08:12:00Z",
+    "start_date_local": "2024-04-08T08:12:00Z",
+    "distance": 820.0,
+    "start_index": 110,
+    "end_index": 274,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 298.0,
+    "average_heartrate": 154.0,
+    "segment": {
+      "id": 100010,
+      "resource_state": 2,
+      "name": "Canal Towpath Drag"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  }
+]

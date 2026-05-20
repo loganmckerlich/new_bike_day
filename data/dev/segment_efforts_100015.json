@@ -1,0 +1,200 @@
+[
+  {
+    "id": 210101,
+    "resource_state": 2,
+    "name": "Fern Lane Climb",
+    "activity": {
+      "id": 300001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 392,
+    "moving_time": 390,
+    "start_date": "2024-04-11T07:10:00Z",
+    "start_date_local": "2024-04-11T07:10:00Z",
+    "distance": 2200.0,
+    "start_index": 100,
+    "end_index": 540,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 282.0,
+    "average_heartrate": 150.0,
+    "segment": {
+      "id": 100015,
+      "resource_state": 2,
+      "name": "Fern Lane Climb"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210102,
+    "resource_state": 2,
+    "name": "Fern Lane Climb",
+    "activity": {
+      "id": 300003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 380,
+    "moving_time": 377,
+    "start_date": "2024-04-12T07:11:00Z",
+    "start_date_local": "2024-04-12T07:11:00Z",
+    "distance": 2200.0,
+    "start_index": 105,
+    "end_index": 545,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 290.0,
+    "average_heartrate": 151.0,
+    "segment": {
+      "id": 100015,
+      "resource_state": 2,
+      "name": "Fern Lane Climb"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210103,
+    "resource_state": 2,
+    "name": "Fern Lane Climb",
+    "activity": {
+      "id": 300005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 369,
+    "moving_time": 365,
+    "start_date": "2024-04-13T07:12:00Z",
+    "start_date_local": "2024-04-13T07:12:00Z",
+    "distance": 2200.0,
+    "start_index": 110,
+    "end_index": 550,
+    "average_cadence": 86.0,
+    "device_watts": true,
+    "average_watts": 298.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100015,
+      "resource_state": 2,
+      "name": "Fern Lane Climb"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210104,
+    "resource_state": 2,
+    "name": "Fern Lane Climb",
+    "activity": {
+      "id": 300008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 402,
+    "moving_time": 400,
+    "start_date": "2024-04-11T08:10:00Z",
+    "start_date_local": "2024-04-11T08:10:00Z",
+    "distance": 2200.0,
+    "start_index": 100,
+    "end_index": 540,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 272.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100015,
+      "resource_state": 2,
+      "name": "Fern Lane Climb"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210105,
+    "resource_state": 2,
+    "name": "Fern Lane Climb",
+    "activity": {
+      "id": 310050,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 389,
+    "moving_time": 386,
+    "start_date": "2024-04-12T08:11:00Z",
+    "start_date_local": "2024-04-12T08:11:00Z",
+    "distance": 2200.0,
+    "start_index": 105,
+    "end_index": 545,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 280.0,
+    "average_heartrate": 153.0,
+    "segment": {
+      "id": 100015,
+      "resource_state": 2,
+      "name": "Fern Lane Climb"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210106,
+    "resource_state": 2,
+    "name": "Fern Lane Climb",
+    "activity": {
+      "id": 310051,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 378,
+    "moving_time": 374,
+    "start_date": "2024-04-13T08:12:00Z",
+    "start_date_local": "2024-04-13T08:12:00Z",
+    "distance": 2200.0,
+    "start_index": 110,
+    "end_index": 550,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 288.0,
+    "average_heartrate": 154.0,
+    "segment": {
+      "id": 100015,
+      "resource_state": 2,
+      "name": "Fern Lane Climb"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  }
+]
