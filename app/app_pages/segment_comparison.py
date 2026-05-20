@@ -16,6 +16,12 @@ if str(_REPO_ROOT) not in sys.path:
 
 from src.fetch import get_segment_detail, get_segment_streams
 from src.database import init_db, load_segment_geo, save_segment_geo
+from src.analytics import (
+    compute_speed_per_watt,
+    filter_outliers_by_power_speed,
+    power_normalized_profile,
+    outlier_detection_frames,
+)
 
 # ── Session state ─────────────────────────────────────────────────────────────
 efforts: pd.DataFrame | None = st.session_state.get("efforts")
@@ -298,6 +304,20 @@ with st.sidebar:
         help="Both bikes must have at least this many power-measured rides on a segment.",
     )
 
+    z_threshold = st.slider(
+        "Outlier z-score threshold (standard deviations)",
+        min_value=1.0,
+        max_value=3.5,
+        value=2.0,
+        step=0.5,
+        help=(
+            "Z-score = how many standard deviations an effort's speed/W sits from "
+            "that bike's mean on this segment. Efforts beyond this threshold are removed "
+            "as likely outliers (drafting, headwind, etc.). "
+            "Lower = more aggressive filtering."
+        ),
+    )
+
     bikes_to_compare = st.multiselect(
         "Bikes to compare",
         options=available_bikes,
@@ -339,17 +359,20 @@ if valid_segment_ids:
 
 bikes_label = " vs ".join(f"**{b}**" for b in bikes_to_compare)
 
-# ── Performance profile (spider chart) ──────────────────────────────────────
+# ── Performance profile (spider charts) ──────────────────────────────────────
 st.subheader("Performance profile")
 st.caption(
-    f"Average speed across all valid segments per type — {bikes_label}. "
-    "When a category has multiple segments the scores are averaged. "
-    "A larger covered area indicates overall stronger performance."
+    f"{bikes_label} — left chart shows raw speed by segment type; "
+    "right chart shows speed per watt (power-normalised efficiency) "
+    "after removing outlier efforts."
 )
 
 spider_efforts = selected_efforts[selected_efforts["segment_id"].isin(valid_segment_ids)].copy()
-speed_profile: dict[str, list[float]] = {b: [] for b in bikes_to_compare}
+spider_efforts = compute_speed_per_watt(spider_efforts)
+spider_filtered, _ = filter_outliers_by_power_speed(spider_efforts, z_threshold=z_threshold)
 
+# ── Chart 1: raw speed ────────────────────────────────────────────────────────
+speed_profile: dict[str, list[float]] = {b: [] for b in bikes_to_compare}
 for seg_type in SEGMENT_TYPES:
     _type_eff = spider_efforts[spider_efforts["segment_type"] == seg_type].copy()
     for b in bikes_to_compare:
@@ -380,17 +403,307 @@ for idx, b in enumerate(bikes_to_compare):
             hovertemplate="%{theta}: %{r:.1f} " + _spd + "<extra>" + b + "</extra>",
         )
     )
-
 fig_spider.update_layout(
     polar={"radialaxis": {"visible": True, "title": {"text": f"Avg speed ({_spd})"}}},
     showlegend=True,
     legend={"orientation": "h", "yanchor": "bottom", "y": -0.15},
-    title="Speed profile by segment type — " + " vs ".join(bikes_to_compare),
+    title="Speed profile by segment type",
     height=500,
 )
-spider_col, _ = st.columns([2, 1])
-with spider_col:
+
+# ── Chart 2: power-normalised efficiency ──────────────────────────────────────
+eff_profile = power_normalized_profile(
+    spider_filtered, bikes_to_compare, SEGMENT_TYPES, valid_segment_ids
+)
+
+fig_efficiency = go.Figure()
+for idx, b in enumerate(bikes_to_compare):
+    vals = eff_profile[b]
+    vals_closed = vals + [vals[0]]
+    fig_efficiency.add_trace(
+        go.Scatterpolar(
+            r=vals_closed,
+            theta=categories_closed,
+            fill="toself",
+            name=b,
+            opacity=0.45,
+            line={"color": _COLOR_SEQ[idx % len(_COLOR_SEQ)], "width": 2},
+            fillcolor=_COLOR_SEQ[idx % len(_COLOR_SEQ)],
+            hovertemplate="%{theta}: %{r:.4f} km/h/W<extra>" + b + "</extra>",
+            showlegend=False,
+        )
+    )
+fig_efficiency.update_layout(
+    polar={"radialaxis": {"visible": True, "title": {"text": "Speed/W (km/h per W)"}}},
+    showlegend=False,
+    title="Efficiency profile by segment type (power-normalised)",
+    height=500,
+)
+
+spider_col1, spider_col2 = st.columns(2)
+with spider_col1:
     st.plotly_chart(fig_spider, width="stretch")
+with spider_col2:
+    st.plotly_chart(fig_efficiency, width="stretch")
+
+# ── Methodology explainer ─────────────────────────────────────────────────────
+with st.expander("🔬 How is this calculated?"):
+    # pick an example segment from valid segments (prefer one with most efforts)
+    _seg_effort_counts = (
+        spider_efforts.groupby("segment_id")["effort_id"].count().reindex(valid_segment_ids, fill_value=0)
+    )
+    _default_seg_id = int(_seg_effort_counts.idxmax()) if not _seg_effort_counts.empty else None
+
+    _seg_name_map = {
+        int(row["segment_id"]): row["name"]
+        for _, row in segments[segments["segment_id"].isin(valid_segment_ids)].iterrows()
+    }
+    _seg_options = [
+        (sid, _seg_name_map.get(sid, str(sid)))
+        for sid in _seg_effort_counts.sort_values(ascending=False).index
+    ]
+
+    if not _seg_options:
+        st.info("No valid segments available to illustrate.")
+    else:
+        _example_seg_id = st.selectbox(
+            "Example segment",
+            options=[s[0] for s in _seg_options],
+            format_func=lambda sid: _seg_name_map.get(sid, str(sid)),
+            index=0,
+            key="explainer_seg",
+        )
+
+        _step = st.radio(
+            "Step",
+            options=[
+                "1 — Raw efforts",
+                "2 — Outlier detection",
+                "3 — After filtering",
+                "4 — Speed per watt",
+            ],
+            horizontal=True,
+            key="explainer_step",
+        )
+
+        _raw, _annotated, _filtered_seg = outlier_detection_frames(
+            spider_efforts, int(_example_seg_id), z_threshold=z_threshold
+        )
+        _seg_dist_m = float(
+            segments.loc[segments["segment_id"] == _example_seg_id, "distance"].iloc[0]
+            if not segments[segments["segment_id"] == _example_seg_id].empty
+            else 0
+        )
+        for _df in [_raw, _annotated, _filtered_seg]:
+            if "speed_kmh" not in _df.columns:
+                _df["speed_kmh"] = _compute_speed_kmh(_df, distance_m=_seg_dist_m)
+
+        _n_total = len(_raw)
+        _n_outliers = int(_annotated["is_outlier"].sum()) if "is_outlier" in _annotated.columns else 0
+        _n_kept = _n_total - _n_outliers
+
+        if _step == "1 — Raw efforts":
+            st.caption(
+                f"**{_n_total} efforts** recorded on this segment across all selected bikes. "
+                "Each point is one attempt. More power should mean more speed — but real data "
+                "is noisy (drafting, wind, fatigue)."
+            )
+            _fig_raw = px.scatter(
+                _raw.dropna(subset=["speed_kmh", "average_watts"]),
+                x="average_watts",
+                y="speed_kmh",
+                color="bike_name",
+                color_discrete_sequence=_COLOR_SEQ,
+                labels={"average_watts": "Avg power (W)", "speed_kmh": f"Speed ({_spd_label()})", "bike_name": "Bike"},
+                hover_data={"bike_name": True},
+            )
+            _fig_raw.update_traces(marker_size=9)
+            _fig_raw.update_layout(plot_bgcolor="rgba(0,0,0,0)", height=380)
+            st.plotly_chart(_fig_raw, width="stretch")
+
+        elif _step == "2 — Outlier detection":
+            st.caption(
+                f"We compute **speed per watt** (speed ÷ power) for every effort, then flag "
+                f"efforts that deviate more than **{z_threshold:.1f} standard deviations** from the "
+                "segment mean. These are likely drafting behind another rider or riding into a "
+                "strong headwind — situations where the bike isn't the main variable."
+            )
+            if "is_outlier" not in _annotated.columns:
+                st.info("Not enough efforts to detect outliers on this segment.")
+            else:
+                _plot_ann = _annotated.dropna(subset=["speed_kmh", "average_watts"]).copy()
+                _plot_ann["label"] = _plot_ann["is_outlier"].map(
+                    {True: "Outlier", False: "Normal"}
+                )
+                _plot_ann["z_label"] = _plot_ann["z_score"].apply(
+                    lambda z: f"z = {z:.2f}" if pd.notna(z) else ""
+                )
+
+                _ann_bikes = [
+                    b for b in bikes_to_compare
+                    if b in _plot_ann["bike_name"].values
+                ]
+                for _bi, _bname in enumerate(_ann_bikes):
+                    _bike_color = _COLOR_SEQ[_bi % len(_COLOR_SEQ)]
+                    _bdata = _plot_ann[_plot_ann["bike_name"] == _bname].copy()
+                    _n_b_out = int(_bdata["is_outlier"].sum())
+                    _n_b_kept = len(_bdata) - _n_b_out
+
+                    st.markdown(f"##### {_bname}")
+                    _sc_col, _hs_col = st.columns(2)
+
+                    with _sc_col:
+                        st.markdown("Speed vs power")
+                        _fig_b_sc = go.Figure()
+                        for _is_out, _dot_color, _dot_name in [
+                            (False, _bike_color, "Normal"),
+                            (True, "#ef5350", "Outlier"),
+                        ]:
+                            _pts = _bdata[_bdata["is_outlier"] == _is_out]
+                            if _pts.empty:
+                                continue
+                            _fig_b_sc.add_trace(go.Scatter(
+                                x=_pts["average_watts"],
+                                y=_pts["speed_kmh"],
+                                mode="markers",
+                                name=_dot_name,
+                                marker={"color": _dot_color, "size": 10,
+                                        "line": {"width": 1, "color": "white"}},
+                                text=_pts["z_label"],
+                                hovertemplate=(
+                                    "Power: %{x:.0f} W<br>"
+                                    f"Speed: %{{y:.1f}} {_spd_label()}<br>"
+                                    "Z-score: %{text}<extra>" + _dot_name + "</extra>"
+                                ),
+                            ))
+                        _fig_b_sc.update_layout(
+                            xaxis_title="Avg power (W)",
+                            yaxis_title=f"Speed ({_spd_label()})",
+                            plot_bgcolor="rgba(0,0,0,0)",
+                            legend={"orientation": "h", "y": -0.25},
+                            height=300,
+                            margin={"t": 10, "b": 10},
+                        )
+                        st.plotly_chart(_fig_b_sc, width="stretch")
+
+                    with _hs_col:
+                        st.markdown(f"Speed/W distribution  ±{z_threshold:.1f}σ cutoff")
+                        _spw_b = _bdata.dropna(subset=["speed_per_watt"])
+                        if len(_spw_b) >= 2:
+                            _b_mean = _spw_b["speed_per_watt"].mean()
+                            _b_std = _spw_b["speed_per_watt"].std(ddof=1)
+                            _b_lo = _b_mean - z_threshold * _b_std
+                            _b_hi = _b_mean + z_threshold * _b_std
+                            _nbins = max(6, len(_spw_b) // 2)
+
+                            _fig_b_h = go.Figure()
+                            for _is_out, _bar_color, _bar_name in [
+                                (False, _bike_color, "Normal"),
+                                (True, "#ef5350", "Outlier"),
+                            ]:
+                                _pts_h = _spw_b[_spw_b["is_outlier"] == _is_out]
+                                if _pts_h.empty:
+                                    continue
+                                _fig_b_h.add_trace(go.Histogram(
+                                    x=_pts_h["speed_per_watt"],
+                                    name=_bar_name,
+                                    marker_color=_bar_color,
+                                    opacity=0.8,
+                                    nbinsx=_nbins,
+                                    hovertemplate="Speed/W: %{x:.4f}<br>Count: %{y}<extra>" + _bar_name + "</extra>",
+                                ))
+
+                            _xlo = float(_spw_b["speed_per_watt"].min())
+                            _xhi = float(_spw_b["speed_per_watt"].max())
+                            _xpad = max((_xhi - _xlo) * 0.05, 1e-6)
+                            for _sx0, _sx1 in [(_xlo - _xpad, _b_lo), (_b_hi, _xhi + _xpad)]:
+                                _fig_b_h.add_vrect(
+                                    x0=_sx0, x1=_sx1,
+                                    fillcolor="rgba(239,83,80,0.12)",
+                                    line_width=0, layer="below",
+                                )
+                            for _vx, _vlabel in [(_b_lo, f"−{z_threshold:.1f}σ"), (_b_hi, f"+{z_threshold:.1f}σ")]:
+                                _fig_b_h.add_vline(
+                                    x=_vx, line_dash="dash", line_color="#ef5350",
+                                    annotation_text=_vlabel, annotation_position="top",
+                                    annotation_font_color="#ef5350",
+                                )
+                            _fig_b_h.add_vline(
+                                x=_b_mean, line_dash="dot",
+                                line_color="rgba(128,128,128,0.7)",
+                                annotation_text="μ", annotation_position="top",
+                            )
+                            _fig_b_h.update_layout(
+                                barmode="overlay",
+                                xaxis_title=f"Speed/W ({_spd_label()}/W)",
+                                yaxis_title="Efforts",
+                                plot_bgcolor="rgba(0,0,0,0)",
+                                legend={"orientation": "h", "y": -0.25},
+                                height=300,
+                                margin={"t": 10, "b": 10},
+                            )
+                            st.plotly_chart(_fig_b_h, width="stretch")
+                        else:
+                            st.caption("Not enough efforts to show distribution.")
+
+                    st.caption(
+                        f"🔴 **{_n_b_out} outlier(s)** · 🔵 **{_n_b_kept} kept** "
+                        f"(μ = {_bdata['speed_per_watt'].mean():.4f}, "
+                        f"σ = {_bdata['speed_per_watt'].std(ddof=1):.4f})"
+                    )
+                    if _bi < len(_ann_bikes) - 1:
+                        st.divider()
+
+        elif _step == "3 — After filtering":
+            st.caption(
+                f"After removing the {_n_outliers} outlier(s), **{_n_kept} clean efforts** remain. "
+                "The relationship between power and speed should now be tighter — "
+                "these are the efforts we use to compare bikes fairly."
+            )
+            _fig_flt = px.scatter(
+                _filtered_seg.dropna(subset=["speed_kmh", "average_watts"]),
+                x="average_watts",
+                y="speed_kmh",
+                color="bike_name",
+                color_discrete_sequence=_COLOR_SEQ,
+                trendline="lowess",
+                labels={"average_watts": "Avg power (W)", "speed_kmh": f"Speed ({_spd_label()})", "bike_name": "Bike"},
+            )
+            _fig_flt.update_traces(marker_size=9, selector={"mode": "markers"})
+            _fig_flt.update_layout(plot_bgcolor="rgba(0,0,0,0)", height=380)
+            st.plotly_chart(_fig_flt, width="stretch")
+
+        else:  # Step 4
+            st.caption(
+                "We divide each effort's speed by its power to get **speed per watt** — "
+                "a single number that captures how fast the bike goes for every watt the rider puts in. "
+                "A higher value means the bike converts power into speed more efficiently."
+            )
+            _spw_data = _filtered_seg.dropna(subset=["speed_per_watt", "bike_name"]).copy()
+            if _spw_data.empty:
+                st.info("Not enough data after filtering to compute speed-per-watt on this segment.")
+            else:
+                _fig_spw = px.box(
+                    _spw_data,
+                    x="bike_name",
+                    y="speed_per_watt",
+                    color="bike_name",
+                    color_discrete_sequence=_COLOR_SEQ,
+                    points="all",
+                    labels={"bike_name": "Bike", "speed_per_watt": f"Speed per watt ({_spd_label()}/W)"},
+                )
+                _fig_spw.update_layout(showlegend=False, plot_bgcolor="rgba(0,0,0,0)", height=380)
+                st.plotly_chart(_fig_spw, width="stretch")
+                _spw_summary = (
+                    _spw_data.groupby("bike_name")["speed_per_watt"]
+                    .agg(["mean", "median", "count"])
+                    .rename(columns={"mean": "Mean", "median": "Median", "count": "Efforts"})
+                    .reset_index()
+                    .rename(columns={"bike_name": "Bike"})
+                )
+                for col in ["Mean", "Median"]:
+                    _spw_summary[col] = _spw_summary[col].apply(lambda v: f"{v:.4f}")
+                st.dataframe(_spw_summary, hide_index=True, width="stretch")
 
 # ── Valid segment selector ────────────────────────────────────────────────────
 st.divider()
@@ -526,6 +839,13 @@ else:
                 _render_elevation_profile(geo, seg_distance_m)
 
             # Summary table
+            # Apply outlier filtering to this segment's efforts for the summary
+            seg_efforts_spw = compute_speed_per_watt(seg_efforts)
+            seg_efforts_clean, seg_efforts_ann = filter_outliers_by_power_speed(
+                seg_efforts_spw, z_threshold=z_threshold
+            )
+            _n_seg_outliers = int(seg_efforts_ann["is_outlier"].sum()) if "is_outlier" in seg_efforts_ann.columns else 0
+
             agg: dict[str, tuple] = {
                 "Rides": ("effort_id", "count"),
                 "Best time": ("moving_time", "min"),
@@ -540,8 +860,12 @@ else:
             if _has_col(seg_efforts, "speed_kmh"):
                 agg[_spd_col_avg] = ("speed_kmh", "mean")
                 agg[_spd_col_max] = ("speed_kmh", "max")
+            # Power-normalised efficiency (computed on clean efforts)
+            _spw_col = f"Speed/W ({_spd_label()}/W)"
+            if _has_col(seg_efforts_clean, "speed_per_watt"):
+                agg[_spw_col] = ("speed_per_watt", "mean")
 
-            summary = seg_efforts.groupby("bike_name").agg(**agg).reset_index()
+            summary = seg_efforts_clean.groupby("bike_name").agg(**agg).reset_index()
             summary.rename(columns={"bike_name": "Bike"}, inplace=True)
 
             # Convert speed columns to display unit
@@ -562,7 +886,16 @@ else:
                     summary[col_name] = summary[col_name].apply(
                         lambda v: f"{v:.1f}" if pd.notna(v) else "—"
                     )
+            if _spw_col in summary.columns:
+                summary[_spw_col] = summary[_spw_col].apply(
+                    lambda v: f"{v:.4f}" if pd.notna(v) else "—"
+                )
 
+            if _n_seg_outliers:
+                st.caption(
+                    f"Stats computed on clean efforts — **{_n_seg_outliers} outlier effort(s)** "
+                    f"excluded at z-threshold {z_threshold:.1f}. Adjust the threshold in the sidebar."
+                )
             st.dataframe(summary, width="stretch", hide_index=True)
 
             # Metric tabs: Speed | Power | Heart Rate | Timeline

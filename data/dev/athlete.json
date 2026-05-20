@@ -17,14 +17,16 @@
       "primary": true,
       "name": "Trek Domane SL5",
       "resource_state": 2,
-      "distance": 15432100
+      "distance": 15432100,
+      "converted_distance": 9587.7
     },
     {
       "id": "b222222",
       "primary": false,
       "name": "Canyon Grail CF SLX",
       "resource_state": 2,
-      "distance": 8765400
+      "distance": 8765400,
+      "converted_distance": 5447.8
     }
   ],
   "shoes": []

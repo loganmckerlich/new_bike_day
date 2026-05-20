@@ -9,3 +9,4 @@ seaborn
 plotly
 streamlit
 flask
+statsmodels

@@ -1,0 +1,3368 @@
+[
+  {
+    "id": 200004,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 300001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 32,
+    "start_date": "2024-01-15T07:20:00Z",
+    "start_date_local": "2024-01-15T07:20:00Z",
+    "distance": 320.0,
+    "start_index": 680,
+    "end_index": 712,
+    "average_cadence": 96.0,
+    "device_watts": true,
+    "average_watts": 580.0,
+    "average_heartrate": 185.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": 1,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 200005,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 300008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 34,
+    "start_date": "2024-03-10T08:15:00Z",
+    "start_date_local": "2024-03-10T08:15:00Z",
+    "distance": 320.0,
+    "start_index": 700,
+    "end_index": 734,
+    "average_cadence": 94.0,
+    "device_watts": true,
+    "average_watts": 565.0,
+    "average_heartrate": 183.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210001,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310000,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 31,
+    "start_date": "2024-01-02T00:29:00Z",
+    "start_date_local": "2024-01-02T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 187,
+    "end_index": 742,
+    "average_cadence": 81.2,
+    "device_watts": true,
+    "average_watts": 521.4,
+    "average_heartrate": 193.6,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210004,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 30,
+    "moving_time": 25,
+    "start_date": "2024-01-14T00:39:00Z",
+    "start_date_local": "2024-01-14T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 118,
+    "end_index": 687,
+    "average_cadence": 86.5,
+    "device_watts": true,
+    "average_watts": 636.9,
+    "average_heartrate": 175.5,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210007,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310002,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 30,
+    "moving_time": 26,
+    "start_date": "2024-01-28T00:34:00Z",
+    "start_date_local": "2024-01-28T00:34:00Z",
+    "distance": 320.0,
+    "start_index": 226,
+    "end_index": 646,
+    "average_cadence": 89.6,
+    "device_watts": true,
+    "average_watts": 646.0,
+    "average_heartrate": 191.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210010,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 27,
+    "start_date": "2024-02-13T00:39:00Z",
+    "start_date_local": "2024-02-13T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 150,
+    "end_index": 678,
+    "average_cadence": 84.2,
+    "device_watts": true,
+    "average_watts": 592.7,
+    "average_heartrate": 173.4,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210013,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310004,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 30,
+    "start_date": "2024-02-25T00:39:00Z",
+    "start_date_local": "2024-02-25T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 215,
+    "end_index": 661,
+    "average_cadence": 82.5,
+    "device_watts": true,
+    "average_watts": 562.8,
+    "average_heartrate": 170.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210016,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 34,
+    "start_date": "2024-03-10T00:39:00Z",
+    "start_date_local": "2024-03-10T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 203,
+    "end_index": 773,
+    "average_cadence": 90.2,
+    "device_watts": true,
+    "average_watts": 593.7,
+    "average_heartrate": 172.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210019,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310006,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 33,
+    "start_date": "2024-03-25T00:37:00Z",
+    "start_date_local": "2024-03-25T00:37:00Z",
+    "distance": 320.0,
+    "start_index": 175,
+    "end_index": 711,
+    "average_cadence": 92.6,
+    "device_watts": true,
+    "average_watts": 570.0,
+    "average_heartrate": 184.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210022,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310007,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 30,
+    "moving_time": 25,
+    "start_date": "2024-04-07T00:34:00Z",
+    "start_date_local": "2024-04-07T00:34:00Z",
+    "distance": 320.0,
+    "start_index": 265,
+    "end_index": 753,
+    "average_cadence": 85.4,
+    "device_watts": true,
+    "average_watts": 556.5,
+    "average_heartrate": 192.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210025,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 29,
+    "start_date": "2024-04-22T00:32:00Z",
+    "start_date_local": "2024-04-22T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 167,
+    "end_index": 858,
+    "average_cadence": 85.8,
+    "device_watts": true,
+    "average_watts": 527.9,
+    "average_heartrate": 192.3,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210028,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310009,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 32,
+    "start_date": "2024-05-05T00:34:00Z",
+    "start_date_local": "2024-05-05T00:34:00Z",
+    "distance": 320.0,
+    "start_index": 258,
+    "end_index": 679,
+    "average_cadence": 92.0,
+    "device_watts": true,
+    "average_watts": 629.1,
+    "average_heartrate": 175.3,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210031,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310010,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 28,
+    "start_date": "2024-05-21T00:39:00Z",
+    "start_date_local": "2024-05-21T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 184,
+    "end_index": 614,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 598.7,
+    "average_heartrate": 194.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210034,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310011,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 30,
+    "start_date": "2024-06-04T00:33:00Z",
+    "start_date_local": "2024-06-04T00:33:00Z",
+    "distance": 320.0,
+    "start_index": 203,
+    "end_index": 751,
+    "average_cadence": 86.8,
+    "device_watts": true,
+    "average_watts": 596.8,
+    "average_heartrate": 174.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210037,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310012,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 30,
+    "start_date": "2024-06-17T00:39:00Z",
+    "start_date_local": "2024-06-17T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 106,
+    "end_index": 623,
+    "average_cadence": 82.4,
+    "device_watts": true,
+    "average_watts": 617.6,
+    "average_heartrate": 181.4,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210040,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310013,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 36,
+    "moving_time": 33,
+    "start_date": "2024-07-02T00:36:00Z",
+    "start_date_local": "2024-07-02T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 215,
+    "end_index": 732,
+    "average_cadence": 89.5,
+    "device_watts": true,
+    "average_watts": 608.2,
+    "average_heartrate": 190.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210043,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310014,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 30,
+    "start_date": "2024-07-15T00:35:00Z",
+    "start_date_local": "2024-07-15T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 292,
+    "end_index": 799,
+    "average_cadence": 90.9,
+    "device_watts": true,
+    "average_watts": 637.8,
+    "average_heartrate": 193.6,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210046,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310015,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 31,
+    "start_date": "2024-07-29T00:34:00Z",
+    "start_date_local": "2024-07-29T00:34:00Z",
+    "distance": 320.0,
+    "start_index": 164,
+    "end_index": 641,
+    "average_cadence": 85.6,
+    "device_watts": true,
+    "average_watts": 554.0,
+    "average_heartrate": 188.3,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210049,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310016,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 36,
+    "moving_time": 32,
+    "start_date": "2024-08-11T00:35:00Z",
+    "start_date_local": "2024-08-11T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 276,
+    "end_index": 724,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 527.1,
+    "average_heartrate": 188.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210052,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310017,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 35,
+    "start_date": "2024-08-25T00:34:00Z",
+    "start_date_local": "2024-08-25T00:34:00Z",
+    "distance": 320.0,
+    "start_index": 171,
+    "end_index": 830,
+    "average_cadence": 82.4,
+    "device_watts": true,
+    "average_watts": 621.2,
+    "average_heartrate": 181.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210055,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310018,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 29,
+    "start_date": "2024-09-09T00:38:00Z",
+    "start_date_local": "2024-09-09T00:38:00Z",
+    "distance": 320.0,
+    "start_index": 208,
+    "end_index": 881,
+    "average_cadence": 83.6,
+    "device_watts": true,
+    "average_watts": 580.0,
+    "average_heartrate": 187.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210058,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310019,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 27,
+    "start_date": "2024-09-22T00:36:00Z",
+    "start_date_local": "2024-09-22T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 220,
+    "end_index": 845,
+    "average_cadence": 85.2,
+    "device_watts": true,
+    "average_watts": 499.5,
+    "average_heartrate": 174.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210061,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310020,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 36,
+    "moving_time": 35,
+    "start_date": "2024-10-06T00:30:00Z",
+    "start_date_local": "2024-10-06T00:30:00Z",
+    "distance": 320.0,
+    "start_index": 167,
+    "end_index": 641,
+    "average_cadence": 81.2,
+    "device_watts": true,
+    "average_watts": 528.5,
+    "average_heartrate": 173.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210064,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310021,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 32,
+    "start_date": "2024-10-22T00:36:00Z",
+    "start_date_local": "2024-10-22T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 228,
+    "end_index": 876,
+    "average_cadence": 85.9,
+    "device_watts": true,
+    "average_watts": 601.7,
+    "average_heartrate": 171.3,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210067,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310022,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 27,
+    "start_date": "2024-11-05T00:34:00Z",
+    "start_date_local": "2024-11-05T00:34:00Z",
+    "distance": 320.0,
+    "start_index": 202,
+    "end_index": 881,
+    "average_cadence": 79.5,
+    "device_watts": true,
+    "average_watts": 571.3,
+    "average_heartrate": 171.5,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210070,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310023,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 29,
+    "start_date": "2024-11-17T00:35:00Z",
+    "start_date_local": "2024-11-17T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 218,
+    "end_index": 660,
+    "average_cadence": 88.1,
+    "device_watts": true,
+    "average_watts": 645.2,
+    "average_heartrate": 173.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210073,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310024,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 36,
+    "moving_time": 33,
+    "start_date": "2024-12-03T00:32:00Z",
+    "start_date_local": "2024-12-03T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 159,
+    "end_index": 810,
+    "average_cadence": 79.6,
+    "device_watts": true,
+    "average_watts": 533.2,
+    "average_heartrate": 188.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210076,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310025,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 35,
+    "start_date": "2024-12-16T00:36:00Z",
+    "start_date_local": "2024-12-16T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 160,
+    "end_index": 747,
+    "average_cadence": 93.0,
+    "device_watts": true,
+    "average_watts": 503.0,
+    "average_heartrate": 188.3,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210079,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310026,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 31,
+    "start_date": "2024-12-29T00:33:00Z",
+    "start_date_local": "2024-12-29T00:33:00Z",
+    "distance": 320.0,
+    "start_index": 173,
+    "end_index": 879,
+    "average_cadence": 81.2,
+    "device_watts": true,
+    "average_watts": 631.3,
+    "average_heartrate": 180.5,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210082,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310027,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 34,
+    "start_date": "2025-01-13T00:39:00Z",
+    "start_date_local": "2025-01-13T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 260,
+    "end_index": 620,
+    "average_cadence": 83.3,
+    "device_watts": true,
+    "average_watts": 518.0,
+    "average_heartrate": 180.5,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210085,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310028,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 33,
+    "moving_time": 28,
+    "start_date": "2025-01-27T00:33:00Z",
+    "start_date_local": "2025-01-27T00:33:00Z",
+    "distance": 320.0,
+    "start_index": 291,
+    "end_index": 734,
+    "average_cadence": 87.2,
+    "device_watts": true,
+    "average_watts": 565.3,
+    "average_heartrate": 190.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210088,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310029,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 36,
+    "moving_time": 33,
+    "start_date": "2025-02-09T00:31:00Z",
+    "start_date_local": "2025-02-09T00:31:00Z",
+    "distance": 320.0,
+    "start_index": 257,
+    "end_index": 808,
+    "average_cadence": 92.1,
+    "device_watts": true,
+    "average_watts": 595.0,
+    "average_heartrate": 176.4,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210091,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310030,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 27,
+    "start_date": "2025-02-24T00:32:00Z",
+    "start_date_local": "2025-02-24T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 100,
+    "end_index": 741,
+    "average_cadence": 91.0,
+    "device_watts": true,
+    "average_watts": 519.6,
+    "average_heartrate": 172.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210094,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310031,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 26,
+    "start_date": "2025-03-11T00:29:00Z",
+    "start_date_local": "2025-03-11T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 209,
+    "end_index": 655,
+    "average_cadence": 85.9,
+    "device_watts": true,
+    "average_watts": 568.9,
+    "average_heartrate": 192.4,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210097,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310032,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 30,
+    "start_date": "2025-03-25T00:35:00Z",
+    "start_date_local": "2025-03-25T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 275,
+    "end_index": 842,
+    "average_cadence": 79.9,
+    "device_watts": true,
+    "average_watts": 535.5,
+    "average_heartrate": 190.5,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210100,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310033,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 30,
+    "moving_time": 26,
+    "start_date": "2025-04-07T00:38:00Z",
+    "start_date_local": "2025-04-07T00:38:00Z",
+    "distance": 320.0,
+    "start_index": 296,
+    "end_index": 885,
+    "average_cadence": 79.4,
+    "device_watts": true,
+    "average_watts": 561.5,
+    "average_heartrate": 192.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210103,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310034,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 29,
+    "start_date": "2025-04-22T00:39:00Z",
+    "start_date_local": "2025-04-22T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 169,
+    "end_index": 710,
+    "average_cadence": 89.6,
+    "device_watts": true,
+    "average_watts": 587.9,
+    "average_heartrate": 172.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210106,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310035,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 28,
+    "moving_time": 26,
+    "start_date": "2025-05-06T00:35:00Z",
+    "start_date_local": "2025-05-06T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 247,
+    "end_index": 819,
+    "average_cadence": 87.0,
+    "device_watts": true,
+    "average_watts": 634.6,
+    "average_heartrate": 187.3,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210109,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310036,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 30,
+    "moving_time": 25,
+    "start_date": "2025-05-19T00:32:00Z",
+    "start_date_local": "2025-05-19T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 119,
+    "end_index": 690,
+    "average_cadence": 92.3,
+    "device_watts": true,
+    "average_watts": 520.4,
+    "average_heartrate": 185.3,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210112,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310037,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 27,
+    "start_date": "2025-06-03T00:29:00Z",
+    "start_date_local": "2025-06-03T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 148,
+    "end_index": 764,
+    "average_cadence": 87.5,
+    "device_watts": true,
+    "average_watts": 618.1,
+    "average_heartrate": 182.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210115,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310038,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 31,
+    "start_date": "2025-06-17T00:38:00Z",
+    "start_date_local": "2025-06-17T00:38:00Z",
+    "distance": 320.0,
+    "start_index": 269,
+    "end_index": 672,
+    "average_cadence": 91.8,
+    "device_watts": true,
+    "average_watts": 547.2,
+    "average_heartrate": 177.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210118,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310039,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 28,
+    "moving_time": 24,
+    "start_date": "2025-06-29T00:37:00Z",
+    "start_date_local": "2025-06-29T00:37:00Z",
+    "distance": 320.0,
+    "start_index": 133,
+    "end_index": 792,
+    "average_cadence": 81.2,
+    "device_watts": true,
+    "average_watts": 547.7,
+    "average_heartrate": 173.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210121,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310040,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 35,
+    "start_date": "2025-07-15T00:36:00Z",
+    "start_date_local": "2025-07-15T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 282,
+    "end_index": 864,
+    "average_cadence": 90.9,
+    "device_watts": true,
+    "average_watts": 580.1,
+    "average_heartrate": 176.5,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210124,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310041,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 28,
+    "moving_time": 26,
+    "start_date": "2025-07-28T00:38:00Z",
+    "start_date_local": "2025-07-28T00:38:00Z",
+    "distance": 320.0,
+    "start_index": 155,
+    "end_index": 676,
+    "average_cadence": 86.7,
+    "device_watts": true,
+    "average_watts": 509.4,
+    "average_heartrate": 187.8,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210127,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310042,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 33,
+    "moving_time": 30,
+    "start_date": "2025-08-11T00:37:00Z",
+    "start_date_local": "2025-08-11T00:37:00Z",
+    "distance": 320.0,
+    "start_index": 111,
+    "end_index": 798,
+    "average_cadence": 92.7,
+    "device_watts": true,
+    "average_watts": 555.7,
+    "average_heartrate": 175.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210130,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310043,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 27,
+    "start_date": "2025-08-24T00:37:00Z",
+    "start_date_local": "2025-08-24T00:37:00Z",
+    "distance": 320.0,
+    "start_index": 148,
+    "end_index": 746,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 503.1,
+    "average_heartrate": 189.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210133,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310044,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 29,
+    "start_date": "2025-09-08T00:36:00Z",
+    "start_date_local": "2025-09-08T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 257,
+    "end_index": 822,
+    "average_cadence": 82.8,
+    "device_watts": true,
+    "average_watts": 503.9,
+    "average_heartrate": 194.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210136,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310045,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 28,
+    "moving_time": 24,
+    "start_date": "2025-09-23T00:30:00Z",
+    "start_date_local": "2025-09-23T00:30:00Z",
+    "distance": 320.0,
+    "start_index": 199,
+    "end_index": 887,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 525.3,
+    "average_heartrate": 189.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210139,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310046,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 33,
+    "moving_time": 29,
+    "start_date": "2025-10-05T00:37:00Z",
+    "start_date_local": "2025-10-05T00:37:00Z",
+    "distance": 320.0,
+    "start_index": 133,
+    "end_index": 644,
+    "average_cadence": 79.9,
+    "device_watts": true,
+    "average_watts": 567.2,
+    "average_heartrate": 179.4,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210142,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310047,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 30,
+    "start_date": "2025-10-20T00:33:00Z",
+    "start_date_local": "2025-10-20T00:33:00Z",
+    "distance": 320.0,
+    "start_index": 241,
+    "end_index": 740,
+    "average_cadence": 80.8,
+    "device_watts": true,
+    "average_watts": 534.9,
+    "average_heartrate": 177.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210145,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310048,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 31,
+    "start_date": "2025-11-03T00:35:00Z",
+    "start_date_local": "2025-11-03T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 140,
+    "end_index": 825,
+    "average_cadence": 84.8,
+    "device_watts": true,
+    "average_watts": 508.5,
+    "average_heartrate": 181.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210148,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310049,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 35,
+    "start_date": "2025-11-18T00:36:00Z",
+    "start_date_local": "2025-11-18T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 200,
+    "end_index": 858,
+    "average_cadence": 85.4,
+    "device_watts": true,
+    "average_watts": 571.6,
+    "average_heartrate": 175.4,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210151,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310050,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 33,
+    "start_date": "2024-01-04T00:34:00Z",
+    "start_date_local": "2024-01-04T00:34:00Z",
+    "distance": 320.0,
+    "start_index": 293,
+    "end_index": 673,
+    "average_cadence": 81.8,
+    "device_watts": true,
+    "average_watts": 548.1,
+    "average_heartrate": 182.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210154,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310051,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 28,
+    "moving_time": 23,
+    "start_date": "2024-01-17T00:39:00Z",
+    "start_date_local": "2024-01-17T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 300,
+    "end_index": 896,
+    "average_cadence": 87.1,
+    "device_watts": true,
+    "average_watts": 568.2,
+    "average_heartrate": 187.6,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210157,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310052,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 36,
+    "moving_time": 34,
+    "start_date": "2024-02-02T00:36:00Z",
+    "start_date_local": "2024-02-02T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 273,
+    "end_index": 735,
+    "average_cadence": 87.5,
+    "device_watts": true,
+    "average_watts": 548.6,
+    "average_heartrate": 174.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210160,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310053,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 30,
+    "moving_time": 26,
+    "start_date": "2024-02-15T00:32:00Z",
+    "start_date_local": "2024-02-15T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 278,
+    "end_index": 739,
+    "average_cadence": 80.9,
+    "device_watts": true,
+    "average_watts": 577.7,
+    "average_heartrate": 184.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210163,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310054,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 36,
+    "moving_time": 33,
+    "start_date": "2024-02-28T00:31:00Z",
+    "start_date_local": "2024-02-28T00:31:00Z",
+    "distance": 320.0,
+    "start_index": 226,
+    "end_index": 695,
+    "average_cadence": 92.1,
+    "device_watts": true,
+    "average_watts": 503.0,
+    "average_heartrate": 193.8,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210166,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310055,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 35,
+    "start_date": "2024-03-15T00:35:00Z",
+    "start_date_local": "2024-03-15T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 202,
+    "end_index": 648,
+    "average_cadence": 81.6,
+    "device_watts": true,
+    "average_watts": 574.3,
+    "average_heartrate": 172.8,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210169,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310056,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 30,
+    "start_date": "2024-03-29T00:31:00Z",
+    "start_date_local": "2024-03-29T00:31:00Z",
+    "distance": 320.0,
+    "start_index": 206,
+    "end_index": 881,
+    "average_cadence": 91.8,
+    "device_watts": true,
+    "average_watts": 644.7,
+    "average_heartrate": 188.6,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210172,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310057,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 27,
+    "start_date": "2024-04-10T00:38:00Z",
+    "start_date_local": "2024-04-10T00:38:00Z",
+    "distance": 320.0,
+    "start_index": 285,
+    "end_index": 611,
+    "average_cadence": 84.5,
+    "device_watts": true,
+    "average_watts": 566.4,
+    "average_heartrate": 190.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210175,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310058,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 33,
+    "moving_time": 32,
+    "start_date": "2024-04-25T00:35:00Z",
+    "start_date_local": "2024-04-25T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 100,
+    "end_index": 611,
+    "average_cadence": 92.7,
+    "device_watts": true,
+    "average_watts": 605.9,
+    "average_heartrate": 181.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210178,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310059,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 33,
+    "start_date": "2024-05-08T00:32:00Z",
+    "start_date_local": "2024-05-08T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 247,
+    "end_index": 764,
+    "average_cadence": 82.3,
+    "device_watts": true,
+    "average_watts": 606.4,
+    "average_heartrate": 191.6,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210181,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310060,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 28,
+    "start_date": "2024-05-24T00:37:00Z",
+    "start_date_local": "2024-05-24T00:37:00Z",
+    "distance": 320.0,
+    "start_index": 134,
+    "end_index": 798,
+    "average_cadence": 82.4,
+    "device_watts": true,
+    "average_watts": 559.6,
+    "average_heartrate": 174.4,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210184,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310061,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 29,
+    "start_date": "2024-06-06T00:32:00Z",
+    "start_date_local": "2024-06-06T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 298,
+    "end_index": 744,
+    "average_cadence": 84.3,
+    "device_watts": true,
+    "average_watts": 533.2,
+    "average_heartrate": 182.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210187,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310062,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 30,
+    "start_date": "2024-06-19T00:33:00Z",
+    "start_date_local": "2024-06-19T00:33:00Z",
+    "distance": 320.0,
+    "start_index": 264,
+    "end_index": 851,
+    "average_cadence": 85.5,
+    "device_watts": true,
+    "average_watts": 570.3,
+    "average_heartrate": 187.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210190,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310063,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 28,
+    "moving_time": 26,
+    "start_date": "2024-07-03T00:35:00Z",
+    "start_date_local": "2024-07-03T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 237,
+    "end_index": 746,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 576.4,
+    "average_heartrate": 190.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210193,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310064,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 34,
+    "start_date": "2024-07-19T00:35:00Z",
+    "start_date_local": "2024-07-19T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 235,
+    "end_index": 621,
+    "average_cadence": 82.2,
+    "device_watts": true,
+    "average_watts": 546.9,
+    "average_heartrate": 192.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210196,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310065,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 29,
+    "start_date": "2024-07-31T00:29:00Z",
+    "start_date_local": "2024-07-31T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 187,
+    "end_index": 803,
+    "average_cadence": 92.6,
+    "device_watts": true,
+    "average_watts": 532.2,
+    "average_heartrate": 177.6,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210199,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310066,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 30,
+    "moving_time": 26,
+    "start_date": "2024-08-16T00:30:00Z",
+    "start_date_local": "2024-08-16T00:30:00Z",
+    "distance": 320.0,
+    "start_index": 231,
+    "end_index": 808,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 564.4,
+    "average_heartrate": 171.5,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210202,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310067,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 26,
+    "start_date": "2024-08-30T00:30:00Z",
+    "start_date_local": "2024-08-30T00:30:00Z",
+    "distance": 320.0,
+    "start_index": 185,
+    "end_index": 794,
+    "average_cadence": 90.3,
+    "device_watts": true,
+    "average_watts": 498.6,
+    "average_heartrate": 177.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210205,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310068,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 27,
+    "start_date": "2024-09-12T00:32:00Z",
+    "start_date_local": "2024-09-12T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 117,
+    "end_index": 809,
+    "average_cadence": 88.4,
+    "device_watts": true,
+    "average_watts": 541.0,
+    "average_heartrate": 172.8,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210208,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310069,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 28,
+    "start_date": "2024-09-27T00:39:00Z",
+    "start_date_local": "2024-09-27T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 127,
+    "end_index": 605,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 609.6,
+    "average_heartrate": 174.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210211,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310070,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 28,
+    "moving_time": 28,
+    "start_date": "2024-10-11T00:30:00Z",
+    "start_date_local": "2024-10-11T00:30:00Z",
+    "distance": 320.0,
+    "start_index": 273,
+    "end_index": 684,
+    "average_cadence": 92.0,
+    "device_watts": true,
+    "average_watts": 548.7,
+    "average_heartrate": 188.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210214,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310071,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 30,
+    "start_date": "2024-10-23T00:39:00Z",
+    "start_date_local": "2024-10-23T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 180,
+    "end_index": 798,
+    "average_cadence": 87.6,
+    "device_watts": true,
+    "average_watts": 576.1,
+    "average_heartrate": 184.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210217,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310072,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 29,
+    "start_date": "2024-11-06T00:29:00Z",
+    "start_date_local": "2024-11-06T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 243,
+    "end_index": 858,
+    "average_cadence": 88.1,
+    "device_watts": true,
+    "average_watts": 526.7,
+    "average_heartrate": 179.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210220,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310073,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 34,
+    "start_date": "2024-11-21T00:39:00Z",
+    "start_date_local": "2024-11-21T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 215,
+    "end_index": 734,
+    "average_cadence": 83.9,
+    "device_watts": true,
+    "average_watts": 541.9,
+    "average_heartrate": 190.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210223,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310074,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 28,
+    "start_date": "2024-12-04T00:39:00Z",
+    "start_date_local": "2024-12-04T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 137,
+    "end_index": 764,
+    "average_cadence": 90.6,
+    "device_watts": true,
+    "average_watts": 626.4,
+    "average_heartrate": 188.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210226,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310075,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 33,
+    "moving_time": 30,
+    "start_date": "2024-12-19T00:34:00Z",
+    "start_date_local": "2024-12-19T00:34:00Z",
+    "distance": 320.0,
+    "start_index": 187,
+    "end_index": 624,
+    "average_cadence": 79.6,
+    "device_watts": true,
+    "average_watts": 517.1,
+    "average_heartrate": 185.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210229,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310076,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 25,
+    "start_date": "2025-01-03T00:36:00Z",
+    "start_date_local": "2025-01-03T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 274,
+    "end_index": 827,
+    "average_cadence": 79.1,
+    "device_watts": true,
+    "average_watts": 585.9,
+    "average_heartrate": 187.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210232,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310077,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 29,
+    "start_date": "2025-01-15T00:32:00Z",
+    "start_date_local": "2025-01-15T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 250,
+    "end_index": 796,
+    "average_cadence": 83.9,
+    "device_watts": true,
+    "average_watts": 512.6,
+    "average_heartrate": 180.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210235,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310078,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 28,
+    "start_date": "2025-01-30T00:35:00Z",
+    "start_date_local": "2025-01-30T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 297,
+    "end_index": 637,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 599.2,
+    "average_heartrate": 171.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210238,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310079,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 26,
+    "start_date": "2025-02-13T00:32:00Z",
+    "start_date_local": "2025-02-13T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 129,
+    "end_index": 832,
+    "average_cadence": 87.6,
+    "device_watts": true,
+    "average_watts": 510.5,
+    "average_heartrate": 170.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210241,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310080,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 30,
+    "start_date": "2025-02-28T00:29:00Z",
+    "start_date_local": "2025-02-28T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 140,
+    "end_index": 730,
+    "average_cadence": 89.8,
+    "device_watts": true,
+    "average_watts": 581.9,
+    "average_heartrate": 192.0,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210244,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310081,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 36,
+    "moving_time": 33,
+    "start_date": "2025-03-13T00:29:00Z",
+    "start_date_local": "2025-03-13T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 172,
+    "end_index": 759,
+    "average_cadence": 83.6,
+    "device_watts": true,
+    "average_watts": 507.9,
+    "average_heartrate": 183.4,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210247,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310082,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 31,
+    "start_date": "2025-03-26T00:32:00Z",
+    "start_date_local": "2025-03-26T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 282,
+    "end_index": 743,
+    "average_cadence": 80.3,
+    "device_watts": true,
+    "average_watts": 640.6,
+    "average_heartrate": 192.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210250,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310083,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 28,
+    "start_date": "2025-04-10T00:36:00Z",
+    "start_date_local": "2025-04-10T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 191,
+    "end_index": 706,
+    "average_cadence": 85.3,
+    "device_watts": true,
+    "average_watts": 558.1,
+    "average_heartrate": 181.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210253,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310084,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 27,
+    "start_date": "2025-04-23T00:32:00Z",
+    "start_date_local": "2025-04-23T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 275,
+    "end_index": 643,
+    "average_cadence": 87.2,
+    "device_watts": true,
+    "average_watts": 620.1,
+    "average_heartrate": 175.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210256,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310085,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 29,
+    "start_date": "2025-05-07T00:37:00Z",
+    "start_date_local": "2025-05-07T00:37:00Z",
+    "distance": 320.0,
+    "start_index": 135,
+    "end_index": 814,
+    "average_cadence": 81.8,
+    "device_watts": true,
+    "average_watts": 510.7,
+    "average_heartrate": 191.8,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210259,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310086,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 31,
+    "start_date": "2025-05-22T00:29:00Z",
+    "start_date_local": "2025-05-22T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 199,
+    "end_index": 781,
+    "average_cadence": 92.1,
+    "device_watts": true,
+    "average_watts": 638.6,
+    "average_heartrate": 194.5,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210262,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310087,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 24,
+    "start_date": "2025-06-06T00:34:00Z",
+    "start_date_local": "2025-06-06T00:34:00Z",
+    "distance": 320.0,
+    "start_index": 136,
+    "end_index": 656,
+    "average_cadence": 90.9,
+    "device_watts": true,
+    "average_watts": 519.6,
+    "average_heartrate": 191.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210265,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310088,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 31,
+    "start_date": "2025-06-20T00:35:00Z",
+    "start_date_local": "2025-06-20T00:35:00Z",
+    "distance": 320.0,
+    "start_index": 108,
+    "end_index": 693,
+    "average_cadence": 87.4,
+    "device_watts": true,
+    "average_watts": 612.3,
+    "average_heartrate": 192.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210268,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310089,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 27,
+    "start_date": "2025-07-02T00:37:00Z",
+    "start_date_local": "2025-07-02T00:37:00Z",
+    "distance": 320.0,
+    "start_index": 266,
+    "end_index": 715,
+    "average_cadence": 81.3,
+    "device_watts": true,
+    "average_watts": 620.9,
+    "average_heartrate": 171.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210271,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310090,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 25,
+    "start_date": "2025-07-18T00:32:00Z",
+    "start_date_local": "2025-07-18T00:32:00Z",
+    "distance": 320.0,
+    "start_index": 225,
+    "end_index": 678,
+    "average_cadence": 79.8,
+    "device_watts": true,
+    "average_watts": 556.1,
+    "average_heartrate": 169.4,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210274,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310091,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 34,
+    "start_date": "2025-07-31T00:31:00Z",
+    "start_date_local": "2025-07-31T00:31:00Z",
+    "distance": 320.0,
+    "start_index": 271,
+    "end_index": 776,
+    "average_cadence": 90.3,
+    "device_watts": true,
+    "average_watts": 596.9,
+    "average_heartrate": 179.8,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210277,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310092,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 27,
+    "start_date": "2025-08-15T00:39:00Z",
+    "start_date_local": "2025-08-15T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 137,
+    "end_index": 732,
+    "average_cadence": 83.5,
+    "device_watts": true,
+    "average_watts": 646.0,
+    "average_heartrate": 187.8,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210280,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310093,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 28,
+    "moving_time": 27,
+    "start_date": "2025-08-29T00:36:00Z",
+    "start_date_local": "2025-08-29T00:36:00Z",
+    "distance": 320.0,
+    "start_index": 258,
+    "end_index": 805,
+    "average_cadence": 79.5,
+    "device_watts": true,
+    "average_watts": 538.6,
+    "average_heartrate": 191.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210283,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310094,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 32,
+    "moving_time": 30,
+    "start_date": "2025-09-11T00:29:00Z",
+    "start_date_local": "2025-09-11T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 281,
+    "end_index": 859,
+    "average_cadence": 84.6,
+    "device_watts": true,
+    "average_watts": 521.3,
+    "average_heartrate": 189.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210286,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310095,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 34,
+    "start_date": "2025-09-26T00:31:00Z",
+    "start_date_local": "2025-09-26T00:31:00Z",
+    "distance": 320.0,
+    "start_index": 156,
+    "end_index": 715,
+    "average_cadence": 88.5,
+    "device_watts": true,
+    "average_watts": 613.6,
+    "average_heartrate": 176.1,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210289,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310096,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 32,
+    "start_date": "2025-10-08T00:33:00Z",
+    "start_date_local": "2025-10-08T00:33:00Z",
+    "distance": 320.0,
+    "start_index": 170,
+    "end_index": 766,
+    "average_cadence": 91.1,
+    "device_watts": true,
+    "average_watts": 569.3,
+    "average_heartrate": 175.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210292,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310097,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 35,
+    "moving_time": 35,
+    "start_date": "2025-10-24T00:39:00Z",
+    "start_date_local": "2025-10-24T00:39:00Z",
+    "distance": 320.0,
+    "start_index": 220,
+    "end_index": 665,
+    "average_cadence": 89.4,
+    "device_watts": true,
+    "average_watts": 524.6,
+    "average_heartrate": 187.7,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210295,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310098,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 29,
+    "moving_time": 26,
+    "start_date": "2025-11-06T00:31:00Z",
+    "start_date_local": "2025-11-06T00:31:00Z",
+    "distance": 320.0,
+    "start_index": 245,
+    "end_index": 834,
+    "average_cadence": 81.0,
+    "device_watts": true,
+    "average_watts": 527.4,
+    "average_heartrate": 191.2,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210298,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity": {
+      "id": 310099,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 34,
+    "moving_time": 33,
+    "start_date": "2025-11-19T00:29:00Z",
+    "start_date_local": "2025-11-19T00:29:00Z",
+    "distance": 320.0,
+    "start_index": 157,
+    "end_index": 776,
+    "average_cadence": 83.4,
+    "device_watts": true,
+    "average_watts": 590.8,
+    "average_heartrate": 171.9,
+    "segment": {
+      "id": 100002,
+      "resource_state": 2,
+      "name": "Town Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  }
+]

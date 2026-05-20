@@ -108,12 +108,12 @@ class _DevSession:
     """Intercepts every requests.get call and returns data from local JSON files.
 
     URL routing (path relative to the Strava API base):
-      /athlete                 → bikes.json         (raw GET /athlete)
-      /athlete/activities      → activities.json     (raw GET /athlete/activities)
-      /segments/starred        → segments.json       (raw GET /segments/starred)
-      /segment_efforts         → efforts.json        (filtered by segment_id param)
-      /segments/{id}/streams   → streams.json[id]
-      /segments/{id}           → segment_detail.json[id]
+      /athlete                 → athlete.json            (raw GET /athlete)
+      /athlete/activities      → athlete_activities.json  (raw GET /athlete/activities)
+      /segments/starred        → segments_starred.json    (raw GET /segments/starred)
+      /segment_efforts         → segment_efforts_{id}.json  (raw GET /segment_efforts?segment_id=id)
+      /segments/{id}/streams   → segment_streams_{id}.json  (raw GET /segments/{id}/streams)
+      /segments/{id}           → segment_detail_{id}.json   (raw GET /segments/{id})
 
     All paginated endpoints return an empty list for page > 1, simulating a
     single full page of results.
@@ -135,32 +135,32 @@ class _DevSession:
         path = url.replace("https://www.strava.com/api/v3", "")
 
         if path == "/athlete":
-            data = json.loads((_DEV_DIR / "bikes.json").read_text())
+            data = json.loads((_DEV_DIR / "athlete.json").read_text())
 
         elif path == "/athlete/activities":
-            data = [] if page > 1 else json.loads((_DEV_DIR / "activities.json").read_text())
+            data = [] if page > 1 else json.loads((_DEV_DIR / "athlete_activities.json").read_text())
 
         elif path == "/segments/starred":
-            data = [] if page > 1 else json.loads((_DEV_DIR / "segments.json").read_text())
+            data = [] if page > 1 else json.loads((_DEV_DIR / "segments_starred.json").read_text())
 
         elif path == "/segment_efforts":
             if page > 1:
                 data = []
             else:
-                segment_id = int(params.get("segment_id", 0))
-                all_efforts = json.loads((_DEV_DIR / "efforts.json").read_text())
-                data = [e for e in all_efforts if e.get("segment", {}).get("id") == segment_id]
+                segment_id = params.get("segment_id", 0)
+                f = _DEV_DIR / f"segment_efforts_{segment_id}.json"
+                data = json.loads(f.read_text()) if f.exists() else []
 
         elif path.endswith("/streams"):
             segment_id = path.split("/")[-2]
-            all_streams = json.loads((_DEV_DIR / "streams.json").read_text())
-            data = all_streams.get(segment_id, {})
+            f = _DEV_DIR / f"segment_streams_{segment_id}.json"
+            data = json.loads(f.read_text()) if f.exists() else {}
 
         else:
             # /segments/{id}
             segment_id = path.split("/")[-1]
-            all_detail = json.loads((_DEV_DIR / "segment_detail.json").read_text())
-            data = all_detail.get(segment_id, {})
+            f = _DEV_DIR / f"segment_detail_{segment_id}.json"
+            data = json.loads(f.read_text()) if f.exists() else {}
 
         return _MockResponse(data)
 
