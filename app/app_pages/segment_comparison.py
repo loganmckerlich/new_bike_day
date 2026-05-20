@@ -7,7 +7,6 @@ from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
-from plotly.colors import hex_to_rgb
 import plotly.graph_objects as go
 import streamlit as st
 
@@ -17,6 +16,7 @@ if str(_REPO_ROOT) not in sys.path:
 
 from src.fetch import get_segment_detail, get_segment_streams
 from src.database import init_db, load_segment_geo, save_segment_geo
+from src.plot_colors import to_rgba
 from src.analytics import (
     compute_speed_per_watt,
     filter_outliers_by_power_speed,
@@ -105,11 +105,6 @@ def _convert_dist_m(meters: float) -> float:
 def _convert_elev_m(meters: float) -> float:
     """Convert metres to display unit (m or ft)."""
     return meters if _use_metric() else meters * 3.28084
-
-
-def _rgba(hex_color: str, alpha: float) -> str:
-    r, g, b = hex_to_rgb(hex_color)
-    return f"rgba({r},{g},{b},{alpha})"
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -456,7 +451,7 @@ for idx, b in enumerate(bikes_to_compare):
             fill="toself",
             name=b,
             line={"color": color, "width": _SPIDER_POLYGON_LINE_WIDTH},
-            fillcolor=_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
+            fillcolor=to_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
             hovertemplate="%{theta}: %{r:.1f} " + _spd + "<extra>" + b + "</extra>",
         )
     )
@@ -489,7 +484,7 @@ for idx, b in enumerate(bikes_to_compare):
             fill="toself",
             name=b,
             line={"color": color, "width": _SPIDER_POLYGON_LINE_WIDTH},
-            fillcolor=_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
+            fillcolor=to_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
             hovertemplate="%{theta}: %{r:.4f} " + _spd + "/W<extra>" + b + "</extra>",
             showlegend=False,
         )
