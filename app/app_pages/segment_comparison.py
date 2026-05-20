@@ -198,25 +198,27 @@ def _render_elevation_profile(geo: dict, seg_distance_m: float) -> None:
     streams = geo.get("streams") or {}
     elev_low = geo.get("elevation_low")
     elev_high = geo.get("elevation_high")
+    d_label = _dist_label()
+    e_label = _elev_label()
 
     if streams and "distance" in streams and "altitude" in streams:
-        dist_km = [d / 1000 for d in streams["distance"]]
-        alt = streams["altitude"]
+        dist_vals = [_convert_dist_m(d) for d in streams["distance"]]
+        alt = [_convert_elev_m(v) for v in streams["altitude"]]
         fig = go.Figure()
         fig.add_trace(
             go.Scatter(
-                x=dist_km,
+                x=dist_vals,
                 y=alt,
                 mode="lines",
                 fill="tozeroy",
                 fillcolor="rgba(252, 76, 2, 0.15)",
                 line={"color": "#FC4C02", "width": 2},
-                hovertemplate="Distance: %{x:.2f} km<br>Elevation: %{y:.0f} m<extra></extra>",
+                hovertemplate=f"Distance: %{{x:.2f}} {d_label}<br>Elevation: %{{y:.0f}} {e_label}<extra></extra>",
             )
         )
         fig.update_layout(
-            xaxis_title="Distance (km)",
-            yaxis_title="Elevation (m)",
+            xaxis_title=f"Distance ({d_label})",
+            yaxis_title=f"Elevation ({e_label})",
             margin={"l": 40, "r": 10, "t": 10, "b": 40},
             height=280,
             plot_bgcolor="rgba(0,0,0,0)",
@@ -226,23 +228,25 @@ def _render_elevation_profile(geo: dict, seg_distance_m: float) -> None:
         st.plotly_chart(fig, width="stretch")
 
     elif elev_low is not None and elev_high is not None and seg_distance_m > 0:
-        dist_km_total = seg_distance_m / 1000
-        mid = dist_km_total / 2
+        dist_total = _convert_dist_m(seg_distance_m)
+        mid = dist_total / 2
+        elev_lo = _convert_elev_m(float(elev_low))
+        elev_hi = _convert_elev_m(float(elev_high))
         fig = go.Figure()
         fig.add_trace(
             go.Scatter(
-                x=[0, mid, dist_km_total],
-                y=[float(elev_low), float(elev_high), float(elev_low)],
+                x=[0, mid, dist_total],
+                y=[elev_lo, elev_hi, elev_lo],
                 mode="lines",
                 fill="tozeroy",
                 fillcolor="rgba(252, 76, 2, 0.15)",
                 line={"color": "#FC4C02", "width": 2, "dash": "dot"},
-                hovertemplate="~Elevation: %{y:.0f} m<extra></extra>",
+                hovertemplate=f"~Elevation: %{{y:.0f}} {e_label}<extra></extra>",
             )
         )
         fig.update_layout(
-            xaxis_title="Distance (km)",
-            yaxis_title="Elevation (m)",
+            xaxis_title=f"Distance ({d_label})",
+            yaxis_title=f"Elevation ({e_label})",
             margin={"l": 40, "r": 10, "t": 10, "b": 40},
             height=280,
             plot_bgcolor="rgba(0,0,0,0)",
@@ -354,10 +358,11 @@ for seg_type in SEGMENT_TYPES:
             speed_profile[b].append(0.0)
         else:
             per_seg_avg = _b_eff.groupby("segment_id")["speed_kmh"].mean()
-            speed_profile[b].append(float(per_seg_avg.mean()))
+            speed_profile[b].append(_convert_speed(float(per_seg_avg.mean())))
 
 categories = [f"{TYPE_ICONS.get(t, '')} {t.capitalize()}" for t in SEGMENT_TYPES]
 categories_closed = categories + [categories[0]]
+_spd = _spd_label()
 
 fig_spider = go.Figure()
 for idx, b in enumerate(bikes_to_compare):
@@ -372,12 +377,12 @@ for idx, b in enumerate(bikes_to_compare):
             opacity=0.45,
             line={"color": _COLOR_SEQ[idx % len(_COLOR_SEQ)], "width": 2},
             fillcolor=_COLOR_SEQ[idx % len(_COLOR_SEQ)],
-            hovertemplate="%{theta}: %{r:.1f} km/h<extra>" + b + "</extra>",
+            hovertemplate="%{theta}: %{r:.1f} " + _spd + "<extra>" + b + "</extra>",
         )
     )
 
 fig_spider.update_layout(
-    polar={"radialaxis": {"visible": True, "title": {"text": "Avg speed (km/h)"}}},
+    polar={"radialaxis": {"visible": True, "title": {"text": f"Avg speed ({_spd})"}}},
     showlegend=True,
     legend={"orientation": "h", "yanchor": "bottom", "y": -0.15},
     title="Speed profile by segment type — " + " vs ".join(bikes_to_compare),
@@ -423,13 +428,18 @@ for row_types in [SEGMENT_TYPES[:2], SEGMENT_TYPES[2:]]:
             display = type_segs[
                 ["segment_id", "name", *all_rides_cols, "distance", "average_grade"]
             ].copy()
-            display["distance"] = (display["distance"] / 1000).round(2)
+            _dist_col = f"Dist ({_dist_label()})"
+            display["distance"] = (
+                (display["distance"] / 1000).round(2)
+                if _use_metric()
+                else (display["distance"] / 1609.34).round(2)
+            )
             display["average_grade"] = display["average_grade"].round(1)
             display.insert(0, "Select", False)
             display = display.rename(
                 columns={
                     "name": "Segment",
-                    "distance": "Dist (km)",
+                    "distance": _dist_col,
                     "average_grade": "Grade (%)",
                 }
             )
@@ -443,7 +453,7 @@ for row_types in [SEGMENT_TYPES[:2], SEGMENT_TYPES[2:]]:
                 hide_index=True,
                 width="stretch",
                 key=f"table_{seg_type}",
-                disabled=["Segment", *all_rides_cols, "Dist (km)", "Grade (%)"],
+                disabled=["Segment", *all_rides_cols, _dist_col, "Grade (%)"],
             )
 
 
@@ -482,13 +492,23 @@ else:
             # Segment info metrics
             info_cols = st.columns(4)
             with info_cols[0]:
-                st.metric("Distance", f"{seg_distance_m / 1000:.2f} km" if seg_distance_m else "—")
+                if seg_distance_m:
+                    dist_disp = _convert_dist_m(seg_distance_m)
+                    dist_metric_str = f"{dist_disp:.2f} {_dist_label()}"
+                else:
+                    dist_metric_str = "—"
+                st.metric("Distance", dist_metric_str)
             with info_cols[1]:
                 grade = seg_row.get("average_grade")
                 st.metric("Avg grade", f"{grade:.1f}%" if pd.notna(grade) else "—")
             with info_cols[2]:
                 elev = seg_row.get("total_elevation_gain")
-                st.metric("Elevation gain", f"{elev:.0f} m" if pd.notna(elev) else "—")
+                if pd.notna(elev):
+                    elev_disp = _convert_elev_m(float(elev))
+                    elev_metric_str = f"{elev_disp:.0f} {_elev_label()}"
+                else:
+                    elev_metric_str = "—"
+                st.metric("Elevation gain", elev_metric_str)
             with info_cols[3]:
                 stype = seg_row.get("segment_type", "—")
                 st.metric("Type", str(stype).capitalize() if stype else "—")
@@ -515,12 +535,21 @@ else:
             }
             if _has_col(seg_efforts, "average_heartrate"):
                 agg["Avg HR (bpm)"] = ("average_heartrate", "mean")
+            _spd_col_avg = f"Avg speed ({_spd_label()})"
+            _spd_col_max = f"Max speed ({_spd_label()})"
             if _has_col(seg_efforts, "speed_kmh"):
-                agg["Avg speed (km/h)"] = ("speed_kmh", "mean")
-                agg["Max speed (km/h)"] = ("speed_kmh", "max")
+                agg[_spd_col_avg] = ("speed_kmh", "mean")
+                agg[_spd_col_max] = ("speed_kmh", "max")
 
             summary = seg_efforts.groupby("bike_name").agg(**agg).reset_index()
             summary.rename(columns={"bike_name": "Bike"}, inplace=True)
+
+            # Convert speed columns to display unit
+            for col_name in [_spd_col_avg, _spd_col_max]:
+                if col_name in summary.columns:
+                    summary[col_name] = summary[col_name].apply(
+                        lambda v: _convert_speed(v) if pd.notna(v) else v
+                    )
 
             for col_name in ["Best time", "Avg time"]:
                 if col_name in summary.columns:
@@ -528,7 +557,7 @@ else:
                         lambda s: _fmt_duration(s) if pd.notna(s) else "—"
                     )
             for col_name in ["Avg power (W)", "Max power (W)", "Avg HR (bpm)",
-                             "Avg speed (km/h)", "Max speed (km/h)"]:
+                             _spd_col_avg, _spd_col_max]:
                 if col_name in summary.columns:
                     summary[col_name] = summary[col_name].apply(
                         lambda v: f"{v:.1f}" if pd.notna(v) else "—"
@@ -555,14 +584,17 @@ else:
 
             if has_speed:
                 with chart_tabs[ct_idx]:
-                    st.caption("Speed distribution by bike (km/h)")
+                    _spd_display = seg_efforts.dropna(subset=["speed_kmh"]).copy()
+                    _spd_display["speed_kmh"] = _spd_display["speed_kmh"].apply(_convert_speed)
+                    _spd_axis = f"Speed ({_spd_label()})"
+                    st.caption(f"Speed distribution by bike ({_spd_label()})")
                     fig = px.box(
-                        seg_efforts.dropna(subset=["speed_kmh"]),
+                        _spd_display,
                         x="bike_name",
                         y="speed_kmh",
                         color="bike_name",
                         color_discrete_sequence=_COLOR_SEQ,
-                        labels={"bike_name": "Bike", "speed_kmh": "Speed (km/h)"},
+                        labels={"bike_name": "Bike", "speed_kmh": _spd_axis},
                         points="all",
                     )
                     fig.update_layout(showlegend=False, plot_bgcolor="rgba(0,0,0,0)")
@@ -607,7 +639,10 @@ else:
                 timeline_data = seg_efforts.dropna(subset=["start_date"])
                 if not timeline_data.empty:
                     y_col = "speed_kmh" if has_speed else "moving_time"
-                    y_label = "Speed (km/h)" if has_speed else "Time (s)"
+                    y_label = f"Speed ({_spd_label()})" if has_speed else "Time (s)"
+                    if has_speed:
+                        timeline_data = timeline_data.copy()
+                        timeline_data["speed_kmh"] = timeline_data["speed_kmh"].apply(_convert_speed)
                     fig = px.scatter(
                         timeline_data.sort_values("start_date"),
                         x="start_date",
@@ -635,11 +670,15 @@ else:
                     .drop(columns=sort_col)
                 ) if sort_col else seg_efforts[available].copy()
 
+                if "speed_kmh" in detail.columns:
+                    detail["speed_kmh"] = detail["speed_kmh"].apply(
+                        lambda v: _convert_speed(v) if pd.notna(v) else v
+                    )
                 detail.rename(columns={
                     "date_str": "Date",
                     "bike_name": "Bike",
                     "moving_time": "Time (s)",
-                    "speed_kmh": "Speed (km/h)",
+                    "speed_kmh": f"Speed ({_spd_label()})",
                     "average_watts": "Avg power (W)",
                     "average_heartrate": "Avg HR (bpm)",
                 }, inplace=True)
