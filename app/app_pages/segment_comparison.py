@@ -20,6 +20,7 @@ from src.plot_colors import to_rgba
 from src.analytics import (
     compute_speed_per_watt,
     filter_outliers_by_power_speed,
+    mean_profile_by_segment_type,
     power_normalized_profile,
     outlier_detection_frames,
 )
@@ -426,22 +427,20 @@ else:
 categories_closed = categories + [categories[0]]
 
 # ── Chart 1: raw speed ────────────────────────────────────────────────────────
-speed_profile: dict[str, list[float]] = {b: [] for b in bikes_to_compare}
-for seg_type in spider_dimensions:
-    _type_eff = spider_efforts[spider_efforts[spider_dimension_col] == seg_type].copy()
-    for b in bikes_to_compare:
-        _b_eff = _type_eff[_type_eff["bike_name"] == b].copy()
-        if _b_eff.empty or _b_eff["speed_kmh"].isna().all():
-            speed_profile[b].append(0.0)
-        else:
-            per_seg_avg = _b_eff.groupby("segment_id")["speed_kmh"].mean()
-            speed_profile[b].append(_convert_speed(float(per_seg_avg.mean())))
+speed_profile = mean_profile_by_segment_type(
+    spider_efforts,
+    bikes_to_compare,
+    spider_dimensions,
+    valid_segment_ids,
+    value_col="speed_kmh",
+    segment_type_col=spider_dimension_col,
+)
 
 _spd = _spd_label()
 
 fig_spider = go.Figure()
 for idx, b in enumerate(bikes_to_compare):
-    vals = speed_profile[b]
+    vals = [_convert_speed(v) for v in speed_profile[b]]
     vals_closed = vals + [vals[0]]
     color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
     fig_spider.add_trace(
@@ -456,7 +455,10 @@ for idx, b in enumerate(bikes_to_compare):
         )
     )
 fig_spider.update_layout(
-    polar={"radialaxis": {"visible": True}},
+    polar={
+        "radialaxis": {"visible": True},
+        "angularaxis": {"categoryorder": "array", "categoryarray": categories},
+    },
     showlegend=True,
     legend={"orientation": "h", "yanchor": "bottom", "y": -0.15},
     title=f"Speed profile by segment {'subcategory' if spider_use_subcategories else 'type'}",
@@ -490,7 +492,10 @@ for idx, b in enumerate(bikes_to_compare):
         )
     )
 fig_efficiency.update_layout(
-    polar={"radialaxis": {"visible": True}},
+    polar={
+        "radialaxis": {"visible": True},
+        "angularaxis": {"categoryorder": "array", "categoryarray": categories},
+    },
     showlegend=False,
     title=f"Efficiency profile by segment {'subcategory' if spider_use_subcategories else 'type'} (power-normalised)",
     height=500,
