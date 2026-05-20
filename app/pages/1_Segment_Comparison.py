@@ -460,7 +460,12 @@ with st.expander("🗂 All efforts for this segment", expanded=False):
     if has_pace:
         display_cols.insert(3, "pace_sec_per_km")
     available = [c for c in display_cols if c in seg_efforts.columns]
-    detail = seg_efforts[available].copy().sort_values("start_date", ascending=False, na_position="last")
+    sort_cols = ["start_date"] if "start_date" in seg_efforts.columns else []
+    detail = (
+        seg_efforts[available + sort_cols].copy()
+        .sort_values(sort_cols, ascending=False, na_position="last")
+        .drop(columns=sort_cols)
+    ) if sort_cols else seg_efforts[available].copy()
 
     col_rename = {
         "date_str": "Date",
