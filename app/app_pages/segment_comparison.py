@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
-from plotly.colors import hex_to_rgb
+from plotly.colors import hex_to_rgb, unlabel_rgb
 import plotly.graph_objects as go
 import streamlit as st
 
@@ -107,8 +107,11 @@ def _convert_elev_m(meters: float) -> float:
     return meters if _use_metric() else meters * 3.28084
 
 
-def _rgba(hex_color: str, alpha: float) -> str:
-    r, g, b = hex_to_rgb(hex_color)
+def _rgba(color: str, alpha: float) -> str:
+    if color.startswith("rgb"):
+        r, g, b = unlabel_rgb(color)
+    else:
+        r, g, b = hex_to_rgb(color)
     return f"rgba({r},{g},{b},{alpha})"
 
 
