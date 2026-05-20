@@ -51,6 +51,25 @@ def _fmt_duration(seconds: float) -> str:
     return f"{total // 60}:{total % 60:02d}"
 
 
+def _has_speed(df: pd.DataFrame) -> bool:
+    """Return True when the DataFrame has a populated ``speed_kmh`` column."""
+    return "speed_kmh" in df.columns and df["speed_kmh"].notna().any()
+
+
+def _compute_speed_kmh(df: pd.DataFrame, distance_m: float | None = None) -> pd.Series:
+    """Compute speed (km/h) from moving_time and an optional fixed distance.
+
+    If ``distance_m`` is provided (e.g. the known segment distance) it is used
+    for every row.  Otherwise the per-row ``distance`` column is used.
+    """
+    if distance_m is not None and distance_m > 0:
+        safe_time = df["moving_time"].replace(0, pd.NA)
+        return (distance_m / safe_time * 3.6).where(safe_time.notna())
+    dist = df.get("distance", pd.Series(dtype=float))
+    safe_time = df["moving_time"].replace(0, pd.NA)
+    return (dist / safe_time * 3.6).where(safe_time.notna() & dist.notna())
+
+
 # ── Filter to watt-measured efforts ─────────────────────────────────────────
 watt_efforts = efforts[efforts["average_watts"].notna()].copy()
 
@@ -70,12 +89,7 @@ seg_meta = segments[
 watt_efforts = watt_efforts.merge(seg_meta, on="segment_id", how="inner")
 
 # Compute speed in km/h from segment distance and moving time
-watt_efforts["speed_kmh"] = watt_efforts.apply(
-    lambda r: (r["distance"] / r["moving_time"] * 3.6)
-    if pd.notna(r["moving_time"]) and r["moving_time"] > 0
-    else None,
-    axis=1,
-)
+watt_efforts["speed_kmh"] = _compute_speed_kmh(watt_efforts)
 
 # ── Sidebar: analysis settings ────────────────────────────────────────────────
 available_bikes = sorted(watt_efforts["bike_name"].dropna().unique().tolist())
@@ -155,14 +169,16 @@ valid_segs = valid_segs.merge(
     how="left",
 )
 
-# ── Display 4 segment-type tables ────────────────────────────────────────────
-SEGMENT_TYPES: list[str] = ["sprint", "flat", "descent", "ascent"]
+# ── Segment type constants (ordered for both tables and spider plot) ──────────
+SEGMENT_TYPES: list[str] = ["sprint", "flat", "ascent", "descent"]
 TYPE_ICONS: dict[str, str] = {
     "sprint": "⚡",
     "flat": "➡️",
-    "descent": "⬇️",
     "ascent": "⬆️",
+    "descent": "⬇️",
 }
+
+# ── Display 4 segment-type tables ────────────────────────────────────────────
 
 st.markdown("---")
 st.subheader("📋 Valid Segments by Type")
@@ -279,7 +295,7 @@ for tab, seg_id in zip(tabs, selected_segment_ids):
         }
         if seg_efforts["average_heartrate"].notna().any():
             agg["Avg HR (bpm)"] = ("average_heartrate", "mean")
-        if seg_efforts.get("speed_kmh") is not None and seg_efforts["speed_kmh"].notna().any():
+        if _has_speed(seg_efforts):
             agg["Max Speed (km/h)"] = ("speed_kmh", "max")
             agg["Avg Speed (km/h)"] = ("speed_kmh", "mean")
 
@@ -319,7 +335,7 @@ for tab, seg_id in zip(tabs, selected_segment_ids):
                 st.plotly_chart(fig, use_container_width=True)
 
         with chart_cols[1]:
-            if seg_efforts.get("speed_kmh") is not None and seg_efforts["speed_kmh"].notna().any():
+            if _has_speed(seg_efforts):
                 fig = px.box(
                     seg_efforts.dropna(subset=["speed_kmh"]),
                     x="bike_name",
@@ -341,18 +357,16 @@ st.caption(
     "Both bikes are shown with low opacity so they can be compared directly."
 )
 
-SEGMENT_TYPES_ORDERED: list[str] = ["sprint", "flat", "ascent", "descent"]
-
 speed_data: dict[str, list[float]] = {bike_a: [], bike_b: []}
-for seg_type in SEGMENT_TYPES_ORDERED:
+for seg_type in SEGMENT_TYPES:
     type_efforts = watt_efforts[watt_efforts["segment_type"] == seg_type]
     for b in [bike_a, bike_b]:
         b_efforts = type_efforts[type_efforts["bike_name"] == b]
-        has_speed = not b_efforts.empty and b_efforts["speed_kmh"].notna().any()
-        max_spd = b_efforts["speed_kmh"].max() if has_speed else 0.0
+        has_spd = not b_efforts.empty and b_efforts["speed_kmh"].notna().any()
+        max_spd = b_efforts["speed_kmh"].max() if has_spd else 0.0
         speed_data[b].append(float(max_spd) if pd.notna(max_spd) else 0.0)
 
-categories = [t.capitalize() for t in SEGMENT_TYPES_ORDERED]
+categories = [t.capitalize() for t in SEGMENT_TYPES]
 # Close the polygon by repeating the first value
 categories_closed = categories + [categories[0]]
 
