@@ -38,14 +38,3 @@ def load_dev_athlete_profile() -> dict[str, str]:
     }
 
 
-def build_cheeky_conclusion(
-    *,
-    athlete_name: str | None,
-    legs_status: str,
-    vibe: str,
-    takeaway: str,
-) -> str:
-    """Build a playful ride conclusion sentence for the home page form."""
-    intro = athlete_name.strip() if athlete_name and athlete_name.strip() else "The rider"
-    headline = takeaway.strip() or "I respected the watts and feared the climbs."
-    return f"{intro} says: {headline} Legs status: {legs_status}. Ride vibe: {vibe}."
