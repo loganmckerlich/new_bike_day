@@ -46,7 +46,7 @@ class BuildFeatureMatrixTests(unittest.TestCase):
         self.assertIn("segment_type_ascent", out.columns)
         self.assertEqual(int(out.iloc[0]["is_new_bike"]), 0)
 
-    def test_remove_outliers_for_causal_analysis_uses_speed_per_watt_zscore(self) -> None:
+    def test_remove_outliers_filters_by_speed_per_watt_zscore(self) -> None:
         efforts = pd.DataFrame(
             {
                 "effort_id": [1, 2, 3, 4, 5],
@@ -65,7 +65,7 @@ class BuildFeatureMatrixTests(unittest.TestCase):
         self.assertNotIn("is_outlier", cleaned.columns)
         self.assertNotIn("z_score", cleaned.columns)
 
-    def test_remove_outliers_for_causal_analysis_returns_input_when_required_columns_missing(self) -> None:
+    def test_remove_outliers_returns_input_when_columns_missing(self) -> None:
         efforts = pd.DataFrame({"segment_id": [1], "average_watts": [200.0]})
         cleaned, n_outliers = remove_outliers_for_causal_analysis(efforts)
         self.assertEqual(n_outliers, 0)
