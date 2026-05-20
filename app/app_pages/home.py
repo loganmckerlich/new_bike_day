@@ -136,6 +136,8 @@ def _exchange_access_token(client_id: str, client_secret: str, redirect_uri: str
             refresh_token=token["refresh_token"],
             expires_at=token["expires_at"],
         )
+    if token.get("athlete_firstname"):
+        st.session_state["athlete_name"] = token["athlete_firstname"]
     return token["access_token"]
 
 
@@ -390,6 +392,10 @@ def main() -> None:
             if profile_bits:
                 st.caption(" • ".join(profile_bits))
             st.caption("🛠️ Dev mode is on — showing static sample data.")
+        else:
+            live_athlete_name = st.session_state.get("athlete_name")
+            if live_athlete_name:
+                st.header(f"Hello, {live_athlete_name} 👋")
         st.markdown(
             "Compare your rides across different bikes on the same Strava segments. "
             "Sign in with Strava to get started."
