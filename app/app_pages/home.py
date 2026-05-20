@@ -423,6 +423,8 @@ def main() -> None:
         if dev_mode:
             st.caption("🛠️ Dev mode is on — showing static sample data.")
 
+    _render_cheeky_conclusion_form(athlete_name=athlete_name)
+
     # ── Dev mode: load static JSON and skip all OAuth / API logic ─────────────
     if dev_mode:
         result = ingest_all(access_token="", dev=True)
@@ -439,7 +441,6 @@ def main() -> None:
         bikes = st.session_state.get("bikes", {})
         bike_distances = st.session_state.get("bike_distances", {})
         _render_bike_summaries(data, segments, bikes, bike_distances)
-        _render_cheeky_conclusion_form(athlete_name=athlete_name)
         return
 
     # ── Live mode: OAuth → Strava API ─────────────────────────────────────────
@@ -537,7 +538,6 @@ def main() -> None:
     bikes = st.session_state.get("bikes", {})
     bike_distances = st.session_state.get("bike_distances", {})
     _render_bike_summaries(data, segments, bikes, bike_distances)
-    _render_cheeky_conclusion_form(athlete_name=athlete_name)
 
 
 main()
