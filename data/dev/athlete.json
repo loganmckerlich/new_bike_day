@@ -27,6 +27,14 @@
       "resource_state": 2,
       "distance": 8765400,
       "converted_distance": 5447.8
+    },
+    {
+      "id": "b333333",
+      "primary": false,
+      "name": "Slow McGee",
+      "resource_state": 2,
+      "distance": 4082000,
+      "converted_distance": 2536.3
     }
   ],
   "shoes": []

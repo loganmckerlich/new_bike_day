@@ -1,0 +1,266 @@
+[
+  {
+    "id": 230001,
+    "resource_state": 2,
+    "name": "North Downs Descent",
+    "activity": {
+      "id": 300001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 142,
+    "moving_time": 142,
+    "start_date": "2024-01-15T07:45:00Z",
+    "start_date_local": "2024-01-15T07:45:00Z",
+    "distance": 1800.0,
+    "start_index": 900,
+    "end_index": 1042,
+    "average_cadence": 72.0,
+    "device_watts": true,
+    "average_watts": 98.0,
+    "average_heartrate": 134.0,
+    "segment": {
+      "id": 100004,
+      "resource_state": 2,
+      "name": "North Downs Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230002,
+    "resource_state": 2,
+    "name": "North Downs Descent",
+    "activity": {
+      "id": 310005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 138,
+    "moving_time": 138,
+    "start_date": "2024-05-22T13:10:00Z",
+    "start_date_local": "2024-05-22T13:10:00Z",
+    "distance": 1800.0,
+    "start_index": 870,
+    "end_index": 1008,
+    "average_cadence": 74.0,
+    "device_watts": true,
+    "average_watts": 105.0,
+    "average_heartrate": 131.0,
+    "segment": {
+      "id": 100004,
+      "resource_state": 2,
+      "name": "North Downs Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": 1,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230003,
+    "resource_state": 2,
+    "name": "North Downs Descent",
+    "activity": {
+      "id": 310021,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 145,
+    "moving_time": 145,
+    "start_date": "2024-09-03T07:55:00Z",
+    "start_date_local": "2024-09-03T07:55:00Z",
+    "distance": 1800.0,
+    "start_index": 910,
+    "end_index": 1055,
+    "average_cadence": 71.0,
+    "device_watts": true,
+    "average_watts": 102.0,
+    "average_heartrate": 136.0,
+    "segment": {
+      "id": 100004,
+      "resource_state": 2,
+      "name": "North Downs Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230004,
+    "resource_state": 2,
+    "name": "North Downs Descent",
+    "activity": {
+      "id": 300008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 147,
+    "moving_time": 147,
+    "start_date": "2024-03-10T09:00:00Z",
+    "start_date_local": "2024-03-10T09:00:00Z",
+    "distance": 1800.0,
+    "start_index": 1400,
+    "end_index": 1547,
+    "average_cadence": 70.0,
+    "device_watts": true,
+    "average_watts": 91.0,
+    "average_heartrate": 130.0,
+    "segment": {
+      "id": 100004,
+      "resource_state": 2,
+      "name": "North Downs Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230005,
+    "resource_state": 2,
+    "name": "North Downs Descent",
+    "activity": {
+      "id": 310060,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 141,
+    "moving_time": 141,
+    "start_date": "2024-11-14T07:50:00Z",
+    "start_date_local": "2024-11-14T07:50:00Z",
+    "distance": 1800.0,
+    "start_index": 850,
+    "end_index": 991,
+    "average_cadence": 73.0,
+    "device_watts": true,
+    "average_watts": 108.0,
+    "average_heartrate": 132.0,
+    "segment": {
+      "id": 100004,
+      "resource_state": 2,
+      "name": "North Downs Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": 2,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230006,
+    "resource_state": 2,
+    "name": "North Downs Descent",
+    "activity": {
+      "id": 320001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 218,
+    "moving_time": 216,
+    "start_date": "2024-04-08T07:52:00Z",
+    "start_date_local": "2024-04-08T07:52:00Z",
+    "distance": 1800.0,
+    "start_index": 1100,
+    "end_index": 1318,
+    "average_cadence": 61.0,
+    "device_watts": true,
+    "average_watts": 88.0,
+    "average_heartrate": 128.0,
+    "segment": {
+      "id": 100004,
+      "resource_state": 2,
+      "name": "North Downs Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230007,
+    "resource_state": 2,
+    "name": "North Downs Descent",
+    "activity": {
+      "id": 320005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 225,
+    "moving_time": 223,
+    "start_date": "2024-06-15T08:10:00Z",
+    "start_date_local": "2024-06-15T08:10:00Z",
+    "distance": 1800.0,
+    "start_index": 2200,
+    "end_index": 2425,
+    "average_cadence": 59.0,
+    "device_watts": true,
+    "average_watts": 95.0,
+    "average_heartrate": 131.0,
+    "segment": {
+      "id": 100004,
+      "resource_state": 2,
+      "name": "North Downs Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230008,
+    "resource_state": 2,
+    "name": "North Downs Descent",
+    "activity": {
+      "id": 320009,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 211,
+    "moving_time": 210,
+    "start_date": "2024-09-07T09:05:00Z",
+    "start_date_local": "2024-09-07T09:05:00Z",
+    "distance": 1800.0,
+    "start_index": 1900,
+    "end_index": 2111,
+    "average_cadence": 63.0,
+    "device_watts": true,
+    "average_watts": 101.0,
+    "average_heartrate": 126.0,
+    "segment": {
+      "id": 100004,
+      "resource_state": 2,
+      "name": "North Downs Descent"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  }
+]
