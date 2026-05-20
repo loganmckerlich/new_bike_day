@@ -16,25 +16,49 @@ _REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
-from src.auth import exchange_code_for_token, get_authorization_url
+from src.auth import exchange_code, get_authorization_url
+from src.database import (
+    clear_bikes,
+    clear_efforts,
+    clear_segments,
+    init_db,
+    load_bikes,
+    load_efforts,
+    load_segments,
+    save_athlete_token,
+    save_bikes,
+    save_efforts,
+    save_segments,
+)
 from src.dev_data import load_dev_data
 from src.fetch import ingest_all, PremiumOnlyError
 
 
 # ---------------------------------------------------------------------------
-# Caching
+# Static cache helpers (SQLite-backed)
 # ---------------------------------------------------------------------------
 
-@st.cache_data(ttl=3600, show_spinner="⏳ Fetching your Strava data…")
-def _cached_ingest(access_token: str) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str]]:
-    """Fetch Strava data and cache the result for up to 1 hour.
+def _load_from_db() -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str]] | None:
+    """Return (efforts, segments, bikes) from the SQLite cache, or None if empty."""
+    init_db()
+    segments = load_segments()
+    efforts = load_efforts()
+    bikes = load_bikes()
+    if segments.empty and efforts.empty:
+        return None
+    return efforts, segments, bikes
 
-    Keyed by *access_token* so each user's data is cached independently.
-    The cache persists across browser refreshes as long as the Streamlit
-    process stays alive (standard behaviour on Streamlit Community Cloud).
-    """
-    result = ingest_all(access_token)
-    return result["efforts"], result["segments"], result.get("bikes", {})
+
+def _save_to_db(
+    efforts: pd.DataFrame,
+    segments: pd.DataFrame,
+    bikes: dict[str, str],
+) -> None:
+    """Persist ingested data to the SQLite static cache."""
+    init_db()
+    save_segments(segments)
+    save_efforts(efforts)
+    save_bikes(bikes)
 
 
 def _process_data(
@@ -42,19 +66,24 @@ def _process_data(
     *,
     force_refresh: bool = False,
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str]]:
-    """Return efforts, segments, bikes — using cache unless *force_refresh* is True.
+    """Return efforts, segments, bikes — from the SQLite cache or from Strava.
 
-    On a cache hit ``_cached_ingest`` returns instantly.  When *force_refresh*
-    is ``True`` the cache is cleared and ``ingest_all`` is called directly so
-    that a detailed per-endpoint progress bar can be displayed.
+    The Strava API is only called when:
+    - ``force_refresh`` is ``True`` (the user clicked the "Reload" button), or
+    - the SQLite cache is empty (first run after sign-in).
 
-    Note: ``_cached_ingest.clear()`` clears cached data for **all** tokens.
-    This is acceptable for a personal Strava deployment with a single user.
+    In all other cases data is served directly from the on-disk SQLite cache so
+    that no network requests are made.
+
+    On a forced refresh the cache is cleared and rebuilt from the API, then
+    written back to SQLite before returning.
     """
     if force_refresh:
-        # Invalidate the stale cache entry, then fetch fresh data with a live
-        # progress bar so the user can see exactly which endpoint is running.
-        _cached_ingest.clear()
+        # Clear stale cache so deleted segments / efforts are removed.
+        clear_efforts()
+        clear_segments()
+        clear_bikes()
+
         progress = st.progress(0, text="Starting…")
 
         def on_progress(msg: str, pct: int) -> None:
@@ -62,11 +91,23 @@ def _process_data(
 
         result = ingest_all(access_token, progress_callback=on_progress)
         progress.progress(100, text="✅ Complete!")
-        return result["efforts"], result["segments"], result.get("bikes", {})
 
-    # Normal path: let st.cache_data handle hit/miss transparently.
-    # On cache miss the decorator shows its own spinner; on hit it returns instantly.
-    return _cached_ingest(access_token)
+        efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
+        _save_to_db(efforts, segments, bikes)
+        return efforts, segments, bikes
+
+    # Normal path: serve from SQLite cache.
+    cached = _load_from_db()
+    if cached is not None:
+        return cached
+
+    # Cache miss (first sign-in): fetch from API and populate the cache.
+    with st.spinner("⏳ Fetching your Strava data for the first time…"):
+        result = ingest_all(access_token)
+
+    efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
+    _save_to_db(efforts, segments, bikes)
+    return efforts, segments, bikes
 
 
 def _query_param_value(value: object) -> str | None:
@@ -79,13 +120,23 @@ def _query_param_value(value: object) -> str | None:
 
 
 def _exchange_access_token(client_id: str, client_secret: str, redirect_uri: str, code: str) -> str:
-    """Exchange a Strava auth code for an access token."""
-    return exchange_code_for_token(
+    """Exchange a Strava auth code for an access token, persisting the full token to the DB."""
+    token = exchange_code(
         client_id=client_id,
         client_secret=client_secret,
         code=code,
         redirect_uri=redirect_uri,
     )
+    # Persist refresh token so the webhook server can re-ingest without user interaction.
+    if token.get("athlete_id") and token.get("refresh_token") and token.get("access_token") and token.get("expires_at") is not None:
+        init_db()
+        save_athlete_token(
+            athlete_id=token["athlete_id"],
+            access_token=token["access_token"],
+            refresh_token=token["refresh_token"],
+            expires_at=token["expires_at"],
+        )
+    return token["access_token"]
 
 
 def _normalized_redirect_uri(raw_value: str) -> str:
