@@ -108,6 +108,7 @@ def _convert_elev_m(meters: float) -> float:
 
 
 def _rgba(color: str, alpha: float) -> str:
+    """Return an rgba(...) color string from Plotly rgb(...) or hex color input."""
     if color.startswith("rgb"):
         r, g, b = (int(v) for v in unlabel_rgb(color))
     else:
