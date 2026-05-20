@@ -50,8 +50,9 @@ CREATE TABLE IF NOT EXISTS segment_efforts (
 
 _CREATE_BIKES: str = """
 CREATE TABLE IF NOT EXISTS bikes (
-    gear_id TEXT PRIMARY KEY,
-    name    TEXT
+    gear_id            TEXT PRIMARY KEY,
+    name               TEXT,
+    converted_distance REAL
 )
 """
 
@@ -218,32 +219,56 @@ def clear_efforts() -> None:
 # Bikes (gear_id → name mapping)
 # ---------------------------------------------------------------------------
 
-def save_bikes(bikes: dict[str, str]) -> None:
+def save_bikes(
+    bikes: dict[str, str],
+    distances: dict[str, float] | None = None,
+) -> None:
     """Upsert the athlete's bike inventory into the bikes table.
 
     Args:
         bikes: Dict mapping gear_id to a human-readable bike name.
+        distances: Optional dict mapping gear_id to converted_distance
+            (in the athlete's preferred unit, as returned by Strava).
     """
     if not bikes:
         return
-    sql = "INSERT OR REPLACE INTO bikes (gear_id, name) VALUES (?, ?)"
+    distances = distances or {}
+    sql = """
+        INSERT OR REPLACE INTO bikes (gear_id, name, converted_distance)
+        VALUES (?, ?, ?)
+    """
+    rows = [(gid, name, distances.get(gid)) for gid, name in bikes.items()]
     with _connect() as conn:
-        conn.executemany(sql, bikes.items())
+        # Add column if it doesn't exist yet (handles existing databases).
+        try:
+            conn.execute("ALTER TABLE bikes ADD COLUMN converted_distance REAL")
+        except sqlite3.OperationalError:
+            pass  # Column already exists
+        conn.executemany(sql, rows)
 
 
-def load_bikes() -> dict[str, str]:
+def load_bikes() -> tuple[dict[str, str], dict[str, float]]:
     """Load the bike inventory from the bikes table.
 
     Returns:
-        Dict mapping gear_id to bike name, or an empty dict if the table is
-        empty or does not exist yet.
+        A 2-tuple of:
+        - Dict mapping gear_id to bike name (empty dict if none stored).
+        - Dict mapping gear_id to converted_distance (empty if not stored).
     """
     with _connect() as conn:
         try:
-            rows = conn.execute("SELECT gear_id, name FROM bikes").fetchall()
-            return {gear_id: name for gear_id, name in rows}
+            rows = conn.execute(
+                "SELECT gear_id, name, converted_distance FROM bikes"
+            ).fetchall()
+            names = {gear_id: name for gear_id, name, _ in rows}
+            distances = {
+                gear_id: dist
+                for gear_id, _, dist in rows
+                if dist is not None
+            }
+            return names, distances
         except sqlite3.OperationalError:
-            return {}
+            return {}, {}
 
 
 def clear_bikes() -> None:

@@ -249,6 +249,12 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
             distance: Optional[float] = seg.get("distance")
             average_grade: Optional[float] = seg.get("average_grade")
             start_latlng: list[float] = seg.get("start_latlng") or []
+            elev_gain = seg.get("total_elevation_gain")
+            if elev_gain is None:
+                elev_high = seg.get("elevation_high")
+                elev_low = seg.get("elevation_low")
+                if elev_high is not None and elev_low is not None:
+                    elev_gain = max(0.0, elev_high - elev_low)
             rows.append(
                 {
                     "segment_id": seg.get("id"),
@@ -256,7 +262,7 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
                     "distance": distance,
                     "average_grade": average_grade,
                     "climb_category": seg.get("climb_category"),
-                    "total_elevation_gain": seg.get("total_elevation_gain"),
+                    "total_elevation_gain": elev_gain,
                     "start_lat": start_latlng[0] if len(start_latlng) > 0 else None,
                     "start_lng": start_latlng[1] if len(start_latlng) > 1 else None,
                     "segment_type": _classify_segment(distance, average_grade),
@@ -537,7 +543,7 @@ def get_athlete_bikes(
     *,
     gear_to_activity: Optional[dict[str, int]] = None,
     _http: Any = None,
-) -> dict[str, str]:
+) -> tuple[dict[str, str], dict[str, float]]:
     """Resolve gear_id → bike name using two strategies in order.
 
     **Strategy 1** — ``GET /athlete``: returns the full bike list when the token
@@ -573,14 +579,19 @@ def get_athlete_bikes(
             for b in bikes_list
             if b.get("id")
         }
+        distances: dict[str, float] = {
+            str(b["id"]): float(b["converted_distance"])
+            for b in bikes_list
+            if b.get("id") and b.get("converted_distance") is not None
+        }
         if bikes:
-            return bikes
+            return bikes, distances
     except requests.RequestException:
         pass
 
     # Strategy 2: one GET /activities/{id} per unique gear_id
     if not gear_to_activity:
-        return {}
+        return {}, {}
     result: dict[str, str] = {}
     for gear_id, activity_id in gear_to_activity.items():
         try:
@@ -595,7 +606,7 @@ def get_athlete_bikes(
             result[str(gear_id)] = name
         except requests.RequestException:
             pass
-    return result
+    return result, {}
 
 
 def ingest_all(
@@ -649,7 +660,7 @@ def ingest_all(
         gid = act_data.get("gear_id")
         if gid and gid not in gear_to_activity:
             gear_to_activity[gid] = act_id
-    bikes = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity, _http=_http)
+    bikes, bike_distances = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity, _http=_http)
 
     # Step 3: starred segments
     _progress("⭐ GET /segments/starred — fetching your starred segments…", 35)
@@ -684,4 +695,4 @@ def ingest_all(
     elif not efforts.empty:
         efforts["gear_id"] = None
 
-    return {"bikes": bikes, "segments": segments_df, "efforts": efforts}
+    return {"bikes": bikes, "bike_distances": bike_distances, "segments": segments_df, "efforts": efforts}

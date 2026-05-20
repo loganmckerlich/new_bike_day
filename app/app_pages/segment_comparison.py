@@ -41,6 +41,39 @@ TYPE_ICONS: dict[str, str] = {
 }
 _COLOR_SEQ: list[str] = px.colors.qualitative.Set2
 
+# ── Unit helpers ─────────────────────────────────────────────────────────────
+
+def _use_metric() -> bool:
+    return st.session_state.get("use_metric", True)
+
+
+def _spd_label() -> str:
+    return "km/h" if _use_metric() else "mph"
+
+
+def _dist_label() -> str:
+    return "km" if _use_metric() else "mi"
+
+
+def _elev_label() -> str:
+    return "m" if _use_metric() else "ft"
+
+
+def _convert_speed(kmh: float) -> float:
+    """Convert km/h to display unit."""
+    return kmh if _use_metric() else kmh * 0.621371
+
+
+def _convert_dist_m(meters: float) -> float:
+    """Convert metres to display unit (km or mi)."""
+    return meters / 1000 if _use_metric() else meters / 1609.34
+
+
+def _convert_elev_m(meters: float) -> float:
+    """Convert metres to display unit (m or ft)."""
+    return meters if _use_metric() else meters * 3.28084
+
+
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _gear_label(gear_id: str | None) -> str:

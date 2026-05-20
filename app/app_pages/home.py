@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import sys
+import traceback
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
 
@@ -35,32 +36,33 @@ from src.fetch import ingest_all, PremiumOnlyError, get_athlete_bikes
 # Static cache helpers (SQLite-backed)
 # ---------------------------------------------------------------------------
 
-def _load_from_db() -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str]] | None:
+def _load_from_db() -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float]] | None:
     init_db()
     segments = load_segments()
     efforts = load_efforts()
-    bikes = load_bikes()
+    bikes, bike_distances = load_bikes()
     if segments.empty and efforts.empty:
         return None
-    return efforts, segments, bikes
+    return efforts, segments, bikes, bike_distances
 
 
 def _save_to_db(
     efforts: pd.DataFrame,
     segments: pd.DataFrame,
     bikes: dict[str, str],
+    bike_distances: dict[str, float] | None = None,
 ) -> None:
     init_db()
     save_segments(segments)
     save_efforts(efforts)
-    save_bikes(bikes)
+    save_bikes(bikes, bike_distances or {})
 
 
 def _process_data(
     access_token: str,
     *,
     force_refresh: bool = False,
-) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str]]:
+) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float]]:
     if force_refresh:
         clear_efforts()
         clear_segments()
@@ -75,12 +77,13 @@ def _process_data(
         progress.progress(100, text="✅ Complete!")
 
         efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
-        _save_to_db(efforts, segments, bikes)
-        return efforts, segments, bikes
+        bike_distances: dict[str, float] = result.get("bike_distances", {})
+        _save_to_db(efforts, segments, bikes, bike_distances)
+        return efforts, segments, bikes, bike_distances
 
     cached = _load_from_db()
     if cached is not None:
-        efforts, segments, bikes = cached
+        efforts, segments, bikes, bike_distances = cached
         # If bikes table is empty, re-resolve names: try GET /athlete first,
         # then fall back to activity details using the cached efforts' activity_ids.
         if not bikes and access_token:
@@ -92,19 +95,20 @@ def _process_data(
                     .set_index("gear_id")["activity_id"]
                     .to_dict()
                 )
-                bikes = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity)
+                bikes, bike_distances = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity)
                 if bikes:
-                    save_bikes(bikes)
+                    save_bikes(bikes, bike_distances)
             except Exception:
                 pass
-        return efforts, segments, bikes
+        return efforts, segments, bikes, bike_distances
 
     with st.spinner("⏳ Fetching your Strava data for the first time…"):
         result = ingest_all(access_token)
 
     efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
-    _save_to_db(efforts, segments, bikes)
-    return efforts, segments, bikes
+    bike_distances = result.get("bike_distances", {})
+    _save_to_db(efforts, segments, bikes, bike_distances)
+    return efforts, segments, bikes, bike_distances
 
 
 def _query_param_value(value: object) -> str | None:
@@ -203,6 +207,7 @@ _BIKE_CARD_CSS = """
 
 
 def _render_bike_card(row: pd.Series) -> None:
+    use_metric = st.session_state.get("use_metric", True)
     name = str(row["bike_name"])
     parts = name.split(" ", 1)
     brand = parts[0].upper()
@@ -211,12 +216,24 @@ def _render_bike_card(row: pd.Series) -> None:
     watts_str = f"{int(row['avg_watts'])} W" if pd.notna(row["avg_watts"]) else "—"
     hr_str = f"{int(row['avg_heartrate'])} bpm" if pd.notna(row["avg_heartrate"]) else "—"
     hours = f"{row['total_moving_hours']:.1f} hrs"
+    dist = row.get("converted_distance")  # stored as miles from Strava odometer
+    if pd.notna(dist):
+        if use_metric:
+            dist_str = f"{dist * 1.60934:,.0f} km"
+        else:
+            dist_str = f"{dist:,.0f} mi"
+    else:
+        dist_str = "—"
 
     st.markdown(
         f"""
         <div class="bike-card">
           <div class="bc-brand">{brand}</div>
           <div class="bc-name">{model}</div>
+          <div class="bc-row">
+            <span class="bc-label">Total distance</span>
+            <span class="bc-val">{dist_str}</span>
+          </div>
           <div class="bc-row">
             <span class="bc-label">Efforts</span>
             <span class="bc-val">{int(row['total_efforts'])}</span>
@@ -239,7 +256,12 @@ def _render_bike_card(row: pd.Series) -> None:
     )
 
 
-def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame, bikes: dict[str, str]) -> None:
+def _render_bike_summaries(
+    efforts: pd.DataFrame,
+    segments: pd.DataFrame,
+    bikes: dict[str, str],
+    bike_distances: dict[str, float] | None = None,
+) -> None:
     st.subheader("Your bikes at a glance")
 
     agg_metrics = {
@@ -255,6 +277,11 @@ def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame, bikes:
     bike_stats["bike_name"] = bike_stats["gear_id"].map(lambda g: _gear_label(g, bikes))
     # Drop entries with no gear (efforts logged without a bike).
     bike_stats = bike_stats[bike_stats["bike_name"] != "Unknown"]
+    # Merge in total mileage from Strava odometer (converted_distance).
+    if bike_distances:
+        bike_stats["converted_distance"] = bike_stats["gear_id"].map(bike_distances)
+    else:
+        bike_stats["converted_distance"] = float("nan")
     bike_stats = bike_stats.sort_values("total_efforts", ascending=False)
 
     st.markdown(_BIKE_CARD_CSS, unsafe_allow_html=True)
@@ -298,7 +325,11 @@ def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame, bikes:
 
         seg_display = seg_display[display_cols].copy()
         if "distance" in seg_display.columns:
-            seg_display["distance"] = (seg_display["distance"] / 1000).round(2).astype(str) + " km"
+            use_metric = st.session_state.get("use_metric", True)
+            if use_metric:
+                seg_display["distance"] = (seg_display["distance"] / 1000).round(2).astype(str) + " km"
+            else:
+                seg_display["distance"] = (seg_display["distance"] / 1609.34).round(2).astype(str) + " mi"
         if "average_grade" in seg_display.columns:
             seg_display["average_grade"] = seg_display["average_grade"].round(1).astype(str) + "%"
         seg_display.columns = [c.replace("_", " ").title() for c in seg_display.columns]
@@ -311,10 +342,12 @@ def _save_session(
     bikes: dict[str, str],
     code: str | None,
     access_token: str,
+    bike_distances: dict[str, float] | None = None,
 ) -> None:
     st.session_state["efforts"] = data
     st.session_state["segments"] = segments
     st.session_state["bikes"] = bikes
+    st.session_state["bike_distances"] = bike_distances or {}
     st.session_state["access_token"] = access_token
     if code:
         st.session_state["last_processed_code"] = code
@@ -349,11 +382,13 @@ def main() -> None:
             result["bikes"],
             code=None,
             access_token="",
+            bike_distances=result.get("bike_distances", {}),
         )
         data = st.session_state.get("efforts")
         segments = st.session_state.get("segments", pd.DataFrame())
         bikes = st.session_state.get("bikes", {})
-        _render_bike_summaries(data, segments, bikes)
+        bike_distances = st.session_state.get("bike_distances", {})
+        _render_bike_summaries(data, segments, bikes, bike_distances)
         return
 
     # ── Live mode: OAuth → Strava API ─────────────────────────────────────────
@@ -395,14 +430,15 @@ def main() -> None:
                     st.error(f"Unable to exchange token: {exc}")
                     return
             try:
-                data, gear_frame, bikes = _process_data(access_token=access_token)
+                data, gear_frame, bikes, bike_distances = _process_data(access_token=access_token)
             except PremiumOnlyError as exc:
                 st.error(str(exc))
                 return
             except (requests.RequestException, ValueError) as exc:
+                traceback.print_exc(file=sys.stderr)
                 st.error(f"Unable to process data: {exc}")
                 return
-            _save_session(data, gear_frame, bikes, code, access_token)
+            _save_session(data, gear_frame, bikes, code, access_token, bike_distances)
             with status_col:
                 st.success("✅ Connected to Strava — data loaded!")
         else:
@@ -426,7 +462,7 @@ def main() -> None:
                 st.warning("Please authorize with Strava first.")
                 return
             try:
-                data, gear_frame, bikes = _process_data(
+                data, gear_frame, bikes, bike_distances = _process_data(
                     access_token=access_token,
                     force_refresh=True,
                 )
@@ -434,9 +470,10 @@ def main() -> None:
                 st.error(str(exc))
                 return
             except (requests.RequestException, ValueError) as exc:
+                traceback.print_exc(file=sys.stderr)
                 st.error(f"Unable to process data: {exc}")
                 return
-            _save_session(data, gear_frame, bikes, code, access_token)
+            _save_session(data, gear_frame, bikes, code, access_token, bike_distances)
             st.success("Activities reloaded.")
 
     data = st.session_state.get("efforts")
@@ -446,7 +483,8 @@ def main() -> None:
 
     segments = st.session_state.get("segments", pd.DataFrame())
     bikes = st.session_state.get("bikes", {})
-    _render_bike_summaries(data, segments, bikes)
+    bike_distances = st.session_state.get("bike_distances", {})
+    _render_bike_summaries(data, segments, bikes, bike_distances)
 
 
 main()

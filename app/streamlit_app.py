@@ -17,6 +17,14 @@ st.set_page_config(
     layout="wide",
 )
 
+with st.sidebar:
+    st.session_state.setdefault("use_metric", True)
+    st.session_state["use_metric"] = st.toggle(
+        "🌍 Metric units",
+        value=st.session_state["use_metric"],
+        help="Toggle between metric (km, m) and imperial (mi, ft).",
+    )
+
 pg = st.navigation(
     [
         st.Page("app_pages/home.py", title="Home", icon=":material/home:"),
