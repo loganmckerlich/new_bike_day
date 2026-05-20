@@ -369,7 +369,7 @@ def _render_cheeky_conclusion_form(athlete_name: str | None = None) -> None:
             ["Smooth and smug", "Questionable pacing", "Chaos, but fun"],
             index=0,
         )
-        takeaway = st.text_input("One-line recap", placeholder="What story are we telling today?")
+        takeaway = st.text_input("One-line recap", placeholder="What's your story today?")
         submitted = st.form_submit_button("Generate cheeky summary")
     if submitted:
         st.success(
