@@ -182,24 +182,6 @@ def main() -> None:
     terrain_effects = estimate_heterogeneous_effects(features)
     shap_importances = get_shap_importances(features)
 
-    st.subheader("Section 1 — Headline Result")
-    st.info("Weather note: weather inputs are currently dummy stub values and will improve when real weather data is integrated.")
-    st.metric(
-        f"Average treatment effect ({comparison_label} vs {baseline_label})",
-        f"{ate_kmh:.2f} km/h",
-        help=f"95% CI: {ate_low_kmh:.2f} to {ate_high_kmh:.2f}",
-    )
-    st.markdown(
-        _effect_text(
-            ate_kmh,
-            ate_low_kmh,
-            ate_high_kmh,
-            comparison_label,
-            baseline_label,
-        )
-    )
-    st.caption(f"Samples: treated={ate_result['n_treated']}, control={ate_result['n_control']}")
-
     with st.expander("How this works", expanded=False):
         st.markdown(
             f"### 1) Define the comparison\n"
@@ -210,7 +192,7 @@ def main() -> None:
         _sample_counts = (
             selected_efforts.assign(
                 bike_name=lambda d: d["gear_id"].astype(str).map(
-                    {str(old_gear_id): baseline_label, str(new_gear_id): comparison_label}
+                    {old_gear_id: baseline_label, new_gear_id: comparison_label}
                 )
             )
             .groupby("bike_name", as_index=False)["effort_id"]
@@ -258,6 +240,7 @@ def main() -> None:
         )
         _fig_overlap.update_layout(plot_bgcolor="rgba(0,0,0,0)")
         st.plotly_chart(_fig_overlap, width="stretch")
+        st.caption("Smoothed lines use LOWESS to show the average trend between power and speed-per-watt for each bike.")
 
         st.markdown("### 3) Estimate the adjusted effect")
         st.markdown(
@@ -302,6 +285,24 @@ def main() -> None:
             f"- Read this as: expected speed difference for **{comparison_label}** relative to **{baseline_label}** "
             "at similar effort and route conditions."
         )
+
+    st.subheader("Section 1 — Headline Result")
+    st.info("Weather note: weather inputs are currently dummy stub values and will improve when real weather data is integrated.")
+    st.metric(
+        f"Average treatment effect ({comparison_label} vs {baseline_label})",
+        f"{ate_kmh:.2f} km/h",
+        help=f"95% CI: {ate_low_kmh:.2f} to {ate_high_kmh:.2f}",
+    )
+    st.markdown(
+        _effect_text(
+            ate_kmh,
+            ate_low_kmh,
+            ate_high_kmh,
+            comparison_label,
+            baseline_label,
+        )
+    )
+    st.caption(f"Samples: treated={ate_result['n_treated']}, control={ate_result['n_control']}")
 
     if ate_low_kmh <= 0 <= ate_high_kmh:
         st.warning("Confidence interval crosses zero, so this estimate is directionally uncertain.")
