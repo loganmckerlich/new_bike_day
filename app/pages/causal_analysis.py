@@ -241,7 +241,7 @@ def main() -> None:
         _fig_overlap.update_layout(plot_bgcolor="rgba(0,0,0,0)")
         st.plotly_chart(_fig_overlap, width="stretch")
         st.caption(
-            "Smoothed lines use LOWESS (Locally Weighted Scatterplot Smoothing) "
+            "Smoothed lines use LOWESS (Locally Weighted Scatter Plot Smoothing) "
             "to show the average trend between power and speed-per-watt for each bike."
         )
 
