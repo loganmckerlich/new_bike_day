@@ -63,14 +63,13 @@ def _has_speed(df: pd.DataFrame) -> bool:
 def _compute_speed_kmh(df: pd.DataFrame, distance_m: float | None = None) -> pd.Series:
     """Compute speed (km/h) from moving_time and an optional fixed distance.
 
-    If ``distance_m`` is provided (e.g. the known segment distance) it is used
-    for every row.  Otherwise the per-row ``distance`` column is used.
+    If ``distance_m`` is provided and > 0 (e.g. the known segment distance) it
+    is used for every row.  Otherwise the per-row ``distance`` column is used.
     """
+    safe_time = df["moving_time"].replace(0, pd.NA)
     if distance_m is not None and distance_m > 0:
-        safe_time = df["moving_time"].replace(0, pd.NA)
         return (distance_m / safe_time * 3.6).where(safe_time.notna())
     dist = df.get("distance", pd.Series(dtype=float))
-    safe_time = df["moving_time"].replace(0, pd.NA)
     return (dist / safe_time * 3.6).where(safe_time.notna() & dist.notna())
 
 
@@ -92,7 +91,9 @@ seg_meta = segments[
 ]
 watt_efforts = watt_efforts.merge(seg_meta, on="segment_id", how="inner")
 
-# Compute speed in km/h from segment distance and moving time
+# Compute speed in km/h using the per-row segment distance from the join.
+# This is used later for the spider/star plot; tab comparisons recompute with
+# the exact segment distance for that subset.
 watt_efforts["speed_kmh"] = _compute_speed_kmh(watt_efforts)
 
 # ── Sidebar: analysis settings ────────────────────────────────────────────────
@@ -269,7 +270,7 @@ for tab, seg_id in zip(tabs, selected_segment_ids):
             continue
 
         # Compute speed if segment distance is known
-        seg_efforts["speed_kmh"] = _compute_speed_kmh(seg_efforts, distance_m=seg_distance_m if seg_distance_m > 0 else None)
+        seg_efforts["speed_kmh"] = _compute_speed_kmh(seg_efforts, distance_m=seg_distance_m)
 
         # ── Segment info metrics
         info_cols = st.columns(4)
