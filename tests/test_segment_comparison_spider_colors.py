@@ -26,7 +26,7 @@ def _load_rgba_helper():
 class SegmentComparisonSpiderColorTests(unittest.TestCase):
     def test_accepts_plotly_rgb_colors(self) -> None:
         rgba = _load_rgba_helper()
-        self.assertEqual(rgba("rgb(102,194,165)", 0.2), "rgba(102.0,194.0,165.0,0.2)")
+        self.assertEqual(rgba("rgb(102,194,165)", 0.2), "rgba(102,194,165,0.2)")
 
     def test_accepts_hex_colors(self) -> None:
         rgba = _load_rgba_helper()

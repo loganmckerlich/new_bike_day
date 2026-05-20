@@ -109,7 +109,7 @@ def _convert_elev_m(meters: float) -> float:
 
 def _rgba(color: str, alpha: float) -> str:
     if color.startswith("rgb"):
-        r, g, b = unlabel_rgb(color)
+        r, g, b = (int(v) for v in unlabel_rgb(color))
     else:
         r, g, b = hex_to_rgb(color)
     return f"rgba({r},{g},{b},{alpha})"
