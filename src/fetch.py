@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import json
 import time
+from pathlib import Path
 from typing import Any, Callable, Optional
 
 import pandas as pd
@@ -39,6 +41,89 @@ class PremiumOnlyError(Exception):
     """
 
 
+# ---------------------------------------------------------------------------
+# Dev-mode request interception
+# ---------------------------------------------------------------------------
+
+_DEV_DIR = Path(__file__).resolve().parents[1] / "data" / "dev"
+
+
+class _MockResponse:
+    """Minimal requests.Response stand-in returned by _DevSession."""
+
+    status_code: int = 200
+
+    def __init__(self, data: Any) -> None:
+        self._data = data
+
+    def json(self) -> Any:
+        return self._data
+
+    def raise_for_status(self) -> None:  # noqa: D401
+        pass
+
+
+class _DevSession:
+    """Intercepts every requests.get call and returns data from local JSON files.
+
+    URL routing (path relative to the Strava API base):
+      /athlete                 → bikes.json         (raw GET /athlete)
+      /athlete/activities      → activities.json     (raw GET /athlete/activities)
+      /segments/starred        → segments.json       (raw GET /segments/starred)
+      /segment_efforts         → efforts.json        (filtered by segment_id param)
+      /segments/{id}/streams   → streams.json[id]
+      /segments/{id}           → segment_detail.json[id]
+
+    All paginated endpoints return an empty list for page > 1, simulating a
+    single full page of results.
+    """
+
+    def get(
+        self,
+        url: str,
+        *,
+        params: Optional[dict[str, Any]] = None,
+        headers: Optional[dict[str, str]] = None,
+        timeout: Optional[int] = None,
+        **kwargs: Any,
+    ) -> _MockResponse:
+        params = params or {}
+        page = int(params.get("page", 1))
+
+        # Strip the base URL to get just the path component
+        path = url.replace("https://www.strava.com/api/v3", "")
+
+        if path == "/athlete":
+            data = json.loads((_DEV_DIR / "bikes.json").read_text())
+
+        elif path == "/athlete/activities":
+            data = [] if page > 1 else json.loads((_DEV_DIR / "activities.json").read_text())
+
+        elif path == "/segments/starred":
+            data = [] if page > 1 else json.loads((_DEV_DIR / "segments.json").read_text())
+
+        elif path == "/segment_efforts":
+            if page > 1:
+                data = []
+            else:
+                segment_id = int(params.get("segment_id", 0))
+                all_efforts = json.loads((_DEV_DIR / "efforts.json").read_text())
+                data = [e for e in all_efforts if e.get("segment", {}).get("id") == segment_id]
+
+        elif path.endswith("/streams"):
+            segment_id = path.split("/")[-2]
+            all_streams = json.loads((_DEV_DIR / "streams.json").read_text())
+            data = all_streams.get(segment_id, {})
+
+        else:
+            # /segments/{id}
+            segment_id = path.split("/")[-1]
+            all_detail = json.loads((_DEV_DIR / "segment_detail.json").read_text())
+            data = all_detail.get(segment_id, {})
+
+        return _MockResponse(data)
+
+
 # Segment classification thresholds
 _SPRINT_MAX_DISTANCE: float = 500.0   # metres
 _ASCENT_MIN_GRADE: float = 2.0        # percent
@@ -72,7 +157,7 @@ def _classify_segment(distance: Optional[float], average_grade: Optional[float])
     return "flat"
 
 
-def get_starred_segments(access_token: str) -> pd.DataFrame:
+def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.DataFrame:
     """Fetch all starred segments for the authenticated athlete.
 
     Paginates through ``GET /segments/starred`` until the API returns an
@@ -98,7 +183,7 @@ def get_starred_segments(access_token: str) -> pd.DataFrame:
 
     while True:
         try:
-            resp = requests.get(
+            resp = _http.get(
                 url,
                 headers=headers,
                 params={"page": page, "per_page": per_page},
@@ -144,7 +229,7 @@ def get_starred_segments(access_token: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
+def get_segment_efforts(access_token: str, segment_id: int, *, _http: Any = requests) -> pd.DataFrame:
     """Fetch all efforts recorded on a single segment.
 
     Paginates through ``GET /segment_efforts`` until the API returns an
@@ -173,7 +258,7 @@ def get_segment_efforts(access_token: str, segment_id: int) -> pd.DataFrame:
 
     while True:
         try:
-            resp = requests.get(
+            resp = _http.get(
                 url,
                 headers=headers,
                 params={"segment_id": segment_id, "page": page, "per_page": per_page},
@@ -243,7 +328,7 @@ def _decode_polyline(encoded: str) -> list[tuple[float, float]]:
     return points
 
 
-def get_segment_detail(access_token: str, segment_id: int) -> dict[str, Any]:
+def get_segment_detail(access_token: str, segment_id: int, *, _http: Any = requests) -> dict[str, Any]:
     """Fetch detailed information for a single segment, including its route polyline.
 
     Calls ``GET /segments/{segment_id}`` to retrieve the full segment data
@@ -267,7 +352,7 @@ def get_segment_detail(access_token: str, segment_id: int) -> dict[str, Any]:
     url = f"{_STRAVA_API_BASE}/segments/{segment_id}"
     headers = _auth_headers(access_token)
     try:
-        resp = requests.get(url, headers=headers, timeout=30)
+        resp = _http.get(url, headers=headers, timeout=30)
         resp.raise_for_status()
     except requests.RequestException:
         return {}
@@ -285,7 +370,7 @@ def get_segment_detail(access_token: str, segment_id: int) -> dict[str, Any]:
     }
 
 
-def get_segment_streams(access_token: str, segment_id: int) -> dict[str, list[float]]:
+def get_segment_streams(access_token: str, segment_id: int, *, _http: Any = requests) -> dict[str, list[float]]:
     """Fetch distance and altitude streams for a segment.
 
     Calls ``GET /segments/{segment_id}/streams`` with keys ``distance`` and
@@ -304,7 +389,7 @@ def get_segment_streams(access_token: str, segment_id: int) -> dict[str, list[fl
     url = f"{_STRAVA_API_BASE}/segments/{segment_id}/streams"
     headers = _auth_headers(access_token)
     try:
-        resp = requests.get(
+        resp = _http.get(
             url,
             headers=headers,
             params={"keys": "distance,altitude", "key_by_type": "true"},
@@ -327,6 +412,8 @@ def get_segment_streams(access_token: str, segment_id: int) -> dict[str, list[fl
 def get_athlete_activities(
     access_token: str,
     max_activities: Optional[int] = None,
+    *,
+    _http: Any = requests,
 ) -> dict[int, dict[str, Any]]:
     """Fetch bike activities that have power data for the authenticated athlete.
 
@@ -361,7 +448,7 @@ def get_athlete_activities(
                 break
             batch_size = min(per_page, remaining)
 
-        resp = requests.get(
+        resp = _http.get(
             url,
             headers=headers,
             params={"page": page, "per_page": batch_size},
@@ -404,7 +491,7 @@ def get_athlete_activities(
     return activities
 
 
-def get_athlete_bikes(access_token: str) -> dict[str, str]:
+def get_athlete_bikes(access_token: str, *, _http: Any = requests) -> dict[str, str]:
     """Fetch the authenticated athlete's bikes and return a gear_id → name mapping.
 
     Args:
@@ -417,7 +504,7 @@ def get_athlete_bikes(access_token: str) -> dict[str, str]:
     url = f"{_STRAVA_API_BASE}/athlete"
     headers = _auth_headers(access_token)
     try:
-        resp = requests.get(url, headers=headers, timeout=30)
+        resp = _http.get(url, headers=headers, timeout=30)
         resp.raise_for_status()
     except requests.RequestException:
         return {}
@@ -435,6 +522,8 @@ def ingest_all(
     access_token: str,
     max_activities: Optional[int] = None,
     progress_callback: Optional[Callable[[str, int], None]] = None,
+    *,
+    dev: bool = False,
 ) -> dict[str, pd.DataFrame | dict[str, str]]:
     """Ingest all data needed to compare segment efforts by bike.
 
@@ -463,21 +552,23 @@ def ingest_all(
           ``gear_id`` column resolved from the power-filtered activities.
     """
 
+    _http: Any = _DevSession() if dev else requests
+
     def _progress(msg: str, pct: int) -> None:
         if progress_callback is not None:
             progress_callback(msg, pct)
 
     # Step 1: bike inventory
     _progress("🚴 GET /athlete — fetching your bike inventory…", 5)
-    bikes = get_athlete_bikes(access_token)
+    bikes = get_athlete_bikes(access_token, _http=_http)
 
     # Step 2: cycling activities with power — build activity_id → gear_id map
     _progress("📋 GET /athlete/activities — fetching cycling activities with power data…", 15)
-    activities = get_athlete_activities(access_token, max_activities=max_activities)
+    activities = get_athlete_activities(access_token, max_activities=max_activities, _http=_http)
 
     # Step 3: starred segments
     _progress("⭐ GET /segments/starred — fetching your starred segments…", 38)
-    segments_df = get_starred_segments(access_token)
+    segments_df = get_starred_segments(access_token, _http=_http)
 
     # Step 4: segment efforts for each starred segment
     all_efforts: list[pd.DataFrame] = []
@@ -491,10 +582,11 @@ def ingest_all(
                 f"💪 GET /segment_efforts — '{seg_name}' ({i + 1} of {n_segments})…",
                 pct,
             )
-            efforts_df = get_segment_efforts(access_token, int(segment_id))
+            efforts_df = get_segment_efforts(access_token, int(segment_id), _http=_http)
             if not efforts_df.empty:
                 all_efforts.append(efforts_df)
-            time.sleep(1)
+            if not dev:
+                time.sleep(1)
 
     _progress("🔗 Joining effort data with activity info…", 93)
     efforts = pd.concat(all_efforts, ignore_index=True) if all_efforts else pd.DataFrame()

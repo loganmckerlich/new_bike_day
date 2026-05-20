@@ -30,7 +30,7 @@ from src.database import (
     save_efforts,
     save_segments,
 )
-from src.dev_data import load_dev_data
+from src.fetch import ingest_all
 from src.fetch import ingest_all, PremiumOnlyError
 
 
@@ -310,7 +310,7 @@ def main() -> None:
     # Dev mode: load static JSON and skip all OAuth / API logic
     # ---------------------------------------------------------------------------
     if dev_mode:
-        result = load_dev_data()
+        result = ingest_all(access_token="", dev=True)
         _save_session(
             result["efforts"],
             result["segments"],

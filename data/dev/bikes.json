@@ -1,4 +1,31 @@
 {
-  "b111111": "Trek Domane SL5",
-  "b222222": "Canyon Grail CF SLX"
+  "id": 1234567890,
+  "username": "cyclist_dev",
+  "resource_state": 3,
+  "firstname": "Dev",
+  "lastname": "User",
+  "city": "London",
+  "state": "England",
+  "country": "United Kingdom",
+  "sex": "M",
+  "premium": true,
+  "created_at": "2020-01-01T00:00:00Z",
+  "updated_at": "2024-01-01T00:00:00Z",
+  "bikes": [
+    {
+      "id": "b111111",
+      "primary": true,
+      "name": "Trek Domane SL5",
+      "resource_state": 2,
+      "distance": 15432100
+    },
+    {
+      "id": "b222222",
+      "primary": false,
+      "name": "Canyon Grail CF SLX",
+      "resource_state": 2,
+      "distance": 8765400
+    }
+  ],
+  "shoes": []
 }

@@ -172,5 +172,67 @@ class IngestAllGearResolutionTests(unittest.TestCase):
         self.assertIsNone(efforts_df.iloc[0]["gear_id"])
 
 
+class IngestAllDevModeTests(unittest.TestCase):
+    """Integration tests for ingest_all(dev=True) — no mocking, reads real JSON fixtures."""
+
+    def setUp(self) -> None:
+        self.result = ingest_all(access_token="", dev=True)
+
+    # --- bikes ---
+
+    def test_bikes_is_dict(self) -> None:
+        self.assertIsInstance(self.result["bikes"], dict)
+
+    def test_bikes_contains_expected_gear_ids(self) -> None:
+        bikes = self.result["bikes"]
+        self.assertIn("b111111", bikes)
+        self.assertIn("b222222", bikes)
+        self.assertEqual(bikes["b111111"], "Trek Domane SL5")
+        self.assertEqual(bikes["b222222"], "Canyon Grail CF SLX")
+
+    # --- segments ---
+
+    def test_segments_is_dataframe(self) -> None:
+        self.assertIsInstance(self.result["segments"], pd.DataFrame)
+
+    def test_segments_has_expected_columns(self) -> None:
+        expected = {"segment_id", "name", "distance", "average_grade", "climb_category",
+                    "total_elevation_gain", "start_lat", "start_lng", "segment_type"}
+        self.assertTrue(expected.issubset(set(self.result["segments"].columns)))
+
+    def test_segments_row_count(self) -> None:
+        self.assertEqual(len(self.result["segments"]), 3)
+
+    def test_segment_classification(self) -> None:
+        segs = self.result["segments"].set_index("name")
+        self.assertEqual(segs.loc["Box Hill", "segment_type"], "ascent")
+        self.assertEqual(segs.loc["Town Sprint", "segment_type"], "sprint")
+        self.assertEqual(segs.loc["River Road Flat", "segment_type"], "flat")
+
+    # --- efforts ---
+
+    def test_efforts_is_dataframe(self) -> None:
+        self.assertIsInstance(self.result["efforts"], pd.DataFrame)
+
+    def test_efforts_has_gear_id_column(self) -> None:
+        self.assertIn("gear_id", self.result["efforts"].columns)
+
+    def test_efforts_row_count(self) -> None:
+        self.assertEqual(len(self.result["efforts"]), 7)
+
+    def test_gear_id_resolved_from_activities(self) -> None:
+        efforts = self.result["efforts"]
+        # activity 300001/300003/300005 → b111111; 300008 → b222222
+        b1_efforts = efforts[efforts["gear_id"] == "b111111"]
+        b2_efforts = efforts[efforts["gear_id"] == "b222222"]
+        self.assertEqual(len(b1_efforts), 4)
+        self.assertEqual(len(b2_efforts), 3)
+
+    def test_efforts_no_raw_api_keys(self) -> None:
+        """Ensure parsed column names (not raw API keys like 'id') are used."""
+        self.assertIn("effort_id", self.result["efforts"].columns)
+        self.assertNotIn("id", self.result["efforts"].columns)
+
+
 if __name__ == "__main__":
     unittest.main()
