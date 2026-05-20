@@ -6,7 +6,7 @@ import unittest
 
 import pandas as pd
 
-from src.causal_inference import build_feature_matrix
+from src.causal_inference import build_feature_matrix, remove_outliers_for_causal_analysis
 
 
 class BuildFeatureMatrixTests(unittest.TestCase):
@@ -45,6 +45,31 @@ class BuildFeatureMatrixTests(unittest.TestCase):
         self.assertIn("temp_c", out.columns)
         self.assertIn("segment_type_ascent", out.columns)
         self.assertEqual(int(out.iloc[0]["is_new_bike"]), 0)
+
+    def test_remove_outliers_filters_by_speed_per_watt_zscore(self) -> None:
+        efforts = pd.DataFrame(
+            {
+                "effort_id": [1, 2, 3, 4, 5],
+                "segment_id": [10, 10, 10, 10, 10],
+                "bike_name": ["Bike A"] * 5,
+                "speed_kmh": [30.0, 31.0, 29.0, 30.0, 60.0],
+                "average_watts": [200.0, 200.0, 200.0, 200.0, 200.0],
+                "is_new_bike": [0, 0, 0, 0, 0],
+            }
+        )
+
+        cleaned, n_outliers = remove_outliers_for_causal_analysis(efforts, z_threshold=1.5)
+
+        self.assertEqual(n_outliers, 1)
+        self.assertEqual(len(cleaned), 4)
+        self.assertNotIn("is_outlier", cleaned.columns)
+        self.assertNotIn("z_score", cleaned.columns)
+
+    def test_remove_outliers_returns_input_when_columns_missing(self) -> None:
+        efforts = pd.DataFrame({"segment_id": [1], "average_watts": [200.0]})
+        cleaned, n_outliers = remove_outliers_for_causal_analysis(efforts)
+        self.assertEqual(n_outliers, 0)
+        pd.testing.assert_frame_equal(cleaned, efforts)
 
 
 if __name__ == "__main__":

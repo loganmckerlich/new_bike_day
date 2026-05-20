@@ -19,7 +19,10 @@ from src.causal_inference import (
     estimate_heterogeneous_effects,
     estimate_treatment_effect,
     get_shap_importances,
+    remove_outliers_for_causal_analysis,
 )
+
+_CAUSAL_OUTLIER_Z_THRESHOLD = 2.0
 
 
 def _gear_label(gear_id: str, bikes: dict[str, str]) -> str:
@@ -157,13 +160,27 @@ def main() -> None:
 
     baseline_label = _gear_label(old_gear_id, bikes)
     comparison_label = _gear_label(new_gear_id, bikes)
-    selected_efforts = _selection_frame(efforts, old_gear_id, new_gear_id)
-    n_treated_raw = int(selected_efforts["is_new_bike"].sum())
-    n_control_raw = int((selected_efforts["is_new_bike"] == 0).sum())
-    if n_treated_raw < 30 or n_control_raw < 30:
+    selected_efforts_raw = _selection_frame(efforts, old_gear_id, new_gear_id)
+    selected_efforts_raw = selected_efforts_raw.copy()
+    selected_efforts_raw["bike_name"] = (
+        selected_efforts_raw["gear_id"]
+        .astype(str)
+        .map({str(old_gear_id): baseline_label, str(new_gear_id): comparison_label})
+        .fillna("Unknown")
+    )
+    n_treated_raw = int(selected_efforts_raw["is_new_bike"].sum())
+    n_control_raw = int((selected_efforts_raw["is_new_bike"] == 0).sum())
+    selected_efforts, n_outliers = remove_outliers_for_causal_analysis(
+        selected_efforts_raw,
+        z_threshold=_CAUSAL_OUTLIER_Z_THRESHOLD,
+    )
+    n_treated_clean = int(selected_efforts["is_new_bike"].sum())
+    n_control_clean = int((selected_efforts["is_new_bike"] == 0).sum())
+    if n_treated_clean < 30 or n_control_clean < 30:
         st.warning(
-            "Guardrail: at least 30 efforts are required for each bike before running the model "
-            f"({comparison_label}={n_treated_raw}, {baseline_label}={n_control_raw})."
+            "Guardrail: at least 30 non-outlier efforts are required for each bike before running the model "
+            f"({comparison_label}={n_treated_clean}, {baseline_label}={n_control_clean}; "
+            f"outliers removed={n_outliers}, z-threshold={_CAUSAL_OUTLIER_Z_THRESHOLD:.1f})."
         )
         st.stop()
 
@@ -220,7 +237,17 @@ def main() -> None:
         _fig_counts.update_layout(showlegend=False, yaxis_title="Efforts", xaxis_title="")
         st.plotly_chart(_fig_counts, width="stretch")
 
-        st.markdown("### 2) Build an apples-to-apples feature matrix")
+        st.markdown("### 2) Remove outlier efforts")
+        st.markdown(
+            "Using the same method as **Segment comparison**, we compute speed per watt for each effort "
+            "and remove efforts beyond ±2 standard deviations from that bike's segment-level mean."
+        )
+        st.caption(
+            f"Raw efforts: {len(selected_efforts_raw)} • Removed outliers: {n_outliers} • "
+            f"Remaining: {len(selected_efforts)}"
+        )
+
+        st.markdown("### 3) Build an apples-to-apples feature matrix")
         st.markdown(
             "Each row keeps the measured output (**speed per watt**) plus confounders "
             "(weather, road geometry, gradient, terrain) so we compare similar conditions."
@@ -254,7 +281,7 @@ def main() -> None:
             "to show the average trend between power and speed-per-watt for each bike."
         )
 
-        st.markdown("### 3) Estimate the adjusted effect")
+        st.markdown("### 4) Estimate the adjusted effect")
         st.markdown(
             "The doubly robust learner combines a treatment model and an outcome model. "
             "If either model is well specified, the estimate remains consistent."
@@ -291,7 +318,7 @@ def main() -> None:
         )
         st.plotly_chart(_fig_ci, width="stretch")
         st.markdown(
-            f"### 4) Interpret the result\n"
+            f"### 5) Interpret the result\n"
             f"- Point estimate: **{ate_kmh:.2f} km/h**\n"
             f"- 95% interval: **[{ate_low_kmh:.2f}, {ate_high_kmh:.2f}] km/h**\n"
             f"- Read this as: expected speed difference for **{comparison_label}** relative to **{baseline_label}** "
@@ -314,7 +341,10 @@ def main() -> None:
             baseline_label,
         )
     )
-    st.caption(f"Samples: treated={ate_result['n_treated']}, control={ate_result['n_control']}")
+    st.caption(
+        f"Model samples: treated={ate_result['n_treated']}, control={ate_result['n_control']} "
+        f"(after removing {n_outliers} outlier effort(s), z-threshold={_CAUSAL_OUTLIER_Z_THRESHOLD:.1f})."
+    )
 
     if ate_low_kmh <= 0 <= ate_high_kmh:
         st.warning("Confidence interval crosses zero, so this estimate is directionally uncertain.")
