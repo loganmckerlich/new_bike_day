@@ -16,7 +16,7 @@ AUTHORIZE_URL: Final[str] = "https://www.strava.com/oauth/authorize"
 def get_authorization_url(
     client_id: str,
     redirect_uri: str,
-    scope: str = "read,activity:read_all",
+    scope: str = "read,activity:read_all,profile:read_all",
 ) -> str:
     """Build the Strava OAuth authorization URL for SSO."""
     params = {

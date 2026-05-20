@@ -46,6 +46,47 @@ class PremiumOnlyError(Exception):
 # ---------------------------------------------------------------------------
 
 _DEV_DIR = Path(__file__).resolve().parents[1] / "data" / "dev"
+_REAL_DIR = Path(__file__).resolve().parents[1] / "data" / "real"
+
+
+def _response_filename(url: str, params: dict[str, Any]) -> Path:
+    """Derive a ``data/real/<name>.json`` path from a Strava API URL + params."""
+    path = url.replace(_STRAVA_API_BASE, "").strip("/")
+    # Replace path separators with underscores: segments/123/streams → segments_123_streams
+    name = path.replace("/", "_")
+    # Append meaningful query-param suffixes so per-segment files don't collide.
+    for key in ("segment_id",):
+        if key in params:
+            name = f"{name}_{params[key]}"
+    if params.get("page", 1) != 1:
+        name = f"{name}_p{params['page']}"
+    return _REAL_DIR / f"{name}.json"
+
+
+class _LoggingSession:
+    """Thin wrapper around ``requests`` that persists each API response to disk.
+
+    Responses are written to ``data/real/<endpoint>.json``, overwriting the
+    previous call so only the most recent response is kept.
+    """
+
+    def get(
+        self,
+        url: str,
+        *,
+        params: Optional[dict[str, Any]] = None,
+        headers: Optional[dict[str, str]] = None,
+        timeout: Optional[int] = None,
+        **kwargs: Any,
+    ) -> requests.Response:
+        resp = requests.get(url, params=params, headers=headers, timeout=timeout, **kwargs)
+        try:
+            _REAL_DIR.mkdir(parents=True, exist_ok=True)
+            dest = _response_filename(url, params or {})
+            dest.write_text(json.dumps(resp.json(), indent=2), encoding="utf-8")
+        except Exception as exc:
+            print(f"[_LoggingSession] WARNING: could not save {url} → {exc}")
+        return resp
 
 
 class _MockResponse:
@@ -491,31 +532,70 @@ def get_athlete_activities(
     return activities
 
 
-def get_athlete_bikes(access_token: str, *, _http: Any = requests) -> dict[str, str]:
-    """Fetch the authenticated athlete's bikes and return a gear_id → name mapping.
+def get_athlete_bikes(
+    access_token: str,
+    *,
+    gear_to_activity: Optional[dict[str, int]] = None,
+    _http: Any = None,
+) -> dict[str, str]:
+    """Resolve gear_id → bike name using two strategies in order.
+
+    **Strategy 1** — ``GET /athlete``: returns the full bike list when the token
+    has ``profile:read_all`` scope.  One API call, fast.
+
+    **Strategy 2** — ``GET /activities/{id}`` per unique gear_id: reads
+    ``DetailedActivity.gear.name``, which is available with ``activity:read_all``
+    scope only.  Pass ``gear_to_activity`` (a mapping of ``gear_id →
+    activity_id``) to enable this fallback; if omitted, strategy 2 is skipped.
 
     Args:
         access_token: Valid Strava OAuth access token.
+        gear_to_activity: Optional ``{gear_id: activity_id}`` mapping used as
+            a fallback when ``/athlete`` returns no bikes.  Build this from
+            the activities dict or from cached efforts.
+        _http: HTTP session override (defaults to :class:`_LoggingSession`).
 
     Returns:
-        Dict mapping gear_id (e.g. ``"b1234567"``) to a human-readable name
-        (e.g. ``"Trek Domane SL5"``).  Returns an empty dict on error.
+        Dict mapping gear_id (e.g. ``"b1234567"``) to a human-readable name.
+        Returns an empty dict if both strategies fail or produce no results.
     """
-    url = f"{_STRAVA_API_BASE}/athlete"
+    if _http is None:
+        _http = _LoggingSession()
     headers = _auth_headers(access_token)
-    try:
-        resp = _http.get(url, headers=headers, timeout=30)
-        resp.raise_for_status()
-    except requests.RequestException:
-        return {}
 
-    data = resp.json()
-    bikes: list[dict[str, Any]] = data.get("bikes") or []
-    return {
-        str(bike["id"]): bike.get("name") or bike.get("model_name") or str(bike["id"])
-        for bike in bikes
-        if bike.get("id")
-    }
+    # Strategy 1: GET /athlete
+    try:
+        resp = _http.get(f"{_STRAVA_API_BASE}/athlete", headers=headers, timeout=30)
+        resp.raise_for_status()
+        bikes_list: list[dict[str, Any]] = resp.json().get("bikes") or []
+        bikes = {
+            str(b["id"]): b.get("name") or b.get("model_name") or str(b["id"])
+            for b in bikes_list
+            if b.get("id")
+        }
+        if bikes:
+            return bikes
+    except requests.RequestException:
+        pass
+
+    # Strategy 2: one GET /activities/{id} per unique gear_id
+    if not gear_to_activity:
+        return {}
+    result: dict[str, str] = {}
+    for gear_id, activity_id in gear_to_activity.items():
+        try:
+            resp = _http.get(
+                f"{_STRAVA_API_BASE}/activities/{activity_id}",
+                headers=headers,
+                timeout=30,
+            )
+            resp.raise_for_status()
+            gear = resp.json().get("gear") or {}
+            name = gear.get("name") or gear.get("model_name") or str(gear_id)
+            result[str(gear_id)] = name
+        except requests.RequestException:
+            pass
+    return result
 
 
 def ingest_all(
@@ -552,22 +632,27 @@ def ingest_all(
           ``gear_id`` column resolved from the power-filtered activities.
     """
 
-    _http: Any = _DevSession() if dev else requests
+    _http: Any = _DevSession() if dev else _LoggingSession()
 
     def _progress(msg: str, pct: int) -> None:
         if progress_callback is not None:
             progress_callback(msg, pct)
 
-    # Step 1: bike inventory
-    _progress("🚴 GET /athlete — fetching your bike inventory…", 5)
-    bikes = get_athlete_bikes(access_token, _http=_http)
-
-    # Step 2: cycling activities with power — build activity_id → gear_id map
-    _progress("📋 GET /athlete/activities — fetching cycling activities with power data…", 15)
+    # Step 1: cycling activities with power — build activity_id → gear_id map
+    _progress("📋 GET /athlete/activities — fetching cycling activities with power data…", 10)
     activities = get_athlete_activities(access_token, max_activities=max_activities, _http=_http)
 
+    # Step 2: resolve bike names — tries GET /athlete, falls back to activity details
+    _progress("🚴 Resolving bike names…", 22)
+    gear_to_activity: dict[str, int] = {}
+    for act_id, act_data in activities.items():
+        gid = act_data.get("gear_id")
+        if gid and gid not in gear_to_activity:
+            gear_to_activity[gid] = act_id
+    bikes = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity, _http=_http)
+
     # Step 3: starred segments
-    _progress("⭐ GET /segments/starred — fetching your starred segments…", 38)
+    _progress("⭐ GET /segments/starred — fetching your starred segments…", 35)
     segments_df = get_starred_segments(access_token, _http=_http)
 
     # Step 4: segment efforts for each starred segment
