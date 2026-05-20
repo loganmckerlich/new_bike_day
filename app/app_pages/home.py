@@ -407,8 +407,8 @@ def main() -> None:
     auth_col, status_col = st.columns([2, 3])
     with auth_col:
         auth_url = get_authorization_url(client_id=env_client_id, redirect_uri=default_redirect_uri)
-        # st.link_button("🔗 Sign in with Strava", auth_url, width="stretch")
-        link_button_no_tab("🔗 Sign in with Strava", auth_url)
+        st.link_button("🔗 Sign in with Strava", auth_url, width="stretch")
+        # link_button_no_tab("🔗 Sign in with Strava", auth_url)
 
     code_from_params = st.query_params.get("code")
     error_from_params = st.query_params.get("error")
