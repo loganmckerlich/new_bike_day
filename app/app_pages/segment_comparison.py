@@ -479,7 +479,7 @@ eff_profile = power_normalized_profile(
 
 fig_efficiency = go.Figure()
 for idx, b in enumerate(bikes_to_compare):
-    vals = eff_profile[b]
+    vals = [_convert_speed(v) for v in eff_profile[b]]
     vals_closed = vals + [vals[0]]
     color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
     fig_efficiency.add_trace(
@@ -490,7 +490,7 @@ for idx, b in enumerate(bikes_to_compare):
             name=b,
             line={"color": color, "width": _SPIDER_POLYGON_LINE_WIDTH},
             fillcolor=_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
-            hovertemplate="%{theta}: %{r:.4f} km/h/W<extra>" + b + "</extra>",
+            hovertemplate="%{theta}: %{r:.4f} " + _spd + "/W<extra>" + b + "</extra>",
             showlegend=False,
         )
     )
