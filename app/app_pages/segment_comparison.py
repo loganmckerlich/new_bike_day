@@ -71,6 +71,8 @@ TYPE_DETAIL_LABELS: dict[str, str] = {
     "descent_steep": "Descent • Steep",
 }
 _COLOR_SEQ: list[str] = px.colors.qualitative.Set2
+_SPIDER_POLYGON_LINE_WIDTH: int = 3
+_SPIDER_POLYGON_FILL_ALPHA: float = 0.20
 
 # ── Unit helpers ─────────────────────────────────────────────────────────────
 
@@ -453,8 +455,8 @@ for idx, b in enumerate(bikes_to_compare):
             theta=categories_closed,
             fill="toself",
             name=b,
-            line={"color": color, "width": 3},
-            fillcolor=_rgba(color, 0.20),
+            line={"color": color, "width": _SPIDER_POLYGON_LINE_WIDTH},
+            fillcolor=_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
             hovertemplate="%{theta}: %{r:.1f} " + _spd + "<extra>" + b + "</extra>",
         )
     )
@@ -486,8 +488,8 @@ for idx, b in enumerate(bikes_to_compare):
             theta=categories_closed,
             fill="toself",
             name=b,
-            line={"color": color, "width": 3},
-            fillcolor=_rgba(color, 0.20),
+            line={"color": color, "width": _SPIDER_POLYGON_LINE_WIDTH},
+            fillcolor=_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
             hovertemplate="%{theta}: %{r:.4f} km/h/W<extra>" + b + "</extra>",
             showlegend=False,
         )
