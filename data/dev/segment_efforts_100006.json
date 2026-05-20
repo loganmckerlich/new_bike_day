@@ -196,5 +196,71 @@
     "pr_rank": null,
     "achievements": [],
     "hidden": false
+  },
+  {
+    "id": 230011,
+    "resource_state": 2,
+    "name": "Station Ramp Blast",
+    "activity": {
+      "id": 320004,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 48,
+    "moving_time": 47,
+    "start_date": "2024-05-25T07:47:00Z",
+    "start_date_local": "2024-05-25T08:47:00Z",
+    "distance": 340.0,
+    "start_index": 210,
+    "end_index": 308,
+    "average_cadence": 81.8,
+    "device_watts": true,
+    "average_watts": 439.0,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100006,
+      "resource_state": 2,
+      "name": "Station Ramp Blast"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230012,
+    "resource_state": 2,
+    "name": "Station Ramp Blast",
+    "activity": {
+      "id": 320008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 47,
+    "moving_time": 46,
+    "start_date": "2024-08-10T08:22:00Z",
+    "start_date_local": "2024-08-10T09:22:00Z",
+    "distance": 340.0,
+    "start_index": 260,
+    "end_index": 367,
+    "average_cadence": 80.1,
+    "device_watts": true,
+    "average_watts": 429.5,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100006,
+      "resource_state": 2,
+      "name": "Station Ramp Blast"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
   }
 ]

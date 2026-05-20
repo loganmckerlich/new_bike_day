@@ -196,5 +196,71 @@
     "pr_rank": null,
     "achievements": [],
     "hidden": false
+  },
+  {
+    "id": 230017,
+    "resource_state": 2,
+    "name": "Valley Launch Sprint",
+    "activity": {
+      "id": 320005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 30,
+    "start_date": "2024-06-15T07:23:00Z",
+    "start_date_local": "2024-06-15T08:23:00Z",
+    "distance": 390.0,
+    "start_index": 240,
+    "end_index": 321,
+    "average_cadence": 84.6,
+    "device_watts": true,
+    "average_watts": 392.5,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100009,
+      "resource_state": 2,
+      "name": "Valley Launch Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230018,
+    "resource_state": 2,
+    "name": "Valley Launch Sprint",
+    "activity": {
+      "id": 320010,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 31,
+    "moving_time": 30,
+    "start_date": "2024-10-05T07:28:00Z",
+    "start_date_local": "2024-10-05T08:28:00Z",
+    "distance": 390.0,
+    "start_index": 290,
+    "end_index": 381,
+    "average_cadence": 82.8,
+    "device_watts": true,
+    "average_watts": 384.0,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100009,
+      "resource_state": 2,
+      "name": "Valley Launch Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
   }
 ]

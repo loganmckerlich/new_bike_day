@@ -196,5 +196,71 @@
     "pr_rank": null,
     "achievements": [],
     "hidden": false
+  },
+  {
+    "id": 230035,
+    "resource_state": 2,
+    "name": "Switchback Sufferfest",
+    "activity": {
+      "id": 320004,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 443,
+    "moving_time": 442,
+    "start_date": "2024-05-25T08:11:00Z",
+    "start_date_local": "2024-05-25T09:11:00Z",
+    "distance": 1450.0,
+    "start_index": 330,
+    "end_index": 823,
+    "average_cadence": 65.1,
+    "device_watts": true,
+    "average_watts": 308.8,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100018,
+      "resource_state": 2,
+      "name": "Switchback Sufferfest"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230036,
+    "resource_state": 2,
+    "name": "Switchback Sufferfest",
+    "activity": {
+      "id": 320009,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 435,
+    "moving_time": 434,
+    "start_date": "2024-09-07T08:46:00Z",
+    "start_date_local": "2024-09-07T09:46:00Z",
+    "distance": 1450.0,
+    "start_index": 380,
+    "end_index": 875,
+    "average_cadence": 63.7,
+    "device_watts": true,
+    "average_watts": 302.1,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100018,
+      "resource_state": 2,
+      "name": "Switchback Sufferfest"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
   }
 ]
