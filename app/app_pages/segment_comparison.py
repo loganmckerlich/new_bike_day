@@ -361,7 +361,7 @@ with st.sidebar:
     )
 
     spider_use_subcategories = st.toggle(
-        "Spider plot subcategories",
+        "Use subcategories in spider charts",
         value=False,
         help="Show spider charts by segment subcategory instead of parent category.",
     )

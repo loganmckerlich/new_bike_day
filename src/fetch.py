@@ -166,7 +166,7 @@ class _DevSession:
 
 
 # Segment classification thresholds
-# Sprint threshold updated to 400 m to match spider-plot category spec.
+# Sprint threshold updated to 400 m to match spider chart category spec.
 _SPRINT_MAX_DISTANCE: float = 400.0   # metres
 _FLAT_MIN_GRADE: float = -0.5         # percent
 _FLAT_MAX_GRADE: float = 0.5          # percent
