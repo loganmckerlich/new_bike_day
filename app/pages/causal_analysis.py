@@ -172,6 +172,15 @@ def main() -> None:
         st.warning("No valid rows after filtering (requires average_watts >= 50 and complete joins).")
         st.stop()
 
+    if "gear_id" in features.columns:
+        features = features.copy()
+        features["bike_name"] = (
+            features["gear_id"]
+            .astype(str)
+            .map({str(old_gear_id): baseline_label, str(new_gear_id): comparison_label})
+            .fillna("Unknown")
+        )
+
     ate_result = estimate_treatment_effect(features)
     mean_watts = float(features["average_watts"].mean())
     if pd.isna(mean_watts) or mean_watts <= 0:
