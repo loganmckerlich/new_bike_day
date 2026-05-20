@@ -99,6 +99,7 @@ def power_normalized_profile(
     bikes: Sequence[str],
     segment_types: Sequence[str],
     valid_segment_ids: Sequence[int],
+    segment_type_col: str = "segment_type",
 ) -> dict[str, list[float]]:
     """Compute per-type mean speed-per-watt for the efficiency spider chart.
 
@@ -106,13 +107,15 @@ def power_normalized_profile(
     ----------
     efforts:
         Filtered efforts (outliers removed) with ``speed_per_watt``,
-        ``bike_name``, ``segment_type``, and ``segment_id`` columns.
+        ``bike_name``, segment type column, and ``segment_id`` columns.
     bikes:
         Ordered list of bike names to include.
     segment_types:
         Ordered list of segment type labels (e.g. ``["sprint", "flat", …]``).
     valid_segment_ids:
         Segment IDs where all selected bikes meet the minimum sample size.
+    segment_type_col:
+        Column used to group segments (``segment_type`` or ``segment_type_detail``).
 
     Returns
     -------
@@ -123,7 +126,7 @@ def power_normalized_profile(
     profile: dict[str, list[float]] = {b: [] for b in bikes}
 
     for seg_type in segment_types:
-        type_eff = scope[scope["segment_type"] == seg_type]
+        type_eff = scope[scope[segment_type_col] == seg_type]
         for bike in bikes:
             bike_eff = type_eff[
                 (type_eff["bike_name"] == bike) & type_eff["speed_per_watt"].notna()

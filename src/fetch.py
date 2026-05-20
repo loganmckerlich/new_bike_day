@@ -166,7 +166,9 @@ class _DevSession:
 
 
 # Segment classification thresholds
-_SPRINT_MAX_DISTANCE: float = 500.0   # metres
+_SPRINT_MAX_DISTANCE: float = 400.0   # metres
+_FLAT_MIN_GRADE: float = -0.5         # percent
+_FLAT_MAX_GRADE: float = 0.5          # percent
 _ASCENT_MIN_GRADE: float = 2.0        # percent
 _DESCENT_MAX_GRADE: float = -1.0      # percent
 
@@ -176,8 +178,10 @@ def _auth_headers(access_token: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {access_token}"}
 
 
-def _classify_segment(distance: Optional[float], average_grade: Optional[float]) -> str:
-    """Return a segment type label based on distance and average grade.
+def _classify_segment(
+    distance: Optional[float], average_grade: Optional[float]
+) -> tuple[str, str]:
+    """Return segment category + subcategory labels based on distance and grade.
 
     Sprint is checked first (per specification), meaning a short but steep
     segment is always classified as ``"sprint"`` regardless of grade.
@@ -187,15 +191,38 @@ def _classify_segment(distance: Optional[float], average_grade: Optional[float])
         average_grade: Average gradient in percent.
 
     Returns:
-        One of ``"sprint"``, ``"ascent"``, ``"descent"``, or ``"flat"``.
+        Tuple ``(segment_type, segment_type_detail)``.
     """
-    if distance is not None and distance < _SPRINT_MAX_DISTANCE:
-        return "sprint"
-    if average_grade is not None and average_grade > _ASCENT_MIN_GRADE:
-        return "ascent"
-    if average_grade is not None and average_grade < _DESCENT_MAX_GRADE:
-        return "descent"
-    return "flat"
+    grade = average_grade if average_grade is not None else 0.0
+    dist = distance if distance is not None else float("inf")
+
+    if dist < _SPRINT_MAX_DISTANCE:
+        if grade < -1.0:
+            return "sprint", "sprint_downhill"
+        if grade > 1.0:
+            return "sprint", "sprint_uphill"
+        return "sprint", "sprint_flat"
+
+    if _FLAT_MIN_GRADE <= grade <= _FLAT_MAX_GRADE:
+        if dist < 1000.0:
+            return "flat", "flat_short"
+        return "flat", "flat_long"
+
+    if grade > _ASCENT_MIN_GRADE:
+        if grade <= 5.0:
+            return "ascent", "ascent_shallow"
+        if grade <= 9.0:
+            return "ascent", "ascent_moderate"
+        return "ascent", "ascent_steep"
+
+    if grade < _DESCENT_MAX_GRADE:
+        if grade >= -4.0:
+            return "descent", "descent_gentle"
+        return "descent", "descent_steep"
+
+    if dist < 1000.0:
+        return "flat", "flat_short"
+    return "flat", "flat_long"
 
 
 def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.DataFrame:
@@ -210,7 +237,8 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
     Returns:
         DataFrame with columns: ``segment_id``, ``name``, ``distance``,
         ``average_grade``, ``climb_category``, ``total_elevation_gain``,
-        ``start_lat``, ``start_lng``, ``segment_type``.
+        ``start_lat``, ``start_lng``, ``segment_type``,
+        ``segment_type_detail``.
 
     Raises:
         PremiumOnlyError: If the endpoint returns a 402 Payment Required error,
@@ -255,6 +283,7 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
                 elev_low = seg.get("elevation_low")
                 if elev_high is not None and elev_low is not None:
                     elev_gain = max(0.0, elev_high - elev_low)
+            segment_type, segment_type_detail = _classify_segment(distance, average_grade)
             rows.append(
                 {
                     "segment_id": seg.get("id"),
@@ -265,7 +294,8 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
                     "total_elevation_gain": elev_gain,
                     "start_lat": start_latlng[0] if len(start_latlng) > 0 else None,
                     "start_lng": start_latlng[1] if len(start_latlng) > 1 else None,
-                    "segment_type": _classify_segment(distance, average_grade),
+                    "segment_type": segment_type,
+                    "segment_type_detail": segment_type_detail,
                 }
             )
 

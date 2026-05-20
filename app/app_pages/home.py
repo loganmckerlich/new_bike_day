@@ -316,7 +316,7 @@ def _render_bike_summaries(
                 seg_display = seg_display.merge(bike_attempts, on="segment_id", how="left")
 
         preferred_seg = [
-            "name", "segment_type", "distance", "average_grade",
+            "name", "segment_type", "segment_type_detail", "distance", "average_grade",
             "climb_category", "total_elevation_gain",
         ]
         _internal_cols = {"segment_id", "start_lat", "start_lng"}

@@ -15,6 +15,7 @@ if str(_REPO_ROOT) not in sys.path:
 
 from src.fetch import (
     _BIKE_SPORT_TYPES,
+    _classify_segment,
     get_athlete_activities,
     ingest_all,
 )
@@ -37,6 +38,24 @@ class BikeTypesTests(unittest.TestCase):
     def test_non_bike_types_excluded(self) -> None:
         for sport_type in ("Run", "Swim", "Walk", "Hike", "AlpineSki"):
             self.assertNotIn(sport_type, _BIKE_SPORT_TYPES, f"{sport_type} should not be a bike type")
+
+
+class SegmentClassificationTests(unittest.TestCase):
+    def test_sprint_checked_first(self) -> None:
+        seg_type, seg_detail = _classify_segment(320.0, 12.0)
+        self.assertEqual(seg_type, "sprint")
+        self.assertEqual(seg_detail, "sprint_uphill")
+
+    def test_flat_split_short_and_long(self) -> None:
+        self.assertEqual(_classify_segment(800.0, 0.0), ("flat", "flat_short"))
+        self.assertEqual(_classify_segment(1800.0, 0.0), ("flat", "flat_long"))
+
+    def test_ascent_and_descent_subtypes(self) -> None:
+        self.assertEqual(_classify_segment(2000.0, 3.0), ("ascent", "ascent_shallow"))
+        self.assertEqual(_classify_segment(2000.0, 7.0), ("ascent", "ascent_moderate"))
+        self.assertEqual(_classify_segment(2000.0, 10.0), ("ascent", "ascent_steep"))
+        self.assertEqual(_classify_segment(2000.0, -2.0), ("descent", "descent_gentle"))
+        self.assertEqual(_classify_segment(2000.0, -6.0), ("descent", "descent_steep"))
 
 
 class GetAthleteActivitiesTests(unittest.TestCase):
@@ -197,7 +216,7 @@ class IngestAllDevModeTests(unittest.TestCase):
 
     def test_segments_has_expected_columns(self) -> None:
         expected = {"segment_id", "name", "distance", "average_grade", "climb_category",
-                    "total_elevation_gain", "start_lat", "start_lng", "segment_type"}
+                    "total_elevation_gain", "start_lat", "start_lng", "segment_type", "segment_type_detail"}
         self.assertTrue(expected.issubset(set(self.result["segments"].columns)))
 
     def test_segments_row_count(self) -> None:
@@ -206,8 +225,13 @@ class IngestAllDevModeTests(unittest.TestCase):
     def test_segment_classification(self) -> None:
         segs = self.result["segments"].set_index("name")
         self.assertEqual(segs.loc["Box Hill", "segment_type"], "ascent")
+        self.assertEqual(segs.loc["Box Hill", "segment_type_detail"], "ascent_moderate")
         self.assertEqual(segs.loc["Town Sprint", "segment_type"], "sprint")
+        self.assertEqual(segs.loc["Town Sprint", "segment_type_detail"], "sprint_flat")
         self.assertEqual(segs.loc["River Road Flat", "segment_type"], "flat")
+        self.assertEqual(segs.loc["River Road Flat", "segment_type_detail"], "flat_long")
+        self.assertEqual(segs.loc["North Downs Descent", "segment_type"], "descent")
+        self.assertEqual(segs.loc["North Downs Descent", "segment_type_detail"], "descent_steep")
 
     # --- efforts ---
 
