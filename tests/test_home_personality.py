@@ -33,6 +33,14 @@ class HomePersonalityTests(unittest.TestCase):
         self.assertIn("The rider says:", fallback)
         self.assertIn("I respected the watts and feared the climbs.", fallback)
 
+        empty_name = build_cheeky_conclusion(
+            athlete_name="   ",
+            legs_status="Fresh-ish",
+            vibe="Smooth and smug",
+            takeaway="Still smiling somehow.",
+        )
+        self.assertIn("The rider says:", empty_name)
+
 
 if __name__ == "__main__":
     unittest.main()
