@@ -354,15 +354,13 @@ def _save_session(
 
 
 def main() -> None:
-    # ── Dev mode toggle (local development only) ──────────────────────────────
-    _is_local = st.secrets.get("DEV_MODE", False)
+    # ── Dev mode toggle ───────────────────────────────────────────────────────
     with st.sidebar:
         dev_mode = st.toggle(
             "🛠️ Dev mode",
             value=False,
             help="Load static sample data instead of hitting the Strava API.",
-            disabled=not _is_local,
-        ) if _is_local else False
+        )
 
     # Hero header
     col_title, col_logo = st.columns([4, 1])
