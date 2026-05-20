@@ -33,6 +33,11 @@ pg = st.navigation(
             title="Segment comparison",
             icon=":material/bar_chart:",
         ),
+        st.Page(
+            "pages/causal_analysis.py",
+            title="Causal analysis",
+            icon=":material/science:",
+        ),
     ]
 )
 pg.run()

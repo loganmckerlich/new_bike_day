@@ -16,11 +16,14 @@ new-bike-day/
 ├── notebooks/01_eda.ipynb
 ├── src/
 │   ├── auth.py            ← OAuth + token refresh
+│   ├── causal_inference.py← Doubly robust causal effect estimation
 │   ├── database.py        ← SQLite persistence layer
 │   ├── dev_data.py        ← Dev-mode static data
 │   ├── fetch.py           ← Strava API helpers
+│   ├── weather.py         ← Weather enrichment (stubbed values for now)
 │   └── webhook.py         ← Webhook server + subscription CLI
 ├── app/streamlit_app.py
+├── app/pages/causal_analysis.py
 └── tests/
 ```
 
@@ -133,4 +136,3 @@ python -m src.webhook unsubscribe --subscription-id 12345
 
 > **Note**: You only need **one** webhook subscription per Strava app; Strava
 > will deliver events for every athlete who has authorized your app.
-
