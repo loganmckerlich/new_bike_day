@@ -1,0 +1,266 @@
+[
+  {
+    "id": 210081,
+    "resource_state": 2,
+    "name": "Thames Path Tempo",
+    "activity": {
+      "id": 300001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 693,
+    "moving_time": 691,
+    "start_date": "2024-04-09T07:10:00Z",
+    "start_date_local": "2024-04-09T07:10:00Z",
+    "distance": 6200.0,
+    "start_index": 100,
+    "end_index": 1340,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 257.0,
+    "average_heartrate": 150.0,
+    "segment": {
+      "id": 100013,
+      "resource_state": 2,
+      "name": "Thames Path Tempo"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210082,
+    "resource_state": 2,
+    "name": "Thames Path Tempo",
+    "activity": {
+      "id": 300003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 679,
+    "moving_time": 676,
+    "start_date": "2024-04-10T07:11:00Z",
+    "start_date_local": "2024-04-10T07:11:00Z",
+    "distance": 6200.0,
+    "start_index": 105,
+    "end_index": 1345,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 265.0,
+    "average_heartrate": 151.0,
+    "segment": {
+      "id": 100013,
+      "resource_state": 2,
+      "name": "Thames Path Tempo"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210083,
+    "resource_state": 2,
+    "name": "Thames Path Tempo",
+    "activity": {
+      "id": 300005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 666,
+    "moving_time": 662,
+    "start_date": "2024-04-11T07:12:00Z",
+    "start_date_local": "2024-04-11T07:12:00Z",
+    "distance": 6200.0,
+    "start_index": 110,
+    "end_index": 1350,
+    "average_cadence": 86.0,
+    "device_watts": true,
+    "average_watts": 273.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100013,
+      "resource_state": 2,
+      "name": "Thames Path Tempo"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210084,
+    "resource_state": 2,
+    "name": "Thames Path Tempo",
+    "activity": {
+      "id": 300008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 672,
+    "moving_time": 670,
+    "start_date": "2024-04-09T08:10:00Z",
+    "start_date_local": "2024-04-09T08:10:00Z",
+    "distance": 6200.0,
+    "start_index": 100,
+    "end_index": 1340,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 247.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100013,
+      "resource_state": 2,
+      "name": "Thames Path Tempo"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210085,
+    "resource_state": 2,
+    "name": "Thames Path Tempo",
+    "activity": {
+      "id": 310050,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 659,
+    "moving_time": 656,
+    "start_date": "2024-04-10T08:11:00Z",
+    "start_date_local": "2024-04-10T08:11:00Z",
+    "distance": 6200.0,
+    "start_index": 105,
+    "end_index": 1345,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 255.0,
+    "average_heartrate": 153.0,
+    "segment": {
+      "id": 100013,
+      "resource_state": 2,
+      "name": "Thames Path Tempo"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210086,
+    "resource_state": 2,
+    "name": "Thames Path Tempo",
+    "activity": {
+      "id": 310051,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 647,
+    "moving_time": 643,
+    "start_date": "2024-04-11T08:12:00Z",
+    "start_date_local": "2024-04-11T08:12:00Z",
+    "distance": 6200.0,
+    "start_index": 110,
+    "end_index": 1350,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 263.0,
+    "average_heartrate": 154.0,
+    "segment": {
+      "id": 100013,
+      "resource_state": 2,
+      "name": "Thames Path Tempo"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230025,
+    "resource_state": 2,
+    "name": "Thames Path Tempo",
+    "activity": {
+      "id": 320004,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 748,
+    "moving_time": 747,
+    "start_date": "2024-05-25T08:01:00Z",
+    "start_date_local": "2024-05-25T09:01:00Z",
+    "distance": 6200.0,
+    "start_index": 280,
+    "end_index": 1078,
+    "average_cadence": 74.4,
+    "device_watts": true,
+    "average_watts": 239.0,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100013,
+      "resource_state": 2,
+      "name": "Thames Path Tempo"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230026,
+    "resource_state": 2,
+    "name": "Thames Path Tempo",
+    "activity": {
+      "id": 320009,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 735,
+    "moving_time": 734,
+    "start_date": "2024-09-07T08:36:00Z",
+    "start_date_local": "2024-09-07T09:36:00Z",
+    "distance": 6200.0,
+    "start_index": 330,
+    "end_index": 1125,
+    "average_cadence": 72.8,
+    "device_watts": true,
+    "average_watts": 233.9,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100013,
+      "resource_state": 2,
+      "name": "Thames Path Tempo"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  }
+]

@@ -184,9 +184,12 @@ def _parse_token_response(payload: dict[str, Any]) -> dict[str, Any]:
     athlete: dict[str, Any] = payload.get("athlete") or {}
     athlete_id: int | None = athlete.get("id")
 
+    athlete_firstname = str(athlete.get("firstname") or "").strip() or None
+
     return {
         "access_token": str(access_token),
         "refresh_token": str(refresh_token),
         "expires_at": int(expires_at),
         "athlete_id": athlete_id,
+        "athlete_firstname": athlete_firstname,
     }

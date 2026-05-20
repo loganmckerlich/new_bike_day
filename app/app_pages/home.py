@@ -30,6 +30,7 @@ from src.database import (
     save_segments,
 )
 from src.fetch import ingest_all, PremiumOnlyError, get_athlete_bikes
+from src.home_personality import load_dev_athlete_profile
 from src.utils import link_button_no_tab
 
 
@@ -135,6 +136,8 @@ def _exchange_access_token(client_id: str, client_secret: str, redirect_uri: str
             refresh_token=token["refresh_token"],
             expires_at=token["expires_at"],
         )
+    if token.get("athlete_firstname"):
+        st.session_state["athlete_name"] = token["athlete_firstname"]
     return token["access_token"]
 
 
@@ -316,7 +319,7 @@ def _render_bike_summaries(
                 seg_display = seg_display.merge(bike_attempts, on="segment_id", how="left")
 
         preferred_seg = [
-            "name", "segment_type", "distance", "average_grade",
+            "name", "segment_type", "segment_type_detail", "distance", "average_grade",
             "climb_category", "total_elevation_gain",
         ]
         _internal_cols = {"segment_id", "start_lat", "start_lng"}
@@ -367,12 +370,36 @@ def main() -> None:
     col_title, col_logo = st.columns([4, 1])
     with col_title:
         st.title("🚴 New Bike Day")
+        if dev_mode:
+            athlete_profile = load_dev_athlete_profile()
+            athlete_name = athlete_profile.get("first_name") or None
+            if athlete_name:
+                st.header(f"Hello, {athlete_name} 👋")
+            profile_bits = []
+            full_name = athlete_profile.get("full_name")
+            if full_name:
+                profile_bits.append(f"Rider: **{full_name}**")
+            primary_bike = athlete_profile.get("primary_bike")
+            if primary_bike:
+                profile_bits.append(f"Primary bike: **{primary_bike}**")
+            location = ", ".join(
+                part
+                for part in [athlete_profile.get("city", ""), athlete_profile.get("country", "")]
+                if part
+            )
+            if location:
+                profile_bits.append(f"Home base: **{location}**")
+            if profile_bits:
+                st.caption(" • ".join(profile_bits))
+            st.caption("🛠️ Dev mode is on — showing static sample data.")
+        else:
+            live_athlete_name = st.session_state.get("athlete_name")
+            if live_athlete_name:
+                st.header(f"Hello, {live_athlete_name} 👋")
         st.markdown(
             "Compare your rides across different bikes on the same Strava segments. "
             "Sign in with Strava to get started."
         )
-        if dev_mode:
-            st.caption("🛠️ Dev mode is on — showing static sample data.")
 
     # ── Dev mode: load static JSON and skip all OAuth / API logic ─────────────
     if dev_mode:

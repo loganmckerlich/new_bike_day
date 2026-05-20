@@ -99,6 +99,7 @@ def power_normalized_profile(
     bikes: Sequence[str],
     segment_types: Sequence[str],
     valid_segment_ids: Sequence[int],
+    segment_type_col: str = "segment_type",
 ) -> dict[str, list[float]]:
     """Compute per-type mean speed-per-watt for the efficiency spider chart.
 
@@ -106,33 +107,67 @@ def power_normalized_profile(
     ----------
     efforts:
         Filtered efforts (outliers removed) with ``speed_per_watt``,
-        ``bike_name``, ``segment_type``, and ``segment_id`` columns.
+        ``bike_name``, segment type column, and ``segment_id`` columns.
     bikes:
         Ordered list of bike names to include.
     segment_types:
         Ordered list of segment type labels (e.g. ``["sprint", "flat", …]``).
     valid_segment_ids:
         Segment IDs where all selected bikes meet the minimum sample size.
+    segment_type_col:
+        Column used to group segments (``segment_type`` or ``segment_type_detail``).
 
     Returns
     -------
     dict mapping bike_name → list of mean speed_per_watt values, one per
     segment type.  Missing types get 0.0.
     """
-    scope = efforts[efforts["segment_id"].isin(valid_segment_ids)].copy()
-    profile: dict[str, list[float]] = {b: [] for b in bikes}
+    return mean_profile_by_segment_type(
+        efforts,
+        bikes,
+        segment_types,
+        valid_segment_ids,
+        value_col="speed_per_watt",
+        segment_type_col=segment_type_col,
+    )
 
-    for seg_type in segment_types:
-        type_eff = scope[scope["segment_type"] == seg_type]
-        for bike in bikes:
-            bike_eff = type_eff[
-                (type_eff["bike_name"] == bike) & type_eff["speed_per_watt"].notna()
-            ]
-            if bike_eff.empty:
-                profile[bike].append(0.0)
-            else:
-                per_seg = bike_eff.groupby("segment_id")["speed_per_watt"].mean()
-                profile[bike].append(float(per_seg.mean()))
+
+def mean_profile_by_segment_type(
+    efforts: pd.DataFrame,
+    bikes: Sequence[str],
+    segment_types: Sequence[str],
+    valid_segment_ids: Sequence[int],
+    value_col: str,
+    segment_type_col: str = "segment_type",
+) -> dict[str, list[float]]:
+    """Compute a fixed-order bike profile across segment types/subtypes.
+
+    For each bike, values are aggregated in two steps:
+    1. mean per segment_id within each segment type/subtype
+    2. mean of those per-segment means per segment type/subtype
+
+    A template DataFrame with all provided ``segment_types`` is left-joined
+    with each bike's aggregated data so missing categories are filled with 0.
+    """
+    scope = efforts[efforts["segment_id"].isin(valid_segment_ids)].copy()
+    template = pd.DataFrame({segment_type_col: list(segment_types)})
+    profile: dict[str, list[float]] = {}
+
+    for bike in bikes:
+        bike_eff = scope[(scope["bike_name"] == bike) & scope[value_col].notna()].copy()
+        if bike_eff.empty:
+            profile[bike] = [0.0] * len(segment_types)
+            continue
+
+        per_seg = (
+            bike_eff.groupby(["segment_id", segment_type_col], as_index=False)[value_col]
+            .mean()
+        )
+        per_type = per_seg.groupby(segment_type_col, as_index=False)[value_col].mean()
+
+        complete = template.merge(per_type, on=segment_type_col, how="left")
+        complete[value_col] = complete[value_col].fillna(0.0).astype(float)
+        profile[bike] = complete[value_col].tolist()
 
     return profile
 

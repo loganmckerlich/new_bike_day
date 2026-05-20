@@ -1,0 +1,266 @@
+[
+  {
+    "id": 210091,
+    "resource_state": 2,
+    "name": "Meadow Rise",
+    "activity": {
+      "id": 300001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 321,
+    "moving_time": 319,
+    "start_date": "2024-04-10T07:10:00Z",
+    "start_date_local": "2024-04-10T07:10:00Z",
+    "distance": 1800.0,
+    "start_index": 100,
+    "end_index": 460,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 282.0,
+    "average_heartrate": 150.0,
+    "segment": {
+      "id": 100014,
+      "resource_state": 2,
+      "name": "Meadow Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210092,
+    "resource_state": 2,
+    "name": "Meadow Rise",
+    "activity": {
+      "id": 300003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 312,
+    "moving_time": 309,
+    "start_date": "2024-04-11T07:11:00Z",
+    "start_date_local": "2024-04-11T07:11:00Z",
+    "distance": 1800.0,
+    "start_index": 105,
+    "end_index": 465,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 290.0,
+    "average_heartrate": 151.0,
+    "segment": {
+      "id": 100014,
+      "resource_state": 2,
+      "name": "Meadow Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210093,
+    "resource_state": 2,
+    "name": "Meadow Rise",
+    "activity": {
+      "id": 300005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 303,
+    "moving_time": 299,
+    "start_date": "2024-04-12T07:12:00Z",
+    "start_date_local": "2024-04-12T07:12:00Z",
+    "distance": 1800.0,
+    "start_index": 110,
+    "end_index": 470,
+    "average_cadence": 86.0,
+    "device_watts": true,
+    "average_watts": 298.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100014,
+      "resource_state": 2,
+      "name": "Meadow Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210094,
+    "resource_state": 2,
+    "name": "Meadow Rise",
+    "activity": {
+      "id": 300008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 329,
+    "moving_time": 327,
+    "start_date": "2024-04-10T08:10:00Z",
+    "start_date_local": "2024-04-10T08:10:00Z",
+    "distance": 1800.0,
+    "start_index": 100,
+    "end_index": 460,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 272.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100014,
+      "resource_state": 2,
+      "name": "Meadow Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210095,
+    "resource_state": 2,
+    "name": "Meadow Rise",
+    "activity": {
+      "id": 310050,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 319,
+    "moving_time": 316,
+    "start_date": "2024-04-11T08:11:00Z",
+    "start_date_local": "2024-04-11T08:11:00Z",
+    "distance": 1800.0,
+    "start_index": 105,
+    "end_index": 465,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 280.0,
+    "average_heartrate": 153.0,
+    "segment": {
+      "id": 100014,
+      "resource_state": 2,
+      "name": "Meadow Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210096,
+    "resource_state": 2,
+    "name": "Meadow Rise",
+    "activity": {
+      "id": 310051,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 310,
+    "moving_time": 306,
+    "start_date": "2024-04-12T08:12:00Z",
+    "start_date_local": "2024-04-12T08:12:00Z",
+    "distance": 1800.0,
+    "start_index": 110,
+    "end_index": 470,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 288.0,
+    "average_heartrate": 154.0,
+    "segment": {
+      "id": 100014,
+      "resource_state": 2,
+      "name": "Meadow Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230027,
+    "resource_state": 2,
+    "name": "Meadow Rise",
+    "activity": {
+      "id": 320003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 347,
+    "moving_time": 346,
+    "start_date": "2024-05-11T08:33:00Z",
+    "start_date_local": "2024-05-11T09:33:00Z",
+    "distance": 1800.0,
+    "start_index": 290,
+    "end_index": 687,
+    "average_cadence": 72.5,
+    "device_watts": true,
+    "average_watts": 262.3,
+    "average_heartrate": 157.5,
+    "segment": {
+      "id": 100014,
+      "resource_state": 2,
+      "name": "Meadow Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 230028,
+    "resource_state": 2,
+    "name": "Meadow Rise",
+    "activity": {
+      "id": 320007,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 340,
+    "moving_time": 339,
+    "start_date": "2024-07-20T13:38:00Z",
+    "start_date_local": "2024-07-20T14:38:00Z",
+    "distance": 1800.0,
+    "start_index": 340,
+    "end_index": 740,
+    "average_cadence": 71.0,
+    "device_watts": true,
+    "average_watts": 256.6,
+    "average_heartrate": 159.0,
+    "segment": {
+      "id": 100014,
+      "resource_state": 2,
+      "name": "Meadow Rise"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  }
+]
