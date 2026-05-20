@@ -11,6 +11,7 @@ from geopy.distance import geodesic
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.linear_model import LinearRegression, LogisticRegression
 
+from src.analytics import compute_speed_per_watt, filter_outliers_by_power_speed
 from src.weather import get_weather_for_efforts
 
 _REQUIRED_COVARIATES: tuple[str, ...] = (
@@ -20,6 +21,22 @@ _REQUIRED_COVARIATES: tuple[str, ...] = (
     "average_grade",
     "temp_c",
 )
+
+
+def remove_outliers_for_causal_analysis(
+    efforts_df: pd.DataFrame,
+    z_threshold: float = 2.0,
+) -> tuple[pd.DataFrame, int]:
+    """Remove speed-per-watt outliers using segment-comparison methodology."""
+    required_cols = {"segment_id", "speed_kmh", "average_watts"}
+    if efforts_df.empty or not required_cols.issubset(efforts_df.columns):
+        return efforts_df.copy(), 0
+
+    with_spw = compute_speed_per_watt(efforts_df)
+    filtered, annotated = filter_outliers_by_power_speed(with_spw, z_threshold=z_threshold)
+    n_outliers = int(annotated["is_outlier"].sum()) if "is_outlier" in annotated.columns else 0
+    cleaned = filtered.drop(columns=["is_outlier", "z_score", "speed_per_watt"], errors="ignore")
+    return cleaned, n_outliers
 
 
 def _safe_float(value: Any) -> float | None:
