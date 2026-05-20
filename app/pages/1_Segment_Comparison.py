@@ -163,7 +163,7 @@ def _render_segment_map(geo: dict, seg_name: str) -> None:
         height=300,
         showlegend=False,
     )
-    st.plotly_chart(fig, use_container_width=True, config={"scrollZoom": True})
+    st.plotly_chart(fig, width='stretch', config={"scrollZoom": True})
 
 
 def _render_elevation_profile(geo: dict, seg_distance_m: float) -> None:
@@ -199,7 +199,7 @@ def _render_elevation_profile(geo: dict, seg_distance_m: float) -> None:
             paper_bgcolor="rgba(0,0,0,0)",
             showlegend=False,
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
     elif elev_low is not None and elev_high is not None and seg_distance_m > 0:
         # Approximate schematic: flat line at elev_low → peak → elev_low
@@ -237,7 +237,7 @@ def _render_elevation_profile(geo: dict, seg_distance_m: float) -> None:
             showlegend=False,
         )
         st.caption("📐 Approximate elevation profile (detailed stream unavailable)")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
     else:
         st.caption("No elevation data available for this segment.")
@@ -346,7 +346,7 @@ for col in ["Avg Watts", "Max Watts"]:
 if "Avg HR" in summary.columns:
     summary["Avg HR"] = summary["Avg HR"].apply(lambda v: f"{v:.0f} bpm" if pd.notna(v) else "—")
 
-st.dataframe(summary, use_container_width=True, hide_index=True)
+st.dataframe(summary, width='stretch', hide_index=True)
 
 # ── Charts ────────────────────────────────────────────────────────────────────
 has_pace = seg_efforts["pace_sec_per_km"].notna().any()
@@ -386,7 +386,7 @@ if chart_tab_labels:
                 tickvals=list(range(0, max_pace_tick, 30)),
                 ticktext=[_fmt_pace(v) for v in range(0, max_pace_tick, 30)],
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
         tab_idx += 1
 
     if has_watts:
@@ -402,7 +402,7 @@ if chart_tab_labels:
                 points="all",
             )
             fig.update_layout(showlegend=False, plot_bgcolor="rgba(0,0,0,0)")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
         tab_idx += 1
 
     if has_hr:
@@ -418,7 +418,7 @@ if chart_tab_labels:
                 points="all",
             )
             fig.update_layout(showlegend=False, plot_bgcolor="rgba(0,0,0,0)")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
         tab_idx += 1
 
     # Timeline tab
@@ -449,7 +449,7 @@ if chart_tab_labels:
                     tickvals=list(range(0, max_pace + 30, 30)),
                     ticktext=[_fmt_pace(v) for v in range(0, max_pace + 30, 30)],
                 )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
         else:
             st.info("No date information available to plot timeline.")
 
@@ -479,6 +479,6 @@ with st.expander("🗂 All efforts for this segment", expanded=False):
         detail["Pace (sec/km)"] = detail["Pace (sec/km)"].apply(lambda s: _fmt_pace(s) if pd.notna(s) else "—")
         detail.rename(columns={"Pace (sec/km)": "Pace"}, inplace=True)
 
-    st.dataframe(detail, use_container_width=True, hide_index=True)
+    st.dataframe(detail, width='stretch', hide_index=True)
 
 

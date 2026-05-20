@@ -165,6 +165,10 @@ def create_app(
 
     app = Flask(__name__)
 
+    @app.route("/health", methods=["GET"])
+    def health() -> Any:
+        return "OK", 200
+
     @app.route("/webhook", methods=["GET"])
     def verify_webhook() -> Any:
         """Handle Strava's subscription verification challenge (GET)."""

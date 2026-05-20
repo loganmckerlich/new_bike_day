@@ -196,7 +196,7 @@ def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame, bikes:
         with st.expander("Full bike stats table", expanded=False):
             display = bike_stats[["bike_name", "total_efforts", "total_moving_hours", "avg_watts", "avg_heartrate"]].copy()
             display.columns = ["Bike", "Efforts", "Moving Hours", "Avg Watts", "Avg HR"]
-            st.dataframe(display, use_container_width=True, hide_index=True)
+            st.dataframe(display, width='stretch', hide_index=True)
 
         # Watts bar chart
         chart_data = bike_stats.dropna(subset=["avg_watts"])
@@ -211,7 +211,7 @@ def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame, bikes:
                 color_discrete_sequence=px.colors.qualitative.Set2,
             )
             fig.update_layout(showlegend=False, plot_bgcolor="rgba(0,0,0,0)")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
     # Starred segments table
     if not segments.empty:
@@ -256,7 +256,7 @@ def _render_bike_summaries(efforts: pd.DataFrame, segments: pd.DataFrame, bikes:
             seg_display["average_grade"] = seg_display["average_grade"].round(1).astype(str) + "%"
         # Apply title-casing to all columns (bike name columns from _gear_label are already readable)
         seg_display.columns = [c.replace("_", " ").title() for c in seg_display.columns]
-        st.dataframe(seg_display, use_container_width=True, hide_index=True)
+        st.dataframe(seg_display, width='stretch', hide_index=True)
 
 
 def _save_session(
@@ -342,7 +342,7 @@ def main() -> None:
     auth_col, status_col = st.columns([2, 3])
     with auth_col:
         auth_url = get_authorization_url(client_id=env_client_id, redirect_uri=default_redirect_uri)
-        st.link_button("🔗 Sign in with Strava", auth_url, use_container_width=True)
+        st.link_button("🔗 Sign in with Strava", auth_url, width='stretch')
 
     code_from_params = st.query_params.get("code")
     error_from_params = st.query_params.get("error")
@@ -385,7 +385,7 @@ def main() -> None:
 
     reload_col, _ = st.columns([2, 4])
     with reload_col:
-        if st.button("🔄 Reload Activities", type="secondary", use_container_width=True):
+        if st.button("🔄 Reload Activities", type="secondary", width='stretch'):
             access_token = st.session_state.get("access_token") or env_access_token
             if not access_token and code:
                 try:

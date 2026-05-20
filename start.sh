@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#######
+# Temp disabled. Will Figure out webhooks later
+# For now just let user click update whne they want
+#######
+
 # ── Read secrets.toml ──────────────────────────────────────────────────────────
 SECRETS_FILE=".streamlit/secrets.toml"
 
@@ -56,11 +61,45 @@ STRAVA_WEBHOOK_VERIFY_TOKEN=$STRAVA_WEBHOOK_VERIFY_TOKEN \
 python -m src.webhook serve --host 0.0.0.0 --port 8502 &
 WEBHOOK_PID=$!
 
-sleep 2
-echo "✅  Webhook server started"
+# Wait for webhook server to be ready (poll until it responds or timeout)
+echo "⏳  Waiting for webhook server to be ready..."
+for i in $(seq 1 15); do
+  if curl -sf "http://localhost:8502/health" > /dev/null 2>&1; then
+    echo "✅  Webhook server started"
+    break
+  fi
+  if ! kill -0 $WEBHOOK_PID 2>/dev/null; then
+    echo "❌  Webhook server process exited unexpectedly. Check logs above."
+    kill $NGROK_PID 2>/dev/null
+    exit 1
+  fi
+  sleep 1
+done
 
 # ── Register webhook with Strava ───────────────────────────────────────────────
 echo "📡  Registering webhook with Strava..."
+
+# If a subscription already exists, unsubscribe it first (Strava allows only one per app).
+EXISTING_ID=$(STRAVA_CLIENT_ID=$STRAVA_CLIENT_ID STRAVA_CLIENT_SECRET=$STRAVA_CLIENT_SECRET \
+  python -m src.webhook view 2>/dev/null | python3 -c "
+import sys, ast
+for line in sys.stdin:
+    line = line.strip()
+    if line.startswith('{'):
+        try:
+            d = ast.literal_eval(line)
+            print(d.get('id',''))
+        except Exception:
+            pass
+" 2>/dev/null)
+
+if [ -n "$EXISTING_ID" ]; then
+  echo "⚠️   Found existing subscription $EXISTING_ID — unsubscribing first..."
+  STRAVA_CLIENT_ID=$STRAVA_CLIENT_ID \
+  STRAVA_CLIENT_SECRET=$STRAVA_CLIENT_SECRET \
+  python -m src.webhook unsubscribe --subscription-id "$EXISTING_ID"
+fi
+
 STRAVA_CLIENT_ID=$STRAVA_CLIENT_ID \
 STRAVA_CLIENT_SECRET=$STRAVA_CLIENT_SECRET \
 python -m src.webhook subscribe \
@@ -79,7 +118,7 @@ echo "  ngrok:   http://127.0.0.1:4040"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
-streamlit run app/streamlit_main.py
+streamlit run app/streamlit_app.py
 
 # ── Cleanup on exit ────────────────────────────────────────────────────────────
 echo "🛑  Shutting down..."
