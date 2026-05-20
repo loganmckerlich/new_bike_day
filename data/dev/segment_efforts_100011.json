@@ -1,0 +1,200 @@
+[
+  {
+    "id": 210061,
+    "resource_state": 2,
+    "name": "Airport Perimeter Dash",
+    "activity": {
+      "id": 300001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 103,
+    "moving_time": 101,
+    "start_date": "2024-04-07T07:10:00Z",
+    "start_date_local": "2024-04-07T07:10:00Z",
+    "distance": 960.0,
+    "start_index": 100,
+    "end_index": 292,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 292.0,
+    "average_heartrate": 150.0,
+    "segment": {
+      "id": 100011,
+      "resource_state": 2,
+      "name": "Airport Perimeter Dash"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210062,
+    "resource_state": 2,
+    "name": "Airport Perimeter Dash",
+    "activity": {
+      "id": 300003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 102,
+    "moving_time": 99,
+    "start_date": "2024-04-08T07:11:00Z",
+    "start_date_local": "2024-04-08T07:11:00Z",
+    "distance": 960.0,
+    "start_index": 105,
+    "end_index": 297,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 300.0,
+    "average_heartrate": 151.0,
+    "segment": {
+      "id": 100011,
+      "resource_state": 2,
+      "name": "Airport Perimeter Dash"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210063,
+    "resource_state": 2,
+    "name": "Airport Perimeter Dash",
+    "activity": {
+      "id": 300005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 101,
+    "moving_time": 97,
+    "start_date": "2024-04-09T07:12:00Z",
+    "start_date_local": "2024-04-09T07:12:00Z",
+    "distance": 960.0,
+    "start_index": 110,
+    "end_index": 302,
+    "average_cadence": 86.0,
+    "device_watts": true,
+    "average_watts": 308.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100011,
+      "resource_state": 2,
+      "name": "Airport Perimeter Dash"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210064,
+    "resource_state": 2,
+    "name": "Airport Perimeter Dash",
+    "activity": {
+      "id": 300008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 99,
+    "moving_time": 97,
+    "start_date": "2024-04-07T08:10:00Z",
+    "start_date_local": "2024-04-07T08:10:00Z",
+    "distance": 960.0,
+    "start_index": 100,
+    "end_index": 292,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 282.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100011,
+      "resource_state": 2,
+      "name": "Airport Perimeter Dash"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210065,
+    "resource_state": 2,
+    "name": "Airport Perimeter Dash",
+    "activity": {
+      "id": 310050,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 98,
+    "moving_time": 95,
+    "start_date": "2024-04-08T08:11:00Z",
+    "start_date_local": "2024-04-08T08:11:00Z",
+    "distance": 960.0,
+    "start_index": 105,
+    "end_index": 297,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 290.0,
+    "average_heartrate": 153.0,
+    "segment": {
+      "id": 100011,
+      "resource_state": 2,
+      "name": "Airport Perimeter Dash"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210066,
+    "resource_state": 2,
+    "name": "Airport Perimeter Dash",
+    "activity": {
+      "id": 310051,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 97,
+    "moving_time": 93,
+    "start_date": "2024-04-09T08:12:00Z",
+    "start_date_local": "2024-04-09T08:12:00Z",
+    "distance": 960.0,
+    "start_index": 110,
+    "end_index": 302,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 298.0,
+    "average_heartrate": 154.0,
+    "segment": {
+      "id": 100011,
+      "resource_state": 2,
+      "name": "Airport Perimeter Dash"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  }
+]

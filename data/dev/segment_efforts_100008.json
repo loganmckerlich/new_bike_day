@@ -1,0 +1,200 @@
+[
+  {
+    "id": 210031,
+    "resource_state": 2,
+    "name": "Park Dip Sprint",
+    "activity": {
+      "id": 300001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 23,
+    "moving_time": 21,
+    "start_date": "2024-04-04T07:10:00Z",
+    "start_date_local": "2024-04-04T07:10:00Z",
+    "distance": 300.0,
+    "start_index": 100,
+    "end_index": 160,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 422.0,
+    "average_heartrate": 150.0,
+    "segment": {
+      "id": 100008,
+      "resource_state": 2,
+      "name": "Park Dip Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210032,
+    "resource_state": 2,
+    "name": "Park Dip Sprint",
+    "activity": {
+      "id": 300003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 24,
+    "moving_time": 21,
+    "start_date": "2024-04-05T07:11:00Z",
+    "start_date_local": "2024-04-05T07:11:00Z",
+    "distance": 300.0,
+    "start_index": 105,
+    "end_index": 165,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 430.0,
+    "average_heartrate": 151.0,
+    "segment": {
+      "id": 100008,
+      "resource_state": 2,
+      "name": "Park Dip Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210033,
+    "resource_state": 2,
+    "name": "Park Dip Sprint",
+    "activity": {
+      "id": 300005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 24,
+    "moving_time": 20,
+    "start_date": "2024-04-06T07:12:00Z",
+    "start_date_local": "2024-04-06T07:12:00Z",
+    "distance": 300.0,
+    "start_index": 110,
+    "end_index": 170,
+    "average_cadence": 86.0,
+    "device_watts": true,
+    "average_watts": 438.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100008,
+      "resource_state": 2,
+      "name": "Park Dip Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210034,
+    "resource_state": 2,
+    "name": "Park Dip Sprint",
+    "activity": {
+      "id": 300008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 22,
+    "moving_time": 20,
+    "start_date": "2024-04-04T08:10:00Z",
+    "start_date_local": "2024-04-04T08:10:00Z",
+    "distance": 300.0,
+    "start_index": 100,
+    "end_index": 160,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 412.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100008,
+      "resource_state": 2,
+      "name": "Park Dip Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210035,
+    "resource_state": 2,
+    "name": "Park Dip Sprint",
+    "activity": {
+      "id": 310050,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 23,
+    "moving_time": 20,
+    "start_date": "2024-04-05T08:11:00Z",
+    "start_date_local": "2024-04-05T08:11:00Z",
+    "distance": 300.0,
+    "start_index": 105,
+    "end_index": 165,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 420.0,
+    "average_heartrate": 153.0,
+    "segment": {
+      "id": 100008,
+      "resource_state": 2,
+      "name": "Park Dip Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210036,
+    "resource_state": 2,
+    "name": "Park Dip Sprint",
+    "activity": {
+      "id": 310051,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 24,
+    "moving_time": 20,
+    "start_date": "2024-04-06T08:12:00Z",
+    "start_date_local": "2024-04-06T08:12:00Z",
+    "distance": 300.0,
+    "start_index": 110,
+    "end_index": 170,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 428.0,
+    "average_heartrate": 154.0,
+    "segment": {
+      "id": 100008,
+      "resource_state": 2,
+      "name": "Park Dip Sprint"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  }
+]

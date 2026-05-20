@@ -1,0 +1,36 @@
+{
+  "id": 100009,
+  "resource_state": 3,
+  "name": "Valley Launch Sprint",
+  "activity_type": "Ride",
+  "distance": 390.0,
+  "average_grade": -3.4,
+  "maximum_grade": 0.2,
+  "elevation_high": 72.0,
+  "elevation_low": 58.0,
+  "start_latlng": [
+    51.2765,
+    -0.313
+  ],
+  "end_latlng": [
+    51.2748,
+    -0.3099
+  ],
+  "climb_category": 0,
+  "city": "Dorking",
+  "state": "England",
+  "country": "United Kingdom",
+  "private": false,
+  "hazardous": false,
+  "starred": true,
+  "total_elevation_gain": 0.0,
+  "created_at": "2014-01-01T08:00:00Z",
+  "updated_at": "2024-01-01T00:00:00Z",
+  "map": {
+    "id": "s100009",
+    "polyline": "",
+    "resource_state": 3
+  },
+  "effort_count": 208,
+  "athlete_count": 110
+}

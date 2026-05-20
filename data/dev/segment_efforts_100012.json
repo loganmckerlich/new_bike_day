@@ -1,0 +1,200 @@
+[
+  {
+    "id": 210071,
+    "resource_state": 2,
+    "name": "Canal Tempo Straight",
+    "activity": {
+      "id": 300001,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 459,
+    "moving_time": 457,
+    "start_date": "2024-04-08T07:10:00Z",
+    "start_date_local": "2024-04-08T07:10:00Z",
+    "distance": 4100.0,
+    "start_index": 100,
+    "end_index": 920,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 257.0,
+    "average_heartrate": 150.0,
+    "segment": {
+      "id": 100012,
+      "resource_state": 2,
+      "name": "Canal Tempo Straight"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210072,
+    "resource_state": 2,
+    "name": "Canal Tempo Straight",
+    "activity": {
+      "id": 300003,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 450,
+    "moving_time": 447,
+    "start_date": "2024-04-09T07:11:00Z",
+    "start_date_local": "2024-04-09T07:11:00Z",
+    "distance": 4100.0,
+    "start_index": 105,
+    "end_index": 925,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 265.0,
+    "average_heartrate": 151.0,
+    "segment": {
+      "id": 100012,
+      "resource_state": 2,
+      "name": "Canal Tempo Straight"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210073,
+    "resource_state": 2,
+    "name": "Canal Tempo Straight",
+    "activity": {
+      "id": 300005,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 442,
+    "moving_time": 438,
+    "start_date": "2024-04-10T07:12:00Z",
+    "start_date_local": "2024-04-10T07:12:00Z",
+    "distance": 4100.0,
+    "start_index": 110,
+    "end_index": 930,
+    "average_cadence": 86.0,
+    "device_watts": true,
+    "average_watts": 273.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100012,
+      "resource_state": 2,
+      "name": "Canal Tempo Straight"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210074,
+    "resource_state": 2,
+    "name": "Canal Tempo Straight",
+    "activity": {
+      "id": 300008,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 445,
+    "moving_time": 443,
+    "start_date": "2024-04-08T08:10:00Z",
+    "start_date_local": "2024-04-08T08:10:00Z",
+    "distance": 4100.0,
+    "start_index": 100,
+    "end_index": 920,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 247.0,
+    "average_heartrate": 152.0,
+    "segment": {
+      "id": 100012,
+      "resource_state": 2,
+      "name": "Canal Tempo Straight"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210075,
+    "resource_state": 2,
+    "name": "Canal Tempo Straight",
+    "activity": {
+      "id": 310050,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 437,
+    "moving_time": 434,
+    "start_date": "2024-04-09T08:11:00Z",
+    "start_date_local": "2024-04-09T08:11:00Z",
+    "distance": 4100.0,
+    "start_index": 105,
+    "end_index": 925,
+    "average_cadence": 84.0,
+    "device_watts": true,
+    "average_watts": 255.0,
+    "average_heartrate": 153.0,
+    "segment": {
+      "id": 100012,
+      "resource_state": 2,
+      "name": "Canal Tempo Straight"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  },
+  {
+    "id": 210076,
+    "resource_state": 2,
+    "name": "Canal Tempo Straight",
+    "activity": {
+      "id": 310051,
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 1234567890,
+      "resource_state": 1
+    },
+    "elapsed_time": 429,
+    "moving_time": 425,
+    "start_date": "2024-04-10T08:12:00Z",
+    "start_date_local": "2024-04-10T08:12:00Z",
+    "distance": 4100.0,
+    "start_index": 110,
+    "end_index": 930,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 263.0,
+    "average_heartrate": 154.0,
+    "segment": {
+      "id": 100012,
+      "resource_state": 2,
+      "name": "Canal Tempo Straight"
+    },
+    "kom_rank": null,
+    "pr_rank": null,
+    "achievements": [],
+    "hidden": false
+  }
+]

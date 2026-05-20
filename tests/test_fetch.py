@@ -154,8 +154,8 @@ class IngestAllGearResolutionTests(unittest.TestCase):
 
         # Each call returns < per_page items so pagination stops after one page each.
         mock_get.side_effect = [
-            athlete_resp,                       # GET /athlete
             _mock_response(activities_page1),   # GET /athlete/activities
+            athlete_resp,                       # GET /athlete
             _mock_response(starred_segs),       # GET /segments/starred
             _mock_response(segment_efforts),    # GET /segment_efforts
         ]
@@ -172,8 +172,8 @@ class IngestAllGearResolutionTests(unittest.TestCase):
     def test_effort_unmatched_activity_gets_none_gear_id(self, mock_get: MagicMock, _sleep: MagicMock) -> None:
         """An effort whose activity_id doesn't match any power ride gets gear_id=None."""
         mock_get.side_effect = [
-            _mock_response({"bikes": []}),      # GET /athlete
             _mock_response([]),                 # GET /athlete/activities (no power rides)
+            _mock_response({"bikes": []}),      # GET /athlete
             _mock_response([
                 {"id": 99, "name": "Seg", "distance": 500.0, "average_grade": 1.0,
                  "climb_category": 0, "total_elevation_gain": 5.0, "start_latlng": [51.0, -1.0]},
@@ -220,7 +220,7 @@ class IngestAllDevModeTests(unittest.TestCase):
         self.assertTrue(expected.issubset(set(self.result["segments"].columns)))
 
     def test_segments_row_count(self) -> None:
-        self.assertEqual(len(self.result["segments"]), 3)
+        self.assertGreaterEqual(len(self.result["segments"]), 20)
 
     def test_segment_classification(self) -> None:
         segs = self.result["segments"].set_index("name")
@@ -233,6 +233,24 @@ class IngestAllDevModeTests(unittest.TestCase):
         self.assertEqual(segs.loc["North Downs Descent", "segment_type"], "descent")
         self.assertEqual(segs.loc["North Downs Descent", "segment_type_detail"], "descent_steep")
 
+    def test_each_subcategory_has_at_least_two_segments(self) -> None:
+        expected_subcategories = {
+            "sprint_flat",
+            "sprint_uphill",
+            "sprint_downhill",
+            "flat_short",
+            "flat_long",
+            "ascent_shallow",
+            "ascent_moderate",
+            "ascent_steep",
+            "descent_gentle",
+            "descent_steep",
+        }
+        counts = self.result["segments"].groupby("segment_type_detail").size().to_dict()
+        self.assertEqual(set(counts), expected_subcategories)
+        for subtype in expected_subcategories:
+            self.assertGreaterEqual(counts.get(subtype, 0), 2, subtype)
+
     # --- efforts ---
 
     def test_efforts_is_dataframe(self) -> None:
@@ -242,15 +260,24 @@ class IngestAllDevModeTests(unittest.TestCase):
         self.assertIn("gear_id", self.result["efforts"].columns)
 
     def test_efforts_row_count(self) -> None:
-        self.assertEqual(len(self.result["efforts"]), 7)
+        self.assertGreaterEqual(len(self.result["efforts"]), len(self.result["segments"]) * 4)
 
     def test_gear_id_resolved_from_activities(self) -> None:
         efforts = self.result["efforts"]
-        # activity 300001/300003/300005 → b111111; 300008 → b222222
+        # activity ids from dev fixtures should resolve to both primary bikes
         b1_efforts = efforts[efforts["gear_id"] == "b111111"]
         b2_efforts = efforts[efforts["gear_id"] == "b222222"]
-        self.assertEqual(len(b1_efforts), 4)
-        self.assertEqual(len(b2_efforts), 3)
+        self.assertGreater(len(b1_efforts), 0)
+        self.assertGreater(len(b2_efforts), 0)
+
+    def test_each_segment_has_multiple_efforts_for_both_primary_bikes(self) -> None:
+        efforts = self.result["efforts"]
+        primary = efforts[efforts["gear_id"].isin({"b111111", "b222222"})]
+        counts = primary.groupby(["segment_id", "gear_id"]).size().unstack(fill_value=0)
+        segment_ids = set(self.result["segments"]["segment_id"])
+        self.assertEqual(set(counts.index), segment_ids)
+        self.assertTrue((counts["b111111"] >= 2).all())
+        self.assertTrue((counts["b222222"] >= 2).all())
 
     def test_efforts_no_raw_api_keys(self) -> None:
         """Ensure parsed column names (not raw API keys like 'id') are used."""
