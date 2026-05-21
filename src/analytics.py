@@ -23,6 +23,15 @@ from typing import Sequence
 import numpy as np
 import pandas as pd
 
+__all__ = [
+    "compute_speed_per_watt",
+    "filter_outliers_by_power_speed",
+    "power_normalized_profile",
+    "mean_profile_by_segment_type",
+    "outlier_detection_frames",
+    "apply_min_watts_filter",
+]
+
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
@@ -261,3 +270,5 @@ def apply_min_watts_filter(
             return df[mask.values].copy() if type_frame is not df else df[mask].copy()
 
     return df[df["average_watts"] >= min_watts].copy()
+
+# Force module reload for Streamlit Cloud cache

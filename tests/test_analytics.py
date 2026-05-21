@@ -6,10 +6,23 @@ import unittest
 
 import pandas as pd
 
-from src.analytics import mean_profile_by_segment_type, power_normalized_profile
+from src.analytics import apply_min_watts_filter, mean_profile_by_segment_type, power_normalized_profile
 
 
 class PowerNormalizedProfileTests(unittest.TestCase):
+    def test_apply_min_watts_filter_is_public_and_descent_aware(self) -> None:
+        efforts = pd.DataFrame(
+            {
+                "segment_id": [1, 2, 3],
+                "average_watts": [80, 120, 90],
+                "segment_type": ["descent", "flat", "ascent"],
+            }
+        )
+
+        out = apply_min_watts_filter(efforts, min_watts=100, descents_exempt=True)
+
+        self.assertEqual(out["segment_id"].tolist(), [1, 2])
+
     def test_supports_custom_segment_type_column(self) -> None:
         efforts = pd.DataFrame(
             {
