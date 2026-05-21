@@ -38,6 +38,11 @@ pg = st.navigation(
             title="Causal analysis",
             icon=":material/science:",
         ),
+        st.Page(
+            "pages/cda_ranking.py",
+            title="CdA ranking",
+            icon=":material/air:",
+        ),
     ]
 )
 pg.run()
