@@ -127,7 +127,7 @@ def main() -> None:
 
     if agg_display.empty:
         st.info(
-            "None of your bikes have the minimum 10 flat-segment efforts needed for CdA estimation. "
+            f"None of your bikes have the minimum {MIN_EFFORTS_PER_BIKE} flat-segment efforts needed for CdA estimation. "
             "Star more flat segments on Strava and re-load your data."
         )
         st.stop()
