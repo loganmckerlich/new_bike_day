@@ -24,6 +24,19 @@ from src.causal_inference import (
 )
 
 
+def _use_metric() -> bool:
+    return st.session_state.get("use_metric", True)
+
+
+def _speed_unit() -> str:
+    return "km/h" if _use_metric() else "mph"
+
+
+def _to_display_speed(kmh: float) -> float:
+    """Convert km/h to the currently selected display unit."""
+    return kmh if _use_metric() else kmh * 0.621371
+
+
 def _gear_label(gear_id: str, bikes: dict[str, str]) -> str:
     """Return a display label for a gear id."""
     return bikes.get(str(gear_id), str(gear_id))
@@ -37,32 +50,41 @@ def _selection_frame(efforts: pd.DataFrame, old_gear_id: str, new_gear_id: str) 
 
 
 def _effect_text(
-    ate_kmh: float,
-    low_kmh: float,
-    high_kmh: float,
+    ate: float,
+    low: float,
+    high: float,
     comparison_label: str,
     baseline_label: str,
+    speed_unit: str = "km/h",
+    ate_pct: float | None = None,
+    low_pct: float | None = None,
+    high_pct: float | None = None,
 ) -> str:
     """Create plain-English headline interpretation for estimated effect."""
-    direction = "faster" if ate_kmh >= 0 else "slower"
+    direction = "faster" if ate >= 0 else "slower"
+    pct_clause = ""
+    if ate_pct is not None and low_pct is not None and high_pct is not None:
+        pct_clause = f" — **{abs(ate_pct):.1f}% {direction}** relative to {baseline_label}'s average pace (95% CI: {low_pct:.1f}% to {high_pct:.1f}%)"
     return (
         "Controlling for wind, temperature, precipitation, road straightness, and terrain, "
-        f"**{comparison_label}** is estimated to be **{abs(ate_kmh):.2f} km/h {direction}** "
+        f"**{comparison_label}** is estimated to be **{abs(ate):.2f} {speed_unit} {direction}** "
         f"than **{baseline_label}** "
-        f"(95% CI: {low_kmh:.2f} to {high_kmh:.2f})."
+        f"(95% CI: {low:.2f} to {high:.2f} {speed_unit}){pct_clause}."
     )
 
 
-def _render_terrain_chart(terrain_df: pd.DataFrame, mean_cbrt_watts: float, comparison_label: str) -> None:
+def _render_terrain_chart(
+    terrain_df: pd.DataFrame, mean_cbrt_watts: float, comparison_label: str, speed_unit: str = "km/h"
+) -> None:
     """Render terrain-specific effect chart with confidence intervals."""
     if terrain_df.empty:
         st.info("Not enough terrain-specific coverage to estimate heterogeneous effects yet.")
         return
 
     terrain_df = terrain_df.copy()
-    terrain_df["ate_kmh"] = terrain_df["ate"] * mean_cbrt_watts
-    terrain_df["ate_lower_kmh"] = terrain_df["ate_lower"] * mean_cbrt_watts
-    terrain_df["ate_upper_kmh"] = terrain_df["ate_upper"] * mean_cbrt_watts
+    terrain_df["ate_kmh"] = terrain_df["ate"].apply(lambda v: _to_display_speed(v * mean_cbrt_watts))
+    terrain_df["ate_lower_kmh"] = terrain_df["ate_lower"].apply(lambda v: _to_display_speed(v * mean_cbrt_watts))
+    terrain_df["ate_upper_kmh"] = terrain_df["ate_upper"].apply(lambda v: _to_display_speed(v * mean_cbrt_watts))
     terrain_df["color"] = terrain_df["ate_kmh"].apply(lambda x: "Faster" if x >= 0 else "Slower")
     terrain_df["err_plus"] = terrain_df["ate_upper_kmh"] - terrain_df["ate_kmh"]
     terrain_df["err_minus"] = terrain_df["ate_kmh"] - terrain_df["ate_lower_kmh"]
@@ -78,9 +100,9 @@ def _render_terrain_chart(terrain_df: pd.DataFrame, mean_cbrt_watts: float, comp
     )
     fig.update_traces(
         error_x={"type": "data", "array": terrain_df["err_plus"], "arrayminus": terrain_df["err_minus"]},
-        hovertemplate="%{y}: %{x:.2f} km/h<extra></extra>",
+        hovertemplate=f"%{{y}}: %{{x:.2f}} {speed_unit}<extra></extra>",
     )
-    fig.update_layout(yaxis_title="Segment type", xaxis_title="ATE (km/h)", showlegend=False)
+    fig.update_layout(yaxis_title="Segment type", xaxis_title=f"ATE ({speed_unit})", showlegend=False)
     st.plotly_chart(fig, width="stretch")
 
 
@@ -229,6 +251,20 @@ def main() -> None:
     ate_high_kmh = ate_result["ate_upper"] * mean_cbrt_watts
     terrain_effects = estimate_heterogeneous_effects(features)
     shap_importances = get_shap_importances(features)
+    speed_unit = _speed_unit()
+    ate_disp = _to_display_speed(ate_kmh)
+    ate_low_disp = _to_display_speed(ate_low_kmh)
+    ate_high_disp = _to_display_speed(ate_high_kmh)
+
+    # Percentage effect relative to baseline bike's observed mean speed
+    baseline_speed_mps = features.loc[features["is_new_bike"] == 0, "average_speed_mps"].mean()
+    if pd.notna(baseline_speed_mps) and baseline_speed_mps > 0:
+        baseline_mean_kmh = baseline_speed_mps * 3.6
+        ate_pct = ate_kmh / baseline_mean_kmh * 100
+        ate_low_pct = ate_low_kmh / baseline_mean_kmh * 100
+        ate_high_pct = ate_high_kmh / baseline_mean_kmh * 100
+    else:
+        ate_pct = ate_low_pct = ate_high_pct = None
 
     with st.expander("How this works", expanded=False):
         st.markdown(
@@ -293,7 +329,7 @@ def main() -> None:
             y="speed_per_cbrt_watt",
             color="bike_name",
             trendline="lowess",
-            labels={"average_watts": "Avg power (W)", "speed_per_cbrt_watt": "Speed / ∛power (km/h / W^⅓)", "bike_name": "Bike"},
+            labels={"average_watts": "Avg power (W)", "speed_per_cbrt_watt": f"Speed / ∛power ({speed_unit} / W^⅓)", "bike_name": "Bike"},
             title="Observed speed-per-cbrt-watt at similar power outputs",
         )
         _fig_overlap.update_layout(plot_bgcolor="rgba(0,0,0,0)")
@@ -311,56 +347,76 @@ def main() -> None:
         _fig_ci = go.Figure()
         _fig_ci.add_trace(
             go.Scatter(
-                x=[ate_low_kmh, ate_high_kmh],
+                x=[ate_low_disp, ate_high_disp],
                 y=[0, 0],
                 mode="lines",
                 line={"color": "#475569", "width": 6},
-                hovertemplate="95% CI: %{x:.2f} km/h<extra></extra>",
+                hovertemplate=f"95% CI: %{{x:.2f}} {speed_unit}<extra></extra>",
                 showlegend=False,
             )
         )
         _fig_ci.add_trace(
             go.Scatter(
-                x=[ate_kmh],
+                x=[ate_disp],
                 y=[0],
                 mode="markers",
                 marker={"size": 14, "color": "#2563eb"},
-                hovertemplate="ATE: %{x:.2f} km/h<extra></extra>",
+                hovertemplate=f"ATE: %{{x:.2f}} {speed_unit}<extra></extra>",
                 showlegend=False,
             )
         )
         _fig_ci.add_vline(x=0.0, line_dash="dot", line_color="#ef4444")
         _fig_ci.update_layout(
             title=f"Estimated {comparison_label} effect vs {baseline_label}",
-            xaxis_title="Adjusted effect (km/h)",
+            xaxis_title=f"Adjusted effect ({speed_unit})",
             yaxis={"visible": False},
             plot_bgcolor="rgba(0,0,0,0)",
             height=250,
             margin={"l": 20, "r": 20, "t": 60, "b": 20},
         )
         st.plotly_chart(_fig_ci, width="stretch")
+        _pct_lines = ""
+        if ate_pct is not None:
+            _pct_lines = (
+                f"- As a percentage of {baseline_label}'s mean speed: **{ate_pct:+.1f}%** "
+                f"(95% CI: {ate_low_pct:.1f}% to {ate_high_pct:.1f}%)\n"
+            )
         st.markdown(
             f"### 5) Interpret the result\n"
-            f"- Point estimate: **{ate_kmh:.2f} km/h**\n"
-            f"- 95% interval: **[{ate_low_kmh:.2f}, {ate_high_kmh:.2f}] km/h**\n"
+            f"- Point estimate: **{ate_disp:.2f} {speed_unit}**\n"
+            f"- 95% interval: **[{ate_low_disp:.2f}, {ate_high_disp:.2f}] {speed_unit}**\n"
+            f"{_pct_lines}"
             f"- Read this as: expected speed difference for **{comparison_label}** relative to **{baseline_label}** "
             "at similar effort and route conditions."
         )
 
     st.subheader("Section 1 — Headline Result")
     st.info("Weather note: weather inputs are currently dummy stub values and will improve when real weather data is integrated.")
-    st.metric(
-        f"Average treatment effect ({comparison_label} vs {baseline_label})",
-        f"{ate_kmh:.2f} km/h",
-        help=f"95% CI: {ate_low_kmh:.2f} to {ate_high_kmh:.2f}",
-    )
+    _m1, _m2 = st.columns(2)
+    with _m1:
+        st.metric(
+            f"Speed difference ({comparison_label} vs {baseline_label})",
+            f"{ate_disp:.2f} {speed_unit}",
+            help=f"95% CI: {ate_low_disp:.2f} to {ate_high_disp:.2f} {speed_unit}",
+        )
+    with _m2:
+        if ate_pct is not None:
+            st.metric(
+                f"Relative to {baseline_label}'s average pace",
+                f"{ate_pct:+.1f}%",
+                help=f"95% CI: {ate_low_pct:.1f}% to {ate_high_pct:.1f}%",
+            )
     st.markdown(
         _effect_text(
-            ate_kmh,
-            ate_low_kmh,
-            ate_high_kmh,
+            ate_disp,
+            ate_low_disp,
+            ate_high_disp,
             comparison_label,
             baseline_label,
+            speed_unit=speed_unit,
+            ate_pct=ate_pct,
+            low_pct=ate_low_pct,
+            high_pct=ate_high_pct,
         )
     )
     st.caption(
@@ -368,11 +424,11 @@ def main() -> None:
         f"(after removing {n_outliers} outlier effort(s), z-threshold={z_threshold:.1f})."
     )
 
-    if ate_low_kmh <= 0 <= ate_high_kmh:
+    if ate_low_disp <= 0 <= ate_high_disp:
         st.warning("Confidence interval crosses zero, so this estimate is directionally uncertain.")
 
     st.subheader("Section 2 — Effect by Terrain")
-    _render_terrain_chart(terrain_effects, mean_cbrt_watts=mean_cbrt_watts, comparison_label=comparison_label)
+    _render_terrain_chart(terrain_effects, mean_cbrt_watts=mean_cbrt_watts, comparison_label=comparison_label, speed_unit=speed_unit)
 
     st.subheader("Section 3 — What Did We Control For")
     _render_control_chart(shap_importances)
