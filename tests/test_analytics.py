@@ -17,7 +17,7 @@ class PowerNormalizedProfileTests(unittest.TestCase):
                 "bike_name": ["Bike A", "Bike B", "Bike A", "Bike B"],
                 "segment_type": ["flat", "flat", "ascent", "ascent"],
                 "segment_type_detail": ["flat_short", "flat_short", "ascent_steep", "ascent_steep"],
-                "speed_per_watt": [0.10, 0.11, 0.08, 0.09],
+                "speed_per_cbrt_watt": [0.10, 0.11, 0.08, 0.09],
             }
         )
 
