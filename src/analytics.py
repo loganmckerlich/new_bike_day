@@ -211,3 +211,53 @@ def outlier_detection_frames(
     filtered, annotated = filter_outliers_by_power_speed(seg_efforts, z_threshold=z_threshold)
     raw = seg_efforts.copy()
     return raw, annotated, filtered
+
+
+def apply_min_watts_filter(
+    df: pd.DataFrame,
+    min_watts: int,
+    *,
+    descents_exempt: bool = False,
+    segments_df: pd.DataFrame | None = None,
+) -> pd.DataFrame:
+    """Filter efforts below a minimum power threshold.
+
+    Parameters
+    ----------
+    df:
+        Efforts DataFrame. Must have an ``average_watts`` column.  If
+        ``descents_exempt`` is True, the DataFrame should also have a
+        ``segment_type`` column (or it can be joined from *segments_df*).
+    min_watts:
+        Minimum average watts required to keep an effort.  Pass ``0`` (or a
+        negative value) to skip filtering entirely.
+    descents_exempt:
+        When True, efforts on descent segments bypass the watts threshold.
+    segments_df:
+        Optional segments DataFrame used to join ``segment_type`` onto *df*
+        when the column is not already present.
+
+    Returns
+    -------
+    pd.DataFrame
+        Filtered copy of *df*.
+    """
+    if min_watts <= 0 or "average_watts" not in df.columns:
+        return df
+
+    if descents_exempt:
+        # Use a separate variable for the potentially-merged frame so it is
+        # clear when we are working on a copy versus the original df.
+        type_frame = df
+        if "segment_type" not in type_frame.columns and segments_df is not None and not segments_df.empty:
+            _seg_types = segments_df[["segment_id", "segment_type"]].drop_duplicates("segment_id")
+            # Merge produces a new aligned frame; original df is unchanged.
+            type_frame = df.merge(_seg_types, on="segment_id", how="left")
+        if "segment_type" in type_frame.columns:
+            is_descent = type_frame["segment_type"] == "descent"
+            mask = (type_frame["average_watts"] >= min_watts) | is_descent
+            # When type_frame diverges from df (merge added columns) use
+            # mask.values for positional alignment back onto df.
+            return df[mask.values].copy() if type_frame is not df else df[mask].copy()
+
+    return df[df["average_watts"] >= min_watts].copy()
