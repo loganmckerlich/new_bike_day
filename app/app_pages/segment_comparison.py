@@ -325,7 +325,7 @@ available_bikes = sorted(watt_efforts["bike_name"].dropna().unique().tolist())
 
 # ── Sidebar: analysis settings ────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("### ⚙️ Analysis settings")
+    st.markdown("### 📊 Segment settings")
 
     if len(available_bikes) < 2:
         st.warning(
@@ -343,22 +343,6 @@ with st.sidebar:
         help="Both bikes must have at least this many power-measured rides on a segment.",
     )
 
-    z_threshold = st.slider(
-        "Outlier z-score threshold (standard deviations)",
-        min_value=0.25,
-        max_value=3.5,
-        value=2.0,
-        step=0.25,
-        key="outlier_z_threshold",
-        help=(
-            "Z-score = how many standard deviations an effort's speed/W\u00b9\u141f\u00b3 sits from "
-            "that bike's mean on this segment. Because speed scales as the cube root of power "
-            "(v \u221d P^\u00b9\u141f\u00b3), this ratio is approximately constant for a given bike and conditions. "
-            "Efforts beyond this threshold are removed as likely outliers (drafting, headwind, etc.). "
-            "Lower = more aggressive filtering."
-        ),
-    )
-
     spider_use_subcategories = st.toggle(
         "Use subcategories in spider charts",
         value=False,
@@ -373,9 +357,31 @@ with st.sidebar:
         help="Select 2–5 bikes to compare.",
     )
 
+# ── Read shared analysis params from session state ────────────────────────────
+z_threshold: float = float(st.session_state.get("outlier_z_threshold", 2.0))
+exclude_descents: bool = bool(st.session_state.get("exclude_descents", False))
+min_watts: int = int(st.session_state.get("min_watts", 0))
+descents_exempt_watts: bool = bool(st.session_state.get("descents_exempt_watts", False))
+
 if len(bikes_to_compare) < 2:
     st.warning("Please select at least **2 bikes** in the sidebar to compare.")
     st.stop()
+
+# ── Apply shared analysis filters ─────────────────────────────────────────────
+# Minimum watts filter (with optional descent exemption)
+if min_watts > 0:
+    _is_descent = watt_efforts.get("segment_type", pd.Series("flat", index=watt_efforts.index)) == "descent"
+    if descents_exempt_watts:
+        watt_efforts = watt_efforts[
+            (watt_efforts["average_watts"] >= min_watts) | _is_descent
+        ].copy()
+    else:
+        watt_efforts = watt_efforts[watt_efforts["average_watts"] >= min_watts].copy()
+
+# Exclude descent segments entirely
+if exclude_descents:
+    _seg_type = watt_efforts.get("segment_type", pd.Series("flat", index=watt_efforts.index))
+    watt_efforts = watt_efforts[_seg_type != "descent"].copy()
 
 # ── Compute valid segments ────────────────────────────────────────────────────
 selected_efforts = watt_efforts[watt_efforts["bike_name"].isin(bikes_to_compare)].copy()

@@ -574,7 +574,7 @@ def get_athlete_bikes(
     *,
     gear_to_activity: Optional[dict[str, int]] = None,
     _http: Any = None,
-) -> tuple[dict[str, str], dict[str, float]]:
+) -> tuple[dict[str, str], dict[str, float], Optional[int]]:
     """Resolve gear_id → bike name using two strategies in order.
 
     **Strategy 1** — ``GET /athlete``: returns the full bike list when the token
@@ -593,8 +593,9 @@ def get_athlete_bikes(
         _http: HTTP session override (defaults to :class:`_LoggingSession`).
 
     Returns:
-        Dict mapping gear_id (e.g. ``"b1234567"``) to a human-readable name.
-        Returns an empty dict if both strategies fail or produce no results.
+        Tuple of (bikes dict, distances dict, ftp). bikes maps gear_id to bike
+        name. ftp is the athlete's FTP in watts, or None if unavailable.
+        Returns empty dicts and None if both strategies fail or produce no results.
     """
     if _http is None:
         _http = _LoggingSession()
@@ -604,7 +605,8 @@ def get_athlete_bikes(
     try:
         resp = _http.get(f"{_STRAVA_API_BASE}/athlete", headers=headers, timeout=30)
         resp.raise_for_status()
-        bikes_list: list[dict[str, Any]] = resp.json().get("bikes") or []
+        athlete_data = resp.json()
+        bikes_list: list[dict[str, Any]] = athlete_data.get("bikes") or []
         bikes = {
             str(b["id"]): b.get("name") or b.get("model_name") or str(b["id"])
             for b in bikes_list
@@ -615,14 +617,16 @@ def get_athlete_bikes(
             for b in bikes_list
             if b.get("id") and b.get("converted_distance") is not None
         }
+        raw_ftp = athlete_data.get("ftp")
+        ftp: Optional[int] = int(raw_ftp) if raw_ftp is not None else None
         if bikes:
-            return bikes, distances
+            return bikes, distances, ftp
     except requests.RequestException:
         pass
 
     # Strategy 2: one GET /activities/{id} per unique gear_id
     if not gear_to_activity:
-        return {}, {}
+        return {}, {}, None
     result: dict[str, str] = {}
     for gear_id, activity_id in gear_to_activity.items():
         try:
@@ -637,7 +641,7 @@ def get_athlete_bikes(
             result[str(gear_id)] = name
         except requests.RequestException:
             pass
-    return result, {}
+    return result, {}, None
 
 
 def ingest_all(
@@ -691,7 +695,7 @@ def ingest_all(
         gid = act_data.get("gear_id")
         if gid and gid not in gear_to_activity:
             gear_to_activity[gid] = act_id
-    bikes, bike_distances = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity, _http=_http)
+    bikes, bike_distances, ftp = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity, _http=_http)
 
     # Step 3: starred segments
     _progress("⭐ GET /segments/starred — fetching your starred segments…", 35)
@@ -726,4 +730,4 @@ def ingest_all(
     elif not efforts.empty:
         efforts["gear_id"] = None
 
-    return {"bikes": bikes, "bike_distances": bike_distances, "segments": segments_df, "efforts": efforts}
+    return {"bikes": bikes, "bike_distances": bike_distances, "ftp": ftp, "segments": segments_df, "efforts": efforts}

@@ -141,22 +141,11 @@ def main() -> None:
         "Estimate the direct speed-per-cbrt-watt impact between two bikes with doubly robust causal inference."
     )
 
-    with st.sidebar:
-        st.markdown("### ⚙️ Analysis settings")
-        z_threshold = st.slider(
-            "Outlier z-score threshold (standard deviations)",
-            min_value=0.25,
-            max_value=3.5,
-            value=2.0,
-            step=0.25,
-            key="outlier_z_threshold",
-            help=(
-                "Z-score = how many standard deviations an effort's speed/W\u00b9\u141f\u00b3 sits from "
-                "that bike's mean on this segment. "
-                "Efforts beyond this threshold are removed as likely outliers. "
-                "Lower = more aggressive filtering. Shared with Segment comparison page."
-            ),
-        )
+    # ── Read shared analysis params from session state ─────────────────────────
+    z_threshold: float = float(st.session_state.get("outlier_z_threshold", 2.0))
+    exclude_descents: bool = bool(st.session_state.get("exclude_descents", False))
+    min_watts: int = int(st.session_state.get("min_watts", 0))
+    descents_exempt_watts: bool = bool(st.session_state.get("descents_exempt_watts", False))
 
     efforts: pd.DataFrame | None = st.session_state.get("efforts")
     segments: pd.DataFrame | None = st.session_state.get("segments")
@@ -192,8 +181,6 @@ def main() -> None:
         default_new_idx = 1 if len(gear_options) > 1 else 0
         new_gear_id = st.selectbox("Bike Two", options=gear_options, format_func=lambda g: gear_labels[g], index=default_new_idx)
 
-    exclude_descents = st.checkbox("Exclude descent segments", value=False)
-
     if old_gear_id == new_gear_id:
         st.warning("Select two different bikes.")
         st.stop()
@@ -208,6 +195,20 @@ def main() -> None:
         .map({str(old_gear_id): baseline_label, str(new_gear_id): comparison_label})
         .fillna("Unknown")
     )
+
+    # Apply min_watts filter (with optional descent exemption)
+    if min_watts > 0 and "average_watts" in selected_efforts_raw.columns:
+        if descents_exempt_watts and "segment_id" in selected_efforts_raw.columns and not segments.empty:
+            _seg_types = segments[["segment_id", "segment_type"]].drop_duplicates("segment_id")
+            _raw_with_type = selected_efforts_raw.merge(_seg_types, on="segment_id", how="left")
+            _is_descent = _raw_with_type.get("segment_type", pd.Series("flat", index=_raw_with_type.index)) == "descent"
+            _keep = (_raw_with_type["average_watts"] >= min_watts) | _is_descent
+            selected_efforts_raw = selected_efforts_raw[_keep.values].copy()
+        else:
+            selected_efforts_raw = selected_efforts_raw[
+                selected_efforts_raw["average_watts"] >= min_watts
+            ].copy()
+
     n_treated_raw = int(selected_efforts_raw["is_new_bike"].sum())
     n_control_raw = int((selected_efforts_raw["is_new_bike"] == 0).sum())
     selected_efforts, n_outliers = remove_outliers_for_causal_analysis(

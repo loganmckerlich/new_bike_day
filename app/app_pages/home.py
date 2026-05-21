@@ -64,7 +64,7 @@ def _process_data(
     access_token: str,
     *,
     force_refresh: bool = False,
-) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float]]:
+) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float], int | None]:
     if force_refresh:
         clear_efforts()
         clear_segments()
@@ -80,8 +80,9 @@ def _process_data(
 
         efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
         bike_distances: dict[str, float] = result.get("bike_distances", {})
+        ftp: int | None = result.get("ftp")
         _save_to_db(efforts, segments, bikes, bike_distances)
-        return efforts, segments, bikes, bike_distances
+        return efforts, segments, bikes, bike_distances, ftp
 
     cached = _load_from_db()
     if cached is not None:
@@ -97,20 +98,21 @@ def _process_data(
                     .set_index("gear_id")["activity_id"]
                     .to_dict()
                 )
-                bikes, bike_distances = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity)
+                bikes, bike_distances, _ = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity)
                 if bikes:
                     save_bikes(bikes, bike_distances)
             except Exception:
                 pass
-        return efforts, segments, bikes, bike_distances
+        return efforts, segments, bikes, bike_distances, None
 
     with st.spinner("⏳ Fetching your Strava data for the first time…"):
         result = ingest_all(access_token)
 
     efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
     bike_distances = result.get("bike_distances", {})
+    ftp = result.get("ftp")
     _save_to_db(efforts, segments, bikes, bike_distances)
-    return efforts, segments, bikes, bike_distances
+    return efforts, segments, bikes, bike_distances, ftp
 
 
 def _query_param_value(value: object) -> str | None:
@@ -347,12 +349,15 @@ def _save_session(
     code: str | None,
     access_token: str,
     bike_distances: dict[str, float] | None = None,
+    ftp: int | None = None,
 ) -> None:
     st.session_state["efforts"] = data
     st.session_state["segments"] = segments
     st.session_state["bikes"] = bikes
     st.session_state["bike_distances"] = bike_distances or {}
     st.session_state["access_token"] = access_token
+    if ftp is not None:
+        st.session_state["ftp"] = ftp
     if code:
         st.session_state["last_processed_code"] = code
 
@@ -411,6 +416,7 @@ def main() -> None:
             code=None,
             access_token="",
             bike_distances=result.get("bike_distances", {}),
+            ftp=result.get("ftp"),
         )
         data = st.session_state.get("efforts")
         segments = st.session_state.get("segments", pd.DataFrame())
@@ -459,7 +465,7 @@ def main() -> None:
                     st.error(f"Unable to exchange token: {exc}")
                     return
             try:
-                data, gear_frame, bikes, bike_distances = _process_data(access_token=access_token)
+                data, gear_frame, bikes, bike_distances, ftp = _process_data(access_token=access_token)
             except PremiumOnlyError as exc:
                 st.error(str(exc))
                 return
@@ -467,7 +473,7 @@ def main() -> None:
                 traceback.print_exc(file=sys.stderr)
                 st.error(f"Unable to process data: {exc}")
                 return
-            _save_session(data, gear_frame, bikes, code, access_token, bike_distances)
+            _save_session(data, gear_frame, bikes, code, access_token, bike_distances, ftp)
             with status_col:
                 st.success("✅ Connected to Strava — data loaded!")
         else:
@@ -491,7 +497,7 @@ def main() -> None:
                 st.warning("Please authorize with Strava first.")
                 return
             try:
-                data, gear_frame, bikes, bike_distances = _process_data(
+                data, gear_frame, bikes, bike_distances, ftp = _process_data(
                     access_token=access_token,
                     force_refresh=True,
                 )
@@ -502,7 +508,7 @@ def main() -> None:
                 traceback.print_exc(file=sys.stderr)
                 st.error(f"Unable to process data: {exc}")
                 return
-            _save_session(data, gear_frame, bikes, code, access_token, bike_distances)
+            _save_session(data, gear_frame, bikes, code, access_token, bike_distances, ftp)
             st.success("Activities reloaded.")
 
     data = st.session_state.get("efforts")
