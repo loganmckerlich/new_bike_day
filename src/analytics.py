@@ -270,3 +270,5 @@ def apply_min_watts_filter(
             return df[mask.values].copy() if type_frame is not df else df[mask].copy()
 
     return df[df["average_watts"] >= min_watts].copy()
+
+# Force module reload for Streamlit Cloud cache
