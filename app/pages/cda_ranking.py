@@ -35,6 +35,7 @@ def _gear_label(gear_id: str, bikes: dict[str, str]) -> str:
 def main() -> None:
     """Render the CdA ranking page."""
     st.title("🌬️ CdA Ranking")
+    st.warning("⚠️ WORK IN PROGRESS", icon="🚧")
     st.markdown(
         "Estimate the aerodynamic drag coefficient (CdA) per bike from flat segment efforts. "
         "A lower CdA means a more aerodynamic position."
@@ -211,7 +212,7 @@ def main() -> None:
         xaxis={"showgrid": True, "zeroline": False},
         margin={"t": 60, "b": 40, "l": 20, "r": 20},
     )
-    st.plotly_chart(fig_rank, use_container_width=True)
+    st.plotly_chart(fig_rank, width='stretch')
     st.caption("Marker size = number of flat efforts. Error bars = ± 1 std.")
 
     # ── Section 2 — Supporting Detail ─────────────────────────────────────
@@ -236,7 +237,7 @@ def main() -> None:
             }
         ),
         hide_index=True,
-        use_container_width=True,
+        width='stretch',
     )
 
     st.markdown("#### Plain English Interpretation")
@@ -277,7 +278,7 @@ def main() -> None:
             xaxis_title="Date",
             legend={"orientation": "h", "y": -0.25},
         )
-        st.plotly_chart(fig_ts, use_container_width=True)
+        st.plotly_chart(fig_ts, width='stretch')
     else:
         st.info("No individual CdA estimates to display.")
 

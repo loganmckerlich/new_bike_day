@@ -94,8 +94,8 @@ def estimate_cda(
 
     total_mass_kg = rider_mass_kg + bike_mass_kg
 
-    # Merge efforts with segment metadata to get segment_type_detail
-    seg_cols = [c for c in ("segment_id", "segment_type_detail") if c in segments.columns]
+    # Merge efforts with segment metadata to get segment_type_detail and distance
+    seg_cols = [c for c in ("segment_id", "segment_type_detail", "distance") if c in segments.columns]
     merged = efforts.merge(segments[seg_cols], on="segment_id", how="left")
 
     # Filter to flat segments only
@@ -125,6 +125,12 @@ def estimate_cda(
 
     # Compute air density from temperature
     flat["rho"] = _RHO_STD * (_T0 / (_T0 + flat["temp_c"]))
+
+    # Derive speed from segment distance + moving_time when not already present
+    if "average_speed_mps" not in flat.columns:
+        moving_time = pd.to_numeric(flat.get("moving_time"), errors="coerce")
+        seg_dist = pd.to_numeric(flat.get("distance"), errors="coerce")
+        flat["average_speed_mps"] = seg_dist / moving_time
 
     # Ensure required columns exist and are numeric
     for col in ("average_watts", "average_speed_mps"):
@@ -207,7 +213,7 @@ def count_impossible_cda(
 
     total_mass_kg = rider_mass_kg + bike_mass_kg
 
-    seg_cols = [c for c in ("segment_id", "segment_type_detail") if c in segments.columns]
+    seg_cols = [c for c in ("segment_id", "segment_type_detail", "distance") if c in segments.columns]
     merged = efforts.merge(segments[seg_cols], on="segment_id", how="left")
     flat = merged[merged["segment_type_detail"].isin(_FLAT_TYPES)].copy()
     if flat.empty:
@@ -220,6 +226,12 @@ def count_impossible_cda(
         flat["temp_c"] = flat["temp_c"].fillna(18.0)
 
     flat["rho"] = _RHO_STD * (_T0 / (_T0 + flat["temp_c"]))
+
+    # Derive speed from segment distance + moving_time when not already present
+    if "average_speed_mps" not in flat.columns:
+        moving_time = pd.to_numeric(flat.get("moving_time"), errors="coerce")
+        seg_dist = pd.to_numeric(flat.get("distance"), errors="coerce")
+        flat["average_speed_mps"] = seg_dist / moving_time
 
     for col in ("average_watts", "average_speed_mps"):
         flat[col] = pd.to_numeric(flat[col], errors="coerce")
