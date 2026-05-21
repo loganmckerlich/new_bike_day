@@ -24,6 +24,7 @@ from src.analytics import (
     mean_profile_by_segment_type,
     power_normalized_profile,
     outlier_detection_frames,
+    apply_min_watts_filter,
 )
 
 # ── Session state ─────────────────────────────────────────────────────────────
@@ -368,20 +369,18 @@ if len(bikes_to_compare) < 2:
     st.stop()
 
 # ── Apply shared analysis filters ─────────────────────────────────────────────
-# Minimum watts filter (with optional descent exemption)
-if min_watts > 0:
-    _is_descent = watt_efforts.get("segment_type", pd.Series("flat", index=watt_efforts.index)) == "descent"
-    if descents_exempt_watts:
-        watt_efforts = watt_efforts[
-            (watt_efforts["average_watts"] >= min_watts) | _is_descent
-        ].copy()
-    else:
-        watt_efforts = watt_efforts[watt_efforts["average_watts"] >= min_watts].copy()
+# Minimum watts filter (with optional descent exemption).
+# watt_efforts already has segment_type merged in (line ~321), so segments_df
+# is not needed here — apply_min_watts_filter will use the existing column.
+watt_efforts = apply_min_watts_filter(
+    watt_efforts,
+    min_watts,
+    descents_exempt=descents_exempt_watts,
+)
 
 # Exclude descent segments entirely
-if exclude_descents:
-    _seg_type = watt_efforts.get("segment_type", pd.Series("flat", index=watt_efforts.index))
-    watt_efforts = watt_efforts[_seg_type != "descent"].copy()
+if exclude_descents and "segment_type" in watt_efforts.columns:
+    watt_efforts = watt_efforts[watt_efforts["segment_type"] != "descent"].copy()
 
 # ── Compute valid segments ────────────────────────────────────────────────────
 selected_efforts = watt_efforts[watt_efforts["bike_name"].isin(bikes_to_compare)].copy()

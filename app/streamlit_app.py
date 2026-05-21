@@ -37,7 +37,7 @@ with st.sidebar:
         step=0.25,
         key="outlier_z_threshold",
         help=(
-            "Z-score = how many standard deviations an effort's speed/W¹ᐟ³ sits "
+            "Z-score = how many standard deviations an effort's speed/W^(1/3) sits "
             "from that bike's mean on this segment. Efforts beyond this threshold "
             "are removed as outliers. Lower = more aggressive filtering. "
             "Applies to both Segment comparison and Causal analysis."
@@ -46,7 +46,7 @@ with st.sidebar:
 
     # Minimum watts — efforts below this threshold are excluded
     ftp: int | None = st.session_state.get("ftp")
-    _default_min_watts = int(round(ftp * 0.75)) if ftp else 0
+    _default_min_watts = int(round(ftp * 0.75)) if ftp is not None and ftp > 0 else 0
     st.session_state.setdefault("min_watts", _default_min_watts)
     st.number_input(
         "Minimum watts",

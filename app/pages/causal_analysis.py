@@ -22,6 +22,7 @@ from src.causal_inference import (
     get_shap_importances,
     remove_outliers_for_causal_analysis,
 )
+from src.analytics import apply_min_watts_filter
 
 
 def _use_metric() -> bool:
@@ -197,17 +198,12 @@ def main() -> None:
     )
 
     # Apply min_watts filter (with optional descent exemption)
-    if min_watts > 0 and "average_watts" in selected_efforts_raw.columns:
-        if descents_exempt_watts and "segment_id" in selected_efforts_raw.columns and not segments.empty:
-            _seg_types = segments[["segment_id", "segment_type"]].drop_duplicates("segment_id")
-            _raw_with_type = selected_efforts_raw.merge(_seg_types, on="segment_id", how="left")
-            _is_descent = _raw_with_type.get("segment_type", pd.Series("flat", index=_raw_with_type.index)) == "descent"
-            _keep = (_raw_with_type["average_watts"] >= min_watts) | _is_descent
-            selected_efforts_raw = selected_efforts_raw[_keep.values].copy()
-        else:
-            selected_efforts_raw = selected_efforts_raw[
-                selected_efforts_raw["average_watts"] >= min_watts
-            ].copy()
+    selected_efforts_raw = apply_min_watts_filter(
+        selected_efforts_raw,
+        min_watts,
+        descents_exempt=descents_exempt_watts,
+        segments_df=segments,
+    )
 
     n_treated_raw = int(selected_efforts_raw["is_new_bike"].sum())
     n_control_raw = int((selected_efforts_raw["is_new_bike"] == 0).sum())
