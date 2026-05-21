@@ -5,6 +5,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -21,8 +22,6 @@ from src.causal_inference import (
     get_shap_importances,
     remove_outliers_for_causal_analysis,
 )
-
-_CAUSAL_OUTLIER_Z_THRESHOLD = 2.0
 
 
 def _gear_label(gear_id: str, bikes: dict[str, str]) -> str:
@@ -54,16 +53,16 @@ def _effect_text(
     )
 
 
-def _render_terrain_chart(terrain_df: pd.DataFrame, mean_watts: float, comparison_label: str) -> None:
+def _render_terrain_chart(terrain_df: pd.DataFrame, mean_cbrt_watts: float, comparison_label: str) -> None:
     """Render terrain-specific effect chart with confidence intervals."""
     if terrain_df.empty:
         st.info("Not enough terrain-specific coverage to estimate heterogeneous effects yet.")
         return
 
     terrain_df = terrain_df.copy()
-    terrain_df["ate_kmh"] = terrain_df["ate"] * mean_watts * 3.6
-    terrain_df["ate_lower_kmh"] = terrain_df["ate_lower"] * mean_watts * 3.6
-    terrain_df["ate_upper_kmh"] = terrain_df["ate_upper"] * mean_watts * 3.6
+    terrain_df["ate_kmh"] = terrain_df["ate"] * mean_cbrt_watts
+    terrain_df["ate_lower_kmh"] = terrain_df["ate_lower"] * mean_cbrt_watts
+    terrain_df["ate_upper_kmh"] = terrain_df["ate_upper"] * mean_cbrt_watts
     terrain_df["color"] = terrain_df["ate_kmh"].apply(lambda x: "Faster" if x >= 0 else "Slower")
     terrain_df["err_plus"] = terrain_df["ate_upper_kmh"] - terrain_df["ate_kmh"]
     terrain_df["err_minus"] = terrain_df["ate_kmh"] - terrain_df["ate_lower_kmh"]
@@ -117,8 +116,25 @@ def main() -> None:
     """Render the causal analysis workflow and results."""
     st.title("🧪 Causal analysis")
     st.markdown(
-        "Estimate the direct speed-per-watt impact between two bikes with doubly robust causal inference."
+        "Estimate the direct speed-per-cbrt-watt impact between two bikes with doubly robust causal inference."
     )
+
+    with st.sidebar:
+        st.markdown("### ⚙️ Analysis settings")
+        z_threshold = st.slider(
+            "Outlier z-score threshold (standard deviations)",
+            min_value=0.25,
+            max_value=3.5,
+            value=2.0,
+            step=0.25,
+            key="outlier_z_threshold",
+            help=(
+                "Z-score = how many standard deviations an effort's speed/W\u00b9\u141f\u00b3 sits from "
+                "that bike's mean on this segment. "
+                "Efforts beyond this threshold are removed as likely outliers. "
+                "Lower = more aggressive filtering. Shared with Segment comparison page."
+            ),
+        )
 
     efforts: pd.DataFrame | None = st.session_state.get("efforts")
     segments: pd.DataFrame | None = st.session_state.get("segments")
@@ -149,10 +165,12 @@ def main() -> None:
 
     col_old, col_new = st.columns(2)
     with col_old:
-        old_gear_id = st.selectbox("Baseline bike", options=gear_options, format_func=lambda g: gear_labels[g], index=0)
+        old_gear_id = st.selectbox("Bike One", options=gear_options, format_func=lambda g: gear_labels[g], index=0)
     with col_new:
         default_new_idx = 1 if len(gear_options) > 1 else 0
-        new_gear_id = st.selectbox("Comparison bike", options=gear_options, format_func=lambda g: gear_labels[g], index=default_new_idx)
+        new_gear_id = st.selectbox("Bike Two", options=gear_options, format_func=lambda g: gear_labels[g], index=default_new_idx)
+
+    exclude_descents = st.checkbox("Exclude descent segments", value=False)
 
     if old_gear_id == new_gear_id:
         st.warning("Select two different bikes.")
@@ -172,7 +190,8 @@ def main() -> None:
     n_control_raw = int((selected_efforts_raw["is_new_bike"] == 0).sum())
     selected_efforts, n_outliers = remove_outliers_for_causal_analysis(
         selected_efforts_raw,
-        z_threshold=_CAUSAL_OUTLIER_Z_THRESHOLD,
+        z_threshold=z_threshold,
+        segments_df=segments,
     )
     n_treated_clean = int(selected_efforts["is_new_bike"].sum())
     n_control_clean = int((selected_efforts["is_new_bike"] == 0).sum())
@@ -180,11 +199,13 @@ def main() -> None:
         st.warning(
             "Guardrail: at least 30 non-outlier efforts are required for each bike before running the model "
             f"({comparison_label}={n_treated_clean}, {baseline_label}={n_control_clean}; "
-            f"outliers removed={n_outliers}, z-threshold={_CAUSAL_OUTLIER_Z_THRESHOLD:.1f})."
+            f"outliers removed={n_outliers}, z-threshold={z_threshold:.1f})."
         )
         st.stop()
 
     features = build_feature_matrix(selected_efforts, segments)
+    if exclude_descents and "segment_type" in features.columns:
+        features = features[features["segment_type"] != "descent"].copy()
     if features.empty:
         st.warning("No valid rows after filtering (requires average_watts >= 50 and complete joins).")
         st.stop()
@@ -202,18 +223,19 @@ def main() -> None:
     mean_watts = float(features["average_watts"].mean())
     if pd.isna(mean_watts) or mean_watts <= 0:
         mean_watts = 1.0
-    ate_kmh = ate_result["ate"] * mean_watts * 3.6
-    ate_low_kmh = ate_result["ate_lower"] * mean_watts * 3.6
-    ate_high_kmh = ate_result["ate_upper"] * mean_watts * 3.6
+    mean_cbrt_watts = float(np.cbrt(mean_watts))
+    ate_kmh = ate_result["ate"] * mean_cbrt_watts
+    ate_low_kmh = ate_result["ate_lower"] * mean_cbrt_watts
+    ate_high_kmh = ate_result["ate_upper"] * mean_cbrt_watts
     terrain_effects = estimate_heterogeneous_effects(features)
     shap_importances = get_shap_importances(features)
 
     with st.expander("How this works", expanded=False):
         st.markdown(
             f"### 1) Define the comparison\n"
-            f"- **Baseline:** {baseline_label}\n"
-            f"- **Comparison:** {comparison_label}\n"
-            "Every effort from the comparison bike gets treatment = 1 and every effort from the baseline bike gets treatment = 0."
+            f"- **Bike One:** {baseline_label}\n"
+            f"- **Bike Two:** {comparison_label}\n"
+            "Every effort from Bike Two gets treatment = 1 and every effort from Bike One gets treatment = 0."
         )
         _sample_counts = (
             selected_efforts.assign(
@@ -239,8 +261,8 @@ def main() -> None:
 
         st.markdown("### 2) Remove outlier efforts")
         st.markdown(
-            "Using the same method as **Segment comparison**, we compute speed per watt for each effort "
-            "and remove efforts beyond ±2 standard deviations from that bike's segment-level mean."
+            f"Using the same method as **Segment comparison**, we compute speed per ∛watt for each effort "
+            f"and remove efforts beyond ±{z_threshold} standard deviations from that bike's segment-level mean."
         )
         st.caption(
             f"Raw efforts: {len(selected_efforts_raw)} • Removed outliers: {n_outliers} • "
@@ -249,13 +271,13 @@ def main() -> None:
 
         st.markdown("### 3) Build an apples-to-apples feature matrix")
         st.markdown(
-            "Each row keeps the measured output (**speed per watt**) plus confounders "
+            "Each row keeps the measured output (**speed per ∛watt**) plus confounders "
             "(weather, road geometry, gradient, terrain) so we compare similar conditions."
         )
         _preview_cols = [
             "bike_name",
             "is_new_bike",
-            "speed_per_watt",
+            "speed_per_cbrt_watt",
             "average_watts",
             "headwind_component",
             "temp_c",
@@ -268,11 +290,11 @@ def main() -> None:
         _fig_overlap = px.scatter(
             features,
             x="average_watts",
-            y="speed_per_watt",
+            y="speed_per_cbrt_watt",
             color="bike_name",
             trendline="lowess",
-            labels={"average_watts": "Avg power (W)", "speed_per_watt": "Speed per watt (m/s/W)", "bike_name": "Bike"},
-            title="Observed speed-per-watt at similar power outputs",
+            labels={"average_watts": "Avg power (W)", "speed_per_cbrt_watt": "Speed / ∛power (km/h / W^⅓)", "bike_name": "Bike"},
+            title="Observed speed-per-cbrt-watt at similar power outputs",
         )
         _fig_overlap.update_layout(plot_bgcolor="rgba(0,0,0,0)")
         st.plotly_chart(_fig_overlap, width="stretch")
@@ -343,14 +365,14 @@ def main() -> None:
     )
     st.caption(
         f"Model samples: treated={ate_result['n_treated']}, control={ate_result['n_control']} "
-        f"(after removing {n_outliers} outlier effort(s), z-threshold={_CAUSAL_OUTLIER_Z_THRESHOLD:.1f})."
+        f"(after removing {n_outliers} outlier effort(s), z-threshold={z_threshold:.1f})."
     )
 
     if ate_low_kmh <= 0 <= ate_high_kmh:
         st.warning("Confidence interval crosses zero, so this estimate is directionally uncertain.")
 
     st.subheader("Section 2 — Effect by Terrain")
-    _render_terrain_chart(terrain_effects, mean_watts=mean_watts, comparison_label=comparison_label)
+    _render_terrain_chart(terrain_effects, mean_cbrt_watts=mean_cbrt_watts, comparison_label=comparison_label)
 
     st.subheader("Section 3 — What Did We Control For")
     _render_control_chart(shap_importances)

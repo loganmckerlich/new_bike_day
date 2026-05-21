@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
@@ -344,14 +345,16 @@ with st.sidebar:
 
     z_threshold = st.slider(
         "Outlier z-score threshold (standard deviations)",
-        min_value=1.0,
+        min_value=0.25,
         max_value=3.5,
         value=2.0,
-        step=0.5,
+        step=0.25,
+        key="outlier_z_threshold",
         help=(
-            "Z-score = how many standard deviations an effort's speed/W sits from "
-            "that bike's mean on this segment. Efforts beyond this threshold are removed "
-            "as likely outliers (drafting, headwind, etc.). "
+            "Z-score = how many standard deviations an effort's speed/W\u00b9\u141f\u00b3 sits from "
+            "that bike's mean on this segment. Because speed scales as the cube root of power "
+            "(v \u221d P^\u00b9\u141f\u00b3), this ratio is approximately constant for a given bike and conditions. "
+            "Efforts beyond this threshold are removed as likely outliers (drafting, headwind, etc.). "
             "Lower = more aggressive filtering."
         ),
     )
@@ -408,10 +411,10 @@ bikes_label = " vs ".join(f"**{b}**" for b in bikes_to_compare)
 # ── Performance profile (spider charts) ──────────────────────────────────────
 st.subheader("Performance profile")
 st.caption(
-    f"{bikes_label} — left chart shows raw speed by segment "
-    f"{'subcategory' if spider_use_subcategories else 'type'}; "
-    "right chart shows speed per watt (power-normalised efficiency) "
-    "after removing outlier efforts."
+    f"{bikes_label} — axes are normalised (0–100) so the full chart area is used; "
+    "gaps between bikes are proportional to real differences. "
+    "Left shows speed, right shows speed / W\u00b9\u2044\u00b3 (power-normalised efficiency using cube-root scaling). "
+    "Hover to see actual values."
 )
 
 spider_efforts = selected_efforts[selected_efforts["segment_id"].isin(valid_segment_ids)].copy()
@@ -438,25 +441,53 @@ speed_profile = mean_profile_by_segment_type(
 
 _spd = _spd_label()
 
+
+def _normalize_profile(profile: dict[str, list[float]]) -> dict[str, list[float]]:
+    """Global min-max normalize so all values map to [0, 100].
+
+    Using a single global scale across all bikes and dimensions preserves the
+    proportional gaps between bikes: if bike A is 10 km/h faster on sprints and
+    5 km/h faster on hills, the radial distance on hills will be exactly half
+    that of sprints.
+    """
+    all_vals = [v for vals in profile.values() for v in vals if v is not None and not (v != v)]
+    if not all_vals:
+        return profile
+    lo, hi = min(all_vals), max(all_vals)
+    if hi == lo:
+        return {b: [50.0] * len(vals) for b, vals in profile.items()}
+    return {
+        b: [10.0 + (v - lo) / (hi - lo) * 90 for v in vals]
+        for b, vals in profile.items()
+    }
+
+
+# Convert speed values for display, then normalize for radial position
+speed_display = {b: [_convert_speed(v) for v in speed_profile[b]] for b in bikes_to_compare}
+speed_norm = _normalize_profile(speed_display)
+
 fig_spider = go.Figure()
 for idx, b in enumerate(bikes_to_compare):
-    vals = [_convert_speed(v) for v in speed_profile[b]]
-    vals_closed = vals + [vals[0]]
+    norm_vals = speed_norm[b]
+    raw_vals = speed_display[b]
+    norm_closed = norm_vals + [norm_vals[0]]
+    raw_closed = raw_vals + [raw_vals[0]]
     color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
     fig_spider.add_trace(
         go.Scatterpolar(
-            r=vals_closed,
+            r=norm_closed,
             theta=categories_closed,
             fill="toself",
             name=b,
             line={"color": color, "width": _SPIDER_POLYGON_LINE_WIDTH},
             fillcolor=to_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
-            hovertemplate="%{theta}: %{r:.1f} " + _spd + "<extra>" + b + "</extra>",
+            customdata=[f"{v:.1f} {_spd}" for v in raw_closed],
+            hovertemplate="%{theta}: %{customdata}<extra>" + b + "</extra>",
         )
     )
 fig_spider.update_layout(
     polar={
-        "radialaxis": {"visible": True},
+        "radialaxis": {"visible": True, "tickvals": [0, 25, 50, 75, 100], "ticktext": ["", "", "", "", ""], "range": [0, 100]},
         "angularaxis": {"categoryorder": "array", "categoryarray": categories},
     },
     showlegend=True,
@@ -474,26 +505,32 @@ eff_profile = power_normalized_profile(
     segment_type_col=spider_dimension_col,
 )
 
+eff_display = {b: [_convert_speed(v) for v in eff_profile[b]] for b in bikes_to_compare}
+eff_norm = _normalize_profile(eff_display)
+
 fig_efficiency = go.Figure()
 for idx, b in enumerate(bikes_to_compare):
-    vals = [_convert_speed(v) for v in eff_profile[b]]
-    vals_closed = vals + [vals[0]]
+    norm_vals = eff_norm[b]
+    raw_vals = eff_display[b]
+    norm_closed = norm_vals + [norm_vals[0]]
+    raw_closed = raw_vals + [raw_vals[0]]
     color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
     fig_efficiency.add_trace(
         go.Scatterpolar(
-            r=vals_closed,
+            r=norm_closed,
             theta=categories_closed,
             fill="toself",
             name=b,
             line={"color": color, "width": _SPIDER_POLYGON_LINE_WIDTH},
             fillcolor=to_rgba(color, _SPIDER_POLYGON_FILL_ALPHA),
-            hovertemplate="%{theta}: %{r:.4f} " + _spd + "/W<extra>" + b + "</extra>",
+            customdata=[f"{v:.4f} {_spd}/W\u00b9\u141f\u00b3" for v in raw_closed],
+            hovertemplate="%{theta}: %{customdata}<extra>" + b + "</extra>",
             showlegend=False,
         )
     )
 fig_efficiency.update_layout(
     polar={
-        "radialaxis": {"visible": True},
+        "radialaxis": {"visible": True, "tickvals": [0, 25, 50, 75, 100], "ticktext": ["", "", "", "", ""], "range": [0, 100]},
         "angularaxis": {"categoryorder": "array", "categoryarray": categories},
     },
     showlegend=False,
@@ -541,7 +578,7 @@ with st.expander("🔬 How is this calculated?"):
                 "1 — Raw efforts",
                 "2 — Outlier detection",
                 "3 — After filtering",
-                "4 — Speed per watt",
+                "4 — Efficiency metric",
             ],
             horizontal=True,
             key="explainer_step",
@@ -584,10 +621,12 @@ with st.expander("🔬 How is this calculated?"):
 
         elif _step == "2 — Outlier detection":
             st.caption(
-                f"We compute **speed per watt** (speed ÷ power) for every effort, then flag "
-                f"efforts that deviate more than **{z_threshold:.1f} standard deviations** from the "
-                "segment mean. These are likely drafting behind another rider or riding into a "
-                "strong headwind — situations where the bike isn't the main variable."
+                f"We compute **speed / power\u00b9\u2044\u00b3** (speed ÷ power^\u00b9\u2044\u00b3) for every effort — "
+                "because in aerodynamics speed scales as the cube root of power (v ∝ P^\u00b9\u2044\u00b3), "
+                "this ratio is approximately constant for a given bike and conditions. "
+                f"Efforts that deviate more than **{z_threshold:.1f} standard deviations** from the "
+                "segment mean are flagged as likely outliers (drafting, strong headwind, etc.) — "
+                "situations where the bike isn't the main variable."
             )
             if "is_outlier" not in _annotated.columns:
                 st.info("Not enough efforts to detect outliers on this segment.")
@@ -637,6 +676,48 @@ with st.expander("🔬 How is this calculated?"):
                                     "Z-score: %{text}<extra>" + _dot_name + "</extra>"
                                 ),
                             ))
+                        # Draw speed/W^(1/3) guidelines as curves:
+                        # speed = k × watts^(1/3)  →  k = speed_per_cbrt_watt
+                        _sc_spw = _bdata.dropna(subset=["speed_per_cbrt_watt", "average_watts"])
+                        if len(_sc_spw) >= 2:
+                            _sc_mean = _sc_spw["speed_per_cbrt_watt"].mean()
+                            _sc_std = _sc_spw["speed_per_cbrt_watt"].std(ddof=1)
+                            _sc_lo = _sc_mean - z_threshold * _sc_std
+                            _sc_hi = _sc_mean + z_threshold * _sc_std
+                            _w_min = float(_sc_spw["average_watts"].min())
+                            _w_max = float(_sc_spw["average_watts"].max())
+                            _w_pad = (_w_max - _w_min) * 0.05
+                            _wx = list(np.linspace(_w_min - _w_pad, _w_max + _w_pad, 60))
+                            _wx_rev = list(reversed(_wx))
+                            # ±σ band fill (behind everything) as a curve
+                            _fig_b_sc.add_trace(go.Scatter(
+                                x=_wx + _wx_rev,
+                                y=[_sc_lo * np.cbrt(w) for w in _wx] + [_sc_hi * np.cbrt(w) for w in _wx_rev],
+                                fill="toself",
+                                fillcolor="rgba(239,83,80,0.10)",
+                                line={"width": 0},
+                                hoverinfo="skip",
+                                showlegend=False,
+                            ))
+                            # mean curve
+                            _fig_b_sc.add_trace(go.Scatter(
+                                x=_wx,
+                                y=[_sc_mean * np.cbrt(w) for w in _wx],
+                                mode="lines",
+                                line={"color": "rgba(128,128,128,0.6)", "dash": "dot", "width": 1.5},
+                                name="\u03bc (speed/W\u00b9\u2044\u00b3)",
+                                hovertemplate=f"\u03bc = {_sc_mean:.4f} {_spd_label()}/W\u00b9\u2044\u00b3<extra>mean</extra>",
+                            ))
+                            # ±threshold curves
+                            for _slope, _slabel in [(_sc_lo, f"\u2212{z_threshold:.2g}\u03c3"), (_sc_hi, f"+{z_threshold:.2g}\u03c3")]:
+                                _fig_b_sc.add_trace(go.Scatter(
+                                    x=_wx,
+                                    y=[_slope * np.cbrt(w) for w in _wx],
+                                    mode="lines",
+                                    line={"color": "#ef5350", "dash": "dash", "width": 1.5},
+                                    name=_slabel,
+                                    hovertemplate=f"{_slabel} = {_slope:.4f} {_spd_label()}/W\u00b9\u2044\u00b3<extra>{_slabel}</extra>",
+                                ))
                         _fig_b_sc.update_layout(
                             xaxis_title="Avg power (W)",
                             yaxis_title=f"Speed ({_spd_label()})",
@@ -648,11 +729,11 @@ with st.expander("🔬 How is this calculated?"):
                         st.plotly_chart(_fig_b_sc, width="stretch")
 
                     with _hs_col:
-                        st.markdown(f"Speed/W distribution  ±{z_threshold:.1f}σ cutoff")
-                        _spw_b = _bdata.dropna(subset=["speed_per_watt"])
+                        st.markdown(f"Speed/W\u00b9\u2044\u00b3 distribution  \u00b1{z_threshold:.1f}\u03c3 cutoff")
+                        _spw_b = _bdata.dropna(subset=["speed_per_cbrt_watt"])
                         if len(_spw_b) >= 2:
-                            _b_mean = _spw_b["speed_per_watt"].mean()
-                            _b_std = _spw_b["speed_per_watt"].std(ddof=1)
+                            _b_mean = _spw_b["speed_per_cbrt_watt"].mean()
+                            _b_std = _spw_b["speed_per_cbrt_watt"].std(ddof=1)
                             _b_lo = _b_mean - z_threshold * _b_std
                             _b_hi = _b_mean + z_threshold * _b_std
                             _nbins = max(6, len(_spw_b) // 2)
@@ -666,16 +747,16 @@ with st.expander("🔬 How is this calculated?"):
                                 if _pts_h.empty:
                                     continue
                                 _fig_b_h.add_trace(go.Histogram(
-                                    x=_pts_h["speed_per_watt"],
+                                    x=_pts_h["speed_per_cbrt_watt"],
                                     name=_bar_name,
                                     marker_color=_bar_color,
                                     opacity=0.8,
                                     nbinsx=_nbins,
-                                    hovertemplate="Speed/W: %{x:.4f}<br>Count: %{y}<extra>" + _bar_name + "</extra>",
+                                    hovertemplate="Speed/W\u00b9\u2044\u00b3: %{x:.4f}<br>Count: %{y}<extra>" + _bar_name + "</extra>",
                                 ))
 
-                            _xlo = float(_spw_b["speed_per_watt"].min())
-                            _xhi = float(_spw_b["speed_per_watt"].max())
+                            _xlo = float(_spw_b["speed_per_cbrt_watt"].min())
+                            _xhi = float(_spw_b["speed_per_cbrt_watt"].max())
                             _xpad = max((_xhi - _xlo) * 0.05, 1e-6)
                             for _sx0, _sx1 in [(_xlo - _xpad, _b_lo), (_b_hi, _xhi + _xpad)]:
                                 _fig_b_h.add_vrect(
@@ -696,7 +777,7 @@ with st.expander("🔬 How is this calculated?"):
                             )
                             _fig_b_h.update_layout(
                                 barmode="overlay",
-                                xaxis_title=f"Speed/W ({_spd_label()}/W)",
+                                xaxis_title=f"Speed/W\u00b9\u141f\u00b3 ({_spd_label()}/W\u00b9\u141f\u00b3)",
                                 yaxis_title="Efforts",
                                 plot_bgcolor="rgba(0,0,0,0)",
                                 legend={"orientation": "h", "y": -0.25},
@@ -709,8 +790,8 @@ with st.expander("🔬 How is this calculated?"):
 
                     st.caption(
                         f"🔴 **{_n_b_out} outlier(s)** · 🔵 **{_n_b_kept} kept** "
-                        f"(μ = {_bdata['speed_per_watt'].mean():.4f}, "
-                        f"σ = {_bdata['speed_per_watt'].std(ddof=1):.4f})"
+                        f"(\u03bc = {_bdata['speed_per_cbrt_watt'].mean():.4f}, "
+                        f"\u03c3 = {_bdata['speed_per_cbrt_watt'].std(ddof=1):.4f})"
                     )
                     if _bi < len(_ann_bikes) - 1:
                         st.divider()
@@ -718,7 +799,7 @@ with st.expander("🔬 How is this calculated?"):
         elif _step == "3 — After filtering":
             st.caption(
                 f"After removing the {_n_outliers} outlier(s), **{_n_kept} clean efforts** remain. "
-                "The relationship between power and speed should now be tighter — "
+                "The cube-root curve (speed \u221d power^\u00b9\u2044\u00b3) should now fit the data more tightly — "
                 "these are the efforts we use to compare bikes fairly."
             )
             _fig_flt = px.scatter(
@@ -736,27 +817,28 @@ with st.expander("🔬 How is this calculated?"):
 
         else:  # Step 4
             st.caption(
-                "We divide each effort's speed by its power to get **speed per watt** — "
-                "a single number that captures how fast the bike goes for every watt the rider puts in. "
+                "We divide each effort's speed by **power^\u00b9\u2044\u00b3** to get **speed / W^\u00b9\u2044\u00b3** — "
+                "in aerodynamics, speed scales as the cube root of power (v \u221d P^\u00b9\u2044\u00b3), "
+                "so this ratio is approximately constant for a given bike and conditions. "
                 "A higher value means the bike converts power into speed more efficiently."
             )
-            _spw_data = _filtered_seg.dropna(subset=["speed_per_watt", "bike_name"]).copy()
+            _spw_data = _filtered_seg.dropna(subset=["speed_per_cbrt_watt", "bike_name"]).copy()
             if _spw_data.empty:
-                st.info("Not enough data after filtering to compute speed-per-watt on this segment.")
+                st.info("Not enough data after filtering to compute speed efficiency on this segment.")
             else:
                 _fig_spw = px.box(
                     _spw_data,
                     x="bike_name",
-                    y="speed_per_watt",
+                    y="speed_per_cbrt_watt",
                     color="bike_name",
                     color_discrete_sequence=_COLOR_SEQ,
                     points="all",
-                    labels={"bike_name": "Bike", "speed_per_watt": f"Speed per watt ({_spd_label()}/W)"},
+                    labels={"bike_name": "Bike", "speed_per_cbrt_watt": f"Speed / W\u00b9\u2044\u00b3 ({_spd_label()}/W\u00b9\u2044\u00b3)"},
                 )
                 _fig_spw.update_layout(showlegend=False, plot_bgcolor="rgba(0,0,0,0)", height=380)
                 st.plotly_chart(_fig_spw, width="stretch")
                 _spw_summary = (
-                    _spw_data.groupby("bike_name")["speed_per_watt"]
+                    _spw_data.groupby("bike_name")["speed_per_cbrt_watt"]
                     .agg(["mean", "median", "count"])
                     .rename(columns={"mean": "Mean", "median": "Median", "count": "Efforts"})
                     .reset_index()
@@ -930,9 +1012,9 @@ else:
                 agg[_spd_col_avg] = ("speed_kmh", "mean")
                 agg[_spd_col_max] = ("speed_kmh", "max")
             # Power-normalised efficiency (computed on clean efforts)
-            _spw_col = f"Speed/W ({_spd_label()}/W)"
-            if _has_col(seg_efforts_clean, "speed_per_watt"):
-                agg[_spw_col] = ("speed_per_watt", "mean")
+            _spw_col = f"Speed/W\u00b9\u141f\u00b3 ({_spd_label()}/W\u00b9\u141f\u00b3)"
+            if _has_col(seg_efforts_clean, "speed_per_cbrt_watt"):
+                agg[_spw_col] = ("speed_per_cbrt_watt", "mean")
 
             summary = seg_efforts_clean.groupby("bike_name").agg(**agg).reset_index()
             summary.rename(columns={"bike_name": "Bike"}, inplace=True)

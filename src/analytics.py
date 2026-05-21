@@ -4,11 +4,14 @@ Core question: which bike is faster, controlling for rider effort?
 
 Methodology
 -----------
-1.  ``compute_speed_per_watt``  –  derive speed-per-watt for every effort.
-2.  ``filter_outliers_by_power_speed``  –  per-segment z-score on speed_per_watt
-    removes efforts where speed doesn't match power (drafting, strong wind, …).
-3.  ``power_normalized_profile``  –  per segment-type × bike mean speed_per_watt
-    used to populate the efficiency spider chart.
+1.  ``compute_speed_per_watt``  –  derive speed / power^(1/3) for every effort.
+    In aerodynamics, speed scales as the cube root of power (v ∝ P^(1/3)),
+    so this ratio is approximately constant for a given bike and conditions.
+2.  ``filter_outliers_by_power_speed``  –  per-segment z-score on
+    speed_per_cbrt_watt removes efforts where speed doesn't match power
+    (drafting, strong wind, …).
+3.  ``power_normalized_profile``  –  per segment-type × bike mean
+    speed_per_cbrt_watt used to populate the efficiency spider chart.
 4.  ``outlier_detection_frames``  –  helper that returns the raw, annotated, and
     filtered DataFrames needed by the step-by-step visual explainer.
 """
@@ -25,15 +28,19 @@ import pandas as pd
 # ---------------------------------------------------------------------------
 
 def compute_speed_per_watt(df: pd.DataFrame) -> pd.DataFrame:
-    """Add a ``speed_per_watt`` column to *df* and return a copy.
+    """Add a ``speed_per_cbrt_watt`` column to *df* and return a copy.
 
-    ``speed_per_watt = speed_kmh / average_watts``
+    ``speed_per_cbrt_watt = speed_kmh / power^(1/3)``
+
+    In aerodynamics, speed scales as the cube root of power (v ∝ P^(1/3)),
+    so this ratio is approximately constant for a given bike and conditions.
+    It is a more physically correct efficiency metric than the linear speed/W.
 
     Rows where either value is missing or zero watts are left as NaN.
     """
     out = df.copy()
     safe_watts = out["average_watts"].replace(0, np.nan)
-    out["speed_per_watt"] = out["speed_kmh"] / safe_watts
+    out["speed_per_cbrt_watt"] = out["speed_kmh"] / np.cbrt(safe_watts)
     return out
 
 
@@ -42,17 +49,17 @@ def filter_outliers_by_power_speed(
     z_threshold: float = 2.0,
     min_efforts: int = 3,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Flag and remove efforts whose speed/watt ratio is anomalous.
+    """Flag and remove efforts whose speed/power^(1/3) ratio is anomalous.
 
     For each segment independently:
-    -   Compute z-score of ``speed_per_watt``.
+    -   Compute z-score of ``speed_per_cbrt_watt``.
     -   Mark any effort with ``|z| > z_threshold`` as an outlier.
     -   Segments with fewer than *min_efforts* valid rows are left unfiltered.
 
     Parameters
     ----------
     df:
-        DataFrame that already has a ``speed_per_watt`` column
+        DataFrame that already has a ``speed_per_cbrt_watt`` column
         (produced by :func:`compute_speed_per_watt`).
     z_threshold:
         Number of standard deviations from the segment mean beyond which
@@ -74,11 +81,11 @@ def filter_outliers_by_power_speed(
     out["is_outlier"] = False
     out["z_score"] = np.nan
 
-    valid = out["speed_per_watt"].notna() & out["average_watts"].notna()
+    valid = out["speed_per_cbrt_watt"].notna() & out["average_watts"].notna()
 
     group_cols = ["segment_id", "bike_name"] if "bike_name" in out.columns else ["segment_id"]
     for _, grp_idx in out[valid].groupby(group_cols).groups.items():
-        grp = out.loc[grp_idx, "speed_per_watt"]
+        grp = out.loc[grp_idx, "speed_per_cbrt_watt"]
         if len(grp) < min_efforts:
             continue
         mean_spw = grp.mean()
@@ -101,12 +108,12 @@ def power_normalized_profile(
     valid_segment_ids: Sequence[int],
     segment_type_col: str = "segment_type",
 ) -> dict[str, list[float]]:
-    """Compute per-type mean speed-per-watt for the efficiency spider chart.
+    """Compute per-type mean speed/power^(1/3) for the efficiency spider chart.
 
     Parameters
     ----------
     efforts:
-        Filtered efforts (outliers removed) with ``speed_per_watt``,
+        Filtered efforts (outliers removed) with ``speed_per_cbrt_watt``,
         ``bike_name``, segment type column, and ``segment_id`` columns.
     bikes:
         Ordered list of bike names to include.
@@ -119,7 +126,7 @@ def power_normalized_profile(
 
     Returns
     -------
-    dict mapping bike_name → list of mean speed_per_watt values, one per
+    dict mapping bike_name → list of mean speed_per_cbrt_watt values, one per
     segment type.  Missing types get 0.0.
     """
     return mean_profile_by_segment_type(
@@ -127,7 +134,7 @@ def power_normalized_profile(
         bikes,
         segment_types,
         valid_segment_ids,
-        value_col="speed_per_watt",
+        value_col="speed_per_cbrt_watt",
         segment_type_col=segment_type_col,
     )
 
@@ -182,7 +189,7 @@ def outlier_detection_frames(
     Parameters
     ----------
     efforts:
-        Full ``watt_efforts`` DataFrame (with ``speed_per_watt`` already
+        Full ``watt_efforts`` DataFrame (with ``speed_per_cbrt_watt`` already
         computed).
     segment_id:
         The segment to illustrate.
@@ -199,6 +206,8 @@ def outlier_detection_frames(
         Efforts after outlier removal.
     """
     seg_efforts = efforts[efforts["segment_id"] == segment_id].copy()
+    if "speed_per_cbrt_watt" not in seg_efforts.columns:
+        seg_efforts = compute_speed_per_watt(seg_efforts)
     filtered, annotated = filter_outliers_by_power_speed(seg_efforts, z_threshold=z_threshold)
     raw = seg_efforts.copy()
     return raw, annotated, filtered

@@ -10,6 +10,7 @@ plotly
 streamlit
 flask
 statsmodels
-econml
+
 shap
 geopy
+scikit-learn

@@ -8,7 +8,7 @@ from typing import Any
 import numpy as np
 import pandas as pd
 from geopy.distance import geodesic
-from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
 from sklearn.linear_model import LinearRegression, LogisticRegression
 
 from src.analytics import compute_speed_per_watt, filter_outliers_by_power_speed
@@ -26,16 +26,34 @@ _REQUIRED_COVARIATES: tuple[str, ...] = (
 def remove_outliers_for_causal_analysis(
     efforts_df: pd.DataFrame,
     z_threshold: float = 2.0,
+    segments_df: pd.DataFrame | None = None,
 ) -> tuple[pd.DataFrame, int]:
-    """Remove speed-per-watt outliers using segment-comparison methodology."""
-    required_cols = {"segment_id", "speed_kmh", "average_watts"}
+    """Remove speed-per-cbrt-watt outliers using segment-comparison methodology."""
+    required_cols = {"segment_id", "average_watts"}
     if efforts_df.empty or not required_cols.issubset(efforts_df.columns):
         return efforts_df.copy(), 0
 
-    with_spw = compute_speed_per_watt(efforts_df)
+    df = efforts_df.copy()
+
+    # Derive speed_kmh from segment distance + moving_time when not already present.
+    if "speed_kmh" not in df.columns and segments_df is not None and not segments_df.empty:
+        dist_col = next((c for c in ("distance_m", "distance") if c in segments_df.columns), None)
+        if dist_col is not None:
+            seg_dist = segments_df[["segment_id", dist_col]].drop_duplicates("segment_id")
+            df = df.merge(seg_dist, on="segment_id", how="left", suffixes=("", "_seg"))
+            safe_time = df["moving_time"].replace(0, np.nan)
+            df["speed_kmh"] = (df[dist_col] / safe_time * 3.6).where(safe_time.notna() & df[dist_col].notna())
+
+    if "speed_kmh" not in df.columns or df["speed_kmh"].isna().all():
+        return efforts_df.copy(), 0
+
+    with_spw = compute_speed_per_watt(df)
     filtered, annotated = filter_outliers_by_power_speed(with_spw, z_threshold=z_threshold)
     n_outliers = int(annotated["is_outlier"].sum()) if "is_outlier" in annotated.columns else 0
-    cleaned = filtered.drop(columns=["is_outlier", "z_score", "speed_per_watt"], errors="ignore")
+    cleaned = filtered.drop(columns=["is_outlier", "z_score", "speed_per_cbrt_watt"], errors="ignore")
+    # Drop any extra distance column added by the merge above if it wasn't in the original.
+    if dist_col is not None and dist_col not in efforts_df.columns:
+        cleaned = cleaned.drop(columns=[dist_col], errors="ignore")
     return cleaned, n_outliers
 
 
@@ -110,7 +128,7 @@ def build_feature_matrix(efforts_df: pd.DataFrame, segments_df: pd.DataFrame) ->
         moving_time = merged.get("moving_time", pd.Series(np.nan, index=merged.index)).replace(0, np.nan)
         merged["average_speed_mps"] = merged["distance_m"] / moving_time
 
-    merged["speed_per_watt"] = merged["average_speed_mps"] / merged["average_watts"]
+    merged["speed_per_cbrt_watt"] = merged["average_speed_mps"] * 3.6 / np.cbrt(merged["average_watts"])
 
     def _resolve_point(row: pd.Series, prefix: str) -> tuple[float | None, float | None]:
         lat = _safe_float(row.get(f"{prefix}_lat"))
@@ -162,11 +180,35 @@ def build_feature_matrix(efforts_df: pd.DataFrame, segments_df: pd.DataFrame) ->
 
     merged = pd.concat([merged, segment_dummies], axis=1)
     merged["is_new_bike"] = merged.get("is_new_bike", 0).fillna(0).astype(int)
-    return merged[merged["speed_per_watt"].notna()].reset_index(drop=True)
+    return merged[merged["speed_per_cbrt_watt"].notna()].reset_index(drop=True)
+
+
+def _dr_pseudo_outcomes(
+    y: np.ndarray,
+    t: np.ndarray,
+    X: np.ndarray,
+    prop_model: LogisticRegression,
+    out_model_0: GradientBoostingRegressor,
+    out_model_1: GradientBoostingRegressor,
+) -> np.ndarray:
+    """Compute doubly-robust pseudo-outcomes for each unit.
+
+    tau_i = (mu1 - mu0) + T*(Y - mu1)/e - (1-T)*(Y - mu0)/(1-e)
+    """
+    e = np.clip(prop_model.predict_proba(X)[:, 1], 0.01, 0.99)
+    mu0 = out_model_0.predict(X)
+    mu1 = out_model_1.predict(X)
+    return (mu1 - mu0) + t * (y - mu1) / e - (1 - t) * (y - mu0) / (1 - e)
 
 
 def estimate_treatment_effect(df: pd.DataFrame) -> dict[str, float | int]:
-    """Estimate average treatment effect (new bike vs old bike) with DR Learner.
+    """Estimate average treatment effect (new bike vs old bike) via doubly-robust estimation.
+
+    Implements the DR-Learner manually using sklearn:
+    1. Fit propensity model P(T=1|X) with LogisticRegression.
+    2. Fit separate outcome models E[Y|T=0,X] and E[Y|T=1,X] with GBR.
+    3. Compute DR pseudo-outcomes per unit.
+    4. Fit a final LinearRegression on pseudo-outcomes to get conditional effects.
 
     Args:
         df: Feature matrix produced by :func:`build_feature_matrix`.
@@ -174,22 +216,26 @@ def estimate_treatment_effect(df: pd.DataFrame) -> dict[str, float | int]:
     Returns:
         Dictionary with ATE summary and confidence interval bounds.
     """
-    from econml.dr import DRLearner
-
     x_cols = _covariate_columns(df)
-    X = df[x_cols]
-    y = df["speed_per_watt"].astype(float)
-    t = df["is_new_bike"].astype(int)
+    X = df[x_cols].astype(float).to_numpy()
+    y = df["speed_per_cbrt_watt"].astype(float).to_numpy()
+    t = df["is_new_bike"].astype(int).to_numpy()
 
-    model = DRLearner(
-        model_propensity=LogisticRegression(max_iter=1000),
-        model_regression=GradientBoostingRegressor(random_state=42),
-        model_final=LinearRegression(),
-        random_state=42,
-    )
-    model.fit(y, t, X=X)
+    prop_model = LogisticRegression(max_iter=1000)
+    prop_model.fit(X, t)
 
-    effects = np.asarray(model.effect(X), dtype=float)
+    mask0, mask1 = t == 0, t == 1
+    out_model_0 = GradientBoostingRegressor(random_state=42)
+    out_model_1 = GradientBoostingRegressor(random_state=42)
+    out_model_0.fit(X[mask0], y[mask0])
+    out_model_1.fit(X[mask1], y[mask1])
+
+    pseudo = _dr_pseudo_outcomes(y, t, X, prop_model, out_model_0, out_model_1)
+
+    final = LinearRegression()
+    final.fit(X, pseudo)
+    effects = final.predict(X)
+
     ate = float(np.mean(effects))
     se = float(np.std(effects, ddof=1) / np.sqrt(len(effects))) if len(effects) > 1 else 0.0
     margin = 1.96 * se
@@ -198,13 +244,17 @@ def estimate_treatment_effect(df: pd.DataFrame) -> dict[str, float | int]:
         "ate": ate,
         "ate_lower": ate - margin,
         "ate_upper": ate + margin,
-        "n_treated": int((t == 1).sum()),
-        "n_control": int((t == 0).sum()),
+        "n_treated": int(mask1.sum()),
+        "n_control": int(mask0.sum()),
     }
 
 
 def estimate_heterogeneous_effects(df: pd.DataFrame) -> pd.DataFrame:
-    """Estimate terrain-specific treatment effects via causal forest.
+    """Estimate terrain-specific treatment effects via causal forest (T-Learner).
+
+    Fits separate RandomForestRegressors on control and treated units; the
+    individual treatment effect for each observation is the difference in
+    their predicted potential outcomes: tau(x) = mu_1(x) - mu_0(x).
 
     Args:
         df: Feature matrix produced by :func:`build_feature_matrix`.
@@ -212,23 +262,26 @@ def estimate_heterogeneous_effects(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         DataFrame with one row per segment type and ATE confidence bounds.
     """
-    from econml.grf import CausalForest
-
     x_cols = _covariate_columns(df)
     X = df[x_cols].astype(float).to_numpy()
-    y = df["speed_per_watt"].astype(float).to_numpy()
+    y = df["speed_per_cbrt_watt"].astype(float).to_numpy()
     t = df["is_new_bike"].astype(int).to_numpy()
 
-    forest = CausalForest(n_estimators=200, min_samples_leaf=5, random_state=42)
-    forest.fit(X, t, y)
+    mask0, mask1 = t == 0, t == 1
+    rf0 = RandomForestRegressor(n_estimators=200, min_samples_leaf=5, random_state=42)
+    rf1 = RandomForestRegressor(n_estimators=200, min_samples_leaf=5, random_state=42)
+    rf0.fit(X[mask0], y[mask0])
+    rf1.fit(X[mask1], y[mask1])
+
+    all_effects = rf1.predict(X) - rf0.predict(X)
 
     rows: list[dict[str, float | str]] = []
     for seg_type in ("flat", "ascent", "descent", "sprint"):
-        mask = df.get(f"segment_type_{seg_type}", pd.Series(0, index=df.index)).astype(int) == 1
+        mask = df.get(f"segment_type_{seg_type}", pd.Series(0, index=df.index)).astype(int).to_numpy() == 1
         if not mask.any():
             continue
 
-        seg_effects = np.asarray(forest.predict(X[mask]), dtype=float)
+        seg_effects = all_effects[mask]
         ate = float(seg_effects.mean())
         se = float(seg_effects.std(ddof=1) / np.sqrt(len(seg_effects))) if len(seg_effects) > 1 else 0.0
         margin = 1.96 * se
@@ -257,7 +310,7 @@ def get_shap_importances(df: pd.DataFrame) -> pd.DataFrame:
 
     x_cols = _covariate_columns(df)
     X = df[x_cols].astype(float)
-    y = df["speed_per_watt"].astype(float)
+    y = df["speed_per_cbrt_watt"].astype(float)
 
     model = GradientBoostingRegressor(random_state=42)
     model.fit(X, y)
