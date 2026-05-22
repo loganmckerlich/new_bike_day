@@ -22,7 +22,6 @@ from src.causal_inference import (
     get_shap_importances,
     remove_outliers_for_causal_analysis,
 )
-from src.analytics import apply_min_watts_filter
 
 
 def _use_metric() -> bool:
@@ -137,26 +136,28 @@ def _render_control_chart(shap_df: pd.DataFrame) -> None:
 
 def main() -> None:
     """Render the causal analysis workflow and results."""
-    st.title("🧪 Causal analysis")
+    st.title("🧪 Step 4 — Bike Head to Head")
     st.markdown(
-        "Estimate the direct speed-per-cbrt-watt impact between two bikes with doubly robust causal inference."
+        "Estimate the direct speed-per-cbrt-watt impact between two bikes with doubly robust causal inference. "
+        "Data has been pre-cleaned in **Step 2 — Data Cleaning**."
     )
 
     # ── Read shared analysis params from session state ─────────────────────────
     z_threshold: float = float(st.session_state.get("outlier_z_threshold", 2.0))
-    exclude_descents: bool = bool(st.session_state.get("exclude_descents", False))
-    min_watts: int = int(st.session_state.get("min_watts", 0))
-    descents_exempt_watts: bool = bool(st.session_state.get("descents_exempt_watts", False))
 
-    efforts: pd.DataFrame | None = st.session_state.get("efforts")
+    efforts: pd.DataFrame | None = st.session_state.get("cleaned_efforts")
     segments: pd.DataFrame | None = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
 
+    if st.session_state.get("efforts") is None:
+        st.info("👈 Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
+        st.stop()
+
     if efforts is None or efforts.empty:
-        st.info("👈 Head to the **Home** page to sign in with Strava and load your data first.")
+        st.info("👈 Head to **Step 2 — Data Cleaning** to configure and apply data filters first.")
         st.stop()
     if segments is None or segments.empty:
-        st.warning("No segment metadata available yet. Reload from Home first.")
+        st.warning("No segment metadata available yet. Reload from Step 1 first.")
         st.stop()
 
     gear_counts = (
@@ -197,14 +198,8 @@ def main() -> None:
         .fillna("Unknown")
     )
 
-    # Apply min_watts filter (with optional descent exemption)
-    selected_efforts_raw = apply_min_watts_filter(
-        selected_efforts_raw,
-        min_watts,
-        descents_exempt=descents_exempt_watts,
-        segments_df=segments,
-    )
-
+    # min_watts and descent filters already applied by Data Cleaning page;
+    # still apply per-segment outlier removal here as it is analysis-specific.
     n_treated_raw = int(selected_efforts_raw["is_new_bike"].sum())
     n_control_raw = int((selected_efforts_raw["is_new_bike"] == 0).sum())
     selected_efforts, n_outliers = remove_outliers_for_causal_analysis(
@@ -223,8 +218,6 @@ def main() -> None:
         st.stop()
 
     features = build_feature_matrix(selected_efforts, segments)
-    if exclude_descents and "segment_type" in features.columns:
-        features = features[features["segment_type"] != "descent"].copy()
     if features.empty:
         st.warning("No valid rows after filtering (requires average_watts >= 50 and complete joins).")
         st.stop()

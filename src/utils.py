@@ -1,4 +1,19 @@
+from __future__ import annotations
+
+from urllib.parse import urlsplit, urlunsplit
+
 import streamlit as st
+
+
+def normalized_redirect_uri(raw_value: str) -> str:
+    """Normalise a redirect URI: ensures a trailing slash if no path is given."""
+    value = raw_value.strip() if raw_value else ""
+    if not value:
+        return "http://localhost:8501/"
+    parsed = urlsplit(value)
+    if parsed.scheme and parsed.netloc and not parsed.path:
+        return urlunsplit((parsed.scheme, parsed.netloc, "/", parsed.query, parsed.fragment))
+    return value
 
 
 def link_button_no_tab(label: str, url: str):

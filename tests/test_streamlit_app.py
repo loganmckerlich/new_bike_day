@@ -2,7 +2,7 @@
 
 import unittest
 
-from app.streamlit_app import _normalized_redirect_uri
+from src.utils import normalized_redirect_uri as _normalized_redirect_uri
 
 
 class RedirectUriNormalizationTests(unittest.TestCase):
