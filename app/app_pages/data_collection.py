@@ -287,8 +287,8 @@ def _render_bike_summaries(
     st.markdown(_BIKE_CARD_CSS, unsafe_allow_html=True)
 
     cols = st.columns(max(len(bike_stats), 1))
-    for col, (_, row) in zip(cols, bike_stats.iterrows()):
-        with col:
+    for i, (_, row) in enumerate(bike_stats.iterrows()):
+        with cols[i]:
             _render_bike_card(row)
 
     # ── Starred segments ─────────────────────────────────────────────────────
