@@ -24,17 +24,20 @@ from src.analytics import (
     mean_profile_by_segment_type,
     power_normalized_profile,
     outlier_detection_frames,
-    apply_min_watts_filter,
 )
 
 # ── Session state ─────────────────────────────────────────────────────────────
-efforts: pd.DataFrame | None = st.session_state.get("efforts")
+efforts: pd.DataFrame | None = st.session_state.get("cleaned_efforts")
 segments: pd.DataFrame | None = st.session_state.get("segments")
 bikes: dict[str, str] = st.session_state.get("bikes", {})
 access_token: str | None = st.session_state.get("access_token")
 
+if st.session_state.get("efforts") is None:
+    st.info("👈 Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
+    st.stop()
+
 if efforts is None or (hasattr(efforts, "empty") and efforts.empty):
-    st.info("👈 Head to the **Home** page to sign in with Strava and load your data first.")
+    st.info("👈 Head to **Step 2 — Data Cleaning** to configure and apply data filters first.")
     st.stop()
 
 if segments is None or segments.empty:
@@ -295,9 +298,17 @@ def _render_elevation_profile(geo: dict, seg_distance_m: float) -> None:
         st.caption("No elevation data available.")
 
 
+# ── Page title ────────────────────────────────────────────────────────────────
+st.title("📊 Step 3 — Segment Comparison")
+st.markdown(
+    "Filters and cleaning are already applied (configured in **Step 2 — Data Cleaning**). "
+    "Select bikes and segments below to compare performance."
+)
+
 # ── Data preparation ──────────────────────────────────────────────────────────
 
-# Keep only efforts with power data
+# cleaned_efforts from Data Cleaning page already have power filter + descent
+# filter applied; just keep entries that still have power data (safety check).
 watt_efforts = efforts[efforts["average_watts"].notna()].copy()
 
 if watt_efforts.empty:
@@ -306,25 +317,28 @@ if watt_efforts.empty:
 
 watt_efforts["bike_name"] = watt_efforts["gear_id"].map(_gear_label)
 
-seg_meta_cols = [
-    "segment_id",
-    "name",
-    "distance",
-    "average_grade",
-    "total_elevation_gain",
-    "segment_type",
-]
-if "segment_type_detail" in segments.columns:
-    seg_meta_cols.append("segment_type_detail")
-seg_meta = segments[seg_meta_cols].copy()
-if "segment_type_detail" not in seg_meta.columns:
-    seg_meta["segment_type_detail"] = seg_meta["segment_type"]
-watt_efforts = watt_efforts.merge(seg_meta, on="segment_id", how="inner")
-watt_efforts["speed_kmh"] = _compute_speed_kmh(watt_efforts)
+# segment_type and related columns are already merged in by data_cleaning.py;
+# merge again only for columns that may be missing (e.g. total_elevation_gain).
+_extra_seg_cols = ["segment_id"]
+for _col in ["name", "distance", "average_grade", "total_elevation_gain",
+             "segment_type", "segment_type_detail"]:
+    if _col not in watt_efforts.columns and _col in segments.columns:
+        _extra_seg_cols.append(_col)
+
+if len(_extra_seg_cols) > 1:
+    _seg_extra = segments[_extra_seg_cols].copy()
+    watt_efforts = watt_efforts.merge(_seg_extra, on="segment_id", how="left")
+
+if "segment_type_detail" not in watt_efforts.columns:
+    if "segment_type" in watt_efforts.columns:
+        watt_efforts["segment_type_detail"] = watt_efforts["segment_type"]
+
+if "speed_kmh" not in watt_efforts.columns:
+    watt_efforts["speed_kmh"] = _compute_speed_kmh(watt_efforts)
 
 available_bikes = sorted(watt_efforts["bike_name"].dropna().unique().tolist())
 
-# ── Sidebar: analysis settings ────────────────────────────────────────────────
+# ── Sidebar: segment settings ──────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### 📊 Segment settings")
 
@@ -358,29 +372,12 @@ with st.sidebar:
         help="Select 2–5 bikes to compare.",
     )
 
-# ── Read shared analysis params from session state ────────────────────────────
+# ── Read shared analysis params from session state (set on Data Cleaning page) ─
 z_threshold: float = float(st.session_state.get("outlier_z_threshold", 2.0))
-exclude_descents: bool = bool(st.session_state.get("exclude_descents", False))
-min_watts: int = int(st.session_state.get("min_watts", 0))
-descents_exempt_watts: bool = bool(st.session_state.get("descents_exempt_watts", False))
 
 if len(bikes_to_compare) < 2:
     st.warning("Please select at least **2 bikes** in the sidebar to compare.")
     st.stop()
-
-# ── Apply shared analysis filters ─────────────────────────────────────────────
-# Minimum watts filter (with optional descent exemption).
-# watt_efforts already has segment_type merged in (line ~321), so segments_df
-# is not needed here — apply_min_watts_filter will use the existing column.
-watt_efforts = apply_min_watts_filter(
-    watt_efforts,
-    min_watts,
-    descents_exempt=descents_exempt_watts,
-)
-
-# Exclude descent segments entirely
-if exclude_descents and "segment_type" in watt_efforts.columns:
-    watt_efforts = watt_efforts[watt_efforts["segment_type"] != "descent"].copy()
 
 # ── Compute valid segments ────────────────────────────────────────────────────
 selected_efforts = watt_efforts[watt_efforts["bike_name"].isin(bikes_to_compare)].copy()

@@ -34,11 +34,12 @@ def _gear_label(gear_id: str, bikes: dict[str, str]) -> str:
 
 def main() -> None:
     """Render the CdA ranking page."""
-    st.title("🌬️ CdA Ranking")
+    st.title("🌬️ Step 5 — CdA Estimation")
     st.warning("⚠️ WORK IN PROGRESS", icon="🚧")
     st.markdown(
         "Estimate the aerodynamic drag coefficient (CdA) per bike from flat segment efforts. "
-        "A lower CdA means a more aerodynamic position."
+        "A lower CdA means a more aerodynamic position. "
+        "Data has been pre-cleaned in **Step 2 — Data Cleaning**."
     )
 
     # ── Weather stub banner ────────────────────────────────────────────────
@@ -47,9 +48,10 @@ def main() -> None:
         "CdA estimates will improve once real weather data is connected."
     )
 
-    # ── Section 0 — User Inputs (sidebar) ─────────────────────────────────
-    with st.sidebar:
-        st.markdown("### ⚙️ Mass inputs")
+    # ── Section 0 — User Inputs ───────────────────────────────────────────────
+    st.subheader("⚙️ Mass inputs")
+    _mass_col1, _mass_col2 = st.columns(2)
+    with _mass_col1:
         rider_mass_kg = st.number_input(
             "Rider mass (kg)",
             min_value=30.0,
@@ -58,6 +60,7 @@ def main() -> None:
             step=0.5,
             key="cda_rider_mass_kg",
         )
+    with _mass_col2:
         bike_mass_kg = st.number_input(
             "Bike mass (kg)",
             min_value=2.0,
@@ -66,21 +69,26 @@ def main() -> None:
             step=0.5,
             key="cda_bike_mass_kg",
         )
-        st.caption(
-            "These affect the rolling resistance correction. "
-            "If unsure, leave as defaults."
-        )
+    st.caption(
+        "These affect the rolling resistance correction. "
+        "If unsure, leave as defaults."
+    )
+    st.divider()
 
     # ── Load session state ─────────────────────────────────────────────────
-    efforts: pd.DataFrame | None = st.session_state.get("efforts")
+    efforts: pd.DataFrame | None = st.session_state.get("cleaned_efforts")
     segments: pd.DataFrame | None = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
 
+    if st.session_state.get("efforts") is None:
+        st.info("👈 Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
+        st.stop()
+
     if efforts is None or efforts.empty:
-        st.info("👈 Head to the **Home** page to sign in with Strava and load your data first.")
+        st.info("👈 Head to **Step 2 — Data Cleaning** to configure and apply data filters first.")
         st.stop()
     if segments is None or segments.empty:
-        st.warning("No segment metadata available yet. Reload from Home first.")
+        st.warning("No segment metadata available yet. Reload from Step 1 first.")
         st.stop()
 
     # ── Compute CdA estimates ──────────────────────────────────────────────
