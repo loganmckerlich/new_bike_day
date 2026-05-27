@@ -438,13 +438,16 @@ def main() -> None:
         # link_button_no_tab("🔗 Sign in with Strava", auth_url)
 
     code_from_params = st.query_params.get("code")
-    error_from_params = st.query_params.get("error")
+    error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
     if error_from_params:
         st.error(f"Strava authorization failed: {error_from_params}")
         return
 
     code = _query_param_value(code_from_params)
+    # Token may have already been exchanged at the app level (streamlit_app.py)
+    # when Strava redirected to the home/root page.
+    session_token = st.session_state.get("access_token")
 
     if code:
         last_processed_code = st.session_state.get("last_processed_code")
@@ -452,7 +455,7 @@ def main() -> None:
         if should_process:
             with st.spinner("Connecting to Strava…"):
                 try:
-                    access_token = st.session_state.get("access_token")
+                    access_token = session_token
                     if code != last_processed_code or not access_token:
                         access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
                 except (requests.RequestException, ValueError) as exc:
@@ -473,6 +476,21 @@ def main() -> None:
         else:
             with status_col:
                 st.caption("✅ Using cached Strava data.")
+    elif session_token:
+        # Code was already exchanged at the app level; fetch/load data now.
+        if st.session_state.get("efforts") is None:
+            try:
+                data, gear_frame, bikes, bike_distances, ftp = _process_data(access_token=session_token)
+            except PremiumOnlyError as exc:
+                st.error(str(exc))
+                return
+            except (requests.RequestException, ValueError) as exc:
+                traceback.print_exc(file=sys.stderr)
+                st.error(f"Unable to process data: {exc}")
+                return
+            _save_session(data, gear_frame, bikes, None, session_token, bike_distances, ftp)
+        with status_col:
+            st.success("✅ Connected to Strava — data loaded!")
     else:
         with status_col:
             st.caption("👆 Click **Sign in with Strava** to authorize and load your segment data.")

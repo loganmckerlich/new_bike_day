@@ -1,0 +1,7608 @@
+[
+  {
+    "id": 3365709861279650800,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14704717185,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 48,
+    "moving_time": 48,
+    "start_date": "2025-06-05T14:05:22Z",
+    "start_date_local": "2025-06-05T07:05:22Z",
+    "distance": 612.4,
+    "start_index": 4510,
+    "end_index": 4558,
+    "average_cadence": 102.7,
+    "device_watts": true,
+    "average_watts": 678.6,
+    "average_heartrate": 176.2,
+    "max_heartrate": 181.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 2,
+        "type": "overall",
+        "rank": 6
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": 6
+  },
+  {
+    "id": 3408845729033211808,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16010337574,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 48,
+    "moving_time": 48,
+    "start_date": "2025-10-02T14:49:47Z",
+    "start_date_local": "2025-10-02T07:49:47Z",
+    "distance": 612.4,
+    "start_index": 4282,
+    "end_index": 4330,
+    "average_cadence": 94.9,
+    "device_watts": true,
+    "average_watts": 631.5,
+    "average_heartrate": 169.9,
+    "max_heartrate": 177.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3270763557104017906,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12424459310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 49,
+    "moving_time": 49,
+    "start_date": "2024-09-16T14:03:54Z",
+    "start_date_local": "2024-09-16T07:03:54Z",
+    "distance": 612.4,
+    "start_index": 4957,
+    "end_index": 5006,
+    "average_cadence": 86.4,
+    "device_watts": true,
+    "average_watts": 702.8,
+    "average_heartrate": 169.8,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 2,
+        "type": "overall",
+        "rank": 7
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": 7
+  },
+  {
+    "id": 3350134426824931420,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14262949627,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 49,
+    "moving_time": 49,
+    "start_date": "2025-04-23T14:35:14Z",
+    "start_date_local": "2025-04-23T07:35:14Z",
+    "distance": 612.4,
+    "start_index": 4402,
+    "end_index": 4451,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 615.1,
+    "average_heartrate": 170.6,
+    "max_heartrate": 175.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355933409291146784,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14426136326,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 49,
+    "moving_time": 49,
+    "start_date": "2025-05-09T14:38:55Z",
+    "start_date_local": "2025-05-09T07:38:55Z",
+    "distance": 612.4,
+    "start_index": 4416,
+    "end_index": 4465,
+    "average_cadence": 93.1,
+    "device_watts": true,
+    "average_watts": 563.2,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3362814285726455412,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14621109297,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 50,
+    "moving_time": 50,
+    "start_date": "2025-05-28T14:19:54Z",
+    "start_date_local": "2025-05-28T07:19:54Z",
+    "distance": 612.4,
+    "start_index": 4998,
+    "end_index": 5048,
+    "average_cadence": 90.3,
+    "device_watts": true,
+    "average_watts": 591.2,
+    "average_heartrate": 165.2,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370058435500252514,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14827981626,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 50,
+    "moving_time": 50,
+    "start_date": "2025-06-17T14:06:02Z",
+    "start_date_local": "2025-06-17T07:06:02Z",
+    "distance": 612.4,
+    "start_index": 4788,
+    "end_index": 4838,
+    "average_cadence": 92.5,
+    "device_watts": true,
+    "average_watts": 589.4,
+    "average_heartrate": 170.1,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3469719673901385158,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 17779597249,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 50,
+    "moving_time": 50,
+    "start_date": "2026-03-19T14:24:08Z",
+    "start_date_local": "2026-03-19T07:24:08Z",
+    "distance": 612.4,
+    "start_index": 4917,
+    "end_index": 4967,
+    "average_cadence": 87.2,
+    "device_watts": true,
+    "average_watts": 523.9,
+    "average_heartrate": 165.3,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492201193554434956,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18582983778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 50,
+    "moving_time": 50,
+    "start_date": "2026-05-20T15:17:03Z",
+    "start_date_local": "2026-05-20T08:17:03Z",
+    "distance": 612.4,
+    "start_index": 3534,
+    "end_index": 3584,
+    "average_cadence": 94.2,
+    "device_watts": true,
+    "average_watts": 455.8,
+    "average_heartrate": 161.3,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268587742323116480,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12374934834,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 51,
+    "moving_time": 51,
+    "start_date": "2024-09-10T13:57:57Z",
+    "start_date_local": "2024-09-10T06:57:57Z",
+    "distance": 612.4,
+    "start_index": 4527,
+    "end_index": 4578,
+    "average_cadence": 86.8,
+    "device_watts": true,
+    "average_watts": 682.9,
+    "average_heartrate": 173.5,
+    "max_heartrate": 179.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 2,
+        "type": "overall",
+        "rank": 10
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": 10
+  },
+  {
+    "id": 3254089881543942354,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12035838620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 52,
+    "moving_time": 52,
+    "start_date": "2024-08-01T13:48:40Z",
+    "start_date_local": "2024-08-01T06:48:40Z",
+    "distance": 612.4,
+    "start_index": 1307,
+    "end_index": 1319,
+    "device_watts": false,
+    "average_heartrate": 167.6,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3255903122094846514,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12077450668,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 52,
+    "moving_time": 52,
+    "start_date": "2024-08-06T13:53:12Z",
+    "start_date_local": "2024-08-06T06:53:12Z",
+    "distance": 612.4,
+    "start_index": 1409,
+    "end_index": 1425,
+    "device_watts": false,
+    "average_heartrate": 173.1,
+    "max_heartrate": 177.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413329445108669212,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16143682065,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 52,
+    "moving_time": 52,
+    "start_date": "2025-10-14T22:30:43Z",
+    "start_date_local": "2025-10-14T15:30:43Z",
+    "distance": 612.4,
+    "start_index": 93,
+    "end_index": 145,
+    "device_watts": false,
+    "average_heartrate": 127.5,
+    "max_heartrate": 166.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413695057206743788,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16154779904,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 53,
+    "moving_time": 53,
+    "start_date": "2025-10-15T22:42:11Z",
+    "start_date_local": "2025-10-15T15:42:11Z",
+    "distance": 612.4,
+    "start_index": 95,
+    "end_index": 148,
+    "device_watts": false,
+    "average_heartrate": 124.8,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3245754826986762114,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11846097227,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 54,
+    "moving_time": 54,
+    "start_date": "2024-07-09T13:48:23Z",
+    "start_date_local": "2024-07-09T06:48:23Z",
+    "distance": 612.4,
+    "start_index": 1327,
+    "end_index": 1342,
+    "device_watts": false,
+    "average_heartrate": 170.4,
+    "max_heartrate": 175.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3339992549549443294,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13992998077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 56,
+    "moving_time": 56,
+    "start_date": "2025-03-26T14:55:50Z",
+    "start_date_local": "2025-03-26T07:55:50Z",
+    "distance": 612.4,
+    "start_index": 3940,
+    "end_index": 3996,
+    "average_cadence": 79.5,
+    "device_watts": true,
+    "average_watts": 349.4,
+    "average_heartrate": 177.4,
+    "max_heartrate": 179.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3347959183671245536,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14204047839,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 56,
+    "moving_time": 56,
+    "start_date": "2025-04-17T14:32:22Z",
+    "start_date_local": "2025-04-17T07:32:22Z",
+    "distance": 612.4,
+    "start_index": 4195,
+    "end_index": 4251,
+    "average_cadence": 78.2,
+    "device_watts": true,
+    "average_watts": 433.6,
+    "average_heartrate": 175.7,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3236329019090962134,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11643059554,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 59,
+    "moving_time": 59,
+    "start_date": "2024-06-13T13:33:43Z",
+    "start_date_local": "2024-06-13T06:33:43Z",
+    "distance": 612.4,
+    "start_index": 4031,
+    "end_index": 4090,
+    "device_watts": false,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3238508014980482450,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11689404318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 59,
+    "moving_time": 59,
+    "start_date": "2024-06-19T13:49:38Z",
+    "start_date_local": "2024-06-19T06:49:38Z",
+    "distance": 612.4,
+    "start_index": 1281,
+    "end_index": 1296,
+    "device_watts": false,
+    "average_heartrate": 173.6,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3245398401032164860,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11837834035,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 59,
+    "moving_time": 59,
+    "start_date": "2024-07-08T13:52:52Z",
+    "start_date_local": "2024-07-08T06:52:52Z",
+    "distance": 612.4,
+    "start_index": 1314,
+    "end_index": 1328,
+    "device_watts": false,
+    "average_heartrate": 160.2,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3248654102568527876,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11910711156,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2024-07-17T13:44:14Z",
+    "start_date_local": "2024-07-17T06:44:14Z",
+    "distance": 612.4,
+    "start_index": 1245,
+    "end_index": 1260,
+    "device_watts": false,
+    "average_heartrate": 167.4,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358468015231099938,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14498888212,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2025-05-16T14:29:46Z",
+    "start_date_local": "2025-05-16T07:29:46Z",
+    "distance": 612.4,
+    "start_index": 4222,
+    "end_index": 4283,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 376.2,
+    "average_heartrate": 168.7,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3366080518765089096,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14714565330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2025-06-06T14:28:12Z",
+    "start_date_local": "2025-06-06T07:28:12Z",
+    "distance": 612.4,
+    "start_index": 4133,
+    "end_index": 4194,
+    "average_cadence": 83.4,
+    "device_watts": true,
+    "average_watts": 312.3,
+    "average_heartrate": 155.5,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3383101169382297112,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15210020677,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2025-07-23T13:52:48Z",
+    "start_date_local": "2025-07-23T06:52:48Z",
+    "distance": 612.4,
+    "start_index": 4052,
+    "end_index": 4113,
+    "average_cadence": 83.3,
+    "device_watts": true,
+    "average_watts": 300.2,
+    "average_heartrate": 155.7,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3380566041651977878,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15133664732,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 62,
+    "moving_time": 62,
+    "start_date": "2025-07-16T13:59:21Z",
+    "start_date_local": "2025-07-16T06:59:21Z",
+    "distance": 612.4,
+    "start_index": 4169,
+    "end_index": 4231,
+    "average_cadence": 78.1,
+    "device_watts": true,
+    "average_watts": 314.9,
+    "average_heartrate": 149.7,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410651253019352392,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16063550332,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 62,
+    "moving_time": 62,
+    "start_date": "2025-10-07T14:27:07Z",
+    "start_date_local": "2025-10-07T07:27:07Z",
+    "distance": 612.4,
+    "start_index": 4205,
+    "end_index": 4267,
+    "average_cadence": 84.6,
+    "device_watts": true,
+    "average_watts": 295.5,
+    "average_heartrate": 151.0,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3241042780358856342,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11744285069,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 63,
+    "moving_time": 63,
+    "start_date": "2024-06-26T13:44:14Z",
+    "start_date_local": "2024-06-26T06:44:14Z",
+    "distance": 612.4,
+    "start_index": 1290,
+    "end_index": 1305,
+    "device_watts": false,
+    "average_heartrate": 178.4,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368244400003396192,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14776856791,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 63,
+    "moving_time": 63,
+    "start_date": "2025-06-12T13:57:12Z",
+    "start_date_local": "2025-06-12T06:57:12Z",
+    "distance": 612.4,
+    "start_index": 4425,
+    "end_index": 4488,
+    "average_cadence": 85.9,
+    "device_watts": true,
+    "average_watts": 424.6,
+    "average_heartrate": 156.9,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387466647314893922,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15341695310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 63,
+    "moving_time": 63,
+    "start_date": "2025-08-04T14:58:19Z",
+    "start_date_local": "2025-08-04T07:58:19Z",
+    "distance": 612.4,
+    "start_index": 4017,
+    "end_index": 4080,
+    "average_cadence": 87.5,
+    "device_watts": true,
+    "average_watts": 347.3,
+    "average_heartrate": 160.1,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3243217697572888810,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11790173567,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 64,
+    "moving_time": 64,
+    "start_date": "2024-07-02T13:42:20Z",
+    "start_date_local": "2024-07-02T06:42:20Z",
+    "distance": 612.4,
+    "start_index": 1257,
+    "end_index": 1271,
+    "device_watts": false,
+    "average_heartrate": 168.4,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3253729739489499346,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12027544474,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 64,
+    "moving_time": 64,
+    "start_date": "2024-07-31T13:57:29Z",
+    "start_date_local": "2024-07-31T06:57:29Z",
+    "distance": 612.4,
+    "start_index": 1357,
+    "end_index": 1373,
+    "device_watts": false,
+    "average_heartrate": 145.3,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387820074084135492,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15353199712,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 64,
+    "moving_time": 64,
+    "start_date": "2025-08-05T14:24:10Z",
+    "start_date_local": "2025-08-05T07:24:10Z",
+    "distance": 612.4,
+    "start_index": 3999,
+    "end_index": 4063,
+    "average_cadence": 86.0,
+    "device_watts": true,
+    "average_watts": 346.6,
+    "average_heartrate": 168.6,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3333113598238233332,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13814909452,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 65,
+    "moving_time": 65,
+    "start_date": "2025-03-07T15:18:23Z",
+    "start_date_local": "2025-03-07T07:18:23Z",
+    "distance": 612.4,
+    "start_index": 4369,
+    "end_index": 4434,
+    "average_cadence": 78.7,
+    "device_watts": true,
+    "average_watts": 343.1,
+    "average_heartrate": 159.2,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3367883366001196230,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14766079072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 66,
+    "moving_time": 66,
+    "start_date": "2025-06-11T14:02:24Z",
+    "start_date_local": "2025-06-11T07:02:24Z",
+    "distance": 612.4,
+    "start_index": 4295,
+    "end_index": 4361,
+    "average_cadence": 82.1,
+    "device_watts": true,
+    "average_watts": 328.6,
+    "average_heartrate": 159.4,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3238870526179077808,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11697474014,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 67,
+    "moving_time": 67,
+    "start_date": "2024-06-20T13:52:19Z",
+    "start_date_local": "2024-06-20T06:52:19Z",
+    "distance": 612.4,
+    "start_index": 1358,
+    "end_index": 1372,
+    "device_watts": false,
+    "average_heartrate": 144.2,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288896931249817290,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12829100188,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 67,
+    "moving_time": 67,
+    "start_date": "2024-11-05T14:59:51Z",
+    "start_date_local": "2024-11-05T06:59:51Z",
+    "distance": 612.4,
+    "start_index": 4366,
+    "end_index": 4433,
+    "average_cadence": 85.3,
+    "device_watts": true,
+    "average_watts": 319.3,
+    "average_heartrate": 164.5,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3378032490817554534,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15057573197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 67,
+    "moving_time": 67,
+    "start_date": "2025-07-09T14:09:42Z",
+    "start_date_local": "2025-07-09T07:09:42Z",
+    "distance": 612.4,
+    "start_index": 4087,
+    "end_index": 4153,
+    "average_cadence": 88.8,
+    "device_watts": true,
+    "average_watts": 361.8,
+    "average_heartrate": 144.5,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370787076917062062,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14850175778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 68,
+    "moving_time": 68,
+    "start_date": "2025-06-19T14:15:01Z",
+    "start_date_local": "2025-06-19T07:15:01Z",
+    "distance": 612.4,
+    "start_index": 4458,
+    "end_index": 4526,
+    "average_cadence": 73.9,
+    "device_watts": true,
+    "average_watts": 256.7,
+    "average_heartrate": 140.7,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474079913192496988,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 17926029115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 68,
+    "moving_time": 68,
+    "start_date": "2026-03-31T14:47:21Z",
+    "start_date_local": "2026-03-31T07:47:21Z",
+    "distance": 612.4,
+    "start_index": 3348,
+    "end_index": 3416,
+    "average_cadence": 73.5,
+    "device_watts": true,
+    "average_watts": 247.7,
+    "average_heartrate": 153.7,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3349404624078765212,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14242799763,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 69,
+    "moving_time": 69,
+    "start_date": "2025-04-21T14:15:25Z",
+    "start_date_local": "2025-04-21T07:15:25Z",
+    "distance": 612.4,
+    "start_index": 4303,
+    "end_index": 4372,
+    "average_cadence": 79.8,
+    "device_watts": true,
+    "average_watts": 281.8,
+    "average_heartrate": 149.9,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382749049566793104,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15198606207,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 69,
+    "moving_time": 69,
+    "start_date": "2025-07-22T14:33:36Z",
+    "start_date_local": "2025-07-22T07:33:36Z",
+    "distance": 612.4,
+    "start_index": 3840,
+    "end_index": 3909,
+    "average_cadence": 82.8,
+    "device_watts": true,
+    "average_watts": 279.0,
+    "average_heartrate": 144.4,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3392900196590902244,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15513338209,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 69,
+    "moving_time": 69,
+    "start_date": "2025-08-19T14:41:01Z",
+    "start_date_local": "2025-08-19T07:41:01Z",
+    "distance": 612.4,
+    "start_index": 4120,
+    "end_index": 4189,
+    "average_cadence": 75.8,
+    "device_watts": true,
+    "average_watts": 266.2,
+    "average_heartrate": 156.2,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3242857067998591864,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11782182768,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 70,
+    "moving_time": 70,
+    "start_date": "2024-07-01T13:50:27Z",
+    "start_date_local": "2024-07-01T06:50:27Z",
+    "distance": 612.4,
+    "start_index": 1350,
+    "end_index": 1363,
+    "device_watts": false,
+    "average_heartrate": 138.5,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263157621459522454,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12246925159,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 70,
+    "moving_time": 70,
+    "start_date": "2024-08-26T14:20:28Z",
+    "start_date_local": "2024-08-26T07:20:28Z",
+    "distance": 612.4,
+    "start_index": 4619,
+    "end_index": 4689,
+    "average_cadence": 71.7,
+    "device_watts": true,
+    "average_watts": 269.5,
+    "average_heartrate": 148.1,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3331660987145927390,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13777797816,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 70,
+    "moving_time": 70,
+    "start_date": "2025-03-03T15:09:19Z",
+    "start_date_local": "2025-03-03T07:09:19Z",
+    "distance": 612.4,
+    "start_index": 4344,
+    "end_index": 4414,
+    "average_cadence": 80.3,
+    "device_watts": true,
+    "average_watts": 336.4,
+    "average_heartrate": 164.9,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411394102246409438,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16086564133,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 70,
+    "moving_time": 70,
+    "start_date": "2025-10-09T15:39:18Z",
+    "start_date_local": "2025-10-09T08:39:18Z",
+    "distance": 612.4,
+    "start_index": 4370,
+    "end_index": 4440,
+    "average_cadence": 81.9,
+    "device_watts": true,
+    "average_watts": 247.4,
+    "average_heartrate": 140.1,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3479877879677612064,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18133000629,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 70,
+    "moving_time": 70,
+    "start_date": "2026-04-16T15:09:05Z",
+    "start_date_local": "2026-04-16T08:09:05Z",
+    "distance": 612.4,
+    "start_index": 3855,
+    "end_index": 3925,
+    "average_cadence": 81.7,
+    "device_watts": true,
+    "average_watts": 276.3,
+    "average_heartrate": 152.8,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481328901821375282,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18185180204,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 70,
+    "moving_time": 70,
+    "start_date": "2026-04-20T15:15:00Z",
+    "start_date_local": "2026-04-20T08:15:00Z",
+    "distance": 612.4,
+    "start_index": 3529,
+    "end_index": 3599,
+    "average_cadence": 82.0,
+    "device_watts": true,
+    "average_watts": 231.8,
+    "average_heartrate": 136.7,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251194076298940518,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11969363761,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 71,
+    "moving_time": 71,
+    "start_date": "2024-07-24T14:00:56Z",
+    "start_date_local": "2024-07-24T07:00:56Z",
+    "distance": 612.4,
+    "start_index": 1376,
+    "end_index": 1392,
+    "device_watts": false,
+    "average_heartrate": 134.7,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3319705167041322932,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13484397149,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 71,
+    "moving_time": 71,
+    "start_date": "2025-01-29T15:18:29Z",
+    "start_date_local": "2025-01-29T07:18:29Z",
+    "distance": 612.4,
+    "start_index": 4666,
+    "end_index": 4737,
+    "average_cadence": 79.3,
+    "device_watts": true,
+    "average_watts": 119.6,
+    "average_heartrate": 158.8,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3332390572732034802,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13796731729,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 71,
+    "moving_time": 71,
+    "start_date": "2025-03-05T15:27:23Z",
+    "start_date_local": "2025-03-05T07:27:23Z",
+    "distance": 612.4,
+    "start_index": 4708,
+    "end_index": 4779,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 297.3,
+    "average_heartrate": 148.8,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353023234071899288,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14344373109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 71,
+    "moving_time": 71,
+    "start_date": "2025-05-01T13:54:58Z",
+    "start_date_local": "2025-05-01T06:54:58Z",
+    "distance": 612.4,
+    "start_index": 4233,
+    "end_index": 4304,
+    "average_cadence": 60.6,
+    "device_watts": true,
+    "average_watts": 147.3,
+    "average_heartrate": 142.2,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3385293437858292270,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15275646077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 71,
+    "moving_time": 71,
+    "start_date": "2025-07-29T14:43:45Z",
+    "start_date_local": "2025-07-29T07:43:45Z",
+    "distance": 612.4,
+    "start_index": 4419,
+    "end_index": 4490,
+    "average_cadence": 77.9,
+    "device_watts": true,
+    "average_watts": 208.6,
+    "average_heartrate": 127.5,
+    "max_heartrate": 133.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3386372950977618712,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15309023545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 71,
+    "moving_time": 71,
+    "start_date": "2025-08-01T14:33:43Z",
+    "start_date_local": "2025-08-01T07:33:43Z",
+    "distance": 612.4,
+    "start_index": 4252,
+    "end_index": 4323,
+    "average_cadence": 74.6,
+    "device_watts": true,
+    "average_watts": 251.8,
+    "average_heartrate": 137.9,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3390351130442933514,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15433259052,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 71,
+    "moving_time": 71,
+    "start_date": "2025-08-12T14:01:42Z",
+    "start_date_local": "2025-08-12T07:01:42Z",
+    "distance": 612.4,
+    "start_index": 4245,
+    "end_index": 4316,
+    "average_cadence": 80.7,
+    "device_watts": true,
+    "average_watts": 274.3,
+    "average_heartrate": 144.5,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3317169126735076794,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13423649224,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 72,
+    "moving_time": 72,
+    "start_date": "2025-01-22T15:23:14Z",
+    "start_date_local": "2025-01-22T07:23:14Z",
+    "distance": 612.4,
+    "start_index": 4652,
+    "end_index": 4724,
+    "device_watts": false,
+    "average_heartrate": 164.4,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411743111945136298,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16096272291,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 72,
+    "moving_time": 72,
+    "start_date": "2025-10-10T14:39:32Z",
+    "start_date_local": "2025-10-10T07:39:32Z",
+    "distance": 612.4,
+    "start_index": 4537,
+    "end_index": 4609,
+    "average_cadence": 91.4,
+    "device_watts": true,
+    "average_watts": 243.0,
+    "average_heartrate": 136.6,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476257563191819472,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18001520259,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 72,
+    "moving_time": 72,
+    "start_date": "2026-04-06T15:22:45Z",
+    "start_date_local": "2026-04-06T08:22:45Z",
+    "distance": 612.4,
+    "start_index": 3646,
+    "end_index": 3718,
+    "average_cadence": 78.2,
+    "device_watts": true,
+    "average_watts": 230.4,
+    "average_heartrate": 144.9,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020008449432837800,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 8017333792,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2022-10-25T15:12:10Z",
+    "start_date_local": "2022-10-25T08:12:10Z",
+    "distance": 612.4,
+    "start_index": 4123,
+    "end_index": 4196,
+    "device_watts": false,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3330570758450023656,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13750807863,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2025-02-28T14:55:41Z",
+    "start_date_local": "2025-02-28T06:55:41Z",
+    "distance": 612.4,
+    "start_index": 4365,
+    "end_index": 4438,
+    "average_cadence": 74.1,
+    "device_watts": true,
+    "average_watts": 275.6,
+    "average_heartrate": 150.3,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3335630321419329866,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13880376318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2025-03-14T14:01:02Z",
+    "start_date_local": "2025-03-14T07:01:02Z",
+    "distance": 612.4,
+    "start_index": 4710,
+    "end_index": 4783,
+    "average_cadence": 80.3,
+    "device_watts": true,
+    "average_watts": 253.8,
+    "average_heartrate": 149.4,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355573064686106876,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14416337001,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2025-05-08T14:46:41Z",
+    "start_date_local": "2025-05-08T07:46:41Z",
+    "distance": 612.4,
+    "start_index": 4644,
+    "end_index": 4717,
+    "average_cadence": 78.4,
+    "device_watts": true,
+    "average_watts": 241.3,
+    "average_heartrate": 137.3,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3359910695625257842,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14539771405,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2025-05-20T14:02:13Z",
+    "start_date_local": "2025-05-20T07:02:13Z",
+    "distance": 612.4,
+    "start_index": 4321,
+    "end_index": 4394,
+    "average_cadence": 78.2,
+    "device_watts": true,
+    "average_watts": 285.7,
+    "average_heartrate": 145.2,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360283434644077426,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14551088220,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2025-05-21T14:42:13Z",
+    "start_date_local": "2025-05-21T07:42:13Z",
+    "distance": 612.4,
+    "start_index": 4460,
+    "end_index": 4533,
+    "average_cadence": 81.0,
+    "device_watts": true,
+    "average_watts": 245.5,
+    "average_heartrate": 126.0,
+    "max_heartrate": 134.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3396525346860074098,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15627300962,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2025-08-29T14:37:48Z",
+    "start_date_local": "2025-08-29T07:37:48Z",
+    "distance": 612.4,
+    "start_index": 4361,
+    "end_index": 4434,
+    "average_cadence": 66.4,
+    "device_watts": true,
+    "average_watts": 228.7,
+    "average_heartrate": 140.3,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398322453115454698,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15683158116,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2025-09-03T13:57:09Z",
+    "start_date_local": "2025-09-03T06:57:09Z",
+    "distance": 612.4,
+    "start_index": 4393,
+    "end_index": 4466,
+    "average_cadence": 77.5,
+    "device_watts": true,
+    "average_watts": 232.5,
+    "average_heartrate": 137.6,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472258010523850670,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 17865936615,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2026-03-26T14:30:10Z",
+    "start_date_local": "2026-03-26T07:30:10Z",
+    "distance": 612.4,
+    "start_index": 3430,
+    "end_index": 3503,
+    "average_cadence": 84.4,
+    "device_watts": true,
+    "average_watts": 264.2,
+    "average_heartrate": 166.0,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251555860397032308,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11977840072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2024-07-25T13:59:03Z",
+    "start_date_local": "2024-07-25T06:59:03Z",
+    "distance": 612.4,
+    "start_index": 1431,
+    "end_index": 1446,
+    "device_watts": false,
+    "average_heartrate": 144.5,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288541164576947938,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12821315476,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2024-11-04T15:10:34Z",
+    "start_date_local": "2024-11-04T07:10:34Z",
+    "distance": 612.4,
+    "start_index": 4697,
+    "end_index": 4771,
+    "average_cadence": 74.5,
+    "device_watts": true,
+    "average_watts": 268.2,
+    "average_heartrate": 165.3,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3301226054111794200,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13079350675,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2024-12-09T15:29:26Z",
+    "start_date_local": "2024-12-09T07:29:26Z",
+    "distance": 612.4,
+    "start_index": 4567,
+    "end_index": 4641,
+    "average_cadence": 79.5,
+    "device_watts": true,
+    "average_watts": 279.9,
+    "average_heartrate": 161.6,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360635050004032156,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14560848197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2025-05-22T13:59:40Z",
+    "start_date_local": "2025-05-22T06:59:40Z",
+    "distance": 612.4,
+    "start_index": 4646,
+    "end_index": 4720,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 219.3,
+    "average_heartrate": 129.0,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398696814557377774,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15695232371,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2025-09-04T14:42:11Z",
+    "start_date_local": "2025-09-04T07:42:11Z",
+    "distance": 612.4,
+    "start_index": 4451,
+    "end_index": 4525,
+    "average_cadence": 76.9,
+    "device_watts": true,
+    "average_watts": 199.3,
+    "average_heartrate": 125.2,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480242032468955590,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18146236077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2026-04-17T15:13:38Z",
+    "start_date_local": "2026-04-17T08:13:38Z",
+    "distance": 612.4,
+    "start_index": 3523,
+    "end_index": 3597,
+    "average_cadence": 76.7,
+    "device_watts": true,
+    "average_watts": 203.9,
+    "average_heartrate": 140.5,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3336721137257389260,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13907347059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 75,
+    "moving_time": 75,
+    "start_date": "2025-03-17T14:15:32Z",
+    "start_date_local": "2025-03-17T07:15:32Z",
+    "distance": 612.4,
+    "start_index": 4705,
+    "end_index": 4780,
+    "average_cadence": 77.6,
+    "device_watts": true,
+    "average_watts": 274.9,
+    "average_heartrate": 150.1,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365357798682371398,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14694579988,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 75,
+    "moving_time": 75,
+    "start_date": "2025-06-04T14:46:40Z",
+    "start_date_local": "2025-06-04T07:46:40Z",
+    "distance": 612.4,
+    "start_index": 4579,
+    "end_index": 4654,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 223.8,
+    "average_heartrate": 132.2,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3373322724709684572,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14922441670,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 75,
+    "moving_time": 75,
+    "start_date": "2025-06-26T14:16:39Z",
+    "start_date_local": "2025-06-26T07:16:39Z",
+    "distance": 612.4,
+    "start_index": 4404,
+    "end_index": 4479,
+    "average_cadence": 73.4,
+    "device_watts": true,
+    "average_watts": 226.1,
+    "average_heartrate": 116.9,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382381119692434342,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15187100097,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 75,
+    "moving_time": 75,
+    "start_date": "2025-07-21T14:12:03Z",
+    "start_date_local": "2025-07-21T07:12:03Z",
+    "distance": 612.4,
+    "start_index": 4452,
+    "end_index": 4527,
+    "average_cadence": 76.9,
+    "device_watts": true,
+    "average_watts": 252.4,
+    "average_heartrate": 133.5,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3391088266297056256,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15457183494,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 75,
+    "moving_time": 75,
+    "start_date": "2025-08-14T14:50:26Z",
+    "start_date_local": "2025-08-14T07:50:26Z",
+    "distance": 612.4,
+    "start_index": 4287,
+    "end_index": 4362,
+    "average_cadence": 75.9,
+    "device_watts": true,
+    "average_watts": 243.8,
+    "average_heartrate": 129.7,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3443286223012048346,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16946166061,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 75,
+    "moving_time": 75,
+    "start_date": "2026-01-05T15:46:59Z",
+    "start_date_local": "2026-01-05T07:46:59Z",
+    "distance": 612.4,
+    "start_index": 4646,
+    "end_index": 4721,
+    "average_cadence": 85.1,
+    "device_watts": true,
+    "average_watts": 224.6,
+    "average_heartrate": 144.1,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353407475848040434,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14355401347,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 76,
+    "moving_time": 76,
+    "start_date": "2025-05-02T14:47:32Z",
+    "start_date_local": "2025-05-02T07:47:32Z",
+    "distance": 612.4,
+    "start_index": 4586,
+    "end_index": 4662,
+    "average_cadence": 75.3,
+    "device_watts": true,
+    "average_watts": 211.0,
+    "average_heartrate": 130.8,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358104868233316822,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14488932577,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 76,
+    "moving_time": 76,
+    "start_date": "2025-05-15T14:27:11Z",
+    "start_date_local": "2025-05-15T07:27:11Z",
+    "distance": 612.4,
+    "start_index": 4458,
+    "end_index": 4534,
+    "average_cadence": 78.9,
+    "device_watts": true,
+    "average_watts": 251.8,
+    "average_heartrate": 135.8,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3364982804675335990,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14683175747,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 76,
+    "moving_time": 76,
+    "start_date": "2025-06-03T13:56:03Z",
+    "start_date_local": "2025-06-03T06:56:03Z",
+    "distance": 612.4,
+    "start_index": 4342,
+    "end_index": 4418,
+    "average_cadence": 74.9,
+    "device_watts": true,
+    "average_watts": 234.9,
+    "average_heartrate": 146.0,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3380924578652234462,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15144496559,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 76,
+    "moving_time": 76,
+    "start_date": "2025-07-17T13:44:13Z",
+    "start_date_local": "2025-07-17T06:44:13Z",
+    "distance": 612.4,
+    "start_index": 3658,
+    "end_index": 3734,
+    "average_cadence": 75.1,
+    "device_watts": true,
+    "average_watts": 244.3,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395426409472289926,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15592870724,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 76,
+    "moving_time": 76,
+    "start_date": "2025-08-26T14:07:11Z",
+    "start_date_local": "2025-08-26T07:07:11Z",
+    "distance": 612.4,
+    "start_index": 4305,
+    "end_index": 4381,
+    "average_cadence": 74.8,
+    "device_watts": true,
+    "average_watts": 212.3,
+    "average_heartrate": 123.8,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482778942428942922,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18240132582,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 76,
+    "moving_time": 76,
+    "start_date": "2026-04-24T15:16:37Z",
+    "start_date_local": "2026-04-24T08:16:37Z",
+    "distance": 612.4,
+    "start_index": 3676,
+    "end_index": 3752,
+    "average_cadence": 78.7,
+    "device_watts": true,
+    "average_watts": 245.7,
+    "average_heartrate": 136.0,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3246120662592521522,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11854428730,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 77,
+    "moving_time": 77,
+    "start_date": "2024-07-10T13:58:50Z",
+    "start_date_local": "2024-07-10T06:58:50Z",
+    "distance": 612.4,
+    "start_index": 1362,
+    "end_index": 1375,
+    "device_watts": false,
+    "average_heartrate": 128.7,
+    "max_heartrate": 133.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3348325515452851814,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14213905981,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 77,
+    "moving_time": 77,
+    "start_date": "2025-04-18T14:37:23Z",
+    "start_date_local": "2025-04-18T07:37:23Z",
+    "distance": 612.4,
+    "start_index": 4612,
+    "end_index": 4689,
+    "average_cadence": 77.5,
+    "device_watts": true,
+    "average_watts": 228.4,
+    "average_heartrate": 132.9,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413191635314794100,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16138354685,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 77,
+    "moving_time": 77,
+    "start_date": "2025-10-14T14:41:43Z",
+    "start_date_local": "2025-10-14T07:41:43Z",
+    "distance": 612.4,
+    "start_index": 4594,
+    "end_index": 4671,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 132.5,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477343057734296762,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18042080515,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 77,
+    "moving_time": 77,
+    "start_date": "2026-04-09T15:16:14Z",
+    "start_date_local": "2026-04-09T08:16:14Z",
+    "distance": 612.4,
+    "start_index": 3902,
+    "end_index": 3979,
+    "average_cadence": 72.0,
+    "device_watts": true,
+    "average_watts": 218.3,
+    "average_heartrate": 133.4,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482418679129916258,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18227023189,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 77,
+    "moving_time": 77,
+    "start_date": "2026-04-23T15:04:51Z",
+    "start_date_local": "2026-04-23T08:04:51Z",
+    "distance": 612.4,
+    "start_index": 3556,
+    "end_index": 3633,
+    "average_cadence": 84.4,
+    "device_watts": true,
+    "average_watts": 240.2,
+    "average_heartrate": 150.1,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491476539242278126,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18555893716,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 77,
+    "moving_time": 77,
+    "start_date": "2026-05-18T15:18:02Z",
+    "start_date_local": "2026-05-18T08:18:02Z",
+    "distance": 612.4,
+    "start_index": 3484,
+    "end_index": 3561,
+    "average_cadence": 84.2,
+    "device_watts": true,
+    "average_watts": 244.2,
+    "average_heartrate": 155.4,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368618803599582722,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14787270900,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 78,
+    "moving_time": 78,
+    "start_date": "2025-06-13T14:43:12Z",
+    "start_date_local": "2025-06-13T07:43:12Z",
+    "distance": 612.4,
+    "start_index": 4377,
+    "end_index": 4455,
+    "average_cadence": 74.3,
+    "device_watts": true,
+    "average_watts": 278.2,
+    "average_heartrate": 142.8,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3393992976764354402,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15547940636,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 78,
+    "moving_time": 78,
+    "start_date": "2025-08-22T15:12:59Z",
+    "start_date_local": "2025-08-22T08:12:59Z",
+    "distance": 612.4,
+    "start_index": 4435,
+    "end_index": 4513,
+    "average_cadence": 73.9,
+    "device_watts": true,
+    "average_watts": 222.0,
+    "average_heartrate": 145.6,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477707428058041200,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18054908859,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 78,
+    "moving_time": 78,
+    "start_date": "2026-04-10T15:23:56Z",
+    "start_date_local": "2026-04-10T08:23:56Z",
+    "distance": 612.4,
+    "start_index": 3894,
+    "end_index": 3972,
+    "average_cadence": 74.2,
+    "device_watts": true,
+    "average_watts": 237.1,
+    "average_heartrate": 133.0,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355201581756573432,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14405517047,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 79,
+    "moving_time": 79,
+    "start_date": "2025-05-07T14:08:47Z",
+    "start_date_local": "2025-05-07T07:08:47Z",
+    "distance": 612.4,
+    "start_index": 1480,
+    "end_index": 1503,
+    "device_watts": false,
+    "average_heartrate": 147.4,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3407751265446665370,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15975845608,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 79,
+    "moving_time": 79,
+    "start_date": "2025-09-29T14:23:07Z",
+    "start_date_local": "2025-09-29T07:23:07Z",
+    "distance": 612.4,
+    "start_index": 4029,
+    "end_index": 4108,
+    "average_cadence": 71.8,
+    "device_watts": true,
+    "average_watts": 202.5,
+    "average_heartrate": 151.3,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3458505872848804724,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 17417002169,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 79,
+    "moving_time": 79,
+    "start_date": "2026-02-16T15:44:11Z",
+    "start_date_local": "2026-02-16T07:44:11Z",
+    "distance": 612.4,
+    "start_index": 4788,
+    "end_index": 4867,
+    "average_cadence": 89.5,
+    "device_watts": true,
+    "average_watts": 248.3,
+    "average_heartrate": 155.9,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3461392619799029620,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 17506406720,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 79,
+    "moving_time": 79,
+    "start_date": "2026-02-24T14:51:28Z",
+    "start_date_local": "2026-02-24T06:51:28Z",
+    "distance": 612.4,
+    "start_index": 4604,
+    "end_index": 4683,
+    "average_cadence": 65.6,
+    "device_watts": true,
+    "average_watts": 202.1,
+    "average_heartrate": 153.1,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491841620555438386,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18569402318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 79,
+    "moving_time": 79,
+    "start_date": "2026-05-19T15:25:02Z",
+    "start_date_local": "2026-05-19T08:25:02Z",
+    "distance": 612.4,
+    "start_index": 3424,
+    "end_index": 3503,
+    "average_cadence": 83.3,
+    "device_watts": true,
+    "average_watts": 225.6,
+    "average_heartrate": 147.5,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304490914028248526,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13142668267,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2024-12-18T15:44:09Z",
+    "start_date_local": "2024-12-18T07:44:09Z",
+    "distance": 612.4,
+    "start_index": 4745,
+    "end_index": 4825,
+    "average_cadence": 77.2,
+    "device_watts": true,
+    "average_watts": 375.3,
+    "average_heartrate": 169.5,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3371142491060039640,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14860224848,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2025-06-20T13:53:29Z",
+    "start_date_local": "2025-06-20T06:53:29Z",
+    "distance": 612.4,
+    "start_index": 4178,
+    "end_index": 4258,
+    "average_cadence": 63.9,
+    "device_watts": true,
+    "average_watts": 230.0,
+    "average_heartrate": 134.3,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3440751703088716032,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16875262874,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2025-12-29T15:55:05Z",
+    "start_date_local": "2025-12-29T07:55:05Z",
+    "distance": 612.4,
+    "start_index": 4837,
+    "end_index": 4917,
+    "device_watts": false,
+    "average_heartrate": 152.9,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3311365616852899062,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13281602620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 81,
+    "moving_time": 81,
+    "start_date": "2025-01-06T15:01:19Z",
+    "start_date_local": "2025-01-06T07:01:19Z",
+    "distance": 612.4,
+    "start_index": 4578,
+    "end_index": 4659,
+    "device_watts": false,
+    "average_heartrate": 128.9,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410297072947299666,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16052523229,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 81,
+    "moving_time": 81,
+    "start_date": "2025-10-06T14:59:19Z",
+    "start_date_local": "2025-10-06T07:59:19Z",
+    "distance": 612.4,
+    "start_index": 4316,
+    "end_index": 4397,
+    "average_cadence": 79.0,
+    "device_watts": true,
+    "average_watts": 185.3,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3459226707209485094,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 17440217222,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 81,
+    "moving_time": 81,
+    "start_date": "2026-02-18T15:01:39Z",
+    "start_date_local": "2026-02-18T07:01:39Z",
+    "distance": 612.4,
+    "start_index": 4751,
+    "end_index": 4832,
+    "average_cadence": 84.1,
+    "device_watts": true,
+    "average_watts": 243.8,
+    "average_heartrate": 145.1,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489304526497281786,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18478432225,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 81,
+    "moving_time": 81,
+    "start_date": "2026-05-12T15:26:08Z",
+    "start_date_local": "2026-05-12T08:26:08Z",
+    "distance": 612.4,
+    "start_index": 4126,
+    "end_index": 4207,
+    "device_watts": false,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268951866223081076,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12383740682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 82,
+    "moving_time": 82,
+    "start_date": "2024-09-11T14:04:10Z",
+    "start_date_local": "2024-09-11T07:04:10Z",
+    "distance": 612.4,
+    "start_index": 4966,
+    "end_index": 5048,
+    "average_cadence": 62.2,
+    "device_watts": true,
+    "average_watts": 198.1,
+    "average_heartrate": 122.5,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476620162036720658,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18014415654,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 82,
+    "moving_time": 82,
+    "start_date": "2026-04-07T15:23:39Z",
+    "start_date_local": "2026-04-07T08:23:39Z",
+    "distance": 612.4,
+    "start_index": 3740,
+    "end_index": 3822,
+    "average_cadence": 74.1,
+    "device_watts": true,
+    "average_watts": 201.9,
+    "average_heartrate": 127.0,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3345053890871725582,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14127037659,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2025-04-09T14:07:06Z",
+    "start_date_local": "2025-04-09T07:07:06Z",
+    "distance": 612.4,
+    "start_index": 4831,
+    "end_index": 4914,
+    "average_cadence": 77.5,
+    "device_watts": true,
+    "average_watts": 201.0,
+    "average_heartrate": 130.0,
+    "max_heartrate": 133.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3466566977717427094,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 17678093340,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-03-10T14:29:01Z",
+    "start_date_local": "2026-03-10T07:29:01Z",
+    "distance": 612.4,
+    "start_index": 4818,
+    "end_index": 4901,
+    "average_cadence": 74.7,
+    "device_watts": true,
+    "average_watts": 194.4,
+    "average_heartrate": 130.5,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476974597733521612,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18028038338,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-04-08T14:52:22Z",
+    "start_date_local": "2026-04-08T07:52:22Z",
+    "distance": 612.4,
+    "start_index": 3874,
+    "end_index": 3957,
+    "device_watts": false,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250831414655618588,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11960512797,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 84,
+    "moving_time": 84,
+    "start_date": "2024-07-23T13:58:14Z",
+    "start_date_local": "2024-07-23T06:58:14Z",
+    "distance": 612.4,
+    "start_index": 1434,
+    "end_index": 1448,
+    "device_watts": false,
+    "average_heartrate": 128.1,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3299416480352085960,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13045844687,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 84,
+    "moving_time": 84,
+    "start_date": "2024-12-04T15:40:05Z",
+    "start_date_local": "2024-12-04T07:40:05Z",
+    "distance": 612.4,
+    "start_index": 5086,
+    "end_index": 5170,
+    "average_cadence": 67.2,
+    "device_watts": true,
+    "average_watts": 206.0,
+    "average_heartrate": 122.2,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375860359761507600,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14994827230,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 84,
+    "moving_time": 84,
+    "start_date": "2025-07-03T14:04:44Z",
+    "start_date_local": "2025-07-03T07:04:44Z",
+    "distance": 612.4,
+    "start_index": 4454,
+    "end_index": 4538,
+    "average_cadence": 67.7,
+    "device_watts": true,
+    "average_watts": 196.1,
+    "average_heartrate": 120.3,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474805379872429080,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 17951108555,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 84,
+    "moving_time": 84,
+    "start_date": "2026-04-02T15:12:17Z",
+    "start_date_local": "2026-04-02T08:12:17Z",
+    "distance": 612.4,
+    "start_index": 3718,
+    "end_index": 3802,
+    "average_cadence": 74.4,
+    "device_watts": true,
+    "average_watts": 241.3,
+    "average_heartrate": 146.6,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486401448928787736,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18373080739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 84,
+    "moving_time": 84,
+    "start_date": "2026-05-04T15:10:18Z",
+    "start_date_local": "2026-05-04T08:10:18Z",
+    "distance": 612.4,
+    "start_index": 3750,
+    "end_index": 3834,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 217.6,
+    "average_heartrate": 130.8,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3233799411477837134,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11588092304,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2024-06-06T14:01:12Z",
+    "start_date_local": "2024-06-06T07:01:12Z",
+    "distance": 612.4,
+    "start_index": 4214,
+    "end_index": 4298,
+    "device_watts": false,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375493545871750938,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14984093722,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2025-07-02T14:01:55Z",
+    "start_date_local": "2025-07-02T07:01:55Z",
+    "distance": 612.4,
+    "start_index": 4376,
+    "end_index": 4461,
+    "average_cadence": 71.4,
+    "device_watts": true,
+    "average_watts": 199.1,
+    "average_heartrate": 131.9,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304857031492403436,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13149409450,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2024-12-19T15:57:04Z",
+    "start_date_local": "2024-12-19T07:57:04Z",
+    "distance": 612.4,
+    "start_index": 5229,
+    "end_index": 5315,
+    "average_cadence": 73.9,
+    "device_watts": true,
+    "average_watts": 176.1,
+    "average_heartrate": 124.8,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487129644536140772,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18400369545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2026-05-06T15:24:28Z",
+    "start_date_local": "2026-05-06T08:24:28Z",
+    "distance": 612.4,
+    "start_index": 4146,
+    "end_index": 4232,
+    "device_watts": false,
+    "average_heartrate": 129.0,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3337813483848679814,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13936388109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 87,
+    "start_date": "2025-03-20T14:06:14Z",
+    "start_date_local": "2025-03-20T07:06:14Z",
+    "distance": 612.4,
+    "start_index": 4990,
+    "end_index": 5077,
+    "average_cadence": 68.5,
+    "device_watts": true,
+    "average_watts": 275.2,
+    "average_heartrate": 148.6,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3372602316029524506,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 14901386435,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 87,
+    "start_date": "2025-06-24T14:32:20Z",
+    "start_date_local": "2025-06-24T07:32:20Z",
+    "distance": 612.4,
+    "start_index": 4448,
+    "end_index": 4535,
+    "average_cadence": 57.5,
+    "device_watts": true,
+    "average_watts": 134.2,
+    "average_heartrate": 103.6,
+    "max_heartrate": 107.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395791261406811556,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 15605124945,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 87,
+    "start_date": "2025-08-27T14:18:21Z",
+    "start_date_local": "2025-08-27T07:18:21Z",
+    "distance": 612.4,
+    "start_index": 4243,
+    "end_index": 4330,
+    "average_cadence": 66.2,
+    "device_watts": true,
+    "average_watts": 177.5,
+    "average_heartrate": 134.9,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3441113494404938974,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16885305726,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 87,
+    "start_date": "2025-12-30T15:52:27Z",
+    "start_date_local": "2025-12-30T07:52:27Z",
+    "distance": 612.4,
+    "start_index": 4796,
+    "end_index": 4883,
+    "device_watts": false,
+    "average_heartrate": 144.4,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3409203698235903198,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 16020797446,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 88,
+    "moving_time": 88,
+    "start_date": "2025-10-03T14:34:02Z",
+    "start_date_local": "2025-10-03T07:34:02Z",
+    "distance": 612.4,
+    "start_index": 4542,
+    "end_index": 4630,
+    "average_cadence": 73.4,
+    "device_watts": true,
+    "average_watts": 180.6,
+    "average_heartrate": 116.8,
+    "max_heartrate": 119.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449803577076153668,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 17150751411,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 89,
+    "moving_time": 89,
+    "start_date": "2026-01-23T15:04:51Z",
+    "start_date_local": "2026-01-23T07:04:51Z",
+    "distance": 612.4,
+    "start_index": 5063,
+    "end_index": 5152,
+    "device_watts": false,
+    "average_heartrate": 139.6,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769751643397984,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18386825119,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 89,
+    "moving_time": 89,
+    "start_date": "2026-05-05T15:31:07Z",
+    "start_date_local": "2026-05-05T08:31:07Z",
+    "distance": 612.4,
+    "start_index": 4013,
+    "end_index": 4102,
+    "device_watts": false,
+    "average_heartrate": 126.7,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3293623367838820474,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 12929816287,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2024-11-18T15:34:21Z",
+    "start_date_local": "2024-11-18T07:34:21Z",
+    "distance": 612.4,
+    "start_index": 4969,
+    "end_index": 5059,
+    "average_cadence": 81.6,
+    "device_watts": true,
+    "average_watts": 220.4,
+    "average_heartrate": 143.5,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250473739942300160,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 11951988603,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 92,
+    "moving_time": 92,
+    "start_date": "2024-07-22T14:18:35Z",
+    "start_date_local": "2024-07-22T07:18:35Z",
+    "distance": 612.4,
+    "start_index": 1456,
+    "end_index": 1471,
+    "device_watts": false,
+    "average_heartrate": 122.7,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490027157159659846,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18505534998,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 93,
+    "moving_time": 93,
+    "start_date": "2026-05-14T15:17:58Z",
+    "start_date_local": "2026-05-14T08:17:58Z",
+    "distance": 612.4,
+    "start_index": 4283,
+    "end_index": 4376,
+    "device_watts": false,
+    "average_heartrate": 129.0,
+    "max_heartrate": 133.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3316440483650927034,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 13405588752,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 100,
+    "moving_time": 100,
+    "start_date": "2025-01-20T15:06:48Z",
+    "start_date_local": "2025-01-20T07:06:48Z",
+    "distance": 612.4,
+    "start_index": 4689,
+    "end_index": 4789,
+    "device_watts": false,
+    "average_heartrate": 147.7,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

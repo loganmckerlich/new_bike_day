@@ -1,0 +1,762 @@
+[
+  {
+    "id": 100001,
+    "resource_state": 2,
+    "name": "Box Hill",
+    "activity_type": "Ride",
+    "distance": 2354.0,
+    "average_grade": 5.2,
+    "maximum_grade": 11.8,
+    "elevation_high": 222.0,
+    "elevation_low": 100.0,
+    "start_latlng": [
+      51.249,
+      -0.342
+    ],
+    "end_latlng": [
+      51.26,
+      -0.33
+    ],
+    "climb_category": 2,
+    "city": "Dorking",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 122.0,
+    "created_at": "2010-06-01T12:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100001",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 1500,
+    "athlete_count": 900,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100002,
+    "resource_state": 2,
+    "name": "Town Sprint",
+    "activity_type": "Ride",
+    "distance": 320.0,
+    "average_grade": 0.5,
+    "maximum_grade": 2.1,
+    "elevation_high": 52.0,
+    "elevation_low": 50.0,
+    "start_latlng": [
+      51.505,
+      -0.092
+    ],
+    "end_latlng": [
+      51.506,
+      -0.089
+    ],
+    "climb_category": 0,
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 1.6,
+    "created_at": "2012-03-15T09:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100002",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 400,
+    "athlete_count": 250,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100003,
+    "resource_state": 2,
+    "name": "River Road Flat",
+    "activity_type": "Ride",
+    "distance": 5200.0,
+    "average_grade": 0.1,
+    "maximum_grade": 1.5,
+    "elevation_high": 21.0,
+    "elevation_low": 20.0,
+    "start_latlng": [
+      51.512,
+      -0.087
+    ],
+    "end_latlng": [
+      51.53,
+      -0.06
+    ],
+    "climb_category": 0,
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 5.0,
+    "created_at": "2013-07-20T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100003",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 850,
+    "athlete_count": 520,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100004,
+    "resource_state": 2,
+    "name": "North Downs Descent",
+    "activity_type": "Ride",
+    "distance": 1800.0,
+    "average_grade": -5.5,
+    "maximum_grade": 0.8,
+    "elevation_high": 185.0,
+    "elevation_low": 86.0,
+    "start_latlng": [
+      51.261,
+      -0.329
+    ],
+    "end_latlng": [
+      51.248,
+      -0.31
+    ],
+    "climb_category": 0,
+    "city": "Dorking",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 0.0,
+    "created_at": "2011-09-12T10:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100004",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 720,
+    "athlete_count": 440,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100005,
+    "resource_state": 2,
+    "name": "High Street Sprint",
+    "activity_type": "Ride",
+    "distance": 360.0,
+    "average_grade": 0.2,
+    "maximum_grade": 1.3,
+    "elevation_high": 45.0,
+    "elevation_low": 44.0,
+    "start_latlng": [
+      51.507,
+      -0.091
+    ],
+    "end_latlng": [
+      51.5082,
+      -0.0882
+    ],
+    "climb_category": 0,
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 1.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100005",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 180,
+    "athlete_count": 90,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100006,
+    "resource_state": 2,
+    "name": "Station Ramp Blast",
+    "activity_type": "Ride",
+    "distance": 340.0,
+    "average_grade": 3.6,
+    "maximum_grade": 6.1,
+    "elevation_high": 64.0,
+    "elevation_low": 52.0,
+    "start_latlng": [
+      51.462,
+      -0.115
+    ],
+    "end_latlng": [
+      51.463,
+      -0.1128
+    ],
+    "climb_category": 0,
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 12.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100006",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 187,
+    "athlete_count": 95,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100007,
+    "resource_state": 2,
+    "name": "Cobble Kick Sprint",
+    "activity_type": "Ride",
+    "distance": 280.0,
+    "average_grade": 5.1,
+    "maximum_grade": 8.7,
+    "elevation_high": 52.0,
+    "elevation_low": 38.0,
+    "start_latlng": [
+      51.5195,
+      -0.102
+    ],
+    "end_latlng": [
+      51.5202,
+      -0.0998
+    ],
+    "climb_category": 0,
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 14.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100007",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 194,
+    "athlete_count": 100,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100008,
+    "resource_state": 2,
+    "name": "Park Dip Sprint",
+    "activity_type": "Ride",
+    "distance": 300.0,
+    "average_grade": -2.1,
+    "maximum_grade": 0.4,
+    "elevation_high": 36.0,
+    "elevation_low": 29.0,
+    "start_latlng": [
+      51.503,
+      -0.162
+    ],
+    "end_latlng": [
+      51.5019,
+      -0.1597
+    ],
+    "climb_category": 0,
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 0.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100008",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 201,
+    "athlete_count": 105,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100009,
+    "resource_state": 2,
+    "name": "Valley Launch Sprint",
+    "activity_type": "Ride",
+    "distance": 390.0,
+    "average_grade": -3.4,
+    "maximum_grade": 0.2,
+    "elevation_high": 72.0,
+    "elevation_low": 58.0,
+    "start_latlng": [
+      51.2765,
+      -0.313
+    ],
+    "end_latlng": [
+      51.2748,
+      -0.3099
+    ],
+    "climb_category": 0,
+    "city": "Dorking",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 0.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100009",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 208,
+    "athlete_count": 110,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100010,
+    "resource_state": 2,
+    "name": "Canal Towpath Drag",
+    "activity_type": "Ride",
+    "distance": 820.0,
+    "average_grade": 0.1,
+    "maximum_grade": 0.8,
+    "elevation_high": 19.0,
+    "elevation_low": 18.0,
+    "start_latlng": [
+      51.529,
+      -0.091
+    ],
+    "end_latlng": [
+      51.5332,
+      -0.086
+    ],
+    "climb_category": 0,
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 1.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100010",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 215,
+    "athlete_count": 115,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100011,
+    "resource_state": 2,
+    "name": "Airport Perimeter Dash",
+    "activity_type": "Ride",
+    "distance": 960.0,
+    "average_grade": -0.3,
+    "maximum_grade": 0.7,
+    "elevation_high": 17.0,
+    "elevation_low": 15.0,
+    "start_latlng": [
+      51.4704,
+      -0.4543
+    ],
+    "end_latlng": [
+      51.474,
+      -0.449
+    ],
+    "climb_category": 0,
+    "city": "Hounslow",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 2.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100011",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 222,
+    "athlete_count": 120,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100012,
+    "resource_state": 2,
+    "name": "Canal Tempo Straight",
+    "activity_type": "Ride",
+    "distance": 4100.0,
+    "average_grade": -2.2,
+    "maximum_grade": 0.2,
+    "elevation_high": 14.0,
+    "elevation_low": 12.0,
+    "start_latlng": [
+      51.536,
+      -0.104
+    ],
+    "end_latlng": [
+      51.553,
+      -0.078
+    ],
+    "climb_category": 0,
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 2.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100012",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 229,
+    "athlete_count": 125,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100013,
+    "resource_state": 2,
+    "name": "Thames Path Tempo",
+    "activity_type": "Ride",
+    "distance": 6200.0,
+    "average_grade": 0.3,
+    "maximum_grade": 1.0,
+    "elevation_high": 16.0,
+    "elevation_low": 10.0,
+    "start_latlng": [
+      51.5005,
+      -0.1245
+    ],
+    "end_latlng": [
+      51.4855,
+      -0.073
+    ],
+    "climb_category": 0,
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 6.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100013",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 236,
+    "athlete_count": 130,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100014,
+    "resource_state": 2,
+    "name": "Meadow Rise",
+    "activity_type": "Ride",
+    "distance": 1800.0,
+    "average_grade": 3.2,
+    "maximum_grade": 5.1,
+    "elevation_high": 122.0,
+    "elevation_low": 64.0,
+    "start_latlng": [
+      51.2865,
+      -0.3295
+    ],
+    "end_latlng": [
+      51.2948,
+      -0.3235
+    ],
+    "climb_category": 1,
+    "city": "Dorking",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 58.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100014",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 243,
+    "athlete_count": 135,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100015,
+    "resource_state": 2,
+    "name": "Fern Lane Climb",
+    "activity_type": "Ride",
+    "distance": 2200.0,
+    "average_grade": 4.4,
+    "maximum_grade": 7.0,
+    "elevation_high": 168.0,
+    "elevation_low": 72.0,
+    "start_latlng": [
+      51.2812,
+      -0.3015
+    ],
+    "end_latlng": [
+      51.2918,
+      -0.2945
+    ],
+    "climb_category": 1,
+    "city": "Dorking",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 96.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100015",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 250,
+    "athlete_count": 140,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100016,
+    "resource_state": 2,
+    "name": "Beacon Rise",
+    "activity_type": "Ride",
+    "distance": 2600.0,
+    "average_grade": 6.8,
+    "maximum_grade": 10.2,
+    "elevation_high": 272.0,
+    "elevation_low": 95.0,
+    "start_latlng": [
+      51.238,
+      -0.352
+    ],
+    "end_latlng": [
+      51.247,
+      -0.338
+    ],
+    "climb_category": 2,
+    "city": "Dorking",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 177.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100016",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 257,
+    "athlete_count": 145,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100017,
+    "resource_state": 2,
+    "name": "Quarry Wall",
+    "activity_type": "Ride",
+    "distance": 1700.0,
+    "average_grade": 10.6,
+    "maximum_grade": 15.4,
+    "elevation_high": 264.0,
+    "elevation_low": 84.0,
+    "start_latlng": [
+      51.227,
+      -0.284
+    ],
+    "end_latlng": [
+      51.2338,
+      -0.2725
+    ],
+    "climb_category": 3,
+    "city": "Reigate",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 180.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100017",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 264,
+    "athlete_count": 150,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100018,
+    "resource_state": 2,
+    "name": "Switchback Sufferfest",
+    "activity_type": "Ride",
+    "distance": 1450.0,
+    "average_grade": 11.3,
+    "maximum_grade": 17.1,
+    "elevation_high": 230.0,
+    "elevation_low": 66.0,
+    "start_latlng": [
+      51.214,
+      -0.237
+    ],
+    "end_latlng": [
+      51.2205,
+      -0.226
+    ],
+    "climb_category": 3,
+    "city": "Reigate",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 164.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100018",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 271,
+    "athlete_count": 155,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100019,
+    "resource_state": 2,
+    "name": "Pine Bend Descent",
+    "activity_type": "Ride",
+    "distance": 1900.0,
+    "average_grade": -2.8,
+    "maximum_grade": 0.5,
+    "elevation_high": 156.0,
+    "elevation_low": 102.0,
+    "start_latlng": [
+      51.304,
+      -0.364
+    ],
+    "end_latlng": [
+      51.293,
+      -0.352
+    ],
+    "climb_category": 0,
+    "city": "Guildford",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 4.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100019",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 278,
+    "athlete_count": 160,
+    "kom_id": null,
+    "xoms": {}
+  },
+  {
+    "id": 100020,
+    "resource_state": 2,
+    "name": "Moorland Glide",
+    "activity_type": "Ride",
+    "distance": 2400.0,
+    "average_grade": -4.2,
+    "maximum_grade": 0.1,
+    "elevation_high": 186.0,
+    "elevation_low": 90.0,
+    "start_latlng": [
+      51.326,
+      -0.412
+    ],
+    "end_latlng": [
+      51.312,
+      -0.396
+    ],
+    "climb_category": 0,
+    "city": "Guildford",
+    "state": "England",
+    "country": "United Kingdom",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "total_elevation_gain": 6.0,
+    "created_at": "2014-01-01T08:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z",
+    "map": {
+      "id": "s100020",
+      "polyline": "",
+      "resource_state": 3
+    },
+    "effort_count": 285,
+    "athlete_count": 165,
+    "kom_id": null,
+    "xoms": {}
+  }
+]

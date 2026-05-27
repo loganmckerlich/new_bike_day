@@ -1,0 +1,6552 @@
+[
+  {
+    "id": 3418041805016777460,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16276644068,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 395,
+    "moving_time": 395,
+    "start_date": "2025-10-27T23:30:45Z",
+    "start_date_local": "2025-10-27T16:30:45Z",
+    "distance": 4820.5,
+    "start_index": 2664,
+    "end_index": 3059,
+    "average_cadence": 79.6,
+    "device_watts": true,
+    "average_watts": 337.0,
+    "average_heartrate": 162.9,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3270912518550378578,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12428660357,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 402,
+    "moving_time": 402,
+    "start_date": "2024-09-16T23:29:23Z",
+    "start_date_local": "2024-09-16T16:29:23Z",
+    "distance": 4820.5,
+    "start_index": 2480,
+    "end_index": 2882,
+    "average_cadence": 85.9,
+    "device_watts": true,
+    "average_watts": 407.3,
+    "average_heartrate": 176.0,
+    "max_heartrate": 185.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360058568415118552,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14545459873,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 404,
+    "moving_time": 404,
+    "start_date": "2025-05-20T23:27:27Z",
+    "start_date_local": "2025-05-20T16:27:27Z",
+    "distance": 4820.5,
+    "start_index": 2415,
+    "end_index": 2819,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 359.1,
+    "average_heartrate": 167.2,
+    "max_heartrate": 179.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3462628689935745896,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 17547148367,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 404,
+    "moving_time": 404,
+    "start_date": "2026-02-28T00:09:26Z",
+    "start_date_local": "2026-02-27T16:09:26Z",
+    "distance": 4820.5,
+    "start_index": 2595,
+    "end_index": 2999,
+    "average_cadence": 79.4,
+    "device_watts": true,
+    "average_watts": 305.4,
+    "average_heartrate": 162.7,
+    "max_heartrate": 179.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365131440176495448,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14688815799,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 407,
+    "moving_time": 407,
+    "start_date": "2025-06-03T23:24:11Z",
+    "start_date_local": "2025-06-03T16:24:11Z",
+    "distance": 4820.5,
+    "start_index": 2493,
+    "end_index": 2900,
+    "average_cadence": 81.9,
+    "device_watts": true,
+    "average_watts": 308.1,
+    "average_heartrate": 164.9,
+    "max_heartrate": 179.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3380715790775601790,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15139034586,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 413,
+    "moving_time": 413,
+    "start_date": "2025-07-16T23:29:39Z",
+    "start_date_local": "2025-07-16T16:29:39Z",
+    "distance": 4820.5,
+    "start_index": 2495,
+    "end_index": 2908,
+    "average_cadence": 84.1,
+    "device_watts": true,
+    "average_watts": 328.0,
+    "average_heartrate": 161.3,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410792902589999596,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16069192248,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 416,
+    "moving_time": 416,
+    "start_date": "2025-10-07T23:21:11Z",
+    "start_date_local": "2025-10-07T16:21:11Z",
+    "distance": 4820.5,
+    "start_index": 2727,
+    "end_index": 3143,
+    "average_cadence": 79.4,
+    "device_watts": true,
+    "average_watts": 291.2,
+    "average_heartrate": 151.3,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360783855870457940,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14565608416,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 417,
+    "moving_time": 417,
+    "start_date": "2025-05-22T23:29:10Z",
+    "start_date_local": "2025-05-22T16:29:10Z",
+    "distance": 4820.5,
+    "start_index": 2353,
+    "end_index": 2770,
+    "average_cadence": 85.6,
+    "device_watts": true,
+    "average_watts": 307.3,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3394806674658826286,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15574821773,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 417,
+    "moving_time": 417,
+    "start_date": "2025-08-24T20:45:33Z",
+    "start_date_local": "2025-08-24T13:45:33Z",
+    "distance": 4820.5,
+    "start_index": 1797,
+    "end_index": 2214,
+    "average_cadence": 80.1,
+    "device_watts": true,
+    "average_watts": 303.3,
+    "average_heartrate": 170.7,
+    "max_heartrate": 183.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3428204595035639136,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16557701207,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 419,
+    "moving_time": 419,
+    "start_date": "2025-11-25T00:31:35Z",
+    "start_date_local": "2025-11-24T16:31:35Z",
+    "distance": 4820.5,
+    "start_index": 2696,
+    "end_index": 3115,
+    "average_cadence": 77.0,
+    "device_watts": true,
+    "average_watts": 249.4,
+    "average_heartrate": 141.3,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3333268821776616138,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13818948822,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 431,
+    "moving_time": 431,
+    "start_date": "2025-03-08T01:15:09Z",
+    "start_date_local": "2025-03-07T17:15:09Z",
+    "distance": 4820.5,
+    "start_index": 2631,
+    "end_index": 3062,
+    "average_cadence": 82.7,
+    "device_watts": true,
+    "average_watts": 327.1,
+    "average_heartrate": 159.0,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3433642673265368284,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16699419989,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 431,
+    "moving_time": 431,
+    "start_date": "2025-12-10T00:40:17Z",
+    "start_date_local": "2025-12-09T16:40:17Z",
+    "distance": 4820.5,
+    "start_index": 2804,
+    "end_index": 3235,
+    "average_cadence": 82.0,
+    "device_watts": true,
+    "average_watts": 276.4,
+    "average_heartrate": 161.7,
+    "max_heartrate": 179.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480045687180389234,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 18139952805,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 432,
+    "moving_time": 432,
+    "start_date": "2026-04-17T00:02:56Z",
+    "start_date_local": "2026-04-16T17:02:56Z",
+    "distance": 4820.5,
+    "start_index": 2934,
+    "end_index": 3366,
+    "average_cadence": 70.6,
+    "device_watts": true,
+    "average_watts": 238.7,
+    "average_heartrate": 143.1,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395939725500600322,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15610853077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 437,
+    "moving_time": 437,
+    "start_date": "2025-08-27T23:46:36Z",
+    "start_date_local": "2025-08-27T16:46:36Z",
+    "distance": 4820.5,
+    "start_index": 2360,
+    "end_index": 2797,
+    "average_cadence": 87.5,
+    "device_watts": true,
+    "average_watts": 298.0,
+    "average_heartrate": 164.4,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3334326936126225154,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13847524516,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 439,
+    "moving_time": 439,
+    "start_date": "2025-03-10T23:19:53Z",
+    "start_date_local": "2025-03-10T16:19:53Z",
+    "distance": 4820.5,
+    "start_index": 2579,
+    "end_index": 3018,
+    "average_cadence": 84.4,
+    "device_watts": true,
+    "average_watts": 331.1,
+    "average_heartrate": 163.9,
+    "max_heartrate": 177.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355341669884197624,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14410509846,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 443,
+    "moving_time": 443,
+    "start_date": "2025-05-07T23:06:14Z",
+    "start_date_local": "2025-05-07T16:06:14Z",
+    "distance": 4820.5,
+    "start_index": 2321,
+    "end_index": 2764,
+    "average_cadence": 85.6,
+    "device_watts": true,
+    "average_watts": 315.9,
+    "average_heartrate": 166.1,
+    "max_heartrate": 175.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368399015801504718,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14782002077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 450,
+    "moving_time": 450,
+    "start_date": "2025-06-12T23:46:10Z",
+    "start_date_local": "2025-06-12T16:46:10Z",
+    "distance": 4820.5,
+    "start_index": 2726,
+    "end_index": 3176,
+    "average_cadence": 81.8,
+    "device_watts": true,
+    "average_watts": 251.4,
+    "average_heartrate": 138.2,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3349549313309134662,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14247293930,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 453,
+    "moving_time": 453,
+    "start_date": "2025-04-21T23:28:06Z",
+    "start_date_local": "2025-04-21T16:28:06Z",
+    "distance": 4820.5,
+    "start_index": 2510,
+    "end_index": 2963,
+    "average_cadence": 87.4,
+    "device_watts": true,
+    "average_watts": 303.8,
+    "average_heartrate": 163.0,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3407893961837788806,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15981239270,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 453,
+    "moving_time": 453,
+    "start_date": "2025-09-29T23:27:22Z",
+    "start_date_local": "2025-09-29T16:27:22Z",
+    "distance": 4820.5,
+    "start_index": 2581,
+    "end_index": 3034,
+    "average_cadence": 80.5,
+    "device_watts": true,
+    "average_watts": 224.1,
+    "average_heartrate": 140.3,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410449005003909866,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16057999771,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 453,
+    "moving_time": 453,
+    "start_date": "2025-10-07T00:37:59Z",
+    "start_date_local": "2025-10-06T17:37:59Z",
+    "distance": 4820.5,
+    "start_index": 2701,
+    "end_index": 3154,
+    "average_cadence": 81.4,
+    "device_watts": true,
+    "average_watts": 332.9,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358611782570643740,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14502987323,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 460,
+    "moving_time": 460,
+    "start_date": "2025-05-16T23:36:43Z",
+    "start_date_local": "2025-05-16T16:36:43Z",
+    "distance": 4820.5,
+    "start_index": 2720,
+    "end_index": 3180,
+    "average_cadence": 78.6,
+    "device_watts": true,
+    "average_watts": 243.8,
+    "average_heartrate": 139.6,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382536810469818236,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15192565778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 465,
+    "moving_time": 465,
+    "start_date": "2025-07-21T23:45:54Z",
+    "start_date_local": "2025-07-21T16:45:54Z",
+    "distance": 4820.5,
+    "start_index": 2668,
+    "end_index": 3133,
+    "average_cadence": 71.3,
+    "device_watts": true,
+    "average_watts": 234.2,
+    "average_heartrate": 128.1,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3356070763826247200,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14430065631,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 468,
+    "moving_time": 468,
+    "start_date": "2025-05-09T23:20:09Z",
+    "start_date_local": "2025-05-09T16:20:09Z",
+    "distance": 4820.5,
+    "start_index": 2589,
+    "end_index": 3057,
+    "average_cadence": 77.7,
+    "device_watts": true,
+    "average_watts": 288.7,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3331807481426944932,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13782306424,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 470,
+    "moving_time": 470,
+    "start_date": "2025-03-04T00:27:49Z",
+    "start_date_local": "2025-03-03T16:27:49Z",
+    "distance": 4820.5,
+    "start_index": 2324,
+    "end_index": 2794,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 312.4,
+    "average_heartrate": 167.7,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3301375782565111064,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13082789733,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 471,
+    "moving_time": 471,
+    "start_date": "2024-12-10T01:01:40Z",
+    "start_date_local": "2024-12-09T17:01:40Z",
+    "distance": 4820.5,
+    "start_index": 2714,
+    "end_index": 3185,
+    "average_cadence": 77.9,
+    "device_watts": true,
+    "average_watts": 355.2,
+    "average_heartrate": 179.8,
+    "max_heartrate": 192.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263314668773801102,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12251206437,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 472,
+    "moving_time": 472,
+    "start_date": "2024-08-27T00:15:02Z",
+    "start_date_local": "2024-08-26T17:15:02Z",
+    "distance": 4820.5,
+    "start_index": 3143,
+    "end_index": 3615,
+    "average_cadence": 65.9,
+    "device_watts": true,
+    "average_watts": 233.4,
+    "average_heartrate": 136.7,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3289058540420915312,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12833529466,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 473,
+    "moving_time": 473,
+    "start_date": "2024-11-06T01:04:05Z",
+    "start_date_local": "2024-11-05T17:04:05Z",
+    "distance": 4820.5,
+    "start_index": 2951,
+    "end_index": 3424,
+    "average_cadence": 67.8,
+    "device_watts": true,
+    "average_watts": 269.4,
+    "average_heartrate": 157.9,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3267318946437982656,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12345256035,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 474,
+    "moving_time": 474,
+    "start_date": "2024-09-07T01:03:01Z",
+    "start_date_local": "2024-09-06T18:03:01Z",
+    "distance": 4820.5,
+    "start_index": 1558,
+    "end_index": 2032,
+    "average_cadence": 75.2,
+    "device_watts": true,
+    "average_watts": 324.0,
+    "average_heartrate": 164.5,
+    "max_heartrate": 183.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3248815534838412100,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 11915247632,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 476,
+    "moving_time": 476,
+    "start_date": "2024-07-18T00:00:33Z",
+    "start_date_local": "2024-07-17T17:00:33Z",
+    "distance": 4820.5,
+    "start_index": 871,
+    "end_index": 1006,
+    "device_watts": false,
+    "average_heartrate": 144.3,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3357885513226844414,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14483662912,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 477,
+    "moving_time": 477,
+    "start_date": "2025-05-14T23:26:28Z",
+    "start_date_local": "2025-05-14T16:26:28Z",
+    "distance": 4820.5,
+    "start_index": 2461,
+    "end_index": 2938,
+    "average_cadence": 70.4,
+    "device_watts": true,
+    "average_watts": 260.3,
+    "average_heartrate": 146.6,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3366216961337495270,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14718441156,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 477,
+    "moving_time": 477,
+    "start_date": "2025-06-06T23:19:39Z",
+    "start_date_local": "2025-06-06T16:19:39Z",
+    "distance": 4820.5,
+    "start_index": 2416,
+    "end_index": 2893,
+    "average_cadence": 85.3,
+    "device_watts": true,
+    "average_watts": 284.5,
+    "average_heartrate": 167.0,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3459368289649038342,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 17445540634,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 479,
+    "moving_time": 479,
+    "start_date": "2026-02-19T00:33:42Z",
+    "start_date_local": "2026-02-18T16:33:42Z",
+    "distance": 4820.5,
+    "start_index": 2818,
+    "end_index": 3297,
+    "average_cadence": 74.8,
+    "device_watts": true,
+    "average_watts": 169.1,
+    "average_heartrate": 127.8,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250625243063036348,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 11956197510,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 480,
+    "moving_time": 480,
+    "start_date": "2024-07-22T23:59:39Z",
+    "start_date_local": "2024-07-22T16:59:39Z",
+    "distance": 4820.5,
+    "start_index": 775,
+    "end_index": 903,
+    "device_watts": false,
+    "average_heartrate": 167.4,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3422057672429070018,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16389125131,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 481,
+    "moving_time": 481,
+    "start_date": "2025-11-08T00:48:23Z",
+    "start_date_local": "2025-11-07T16:48:23Z",
+    "distance": 4820.5,
+    "start_index": 2493,
+    "end_index": 2974,
+    "average_cadence": 78.9,
+    "device_watts": true,
+    "average_watts": 235.1,
+    "average_heartrate": 153.2,
+    "max_heartrate": 177.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268744588172789608,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12379606106,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 483,
+    "moving_time": 483,
+    "start_date": "2024-09-10T23:59:30Z",
+    "start_date_local": "2024-09-10T16:59:30Z",
+    "distance": 4820.5,
+    "start_index": 2434,
+    "end_index": 2917,
+    "average_cadence": 76.7,
+    "device_watts": true,
+    "average_watts": 299.7,
+    "average_heartrate": 162.0,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3335789974949719242,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13884673249,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 483,
+    "moving_time": 483,
+    "start_date": "2025-03-15T00:12:12Z",
+    "start_date_local": "2025-03-14T17:12:12Z",
+    "distance": 4820.5,
+    "start_index": 3103,
+    "end_index": 3586,
+    "average_cadence": 78.5,
+    "device_watts": true,
+    "average_watts": 255.9,
+    "average_heartrate": 160.5,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3349156322115685974,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14236739486,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 483,
+    "moving_time": 483,
+    "start_date": "2025-04-20T21:24:52Z",
+    "start_date_local": "2025-04-20T14:24:52Z",
+    "distance": 4820.5,
+    "start_index": 4113,
+    "end_index": 4596,
+    "average_cadence": 68.2,
+    "device_watts": true,
+    "average_watts": 191.3,
+    "average_heartrate": 126.4,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3391226507567311114,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15461854797,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 484,
+    "moving_time": 478,
+    "start_date": "2025-08-14T23:36:23Z",
+    "start_date_local": "2025-08-14T16:36:23Z",
+    "distance": 4820.5,
+    "start_index": 2533,
+    "end_index": 3012,
+    "average_cadence": 78.8,
+    "device_watts": true,
+    "average_watts": 289.2,
+    "average_heartrate": 150.1,
+    "max_heartrate": 169.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449589662369601604,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 17145300473,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 487,
+    "moving_time": 487,
+    "start_date": "2026-01-23T00:50:25Z",
+    "start_date_local": "2026-01-22T16:50:25Z",
+    "distance": 4820.5,
+    "start_index": 2824,
+    "end_index": 3311,
+    "device_watts": false,
+    "average_heartrate": 177.7,
+    "max_heartrate": 192.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387596722615336162,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15346600735,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 488,
+    "moving_time": 488,
+    "start_date": "2025-08-04T23:11:16Z",
+    "start_date_local": "2025-08-04T16:11:16Z",
+    "distance": 4820.5,
+    "start_index": 2662,
+    "end_index": 3150,
+    "average_cadence": 67.8,
+    "device_watts": true,
+    "average_watts": 163.7,
+    "average_heartrate": 120.8,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3273452936512213212,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12487981260,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 490,
+    "moving_time": 490,
+    "start_date": "2024-09-23T23:47:59Z",
+    "start_date_local": "2024-09-23T16:47:59Z",
+    "distance": 4820.5,
+    "start_index": 2268,
+    "end_index": 2758,
+    "average_cadence": 76.9,
+    "device_watts": true,
+    "average_watts": 310.4,
+    "average_heartrate": 170.0,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411879133008240646,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16100290833,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 494,
+    "moving_time": 494,
+    "start_date": "2025-10-10T23:21:20Z",
+    "start_date_local": "2025-10-10T16:21:20Z",
+    "distance": 4820.5,
+    "start_index": 2863,
+    "end_index": 3357,
+    "average_cadence": 76.6,
+    "device_watts": true,
+    "average_watts": 211.3,
+    "average_heartrate": 129.5,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3372750033874875956,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14906580709,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 497,
+    "moving_time": 497,
+    "start_date": "2025-06-24T23:55:17Z",
+    "start_date_local": "2025-06-24T16:55:17Z",
+    "distance": 4820.5,
+    "start_index": 2676,
+    "end_index": 3173,
+    "average_cadence": 72.2,
+    "device_watts": true,
+    "average_watts": 220.1,
+    "average_heartrate": 124.1,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3396639673330719732,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15630841781,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 500,
+    "moving_time": 500,
+    "start_date": "2025-08-29T22:06:15Z",
+    "start_date_local": "2025-08-29T15:06:15Z",
+    "distance": 4820.5,
+    "start_index": 2677,
+    "end_index": 3177,
+    "average_cadence": 72.0,
+    "device_watts": true,
+    "average_watts": 162.1,
+    "average_heartrate": 120.9,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3458643731758673990,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 17422456218,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 500,
+    "moving_time": 500,
+    "start_date": "2026-02-17T00:28:37Z",
+    "start_date_local": "2026-02-16T16:28:37Z",
+    "distance": 4820.5,
+    "start_index": 2480,
+    "end_index": 2979,
+    "average_cadence": 84.4,
+    "device_watts": true,
+    "average_watts": 258.2,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375655661468466560,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14989532907,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 502,
+    "moving_time": 502,
+    "start_date": "2025-07-03T00:23:18Z",
+    "start_date_local": "2025-07-02T17:23:18Z",
+    "distance": 4820.5,
+    "start_index": 2545,
+    "end_index": 3047,
+    "average_cadence": 81.1,
+    "device_watts": true,
+    "average_watts": 272.9,
+    "average_heartrate": 146.0,
+    "max_heartrate": 166.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3256056225776704354,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12082056504,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 509,
+    "moving_time": 509,
+    "start_date": "2024-08-06T23:38:40Z",
+    "start_date_local": "2024-08-06T16:38:40Z",
+    "distance": 4820.5,
+    "start_index": 704,
+    "end_index": 838,
+    "device_watts": false,
+    "average_heartrate": 172.5,
+    "max_heartrate": 179.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360421427525936456,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14555933871,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 511,
+    "moving_time": 511,
+    "start_date": "2025-05-21T23:18:51Z",
+    "start_date_local": "2025-05-21T16:18:51Z",
+    "distance": 4820.5,
+    "start_index": 2455,
+    "end_index": 2966,
+    "average_cadence": 84.2,
+    "device_watts": true,
+    "average_watts": 298.9,
+    "average_heartrate": 153.5,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3457193236510417818,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 17379561550,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 523,
+    "moving_time": 523,
+    "start_date": "2026-02-13T00:34:43Z",
+    "start_date_local": "2026-02-12T16:34:43Z",
+    "distance": 4820.5,
+    "start_index": 2735,
+    "end_index": 3258,
+    "average_cadence": 80.3,
+    "device_watts": true,
+    "average_watts": 226.9,
+    "average_heartrate": 144.5,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3416231856957449818,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16227528715,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 524,
+    "moving_time": 524,
+    "start_date": "2025-10-22T23:34:39Z",
+    "start_date_local": "2025-10-22T16:34:39Z",
+    "distance": 4820.5,
+    "start_index": 2638,
+    "end_index": 3162,
+    "device_watts": false,
+    "average_heartrate": 141.8,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288690522210799268,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12825167689,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 526,
+    "moving_time": 526,
+    "start_date": "2024-11-05T00:52:14Z",
+    "start_date_local": "2024-11-04T16:52:14Z",
+    "distance": 4820.5,
+    "start_index": 2782,
+    "end_index": 3308,
+    "average_cadence": 69.6,
+    "device_watts": true,
+    "average_watts": 217.2,
+    "average_heartrate": 148.8,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3378185471616457580,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15063372402,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 526,
+    "moving_time": 526,
+    "start_date": "2025-07-09T23:53:19Z",
+    "start_date_local": "2025-07-09T16:53:19Z",
+    "distance": 4820.5,
+    "start_index": 2486,
+    "end_index": 3012,
+    "average_cadence": 68.1,
+    "device_watts": true,
+    "average_watts": 230.3,
+    "average_heartrate": 132.0,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3350276935550196438,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14267894661,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 533,
+    "moving_time": 533,
+    "start_date": "2025-04-23T23:32:50Z",
+    "start_date_local": "2025-04-23T16:32:50Z",
+    "distance": 4820.5,
+    "start_index": 2930,
+    "end_index": 3463,
+    "average_cadence": 72.9,
+    "device_watts": true,
+    "average_watts": 199.0,
+    "average_heartrate": 122.3,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365494515530966844,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14699584618,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 533,
+    "moving_time": 533,
+    "start_date": "2025-06-04T23:20:14Z",
+    "start_date_local": "2025-06-04T16:20:14Z",
+    "distance": 4820.5,
+    "start_index": 2826,
+    "end_index": 3359,
+    "average_cadence": 72.7,
+    "device_watts": true,
+    "average_watts": 188.2,
+    "average_heartrate": 123.8,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3427120927122428876,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16528978260,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 536,
+    "moving_time": 536,
+    "start_date": "2025-11-22T00:43:47Z",
+    "start_date_local": "2025-11-21T16:43:47Z",
+    "distance": 4820.5,
+    "start_index": 2972,
+    "end_index": 3508,
+    "average_cadence": 73.1,
+    "device_watts": true,
+    "average_watts": 177.8,
+    "average_heartrate": 130.8,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387963782886041774,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15358927256,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 538,
+    "moving_time": 538,
+    "start_date": "2025-08-05T23:27:07Z",
+    "start_date_local": "2025-08-05T16:27:07Z",
+    "distance": 4820.5,
+    "start_index": 2821,
+    "end_index": 3359,
+    "average_cadence": 67.7,
+    "device_watts": true,
+    "average_watts": 177.8,
+    "average_heartrate": 114.4,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3340132010625881094,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13997826701,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 539,
+    "moving_time": 539,
+    "start_date": "2025-03-26T23:44:23Z",
+    "start_date_local": "2025-03-26T16:44:23Z",
+    "distance": 4820.5,
+    "start_index": 2899,
+    "end_index": 3438,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 233.0,
+    "average_heartrate": 138.7,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3408981762637729596,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16015257786,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 540,
+    "moving_time": 540,
+    "start_date": "2025-10-02T23:26:35Z",
+    "start_date_local": "2025-10-02T16:26:35Z",
+    "distance": 4820.5,
+    "start_index": 2973,
+    "end_index": 3513,
+    "average_cadence": 69.7,
+    "device_watts": true,
+    "average_watts": 154.6,
+    "average_heartrate": 115.2,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3330723043818263894,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13754812340,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 543,
+    "moving_time": 543,
+    "start_date": "2025-03-01T00:35:51Z",
+    "start_date_local": "2025-02-28T16:35:51Z",
+    "distance": 4820.5,
+    "start_index": 2694,
+    "end_index": 3237,
+    "average_cadence": 70.1,
+    "device_watts": true,
+    "average_watts": 222.0,
+    "average_heartrate": 145.5,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3443436145460656882,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16951621824,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 545,
+    "moving_time": 545,
+    "start_date": "2026-01-06T00:37:35Z",
+    "start_date_local": "2026-01-05T16:37:35Z",
+    "distance": 4820.5,
+    "start_index": 2784,
+    "end_index": 3329,
+    "average_cadence": 79.1,
+    "device_watts": true,
+    "average_watts": 183.1,
+    "average_heartrate": 137.4,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368035984977779874,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14771662086,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 551,
+    "moving_time": 551,
+    "start_date": "2025-06-11T23:39:33Z",
+    "start_date_local": "2025-06-11T16:39:33Z",
+    "distance": 4820.5,
+    "start_index": 2738,
+    "end_index": 3289,
+    "average_cadence": 63.3,
+    "device_watts": true,
+    "average_watts": 184.0,
+    "average_heartrate": 123.8,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304637853612813442,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13145898280,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 555,
+    "moving_time": 555,
+    "start_date": "2024-12-19T01:01:01Z",
+    "start_date_local": "2024-12-18T17:01:01Z",
+    "distance": 4820.5,
+    "start_index": 3008,
+    "end_index": 3563,
+    "average_cadence": 70.0,
+    "device_watts": true,
+    "average_watts": 211.3,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3394122448603966306,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15551940779,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 555,
+    "moving_time": 529,
+    "start_date": "2025-08-22T23:20:56Z",
+    "start_date_local": "2025-08-22T16:20:56Z",
+    "distance": 4820.5,
+    "start_index": 2841,
+    "end_index": 3372,
+    "average_cadence": 71.7,
+    "device_watts": true,
+    "average_watts": 259.0,
+    "average_heartrate": 155.0,
+    "max_heartrate": 179.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3426065212858556914,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16501261032,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 555,
+    "moving_time": 555,
+    "start_date": "2025-11-19T00:43:08Z",
+    "start_date_local": "2025-11-18T16:43:08Z",
+    "distance": 4820.5,
+    "start_index": 2786,
+    "end_index": 3341,
+    "average_cadence": 88.2,
+    "device_watts": true,
+    "average_watts": 252.3,
+    "average_heartrate": 146.5,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250992117322363420,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 11965175265,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 557,
+    "moving_time": 557,
+    "start_date": "2024-07-24T00:04:14Z",
+    "start_date_local": "2024-07-23T17:04:14Z",
+    "distance": 4820.5,
+    "start_index": 912,
+    "end_index": 1063,
+    "device_watts": false,
+    "average_heartrate": 145.4,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3373475362014712180,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14927381309,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 557,
+    "moving_time": 557,
+    "start_date": "2025-06-26T23:55:01Z",
+    "start_date_local": "2025-06-26T16:55:01Z",
+    "distance": 4820.5,
+    "start_index": 2644,
+    "end_index": 3201,
+    "average_cadence": 72.4,
+    "device_watts": true,
+    "average_watts": 193.4,
+    "average_heartrate": 121.4,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3337959353999534716,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13941148519,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 559,
+    "moving_time": 559,
+    "start_date": "2025-03-20T23:49:39Z",
+    "start_date_local": "2025-03-20T16:49:39Z",
+    "distance": 4820.5,
+    "start_index": 2823,
+    "end_index": 3382,
+    "average_cadence": 68.1,
+    "device_watts": true,
+    "average_watts": 215.5,
+    "average_heartrate": 132.3,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3461544487964142078,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 17512833955,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 564,
+    "moving_time": 564,
+    "start_date": "2026-02-25T00:31:40Z",
+    "start_date_local": "2026-02-24T16:31:40Z",
+    "distance": 4820.5,
+    "start_index": 2849,
+    "end_index": 3413,
+    "average_cadence": 78.5,
+    "device_watts": true,
+    "average_watts": 228.6,
+    "average_heartrate": 140.5,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3409344944879668826,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16024954576,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 568,
+    "moving_time": 568,
+    "start_date": "2025-10-03T23:31:25Z",
+    "start_date_local": "2025-10-03T16:31:25Z",
+    "distance": 4820.5,
+    "start_index": 2883,
+    "end_index": 3451,
+    "average_cadence": 70.1,
+    "device_watts": true,
+    "average_watts": 185.4,
+    "average_heartrate": 122.5,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3423495113245913690,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16430939261,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 568,
+    "moving_time": 568,
+    "start_date": "2025-11-12T00:37:19Z",
+    "start_date_local": "2025-11-11T16:37:19Z",
+    "distance": 4820.5,
+    "start_index": 2749,
+    "end_index": 3317,
+    "average_cadence": 76.6,
+    "device_watts": true,
+    "average_watts": 205.9,
+    "average_heartrate": 139.4,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358248223184142380,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14493783073,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 569,
+    "moving_time": 569,
+    "start_date": "2025-05-15T23:22:46Z",
+    "start_date_local": "2025-05-15T16:22:46Z",
+    "distance": 4820.5,
+    "start_index": 2907,
+    "end_index": 3476,
+    "average_cadence": 73.2,
+    "device_watts": true,
+    "average_watts": 181.3,
+    "average_heartrate": 112.8,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3385430342420223534,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15280908941,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 569,
+    "moving_time": 569,
+    "start_date": "2025-07-29T23:36:58Z",
+    "start_date_local": "2025-07-29T16:36:58Z",
+    "distance": 4820.5,
+    "start_index": 2702,
+    "end_index": 3271,
+    "average_cadence": 74.0,
+    "device_watts": true,
+    "average_watts": 221.6,
+    "average_heartrate": 134.2,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3319865839380969396,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13489144236,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 571,
+    "moving_time": 571,
+    "start_date": "2025-01-30T01:30:41Z",
+    "start_date_local": "2025-01-29T17:30:41Z",
+    "distance": 4820.5,
+    "start_index": 2717,
+    "end_index": 3288,
+    "device_watts": false,
+    "average_heartrate": 157.7,
+    "max_heartrate": 175.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370210525889067950,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14833740518,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 571,
+    "moving_time": 552,
+    "start_date": "2025-06-17T23:41:40Z",
+    "start_date_local": "2025-06-17T16:41:40Z",
+    "distance": 4820.5,
+    "start_index": 2679,
+    "end_index": 3234,
+    "average_cadence": 54.4,
+    "device_watts": true,
+    "average_watts": 178.9,
+    "average_heartrate": 129.8,
+    "max_heartrate": 175.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3393036212855240852,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15518833672,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 571,
+    "moving_time": 571,
+    "start_date": "2025-08-19T23:23:16Z",
+    "start_date_local": "2025-08-19T16:23:16Z",
+    "distance": 4820.5,
+    "start_index": 2843,
+    "end_index": 3414,
+    "average_cadence": 63.0,
+    "device_watts": true,
+    "average_watts": 179.1,
+    "average_heartrate": 116.6,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3279621676878038236,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12625749519,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 572,
+    "moving_time": 572,
+    "start_date": "2024-10-10T23:47:23Z",
+    "start_date_local": "2024-10-10T16:47:23Z",
+    "distance": 4820.5,
+    "start_index": 1578,
+    "end_index": 2150,
+    "average_cadence": 66.5,
+    "device_watts": true,
+    "average_watts": 256.8,
+    "average_heartrate": 164.5,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3316588809350164460,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13410161588,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 576,
+    "moving_time": 576,
+    "start_date": "2025-01-21T00:30:11Z",
+    "start_date_local": "2025-01-20T16:30:11Z",
+    "distance": 4820.5,
+    "start_index": 2508,
+    "end_index": 3084,
+    "device_watts": false,
+    "average_heartrate": 160.2,
+    "max_heartrate": 175.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413695057208882924,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16154779904,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 578,
+    "moving_time": 578,
+    "start_date": "2025-10-15T23:36:33Z",
+    "start_date_local": "2025-10-15T16:36:33Z",
+    "distance": 4820.5,
+    "start_index": 3207,
+    "end_index": 3785,
+    "device_watts": false,
+    "average_heartrate": 126.1,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3245934605035140526,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 11850718695,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 583,
+    "moving_time": 583,
+    "start_date": "2024-07-10T00:00:35Z",
+    "start_date_local": "2024-07-09T17:00:35Z",
+    "distance": 4820.5,
+    "start_index": 924,
+    "end_index": 1072,
+    "device_watts": false,
+    "average_heartrate": 138.8,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3239032100178738238,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 11701362419,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 585,
+    "moving_time": 585,
+    "start_date": "2024-06-20T23:59:26Z",
+    "start_date_local": "2024-06-20T16:59:26Z",
+    "distance": 4820.5,
+    "start_index": 835,
+    "end_index": 977,
+    "device_watts": false,
+    "average_heartrate": 155.1,
+    "max_heartrate": 166.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3311524528802148948,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13286268314,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 585,
+    "moving_time": 585,
+    "start_date": "2025-01-07T01:07:34Z",
+    "start_date_local": "2025-01-06T17:07:34Z",
+    "distance": 4820.5,
+    "start_index": 2982,
+    "end_index": 3567,
+    "device_watts": false,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3437273849361299412,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16789266317,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 586,
+    "moving_time": 586,
+    "start_date": "2025-12-20T01:07:51Z",
+    "start_date_local": "2025-12-19T17:07:51Z",
+    "distance": 4820.5,
+    "start_index": 2898,
+    "end_index": 3484,
+    "average_cadence": 74.4,
+    "device_watts": true,
+    "average_watts": 191.6,
+    "average_heartrate": 132.8,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3467378481265704776,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 17704059880,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 586,
+    "moving_time": 586,
+    "start_date": "2026-03-10T23:12:53Z",
+    "start_date_local": "2026-03-10T16:12:53Z",
+    "distance": 4820.5,
+    "start_index": 2518,
+    "end_index": 3104,
+    "average_cadence": 75.2,
+    "device_watts": true,
+    "average_watts": 219.0,
+    "average_heartrate": 149.2,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3254254248515189438,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12040029192,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 590,
+    "moving_time": 590,
+    "start_date": "2024-08-02T00:11:41Z",
+    "start_date_local": "2024-08-01T17:11:41Z",
+    "distance": 4820.5,
+    "start_index": 907,
+    "end_index": 1057,
+    "device_watts": false,
+    "average_heartrate": 137.5,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3293765808583015808,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12933363879,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 591,
+    "moving_time": 591,
+    "start_date": "2024-11-19T00:58:09Z",
+    "start_date_local": "2024-11-18T16:58:09Z",
+    "distance": 4820.5,
+    "start_index": 2785,
+    "end_index": 3376,
+    "average_cadence": 64.8,
+    "device_watts": true,
+    "average_watts": 222.0,
+    "average_heartrate": 147.2,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3348100357459346210,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14208287589,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 593,
+    "moving_time": 593,
+    "start_date": "2025-04-17T23:26:00Z",
+    "start_date_local": "2025-04-17T16:26:00Z",
+    "distance": 4820.5,
+    "start_index": 3026,
+    "end_index": 3619,
+    "average_cadence": 68.0,
+    "device_watts": true,
+    "average_watts": 185.8,
+    "average_heartrate": 122.5,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3371290161895602430,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14864542115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 598,
+    "moving_time": 598,
+    "start_date": "2025-06-20T23:11:13Z",
+    "start_date_local": "2025-06-20T16:11:13Z",
+    "distance": 4820.5,
+    "start_index": 2772,
+    "end_index": 3370,
+    "average_cadence": 71.4,
+    "device_watts": true,
+    "average_watts": 210.7,
+    "average_heartrate": 124.8,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3456466709300416904,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 17357438180,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 599,
+    "moving_time": 599,
+    "start_date": "2026-02-11T00:14:39Z",
+    "start_date_local": "2026-02-10T16:14:39Z",
+    "distance": 4820.5,
+    "start_index": 2771,
+    "end_index": 3370,
+    "average_cadence": 79.6,
+    "device_watts": true,
+    "average_watts": 214.1,
+    "average_heartrate": 145.4,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3381083863683486886,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15149934812,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 600,
+    "moving_time": 600,
+    "start_date": "2025-07-17T23:46:14Z",
+    "start_date_local": "2025-07-17T16:46:14Z",
+    "distance": 4820.5,
+    "start_index": 2926,
+    "end_index": 3526,
+    "average_cadence": 62.7,
+    "device_watts": true,
+    "average_watts": 175.5,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3390512962476260278,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15439333050,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 601,
+    "moving_time": 601,
+    "start_date": "2025-08-13T00:04:28Z",
+    "start_date_local": "2025-08-12T17:04:28Z",
+    "distance": 4820.5,
+    "start_index": 2795,
+    "end_index": 3396,
+    "average_cadence": 66.3,
+    "device_watts": true,
+    "average_watts": 166.5,
+    "average_heartrate": 119.6,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3440894588048270828,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16879541696,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 602,
+    "moving_time": 602,
+    "start_date": "2025-12-30T00:54:18Z",
+    "start_date_local": "2025-12-29T16:54:18Z",
+    "distance": 4820.5,
+    "start_index": 2958,
+    "end_index": 3560,
+    "device_watts": false,
+    "average_heartrate": 139.4,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3345205567321762618,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14132198053,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 605,
+    "moving_time": 605,
+    "start_date": "2025-04-09T23:41:03Z",
+    "start_date_local": "2025-04-09T16:41:03Z",
+    "distance": 4820.5,
+    "start_index": 2931,
+    "end_index": 3536,
+    "average_cadence": 75.2,
+    "device_watts": true,
+    "average_watts": 195.4,
+    "average_heartrate": 120.0,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398831774899864178,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15700316764,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 608,
+    "moving_time": 608,
+    "start_date": "2025-09-04T23:12:52Z",
+    "start_date_local": "2025-09-04T16:12:52Z",
+    "distance": 4820.5,
+    "start_index": 2907,
+    "end_index": 3515,
+    "average_cadence": 71.4,
+    "device_watts": true,
+    "average_watts": 208.9,
+    "average_heartrate": 125.9,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395572369957724538,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15598924203,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 611,
+    "moving_time": 611,
+    "start_date": "2025-08-26T23:21:56Z",
+    "start_date_local": "2025-08-26T16:21:56Z",
+    "distance": 4820.5,
+    "start_index": 2770,
+    "end_index": 3381,
+    "average_cadence": 73.4,
+    "device_watts": true,
+    "average_watts": 203.4,
+    "average_heartrate": 130.6,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3436904221273588894,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16781226191,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 612,
+    "moving_time": 612,
+    "start_date": "2025-12-19T00:36:04Z",
+    "start_date_local": "2025-12-18T16:36:04Z",
+    "distance": 4820.5,
+    "start_index": 2632,
+    "end_index": 3244,
+    "average_cadence": 77.8,
+    "device_watts": true,
+    "average_watts": 211.5,
+    "average_heartrate": 139.6,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3279621676876879068,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12625749519,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 617,
+    "moving_time": 617,
+    "start_date": "2024-10-11T00:05:58Z",
+    "start_date_local": "2024-10-10T17:05:58Z",
+    "distance": 4820.5,
+    "start_index": 2693,
+    "end_index": 3310,
+    "average_cadence": 67.9,
+    "device_watts": true,
+    "average_watts": 210.0,
+    "average_heartrate": 146.0,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370936130208108346,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14855259926,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 623,
+    "moving_time": 585,
+    "start_date": "2025-06-19T23:46:09Z",
+    "start_date_local": "2025-06-19T16:46:09Z",
+    "distance": 4820.5,
+    "start_index": 2881,
+    "end_index": 3467,
+    "average_cadence": 61.3,
+    "device_watts": true,
+    "average_watts": 174.3,
+    "average_heartrate": 114.6,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411569479067673470,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16091856285,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 623,
+    "moving_time": 623,
+    "start_date": "2025-10-10T02:44:26Z",
+    "start_date_local": "2025-10-09T19:44:26Z",
+    "distance": 4820.5,
+    "start_index": 3162,
+    "end_index": 3785,
+    "average_cadence": 69.9,
+    "device_watts": true,
+    "average_watts": 158.9,
+    "average_heartrate": 123.1,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3299591252014696712,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13049625784,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 626,
+    "moving_time": 626,
+    "start_date": "2024-12-05T01:06:55Z",
+    "start_date_local": "2024-12-04T17:06:55Z",
+    "distance": 4820.5,
+    "start_index": 3110,
+    "end_index": 3736,
+    "average_cadence": 64.2,
+    "device_watts": true,
+    "average_watts": 190.2,
+    "average_heartrate": 128.2,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398470745303396710,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 15689031990,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 644,
+    "moving_time": 644,
+    "start_date": "2025-09-03T23:15:58Z",
+    "start_date_local": "2025-09-03T16:15:58Z",
+    "distance": 4820.5,
+    "start_index": 2916,
+    "end_index": 3560,
+    "average_cadence": 69.2,
+    "device_watts": true,
+    "average_watts": 186.4,
+    "average_heartrate": 119.8,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3441259260025951462,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16889648657,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 645,
+    "moving_time": 645,
+    "start_date": "2025-12-31T01:01:34Z",
+    "start_date_local": "2025-12-30T17:01:34Z",
+    "distance": 4820.5,
+    "start_index": 2997,
+    "end_index": 3642,
+    "device_watts": false,
+    "average_heartrate": 129.9,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449949516273572896,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 17155444093,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 646,
+    "moving_time": 646,
+    "start_date": "2026-01-24T00:35:53Z",
+    "start_date_local": "2026-01-23T16:35:53Z",
+    "distance": 4820.5,
+    "start_index": 2989,
+    "end_index": 3635,
+    "device_watts": false,
+    "average_heartrate": 135.2,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413329445110251292,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 16143682065,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 647,
+    "moving_time": 574,
+    "start_date": "2025-10-14T23:23:06Z",
+    "start_date_local": "2025-10-14T16:23:06Z",
+    "distance": 4820.5,
+    "start_index": 2980,
+    "end_index": 3555,
+    "device_watts": false,
+    "average_heartrate": 129.8,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3332547081336930036,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13801465676,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 649,
+    "moving_time": 649,
+    "start_date": "2025-03-06T01:22:05Z",
+    "start_date_local": "2025-03-05T17:22:05Z",
+    "distance": 4820.5,
+    "start_index": 3054,
+    "end_index": 3703,
+    "average_cadence": 70.3,
+    "device_watts": true,
+    "average_watts": 212.3,
+    "average_heartrate": 129.9,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251364389458321986,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 11973976108,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 655,
+    "moving_time": 655,
+    "start_date": "2024-07-25T00:37:08Z",
+    "start_date_local": "2024-07-24T17:37:08Z",
+    "distance": 4820.5,
+    "start_index": 909,
+    "end_index": 1105,
+    "device_watts": false,
+    "average_heartrate": 136.5,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3317326307110379962,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13428157936,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 659,
+    "moving_time": 659,
+    "start_date": "2025-01-23T01:22:03Z",
+    "start_date_local": "2025-01-22T17:22:03Z",
+    "distance": 4820.5,
+    "start_index": 2479,
+    "end_index": 3138,
+    "average_cadence": 67.3,
+    "device_watts": true,
+    "average_watts": 70.9,
+    "average_heartrate": 118.8,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353643962441692206,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14360832242,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 666,
+    "moving_time": 666,
+    "start_date": "2025-05-03T06:31:12Z",
+    "start_date_local": "2025-05-02T23:31:12Z",
+    "distance": 4820.5,
+    "start_index": 845,
+    "end_index": 1511,
+    "average_cadence": 61.0,
+    "device_watts": true,
+    "average_watts": 139.7,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3253890174833600512,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 12031815920,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 685,
+    "moving_time": 685,
+    "start_date": "2024-08-01T00:14:25Z",
+    "start_date_local": "2024-07-31T17:14:25Z",
+    "distance": 4820.5,
+    "start_index": 930,
+    "end_index": 1085,
+    "device_watts": false,
+    "average_heartrate": 125.5,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3336875063664614468,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 13912209824,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 700,
+    "moving_time": 700,
+    "start_date": "2025-03-17T23:47:57Z",
+    "start_date_local": "2025-03-17T16:47:57Z",
+    "distance": 4820.5,
+    "start_index": 3129,
+    "end_index": 3829,
+    "average_cadence": 63.9,
+    "device_watts": true,
+    "average_watts": 199.6,
+    "average_heartrate": 121.0,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 2738902926331973350,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 4036869360,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 759,
+    "moving_time": 546,
+    "start_date": "2020-09-09T21:17:10Z",
+    "start_date_local": "2020-09-09T14:17:10Z",
+    "distance": 4820.5,
+    "start_index": 1126,
+    "end_index": 1690,
+    "device_watts": false,
+    "average_watts": 112.8,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 2838596387153699300,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 5454186917,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 769,
+    "moving_time": 769,
+    "start_date": "2021-06-12T00:10:49Z",
+    "start_date_local": "2021-06-11T17:10:49Z",
+    "distance": 4820.5,
+    "start_index": 5424,
+    "end_index": 6193,
+    "device_watts": false,
+    "average_watts": 73.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365909854819197512,
+    "resource_state": 2,
+    "name": "520 Bridge Westbound",
+    "activity": {
+      "id": 14710379474,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 830,
+    "moving_time": 661,
+    "start_date": "2025-06-05T23:54:11Z",
+    "start_date_local": "2025-06-05T16:54:11Z",
+    "distance": 4820.5,
+    "start_index": 2945,
+    "end_index": 3609,
+    "average_cadence": 40.9,
+    "device_watts": true,
+    "average_watts": 105.3,
+    "average_heartrate": 122.4,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16679364,
+      "resource_state": 2,
+      "name": "520 Bridge Westbound",
+      "activity_type": "Ride",
+      "distance": 4820.5,
+      "average_grade": -0.8,
+      "maximum_grade": 3.7,
+      "elevation_high": 41.8,
+      "elevation_low": 3.8,
+      "start_latlng": [
+        47.637706,
+        -122.238567
+      ],
+      "end_latlng": [
+        47.645248,
+        -122.301452
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

@@ -1,0 +1,7023 @@
+[
+  {
+    "id": 3380924590512753292,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15144496559,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 791,
+    "moving_time": 791,
+    "start_date": "2025-07-17T12:59:00Z",
+    "start_date_local": "2025-07-17T05:59:00Z",
+    "distance": 7846.8,
+    "start_index": 967,
+    "end_index": 1758,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 287.4,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3389383147781173506,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 842,
+    "moving_time": 842,
+    "start_date": "2025-08-09T19:13:58Z",
+    "start_date_local": "2025-08-09T12:13:58Z",
+    "distance": 7846.8,
+    "start_index": 986,
+    "end_index": 1828,
+    "average_cadence": 81.3,
+    "device_watts": true,
+    "average_watts": 280.3,
+    "average_heartrate": 138.4,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3248654102569445380,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 11910711156,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 845,
+    "moving_time": 844,
+    "start_date": "2024-07-17T12:55:26Z",
+    "start_date_local": "2024-07-17T05:55:26Z",
+    "distance": 7846.8,
+    "start_index": 346,
+    "end_index": 609,
+    "device_watts": false,
+    "average_heartrate": 152.0,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3394749679911394614,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15572932051,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 852,
+    "moving_time": 852,
+    "start_date": "2025-08-24T16:40:43Z",
+    "start_date_local": "2025-08-24T09:40:43Z",
+    "distance": 7846.8,
+    "start_index": 931,
+    "end_index": 1783,
+    "average_cadence": 79.9,
+    "device_watts": true,
+    "average_watts": 299.4,
+    "average_heartrate": 160.3,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387466647311850594,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15341695310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 858,
+    "moving_time": 858,
+    "start_date": "2025-08-04T14:06:39Z",
+    "start_date_local": "2025-08-04T07:06:39Z",
+    "distance": 7846.8,
+    "start_index": 1038,
+    "end_index": 1896,
+    "average_cadence": 76.9,
+    "device_watts": true,
+    "average_watts": 273.8,
+    "average_heartrate": 140.5,
+    "max_heartrate": 166.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382749049565361552,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15198606207,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 871,
+    "moving_time": 871,
+    "start_date": "2025-07-22T13:42:20Z",
+    "start_date_local": "2025-07-22T06:42:20Z",
+    "distance": 7846.8,
+    "start_index": 970,
+    "end_index": 1841,
+    "average_cadence": 77.6,
+    "device_watts": true,
+    "average_watts": 259.0,
+    "average_heartrate": 132.9,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3245754826985921410,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 11846097227,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 898,
+    "moving_time": 877,
+    "start_date": "2024-07-09T12:54:35Z",
+    "start_date_local": "2024-07-09T05:54:35Z",
+    "distance": 7846.8,
+    "start_index": 385,
+    "end_index": 652,
+    "device_watts": false,
+    "average_heartrate": 154.9,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3383101187539802286,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15210020677,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 901,
+    "moving_time": 901,
+    "start_date": "2025-07-23T13:00:40Z",
+    "start_date_local": "2025-07-23T06:00:40Z",
+    "distance": 7846.8,
+    "start_index": 1069,
+    "end_index": 1970,
+    "average_cadence": 73.0,
+    "device_watts": true,
+    "average_watts": 225.9,
+    "average_heartrate": 124.4,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3378032490816959590,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15057573197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 915,
+    "moving_time": 885,
+    "start_date": "2025-07-09T13:16:13Z",
+    "start_date_local": "2025-07-09T06:16:13Z",
+    "distance": 7846.8,
+    "start_index": 1017,
+    "end_index": 1916,
+    "average_cadence": 71.2,
+    "device_watts": true,
+    "average_watts": 251.2,
+    "average_heartrate": 130.5,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3390351130441047306,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15433259052,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 919,
+    "moving_time": 919,
+    "start_date": "2025-08-12T13:08:58Z",
+    "start_date_local": "2025-08-12T06:08:58Z",
+    "distance": 7846.8,
+    "start_index": 1162,
+    "end_index": 2081,
+    "average_cadence": 77.1,
+    "device_watts": true,
+    "average_watts": 252.7,
+    "average_heartrate": 128.1,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3253729739490741458,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12027544474,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 921,
+    "moving_time": 921,
+    "start_date": "2024-07-31T13:02:48Z",
+    "start_date_local": "2024-07-31T06:02:48Z",
+    "distance": 7846.8,
+    "start_index": 385,
+    "end_index": 657,
+    "device_watts": false,
+    "average_heartrate": 138.8,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3339992549553032414,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13992998077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 921,
+    "moving_time": 921,
+    "start_date": "2025-03-26T14:06:01Z",
+    "start_date_local": "2025-03-26T07:06:01Z",
+    "distance": 7846.8,
+    "start_index": 1098,
+    "end_index": 2019,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 265.6,
+    "average_heartrate": 149.2,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3311365616856809718,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13281602620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 925,
+    "moving_time": 925,
+    "start_date": "2025-01-06T14:03:14Z",
+    "start_date_local": "2025-01-06T06:03:14Z",
+    "distance": 7846.8,
+    "start_index": 1163,
+    "end_index": 2088,
+    "device_watts": false,
+    "average_heartrate": 146.3,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3330570758449307880,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13750807863,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 931,
+    "moving_time": 931,
+    "start_date": "2025-02-28T14:01:05Z",
+    "start_date_local": "2025-02-28T06:01:05Z",
+    "distance": 7846.8,
+    "start_index": 1105,
+    "end_index": 2036,
+    "average_cadence": 70.5,
+    "device_watts": true,
+    "average_watts": 286.4,
+    "average_heartrate": 157.7,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3380566041657577110,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15133664732,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 931,
+    "moving_time": 931,
+    "start_date": "2025-07-16T13:04:49Z",
+    "start_date_local": "2025-07-16T06:04:49Z",
+    "distance": 7846.8,
+    "start_index": 1068,
+    "end_index": 1999,
+    "average_cadence": 67.2,
+    "device_watts": true,
+    "average_watts": 264.0,
+    "average_heartrate": 134.7,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375493545870956314,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14984093722,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 934,
+    "moving_time": 889,
+    "start_date": "2025-07-02T13:05:30Z",
+    "start_date_local": "2025-07-02T06:05:30Z",
+    "distance": 7846.8,
+    "start_index": 1127,
+    "end_index": 2018,
+    "average_cadence": 70.5,
+    "device_watts": true,
+    "average_watts": 254.1,
+    "average_heartrate": 134.7,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355933409295968800,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14426136326,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 939,
+    "moving_time": 939,
+    "start_date": "2025-05-09T13:42:58Z",
+    "start_date_local": "2025-05-09T06:42:58Z",
+    "distance": 7846.8,
+    "start_index": 1179,
+    "end_index": 2118,
+    "average_cadence": 74.5,
+    "device_watts": true,
+    "average_watts": 234.6,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395791261409264036,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15605124945,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 939,
+    "moving_time": 939,
+    "start_date": "2025-08-27T13:02:27Z",
+    "start_date_local": "2025-08-27T06:02:27Z",
+    "distance": 7846.8,
+    "start_index": 990,
+    "end_index": 1929,
+    "average_cadence": 70.9,
+    "device_watts": true,
+    "average_watts": 210.0,
+    "average_heartrate": 126.7,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3254089881543613650,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12035838620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 942,
+    "moving_time": 942,
+    "start_date": "2024-08-01T12:54:28Z",
+    "start_date_local": "2024-08-01T05:54:28Z",
+    "distance": 7846.8,
+    "start_index": 370,
+    "end_index": 648,
+    "device_watts": false,
+    "average_heartrate": 143.9,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3392900196595265508,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15513338209,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 944,
+    "moving_time": 944,
+    "start_date": "2025-08-19T13:46:48Z",
+    "start_date_local": "2025-08-19T06:46:48Z",
+    "distance": 7846.8,
+    "start_index": 1015,
+    "end_index": 1959,
+    "average_cadence": 75.2,
+    "device_watts": true,
+    "average_watts": 266.5,
+    "average_heartrate": 133.7,
+    "max_heartrate": 175.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3407751265449108634,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15975845608,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 945,
+    "moving_time": 945,
+    "start_date": "2025-09-29T13:32:32Z",
+    "start_date_local": "2025-09-29T06:32:32Z",
+    "distance": 7846.8,
+    "start_index": 1053,
+    "end_index": 1998,
+    "average_cadence": 70.9,
+    "device_watts": true,
+    "average_watts": 238.6,
+    "average_heartrate": 137.4,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3273297603186294950,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12483728780,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 946,
+    "moving_time": 946,
+    "start_date": "2024-09-23T13:04:45Z",
+    "start_date_local": "2024-09-23T06:04:45Z",
+    "distance": 7846.8,
+    "start_index": 1017,
+    "end_index": 1963,
+    "average_cadence": 74.5,
+    "device_watts": true,
+    "average_watts": 296.3,
+    "average_heartrate": 153.0,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304490914029433294,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13142668267,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 946,
+    "moving_time": 933,
+    "start_date": "2024-12-18T14:37:08Z",
+    "start_date_local": "2024-12-18T06:37:08Z",
+    "distance": 7846.8,
+    "start_index": 1171,
+    "end_index": 2117,
+    "average_cadence": 67.7,
+    "device_watts": true,
+    "average_watts": 240.7,
+    "average_heartrate": 146.8,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353023234069536920,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14344373109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 948,
+    "moving_time": 948,
+    "start_date": "2025-05-01T13:00:00Z",
+    "start_date_local": "2025-05-01T06:00:00Z",
+    "distance": 7846.8,
+    "start_index": 1047,
+    "end_index": 1995,
+    "average_cadence": 72.6,
+    "device_watts": true,
+    "average_watts": 260.7,
+    "average_heartrate": 151.0,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387820074085853764,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15353199712,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 949,
+    "moving_time": 949,
+    "start_date": "2025-08-05T13:32:26Z",
+    "start_date_local": "2025-08-05T06:32:26Z",
+    "distance": 7846.8,
+    "start_index": 1034,
+    "end_index": 1983,
+    "average_cadence": 74.7,
+    "device_watts": true,
+    "average_watts": 247.9,
+    "average_heartrate": 128.9,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3423356857987220016,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16425853070,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 956,
+    "moving_time": 956,
+    "start_date": "2025-11-11T14:58:34Z",
+    "start_date_local": "2025-11-11T06:58:34Z",
+    "distance": 7846.8,
+    "start_index": 1076,
+    "end_index": 2032,
+    "average_cadence": 75.9,
+    "device_watts": true,
+    "average_watts": 231.4,
+    "average_heartrate": 135.6,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3456329380940769374,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 17351823334,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 956,
+    "moving_time": 956,
+    "start_date": "2026-02-10T14:39:26Z",
+    "start_date_local": "2026-02-10T06:39:26Z",
+    "distance": 7846.8,
+    "start_index": 1043,
+    "end_index": 1999,
+    "average_cadence": 76.7,
+    "device_watts": true,
+    "average_watts": 247.1,
+    "average_heartrate": 146.5,
+    "max_heartrate": 169.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3425895615205914944,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16495859285,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 959,
+    "moving_time": 959,
+    "start_date": "2025-11-18T15:04:45Z",
+    "start_date_local": "2025-11-18T07:04:45Z",
+    "distance": 7846.8,
+    "start_index": 1072,
+    "end_index": 2031,
+    "average_cadence": 77.4,
+    "device_watts": true,
+    "average_watts": 267.4,
+    "average_heartrate": 144.8,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3367883366004595910,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14766079072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 967,
+    "moving_time": 967,
+    "start_date": "2025-06-11T13:01:32Z",
+    "start_date_local": "2025-06-11T06:01:32Z",
+    "distance": 7846.8,
+    "start_index": 1072,
+    "end_index": 2039,
+    "average_cadence": 70.3,
+    "device_watts": true,
+    "average_watts": 225.2,
+    "average_heartrate": 127.5,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395426409477863558,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15592870724,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 969,
+    "moving_time": 969,
+    "start_date": "2025-08-26T13:12:24Z",
+    "start_date_local": "2025-08-26T06:12:24Z",
+    "distance": 7846.8,
+    "start_index": 1031,
+    "end_index": 2000,
+    "average_cadence": 66.6,
+    "device_watts": true,
+    "average_watts": 198.4,
+    "average_heartrate": 119.7,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3408845729035242400,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16010337574,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 970,
+    "moving_time": 970,
+    "start_date": "2025-10-02T13:53:08Z",
+    "start_date_local": "2025-10-02T06:53:08Z",
+    "distance": 7846.8,
+    "start_index": 1027,
+    "end_index": 1997,
+    "average_cadence": 74.7,
+    "device_watts": true,
+    "average_watts": 238.0,
+    "average_heartrate": 135.0,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3301226054113638424,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13079350675,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 973,
+    "moving_time": 973,
+    "start_date": "2024-12-09T14:28:56Z",
+    "start_date_local": "2024-12-09T06:28:56Z",
+    "distance": 7846.8,
+    "start_index": 1106,
+    "end_index": 2079,
+    "average_cadence": 71.3,
+    "device_watts": true,
+    "average_watts": 302.0,
+    "average_heartrate": 171.3,
+    "max_heartrate": 184.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3386372950980486936,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15309023545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 975,
+    "moving_time": 975,
+    "start_date": "2025-08-01T13:39:11Z",
+    "start_date_local": "2025-08-01T06:39:11Z",
+    "distance": 7846.8,
+    "start_index": 1024,
+    "end_index": 1999,
+    "average_cadence": 74.6,
+    "device_watts": true,
+    "average_watts": 228.5,
+    "average_heartrate": 124.4,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3364982804674320182,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14683175747,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 976,
+    "moving_time": 976,
+    "start_date": "2025-06-03T13:01:10Z",
+    "start_date_local": "2025-06-03T06:01:10Z",
+    "distance": 7846.8,
+    "start_index": 1097,
+    "end_index": 2073,
+    "average_cadence": 73.0,
+    "device_watts": true,
+    "average_watts": 226.5,
+    "average_heartrate": 124.3,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382381134064072820,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15187100097,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 979,
+    "moving_time": 979,
+    "start_date": "2025-07-21T13:15:18Z",
+    "start_date_local": "2025-07-21T06:15:18Z",
+    "distance": 7846.8,
+    "start_index": 1154,
+    "end_index": 2133,
+    "average_cadence": 72.0,
+    "device_watts": true,
+    "average_watts": 232.1,
+    "average_heartrate": 122.9,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3373322724716745052,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14922441670,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 981,
+    "moving_time": 973,
+    "start_date": "2025-06-26T13:16:54Z",
+    "start_date_local": "2025-06-26T06:16:54Z",
+    "distance": 7846.8,
+    "start_index": 1081,
+    "end_index": 2055,
+    "average_cadence": 73.5,
+    "device_watts": true,
+    "average_watts": 220.6,
+    "average_heartrate": 114.9,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410651253018436936,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16063550332,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 981,
+    "moving_time": 981,
+    "start_date": "2025-10-07T13:32:25Z",
+    "start_date_local": "2025-10-07T06:32:25Z",
+    "distance": 7846.8,
+    "start_index": 1033,
+    "end_index": 2014,
+    "average_cadence": 81.4,
+    "device_watts": true,
+    "average_watts": 247.8,
+    "average_heartrate": 137.5,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3349404624083070108,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14242799763,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 983,
+    "moving_time": 983,
+    "start_date": "2025-04-21T13:20:50Z",
+    "start_date_local": "2025-04-21T06:20:50Z",
+    "distance": 7846.8,
+    "start_index": 1105,
+    "end_index": 2088,
+    "average_cadence": 75.1,
+    "device_watts": true,
+    "average_watts": 243.4,
+    "average_heartrate": 143.5,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410297072948724050,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16052523229,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 989,
+    "moving_time": 989,
+    "start_date": "2025-10-06T14:02:57Z",
+    "start_date_local": "2025-10-06T07:02:57Z",
+    "distance": 7846.8,
+    "start_index": 1053,
+    "end_index": 2042,
+    "average_cadence": 75.8,
+    "device_watts": true,
+    "average_watts": 240.2,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251555860398242676,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 11977840072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 991,
+    "moving_time": 983,
+    "start_date": "2024-07-25T12:59:52Z",
+    "start_date_local": "2024-07-25T05:59:52Z",
+    "distance": 7846.8,
+    "start_index": 426,
+    "end_index": 718,
+    "device_watts": false,
+    "average_heartrate": 141.4,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413191635316882036,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16138354685,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 994,
+    "moving_time": 994,
+    "start_date": "2025-10-14T13:40:58Z",
+    "start_date_local": "2025-10-14T06:40:58Z",
+    "distance": 7846.8,
+    "start_index": 1087,
+    "end_index": 2081,
+    "average_cadence": 71.5,
+    "device_watts": true,
+    "average_watts": 227.6,
+    "average_heartrate": 130.7,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370787076915223982,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14850175778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 995,
+    "moving_time": 940,
+    "start_date": "2025-06-19T13:16:38Z",
+    "start_date_local": "2025-06-19T06:16:38Z",
+    "distance": 7846.8,
+    "start_index": 1147,
+    "end_index": 2090,
+    "average_cadence": 67.7,
+    "device_watts": true,
+    "average_watts": 211.2,
+    "average_heartrate": 115.8,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3366080518766922056,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14714565330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 996,
+    "moving_time": 996,
+    "start_date": "2025-06-06T13:34:38Z",
+    "start_date_local": "2025-06-06T06:34:38Z",
+    "distance": 7846.8,
+    "start_index": 989,
+    "end_index": 1984,
+    "average_cadence": 73.2,
+    "device_watts": true,
+    "average_watts": 210.5,
+    "average_heartrate": 123.2,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398322453120265450,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15683158116,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 996,
+    "moving_time": 965,
+    "start_date": "2025-09-03T13:01:36Z",
+    "start_date_local": "2025-09-03T06:01:36Z",
+    "distance": 7846.8,
+    "start_index": 1131,
+    "end_index": 2099,
+    "average_cadence": 66.7,
+    "device_watts": true,
+    "average_watts": 219.2,
+    "average_heartrate": 128.6,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268587742322009536,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12374934834,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 998,
+    "moving_time": 998,
+    "start_date": "2024-09-10T13:00:59Z",
+    "start_date_local": "2024-09-10T06:00:59Z",
+    "distance": 7846.8,
+    "start_index": 1192,
+    "end_index": 2190,
+    "average_cadence": 63.5,
+    "device_watts": true,
+    "average_watts": 217.9,
+    "average_heartrate": 126.9,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3385293437864129070,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15275646077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 999,
+    "moving_time": 999,
+    "start_date": "2025-07-29T13:47:24Z",
+    "start_date_local": "2025-07-29T06:47:24Z",
+    "distance": 7846.8,
+    "start_index": 1146,
+    "end_index": 2145,
+    "average_cadence": 67.6,
+    "device_watts": true,
+    "average_watts": 213.3,
+    "average_heartrate": 119.0,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3255903122097598002,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12077450668,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1000,
+    "moving_time": 1000,
+    "start_date": "2024-08-06T12:53:41Z",
+    "start_date_local": "2024-08-06T05:53:41Z",
+    "distance": 7846.8,
+    "start_index": 373,
+    "end_index": 662,
+    "device_watts": false,
+    "average_heartrate": 134.8,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263871860510748008,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12264308936,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1000,
+    "moving_time": 859,
+    "start_date": "2024-08-28T12:58:41Z",
+    "start_date_local": "2024-08-28T05:58:41Z",
+    "distance": 7846.8,
+    "start_index": 1032,
+    "end_index": 1892,
+    "average_cadence": 75.0,
+    "device_watts": true,
+    "average_watts": 286.7,
+    "average_heartrate": 152.9,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3347959183670725344,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14204047839,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1000,
+    "moving_time": 919,
+    "start_date": "2025-04-17T13:37:44Z",
+    "start_date_local": "2025-04-17T06:37:44Z",
+    "distance": 7846.8,
+    "start_index": 1182,
+    "end_index": 2102,
+    "average_cadence": 82.0,
+    "device_watts": true,
+    "average_watts": 261.0,
+    "average_heartrate": 139.7,
+    "max_heartrate": 169.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3372602316028590618,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14901386435,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1003,
+    "moving_time": 973,
+    "start_date": "2025-06-24T13:33:07Z",
+    "start_date_local": "2025-06-24T06:33:07Z",
+    "distance": 7846.8,
+    "start_index": 1202,
+    "end_index": 2177,
+    "average_cadence": 61.0,
+    "device_watts": true,
+    "average_watts": 210.4,
+    "average_heartrate": 114.2,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3443286223017012698,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16946166061,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1010,
+    "moving_time": 1010,
+    "start_date": "2026-01-05T14:49:06Z",
+    "start_date_local": "2026-01-05T06:49:06Z",
+    "distance": 7846.8,
+    "start_index": 1203,
+    "end_index": 2213,
+    "average_cadence": 73.2,
+    "device_watts": true,
+    "average_watts": 239.1,
+    "average_heartrate": 143.2,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3461392619803678580,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 17506406720,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1014,
+    "moving_time": 1014,
+    "start_date": "2026-02-24T13:53:48Z",
+    "start_date_local": "2026-02-24T05:53:48Z",
+    "distance": 7846.8,
+    "start_index": 1276,
+    "end_index": 2290,
+    "average_cadence": 71.6,
+    "device_watts": true,
+    "average_watts": 216.0,
+    "average_heartrate": 132.5,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251194076302233702,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 11969363761,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1016,
+    "moving_time": 1016,
+    "start_date": "2024-07-24T13:03:00Z",
+    "start_date_local": "2024-07-24T06:03:00Z",
+    "distance": 7846.8,
+    "start_index": 360,
+    "end_index": 662,
+    "device_watts": false,
+    "average_heartrate": 129.9,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355201581757313784,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14405517047,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1018,
+    "moving_time": 1018,
+    "start_date": "2025-05-07T13:07:43Z",
+    "start_date_local": "2025-05-07T06:07:43Z",
+    "distance": 7846.8,
+    "start_index": 395,
+    "end_index": 686,
+    "device_watts": false,
+    "average_heartrate": 123.7,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3354247835624662400,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14380153374,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1020,
+    "moving_time": 809,
+    "start_date": "2025-05-04T18:18:35Z",
+    "start_date_local": "2025-05-04T11:18:35Z",
+    "distance": 7846.8,
+    "start_index": 959,
+    "end_index": 1784,
+    "average_cadence": 69.9,
+    "device_watts": true,
+    "average_watts": 224.2,
+    "average_heartrate": 134.6,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3359910726508572888,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14539771405,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1026,
+    "moving_time": 1014,
+    "start_date": "2025-05-20T13:05:37Z",
+    "start_date_local": "2025-05-20T06:05:37Z",
+    "distance": 7846.8,
+    "start_index": 1092,
+    "end_index": 2107,
+    "average_cadence": 75.4,
+    "device_watts": true,
+    "average_watts": 233.2,
+    "average_heartrate": 125.8,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3416081577265628376,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16222225416,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1027,
+    "moving_time": 1027,
+    "start_date": "2025-10-22T13:04:03Z",
+    "start_date_local": "2025-10-22T06:04:03Z",
+    "distance": 7846.8,
+    "start_index": 1064,
+    "end_index": 2091,
+    "device_watts": false,
+    "average_heartrate": 130.6,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368244400003465824,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14776856791,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1028,
+    "moving_time": 1028,
+    "start_date": "2025-06-12T12:58:52Z",
+    "start_date_local": "2025-06-12T05:58:52Z",
+    "distance": 7846.8,
+    "start_index": 1149,
+    "end_index": 2177,
+    "average_cadence": 68.5,
+    "device_watts": true,
+    "average_watts": 228.2,
+    "average_heartrate": 122.9,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411394109992811152,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16086564133,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1030,
+    "moving_time": 1030,
+    "start_date": "2025-10-09T14:41:00Z",
+    "start_date_local": "2025-10-09T07:41:00Z",
+    "distance": 7846.8,
+    "start_index": 1090,
+    "end_index": 2120,
+    "average_cadence": 71.1,
+    "device_watts": true,
+    "average_watts": 217.8,
+    "average_heartrate": 131.0,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365709861281507312,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14704717185,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1031,
+    "moving_time": 1026,
+    "start_date": "2025-06-05T13:07:57Z",
+    "start_date_local": "2025-06-05T06:07:57Z",
+    "distance": 7846.8,
+    "start_index": 1126,
+    "end_index": 2153,
+    "average_cadence": 63.4,
+    "device_watts": true,
+    "average_watts": 196.9,
+    "average_heartrate": 120.4,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288541164582982370,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12821315476,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1032,
+    "moving_time": 1032,
+    "start_date": "2024-11-04T14:10:31Z",
+    "start_date_local": "2024-11-04T06:10:31Z",
+    "distance": 7846.8,
+    "start_index": 1185,
+    "end_index": 2217,
+    "average_cadence": 69.1,
+    "device_watts": true,
+    "average_watts": 270.6,
+    "average_heartrate": 160.0,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3333113598241119988,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13814909452,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1032,
+    "moving_time": 1032,
+    "start_date": "2025-03-07T14:18:32Z",
+    "start_date_local": "2025-03-07T06:18:32Z",
+    "distance": 7846.8,
+    "start_index": 1052,
+    "end_index": 2084,
+    "average_cadence": 76.7,
+    "device_watts": true,
+    "average_watts": 265.6,
+    "average_heartrate": 142.8,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3409203698239010014,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16020797446,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1032,
+    "moving_time": 1032,
+    "start_date": "2025-10-03T13:30:16Z",
+    "start_date_local": "2025-10-03T06:30:16Z",
+    "distance": 7846.8,
+    "start_index": 1109,
+    "end_index": 2141,
+    "average_cadence": 67.6,
+    "device_watts": true,
+    "average_watts": 204.1,
+    "average_heartrate": 124.1,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3350134438085531740,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14262949627,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1033,
+    "moving_time": 1033,
+    "start_date": "2025-04-23T13:36:45Z",
+    "start_date_local": "2025-04-23T06:36:45Z",
+    "distance": 7846.8,
+    "start_index": 1139,
+    "end_index": 2172,
+    "average_cadence": 67.4,
+    "device_watts": true,
+    "average_watts": 203.1,
+    "average_heartrate": 123.2,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398696825871048962,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15695232371,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1033,
+    "moving_time": 1033,
+    "start_date": "2025-09-04T13:44:39Z",
+    "start_date_local": "2025-09-04T06:44:39Z",
+    "distance": 7846.8,
+    "start_index": 1092,
+    "end_index": 2125,
+    "average_cadence": 72.0,
+    "device_watts": true,
+    "average_watts": 194.5,
+    "average_heartrate": 121.0,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368618803604654594,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14787270900,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1034,
+    "moving_time": 1023,
+    "start_date": "2025-06-13T13:41:25Z",
+    "start_date_local": "2025-06-13T06:41:25Z",
+    "distance": 7846.8,
+    "start_index": 1079,
+    "end_index": 2105,
+    "average_cadence": 61.0,
+    "device_watts": true,
+    "average_watts": 197.9,
+    "average_heartrate": 117.8,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353407475849681906,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14355401347,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1037,
+    "moving_time": 1036,
+    "start_date": "2025-05-02T13:44:49Z",
+    "start_date_local": "2025-05-02T06:44:49Z",
+    "distance": 7846.8,
+    "start_index": 1058,
+    "end_index": 2095,
+    "average_cadence": 67.4,
+    "device_watts": true,
+    "average_watts": 196.6,
+    "average_heartrate": 126.6,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3396525346863242354,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15627300962,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1037,
+    "moving_time": 1036,
+    "start_date": "2025-08-29T13:40:35Z",
+    "start_date_local": "2025-08-29T06:40:35Z",
+    "distance": 7846.8,
+    "start_index": 992,
+    "end_index": 2029,
+    "average_cadence": 72.1,
+    "device_watts": true,
+    "average_watts": 204.5,
+    "average_heartrate": 119.9,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413551403727756012,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16149463484,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1037,
+    "moving_time": 1037,
+    "start_date": "2025-10-15T13:00:33Z",
+    "start_date_local": "2025-10-15T06:00:33Z",
+    "distance": 7846.8,
+    "start_index": 1101,
+    "end_index": 2138,
+    "device_watts": false,
+    "average_heartrate": 128.8,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3421905671416494354,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16384934966,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1037,
+    "moving_time": 1037,
+    "start_date": "2025-11-07T14:21:38Z",
+    "start_date_local": "2025-11-07T06:21:38Z",
+    "distance": 7846.8,
+    "start_index": 1202,
+    "end_index": 2239,
+    "average_cadence": 75.2,
+    "device_watts": true,
+    "average_watts": 239.7,
+    "average_heartrate": 138.4,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3441113494415029470,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16885305726,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1037,
+    "moving_time": 1037,
+    "start_date": "2025-12-30T14:52:53Z",
+    "start_date_local": "2025-12-30T06:52:53Z",
+    "distance": 7846.8,
+    "start_index": 1276,
+    "end_index": 2313,
+    "device_watts": false,
+    "average_heartrate": 136.8,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355573064685645052,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14416337001,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1039,
+    "moving_time": 1039,
+    "start_date": "2025-05-08T13:47:01Z",
+    "start_date_local": "2025-05-08T06:47:01Z",
+    "distance": 7846.8,
+    "start_index": 1165,
+    "end_index": 2204,
+    "average_cadence": 73.9,
+    "device_watts": true,
+    "average_watts": 240.4,
+    "average_heartrate": 130.7,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3331660987145209566,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13777797816,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1040,
+    "moving_time": 1040,
+    "start_date": "2025-03-03T14:12:10Z",
+    "start_date_local": "2025-03-03T06:12:10Z",
+    "distance": 7846.8,
+    "start_index": 1091,
+    "end_index": 2131,
+    "average_cadence": 65.5,
+    "device_watts": true,
+    "average_watts": 232.8,
+    "average_heartrate": 136.0,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3335630321422953802,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13880376318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1042,
+    "moving_time": 1042,
+    "start_date": "2025-03-14T13:00:48Z",
+    "start_date_local": "2025-03-14T06:00:48Z",
+    "distance": 7846.8,
+    "start_index": 1155,
+    "end_index": 2197,
+    "average_cadence": 66.4,
+    "device_watts": true,
+    "average_watts": 225.7,
+    "average_heartrate": 139.1,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3466566977720385430,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 17678093340,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1044,
+    "moving_time": 1043,
+    "start_date": "2026-03-10T13:26:06Z",
+    "start_date_local": "2026-03-10T06:26:06Z",
+    "distance": 7846.8,
+    "start_index": 1265,
+    "end_index": 2309,
+    "average_cadence": 70.6,
+    "device_watts": true,
+    "average_watts": 223.0,
+    "average_heartrate": 130.1,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288896931251683018,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12829100188,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1045,
+    "moving_time": 1045,
+    "start_date": "2024-11-05T14:00:59Z",
+    "start_date_local": "2024-11-05T06:00:59Z",
+    "distance": 7846.8,
+    "start_index": 1003,
+    "end_index": 2048,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 268.2,
+    "average_heartrate": 154.8,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3459226707215951654,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 17440217222,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1045,
+    "moving_time": 1045,
+    "start_date": "2026-02-18T14:01:45Z",
+    "start_date_local": "2026-02-18T06:01:45Z",
+    "distance": 7846.8,
+    "start_index": 1204,
+    "end_index": 2249,
+    "average_cadence": 74.8,
+    "device_watts": true,
+    "average_watts": 209.3,
+    "average_heartrate": 131.8,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3462492485755431784,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 17542554753,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1045,
+    "moving_time": 1045,
+    "start_date": "2026-02-27T14:38:49Z",
+    "start_date_local": "2026-02-27T06:38:49Z",
+    "distance": 7846.8,
+    "start_index": 1206,
+    "end_index": 2251,
+    "average_cadence": 71.2,
+    "device_watts": true,
+    "average_watts": 225.9,
+    "average_heartrate": 134.8,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365357798684838214,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14694579988,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1049,
+    "moving_time": 1049,
+    "start_date": "2025-06-04T13:43:02Z",
+    "start_date_local": "2025-06-04T06:43:02Z",
+    "distance": 7846.8,
+    "start_index": 1140,
+    "end_index": 2189,
+    "average_cadence": 71.3,
+    "device_watts": true,
+    "average_watts": 206.3,
+    "average_heartrate": 116.6,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375860359767189776,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14994827230,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1050,
+    "moving_time": 1050,
+    "start_date": "2025-07-03T13:04:47Z",
+    "start_date_local": "2025-07-03T06:04:47Z",
+    "distance": 7846.8,
+    "start_index": 1109,
+    "end_index": 2159,
+    "average_cadence": 73.4,
+    "device_watts": true,
+    "average_watts": 236.3,
+    "average_heartrate": 120.1,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3316440483653022138,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13405588752,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1051,
+    "moving_time": 1051,
+    "start_date": "2025-01-20T14:02:56Z",
+    "start_date_local": "2025-01-20T06:02:56Z",
+    "distance": 7846.8,
+    "start_index": 1064,
+    "end_index": 2115,
+    "device_watts": false,
+    "average_heartrate": 144.5,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3348325515453775462,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14213905981,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1053,
+    "moving_time": 1053,
+    "start_date": "2025-04-18T13:38:10Z",
+    "start_date_local": "2025-04-18T06:38:10Z",
+    "distance": 7846.8,
+    "start_index": 1185,
+    "end_index": 2238,
+    "average_cadence": 80.2,
+    "device_watts": true,
+    "average_watts": 215.8,
+    "average_heartrate": 127.2,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360635050002477724,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14560848197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1058,
+    "moving_time": 1057,
+    "start_date": "2025-05-22T12:59:52Z",
+    "start_date_local": "2025-05-22T05:59:52Z",
+    "distance": 7846.8,
+    "start_index": 1118,
+    "end_index": 2176,
+    "average_cadence": 72.5,
+    "device_watts": true,
+    "average_watts": 212.6,
+    "average_heartrate": 123.0,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370058435506604386,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14827981626,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1059,
+    "moving_time": 1059,
+    "start_date": "2025-06-17T13:03:17Z",
+    "start_date_local": "2025-06-17T06:03:17Z",
+    "distance": 7846.8,
+    "start_index": 1227,
+    "end_index": 2286,
+    "average_cadence": 65.8,
+    "device_watts": true,
+    "average_watts": 203.2,
+    "average_heartrate": 115.1,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3371142491061709784,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14860224848,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1059,
+    "moving_time": 1059,
+    "start_date": "2025-06-20T12:59:30Z",
+    "start_date_local": "2025-06-20T05:59:30Z",
+    "distance": 7846.8,
+    "start_index": 1070,
+    "end_index": 2129,
+    "average_cadence": 69.6,
+    "device_watts": true,
+    "average_watts": 193.8,
+    "average_heartrate": 108.3,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3317169126732773818,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13423649224,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1062,
+    "moving_time": 1062,
+    "start_date": "2025-01-22T14:20:49Z",
+    "start_date_local": "2025-01-22T06:20:49Z",
+    "distance": 7846.8,
+    "start_index": 1132,
+    "end_index": 2194,
+    "device_watts": false,
+    "average_heartrate": 140.0,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358468015232762914,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14498888212,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1063,
+    "moving_time": 1063,
+    "start_date": "2025-05-16T13:34:49Z",
+    "start_date_local": "2025-05-16T06:34:49Z",
+    "distance": 7846.8,
+    "start_index": 1032,
+    "end_index": 2095,
+    "average_cadence": 73.6,
+    "device_watts": true,
+    "average_watts": 243.5,
+    "average_heartrate": 133.8,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358104886163894298,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14488932577,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1066,
+    "moving_time": 1066,
+    "start_date": "2025-05-15T13:30:53Z",
+    "start_date_local": "2025-05-15T06:30:53Z",
+    "distance": 7846.8,
+    "start_index": 1177,
+    "end_index": 2243,
+    "average_cadence": 68.5,
+    "device_watts": true,
+    "average_watts": 215.4,
+    "average_heartrate": 118.9,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3417891656917229214,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16271547183,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1068,
+    "moving_time": 1068,
+    "start_date": "2025-10-27T12:55:49Z",
+    "start_date_local": "2025-10-27T05:55:49Z",
+    "distance": 7846.8,
+    "start_index": 1107,
+    "end_index": 2175,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 226.6,
+    "average_heartrate": 124.0,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3437129539904882760,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16785870213,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1072,
+    "moving_time": 1072,
+    "start_date": "2025-12-19T15:00:26Z",
+    "start_date_local": "2025-12-19T07:00:26Z",
+    "distance": 7846.8,
+    "start_index": 1208,
+    "end_index": 2279,
+    "average_cadence": 75.9,
+    "device_watts": true,
+    "average_watts": 221.1,
+    "average_heartrate": 131.0,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250831414651900444,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 11960512797,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1073,
+    "moving_time": 1073,
+    "start_date": "2024-07-23T12:58:30Z",
+    "start_date_local": "2024-07-23T05:58:30Z",
+    "distance": 7846.8,
+    "start_index": 402,
+    "end_index": 706,
+    "device_watts": false,
+    "average_heartrate": 130.1,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3433500213315758544,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16694766248,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1078,
+    "moving_time": 1078,
+    "start_date": "2025-12-09T14:37:15Z",
+    "start_date_local": "2025-12-09T06:37:15Z",
+    "distance": 7846.8,
+    "start_index": 1071,
+    "end_index": 2149,
+    "average_cadence": 71.7,
+    "device_watts": true,
+    "average_watts": 228.7,
+    "average_heartrate": 134.2,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360283434643879794,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14551088220,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1080,
+    "moving_time": 1080,
+    "start_date": "2025-05-21T13:45:06Z",
+    "start_date_local": "2025-05-21T06:45:06Z",
+    "distance": 7846.8,
+    "start_index": 1051,
+    "end_index": 2131,
+    "average_cadence": 71.5,
+    "device_watts": true,
+    "average_watts": 211.6,
+    "average_heartrate": 120.4,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263157621456383894,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12246925159,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1082,
+    "moving_time": 1082,
+    "start_date": "2024-08-26T13:20:57Z",
+    "start_date_local": "2024-08-26T06:20:57Z",
+    "distance": 7846.8,
+    "start_index": 1138,
+    "end_index": 2220,
+    "average_cadence": 70.0,
+    "device_watts": true,
+    "average_watts": 228.7,
+    "average_heartrate": 127.9,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3393992976761796450,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15547940636,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1087,
+    "moving_time": 1008,
+    "start_date": "2025-08-22T14:12:54Z",
+    "start_date_local": "2025-08-22T07:12:54Z",
+    "distance": 7846.8,
+    "start_index": 1066,
+    "end_index": 2076,
+    "average_cadence": 68.7,
+    "device_watts": true,
+    "average_watts": 213.8,
+    "average_heartrate": 137.1,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3345053904542513678,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14127037659,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1090,
+    "moving_time": 1090,
+    "start_date": "2025-04-09T13:05:26Z",
+    "start_date_local": "2025-04-09T06:05:26Z",
+    "distance": 7846.8,
+    "start_index": 1255,
+    "end_index": 2345,
+    "average_cadence": 67.5,
+    "device_watts": true,
+    "average_watts": 214.8,
+    "average_heartrate": 131.6,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3428055469182690154,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16552917991,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1090,
+    "moving_time": 1090,
+    "start_date": "2025-11-24T14:02:15Z",
+    "start_date_local": "2025-11-24T06:02:15Z",
+    "distance": 7846.8,
+    "start_index": 1163,
+    "end_index": 2253,
+    "average_cadence": 72.7,
+    "device_watts": true,
+    "average_watts": 232.6,
+    "average_heartrate": 125.4,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3332390572733404914,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13796731729,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1096,
+    "moving_time": 1096,
+    "start_date": "2025-03-05T14:26:45Z",
+    "start_date_local": "2025-03-05T06:26:45Z",
+    "distance": 7846.8,
+    "start_index": 1195,
+    "end_index": 2291,
+    "average_cadence": 68.4,
+    "device_watts": true,
+    "average_watts": 232.8,
+    "average_heartrate": 135.8,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3469719673901630918,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 17779597249,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1103,
+    "moving_time": 1103,
+    "start_date": "2026-03-19T13:21:25Z",
+    "start_date_local": "2026-03-19T06:21:25Z",
+    "distance": 7846.8,
+    "start_index": 1225,
+    "end_index": 2328,
+    "average_cadence": 65.7,
+    "device_watts": true,
+    "average_watts": 195.6,
+    "average_heartrate": 120.4,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3458505872856666996,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 17417002169,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1108,
+    "moving_time": 1108,
+    "start_date": "2026-02-16T14:44:48Z",
+    "start_date_local": "2026-02-16T06:44:48Z",
+    "distance": 7846.8,
+    "start_index": 1308,
+    "end_index": 2416,
+    "average_cadence": 75.5,
+    "device_watts": true,
+    "average_watts": 236.6,
+    "average_heartrate": 143.8,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3270763557103591922,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12424459310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1109,
+    "moving_time": 1109,
+    "start_date": "2024-09-16T13:00:33Z",
+    "start_date_local": "2024-09-16T06:00:33Z",
+    "distance": 7846.8,
+    "start_index": 1209,
+    "end_index": 2318,
+    "average_cadence": 61.3,
+    "device_watts": true,
+    "average_watts": 214.9,
+    "average_heartrate": 125.5,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3426975394593944438,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16525027384,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1109,
+    "moving_time": 1109,
+    "start_date": "2025-11-21T14:32:48Z",
+    "start_date_local": "2025-11-21T06:32:48Z",
+    "distance": 7846.8,
+    "start_index": 1104,
+    "end_index": 2212,
+    "average_cadence": 74.7,
+    "device_watts": true,
+    "average_watts": 220.3,
+    "average_heartrate": 134.5,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3293623367836520570,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12929816287,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1114,
+    "moving_time": 1114,
+    "start_date": "2024-11-18T14:25:40Z",
+    "start_date_local": "2024-11-18T06:25:40Z",
+    "distance": 7846.8,
+    "start_index": 1220,
+    "end_index": 2334,
+    "average_cadence": 69.5,
+    "device_watts": true,
+    "average_watts": 253.9,
+    "average_heartrate": 162.0,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3438346648395035478,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16815880803,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1115,
+    "moving_time": 1115,
+    "start_date": "2025-12-22T15:01:00Z",
+    "start_date_local": "2025-12-22T07:01:00Z",
+    "distance": 7846.8,
+    "start_index": 1285,
+    "end_index": 2400,
+    "average_cadence": 74.5,
+    "device_watts": true,
+    "average_watts": 224.0,
+    "average_heartrate": 131.2,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268951875502238324,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 12383740682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1117,
+    "moving_time": 1117,
+    "start_date": "2024-09-11T12:59:16Z",
+    "start_date_local": "2024-09-11T05:59:16Z",
+    "distance": 7846.8,
+    "start_index": 1254,
+    "end_index": 2371,
+    "average_cadence": 62.1,
+    "device_watts": true,
+    "average_watts": 206.2,
+    "average_heartrate": 123.8,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3436775522381384794,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16777711739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1117,
+    "moving_time": 1117,
+    "start_date": "2025-12-18T15:11:13Z",
+    "start_date_local": "2025-12-18T07:11:13Z",
+    "distance": 7846.8,
+    "start_index": 1262,
+    "end_index": 2379,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 233.1,
+    "average_heartrate": 130.9,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449449916333736432,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 17140109075,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1117,
+    "moving_time": 1117,
+    "start_date": "2026-01-22T14:15:08Z",
+    "start_date_local": "2026-01-22T06:15:08Z",
+    "distance": 7846.8,
+    "start_index": 1313,
+    "end_index": 2430,
+    "average_cadence": 79.3,
+    "device_watts": true,
+    "average_watts": 230.7,
+    "average_heartrate": 145.3,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3362814285729163892,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14621109297,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1119,
+    "moving_time": 1119,
+    "start_date": "2025-05-28T13:14:58Z",
+    "start_date_local": "2025-05-28T06:14:58Z",
+    "distance": 7846.8,
+    "start_index": 1210,
+    "end_index": 2329,
+    "average_cadence": 62.2,
+    "device_watts": true,
+    "average_watts": 188.7,
+    "average_heartrate": 116.2,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3334185569927996178,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13842791773,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1121,
+    "moving_time": 1120,
+    "start_date": "2025-03-10T13:15:25Z",
+    "start_date_local": "2025-03-10T06:15:25Z",
+    "distance": 7846.8,
+    "start_index": 1194,
+    "end_index": 2315,
+    "average_cadence": 69.2,
+    "device_watts": true,
+    "average_watts": 237.4,
+    "average_heartrate": 138.1,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3357743450772099326,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 14478403917,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1122,
+    "moving_time": 1122,
+    "start_date": "2025-05-14T13:27:01Z",
+    "start_date_local": "2025-05-14T06:27:01Z",
+    "distance": 7846.8,
+    "start_index": 1193,
+    "end_index": 2315,
+    "average_cadence": 69.2,
+    "device_watts": true,
+    "average_watts": 211.1,
+    "average_heartrate": 117.9,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411743111944891562,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16096272291,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1122,
+    "moving_time": 1122,
+    "start_date": "2025-10-10T13:40:56Z",
+    "start_date_local": "2025-10-10T06:40:56Z",
+    "distance": 7846.8,
+    "start_index": 1068,
+    "end_index": 2190,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 217.1,
+    "average_heartrate": 125.6,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3440751703094064384,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 16875262874,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1127,
+    "moving_time": 1127,
+    "start_date": "2025-12-29T14:52:51Z",
+    "start_date_local": "2025-12-29T06:52:51Z",
+    "distance": 7846.8,
+    "start_index": 1166,
+    "end_index": 2293,
+    "device_watts": false,
+    "average_heartrate": 131.5,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3337813483852178822,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13936388109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1130,
+    "moving_time": 1130,
+    "start_date": "2025-03-20T13:01:21Z",
+    "start_date_local": "2025-03-20T06:01:21Z",
+    "distance": 7846.8,
+    "start_index": 1229,
+    "end_index": 2359,
+    "average_cadence": 63.1,
+    "device_watts": true,
+    "average_watts": 215.1,
+    "average_heartrate": 130.1,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3319705167040958388,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13484397149,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1149,
+    "moving_time": 1103,
+    "start_date": "2025-01-29T14:17:10Z",
+    "start_date_local": "2025-01-29T06:17:10Z",
+    "distance": 7846.8,
+    "start_index": 1212,
+    "end_index": 2318,
+    "average_cadence": 61.6,
+    "device_watts": true,
+    "average_watts": 107.8,
+    "average_heartrate": 146.4,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304857031493754092,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13149409450,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1158,
+    "moving_time": 1158,
+    "start_date": "2024-12-19T14:48:19Z",
+    "start_date_local": "2024-12-19T06:48:19Z",
+    "distance": 7846.8,
+    "start_index": 1260,
+    "end_index": 2418,
+    "average_cadence": 58.0,
+    "device_watts": true,
+    "average_watts": 191.6,
+    "average_heartrate": 120.8,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250473749466844742,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 11951988603,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1165,
+    "moving_time": 1157,
+    "start_date": "2024-07-22T13:14:34Z",
+    "start_date_local": "2024-07-22T06:14:34Z",
+    "distance": 7846.8,
+    "start_index": 406,
+    "end_index": 711,
+    "device_watts": false,
+    "average_heartrate": 121.7,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449803577075749188,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 17150751411,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1177,
+    "moving_time": 1134,
+    "start_date": "2026-01-23T14:00:08Z",
+    "start_date_local": "2026-01-23T06:00:08Z",
+    "distance": 7846.8,
+    "start_index": 1281,
+    "end_index": 2417,
+    "device_watts": false,
+    "average_heartrate": 138.7,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3391088266302260224,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 15457183494,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1193,
+    "moving_time": 977,
+    "start_date": "2025-08-14T13:50:52Z",
+    "start_date_local": "2025-08-14T06:50:52Z",
+    "distance": 7846.8,
+    "start_index": 1027,
+    "end_index": 2008,
+    "average_cadence": 57.5,
+    "device_watts": true,
+    "average_watts": 185.5,
+    "average_heartrate": 115.2,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3299416480354985928,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13045844687,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1197,
+    "moving_time": 1197,
+    "start_date": "2024-12-04T14:31:19Z",
+    "start_date_local": "2024-12-04T06:31:19Z",
+    "distance": 7846.8,
+    "start_index": 1158,
+    "end_index": 2355,
+    "average_cadence": 62.2,
+    "device_watts": true,
+    "average_watts": 212.3,
+    "average_heartrate": 129.5,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3336721137265531084,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 13907347059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1201,
+    "moving_time": 1102,
+    "start_date": "2025-03-17T13:14:35Z",
+    "start_date_local": "2025-03-17T06:14:35Z",
+    "distance": 7846.8,
+    "start_index": 1174,
+    "end_index": 2277,
+    "average_cadence": 64.4,
+    "device_watts": true,
+    "average_watts": 205.3,
+    "average_heartrate": 129.2,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 2838596387151570404,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity": {
+      "id": 5454186917,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1659,
+    "moving_time": 1261,
+    "start_date": "2021-06-11T22:43:19Z",
+    "start_date_local": "2021-06-11T15:43:19Z",
+    "distance": 7846.8,
+    "start_index": 1195,
+    "end_index": 2547,
+    "device_watts": false,
+    "average_watts": 105.2,
+    "segment": {
+      "id": 16955378,
+      "resource_state": 2,
+      "name": "Pedal till ya puke",
+      "activity_type": "Ride",
+      "distance": 7846.8,
+      "average_grade": 0.1,
+      "maximum_grade": 46.5,
+      "elevation_high": 57.1,
+      "elevation_low": 3.9,
+      "start_latlng": [
+        47.645194,
+        -122.300915
+      ],
+      "end_latlng": [
+        47.643112,
+        -122.203337
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

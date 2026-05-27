@@ -1,762 +1,772 @@
 [
   {
-    "id": 100001,
+    "id": 611256,
     "resource_state": 2,
-    "name": "Box Hill",
+    "name": "212th Way SE",
     "activity_type": "Ride",
-    "distance": 2354.0,
-    "average_grade": 5.2,
-    "maximum_grade": 11.8,
-    "elevation_high": 222.0,
-    "elevation_low": 100.0,
+    "distance": 1276.95,
+    "average_grade": 8.4,
+    "maximum_grade": 13.5,
+    "elevation_high": 120.0,
+    "elevation_low": 12.9,
     "start_latlng": [
-      51.249,
-      -0.342
+      47.570025,
+      -122.064127
     ],
     "end_latlng": [
-      51.26,
-      -0.33
+      47.577282,
+      -122.056991
     ],
-    "climb_category": 2,
-    "city": "Dorking",
-    "state": "England",
-    "country": "United Kingdom",
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 1,
+    "city": "Sammamish",
+    "state": "WA",
+    "country": "United States",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 122.0,
-    "created_at": "2010-06-01T12:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100001",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 255,
+    "athlete_pr_effort": {
+      "id": 3474939480153572480,
+      "activity_id": 17956160818,
+      "elapsed_time": 255,
+      "distance": 1276.95,
+      "start_date": "2026-04-02T23:56:29Z",
+      "start_date_local": "2026-04-02T16:56:29Z",
+      "is_kom": false
     },
-    "effort_count": 1500,
-    "athlete_count": 900,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2024-12-23T09:35:09Z"
   },
   {
-    "id": 100002,
+    "id": 4457997,
     "resource_state": 2,
-    "name": "Town Sprint",
+    "name": "Mercer Slough NB Climb",
     "activity_type": "Ride",
-    "distance": 320.0,
-    "average_grade": 0.5,
-    "maximum_grade": 2.1,
-    "elevation_high": 52.0,
-    "elevation_low": 50.0,
+    "distance": 401.3,
+    "average_grade": 3.4,
+    "maximum_grade": 5.0,
+    "elevation_high": 26.6,
+    "elevation_low": 13.1,
     "start_latlng": [
-      51.505,
-      -0.092
+      47.589254,
+      -122.182489
     ],
     "end_latlng": [
-      51.506,
-      -0.089
+      47.592811,
+      -122.182862
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": "Bellevue",
+    "state": "WA",
+    "country": "United States",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 1.6,
-    "created_at": "2012-03-15T09:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100002",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 32,
+    "athlete_pr_effort": {
+      "id": 3380715790776767102,
+      "activity_id": 15139034586,
+      "elapsed_time": 32,
+      "distance": 401.3,
+      "start_date": "2025-07-16T23:03:56Z",
+      "start_date_local": "2025-07-16T16:03:56Z",
+      "is_kom": false
     },
-    "effort_count": 400,
-    "athlete_count": 250,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2025-06-19T16:41:44Z"
   },
   {
-    "id": 100003,
+    "id": 7059603,
     "resource_state": 2,
-    "name": "River Road Flat",
+    "name": "212th Way Descent",
     "activity_type": "Ride",
-    "distance": 5200.0,
-    "average_grade": 0.1,
-    "maximum_grade": 1.5,
-    "elevation_high": 21.0,
-    "elevation_low": 20.0,
+    "distance": 1661.1,
+    "average_grade": -6.3,
+    "maximum_grade": 6.8,
+    "elevation_high": 79.0,
+    "elevation_low": -28.2,
     "start_latlng": [
-      51.512,
-      -0.087
+      47.580964,
+      -122.057015
     ],
     "end_latlng": [
-      51.53,
-      -0.06
+      47.570415,
+      -122.064305
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": "Sammamish",
+    "state": "WA",
+    "country": "United States",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 5.0,
-    "created_at": "2013-07-20T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100003",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 123,
+    "athlete_pr_effort": {
+      "id": 3481691945176225258,
+      "activity_id": 18198995851,
+      "elapsed_time": 123,
+      "distance": 1661.1,
+      "start_date": "2026-04-21T14:22:18Z",
+      "start_date_local": "2026-04-21T07:22:18Z",
+      "is_kom": false
     },
-    "effort_count": 850,
-    "athlete_count": 520,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2026-05-20T03:29:08Z"
   },
   {
-    "id": 100004,
+    "id": 7323508,
     "resource_state": 2,
-    "name": "North Downs Descent",
+    "name": "Last Hill above Coulon Park",
     "activity_type": "Ride",
-    "distance": 1800.0,
-    "average_grade": -5.5,
-    "maximum_grade": 0.8,
-    "elevation_high": 185.0,
-    "elevation_low": 86.0,
+    "distance": 368.7,
+    "average_grade": 2.2,
+    "maximum_grade": 5.5,
+    "elevation_high": 21.6,
+    "elevation_low": 12.6,
     "start_latlng": [
-      51.261,
-      -0.329
+      47.507796,
+      -122.201171
     ],
     "end_latlng": [
-      51.248,
-      -0.31
+      47.50465,
+      -122.19965
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "Dorking",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": "Renton",
+    "state": "WA",
+    "country": "United States",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 0.0,
-    "created_at": "2011-09-12T10:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100004",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 27,
+    "athlete_pr_effort": {
+      "id": 3370787076915781038,
+      "activity_id": 14850175778,
+      "elapsed_time": 27,
+      "distance": 368.7,
+      "start_date": "2025-06-19T14:12:48Z",
+      "start_date_local": "2025-06-19T07:12:48Z",
+      "is_kom": false
     },
-    "effort_count": 720,
-    "athlete_count": 440,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2025-06-19T13:59:54Z"
   },
   {
-    "id": 100005,
+    "id": 12809039,
     "resource_state": 2,
-    "name": "High Street Sprint",
+    "name": "Concrete to Coffee",
     "activity_type": "Ride",
-    "distance": 360.0,
+    "distance": 612.4,
     "average_grade": 0.2,
     "maximum_grade": 1.3,
-    "elevation_high": 45.0,
-    "elevation_low": 44.0,
+    "elevation_high": 52.6,
+    "elevation_low": 51.6,
     "start_latlng": [
-      51.507,
-      -0.091
+      47.501348,
+      -122.197695
     ],
     "end_latlng": [
-      51.5082,
-      -0.0882
+      47.49621,
+      -122.194846
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": "Renton",
+    "state": "Washington",
+    "country": "United States",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 1.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100005",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 48,
+    "athlete_pr_effort": {
+      "id": 3365709861279650800,
+      "activity_id": 14704717185,
+      "elapsed_time": 48,
+      "distance": 612.4,
+      "start_date": "2025-06-05T14:05:22Z",
+      "start_date_local": "2025-06-05T07:05:22Z",
+      "is_kom": false
     },
-    "effort_count": 180,
-    "athlete_count": 90,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2024-09-10T14:27:11Z"
   },
   {
-    "id": 100006,
+    "id": 14478359,
     "resource_state": 2,
-    "name": "Station Ramp Blast",
+    "name": "#TempHousingLoop",
     "activity_type": "Ride",
-    "distance": 340.0,
-    "average_grade": 3.6,
-    "maximum_grade": 6.1,
-    "elevation_high": 64.0,
-    "elevation_low": 52.0,
+    "distance": 1167.5,
+    "average_grade": 0.0,
+    "maximum_grade": 3.5,
+    "elevation_high": 114.0,
+    "elevation_low": 109.0,
     "start_latlng": [
-      51.462,
-      -0.115
+      47.592151,
+      -122.058119
     ],
     "end_latlng": [
-      51.463,
-      -0.1128
+      47.592322,
+      -122.057999
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": "Sammamish",
+    "state": "Washington",
+    "country": "United States",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 12.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100006",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 104,
+    "athlete_pr_effort": {
+      "id": 3491243340696213302,
+      "activity_id": 18549402472,
+      "elapsed_time": 104,
+      "distance": 1167.5,
+      "start_date": "2026-05-17T23:48:28Z",
+      "start_date_local": "2026-05-17T16:48:28Z",
+      "is_kom": true
     },
-    "effort_count": 187,
-    "athlete_count": 95,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2025-06-14T19:51:53Z"
   },
   {
-    "id": 100007,
+    "id": 16679364,
     "resource_state": 2,
-    "name": "Cobble Kick Sprint",
+    "name": "520 Bridge Westbound",
     "activity_type": "Ride",
-    "distance": 280.0,
-    "average_grade": 5.1,
-    "maximum_grade": 8.7,
-    "elevation_high": 52.0,
-    "elevation_low": 38.0,
+    "distance": 4820.5,
+    "average_grade": -0.8,
+    "maximum_grade": 3.7,
+    "elevation_high": 41.8,
+    "elevation_low": 3.8,
     "start_latlng": [
-      51.5195,
-      -0.102
+      47.637706,
+      -122.238567
     ],
     "end_latlng": [
-      51.5202,
-      -0.0998
+      47.645248,
+      -122.301452
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": "Medina",
+    "state": "Washington",
+    "country": "United States",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 14.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100007",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 395,
+    "athlete_pr_effort": {
+      "id": 3418041805016777460,
+      "activity_id": 16276644068,
+      "elapsed_time": 395,
+      "distance": 4820.5,
+      "start_date": "2025-10-27T23:30:45Z",
+      "start_date_local": "2025-10-27T16:30:45Z",
+      "is_kom": false
     },
-    "effort_count": 194,
-    "athlete_count": 100,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2026-05-20T21:31:00Z"
   },
   {
-    "id": 100008,
+    "id": 16679484,
     "resource_state": 2,
-    "name": "Park Dip Sprint",
+    "name": "520 Bridge Eastbound",
     "activity_type": "Ride",
-    "distance": 300.0,
-    "average_grade": -2.1,
-    "maximum_grade": 0.4,
-    "elevation_high": 36.0,
-    "elevation_low": 29.0,
+    "distance": 4620.4,
+    "average_grade": 0.7,
+    "maximum_grade": 17.5,
+    "elevation_high": 25.2,
+    "elevation_low": -8.2,
     "start_latlng": [
-      51.503,
-      -0.162
+      47.645354,
+      -122.298947
     ],
     "end_latlng": [
-      51.5019,
-      -0.1597
+      47.637693,
+      -122.238673
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": null,
+    "state": null,
+    "country": null,
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 0.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100008",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 455,
+    "athlete_pr_effort": {
+      "id": 3267318946438837696,
+      "activity_id": 12345256035,
+      "elapsed_time": 455,
+      "distance": 4620.4,
+      "start_date": "2024-09-07T00:52:54Z",
+      "start_date_local": "2024-09-06T17:52:54Z",
+      "is_kom": false
     },
-    "effort_count": 201,
-    "athlete_count": 105,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2026-05-20T21:29:25Z"
   },
   {
-    "id": 100009,
+    "id": 16679494,
     "resource_state": 2,
-    "name": "Valley Launch Sprint",
+    "name": "520 Bridge Eastbound Flats",
     "activity_type": "Ride",
-    "distance": 390.0,
-    "average_grade": -3.4,
-    "maximum_grade": 0.2,
-    "elevation_high": 72.0,
-    "elevation_low": 58.0,
+    "distance": 1481.6,
+    "average_grade": -0.0,
+    "maximum_grade": 2.1,
+    "elevation_high": -6.8,
+    "elevation_low": -8.2,
     "start_latlng": [
-      51.2765,
-      -0.313
+      47.642455,
+      -122.268782
     ],
     "end_latlng": [
-      51.2748,
-      -0.3099
+      47.639479,
+      -122.249498
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "Dorking",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": null,
+    "state": "Washington",
+    "country": "United States",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 0.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100009",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 113,
+    "athlete_pr_effort": {
+      "id": 3279621676874447068,
+      "activity_id": 12625749519,
+      "elapsed_time": 113,
+      "distance": 1481.6,
+      "start_date": "2024-10-10T23:43:07Z",
+      "start_date_local": "2024-10-10T16:43:07Z",
+      "is_kom": false
     },
-    "effort_count": 208,
-    "athlete_count": 110,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2026-05-20T21:29:28Z"
   },
   {
-    "id": 100010,
+    "id": 16679746,
     "resource_state": 2,
-    "name": "Canal Towpath Drag",
+    "name": "520 Westbound Gate to Gate",
     "activity_type": "Ride",
-    "distance": 820.0,
+    "distance": 2333.7,
+    "average_grade": 0.0,
+    "maximum_grade": 0.7,
+    "elevation_high": 5.0,
+    "elevation_low": 4.0,
+    "start_latlng": [
+      47.638665,
+      -122.24376
+    ],
+    "end_latlng": [
+      47.643316,
+      -122.273961
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Medina",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 180,
+    "athlete_pr_effort": {
+      "id": 3360058568413250776,
+      "activity_id": 14545459873,
+      "elapsed_time": 180,
+      "distance": 2333.7,
+      "start_date": "2025-05-20T23:28:05Z",
+      "start_date_local": "2025-05-20T16:28:05Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-05-20T21:31:04Z"
+  },
+  {
+    "id": 16955378,
+    "resource_state": 2,
+    "name": "Pedal till ya puke",
+    "activity_type": "Ride",
+    "distance": 7846.8,
     "average_grade": 0.1,
-    "maximum_grade": 0.8,
-    "elevation_high": 19.0,
+    "maximum_grade": 46.5,
+    "elevation_high": 57.1,
+    "elevation_low": 3.9,
+    "start_latlng": [
+      47.645194,
+      -122.300915
+    ],
+    "end_latlng": [
+      47.643112,
+      -122.203337
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Seattle",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 791,
+    "athlete_pr_effort": {
+      "id": 3380924590512753292,
+      "activity_id": 15144496559,
+      "elapsed_time": 791,
+      "distance": 7846.8,
+      "start_date": "2025-07-17T12:59:00Z",
+      "start_date_local": "2025-07-17T05:59:00Z",
+      "is_kom": false
+    },
+    "starred_date": "2024-09-10T22:33:48Z"
+  },
+  {
+    "id": 16955389,
+    "resource_state": 2,
+    "name": "See colors and puke",
+    "activity_type": "Ride",
+    "distance": 7780.9,
+    "average_grade": 0.0,
+    "maximum_grade": 29.4,
+    "elevation_high": 55.5,
+    "elevation_low": 12.4,
+    "start_latlng": [
+      47.643086,
+      -122.203533
+    ],
+    "end_latlng": [
+      47.645262,
+      -122.301394
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Kirkland",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 758,
+    "athlete_pr_effort": {
+      "id": 3395939725501383682,
+      "activity_id": 15610853077,
+      "elapsed_time": 758,
+      "distance": 7780.9,
+      "start_date": "2025-08-27T23:41:14Z",
+      "start_date_local": "2025-08-27T16:41:14Z",
+      "is_kom": false
+    },
+    "starred_date": "2024-06-21T00:51:23Z"
+  },
+  {
+    "id": 17163284,
+    "resource_state": 2,
+    "name": "520 Bridge WB climb",
+    "activity_type": "Ride",
+    "distance": 555.4,
+    "average_grade": 2.2,
+    "maximum_grade": 4.6,
+    "elevation_high": 201.4,
+    "elevation_low": 188.8,
+    "start_latlng": [
+      47.642674,
+      -122.27011
+    ],
+    "end_latlng": [
+      47.643937,
+      -122.277305
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": null,
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 50,
+    "athlete_pr_effort": {
+      "id": 3418041805016138484,
+      "activity_id": 16276644068,
+      "elapsed_time": 50,
+      "distance": 555.4,
+      "start_date": "2025-10-27T23:34:03Z",
+      "start_date_local": "2025-10-27T16:34:03Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-05-20T21:31:11Z"
+  },
+  {
+    "id": 20278467,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity_type": "Ride",
+    "distance": 11442.6,
+    "average_grade": 0.0,
+    "maximum_grade": 13.4,
+    "elevation_high": 6.8,
+    "elevation_low": -36.6,
+    "start_latlng": [
+      47.647002,
+      -122.335997
+    ],
+    "end_latlng": [
+      47.643332,
+      -122.205875
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Seattle",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 1221,
+    "athlete_pr_effort": {
+      "id": 3380924590511599244,
+      "activity_id": 15144496559,
+      "elapsed_time": 1221,
+      "distance": 11442.6,
+      "start_date": "2025-07-17T12:51:34Z",
+      "start_date_local": "2025-07-17T05:51:34Z",
+      "is_kom": false
+    },
+    "starred_date": "2024-08-01T15:10:32Z"
+  },
+  {
+    "id": 29351229,
+    "resource_state": 2,
+    "name": "John Reynders Lap",
+    "activity_type": "Ride",
+    "distance": 387.9,
+    "average_grade": 0.2,
+    "maximum_grade": 4.9,
+    "elevation_high": 35.6,
+    "elevation_low": 31.6,
+    "start_latlng": [
+      47.620897,
+      -122.345564
+    ],
+    "end_latlng": [
+      47.620907,
+      -122.345607
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Seattle",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "starred_date": "2024-09-16T20:57:50Z"
+  },
+  {
+    "id": 29523175,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity_type": "Ride",
+    "distance": 1198.8,
+    "average_grade": -8.3,
+    "maximum_grade": -3.1,
+    "elevation_high": 147.4,
+    "elevation_low": 48.4,
+    "start_latlng": [
+      47.577062,
+      -122.057112
+    ],
+    "end_latlng": [
+      47.570491,
+      -122.064488
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Sammamish",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 76,
+    "athlete_pr_effort": {
+      "id": 3491476539241527534,
+      "activity_id": 18555893716,
+      "elapsed_time": 76,
+      "distance": 1198.8,
+      "start_date": "2026-05-18T14:22:14Z",
+      "start_date_local": "2026-05-18T07:22:14Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-05-20T03:29:04Z"
+  },
+  {
+    "id": 32381196,
+    "resource_state": 2,
+    "name": "Via per Vezio",
+    "activity_type": "Run",
+    "distance": 575.5,
+    "average_grade": 22.5,
+    "maximum_grade": 42.7,
+    "elevation_high": 342.9,
+    "elevation_low": 213.6,
+    "start_latlng": [
+      46.013112,
+      9.284045
+    ],
+    "end_latlng": [
+      46.011302,
+      9.28906
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 1,
+    "city": null,
+    "state": "Lombardia",
+    "country": "Italy",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 352,
+    "athlete_pr_effort": {
+      "id": 3400370950991438688,
+      "activity_id": 15747818711,
+      "elapsed_time": 352,
+      "distance": 575.5,
+      "start_date": "2025-09-09T05:30:32Z",
+      "start_date_local": "2025-09-09T07:30:32Z",
+      "is_kom": false
+    },
+    "starred_date": "2025-09-08T21:15:00Z"
+  },
+  {
+    "id": 34339503,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity_type": "Ride",
+    "distance": 11932.1,
+    "average_grade": 0.1,
+    "maximum_grade": 13.0,
+    "elevation_high": 44.0,
     "elevation_low": 18.0,
     "start_latlng": [
-      51.529,
-      -0.091
+      47.502828,
+      -122.199654
     ],
     "end_latlng": [
-      51.5332,
-      -0.086
+      47.578346,
+      -122.204782
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": "Renton",
+    "state": "Washington",
+    "country": "USA",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 1.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100010",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 1327,
+    "athlete_pr_effort": {
+      "id": 3241198781304965042,
+      "activity_id": 11748361893,
+      "elapsed_time": 1327,
+      "distance": 11932.1,
+      "start_date": "2024-06-26T23:05:53Z",
+      "start_date_local": "2024-06-26T16:05:53Z",
+      "is_kom": false
     },
-    "effort_count": 215,
-    "athlete_count": 115,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2024-06-27T01:25:40Z"
   },
   {
-    "id": 100011,
+    "id": 36930086,
     "resource_state": 2,
-    "name": "Airport Perimeter Dash",
+    "name": "I90 to Gene Coulon",
     "activity_type": "Ride",
-    "distance": 960.0,
-    "average_grade": -0.3,
-    "maximum_grade": 0.7,
-    "elevation_high": 17.0,
-    "elevation_low": 15.0,
+    "distance": 8572.1,
+    "average_grade": 0.1,
+    "maximum_grade": 6.4,
+    "elevation_high": 24.4,
+    "elevation_low": 8.3,
     "start_latlng": [
-      51.4704,
-      -0.4543
+      47.578508,
+      -122.180773
     ],
     "end_latlng": [
-      51.474,
-      -0.449
+      47.51022,
+      -122.202351
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "Hounslow",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": "Bellevue",
+    "state": "Washington",
+    "country": "USA",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 2.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100011",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 853,
+    "athlete_pr_effort": {
+      "id": 3491841620556637490,
+      "activity_id": 18569402318,
+      "elapsed_time": 853,
+      "distance": 8572.1,
+      "start_date": "2026-05-19T15:08:22Z",
+      "start_date_local": "2026-05-19T08:08:22Z",
+      "is_kom": false
     },
-    "effort_count": 222,
-    "athlete_count": 120,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2024-06-13T13:58:42Z"
   },
   {
-    "id": 100012,
+    "id": 37118104,
     "resource_state": 2,
-    "name": "Canal Tempo Straight",
+    "name": "Lightening (sic) Strikes Coulon to 90",
     "activity_type": "Ride",
-    "distance": 4100.0,
-    "average_grade": -2.2,
-    "maximum_grade": 0.2,
-    "elevation_high": 14.0,
-    "elevation_low": 12.0,
+    "distance": 9070.0,
+    "average_grade": -0.0,
+    "maximum_grade": 7.7,
+    "elevation_high": 44.8,
+    "elevation_low": 29.2,
     "start_latlng": [
-      51.536,
-      -0.104
+      47.504518,
+      -122.19948
     ],
     "end_latlng": [
-      51.553,
-      -0.078
+      47.577615,
+      -122.181192
     ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
     "climb_category": 0,
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
+    "city": "Renton",
+    "state": "Washington",
+    "country": "USA",
     "private": false,
     "hazardous": false,
     "starred": true,
-    "total_elevation_gain": 2.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100012",
-      "polyline": "",
-      "resource_state": 3
+    "pr_time": 936,
+    "athlete_pr_effort": {
+      "id": 3331807481429767076,
+      "activity_id": 13782306424,
+      "elapsed_time": 936,
+      "distance": 9070.0,
+      "start_date": "2025-03-03T23:47:59Z",
+      "start_date_local": "2025-03-03T15:47:59Z",
+      "is_kom": false
     },
-    "effort_count": 229,
-    "athlete_count": 125,
-    "kom_id": null,
-    "xoms": {}
-  },
-  {
-    "id": 100013,
-    "resource_state": 2,
-    "name": "Thames Path Tempo",
-    "activity_type": "Ride",
-    "distance": 6200.0,
-    "average_grade": 0.3,
-    "maximum_grade": 1.0,
-    "elevation_high": 16.0,
-    "elevation_low": 10.0,
-    "start_latlng": [
-      51.5005,
-      -0.1245
-    ],
-    "end_latlng": [
-      51.4855,
-      -0.073
-    ],
-    "climb_category": 0,
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
-    "private": false,
-    "hazardous": false,
-    "starred": true,
-    "total_elevation_gain": 6.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100013",
-      "polyline": "",
-      "resource_state": 3
-    },
-    "effort_count": 236,
-    "athlete_count": 130,
-    "kom_id": null,
-    "xoms": {}
-  },
-  {
-    "id": 100014,
-    "resource_state": 2,
-    "name": "Meadow Rise",
-    "activity_type": "Ride",
-    "distance": 1800.0,
-    "average_grade": 3.2,
-    "maximum_grade": 5.1,
-    "elevation_high": 122.0,
-    "elevation_low": 64.0,
-    "start_latlng": [
-      51.2865,
-      -0.3295
-    ],
-    "end_latlng": [
-      51.2948,
-      -0.3235
-    ],
-    "climb_category": 1,
-    "city": "Dorking",
-    "state": "England",
-    "country": "United Kingdom",
-    "private": false,
-    "hazardous": false,
-    "starred": true,
-    "total_elevation_gain": 58.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100014",
-      "polyline": "",
-      "resource_state": 3
-    },
-    "effort_count": 243,
-    "athlete_count": 135,
-    "kom_id": null,
-    "xoms": {}
-  },
-  {
-    "id": 100015,
-    "resource_state": 2,
-    "name": "Fern Lane Climb",
-    "activity_type": "Ride",
-    "distance": 2200.0,
-    "average_grade": 4.4,
-    "maximum_grade": 7.0,
-    "elevation_high": 168.0,
-    "elevation_low": 72.0,
-    "start_latlng": [
-      51.2812,
-      -0.3015
-    ],
-    "end_latlng": [
-      51.2918,
-      -0.2945
-    ],
-    "climb_category": 1,
-    "city": "Dorking",
-    "state": "England",
-    "country": "United Kingdom",
-    "private": false,
-    "hazardous": false,
-    "starred": true,
-    "total_elevation_gain": 96.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100015",
-      "polyline": "",
-      "resource_state": 3
-    },
-    "effort_count": 250,
-    "athlete_count": 140,
-    "kom_id": null,
-    "xoms": {}
-  },
-  {
-    "id": 100016,
-    "resource_state": 2,
-    "name": "Beacon Rise",
-    "activity_type": "Ride",
-    "distance": 2600.0,
-    "average_grade": 6.8,
-    "maximum_grade": 10.2,
-    "elevation_high": 272.0,
-    "elevation_low": 95.0,
-    "start_latlng": [
-      51.238,
-      -0.352
-    ],
-    "end_latlng": [
-      51.247,
-      -0.338
-    ],
-    "climb_category": 2,
-    "city": "Dorking",
-    "state": "England",
-    "country": "United Kingdom",
-    "private": false,
-    "hazardous": false,
-    "starred": true,
-    "total_elevation_gain": 177.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100016",
-      "polyline": "",
-      "resource_state": 3
-    },
-    "effort_count": 257,
-    "athlete_count": 145,
-    "kom_id": null,
-    "xoms": {}
-  },
-  {
-    "id": 100017,
-    "resource_state": 2,
-    "name": "Quarry Wall",
-    "activity_type": "Ride",
-    "distance": 1700.0,
-    "average_grade": 10.6,
-    "maximum_grade": 15.4,
-    "elevation_high": 264.0,
-    "elevation_low": 84.0,
-    "start_latlng": [
-      51.227,
-      -0.284
-    ],
-    "end_latlng": [
-      51.2338,
-      -0.2725
-    ],
-    "climb_category": 3,
-    "city": "Reigate",
-    "state": "England",
-    "country": "United Kingdom",
-    "private": false,
-    "hazardous": false,
-    "starred": true,
-    "total_elevation_gain": 180.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100017",
-      "polyline": "",
-      "resource_state": 3
-    },
-    "effort_count": 264,
-    "athlete_count": 150,
-    "kom_id": null,
-    "xoms": {}
-  },
-  {
-    "id": 100018,
-    "resource_state": 2,
-    "name": "Switchback Sufferfest",
-    "activity_type": "Ride",
-    "distance": 1450.0,
-    "average_grade": 11.3,
-    "maximum_grade": 17.1,
-    "elevation_high": 230.0,
-    "elevation_low": 66.0,
-    "start_latlng": [
-      51.214,
-      -0.237
-    ],
-    "end_latlng": [
-      51.2205,
-      -0.226
-    ],
-    "climb_category": 3,
-    "city": "Reigate",
-    "state": "England",
-    "country": "United Kingdom",
-    "private": false,
-    "hazardous": false,
-    "starred": true,
-    "total_elevation_gain": 164.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100018",
-      "polyline": "",
-      "resource_state": 3
-    },
-    "effort_count": 271,
-    "athlete_count": 155,
-    "kom_id": null,
-    "xoms": {}
-  },
-  {
-    "id": 100019,
-    "resource_state": 2,
-    "name": "Pine Bend Descent",
-    "activity_type": "Ride",
-    "distance": 1900.0,
-    "average_grade": -2.8,
-    "maximum_grade": 0.5,
-    "elevation_high": 156.0,
-    "elevation_low": 102.0,
-    "start_latlng": [
-      51.304,
-      -0.364
-    ],
-    "end_latlng": [
-      51.293,
-      -0.352
-    ],
-    "climb_category": 0,
-    "city": "Guildford",
-    "state": "England",
-    "country": "United Kingdom",
-    "private": false,
-    "hazardous": false,
-    "starred": true,
-    "total_elevation_gain": 4.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100019",
-      "polyline": "",
-      "resource_state": 3
-    },
-    "effort_count": 278,
-    "athlete_count": 160,
-    "kom_id": null,
-    "xoms": {}
-  },
-  {
-    "id": 100020,
-    "resource_state": 2,
-    "name": "Moorland Glide",
-    "activity_type": "Ride",
-    "distance": 2400.0,
-    "average_grade": -4.2,
-    "maximum_grade": 0.1,
-    "elevation_high": 186.0,
-    "elevation_low": 90.0,
-    "start_latlng": [
-      51.326,
-      -0.412
-    ],
-    "end_latlng": [
-      51.312,
-      -0.396
-    ],
-    "climb_category": 0,
-    "city": "Guildford",
-    "state": "England",
-    "country": "United Kingdom",
-    "private": false,
-    "hazardous": false,
-    "starred": true,
-    "total_elevation_gain": 6.0,
-    "created_at": "2014-01-01T08:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z",
-    "map": {
-      "id": "s100020",
-      "polyline": "",
-      "resource_state": 3
-    },
-    "effort_count": 285,
-    "athlete_count": 165,
-    "kom_id": null,
-    "xoms": {}
+    "starred_date": "2026-05-20T21:30:28Z"
   }
 ]

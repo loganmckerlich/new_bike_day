@@ -1,0 +1,1689 @@
+[
+  {
+    "id": 3491476539241527534,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18555893716,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 76,
+    "moving_time": 76,
+    "start_date": "2026-05-18T14:22:14Z",
+    "start_date_local": "2026-05-18T07:22:14Z",
+    "distance": 1198.8,
+    "start_index": 276,
+    "end_index": 352,
+    "average_cadence": 21.5,
+    "device_watts": true,
+    "average_watts": 30.2,
+    "average_heartrate": 138.3,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492201193560293260,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18582983778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 76,
+    "moving_time": 76,
+    "start_date": "2026-05-20T14:22:18Z",
+    "start_date_local": "2026-05-20T07:22:18Z",
+    "distance": 1198.8,
+    "start_index": 277,
+    "end_index": 353,
+    "average_cadence": 21.5,
+    "device_watts": true,
+    "average_watts": 33.6,
+    "average_heartrate": 115.1,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481691945178363370,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18198995851,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 78,
+    "moving_time": 78,
+    "start_date": "2026-04-21T14:23:02Z",
+    "start_date_local": "2026-04-21T07:23:02Z",
+    "distance": 1198.8,
+    "start_index": 252,
+    "end_index": 330,
+    "average_cadence": 8.1,
+    "device_watts": true,
+    "average_watts": 14.0,
+    "average_heartrate": 152.2,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491841620560300338,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18569402318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 78,
+    "moving_time": 78,
+    "start_date": "2026-05-19T14:30:36Z",
+    "start_date_local": "2026-05-19T07:30:36Z",
+    "distance": 1198.8,
+    "start_index": 294,
+    "end_index": 372,
+    "average_cadence": 15.6,
+    "device_watts": true,
+    "average_watts": 18.4,
+    "average_heartrate": 125.9,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477707428063362928,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18054908859,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2026-04-10T14:10:17Z",
+    "start_date_local": "2026-04-10T07:10:17Z",
+    "distance": 1198.8,
+    "start_index": 277,
+    "end_index": 357,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 113.0,
+    "max_heartrate": 116.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480242032471571910,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18146236077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2026-04-17T14:18:14Z",
+    "start_date_local": "2026-04-17T07:18:14Z",
+    "distance": 1198.8,
+    "start_index": 283,
+    "end_index": 363,
+    "average_cadence": 3.1,
+    "device_watts": true,
+    "average_watts": 2.2,
+    "average_heartrate": 128.6,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481328901819763506,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18185180204,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2026-04-20T14:19:20Z",
+    "start_date_local": "2026-04-20T07:19:20Z",
+    "distance": 1198.8,
+    "start_index": 274,
+    "end_index": 354,
+    "average_cadence": 8.9,
+    "device_watts": true,
+    "average_watts": 13.5,
+    "average_heartrate": 118.5,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482778953325409476,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18240132582,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 81,
+    "moving_time": 81,
+    "start_date": "2026-04-24T14:16:49Z",
+    "start_date_local": "2026-04-24T07:16:49Z",
+    "distance": 1198.8,
+    "start_index": 284,
+    "end_index": 365,
+    "average_cadence": 4.4,
+    "device_watts": true,
+    "average_watts": 7.0,
+    "average_heartrate": 101.3,
+    "max_heartrate": 113.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476620162038630418,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18014415654,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 82,
+    "moving_time": 82,
+    "start_date": "2026-04-07T14:24:37Z",
+    "start_date_local": "2026-04-07T07:24:37Z",
+    "distance": 1198.8,
+    "start_index": 279,
+    "end_index": 361,
+    "average_cadence": 6.1,
+    "device_watts": true,
+    "average_watts": 2.1,
+    "average_heartrate": 72.0,
+    "max_heartrate": 72.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486401448935085336,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18373080739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-05-04T14:10:54Z",
+    "start_date_local": "2026-05-04T07:10:54Z",
+    "distance": 1198.8,
+    "start_index": 297,
+    "end_index": 380,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 98.1,
+    "max_heartrate": 110.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489304542705016576,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18478432225,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-05-12T14:21:04Z",
+    "start_date_local": "2026-05-12T07:21:04Z",
+    "distance": 1198.8,
+    "start_index": 329,
+    "end_index": 412,
+    "device_watts": false,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769751647748960,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18386825119,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 84,
+    "moving_time": 84,
+    "start_date": "2026-05-05T14:27:47Z",
+    "start_date_local": "2026-05-05T07:27:47Z",
+    "distance": 1198.8,
+    "start_index": 295,
+    "end_index": 379,
+    "device_watts": false,
+    "average_heartrate": 102.4,
+    "max_heartrate": 113.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474079913192902492,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 17926029115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2026-03-31T13:54:19Z",
+    "start_date_local": "2026-03-31T06:54:19Z",
+    "distance": 1198.8,
+    "start_index": 247,
+    "end_index": 332,
+    "average_cadence": 3.0,
+    "device_watts": true,
+    "average_watts": 1.2,
+    "average_heartrate": 114.5,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477343057733450938,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18042080515,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2026-04-09T14:14:16Z",
+    "start_date_local": "2026-04-09T07:14:16Z",
+    "distance": 1198.8,
+    "start_index": 284,
+    "end_index": 369,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 124.2,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482418679126611810,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18227023189,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2026-04-23T14:09:45Z",
+    "start_date_local": "2026-04-23T07:09:45Z",
+    "distance": 1198.8,
+    "start_index": 296,
+    "end_index": 381,
+    "average_cadence": 8.6,
+    "device_watts": true,
+    "average_watts": 8.8,
+    "average_heartrate": 139.5,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476974597733471436,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18028038338,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2026-04-08T13:50:31Z",
+    "start_date_local": "2026-04-08T06:50:31Z",
+    "distance": 1198.8,
+    "start_index": 278,
+    "end_index": 364,
+    "device_watts": false,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490027183722673906,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18505534998,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2026-05-14T14:11:54Z",
+    "start_date_local": "2026-05-14T07:11:54Z",
+    "distance": 1198.8,
+    "start_index": 334,
+    "end_index": 420,
+    "device_watts": false,
+    "average_heartrate": 110.5,
+    "max_heartrate": 114.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487129644535267300,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18400369545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 87,
+    "start_date": "2026-05-06T14:18:17Z",
+    "start_date_local": "2026-05-06T07:18:17Z",
+    "distance": 1198.8,
+    "start_index": 316,
+    "end_index": 403,
+    "device_watts": false,
+    "average_heartrate": 86.7,
+    "max_heartrate": 100.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476257563191775440,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18001520259,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 88,
+    "moving_time": 88,
+    "start_date": "2026-04-06T14:24:46Z",
+    "start_date_local": "2026-04-06T07:24:46Z",
+    "distance": 1198.8,
+    "start_index": 275,
+    "end_index": 363,
+    "average_cadence": 2.8,
+    "device_watts": true,
+    "average_watts": 0.6,
+    "average_heartrate": 110.0,
+    "max_heartrate": 117.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3479877879682170912,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18133000629,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 89,
+    "moving_time": 89,
+    "start_date": "2026-04-16T14:08:57Z",
+    "start_date_local": "2026-04-16T07:08:57Z",
+    "distance": 1198.8,
+    "start_index": 286,
+    "end_index": 375,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 98.4,
+    "max_heartrate": 113.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474805379875975192,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 17951108555,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2026-04-02T14:10:49Z",
+    "start_date_local": "2026-04-02T07:10:49Z",
+    "distance": 1198.8,
+    "start_index": 286,
+    "end_index": 376,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 105.8,
+    "max_heartrate": 113.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472258010523590574,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 17865936615,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 96,
+    "moving_time": 96,
+    "start_date": "2026-03-26T13:31:18Z",
+    "start_date_local": "2026-03-26T06:31:18Z",
+    "distance": 1198.8,
+    "start_index": 254,
+    "end_index": 350,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 122.1,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3434594408581886478,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 16723191540,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 114,
+    "moving_time": 114,
+    "start_date": "2025-12-12T14:38:27Z",
+    "start_date_local": "2025-12-12T06:38:27Z",
+    "distance": 1198.8,
+    "start_index": 281,
+    "end_index": 395,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 128.0,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020008449432309416,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 8017333792,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 126,
+    "moving_time": 126,
+    "start_date": "2022-10-25T14:07:32Z",
+    "start_date_local": "2022-10-25T07:07:32Z",
+    "distance": 1198.8,
+    "start_index": 334,
+    "end_index": 455,
+    "device_watts": false,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3306204687265317026,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 13172824031,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 157,
+    "moving_time": 157,
+    "start_date": "2024-12-23T03:30:19Z",
+    "start_date_local": "2024-12-22T19:30:19Z",
+    "distance": 1198.8,
+    "start_index": 274,
+    "end_index": 431,
+    "average_cadence": 1.0,
+    "device_watts": true,
+    "average_watts": 3.1,
+    "average_heartrate": 116.5,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 22
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

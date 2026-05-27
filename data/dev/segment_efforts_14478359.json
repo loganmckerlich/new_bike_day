@@ -1,0 +1,212 @@
+[
+  {
+    "id": 3491243340696213302,
+    "resource_state": 2,
+    "name": "#TempHousingLoop",
+    "activity": {
+      "id": 18549402472,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 104,
+    "moving_time": 104,
+    "start_date": "2026-05-17T23:48:28Z",
+    "start_date_local": "2026-05-17T16:48:28Z",
+    "distance": 1167.5,
+    "start_index": 5826,
+    "end_index": 5930,
+    "average_cadence": 83.3,
+    "device_watts": true,
+    "average_watts": 473.2,
+    "average_heartrate": 181.7,
+    "max_heartrate": 193.0,
+    "segment": {
+      "id": 14478359,
+      "resource_state": 2,
+      "name": "#TempHousingLoop",
+      "activity_type": "Ride",
+      "distance": 1167.5,
+      "average_grade": 0.0,
+      "maximum_grade": 3.5,
+      "elevation_high": 114.0,
+      "elevation_low": 109.0,
+      "start_latlng": [
+        47.592151,
+        -122.058119
+      ],
+      "end_latlng": [
+        47.592322,
+        -122.057999
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 2,
+        "type": "overall",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": 1
+  },
+  {
+    "id": 3369092823405512126,
+    "resource_state": 2,
+    "name": "#TempHousingLoop",
+    "activity": {
+      "id": 14800922145,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 107,
+    "moving_time": 107,
+    "start_date": "2025-06-14T21:34:16Z",
+    "start_date_local": "2025-06-14T14:34:16Z",
+    "distance": 1167.5,
+    "start_index": 167,
+    "end_index": 274,
+    "average_cadence": 78.5,
+    "device_watts": true,
+    "average_watts": 484.4,
+    "average_heartrate": 155.0,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 14478359,
+      "resource_state": 2,
+      "name": "#TempHousingLoop",
+      "activity_type": "Ride",
+      "distance": 1167.5,
+      "average_grade": 0.0,
+      "maximum_grade": 3.5,
+      "elevation_high": 114.0,
+      "elevation_low": 109.0,
+      "start_latlng": [
+        47.592151,
+        -122.058119
+      ],
+      "end_latlng": [
+        47.592322,
+        -122.057999
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 2,
+        "type": "overall",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": 1
+  },
+  {
+    "id": 3491154549491471628,
+    "resource_state": 2,
+    "name": "#TempHousingLoop",
+    "activity": {
+      "id": 18546894945,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 117,
+    "moving_time": 117,
+    "start_date": "2026-05-17T17:44:36Z",
+    "start_date_local": "2026-05-17T10:44:36Z",
+    "distance": 1167.5,
+    "start_index": 172,
+    "end_index": 289,
+    "average_cadence": 78.6,
+    "device_watts": true,
+    "average_watts": 368.9,
+    "average_heartrate": 63.9,
+    "max_heartrate": 69.0,
+    "segment": {
+      "id": 14478359,
+      "resource_state": 2,
+      "name": "#TempHousingLoop",
+      "activity_type": "Ride",
+      "distance": 1167.5,
+      "average_grade": 0.0,
+      "maximum_grade": 3.5,
+      "elevation_high": 114.0,
+      "elevation_low": 109.0,
+      "start_latlng": [
+        47.592151,
+        -122.058119
+      ],
+      "end_latlng": [
+        47.592322,
+        -122.057999
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

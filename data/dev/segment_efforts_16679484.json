@@ -1,0 +1,7292 @@
+[
+  {
+    "id": 3267318946438837696,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12345256035,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 455,
+    "moving_time": 455,
+    "start_date": "2024-09-07T00:52:54Z",
+    "start_date_local": "2024-09-06T17:52:54Z",
+    "distance": 4620.4,
+    "start_index": 1094,
+    "end_index": 1549,
+    "average_cadence": 82.3,
+    "device_watts": true,
+    "average_watts": 335.5,
+    "average_heartrate": 154.5,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3279621676876421340,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12625749519,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 471,
+    "moving_time": 471,
+    "start_date": "2024-10-10T23:39:15Z",
+    "start_date_local": "2024-10-10T16:39:15Z",
+    "distance": 4620.4,
+    "start_index": 1090,
+    "end_index": 1561,
+    "average_cadence": 79.1,
+    "device_watts": true,
+    "average_watts": 380.1,
+    "average_heartrate": 171.0,
+    "max_heartrate": 190.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 2738902926331655910,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 4036869360,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 477,
+    "moving_time": 477,
+    "start_date": "2020-09-09T21:09:11Z",
+    "start_date_local": "2020-09-09T14:09:11Z",
+    "distance": 4620.4,
+    "start_index": 647,
+    "end_index": 1124,
+    "device_watts": false,
+    "average_watts": 278.6,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3380924590512495244,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15144496559,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 480,
+    "moving_time": 480,
+    "start_date": "2025-07-17T12:59:12Z",
+    "start_date_local": "2025-07-17T05:59:12Z",
+    "distance": 4620.4,
+    "start_index": 979,
+    "end_index": 1459,
+    "average_cadence": 83.4,
+    "device_watts": true,
+    "average_watts": 316.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3248654102572288004,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 11910711156,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 490,
+    "moving_time": 490,
+    "start_date": "2024-07-17T12:55:39Z",
+    "start_date_local": "2024-07-17T05:55:39Z",
+    "distance": 4620.4,
+    "start_index": 350,
+    "end_index": 476,
+    "device_watts": false,
+    "average_heartrate": 151.5,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3394749679911478582,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15572932051,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 498,
+    "moving_time": 498,
+    "start_date": "2025-08-24T16:40:58Z",
+    "start_date_local": "2025-08-24T09:40:58Z",
+    "distance": 4620.4,
+    "start_index": 946,
+    "end_index": 1444,
+    "average_cadence": 89.2,
+    "device_watts": true,
+    "average_watts": 360.4,
+    "average_heartrate": 164.6,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3354247835625730432,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14380153374,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 499,
+    "moving_time": 499,
+    "start_date": "2025-05-04T18:18:50Z",
+    "start_date_local": "2025-05-04T11:18:50Z",
+    "distance": 4620.4,
+    "start_index": 974,
+    "end_index": 1473,
+    "average_cadence": 83.8,
+    "device_watts": true,
+    "average_watts": 317.0,
+    "average_heartrate": 147.7,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3279621676877922524,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12625749519,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 500,
+    "moving_time": 500,
+    "start_date": "2024-10-10T23:57:21Z",
+    "start_date_local": "2024-10-10T16:57:21Z",
+    "distance": 4620.4,
+    "start_index": 2176,
+    "end_index": 2676,
+    "average_cadence": 74.9,
+    "device_watts": true,
+    "average_watts": 333.6,
+    "average_heartrate": 169.5,
+    "max_heartrate": 188.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3245754826992715650,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 11846097227,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 503,
+    "moving_time": 503,
+    "start_date": "2024-07-09T12:54:50Z",
+    "start_date_local": "2024-07-09T05:54:50Z",
+    "distance": 4620.4,
+    "start_index": 390,
+    "end_index": 508,
+    "device_watts": false,
+    "average_heartrate": 161.5,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3389383147778018562,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 506,
+    "moving_time": 506,
+    "start_date": "2025-08-09T19:14:17Z",
+    "start_date_local": "2025-08-09T12:14:17Z",
+    "distance": 4620.4,
+    "start_index": 1005,
+    "end_index": 1511,
+    "average_cadence": 84.1,
+    "device_watts": true,
+    "average_watts": 307.6,
+    "average_heartrate": 134.0,
+    "max_heartrate": 166.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263871860509448552,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12264308936,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 521,
+    "moving_time": 521,
+    "start_date": "2024-08-28T12:58:56Z",
+    "start_date_local": "2024-08-28T05:58:56Z",
+    "distance": 4620.4,
+    "start_index": 1047,
+    "end_index": 1568,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 360.4,
+    "average_heartrate": 160.9,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387466647317455970,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15341695310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 521,
+    "moving_time": 521,
+    "start_date": "2025-08-04T14:06:52Z",
+    "start_date_local": "2025-08-04T07:06:52Z",
+    "distance": 4620.4,
+    "start_index": 1051,
+    "end_index": 1572,
+    "average_cadence": 82.4,
+    "device_watts": true,
+    "average_watts": 303.5,
+    "average_heartrate": 142.3,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3330570758453584104,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13750807863,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 525,
+    "moving_time": 525,
+    "start_date": "2025-02-28T14:01:20Z",
+    "start_date_local": "2025-02-28T06:01:20Z",
+    "distance": 4620.4,
+    "start_index": 1120,
+    "end_index": 1645,
+    "average_cadence": 79.0,
+    "device_watts": true,
+    "average_watts": 352.8,
+    "average_heartrate": 163.5,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355933429469907258,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14426136326,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 526,
+    "moving_time": 526,
+    "start_date": "2025-05-09T13:43:14Z",
+    "start_date_local": "2025-05-09T06:43:14Z",
+    "distance": 4620.4,
+    "start_index": 1195,
+    "end_index": 1721,
+    "average_cadence": 82.3,
+    "device_watts": true,
+    "average_watts": 279.4,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382749049565415824,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15198606207,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 528,
+    "moving_time": 528,
+    "start_date": "2025-07-22T13:42:33Z",
+    "start_date_local": "2025-07-22T06:42:33Z",
+    "distance": 4620.4,
+    "start_index": 983,
+    "end_index": 1511,
+    "average_cadence": 83.8,
+    "device_watts": true,
+    "average_watts": 281.1,
+    "average_heartrate": 130.8,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375493545872408346,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14984093722,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 529,
+    "moving_time": 529,
+    "start_date": "2025-07-02T13:05:43Z",
+    "start_date_local": "2025-07-02T06:05:43Z",
+    "distance": 4620.4,
+    "start_index": 1140,
+    "end_index": 1669,
+    "average_cadence": 80.5,
+    "device_watts": true,
+    "average_watts": 309.2,
+    "average_heartrate": 142.1,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3311365616854179062,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13281602620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 533,
+    "moving_time": 533,
+    "start_date": "2025-01-06T14:03:31Z",
+    "start_date_local": "2025-01-06T06:03:31Z",
+    "distance": 4620.4,
+    "start_index": 1180,
+    "end_index": 1713,
+    "device_watts": false,
+    "average_heartrate": 147.4,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3378032490822244454,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15057573197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 533,
+    "moving_time": 533,
+    "start_date": "2025-07-09T13:16:27Z",
+    "start_date_local": "2025-07-09T06:16:27Z",
+    "distance": 4620.4,
+    "start_index": 1031,
+    "end_index": 1564,
+    "average_cadence": 82.5,
+    "device_watts": true,
+    "average_watts": 304.1,
+    "average_heartrate": 134.4,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3380566041654096534,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15133664732,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 543,
+    "moving_time": 543,
+    "start_date": "2025-07-16T13:05:03Z",
+    "start_date_local": "2025-07-16T06:05:03Z",
+    "distance": 4620.4,
+    "start_index": 1082,
+    "end_index": 1625,
+    "average_cadence": 78.3,
+    "device_watts": true,
+    "average_watts": 334.2,
+    "average_heartrate": 144.4,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370787076917204398,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14850175778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 544,
+    "moving_time": 544,
+    "start_date": "2025-06-19T13:16:54Z",
+    "start_date_local": "2025-06-19T06:16:54Z",
+    "distance": 4620.4,
+    "start_index": 1163,
+    "end_index": 1707,
+    "average_cadence": 77.5,
+    "device_watts": true,
+    "average_watts": 261.6,
+    "average_heartrate": 117.7,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3362233433391524964,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14605527573,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 546,
+    "moving_time": 546,
+    "start_date": "2025-05-26T21:55:18Z",
+    "start_date_local": "2025-05-26T14:55:18Z",
+    "distance": 4620.4,
+    "start_index": 403,
+    "end_index": 949,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 233.5,
+    "average_heartrate": 121.5,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353023234070953112,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14344373109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 551,
+    "moving_time": 551,
+    "start_date": "2025-05-01T13:00:14Z",
+    "start_date_local": "2025-05-01T06:00:14Z",
+    "distance": 4620.4,
+    "start_index": 1061,
+    "end_index": 1612,
+    "average_cadence": 80.8,
+    "device_watts": true,
+    "average_watts": 315.1,
+    "average_heartrate": 158.9,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3339992549556048094,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13992998077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 552,
+    "moving_time": 552,
+    "start_date": "2025-03-26T14:06:15Z",
+    "start_date_local": "2025-03-26T07:06:15Z",
+    "distance": 4620.4,
+    "start_index": 1112,
+    "end_index": 1664,
+    "average_cadence": 81.3,
+    "device_watts": true,
+    "average_watts": 284.4,
+    "average_heartrate": 147.8,
+    "max_heartrate": 166.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3390351130445020426,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15433259052,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 555,
+    "moving_time": 555,
+    "start_date": "2025-08-12T13:09:13Z",
+    "start_date_local": "2025-08-12T06:09:13Z",
+    "distance": 4620.4,
+    "start_index": 1177,
+    "end_index": 1732,
+    "average_cadence": 82.1,
+    "device_watts": true,
+    "average_watts": 282.7,
+    "average_heartrate": 129.3,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395791261406741924,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15605124945,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 555,
+    "moving_time": 555,
+    "start_date": "2025-08-27T13:02:41Z",
+    "start_date_local": "2025-08-27T06:02:41Z",
+    "distance": 4620.4,
+    "start_index": 1004,
+    "end_index": 1559,
+    "average_cadence": 78.0,
+    "device_watts": true,
+    "average_watts": 241.1,
+    "average_heartrate": 128.8,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3383101187546014894,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15210020677,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 558,
+    "moving_time": 558,
+    "start_date": "2025-07-23T13:00:54Z",
+    "start_date_local": "2025-07-23T06:00:54Z",
+    "distance": 4620.4,
+    "start_index": 1083,
+    "end_index": 1641,
+    "average_cadence": 79.1,
+    "device_watts": true,
+    "average_watts": 241.5,
+    "average_heartrate": 123.2,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3347959183669356256,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14204047839,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 563,
+    "moving_time": 563,
+    "start_date": "2025-04-17T13:37:59Z",
+    "start_date_local": "2025-04-17T06:37:59Z",
+    "distance": 4620.4,
+    "start_index": 1197,
+    "end_index": 1760,
+    "average_cadence": 82.0,
+    "device_watts": true,
+    "average_watts": 280.7,
+    "average_heartrate": 140.8,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3301226054112265240,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13079350675,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 565,
+    "moving_time": 565,
+    "start_date": "2024-12-09T14:29:13Z",
+    "start_date_local": "2024-12-09T06:29:13Z",
+    "distance": 4620.4,
+    "start_index": 1123,
+    "end_index": 1688,
+    "average_cadence": 83.1,
+    "device_watts": true,
+    "average_watts": 374.8,
+    "average_heartrate": 175.8,
+    "max_heartrate": 184.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3367883366002473158,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14766079072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 565,
+    "moving_time": 565,
+    "start_date": "2025-06-11T13:01:48Z",
+    "start_date_local": "2025-06-11T06:01:48Z",
+    "distance": 4620.4,
+    "start_index": 1088,
+    "end_index": 1653,
+    "average_cadence": 80.8,
+    "device_watts": true,
+    "average_watts": 269.4,
+    "average_heartrate": 132.6,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304490914027976142,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13142668267,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 567,
+    "moving_time": 567,
+    "start_date": "2024-12-18T14:37:27Z",
+    "start_date_local": "2024-12-18T06:37:27Z",
+    "distance": 4620.4,
+    "start_index": 1190,
+    "end_index": 1757,
+    "average_cadence": 79.9,
+    "device_watts": true,
+    "average_watts": 254.6,
+    "average_heartrate": 142.6,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3423356857983603248,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16425853070,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 571,
+    "moving_time": 571,
+    "start_date": "2025-11-11T14:58:49Z",
+    "start_date_local": "2025-11-11T06:58:49Z",
+    "distance": 4620.4,
+    "start_index": 1091,
+    "end_index": 1662,
+    "average_cadence": 83.9,
+    "device_watts": true,
+    "average_watts": 262.9,
+    "average_heartrate": 135.5,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3253729739489736914,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12027544474,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 572,
+    "moving_time": 572,
+    "start_date": "2024-07-31T13:03:06Z",
+    "start_date_local": "2024-07-31T06:03:06Z",
+    "distance": 4620.4,
+    "start_index": 389,
+    "end_index": 525,
+    "device_watts": false,
+    "average_heartrate": 132.9,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3425895615203138880,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16495859285,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 573,
+    "moving_time": 573,
+    "start_date": "2025-11-18T15:04:58Z",
+    "start_date_local": "2025-11-18T07:04:58Z",
+    "distance": 4620.4,
+    "start_index": 1085,
+    "end_index": 1658,
+    "average_cadence": 82.8,
+    "device_watts": true,
+    "average_watts": 310.4,
+    "average_heartrate": 148.8,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395426409476347014,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15592870724,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 580,
+    "moving_time": 580,
+    "start_date": "2025-08-26T13:12:40Z",
+    "start_date_local": "2025-08-26T06:12:40Z",
+    "distance": 4620.4,
+    "start_index": 1047,
+    "end_index": 1627,
+    "average_cadence": 72.5,
+    "device_watts": true,
+    "average_watts": 221.5,
+    "average_heartrate": 120.0,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3456329380943952990,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 17351823334,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 583,
+    "moving_time": 583,
+    "start_date": "2026-02-10T14:39:40Z",
+    "start_date_local": "2026-02-10T06:39:40Z",
+    "distance": 4620.4,
+    "start_index": 1057,
+    "end_index": 1640,
+    "average_cadence": 83.1,
+    "device_watts": true,
+    "average_watts": 268.9,
+    "average_heartrate": 144.3,
+    "max_heartrate": 169.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3254089881544844498,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12035838620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 584,
+    "moving_time": 584,
+    "start_date": "2024-08-01T12:54:46Z",
+    "start_date_local": "2024-08-01T05:54:46Z",
+    "distance": 4620.4,
+    "start_index": 374,
+    "end_index": 510,
+    "device_watts": false,
+    "average_heartrate": 144.0,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3273297603187362982,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12483728780,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 590,
+    "moving_time": 590,
+    "start_date": "2024-09-23T13:05:03Z",
+    "start_date_local": "2024-09-23T06:05:03Z",
+    "distance": 4620.4,
+    "start_index": 1035,
+    "end_index": 1625,
+    "average_cadence": 80.7,
+    "device_watts": true,
+    "average_watts": 325.5,
+    "average_heartrate": 152.4,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3364982804672101174,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14683175747,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 592,
+    "moving_time": 592,
+    "start_date": "2025-06-03T13:01:25Z",
+    "start_date_local": "2025-06-03T06:01:25Z",
+    "distance": 4620.4,
+    "start_index": 1112,
+    "end_index": 1704,
+    "average_cadence": 79.5,
+    "device_watts": true,
+    "average_watts": 251.1,
+    "average_heartrate": 124.2,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413191635316302452,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16138354685,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 592,
+    "moving_time": 592,
+    "start_date": "2025-10-14T13:41:15Z",
+    "start_date_local": "2025-10-14T06:41:15Z",
+    "distance": 4620.4,
+    "start_index": 1104,
+    "end_index": 1696,
+    "average_cadence": 82.3,
+    "device_watts": true,
+    "average_watts": 266.3,
+    "average_heartrate": 131.7,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3372602316031813146,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14901386435,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 594,
+    "moving_time": 594,
+    "start_date": "2025-06-24T13:33:24Z",
+    "start_date_local": "2025-06-24T06:33:24Z",
+    "distance": 4620.4,
+    "start_index": 1219,
+    "end_index": 1813,
+    "average_cadence": 73.6,
+    "device_watts": true,
+    "average_watts": 252.0,
+    "average_heartrate": 115.1,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3366080518769641800,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14714565330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 596,
+    "moving_time": 596,
+    "start_date": "2025-06-06T13:34:52Z",
+    "start_date_local": "2025-06-06T06:34:52Z",
+    "distance": 4620.4,
+    "start_index": 1003,
+    "end_index": 1599,
+    "average_cadence": 77.2,
+    "device_watts": true,
+    "average_watts": 234.3,
+    "average_heartrate": 125.4,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3443286223017531866,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16946166061,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 596,
+    "moving_time": 596,
+    "start_date": "2026-01-05T14:49:21Z",
+    "start_date_local": "2026-01-05T06:49:21Z",
+    "distance": 4620.4,
+    "start_index": 1218,
+    "end_index": 1814,
+    "average_cadence": 85.7,
+    "device_watts": true,
+    "average_watts": 292.7,
+    "average_heartrate": 147.6,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251555860398476148,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 11977840072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 597,
+    "moving_time": 597,
+    "start_date": "2024-07-25T13:00:11Z",
+    "start_date_local": "2024-07-25T06:00:11Z",
+    "distance": 4620.4,
+    "start_index": 432,
+    "end_index": 568,
+    "device_watts": false,
+    "average_heartrate": 142.7,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3386372950979816216,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15309023545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 597,
+    "moving_time": 597,
+    "start_date": "2025-08-01T13:39:26Z",
+    "start_date_local": "2025-08-01T06:39:26Z",
+    "distance": 4620.4,
+    "start_index": 1039,
+    "end_index": 1636,
+    "average_cadence": 78.8,
+    "device_watts": true,
+    "average_watts": 251.8,
+    "average_heartrate": 122.8,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3255903122097377842,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12077450668,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 598,
+    "moving_time": 598,
+    "start_date": "2024-08-06T12:54:00Z",
+    "start_date_local": "2024-08-06T05:54:00Z",
+    "distance": 4620.4,
+    "start_index": 378,
+    "end_index": 518,
+    "device_watts": false,
+    "average_heartrate": 138.3,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3408845729036138400,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16010337574,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 598,
+    "moving_time": 598,
+    "start_date": "2025-10-02T13:53:23Z",
+    "start_date_local": "2025-10-02T06:53:23Z",
+    "distance": 4620.4,
+    "start_index": 1042,
+    "end_index": 1640,
+    "average_cadence": 78.7,
+    "device_watts": true,
+    "average_watts": 263.5,
+    "average_heartrate": 134.2,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3373322724714858844,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14922441670,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 600,
+    "moving_time": 600,
+    "start_date": "2025-06-26T13:17:10Z",
+    "start_date_local": "2025-06-26T06:17:10Z",
+    "distance": 4620.4,
+    "start_index": 1097,
+    "end_index": 1697,
+    "average_cadence": 78.2,
+    "device_watts": true,
+    "average_watts": 247.3,
+    "average_heartrate": 116.3,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3407751296538758454,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15975845608,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 600,
+    "moving_time": 600,
+    "start_date": "2025-09-29T13:32:47Z",
+    "start_date_local": "2025-09-29T06:32:47Z",
+    "distance": 4620.4,
+    "start_index": 1068,
+    "end_index": 1668,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 253.3,
+    "average_heartrate": 134.0,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3349404624085835932,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14242799763,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 601,
+    "moving_time": 601,
+    "start_date": "2025-04-21T13:21:04Z",
+    "start_date_local": "2025-04-21T06:21:04Z",
+    "distance": 4620.4,
+    "start_index": 1119,
+    "end_index": 1720,
+    "average_cadence": 81.4,
+    "device_watts": true,
+    "average_watts": 280.4,
+    "average_heartrate": 147.5,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382381134064520308,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15187100097,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 602,
+    "moving_time": 602,
+    "start_date": "2025-07-21T13:15:33Z",
+    "start_date_local": "2025-07-21T06:15:33Z",
+    "distance": 4620.4,
+    "start_index": 1169,
+    "end_index": 1771,
+    "average_cadence": 78.2,
+    "device_watts": true,
+    "average_watts": 254.9,
+    "average_heartrate": 121.2,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387820074084705860,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15353199712,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 603,
+    "moving_time": 603,
+    "start_date": "2025-08-05T13:32:40Z",
+    "start_date_local": "2025-08-05T06:32:40Z",
+    "distance": 4620.4,
+    "start_index": 1048,
+    "end_index": 1651,
+    "average_cadence": 80.2,
+    "device_watts": true,
+    "average_watts": 262.4,
+    "average_heartrate": 127.0,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3393992976762473314,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15547940636,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 603,
+    "moving_time": 603,
+    "start_date": "2025-08-22T14:13:10Z",
+    "start_date_local": "2025-08-22T07:13:10Z",
+    "distance": 4620.4,
+    "start_index": 1082,
+    "end_index": 1685,
+    "average_cadence": 79.7,
+    "device_watts": true,
+    "average_watts": 263.3,
+    "average_heartrate": 141.2,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410297087602378974,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16052523229,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 605,
+    "moving_time": 605,
+    "start_date": "2025-10-06T14:03:13Z",
+    "start_date_local": "2025-10-06T07:03:13Z",
+    "distance": 4620.4,
+    "start_index": 1069,
+    "end_index": 1674,
+    "average_cadence": 80.0,
+    "device_watts": true,
+    "average_watts": 258.7,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268587742322404800,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12374934834,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 606,
+    "moving_time": 606,
+    "start_date": "2024-09-10T13:01:16Z",
+    "start_date_local": "2024-09-10T06:01:16Z",
+    "distance": 4620.4,
+    "start_index": 1209,
+    "end_index": 1815,
+    "average_cadence": 72.8,
+    "device_watts": true,
+    "average_watts": 239.9,
+    "average_heartrate": 124.2,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368618803606252034,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14787270900,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 607,
+    "moving_time": 607,
+    "start_date": "2025-06-13T13:41:42Z",
+    "start_date_local": "2025-06-13T06:41:42Z",
+    "distance": 4620.4,
+    "start_index": 1096,
+    "end_index": 1703,
+    "average_cadence": 71.9,
+    "device_watts": true,
+    "average_watts": 238.1,
+    "average_heartrate": 120.1,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3385293437862457902,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15275646077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 610,
+    "moving_time": 610,
+    "start_date": "2025-07-29T13:47:40Z",
+    "start_date_local": "2025-07-29T06:47:40Z",
+    "distance": 4620.4,
+    "start_index": 1162,
+    "end_index": 1772,
+    "average_cadence": 75.7,
+    "device_watts": true,
+    "average_watts": 236.5,
+    "average_heartrate": 119.1,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3316440483652863418,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13405588752,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 611,
+    "moving_time": 611,
+    "start_date": "2025-01-20T14:03:14Z",
+    "start_date_local": "2025-01-20T06:03:14Z",
+    "distance": 4620.4,
+    "start_index": 1082,
+    "end_index": 1693,
+    "device_watts": false,
+    "average_heartrate": 146.2,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3461392619804589940,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 17506406720,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 611,
+    "moving_time": 611,
+    "start_date": "2026-02-24T13:54:04Z",
+    "start_date_local": "2026-02-24T05:54:04Z",
+    "distance": 4620.4,
+    "start_index": 1292,
+    "end_index": 1903,
+    "average_cadence": 78.1,
+    "device_watts": true,
+    "average_watts": 242.7,
+    "average_heartrate": 131.0,
+    "max_heartrate": 166.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251194076303744102,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 11969363761,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 612,
+    "moving_time": 612,
+    "start_date": "2024-07-24T13:03:19Z",
+    "start_date_local": "2024-07-24T06:03:19Z",
+    "distance": 4620.4,
+    "start_index": 366,
+    "end_index": 511,
+    "device_watts": false,
+    "average_heartrate": 130.8,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3409203698241647838,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16020797446,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 612,
+    "moving_time": 612,
+    "start_date": "2025-10-03T13:30:32Z",
+    "start_date_local": "2025-10-03T06:30:32Z",
+    "distance": 4620.4,
+    "start_index": 1125,
+    "end_index": 1737,
+    "average_cadence": 73.7,
+    "device_watts": true,
+    "average_watts": 230.2,
+    "average_heartrate": 126.6,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410651253019855176,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16063550332,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 613,
+    "moving_time": 613,
+    "start_date": "2025-10-07T13:32:39Z",
+    "start_date_local": "2025-10-07T06:32:39Z",
+    "distance": 4620.4,
+    "start_index": 1047,
+    "end_index": 1660,
+    "average_cadence": 84.6,
+    "device_watts": true,
+    "average_watts": 260.9,
+    "average_heartrate": 135.9,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3359910726507758808,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14539771405,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 614,
+    "moving_time": 614,
+    "start_date": "2025-05-20T13:05:52Z",
+    "start_date_local": "2025-05-20T06:05:52Z",
+    "distance": 4620.4,
+    "start_index": 1107,
+    "end_index": 1721,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 268.5,
+    "average_heartrate": 127.4,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355201581757382392,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14405517047,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 616,
+    "moving_time": 616,
+    "start_date": "2025-05-07T13:07:58Z",
+    "start_date_local": "2025-05-07T06:07:58Z",
+    "distance": 4620.4,
+    "start_index": 401,
+    "end_index": 545,
+    "device_watts": false,
+    "average_heartrate": 124.9,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398696825872493826,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15695232371,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 616,
+    "moving_time": 616,
+    "start_date": "2025-09-04T13:44:55Z",
+    "start_date_local": "2025-09-04T06:44:55Z",
+    "distance": 4620.4,
+    "start_index": 1108,
+    "end_index": 1724,
+    "average_cadence": 74.2,
+    "device_watts": true,
+    "average_watts": 215.4,
+    "average_heartrate": 122.3,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3392900196594314212,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15513338209,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 618,
+    "moving_time": 618,
+    "start_date": "2025-08-19T13:47:04Z",
+    "start_date_local": "2025-08-19T06:47:04Z",
+    "distance": 4620.4,
+    "start_index": 1031,
+    "end_index": 1649,
+    "average_cadence": 81.9,
+    "device_watts": true,
+    "average_watts": 273.2,
+    "average_heartrate": 128.4,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3331660987147083486,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13777797816,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 619,
+    "moving_time": 619,
+    "start_date": "2025-03-03T14:12:25Z",
+    "start_date_local": "2025-03-03T06:12:25Z",
+    "distance": 4620.4,
+    "start_index": 1106,
+    "end_index": 1725,
+    "average_cadence": 75.8,
+    "device_watts": true,
+    "average_watts": 276.0,
+    "average_heartrate": 140.1,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3319705167041102772,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13484397149,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 626,
+    "moving_time": 626,
+    "start_date": "2025-01-29T14:17:27Z",
+    "start_date_local": "2025-01-29T06:17:27Z",
+    "distance": 4620.4,
+    "start_index": 1229,
+    "end_index": 1855,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 138.4,
+    "average_heartrate": 153.5,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3350134438087217244,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14262949627,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 626,
+    "moving_time": 626,
+    "start_date": "2025-04-23T13:37:01Z",
+    "start_date_local": "2025-04-23T06:37:01Z",
+    "distance": 4620.4,
+    "start_index": 1155,
+    "end_index": 1781,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 233.7,
+    "average_heartrate": 125.4,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353407475849150450,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14355401347,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 626,
+    "moving_time": 626,
+    "start_date": "2025-05-02T13:45:05Z",
+    "start_date_local": "2025-05-02T06:45:05Z",
+    "distance": 4620.4,
+    "start_index": 1074,
+    "end_index": 1700,
+    "average_cadence": 77.2,
+    "device_watts": true,
+    "average_watts": 230.4,
+    "average_heartrate": 129.6,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3335630321420273994,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13880376318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 627,
+    "moving_time": 627,
+    "start_date": "2025-03-14T13:01:04Z",
+    "start_date_local": "2025-03-14T06:01:04Z",
+    "distance": 4620.4,
+    "start_index": 1171,
+    "end_index": 1798,
+    "average_cadence": 75.8,
+    "device_watts": true,
+    "average_watts": 261.8,
+    "average_heartrate": 140.3,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368244400001003104,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14776856791,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 628,
+    "moving_time": 628,
+    "start_date": "2025-06-12T12:59:07Z",
+    "start_date_local": "2025-06-12T05:59:07Z",
+    "distance": 4620.4,
+    "start_index": 1164,
+    "end_index": 1792,
+    "average_cadence": 78.9,
+    "device_watts": true,
+    "average_watts": 264.2,
+    "average_heartrate": 126.9,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3396525346863489138,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15627300962,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 628,
+    "moving_time": 628,
+    "start_date": "2025-08-29T13:40:52Z",
+    "start_date_local": "2025-08-29T06:40:52Z",
+    "distance": 4620.4,
+    "start_index": 1009,
+    "end_index": 1637,
+    "average_cadence": 76.9,
+    "device_watts": true,
+    "average_watts": 235.5,
+    "average_heartrate": 121.9,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398322453120317674,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15683158116,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 628,
+    "moving_time": 628,
+    "start_date": "2025-09-03T13:01:53Z",
+    "start_date_local": "2025-09-03T06:01:53Z",
+    "distance": 4620.4,
+    "start_index": 1148,
+    "end_index": 1776,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 223.8,
+    "average_heartrate": 123.4,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413551403725527788,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16149463484,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 632,
+    "moving_time": 632,
+    "start_date": "2025-10-15T13:00:50Z",
+    "start_date_local": "2025-10-15T06:00:50Z",
+    "distance": 4620.4,
+    "start_index": 1118,
+    "end_index": 1750,
+    "device_watts": false,
+    "average_heartrate": 129.5,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3416081577262799064,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16222225416,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 633,
+    "moving_time": 633,
+    "start_date": "2025-10-22T13:04:17Z",
+    "start_date_local": "2025-10-22T06:04:17Z",
+    "distance": 4620.4,
+    "start_index": 1078,
+    "end_index": 1711,
+    "device_watts": false,
+    "average_heartrate": 129.3,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365709861279356912,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14704717185,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 634,
+    "moving_time": 634,
+    "start_date": "2025-06-05T13:08:13Z",
+    "start_date_local": "2025-06-05T06:08:13Z",
+    "distance": 4620.4,
+    "start_index": 1142,
+    "end_index": 1776,
+    "average_cadence": 70.3,
+    "device_watts": true,
+    "average_watts": 219.5,
+    "average_heartrate": 119.8,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3441113494415411422,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16885305726,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 635,
+    "moving_time": 635,
+    "start_date": "2025-12-30T14:53:09Z",
+    "start_date_local": "2025-12-30T06:53:09Z",
+    "distance": 4620.4,
+    "start_index": 1292,
+    "end_index": 1927,
+    "device_watts": false,
+    "average_heartrate": 136.5,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3348325515451714150,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14213905981,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 637,
+    "moving_time": 637,
+    "start_date": "2025-04-18T13:38:26Z",
+    "start_date_local": "2025-04-18T06:38:26Z",
+    "distance": 4620.4,
+    "start_index": 1201,
+    "end_index": 1838,
+    "average_cadence": 80.9,
+    "device_watts": true,
+    "average_watts": 243.2,
+    "average_heartrate": 128.5,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370058435504444770,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14827981626,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 637,
+    "moving_time": 637,
+    "start_date": "2025-06-17T13:03:34Z",
+    "start_date_local": "2025-06-17T06:03:34Z",
+    "distance": 4620.4,
+    "start_index": 1244,
+    "end_index": 1881,
+    "average_cadence": 76.1,
+    "device_watts": true,
+    "average_watts": 242.6,
+    "average_heartrate": 118.5,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3317169126734142906,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13423649224,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 638,
+    "moving_time": 638,
+    "start_date": "2025-01-22T14:21:05Z",
+    "start_date_local": "2025-01-22T06:21:05Z",
+    "distance": 4620.4,
+    "start_index": 1148,
+    "end_index": 1786,
+    "device_watts": false,
+    "average_heartrate": 141.0,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3459226707215997734,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 17440217222,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 639,
+    "moving_time": 639,
+    "start_date": "2026-02-18T14:02:00Z",
+    "start_date_local": "2026-02-18T06:02:00Z",
+    "distance": 4620.4,
+    "start_index": 1219,
+    "end_index": 1858,
+    "average_cadence": 82.0,
+    "device_watts": true,
+    "average_watts": 235.8,
+    "average_heartrate": 132.1,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3466566977718987670,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 17678093340,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 639,
+    "moving_time": 639,
+    "start_date": "2026-03-10T13:26:22Z",
+    "start_date_local": "2026-03-10T06:26:22Z",
+    "distance": 4620.4,
+    "start_index": 1281,
+    "end_index": 1920,
+    "average_cadence": 79.8,
+    "device_watts": true,
+    "average_watts": 257.6,
+    "average_heartrate": 131.4,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288896931257647818,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12829100188,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 642,
+    "moving_time": 642,
+    "start_date": "2024-11-05T14:01:16Z",
+    "start_date_local": "2024-11-05T06:01:16Z",
+    "distance": 4620.4,
+    "start_index": 1020,
+    "end_index": 1662,
+    "average_cadence": 82.2,
+    "device_watts": true,
+    "average_watts": 300.7,
+    "average_heartrate": 158.2,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288541164581841634,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12821315476,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 644,
+    "moving_time": 644,
+    "start_date": "2024-11-04T14:10:49Z",
+    "start_date_local": "2024-11-04T06:10:49Z",
+    "distance": 4620.4,
+    "start_index": 1203,
+    "end_index": 1847,
+    "average_cadence": 77.3,
+    "device_watts": true,
+    "average_watts": 304.3,
+    "average_heartrate": 159.9,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411394109990274704,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16086564133,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 645,
+    "moving_time": 645,
+    "start_date": "2025-10-09T14:41:16Z",
+    "start_date_local": "2025-10-09T07:41:16Z",
+    "distance": 4620.4,
+    "start_index": 1106,
+    "end_index": 1751,
+    "average_cadence": 80.7,
+    "device_watts": true,
+    "average_watts": 242.4,
+    "average_heartrate": 129.9,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365357798683551046,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14694579988,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 647,
+    "moving_time": 647,
+    "start_date": "2025-06-04T13:43:18Z",
+    "start_date_local": "2025-06-04T06:43:18Z",
+    "distance": 4620.4,
+    "start_index": 1156,
+    "end_index": 1803,
+    "average_cadence": 79.6,
+    "device_watts": true,
+    "average_watts": 227.3,
+    "average_heartrate": 117.4,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3421905671415420178,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16384934966,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 647,
+    "moving_time": 647,
+    "start_date": "2025-11-07T14:21:54Z",
+    "start_date_local": "2025-11-07T06:21:54Z",
+    "distance": 4620.4,
+    "start_index": 1218,
+    "end_index": 1865,
+    "average_cadence": 84.2,
+    "device_watts": true,
+    "average_watts": 274.9,
+    "average_heartrate": 138.1,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358104886171142170,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14488932577,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 648,
+    "moving_time": 648,
+    "start_date": "2025-05-15T13:31:09Z",
+    "start_date_local": "2025-05-15T06:31:09Z",
+    "distance": 4620.4,
+    "start_index": 1193,
+    "end_index": 1841,
+    "average_cadence": 74.4,
+    "device_watts": true,
+    "average_watts": 245.8,
+    "average_heartrate": 121.0,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3462492485752996712,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 17542554753,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 650,
+    "moving_time": 650,
+    "start_date": "2026-02-27T14:39:05Z",
+    "start_date_local": "2026-02-27T06:39:05Z",
+    "distance": 4620.4,
+    "start_index": 1222,
+    "end_index": 1872,
+    "average_cadence": 77.4,
+    "device_watts": true,
+    "average_watts": 252.3,
+    "average_heartrate": 134.2,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3371142491062284248,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14860224848,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 652,
+    "moving_time": 652,
+    "start_date": "2025-06-20T12:59:46Z",
+    "start_date_local": "2025-06-20T05:59:46Z",
+    "distance": 4620.4,
+    "start_index": 1086,
+    "end_index": 1738,
+    "average_cadence": 74.8,
+    "device_watts": true,
+    "average_watts": 214.0,
+    "average_heartrate": 108.7,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360635050002616988,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14560848197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 654,
+    "moving_time": 654,
+    "start_date": "2025-05-22T13:00:08Z",
+    "start_date_local": "2025-05-22T06:00:08Z",
+    "distance": 4620.4,
+    "start_index": 1134,
+    "end_index": 1788,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 239.0,
+    "average_heartrate": 124.1,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3417891656918078110,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16271547183,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 658,
+    "moving_time": 658,
+    "start_date": "2025-10-27T12:56:06Z",
+    "start_date_local": "2025-10-27T05:56:06Z",
+    "distance": 4620.4,
+    "start_index": 1124,
+    "end_index": 1782,
+    "average_cadence": 80.7,
+    "device_watts": true,
+    "average_watts": 253.1,
+    "average_heartrate": 124.8,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250831414652841500,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 11960512797,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 659,
+    "moving_time": 659,
+    "start_date": "2024-07-23T12:58:45Z",
+    "start_date_local": "2024-07-23T05:58:45Z",
+    "distance": 4620.4,
+    "start_index": 405,
+    "end_index": 552,
+    "device_watts": false,
+    "average_heartrate": 130.0,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3437129539904727112,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16785870213,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 660,
+    "moving_time": 660,
+    "start_date": "2025-12-19T15:00:42Z",
+    "start_date_local": "2025-12-19T07:00:42Z",
+    "distance": 4620.4,
+    "start_index": 1224,
+    "end_index": 1884,
+    "average_cadence": 86.0,
+    "device_watts": true,
+    "average_watts": 249.9,
+    "average_heartrate": 132.2,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375860359764124944,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14994827230,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 661,
+    "moving_time": 661,
+    "start_date": "2025-07-03T13:05:04Z",
+    "start_date_local": "2025-07-03T06:05:04Z",
+    "distance": 4620.4,
+    "start_index": 1126,
+    "end_index": 1787,
+    "average_cadence": 79.4,
+    "device_watts": true,
+    "average_watts": 262.5,
+    "average_heartrate": 122.2,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263157621457003414,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12246925159,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 662,
+    "moving_time": 662,
+    "start_date": "2024-08-26T13:21:14Z",
+    "start_date_local": "2024-08-26T06:21:14Z",
+    "distance": 4620.4,
+    "start_index": 1155,
+    "end_index": 1817,
+    "average_cadence": 72.2,
+    "device_watts": true,
+    "average_watts": 252.1,
+    "average_heartrate": 128.8,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3345053904549246478,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14127037659,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 664,
+    "moving_time": 664,
+    "start_date": "2025-04-09T13:05:41Z",
+    "start_date_local": "2025-04-09T06:05:41Z",
+    "distance": 4620.4,
+    "start_index": 1270,
+    "end_index": 1934,
+    "average_cadence": 76.7,
+    "device_watts": true,
+    "average_watts": 249.1,
+    "average_heartrate": 133.5,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3433500213316312528,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16694766248,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 664,
+    "moving_time": 664,
+    "start_date": "2025-12-09T14:37:31Z",
+    "start_date_local": "2025-12-09T06:37:31Z",
+    "distance": 4620.4,
+    "start_index": 1087,
+    "end_index": 1751,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 266.3,
+    "average_heartrate": 137.1,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358468015232100386,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14498888212,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 670,
+    "moving_time": 670,
+    "start_date": "2025-05-16T13:35:04Z",
+    "start_date_local": "2025-05-16T06:35:04Z",
+    "distance": 4620.4,
+    "start_index": 1047,
+    "end_index": 1717,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 269.4,
+    "average_heartrate": 135.8,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3293623367835335802,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12929816287,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 672,
+    "moving_time": 672,
+    "start_date": "2024-11-18T14:25:57Z",
+    "start_date_local": "2024-11-18T06:25:57Z",
+    "distance": 4620.4,
+    "start_index": 1237,
+    "end_index": 1909,
+    "average_cadence": 81.1,
+    "device_watts": true,
+    "average_watts": 306.7,
+    "average_heartrate": 164.9,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3333113598242103028,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13814909452,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 673,
+    "moving_time": 673,
+    "start_date": "2025-03-07T14:18:47Z",
+    "start_date_local": "2025-03-07T06:18:47Z",
+    "distance": 4620.4,
+    "start_index": 1067,
+    "end_index": 1740,
+    "average_cadence": 82.2,
+    "device_watts": true,
+    "average_watts": 275.5,
+    "average_heartrate": 140.5,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3270763557104209394,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12424459310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 676,
+    "moving_time": 676,
+    "start_date": "2024-09-16T13:00:52Z",
+    "start_date_local": "2024-09-16T06:00:52Z",
+    "distance": 4620.4,
+    "start_index": 1228,
+    "end_index": 1904,
+    "average_cadence": 65.1,
+    "device_watts": true,
+    "average_watts": 236.7,
+    "average_heartrate": 123.9,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355573064684243196,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14416337001,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 676,
+    "moving_time": 676,
+    "start_date": "2025-05-08T13:47:18Z",
+    "start_date_local": "2025-05-08T06:47:18Z",
+    "distance": 4620.4,
+    "start_index": 1182,
+    "end_index": 1858,
+    "average_cadence": 77.7,
+    "device_watts": true,
+    "average_watts": 255.1,
+    "average_heartrate": 126.4,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3332390572731542258,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13796731729,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 679,
+    "moving_time": 679,
+    "start_date": "2025-03-05T14:27:00Z",
+    "start_date_local": "2025-03-05T06:27:00Z",
+    "distance": 4620.4,
+    "start_index": 1210,
+    "end_index": 1889,
+    "average_cadence": 78.3,
+    "device_watts": true,
+    "average_watts": 263.8,
+    "average_heartrate": 138.3,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3440751703092140288,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16875262874,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 680,
+    "moving_time": 680,
+    "start_date": "2025-12-29T14:53:09Z",
+    "start_date_local": "2025-12-29T06:53:09Z",
+    "distance": 4620.4,
+    "start_index": 1184,
+    "end_index": 1864,
+    "device_watts": false,
+    "average_heartrate": 130.7,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3337813498085491324,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13936388109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 681,
+    "moving_time": 681,
+    "start_date": "2025-03-20T13:01:37Z",
+    "start_date_local": "2025-03-20T06:01:37Z",
+    "distance": 4620.4,
+    "start_index": 1245,
+    "end_index": 1926,
+    "average_cadence": 75.4,
+    "device_watts": true,
+    "average_watts": 250.0,
+    "average_heartrate": 130.7,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360283434645265266,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14551088220,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 681,
+    "moving_time": 681,
+    "start_date": "2025-05-21T13:45:23Z",
+    "start_date_local": "2025-05-21T06:45:23Z",
+    "distance": 4620.4,
+    "start_index": 1068,
+    "end_index": 1749,
+    "average_cadence": 77.6,
+    "device_watts": true,
+    "average_watts": 234.4,
+    "average_heartrate": 121.6,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3469719673901488582,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 17779597249,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 682,
+    "moving_time": 682,
+    "start_date": "2026-03-19T13:21:40Z",
+    "start_date_local": "2026-03-19T06:21:40Z",
+    "distance": 4620.4,
+    "start_index": 1240,
+    "end_index": 1922,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 223.5,
+    "average_heartrate": 121.6,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268951875501837940,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 12383740682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 684,
+    "moving_time": 684,
+    "start_date": "2024-09-11T12:59:35Z",
+    "start_date_local": "2024-09-11T05:59:35Z",
+    "distance": 4620.4,
+    "start_index": 1273,
+    "end_index": 1957,
+    "average_cadence": 69.1,
+    "device_watts": true,
+    "average_watts": 234.5,
+    "average_heartrate": 124.4,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449449916334193136,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 17140109075,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 684,
+    "moving_time": 684,
+    "start_date": "2026-01-22T14:15:25Z",
+    "start_date_local": "2026-01-22T06:15:25Z",
+    "distance": 4620.4,
+    "start_index": 1330,
+    "end_index": 2014,
+    "average_cadence": 83.6,
+    "device_watts": true,
+    "average_watts": 258.8,
+    "average_heartrate": 145.4,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3336721137263592652,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13907347059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 688,
+    "moving_time": 688,
+    "start_date": "2025-03-17T13:14:52Z",
+    "start_date_local": "2025-03-17T06:14:52Z",
+    "distance": 4620.4,
+    "start_index": 1191,
+    "end_index": 1879,
+    "average_cadence": 75.9,
+    "device_watts": true,
+    "average_watts": 252.8,
+    "average_heartrate": 132.7,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3428055469181561706,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16552917991,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 688,
+    "moving_time": 688,
+    "start_date": "2025-11-24T14:02:31Z",
+    "start_date_local": "2025-11-24T06:02:31Z",
+    "distance": 4620.4,
+    "start_index": 1179,
+    "end_index": 1867,
+    "average_cadence": 81.4,
+    "device_watts": true,
+    "average_watts": 265.8,
+    "average_heartrate": 126.5,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3334185569931441938,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13842791773,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 693,
+    "moving_time": 693,
+    "start_date": "2025-03-10T13:15:42Z",
+    "start_date_local": "2025-03-10T06:15:42Z",
+    "distance": 4620.4,
+    "start_index": 1211,
+    "end_index": 1904,
+    "average_cadence": 80.7,
+    "device_watts": true,
+    "average_watts": 278.3,
+    "average_heartrate": 140.6,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3436775522387965018,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16777711739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 693,
+    "moving_time": 693,
+    "start_date": "2025-12-18T15:11:29Z",
+    "start_date_local": "2025-12-18T07:11:29Z",
+    "distance": 4620.4,
+    "start_index": 1278,
+    "end_index": 1971,
+    "average_cadence": 83.6,
+    "device_watts": true,
+    "average_watts": 266.9,
+    "average_heartrate": 132.9,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3438346648394809174,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16815880803,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 695,
+    "moving_time": 695,
+    "start_date": "2025-12-22T15:01:17Z",
+    "start_date_local": "2025-12-22T07:01:17Z",
+    "distance": 4620.4,
+    "start_index": 1302,
+    "end_index": 1997,
+    "average_cadence": 81.5,
+    "device_watts": true,
+    "average_watts": 255.0,
+    "average_heartrate": 132.1,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3458505872853406580,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 17417002169,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 696,
+    "moving_time": 696,
+    "start_date": "2026-02-16T14:45:05Z",
+    "start_date_local": "2026-02-16T06:45:05Z",
+    "distance": 4620.4,
+    "start_index": 1325,
+    "end_index": 2021,
+    "average_cadence": 81.7,
+    "device_watts": true,
+    "average_watts": 268.1,
+    "average_heartrate": 144.5,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3426975394595054454,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16525027384,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 697,
+    "moving_time": 697,
+    "start_date": "2025-11-21T14:33:04Z",
+    "start_date_local": "2025-11-21T06:33:04Z",
+    "distance": 4620.4,
+    "start_index": 1120,
+    "end_index": 1816,
+    "average_cadence": 82.9,
+    "device_watts": true,
+    "average_watts": 244.7,
+    "average_heartrate": 134.1,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3362814285727710836,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14621109297,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 703,
+    "moving_time": 703,
+    "start_date": "2025-05-28T13:15:18Z",
+    "start_date_local": "2025-05-28T06:15:18Z",
+    "distance": 4620.4,
+    "start_index": 1230,
+    "end_index": 1933,
+    "average_cadence": 64.0,
+    "device_watts": true,
+    "average_watts": 198.5,
+    "average_heartrate": 115.9,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304857031498596588,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13149409450,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 704,
+    "moving_time": 704,
+    "start_date": "2024-12-19T14:48:37Z",
+    "start_date_local": "2024-12-19T06:48:37Z",
+    "distance": 4620.4,
+    "start_index": 1278,
+    "end_index": 1982,
+    "average_cadence": 66.2,
+    "device_watts": true,
+    "average_watts": 218.6,
+    "average_heartrate": 120.5,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3357743450769975550,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 14478403917,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 704,
+    "moving_time": 704,
+    "start_date": "2025-05-14T13:27:18Z",
+    "start_date_local": "2025-05-14T06:27:18Z",
+    "distance": 4620.4,
+    "start_index": 1210,
+    "end_index": 1914,
+    "average_cadence": 77.8,
+    "device_watts": true,
+    "average_watts": 238.8,
+    "average_heartrate": 120.6,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250473749466335814,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 11951988603,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 709,
+    "moving_time": 709,
+    "start_date": "2024-07-22T13:14:54Z",
+    "start_date_local": "2024-07-22T06:14:54Z",
+    "distance": 4620.4,
+    "start_index": 409,
+    "end_index": 554,
+    "device_watts": false,
+    "average_heartrate": 122.2,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411743111947038890,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 16096272291,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 718,
+    "moving_time": 718,
+    "start_date": "2025-10-10T13:41:11Z",
+    "start_date_local": "2025-10-10T06:41:11Z",
+    "distance": 4620.4,
+    "start_index": 1083,
+    "end_index": 1801,
+    "average_cadence": 84.5,
+    "device_watts": true,
+    "average_watts": 241.1,
+    "average_heartrate": 126.8,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449803577074711876,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 17150751411,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 726,
+    "moving_time": 683,
+    "start_date": "2026-01-23T14:00:25Z",
+    "start_date_local": "2026-01-23T06:00:25Z",
+    "distance": 4620.4,
+    "start_index": 1298,
+    "end_index": 1983,
+    "device_watts": false,
+    "average_heartrate": 139.7,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3299416480355385288,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 13045844687,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 737,
+    "moving_time": 737,
+    "start_date": "2024-12-04T14:31:39Z",
+    "start_date_local": "2024-12-04T06:31:39Z",
+    "distance": 4620.4,
+    "start_index": 1178,
+    "end_index": 1915,
+    "average_cadence": 73.1,
+    "device_watts": true,
+    "average_watts": 245.8,
+    "average_heartrate": 131.5,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 2838596387152797156,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 5454186917,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 813,
+    "moving_time": 810,
+    "start_date": "2021-06-11T22:43:43Z",
+    "start_date_local": "2021-06-11T15:43:43Z",
+    "distance": 4620.4,
+    "start_index": 1219,
+    "end_index": 2032,
+    "device_watts": false,
+    "average_watts": 132.8,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3391088266300161024,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound",
+    "activity": {
+      "id": 15457183494,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 816,
+    "moving_time": 600,
+    "start_date": "2025-08-14T13:51:07Z",
+    "start_date_local": "2025-08-14T06:51:07Z",
+    "distance": 4620.4,
+    "start_index": 1042,
+    "end_index": 1646,
+    "average_cadence": 55.1,
+    "device_watts": true,
+    "average_watts": 187.3,
+    "average_heartrate": 114.8,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16679484,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound",
+      "activity_type": "Ride",
+      "distance": 4620.4,
+      "average_grade": 0.7,
+      "maximum_grade": 17.5,
+      "elevation_high": 25.2,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.645354,
+        -122.298947
+      ],
+      "end_latlng": [
+        47.637693,
+        -122.238673
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

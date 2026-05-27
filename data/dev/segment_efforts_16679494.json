@@ -1,0 +1,7304 @@
+[
+  {
+    "id": 3279621676874447068,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12625749519,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 113,
+    "moving_time": 113,
+    "start_date": "2024-10-10T23:43:07Z",
+    "start_date_local": "2024-10-10T16:43:07Z",
+    "distance": 1481.6,
+    "start_index": 1322,
+    "end_index": 1435,
+    "average_cadence": 83.9,
+    "device_watts": true,
+    "average_watts": 538.8,
+    "average_heartrate": 185.3,
+    "max_heartrate": 190.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3267318946437566912,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12345256035,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 115,
+    "moving_time": 115,
+    "start_date": "2024-09-07T00:56:42Z",
+    "start_date_local": "2024-09-06T17:56:42Z",
+    "distance": 1481.6,
+    "start_index": 1322,
+    "end_index": 1437,
+    "average_cadence": 80.0,
+    "device_watts": true,
+    "average_watts": 422.5,
+    "average_heartrate": 161.9,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3279621676877650140,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12625749519,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 115,
+    "moving_time": 115,
+    "start_date": "2024-10-11T00:01:05Z",
+    "start_date_local": "2024-10-10T17:01:05Z",
+    "distance": 1481.6,
+    "start_index": 2400,
+    "end_index": 2515,
+    "average_cadence": 83.6,
+    "device_watts": true,
+    "average_watts": 410.3,
+    "average_heartrate": 185.2,
+    "max_heartrate": 188.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3311365616855003382,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13281602620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 123,
+    "moving_time": 123,
+    "start_date": "2025-01-06T14:07:56Z",
+    "start_date_local": "2025-01-06T06:07:56Z",
+    "distance": 1481.6,
+    "start_index": 1445,
+    "end_index": 1568,
+    "device_watts": false,
+    "average_heartrate": 158.9,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3380566041656754838,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15133664732,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 126,
+    "moving_time": 126,
+    "start_date": "2025-07-16T13:08:58Z",
+    "start_date_local": "2025-07-16T06:08:58Z",
+    "distance": 1481.6,
+    "start_index": 1317,
+    "end_index": 1443,
+    "average_cadence": 88.7,
+    "device_watts": true,
+    "average_watts": 456.9,
+    "average_heartrate": 168.6,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3248654102571740164,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 11910711156,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 131,
+    "moving_time": 131,
+    "start_date": "2024-07-17T12:59:39Z",
+    "start_date_local": "2024-07-17T05:59:39Z",
+    "distance": 1481.6,
+    "start_index": 406,
+    "end_index": 437,
+    "device_watts": false,
+    "average_heartrate": 153.7,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375493545871651610,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14984093722,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 132,
+    "moving_time": 132,
+    "start_date": "2025-07-02T13:09:57Z",
+    "start_date_local": "2025-07-02T06:09:57Z",
+    "distance": 1481.6,
+    "start_index": 1394,
+    "end_index": 1526,
+    "average_cadence": 87.9,
+    "device_watts": true,
+    "average_watts": 404.1,
+    "average_heartrate": 154.1,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353023234068332696,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14344373109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 133,
+    "moving_time": 133,
+    "start_date": "2025-05-01T13:04:21Z",
+    "start_date_local": "2025-05-01T06:04:21Z",
+    "distance": 1481.6,
+    "start_index": 1308,
+    "end_index": 1441,
+    "average_cadence": 90.8,
+    "device_watts": true,
+    "average_watts": 420.1,
+    "average_heartrate": 172.6,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3394749679908799798,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15572932051,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 133,
+    "moving_time": 133,
+    "start_date": "2025-08-24T16:45:08Z",
+    "start_date_local": "2025-08-24T09:45:08Z",
+    "distance": 1481.6,
+    "start_index": 1196,
+    "end_index": 1329,
+    "average_cadence": 92.3,
+    "device_watts": true,
+    "average_watts": 417.3,
+    "average_heartrate": 171.6,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3330570758451324136,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13750807863,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 135,
+    "moving_time": 135,
+    "start_date": "2025-02-28T14:05:27Z",
+    "start_date_local": "2025-02-28T06:05:27Z",
+    "distance": 1481.6,
+    "start_index": 1367,
+    "end_index": 1502,
+    "average_cadence": 84.1,
+    "device_watts": true,
+    "average_watts": 447.6,
+    "average_heartrate": 172.4,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3354247835624798592,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14380153374,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 137,
+    "moving_time": 137,
+    "start_date": "2025-05-04T18:22:52Z",
+    "start_date_local": "2025-05-04T11:22:52Z",
+    "distance": 1481.6,
+    "start_index": 1216,
+    "end_index": 1353,
+    "average_cadence": 88.3,
+    "device_watts": true,
+    "average_watts": 370.2,
+    "average_heartrate": 156.8,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263871860509351272,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12264308936,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 139,
+    "moving_time": 139,
+    "start_date": "2024-08-28T13:03:01Z",
+    "start_date_local": "2024-08-28T06:03:01Z",
+    "distance": 1481.6,
+    "start_index": 1292,
+    "end_index": 1431,
+    "average_cadence": 82.1,
+    "device_watts": true,
+    "average_watts": 421.7,
+    "average_heartrate": 168.4,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355933429469227322,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14426136326,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 141,
+    "moving_time": 141,
+    "start_date": "2025-05-09T13:47:06Z",
+    "start_date_local": "2025-05-09T06:47:06Z",
+    "distance": 1481.6,
+    "start_index": 1427,
+    "end_index": 1568,
+    "average_cadence": 87.7,
+    "device_watts": true,
+    "average_watts": 284.1,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3245754826994171778,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 11846097227,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 142,
+    "moving_time": 142,
+    "start_date": "2024-07-09T12:58:44Z",
+    "start_date_local": "2024-07-09T05:58:44Z",
+    "distance": 1481.6,
+    "start_index": 443,
+    "end_index": 470,
+    "device_watts": false,
+    "average_heartrate": 161.0,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3380924590510951052,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15144496559,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 144,
+    "moving_time": 144,
+    "start_date": "2025-07-17T13:02:54Z",
+    "start_date_local": "2025-07-17T06:02:54Z",
+    "distance": 1481.6,
+    "start_index": 1201,
+    "end_index": 1345,
+    "average_cadence": 81.9,
+    "device_watts": true,
+    "average_watts": 290.9,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387466647318497378,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15341695310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 145,
+    "moving_time": 145,
+    "start_date": "2025-08-04T14:10:50Z",
+    "start_date_local": "2025-08-04T07:10:50Z",
+    "distance": 1481.6,
+    "start_index": 1289,
+    "end_index": 1434,
+    "average_cadence": 74.0,
+    "device_watts": true,
+    "average_watts": 257.6,
+    "average_heartrate": 133.2,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304490914026231246,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13142668267,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 147,
+    "moving_time": 147,
+    "start_date": "2024-12-18T14:41:57Z",
+    "start_date_local": "2024-12-18T06:41:57Z",
+    "distance": 1481.6,
+    "start_index": 1460,
+    "end_index": 1607,
+    "average_cadence": 78.1,
+    "device_watts": true,
+    "average_watts": 255.9,
+    "average_heartrate": 142.7,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 2738902926334964454,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 4036869360,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 148,
+    "moving_time": 148,
+    "start_date": "2020-09-09T21:13:03Z",
+    "start_date_local": "2020-09-09T14:13:03Z",
+    "distance": 1481.6,
+    "start_index": 879,
+    "end_index": 1027,
+    "device_watts": false,
+    "average_watts": 229.3,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3362233433388899428,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14605527573,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 149,
+    "moving_time": 149,
+    "start_date": "2025-05-26T21:59:42Z",
+    "start_date_local": "2025-05-26T14:59:42Z",
+    "distance": 1481.6,
+    "start_index": 667,
+    "end_index": 816,
+    "average_cadence": 77.1,
+    "device_watts": true,
+    "average_watts": 228.4,
+    "average_heartrate": 117.2,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370787076917122478,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14850175778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 150,
+    "moving_time": 150,
+    "start_date": "2025-06-19T13:21:28Z",
+    "start_date_local": "2025-06-19T06:21:28Z",
+    "distance": 1481.6,
+    "start_index": 1437,
+    "end_index": 1587,
+    "average_cadence": 81.0,
+    "device_watts": true,
+    "average_watts": 267.8,
+    "average_heartrate": 119.4,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382749049566121360,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15198606207,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 150,
+    "moving_time": 150,
+    "start_date": "2025-07-22T13:46:55Z",
+    "start_date_local": "2025-07-22T06:46:55Z",
+    "distance": 1481.6,
+    "start_index": 1245,
+    "end_index": 1395,
+    "average_cadence": 82.2,
+    "device_watts": true,
+    "average_watts": 249.6,
+    "average_heartrate": 123.3,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3254089881544793298,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12035838620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 151,
+    "moving_time": 151,
+    "start_date": "2024-08-01T12:59:35Z",
+    "start_date_local": "2024-08-01T05:59:35Z",
+    "distance": 1481.6,
+    "start_index": 437,
+    "end_index": 470,
+    "device_watts": false,
+    "average_heartrate": 150.4,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3383101187547927726,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15210020677,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 151,
+    "moving_time": 151,
+    "start_date": "2025-07-23T13:05:17Z",
+    "start_date_local": "2025-07-23T06:05:17Z",
+    "distance": 1481.6,
+    "start_index": 1346,
+    "end_index": 1497,
+    "average_cadence": 79.4,
+    "device_watts": true,
+    "average_watts": 247.1,
+    "average_heartrate": 122.4,
+    "max_heartrate": 126.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3390351130445001994,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15433259052,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 152,
+    "moving_time": 152,
+    "start_date": "2025-08-12T13:13:41Z",
+    "start_date_local": "2025-08-12T06:13:41Z",
+    "distance": 1481.6,
+    "start_index": 1445,
+    "end_index": 1597,
+    "average_cadence": 86.4,
+    "device_watts": true,
+    "average_watts": 299.6,
+    "average_heartrate": 131.1,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3389383171096527106,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 153,
+    "moving_time": 153,
+    "start_date": "2025-08-09T19:18:23Z",
+    "start_date_local": "2025-08-09T12:18:23Z",
+    "distance": 1481.6,
+    "start_index": 1251,
+    "end_index": 1404,
+    "average_cadence": 81.5,
+    "device_watts": true,
+    "average_watts": 304.9,
+    "average_heartrate": 132.0,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395791261406645668,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15605124945,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 153,
+    "moving_time": 153,
+    "start_date": "2025-08-27T13:06:56Z",
+    "start_date_local": "2025-08-27T06:06:56Z",
+    "distance": 1481.6,
+    "start_index": 1259,
+    "end_index": 1412,
+    "average_cadence": 76.7,
+    "device_watts": true,
+    "average_watts": 237.0,
+    "average_heartrate": 124.1,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3339992549555260638,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13992998077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 154,
+    "moving_time": 154,
+    "start_date": "2025-03-26T14:10:35Z",
+    "start_date_local": "2025-03-26T07:10:35Z",
+    "distance": 1481.6,
+    "start_index": 1372,
+    "end_index": 1526,
+    "average_cadence": 79.0,
+    "device_watts": true,
+    "average_watts": 274.3,
+    "average_heartrate": 144.3,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3367883366003668166,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14766079072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 155,
+    "moving_time": 155,
+    "start_date": "2025-06-11T13:06:04Z",
+    "start_date_local": "2025-06-11T06:06:04Z",
+    "distance": 1481.6,
+    "start_index": 1344,
+    "end_index": 1499,
+    "average_cadence": 86.7,
+    "device_watts": true,
+    "average_watts": 265.6,
+    "average_heartrate": 130.1,
+    "max_heartrate": 134.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3347959183669910240,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14204047839,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 158,
+    "moving_time": 158,
+    "start_date": "2025-04-17T13:42:18Z",
+    "start_date_local": "2025-04-17T06:42:18Z",
+    "distance": 1481.6,
+    "start_index": 1456,
+    "end_index": 1614,
+    "average_cadence": 80.5,
+    "device_watts": true,
+    "average_watts": 271.9,
+    "average_heartrate": 137.9,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3364982804672848694,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14683175747,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 158,
+    "moving_time": 158,
+    "start_date": "2025-06-03T13:06:10Z",
+    "start_date_local": "2025-06-03T06:06:10Z",
+    "distance": 1481.6,
+    "start_index": 1397,
+    "end_index": 1555,
+    "average_cadence": 79.6,
+    "device_watts": true,
+    "average_watts": 247.3,
+    "average_heartrate": 122.2,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395426409475275910,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15592870724,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 159,
+    "moving_time": 159,
+    "start_date": "2025-08-26T13:17:18Z",
+    "start_date_local": "2025-08-26T06:17:18Z",
+    "distance": 1481.6,
+    "start_index": 1325,
+    "end_index": 1484,
+    "average_cadence": 71.0,
+    "device_watts": true,
+    "average_watts": 216.3,
+    "average_heartrate": 116.0,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3378032490822588518,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15057573197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 160,
+    "moving_time": 160,
+    "start_date": "2025-07-09T13:20:29Z",
+    "start_date_local": "2025-07-09T06:20:29Z",
+    "distance": 1481.6,
+    "start_index": 1273,
+    "end_index": 1433,
+    "average_cadence": 82.3,
+    "device_watts": true,
+    "average_watts": 287.2,
+    "average_heartrate": 134.3,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3255903122097535538,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12077450668,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 161,
+    "moving_time": 161,
+    "start_date": "2024-08-06T12:58:42Z",
+    "start_date_local": "2024-08-06T05:58:42Z",
+    "distance": 1481.6,
+    "start_index": 440,
+    "end_index": 475,
+    "device_watts": false,
+    "average_heartrate": 141.4,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3301226054113972248,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13079350675,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 161,
+    "moving_time": 161,
+    "start_date": "2024-12-09T14:33:25Z",
+    "start_date_local": "2024-12-09T06:33:25Z",
+    "distance": 1481.6,
+    "start_index": 1375,
+    "end_index": 1536,
+    "average_cadence": 75.0,
+    "device_watts": true,
+    "average_watts": 395.1,
+    "average_heartrate": 174.5,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3253729746548549842,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12027544474,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 163,
+    "moving_time": 163,
+    "start_date": "2024-07-31T13:07:47Z",
+    "start_date_local": "2024-07-31T06:07:47Z",
+    "distance": 1481.6,
+    "start_index": 449,
+    "end_index": 482,
+    "device_watts": false,
+    "average_heartrate": 128.9,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3391088266302188544,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15457183494,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 163,
+    "moving_time": 163,
+    "start_date": "2025-08-14T13:59:40Z",
+    "start_date_local": "2025-08-14T06:59:40Z",
+    "distance": 1481.6,
+    "start_index": 1343,
+    "end_index": 1506,
+    "average_cadence": 83.9,
+    "device_watts": true,
+    "average_watts": 278.0,
+    "average_heartrate": 119.6,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368618803603825154,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14787270900,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 164,
+    "moving_time": 164,
+    "start_date": "2025-06-13T13:46:31Z",
+    "start_date_local": "2025-06-13T06:46:31Z",
+    "distance": 1481.6,
+    "start_index": 1385,
+    "end_index": 1549,
+    "average_cadence": 69.9,
+    "device_watts": true,
+    "average_watts": 232.7,
+    "average_heartrate": 116.3,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3373322724716536156,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14922441670,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 164,
+    "moving_time": 164,
+    "start_date": "2025-06-26T13:21:53Z",
+    "start_date_local": "2025-06-26T06:21:53Z",
+    "distance": 1481.6,
+    "start_index": 1380,
+    "end_index": 1544,
+    "average_cadence": 77.9,
+    "device_watts": true,
+    "average_watts": 248.6,
+    "average_heartrate": 115.1,
+    "max_heartrate": 121.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3408845729036540832,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16010337574,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 164,
+    "moving_time": 164,
+    "start_date": "2025-10-02T13:58:07Z",
+    "start_date_local": "2025-10-02T06:58:07Z",
+    "distance": 1481.6,
+    "start_index": 1326,
+    "end_index": 1490,
+    "average_cadence": 79.0,
+    "device_watts": true,
+    "average_watts": 254.9,
+    "average_heartrate": 130.6,
+    "max_heartrate": 134.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3425895615206170944,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16495859285,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 165,
+    "moving_time": 165,
+    "start_date": "2025-11-18T15:09:12Z",
+    "start_date_local": "2025-11-18T07:09:12Z",
+    "distance": 1481.6,
+    "start_index": 1339,
+    "end_index": 1504,
+    "average_cadence": 82.6,
+    "device_watts": true,
+    "average_watts": 296.1,
+    "average_heartrate": 145.2,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268587742326318528,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12374934834,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 166,
+    "moving_time": 166,
+    "start_date": "2024-09-10T13:06:09Z",
+    "start_date_local": "2024-09-10T06:06:09Z",
+    "distance": 1481.6,
+    "start_index": 1502,
+    "end_index": 1668,
+    "average_cadence": 74.9,
+    "device_watts": true,
+    "average_watts": 241.3,
+    "average_heartrate": 122.8,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3319705167048751028,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13484397149,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 166,
+    "moving_time": 166,
+    "start_date": "2025-01-29T14:22:29Z",
+    "start_date_local": "2025-01-29T06:22:29Z",
+    "distance": 1481.6,
+    "start_index": 1531,
+    "end_index": 1697,
+    "average_cadence": 79.0,
+    "device_watts": true,
+    "average_watts": 153.3,
+    "average_heartrate": 154.5,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3350134438084549724,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14262949627,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 166,
+    "moving_time": 166,
+    "start_date": "2025-04-23T13:42:01Z",
+    "start_date_local": "2025-04-23T06:42:01Z",
+    "distance": 1481.6,
+    "start_index": 1455,
+    "end_index": 1621,
+    "average_cadence": 74.1,
+    "device_watts": true,
+    "average_watts": 233.9,
+    "average_heartrate": 123.0,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3366080518767859016,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14714565330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 166,
+    "moving_time": 166,
+    "start_date": "2025-06-06T13:39:24Z",
+    "start_date_local": "2025-06-06T06:39:24Z",
+    "distance": 1481.6,
+    "start_index": 1275,
+    "end_index": 1441,
+    "average_cadence": 82.3,
+    "device_watts": true,
+    "average_watts": 237.2,
+    "average_heartrate": 124.2,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3423356857989427760,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16425853070,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 166,
+    "moving_time": 166,
+    "start_date": "2025-11-11T15:03:15Z",
+    "start_date_local": "2025-11-11T07:03:15Z",
+    "distance": 1481.6,
+    "start_index": 1357,
+    "end_index": 1523,
+    "average_cadence": 83.3,
+    "device_watts": true,
+    "average_watts": 253.3,
+    "average_heartrate": 129.9,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251194076303063142,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 11969363761,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 167,
+    "moving_time": 167,
+    "start_date": "2024-07-24T13:08:05Z",
+    "start_date_local": "2024-07-24T06:08:05Z",
+    "distance": 1481.6,
+    "start_index": 431,
+    "end_index": 468,
+    "device_watts": false,
+    "average_heartrate": 128.8,
+    "max_heartrate": 134.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3372602316027915802,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14901386435,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 167,
+    "moving_time": 167,
+    "start_date": "2025-06-24T13:38:11Z",
+    "start_date_local": "2025-06-24T06:38:11Z",
+    "distance": 1481.6,
+    "start_index": 1506,
+    "end_index": 1673,
+    "average_cadence": 72.3,
+    "device_watts": true,
+    "average_watts": 248.5,
+    "average_heartrate": 114.3,
+    "max_heartrate": 122.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355201581756786424,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14405517047,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 168,
+    "moving_time": 168,
+    "start_date": "2025-05-07T13:12:51Z",
+    "start_date_local": "2025-05-07T06:12:51Z",
+    "distance": 1481.6,
+    "start_index": 462,
+    "end_index": 499,
+    "device_watts": false,
+    "average_heartrate": 122.9,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3386372950977635096,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15309023545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 168,
+    "moving_time": 168,
+    "start_date": "2025-08-01T13:44:17Z",
+    "start_date_local": "2025-08-01T06:44:17Z",
+    "distance": 1481.6,
+    "start_index": 1330,
+    "end_index": 1498,
+    "average_cadence": 81.9,
+    "device_watts": true,
+    "average_watts": 234.6,
+    "average_heartrate": 117.5,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3409203698239831262,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16020797446,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 169,
+    "moving_time": 169,
+    "start_date": "2025-10-03T13:35:13Z",
+    "start_date_local": "2025-10-03T06:35:13Z",
+    "distance": 1481.6,
+    "start_index": 1406,
+    "end_index": 1575,
+    "average_cadence": 77.2,
+    "device_watts": true,
+    "average_watts": 218.3,
+    "average_heartrate": 123.5,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413191635314942580,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16138354685,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 169,
+    "moving_time": 169,
+    "start_date": "2025-10-14T13:45:50Z",
+    "start_date_local": "2025-10-14T06:45:50Z",
+    "distance": 1481.6,
+    "start_index": 1379,
+    "end_index": 1548,
+    "average_cadence": 82.7,
+    "device_watts": true,
+    "average_watts": 256.0,
+    "average_heartrate": 128.8,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3273297603186052262,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12483728780,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 170,
+    "moving_time": 170,
+    "start_date": "2024-09-23T13:09:40Z",
+    "start_date_local": "2024-09-23T06:09:40Z",
+    "distance": 1481.6,
+    "start_index": 1312,
+    "end_index": 1482,
+    "average_cadence": 79.4,
+    "device_watts": true,
+    "average_watts": 332.6,
+    "average_heartrate": 151.8,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3316440483654698426,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13405588752,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 170,
+    "moving_time": 170,
+    "start_date": "2025-01-20T14:07:58Z",
+    "start_date_local": "2025-01-20T06:07:58Z",
+    "distance": 1481.6,
+    "start_index": 1366,
+    "end_index": 1536,
+    "device_watts": false,
+    "average_heartrate": 138.1,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3385293437866489390,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15275646077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 170,
+    "moving_time": 170,
+    "start_date": "2025-07-29T13:52:26Z",
+    "start_date_local": "2025-07-29T06:52:26Z",
+    "distance": 1481.6,
+    "start_index": 1448,
+    "end_index": 1618,
+    "average_cadence": 78.1,
+    "device_watts": true,
+    "average_watts": 241.4,
+    "average_heartrate": 118.7,
+    "max_heartrate": 123.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3443286223015666138,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16946166061,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 170,
+    "moving_time": 170,
+    "start_date": "2026-01-05T14:54:04Z",
+    "start_date_local": "2026-01-05T06:54:04Z",
+    "distance": 1481.6,
+    "start_index": 1501,
+    "end_index": 1671,
+    "average_cadence": 86.4,
+    "device_watts": true,
+    "average_watts": 304.5,
+    "average_heartrate": 151.6,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398696825871351042,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15695232371,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 171,
+    "moving_time": 171,
+    "start_date": "2025-09-04T13:49:45Z",
+    "start_date_local": "2025-09-04T06:49:45Z",
+    "distance": 1481.6,
+    "start_index": 1398,
+    "end_index": 1569,
+    "average_cadence": 75.6,
+    "device_watts": true,
+    "average_watts": 191.5,
+    "average_heartrate": 115.5,
+    "max_heartrate": 121.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3456329380945335390,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 17351823334,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 172,
+    "moving_time": 172,
+    "start_date": "2026-02-10T14:44:11Z",
+    "start_date_local": "2026-02-10T06:44:11Z",
+    "distance": 1481.6,
+    "start_index": 1328,
+    "end_index": 1500,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 230.2,
+    "average_heartrate": 135.7,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251555860398180212,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 11977840072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 173,
+    "moving_time": 173,
+    "start_date": "2024-07-25T13:04:55Z",
+    "start_date_local": "2024-07-25T06:04:55Z",
+    "distance": 1481.6,
+    "start_index": 495,
+    "end_index": 529,
+    "device_watts": false,
+    "average_heartrate": 143.7,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387820074085205572,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15353199712,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 174,
+    "moving_time": 174,
+    "start_date": "2025-08-05T13:37:21Z",
+    "start_date_local": "2025-08-05T06:37:21Z",
+    "distance": 1481.6,
+    "start_index": 1329,
+    "end_index": 1503,
+    "average_cadence": 81.1,
+    "device_watts": true,
+    "average_watts": 244.3,
+    "average_heartrate": 121.7,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3335630321420107082,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13880376318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 175,
+    "moving_time": 175,
+    "start_date": "2025-03-14T13:05:54Z",
+    "start_date_local": "2025-03-14T06:05:54Z",
+    "distance": 1481.6,
+    "start_index": 1461,
+    "end_index": 1636,
+    "average_cadence": 74.4,
+    "device_watts": true,
+    "average_watts": 250.5,
+    "average_heartrate": 135.8,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3393992976763708258,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15547940636,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 175,
+    "moving_time": 175,
+    "start_date": "2025-08-22T14:17:53Z",
+    "start_date_local": "2025-08-22T07:17:53Z",
+    "distance": 1481.6,
+    "start_index": 1365,
+    "end_index": 1540,
+    "average_cadence": 79.9,
+    "device_watts": true,
+    "average_watts": 258.5,
+    "average_heartrate": 138.4,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410297087604078814,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16052523229,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 175,
+    "moving_time": 175,
+    "start_date": "2025-10-06T14:07:57Z",
+    "start_date_local": "2025-10-06T07:07:57Z",
+    "distance": 1481.6,
+    "start_index": 1353,
+    "end_index": 1528,
+    "average_cadence": 79.3,
+    "device_watts": true,
+    "average_watts": 246.6,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3441113494412367070,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16885305726,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 176,
+    "moving_time": 176,
+    "start_date": "2025-12-30T14:58:12Z",
+    "start_date_local": "2025-12-30T06:58:12Z",
+    "distance": 1481.6,
+    "start_index": 1595,
+    "end_index": 1771,
+    "device_watts": false,
+    "average_heartrate": 134.5,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3461392619804015476,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 17506406720,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 176,
+    "moving_time": 176,
+    "start_date": "2026-02-24T13:58:52Z",
+    "start_date_local": "2026-02-24T05:58:52Z",
+    "distance": 1481.6,
+    "start_index": 1580,
+    "end_index": 1756,
+    "average_cadence": 78.7,
+    "device_watts": true,
+    "average_watts": 228.3,
+    "average_heartrate": 126.1,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3331660987146063582,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13777797816,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 177,
+    "moving_time": 177,
+    "start_date": "2025-03-03T14:17:07Z",
+    "start_date_local": "2025-03-03T06:17:07Z",
+    "distance": 1481.6,
+    "start_index": 1388,
+    "end_index": 1565,
+    "average_cadence": 74.5,
+    "device_watts": true,
+    "average_watts": 261.3,
+    "average_heartrate": 136.2,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3396525346861276274,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15627300962,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 177,
+    "moving_time": 177,
+    "start_date": "2025-08-29T13:45:47Z",
+    "start_date_local": "2025-08-29T06:45:47Z",
+    "distance": 1481.6,
+    "start_index": 1304,
+    "end_index": 1481,
+    "average_cadence": 79.5,
+    "device_watts": true,
+    "average_watts": 204.3,
+    "average_heartrate": 112.8,
+    "max_heartrate": 117.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3348325515450634854,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14213905981,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 178,
+    "moving_time": 178,
+    "start_date": "2025-04-18T13:43:28Z",
+    "start_date_local": "2025-04-18T06:43:28Z",
+    "distance": 1481.6,
+    "start_index": 1503,
+    "end_index": 1681,
+    "average_cadence": 81.0,
+    "device_watts": true,
+    "average_watts": 236.4,
+    "average_heartrate": 125.3,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410651253023146312,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16063550332,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 178,
+    "moving_time": 178,
+    "start_date": "2025-10-07T13:37:22Z",
+    "start_date_local": "2025-10-07T06:37:22Z",
+    "distance": 1481.6,
+    "start_index": 1330,
+    "end_index": 1508,
+    "average_cadence": 82.7,
+    "device_watts": true,
+    "average_watts": 254.3,
+    "average_heartrate": 130.6,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360635050003452572,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14560848197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 179,
+    "moving_time": 179,
+    "start_date": "2025-05-22T13:05:14Z",
+    "start_date_local": "2025-05-22T06:05:14Z",
+    "distance": 1481.6,
+    "start_index": 1440,
+    "end_index": 1619,
+    "average_cadence": 76.5,
+    "device_watts": true,
+    "average_watts": 235.8,
+    "average_heartrate": 123.1,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382381134063433844,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15187100097,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 179,
+    "moving_time": 179,
+    "start_date": "2025-07-21T13:20:11Z",
+    "start_date_local": "2025-07-21T06:20:11Z",
+    "distance": 1481.6,
+    "start_index": 1447,
+    "end_index": 1626,
+    "average_cadence": 77.3,
+    "device_watts": true,
+    "average_watts": 245.3,
+    "average_heartrate": 118.0,
+    "max_heartrate": 123.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3459226707214481190,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 17440217222,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 179,
+    "moving_time": 179,
+    "start_date": "2026-02-18T14:06:51Z",
+    "start_date_local": "2026-02-18T06:06:51Z",
+    "distance": 1481.6,
+    "start_index": 1510,
+    "end_index": 1689,
+    "average_cadence": 82.6,
+    "device_watts": true,
+    "average_watts": 214.1,
+    "average_heartrate": 125.4,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288896931253759690,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12829100188,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 180,
+    "moving_time": 180,
+    "start_date": "2024-11-05T14:06:00Z",
+    "start_date_local": "2024-11-05T06:06:00Z",
+    "distance": 1481.6,
+    "start_index": 1304,
+    "end_index": 1484,
+    "average_cadence": 83.4,
+    "device_watts": true,
+    "average_watts": 316.7,
+    "average_heartrate": 158.9,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353407475849297906,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14355401347,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 180,
+    "moving_time": 180,
+    "start_date": "2025-05-02T13:49:37Z",
+    "start_date_local": "2025-05-02T06:49:37Z",
+    "distance": 1481.6,
+    "start_index": 1346,
+    "end_index": 1526,
+    "average_cadence": 76.7,
+    "device_watts": true,
+    "average_watts": 222.3,
+    "average_heartrate": 126.4,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368244400004449888,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14776856791,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 180,
+    "moving_time": 180,
+    "start_date": "2025-06-12T13:03:53Z",
+    "start_date_local": "2025-06-12T06:03:53Z",
+    "distance": 1481.6,
+    "start_index": 1450,
+    "end_index": 1630,
+    "average_cadence": 77.2,
+    "device_watts": true,
+    "average_watts": 253.5,
+    "average_heartrate": 122.7,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370058435504547170,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14827981626,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 180,
+    "moving_time": 180,
+    "start_date": "2025-06-17T13:08:37Z",
+    "start_date_local": "2025-06-17T06:08:37Z",
+    "distance": 1481.6,
+    "start_index": 1547,
+    "end_index": 1727,
+    "average_cadence": 75.6,
+    "device_watts": true,
+    "average_watts": 257.7,
+    "average_heartrate": 118.2,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3392900196593668068,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15513338209,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 180,
+    "moving_time": 180,
+    "start_date": "2025-08-19T13:51:55Z",
+    "start_date_local": "2025-08-19T06:51:55Z",
+    "distance": 1481.6,
+    "start_index": 1322,
+    "end_index": 1502,
+    "average_cadence": 83.2,
+    "device_watts": true,
+    "average_watts": 272.3,
+    "average_heartrate": 127.7,
+    "max_heartrate": 134.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398322453118392554,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15683158116,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 180,
+    "moving_time": 180,
+    "start_date": "2025-09-03T13:06:47Z",
+    "start_date_local": "2025-09-03T06:06:47Z",
+    "distance": 1481.6,
+    "start_index": 1442,
+    "end_index": 1622,
+    "average_cadence": 74.7,
+    "device_watts": true,
+    "average_watts": 211.1,
+    "average_heartrate": 118.8,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3407751296543106358,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 15975845608,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 180,
+    "moving_time": 180,
+    "start_date": "2025-09-29T13:37:19Z",
+    "start_date_local": "2025-09-29T06:37:19Z",
+    "distance": 1481.6,
+    "start_index": 1340,
+    "end_index": 1520,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 239.2,
+    "average_heartrate": 127.4,
+    "max_heartrate": 134.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3371142491061264344,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14860224848,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 181,
+    "moving_time": 181,
+    "start_date": "2025-06-20T13:04:49Z",
+    "start_date_local": "2025-06-20T06:04:49Z",
+    "distance": 1481.6,
+    "start_index": 1389,
+    "end_index": 1570,
+    "average_cadence": 75.5,
+    "device_watts": true,
+    "average_watts": 200.9,
+    "average_heartrate": 104.9,
+    "max_heartrate": 112.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3359910726508330200,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14539771405,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 182,
+    "moving_time": 182,
+    "start_date": "2025-05-20T13:10:40Z",
+    "start_date_local": "2025-05-20T06:10:40Z",
+    "distance": 1481.6,
+    "start_index": 1395,
+    "end_index": 1577,
+    "average_cadence": 81.9,
+    "device_watts": true,
+    "average_watts": 263.8,
+    "average_heartrate": 123.6,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250831414652338716,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 11960512797,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 183,
+    "moving_time": 183,
+    "start_date": "2024-07-23T13:03:57Z",
+    "start_date_local": "2024-07-23T06:03:57Z",
+    "distance": 1481.6,
+    "start_index": 471,
+    "end_index": 509,
+    "device_watts": false,
+    "average_heartrate": 129.0,
+    "max_heartrate": 133.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3349404624083960988,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14242799763,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 183,
+    "moving_time": 183,
+    "start_date": "2025-04-21T13:25:29Z",
+    "start_date_local": "2025-04-21T06:25:29Z",
+    "distance": 1481.6,
+    "start_index": 1384,
+    "end_index": 1567,
+    "average_cadence": 82.8,
+    "device_watts": true,
+    "average_watts": 262.9,
+    "average_heartrate": 143.0,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288541164583036642,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12821315476,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 184,
+    "moving_time": 184,
+    "start_date": "2024-11-04T14:15:38Z",
+    "start_date_local": "2024-11-04T06:15:38Z",
+    "distance": 1481.6,
+    "start_index": 1492,
+    "end_index": 1676,
+    "average_cadence": 73.0,
+    "device_watts": true,
+    "average_watts": 318.4,
+    "average_heartrate": 161.6,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365357798684124486,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14694579988,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 184,
+    "moving_time": 184,
+    "start_date": "2025-06-04T13:48:15Z",
+    "start_date_local": "2025-06-04T06:48:15Z",
+    "distance": 1481.6,
+    "start_index": 1453,
+    "end_index": 1637,
+    "average_cadence": 82.5,
+    "device_watts": true,
+    "average_watts": 216.8,
+    "average_heartrate": 114.4,
+    "max_heartrate": 118.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413551403727101676,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16149463484,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 184,
+    "moving_time": 184,
+    "start_date": "2025-10-15T13:05:47Z",
+    "start_date_local": "2025-10-15T06:05:47Z",
+    "distance": 1481.6,
+    "start_index": 1415,
+    "end_index": 1599,
+    "device_watts": false,
+    "average_heartrate": 125.9,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365709861281857520,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14704717185,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 185,
+    "moving_time": 185,
+    "start_date": "2025-06-05T13:13:08Z",
+    "start_date_local": "2025-06-05T06:13:08Z",
+    "distance": 1481.6,
+    "start_index": 1437,
+    "end_index": 1622,
+    "average_cadence": 64.6,
+    "device_watts": true,
+    "average_watts": 183.9,
+    "average_heartrate": 112.6,
+    "max_heartrate": 119.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3317169126732286394,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13423649224,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 186,
+    "moving_time": 186,
+    "start_date": "2025-01-22T14:25:59Z",
+    "start_date_local": "2025-01-22T06:25:59Z",
+    "distance": 1481.6,
+    "start_index": 1442,
+    "end_index": 1628,
+    "device_watts": false,
+    "average_heartrate": 133.9,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358104886170523674,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14488932577,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 186,
+    "moving_time": 186,
+    "start_date": "2025-05-15T13:36:12Z",
+    "start_date_local": "2025-05-15T06:36:12Z",
+    "distance": 1481.6,
+    "start_index": 1496,
+    "end_index": 1682,
+    "average_cadence": 74.1,
+    "device_watts": true,
+    "average_watts": 244.2,
+    "average_heartrate": 119.9,
+    "max_heartrate": 126.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3416081577263994072,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16222225416,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 188,
+    "moving_time": 188,
+    "start_date": "2025-10-22T13:09:10Z",
+    "start_date_local": "2025-10-22T06:09:10Z",
+    "distance": 1481.6,
+    "start_index": 1371,
+    "end_index": 1559,
+    "device_watts": false,
+    "average_heartrate": 124.9,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3466566977720131478,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 17678093340,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 188,
+    "moving_time": 188,
+    "start_date": "2026-03-10T13:31:09Z",
+    "start_date_local": "2026-03-10T06:31:09Z",
+    "distance": 1481.6,
+    "start_index": 1568,
+    "end_index": 1756,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 240.5,
+    "average_heartrate": 126.2,
+    "max_heartrate": 134.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411394109991372432,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16086564133,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 189,
+    "moving_time": 189,
+    "start_date": "2025-10-09T14:46:19Z",
+    "start_date_local": "2025-10-09T07:46:19Z",
+    "distance": 1481.6,
+    "start_index": 1409,
+    "end_index": 1598,
+    "average_cadence": 81.1,
+    "device_watts": true,
+    "average_watts": 221.4,
+    "average_heartrate": 124.2,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449803577073244484,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 17150751411,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 190,
+    "moving_time": 190,
+    "start_date": "2026-01-23T14:06:26Z",
+    "start_date_local": "2026-01-23T06:06:26Z",
+    "distance": 1481.6,
+    "start_index": 1618,
+    "end_index": 1808,
+    "device_watts": false,
+    "average_heartrate": 141.2,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3462492485755629416,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 17542554753,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 192,
+    "moving_time": 192,
+    "start_date": "2026-02-27T14:44:04Z",
+    "start_date_local": "2026-02-27T06:44:04Z",
+    "distance": 1481.6,
+    "start_index": 1521,
+    "end_index": 1713,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 235.4,
+    "average_heartrate": 131.5,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268951875503439476,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12383740682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 193,
+    "moving_time": 193,
+    "start_date": "2024-09-11T13:04:54Z",
+    "start_date_local": "2024-09-11T06:04:54Z",
+    "distance": 1481.6,
+    "start_index": 1592,
+    "end_index": 1785,
+    "average_cadence": 66.9,
+    "device_watts": true,
+    "average_watts": 232.9,
+    "average_heartrate": 121.1,
+    "max_heartrate": 126.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3345053904547443214,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14127037659,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 193,
+    "moving_time": 193,
+    "start_date": "2025-04-09T13:10:40Z",
+    "start_date_local": "2025-04-09T06:10:40Z",
+    "distance": 1481.6,
+    "start_index": 1569,
+    "end_index": 1762,
+    "average_cadence": 71.2,
+    "device_watts": true,
+    "average_watts": 240.9,
+    "average_heartrate": 127.9,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3270763557100610034,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12424459310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 194,
+    "moving_time": 194,
+    "start_date": "2024-09-16T13:06:04Z",
+    "start_date_local": "2024-09-16T06:06:04Z",
+    "distance": 1481.6,
+    "start_index": 1540,
+    "end_index": 1734,
+    "average_cadence": 60.2,
+    "device_watts": true,
+    "average_watts": 238.3,
+    "average_heartrate": 121.3,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3437129539904555080,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16785870213,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 194,
+    "moving_time": 194,
+    "start_date": "2025-12-19T15:05:35Z",
+    "start_date_local": "2025-12-19T07:05:35Z",
+    "distance": 1481.6,
+    "start_index": 1517,
+    "end_index": 1711,
+    "average_cadence": 88.2,
+    "device_watts": true,
+    "average_watts": 222.1,
+    "average_heartrate": 125.9,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3440751703092881664,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16875262874,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 194,
+    "moving_time": 194,
+    "start_date": "2025-12-29T14:58:35Z",
+    "start_date_local": "2025-12-29T06:58:35Z",
+    "distance": 1481.6,
+    "start_index": 1510,
+    "end_index": 1704,
+    "device_watts": false,
+    "average_heartrate": 124.3,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3417891656920155806,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16271547183,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 195,
+    "moving_time": 195,
+    "start_date": "2025-10-27T13:01:03Z",
+    "start_date_local": "2025-10-27T06:01:03Z",
+    "distance": 1481.6,
+    "start_index": 1421,
+    "end_index": 1616,
+    "average_cadence": 78.5,
+    "device_watts": true,
+    "average_watts": 246.9,
+    "average_heartrate": 120.3,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3421905671416262930,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16384934966,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 196,
+    "moving_time": 196,
+    "start_date": "2025-11-07T14:26:52Z",
+    "start_date_local": "2025-11-07T06:26:52Z",
+    "distance": 1481.6,
+    "start_index": 1516,
+    "end_index": 1712,
+    "average_cadence": 84.3,
+    "device_watts": true,
+    "average_watts": 257.0,
+    "average_heartrate": 134.7,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3336721137261545676,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13907347059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 197,
+    "moving_time": 197,
+    "start_date": "2025-03-17T13:20:15Z",
+    "start_date_local": "2025-03-17T06:20:15Z",
+    "distance": 1481.6,
+    "start_index": 1514,
+    "end_index": 1711,
+    "average_cadence": 74.0,
+    "device_watts": true,
+    "average_watts": 235.6,
+    "average_heartrate": 128.7,
+    "max_heartrate": 133.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3433500213317177808,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16694766248,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 198,
+    "moving_time": 198,
+    "start_date": "2025-12-09T14:42:28Z",
+    "start_date_local": "2025-12-09T06:42:28Z",
+    "distance": 1481.6,
+    "start_index": 1384,
+    "end_index": 1582,
+    "average_cadence": 81.1,
+    "device_watts": true,
+    "average_watts": 247.1,
+    "average_heartrate": 132.6,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3469719673903080902,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 17779597249,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 198,
+    "moving_time": 198,
+    "start_date": "2026-03-19T13:26:45Z",
+    "start_date_local": "2026-03-19T06:26:45Z",
+    "distance": 1481.6,
+    "start_index": 1545,
+    "end_index": 1743,
+    "average_cadence": 77.3,
+    "device_watts": true,
+    "average_watts": 219.7,
+    "average_heartrate": 119.1,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3337813498084723324,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13936388109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 200,
+    "moving_time": 200,
+    "start_date": "2025-03-20T13:06:49Z",
+    "start_date_local": "2025-03-20T06:06:49Z",
+    "distance": 1481.6,
+    "start_index": 1557,
+    "end_index": 1757,
+    "average_cadence": 74.1,
+    "device_watts": true,
+    "average_watts": 243.3,
+    "average_heartrate": 128.0,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360283434645883762,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14551088220,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 200,
+    "moving_time": 200,
+    "start_date": "2025-05-21T13:50:29Z",
+    "start_date_local": "2025-05-21T06:50:29Z",
+    "distance": 1481.6,
+    "start_index": 1374,
+    "end_index": 1574,
+    "average_cadence": 77.6,
+    "device_watts": true,
+    "average_watts": 222.5,
+    "average_heartrate": 117.5,
+    "max_heartrate": 121.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263157621459709846,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12246925159,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 202,
+    "moving_time": 202,
+    "start_date": "2024-08-26T13:26:04Z",
+    "start_date_local": "2024-08-26T06:26:04Z",
+    "distance": 1481.6,
+    "start_index": 1445,
+    "end_index": 1647,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 233.9,
+    "average_heartrate": 123.8,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304857031498228972,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13149409450,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 202,
+    "moving_time": 202,
+    "start_date": "2024-12-19T14:54:05Z",
+    "start_date_local": "2024-12-19T06:54:05Z",
+    "distance": 1481.6,
+    "start_index": 1606,
+    "end_index": 1808,
+    "average_cadence": 62.4,
+    "device_watts": true,
+    "average_watts": 194.9,
+    "average_heartrate": 115.4,
+    "max_heartrate": 121.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358468015230475298,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14498888212,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 202,
+    "moving_time": 202,
+    "start_date": "2025-05-16T13:39:56Z",
+    "start_date_local": "2025-05-16T06:39:56Z",
+    "distance": 1481.6,
+    "start_index": 1339,
+    "end_index": 1541,
+    "average_cadence": 80.7,
+    "device_watts": true,
+    "average_watts": 266.1,
+    "average_heartrate": 135.4,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375860359764783376,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14994827230,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 203,
+    "moving_time": 203,
+    "start_date": "2025-07-03T13:10:10Z",
+    "start_date_local": "2025-07-03T06:10:10Z",
+    "distance": 1481.6,
+    "start_index": 1432,
+    "end_index": 1635,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 238.1,
+    "average_heartrate": 117.7,
+    "max_heartrate": 123.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3293623367837012090,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 12929816287,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 204,
+    "moving_time": 204,
+    "start_date": "2024-11-18T14:30:50Z",
+    "start_date_local": "2024-11-18T06:30:50Z",
+    "distance": 1481.6,
+    "start_index": 1530,
+    "end_index": 1734,
+    "average_cadence": 79.0,
+    "device_watts": true,
+    "average_watts": 303.9,
+    "average_heartrate": 165.3,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3357743450772077822,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14478403917,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 204,
+    "moving_time": 204,
+    "start_date": "2025-05-14T13:32:39Z",
+    "start_date_local": "2025-05-14T06:32:39Z",
+    "distance": 1481.6,
+    "start_index": 1531,
+    "end_index": 1735,
+    "average_cadence": 75.0,
+    "device_watts": true,
+    "average_watts": 244.8,
+    "average_heartrate": 119.3,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3332390572734682866,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13796731729,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 205,
+    "moving_time": 205,
+    "start_date": "2025-03-05T14:32:03Z",
+    "start_date_local": "2025-03-05T06:32:03Z",
+    "distance": 1481.6,
+    "start_index": 1513,
+    "end_index": 1718,
+    "average_cadence": 79.0,
+    "device_watts": true,
+    "average_watts": 247.8,
+    "average_heartrate": 133.8,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3333113598238973684,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13814909452,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 206,
+    "moving_time": 206,
+    "start_date": "2025-03-07T14:23:37Z",
+    "start_date_local": "2025-03-07T06:23:37Z",
+    "distance": 1481.6,
+    "start_index": 1357,
+    "end_index": 1563,
+    "average_cadence": 82.5,
+    "device_watts": true,
+    "average_watts": 258.5,
+    "average_heartrate": 135.9,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449449916335965680,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 17140109075,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 207,
+    "moving_time": 207,
+    "start_date": "2026-01-22T14:20:38Z",
+    "start_date_local": "2026-01-22T06:20:38Z",
+    "distance": 1481.6,
+    "start_index": 1643,
+    "end_index": 1850,
+    "average_cadence": 81.1,
+    "device_watts": true,
+    "average_watts": 255.2,
+    "average_heartrate": 142.8,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250473749463592518,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 11951988603,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 208,
+    "moving_time": 208,
+    "start_date": "2024-07-22T13:20:22Z",
+    "start_date_local": "2024-07-22T06:20:22Z",
+    "distance": 1481.6,
+    "start_index": 471,
+    "end_index": 507,
+    "device_watts": false,
+    "average_heartrate": 117.7,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3334185569928488722,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13842791773,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 208,
+    "moving_time": 208,
+    "start_date": "2025-03-10T13:21:01Z",
+    "start_date_local": "2025-03-10T06:21:01Z",
+    "distance": 1481.6,
+    "start_index": 1530,
+    "end_index": 1738,
+    "average_cadence": 79.3,
+    "device_watts": true,
+    "average_watts": 263.9,
+    "average_heartrate": 138.5,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3426975394593668982,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16525027384,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 208,
+    "moving_time": 208,
+    "start_date": "2025-11-21T14:38:20Z",
+    "start_date_local": "2025-11-21T06:38:20Z",
+    "distance": 1481.6,
+    "start_index": 1436,
+    "end_index": 1644,
+    "average_cadence": 82.1,
+    "device_watts": true,
+    "average_watts": 230.8,
+    "average_heartrate": 130.0,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355573064683273468,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14416337001,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 209,
+    "moving_time": 209,
+    "start_date": "2025-05-08T13:52:54Z",
+    "start_date_local": "2025-05-08T06:52:54Z",
+    "distance": 1481.6,
+    "start_index": 1518,
+    "end_index": 1727,
+    "average_cadence": 74.8,
+    "device_watts": true,
+    "average_watts": 240.8,
+    "average_heartrate": 121.1,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3458505872853025652,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 17417002169,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 211,
+    "moving_time": 211,
+    "start_date": "2026-02-16T14:50:25Z",
+    "start_date_local": "2026-02-16T06:50:25Z",
+    "distance": 1481.6,
+    "start_index": 1645,
+    "end_index": 1856,
+    "average_cadence": 81.3,
+    "device_watts": true,
+    "average_watts": 248.3,
+    "average_heartrate": 141.4,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3428055469181608810,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16552917991,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 212,
+    "moving_time": 212,
+    "start_date": "2025-11-24T14:07:50Z",
+    "start_date_local": "2025-11-24T06:07:50Z",
+    "distance": 1481.6,
+    "start_index": 1498,
+    "end_index": 1710,
+    "average_cadence": 80.1,
+    "device_watts": true,
+    "average_watts": 248.0,
+    "average_heartrate": 124.9,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3362814285726730868,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 14621109297,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 215,
+    "moving_time": 215,
+    "start_date": "2025-05-28T13:20:45Z",
+    "start_date_local": "2025-05-28T06:20:45Z",
+    "distance": 1481.6,
+    "start_index": 1557,
+    "end_index": 1772,
+    "average_cadence": 57.7,
+    "device_watts": true,
+    "average_watts": 161.2,
+    "average_heartrate": 105.5,
+    "max_heartrate": 113.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3438346648392061782,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16815880803,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 215,
+    "moving_time": 215,
+    "start_date": "2025-12-22T15:06:31Z",
+    "start_date_local": "2025-12-22T07:06:31Z",
+    "distance": 1481.6,
+    "start_index": 1616,
+    "end_index": 1831,
+    "average_cadence": 84.1,
+    "device_watts": true,
+    "average_watts": 235.1,
+    "average_heartrate": 127.3,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3436775522386818138,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16777711739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 217,
+    "moving_time": 217,
+    "start_date": "2025-12-18T15:16:37Z",
+    "start_date_local": "2025-12-18T07:16:37Z",
+    "distance": 1481.6,
+    "start_index": 1586,
+    "end_index": 1803,
+    "average_cadence": 82.6,
+    "device_watts": true,
+    "average_watts": 254.7,
+    "average_heartrate": 129.8,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411743111946709162,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 16096272291,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 219,
+    "moving_time": 219,
+    "start_date": "2025-10-10T13:46:26Z",
+    "start_date_local": "2025-10-10T06:46:26Z",
+    "distance": 1481.6,
+    "start_index": 1398,
+    "end_index": 1617,
+    "average_cadence": 85.5,
+    "device_watts": true,
+    "average_watts": 230.8,
+    "average_heartrate": 125.5,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3299416480353937352,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 13045844687,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 220,
+    "moving_time": 220,
+    "start_date": "2024-12-04T14:37:06Z",
+    "start_date_local": "2024-12-04T06:37:06Z",
+    "distance": 1481.6,
+    "start_index": 1505,
+    "end_index": 1725,
+    "average_cadence": 70.6,
+    "device_watts": true,
+    "average_watts": 235.9,
+    "average_heartrate": 127.3,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 2838596387153049060,
+    "resource_state": 2,
+    "name": "520 Bridge Eastbound Flats",
+    "activity": {
+      "id": 5454186917,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 244,
+    "moving_time": 244,
+    "start_date": "2021-06-11T22:50:19Z",
+    "start_date_local": "2021-06-11T15:50:19Z",
+    "distance": 1481.6,
+    "start_index": 1615,
+    "end_index": 1859,
+    "device_watts": false,
+    "average_watts": 115.5,
+    "segment": {
+      "id": 16679494,
+      "resource_state": 2,
+      "name": "520 Bridge Eastbound Flats",
+      "activity_type": "Ride",
+      "distance": 1481.6,
+      "average_grade": -0.0,
+      "maximum_grade": 2.1,
+      "elevation_high": -6.8,
+      "elevation_low": -8.2,
+      "start_latlng": [
+        47.642455,
+        -122.268782
+      ],
+      "end_latlng": [
+        47.639479,
+        -122.249498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

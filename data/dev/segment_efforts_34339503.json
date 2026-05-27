@@ -1,0 +1,778 @@
+[
+  {
+    "id": 3241198781304965042,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 11748361893,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1327,
+    "moving_time": 1327,
+    "start_date": "2024-06-26T23:05:53Z",
+    "start_date_local": "2024-06-26T16:05:53Z",
+    "distance": 11932.1,
+    "start_index": 58,
+    "end_index": 460,
+    "device_watts": false,
+    "average_heartrate": 160.8,
+    "max_heartrate": 177.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353189010089494212,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 14349911285,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1342,
+    "moving_time": 1342,
+    "start_date": "2025-05-01T22:59:04Z",
+    "start_date_local": "2025-05-01T15:59:04Z",
+    "distance": 11932.1,
+    "start_index": 126,
+    "end_index": 1467,
+    "average_cadence": 71.2,
+    "device_watts": true,
+    "average_watts": 252.0,
+    "average_heartrate": 141.0,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3243383733988460762,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 11794792012,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1371,
+    "moving_time": 1371,
+    "start_date": "2024-07-02T23:42:56Z",
+    "start_date_local": "2024-07-02T16:42:56Z",
+    "distance": 11932.1,
+    "start_index": 51,
+    "end_index": 469,
+    "device_watts": false,
+    "average_heartrate": 151.6,
+    "max_heartrate": 169.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3245549342984606558,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 11841949695,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1387,
+    "moving_time": 1387,
+    "start_date": "2024-07-08T23:12:06Z",
+    "start_date_local": "2024-07-08T16:12:06Z",
+    "distance": 11932.1,
+    "start_index": 63,
+    "end_index": 483,
+    "device_watts": false,
+    "average_heartrate": 157.5,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3348474359141329432,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 14218004395,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1420,
+    "moving_time": 1420,
+    "start_date": "2025-04-18T22:42:13Z",
+    "start_date_local": "2025-04-18T15:42:13Z",
+    "distance": 11932.1,
+    "start_index": 140,
+    "end_index": 1560,
+    "average_cadence": 71.6,
+    "device_watts": true,
+    "average_watts": 237.5,
+    "average_heartrate": 146.9,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382922054709415380,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 15204970500,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1469,
+    "moving_time": 1442,
+    "start_date": "2025-07-22T22:53:17Z",
+    "start_date_local": "2025-07-22T15:53:17Z",
+    "distance": 11932.1,
+    "start_index": 130,
+    "end_index": 1575,
+    "average_cadence": 63.8,
+    "device_watts": true,
+    "average_watts": 221.0,
+    "average_heartrate": 124.1,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3269103019622629542,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 12388002745,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1496,
+    "moving_time": 1496,
+    "start_date": "2024-09-11T22:41:11Z",
+    "start_date_local": "2024-09-11T15:41:11Z",
+    "distance": 11932.1,
+    "start_index": 150,
+    "end_index": 1646,
+    "average_cadence": 69.2,
+    "device_watts": true,
+    "average_watts": 236.7,
+    "average_heartrate": 135.0,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3243022302671154618,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 11786432534,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1509,
+    "moving_time": 1509,
+    "start_date": "2024-07-01T23:49:57Z",
+    "start_date_local": "2024-07-01T16:49:57Z",
+    "distance": 11932.1,
+    "start_index": 54,
+    "end_index": 488,
+    "device_watts": false,
+    "average_heartrate": 136.8,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3236491411826733894,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 11647144778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1526,
+    "moving_time": 1526,
+    "start_date": "2024-06-13T23:10:33Z",
+    "start_date_local": "2024-06-13T16:10:33Z",
+    "distance": 11932.1,
+    "start_index": 212,
+    "end_index": 1725,
+    "device_watts": false,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3469858889033856502,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 17785571120,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1529,
+    "moving_time": 1529,
+    "start_date": "2026-03-19T22:38:21Z",
+    "start_date_local": "2026-03-19T15:38:21Z",
+    "distance": 11932.1,
+    "start_index": 138,
+    "end_index": 1667,
+    "average_cadence": 66.6,
+    "device_watts": true,
+    "average_watts": 192.4,
+    "average_heartrate": 129.2,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3238664777842350856,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 11693713755,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1539,
+    "moving_time": 1539,
+    "start_date": "2024-06-19T23:09:50Z",
+    "start_date_local": "2024-06-19T16:09:50Z",
+    "distance": 11932.1,
+    "start_index": 48,
+    "end_index": 478,
+    "device_watts": false,
+    "average_heartrate": 153.1,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3233958124397635760,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 11592235947,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1687,
+    "moving_time": 1684,
+    "start_date": "2024-06-06T23:20:36Z",
+    "start_date_local": "2024-06-06T16:20:36Z",
+    "distance": 11932.1,
+    "start_index": 188,
+    "end_index": 1856,
+    "device_watts": false,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3246284927033875150,
+    "resource_state": 2,
+    "name": "Renton To M.I.",
+    "activity": {
+      "id": 11858642780,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1816,
+    "moving_time": 1816,
+    "start_date": "2024-07-10T23:28:27Z",
+    "start_date_local": "2024-07-10T16:28:27Z",
+    "distance": 11932.1,
+    "start_index": 65,
+    "end_index": 546,
+    "device_watts": false,
+    "average_heartrate": 120.5,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 34339503,
+      "resource_state": 2,
+      "name": "Renton To M.I.",
+      "activity_type": "Ride",
+      "distance": 11932.1,
+      "average_grade": 0.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 44.0,
+      "elevation_low": 18.0,
+      "start_latlng": [
+        47.502828,
+        -122.199654
+      ],
+      "end_latlng": [
+        47.578346,
+        -122.204782
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

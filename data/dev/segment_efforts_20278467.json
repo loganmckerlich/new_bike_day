@@ -1,0 +1,6986 @@
+[
+  {
+    "id": 3380924590511599244,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15144496559,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1221,
+    "moving_time": 1221,
+    "start_date": "2025-07-17T12:51:34Z",
+    "start_date_local": "2025-07-17T05:51:34Z",
+    "distance": 11442.6,
+    "start_index": 521,
+    "end_index": 1742,
+    "average_cadence": 77.2,
+    "device_watts": true,
+    "average_watts": 273.9,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3248654102571472900,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 11910711156,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1309,
+    "moving_time": 1307,
+    "start_date": "2024-07-17T12:47:23Z",
+    "start_date_local": "2024-07-17T05:47:23Z",
+    "distance": 11442.6,
+    "start_index": 188,
+    "end_index": 601,
+    "device_watts": false,
+    "average_heartrate": 147.8,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387466647312545890,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15341695310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1354,
+    "moving_time": 1354,
+    "start_date": "2025-08-04T13:58:05Z",
+    "start_date_local": "2025-08-04T06:58:05Z",
+    "distance": 11442.6,
+    "start_index": 524,
+    "end_index": 1878,
+    "average_cadence": 73.3,
+    "device_watts": true,
+    "average_watts": 242.4,
+    "average_heartrate": 134.0,
+    "max_heartrate": 166.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382749049566485904,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15198606207,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1370,
+    "moving_time": 1345,
+    "start_date": "2025-07-22T13:33:44Z",
+    "start_date_local": "2025-07-22T06:33:44Z",
+    "distance": 11442.6,
+    "start_index": 477,
+    "end_index": 1824,
+    "average_cadence": 70.9,
+    "device_watts": true,
+    "average_watts": 233.1,
+    "average_heartrate": 129.3,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3245754826986682242,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 11846097227,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1404,
+    "moving_time": 1372,
+    "start_date": "2024-07-09T12:45:51Z",
+    "start_date_local": "2024-07-09T05:45:51Z",
+    "distance": 11442.6,
+    "start_index": 221,
+    "end_index": 644,
+    "device_watts": false,
+    "average_heartrate": 147.4,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3394749679909474614,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15572932051,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1411,
+    "moving_time": 1325,
+    "start_date": "2025-08-24T16:31:06Z",
+    "start_date_local": "2025-08-24T09:31:06Z",
+    "distance": 11442.6,
+    "start_index": 436,
+    "end_index": 1765,
+    "average_cadence": 71.2,
+    "device_watts": true,
+    "average_watts": 253.9,
+    "average_heartrate": 151.2,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3383101187539934382,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15210020677,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1421,
+    "moving_time": 1421,
+    "start_date": "2025-07-23T12:51:41Z",
+    "start_date_local": "2025-07-23T05:51:41Z",
+    "distance": 11442.6,
+    "start_index": 530,
+    "end_index": 1951,
+    "average_cadence": 69.2,
+    "device_watts": true,
+    "average_watts": 202.2,
+    "average_heartrate": 121.0,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375493545873736474,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14984093722,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1441,
+    "moving_time": 1396,
+    "start_date": "2025-07-02T12:56:45Z",
+    "start_date_local": "2025-07-02T05:56:45Z",
+    "distance": 11442.6,
+    "start_index": 602,
+    "end_index": 2000,
+    "average_cadence": 68.5,
+    "device_watts": true,
+    "average_watts": 227.6,
+    "average_heartrate": 127.5,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3378032490819993702,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15057573197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1445,
+    "moving_time": 1386,
+    "start_date": "2025-07-09T13:07:05Z",
+    "start_date_local": "2025-07-09T06:07:05Z",
+    "distance": 11442.6,
+    "start_index": 497,
+    "end_index": 1898,
+    "average_cadence": 67.8,
+    "device_watts": true,
+    "average_watts": 220.9,
+    "average_heartrate": 123.1,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387820074088179268,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15353199712,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1451,
+    "moving_time": 1451,
+    "start_date": "2025-08-05T13:23:44Z",
+    "start_date_local": "2025-08-05T06:23:44Z",
+    "distance": 11442.6,
+    "start_index": 512,
+    "end_index": 1963,
+    "average_cadence": 72.2,
+    "device_watts": true,
+    "average_watts": 226.1,
+    "average_heartrate": 125.9,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395791261409507748,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15605124945,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1452,
+    "moving_time": 1444,
+    "start_date": "2025-08-27T12:53:37Z",
+    "start_date_local": "2025-08-27T05:53:37Z",
+    "distance": 11442.6,
+    "start_index": 472,
+    "end_index": 1912,
+    "average_cadence": 65.1,
+    "device_watts": true,
+    "average_watts": 192.6,
+    "average_heartrate": 124.9,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3273297603185948838,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12483728780,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1457,
+    "moving_time": 1424,
+    "start_date": "2024-09-23T12:55:56Z",
+    "start_date_local": "2024-09-23T05:55:56Z",
+    "distance": 11442.6,
+    "start_index": 520,
+    "end_index": 1945,
+    "average_cadence": 69.2,
+    "device_watts": true,
+    "average_watts": 271.5,
+    "average_heartrate": 147.8,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3330570758450376936,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13750807863,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1464,
+    "moving_time": 1464,
+    "start_date": "2025-02-28T13:51:53Z",
+    "start_date_local": "2025-02-28T05:51:53Z",
+    "distance": 11442.6,
+    "start_index": 553,
+    "end_index": 2017,
+    "average_cadence": 66.2,
+    "device_watts": true,
+    "average_watts": 258.9,
+    "average_heartrate": 150.6,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3254089881544965330,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12035838620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1466,
+    "moving_time": 1466,
+    "start_date": "2024-08-01T12:45:27Z",
+    "start_date_local": "2024-08-01T05:45:27Z",
+    "distance": 11442.6,
+    "start_index": 193,
+    "end_index": 642,
+    "device_watts": false,
+    "average_heartrate": 137.0,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355933409293857312,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14426136326,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1472,
+    "moving_time": 1472,
+    "start_date": "2025-05-09T13:33:48Z",
+    "start_date_local": "2025-05-09T06:33:48Z",
+    "distance": 11442.6,
+    "start_index": 629,
+    "end_index": 2101,
+    "average_cadence": 71.3,
+    "device_watts": true,
+    "average_watts": 209.4,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3386372950979580696,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15309023545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1476,
+    "moving_time": 1476,
+    "start_date": "2025-08-01T13:30:30Z",
+    "start_date_local": "2025-08-01T06:30:30Z",
+    "distance": 11442.6,
+    "start_index": 503,
+    "end_index": 1979,
+    "average_cadence": 72.4,
+    "device_watts": true,
+    "average_watts": 215.6,
+    "average_heartrate": 121.6,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3408845729035312032,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16010337574,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1478,
+    "moving_time": 1478,
+    "start_date": "2025-10-02T13:44:21Z",
+    "start_date_local": "2025-10-02T06:44:21Z",
+    "distance": 11442.6,
+    "start_index": 500,
+    "end_index": 1978,
+    "average_cadence": 71.2,
+    "device_watts": true,
+    "average_watts": 222.6,
+    "average_heartrate": 132.6,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3380566041656786582,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15133664732,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1482,
+    "moving_time": 1435,
+    "start_date": "2025-07-16T12:55:20Z",
+    "start_date_local": "2025-07-16T05:55:20Z",
+    "distance": 11442.6,
+    "start_index": 543,
+    "end_index": 1981,
+    "average_cadence": 64.3,
+    "device_watts": true,
+    "average_watts": 234.9,
+    "average_heartrate": 124.9,
+    "max_heartrate": 171.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3253729739487519954,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12027544474,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1486,
+    "moving_time": 1448,
+    "start_date": "2024-07-31T12:53:05Z",
+    "start_date_local": "2024-07-31T05:53:05Z",
+    "distance": 11442.6,
+    "start_index": 211,
+    "end_index": 650,
+    "device_watts": false,
+    "average_heartrate": 133.0,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3311365616856083702,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13281602620,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1486,
+    "moving_time": 1475,
+    "start_date": "2025-01-06T13:53:32Z",
+    "start_date_local": "2025-01-06T05:53:32Z",
+    "distance": 11442.6,
+    "start_index": 590,
+    "end_index": 2067,
+    "device_watts": false,
+    "average_heartrate": 138.1,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3423356857987473968,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16425853070,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1486,
+    "moving_time": 1468,
+    "start_date": "2025-11-11T14:49:25Z",
+    "start_date_local": "2025-11-11T06:49:25Z",
+    "distance": 11442.6,
+    "start_index": 542,
+    "end_index": 2013,
+    "average_cadence": 73.2,
+    "device_watts": true,
+    "average_watts": 214.2,
+    "average_heartrate": 131.9,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3339992549555683550,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13992998077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1491,
+    "moving_time": 1423,
+    "start_date": "2025-03-26T13:56:14Z",
+    "start_date_local": "2025-03-26T06:56:14Z",
+    "distance": 11442.6,
+    "start_index": 578,
+    "end_index": 2002,
+    "average_cadence": 74.7,
+    "device_watts": true,
+    "average_watts": 236.1,
+    "average_heartrate": 143.9,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3349404624085165212,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14242799763,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1497,
+    "moving_time": 1491,
+    "start_date": "2025-04-21T13:11:58Z",
+    "start_date_local": "2025-04-21T06:11:58Z",
+    "distance": 11442.6,
+    "start_index": 578,
+    "end_index": 2070,
+    "average_cadence": 71.1,
+    "device_watts": true,
+    "average_watts": 225.7,
+    "average_heartrate": 140.0,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3392900196593953764,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15513338209,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1501,
+    "moving_time": 1461,
+    "start_date": "2025-08-19T13:37:13Z",
+    "start_date_local": "2025-08-19T06:37:13Z",
+    "distance": 11442.6,
+    "start_index": 480,
+    "end_index": 1941,
+    "average_cadence": 72.4,
+    "device_watts": true,
+    "average_watts": 237.1,
+    "average_heartrate": 127.5,
+    "max_heartrate": 175.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3395426409478525062,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15592870724,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1505,
+    "moving_time": 1478,
+    "start_date": "2025-08-26T13:03:08Z",
+    "start_date_local": "2025-08-26T06:03:08Z",
+    "distance": 11442.6,
+    "start_index": 500,
+    "end_index": 1980,
+    "average_cadence": 63.1,
+    "device_watts": true,
+    "average_watts": 184.4,
+    "average_heartrate": 117.3,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3407751265446903962,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15975845608,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1511,
+    "moving_time": 1452,
+    "start_date": "2025-09-29T13:22:48Z",
+    "start_date_local": "2025-09-29T06:22:48Z",
+    "distance": 11442.6,
+    "start_index": 523,
+    "end_index": 1980,
+    "average_cadence": 64.2,
+    "device_watts": true,
+    "average_watts": 214.8,
+    "average_heartrate": 134.9,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410297087603948766,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16052523229,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1514,
+    "moving_time": 1514,
+    "start_date": "2025-10-06T13:53:54Z",
+    "start_date_local": "2025-10-06T06:53:54Z",
+    "distance": 11442.6,
+    "start_index": 510,
+    "end_index": 2024,
+    "average_cadence": 72.7,
+    "device_watts": true,
+    "average_watts": 221.5,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3255903122094498354,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12077450668,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1515,
+    "moving_time": 1515,
+    "start_date": "2024-08-06T12:44:47Z",
+    "start_date_local": "2024-08-06T05:44:47Z",
+    "distance": 11442.6,
+    "start_index": 197,
+    "end_index": 655,
+    "device_watts": false,
+    "average_heartrate": 131.1,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3364982804672977718,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14683175747,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1515,
+    "moving_time": 1515,
+    "start_date": "2025-06-03T12:51:53Z",
+    "start_date_local": "2025-06-03T05:51:53Z",
+    "distance": 11442.6,
+    "start_index": 540,
+    "end_index": 2055,
+    "average_cadence": 69.7,
+    "device_watts": true,
+    "average_watts": 208.0,
+    "average_heartrate": 119.6,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3382381134064452724,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15187100097,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1521,
+    "moving_time": 1521,
+    "start_date": "2025-07-21T13:05:57Z",
+    "start_date_local": "2025-07-21T06:05:57Z",
+    "distance": 11442.6,
+    "start_index": 593,
+    "end_index": 2114,
+    "average_cadence": 69.0,
+    "device_watts": true,
+    "average_watts": 206.6,
+    "average_heartrate": 116.9,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3410651253016218952,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16063550332,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1521,
+    "moving_time": 1496,
+    "start_date": "2025-10-07T13:23:08Z",
+    "start_date_local": "2025-10-07T06:23:08Z",
+    "distance": 11442.6,
+    "start_index": 502,
+    "end_index": 1997,
+    "average_cadence": 75.3,
+    "device_watts": true,
+    "average_watts": 224.3,
+    "average_heartrate": 132.6,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251194076304084070,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 11969363761,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1532,
+    "moving_time": 1532,
+    "start_date": "2024-07-24T12:54:02Z",
+    "start_date_local": "2024-07-24T05:54:02Z",
+    "distance": 11442.6,
+    "start_index": 205,
+    "end_index": 652,
+    "device_watts": false,
+    "average_heartrate": 128.6,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3425895615205426496,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16495859285,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1532,
+    "moving_time": 1486,
+    "start_date": "2025-11-18T14:54:53Z",
+    "start_date_local": "2025-11-18T06:54:53Z",
+    "distance": 11442.6,
+    "start_index": 525,
+    "end_index": 2012,
+    "average_cadence": 72.0,
+    "device_watts": true,
+    "average_watts": 234.0,
+    "average_heartrate": 134.6,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3367883366004772038,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14766079072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1535,
+    "moving_time": 1478,
+    "start_date": "2025-06-11T12:51:43Z",
+    "start_date_local": "2025-06-11T05:51:43Z",
+    "distance": 11442.6,
+    "start_index": 539,
+    "end_index": 2018,
+    "average_cadence": 67.9,
+    "device_watts": true,
+    "average_watts": 205.4,
+    "average_heartrate": 123.1,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3385293437862651438,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15275646077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1541,
+    "moving_time": 1535,
+    "start_date": "2025-07-29T13:38:03Z",
+    "start_date_local": "2025-07-29T06:38:03Z",
+    "distance": 11442.6,
+    "start_index": 590,
+    "end_index": 2126,
+    "average_cadence": 65.9,
+    "device_watts": true,
+    "average_watts": 197.8,
+    "average_heartrate": 115.8,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3373322724715100508,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14922441670,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1543,
+    "moving_time": 1492,
+    "start_date": "2025-06-26T13:07:13Z",
+    "start_date_local": "2025-06-26T06:07:13Z",
+    "distance": 11442.6,
+    "start_index": 542,
+    "end_index": 2036,
+    "average_cadence": 68.4,
+    "device_watts": true,
+    "average_watts": 197.0,
+    "average_heartrate": 111.4,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3359910726510716120,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14539771405,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1546,
+    "moving_time": 1534,
+    "start_date": "2025-05-20T12:56:39Z",
+    "start_date_local": "2025-05-20T05:56:39Z",
+    "distance": 11442.6,
+    "start_index": 554,
+    "end_index": 2089,
+    "average_cadence": 71.5,
+    "device_watts": true,
+    "average_watts": 213.0,
+    "average_heartrate": 120.6,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3347959183671122656,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14204047839,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1549,
+    "moving_time": 1468,
+    "start_date": "2025-04-17T13:28:16Z",
+    "start_date_local": "2025-04-17T06:28:16Z",
+    "distance": 11442.6,
+    "start_index": 614,
+    "end_index": 2083,
+    "average_cadence": 81.2,
+    "device_watts": true,
+    "average_watts": 234.5,
+    "average_heartrate": 133.3,
+    "max_heartrate": 169.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3443286223015725530,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16946166061,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1549,
+    "moving_time": 1532,
+    "start_date": "2026-01-05T14:39:46Z",
+    "start_date_local": "2026-01-05T06:39:46Z",
+    "distance": 11442.6,
+    "start_index": 657,
+    "end_index": 2192,
+    "average_cadence": 71.1,
+    "device_watts": true,
+    "average_watts": 220.0,
+    "average_heartrate": 137.3,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3366080518765632840,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14714565330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1551,
+    "moving_time": 1491,
+    "start_date": "2025-06-06T13:25:05Z",
+    "start_date_local": "2025-06-06T06:25:05Z",
+    "distance": 11442.6,
+    "start_index": 475,
+    "end_index": 1966,
+    "average_cadence": 67.9,
+    "device_watts": true,
+    "average_watts": 192.6,
+    "average_heartrate": 121.5,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251555860397746036,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 11977840072,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1552,
+    "moving_time": 1533,
+    "start_date": "2024-07-25T12:50:13Z",
+    "start_date_local": "2024-07-25T05:50:13Z",
+    "distance": 11442.6,
+    "start_index": 245,
+    "end_index": 711,
+    "device_watts": false,
+    "average_heartrate": 133.5,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368618803606092290,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14787270900,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1553,
+    "moving_time": 1542,
+    "start_date": "2025-06-13T13:32:25Z",
+    "start_date_local": "2025-06-13T06:32:25Z",
+    "distance": 11442.6,
+    "start_index": 539,
+    "end_index": 2084,
+    "average_cadence": 62.1,
+    "device_watts": true,
+    "average_watts": 191.1,
+    "average_heartrate": 116.6,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3396525346864404594,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15627300962,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1555,
+    "moving_time": 1554,
+    "start_date": "2025-08-29T13:31:37Z",
+    "start_date_local": "2025-08-29T06:31:37Z",
+    "distance": 11442.6,
+    "start_index": 454,
+    "end_index": 2009,
+    "average_cadence": 70.1,
+    "device_watts": true,
+    "average_watts": 195.4,
+    "average_heartrate": 118.1,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3421905671413661970,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16384934966,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1557,
+    "moving_time": 1557,
+    "start_date": "2025-11-07T14:12:37Z",
+    "start_date_local": "2025-11-07T06:12:37Z",
+    "distance": 11442.6,
+    "start_index": 661,
+    "end_index": 2218,
+    "average_cadence": 73.5,
+    "device_watts": true,
+    "average_watts": 226.9,
+    "average_heartrate": 134.8,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288896931253290698,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12829100188,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1563,
+    "moving_time": 1563,
+    "start_date": "2024-11-05T13:52:01Z",
+    "start_date_local": "2024-11-05T05:52:01Z",
+    "distance": 11442.6,
+    "start_index": 465,
+    "end_index": 2028,
+    "average_cadence": 71.6,
+    "device_watts": true,
+    "average_watts": 254.4,
+    "average_heartrate": 152.2,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370787076915735982,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14850175778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1565,
+    "moving_time": 1489,
+    "start_date": "2025-06-19T13:06:49Z",
+    "start_date_local": "2025-06-19T06:06:49Z",
+    "distance": 11442.6,
+    "start_index": 578,
+    "end_index": 2071,
+    "average_cadence": 62.5,
+    "device_watts": true,
+    "average_watts": 190.2,
+    "average_heartrate": 111.1,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268587742325152192,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12374934834,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1566,
+    "moving_time": 1566,
+    "start_date": "2024-09-10T12:51:11Z",
+    "start_date_local": "2024-09-10T05:51:11Z",
+    "distance": 11442.6,
+    "start_index": 604,
+    "end_index": 2170,
+    "average_cadence": 59.8,
+    "device_watts": true,
+    "average_watts": 194.5,
+    "average_heartrate": 121.5,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398696825871241474,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15695232371,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1567,
+    "moving_time": 1567,
+    "start_date": "2025-09-04T13:35:27Z",
+    "start_date_local": "2025-09-04T06:35:27Z",
+    "distance": 11442.6,
+    "start_index": 540,
+    "end_index": 2107,
+    "average_cadence": 68.9,
+    "device_watts": true,
+    "average_watts": 182.5,
+    "average_heartrate": 119.6,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304490914027242958,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13142668267,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1569,
+    "moving_time": 1487,
+    "start_date": "2024-12-18T14:26:20Z",
+    "start_date_local": "2024-12-18T06:26:20Z",
+    "distance": 11442.6,
+    "start_index": 588,
+    "end_index": 2092,
+    "average_cadence": 61.0,
+    "device_watts": true,
+    "average_watts": 205.9,
+    "average_heartrate": 137.0,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3456329380938371166,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 17351823334,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1571,
+    "moving_time": 1464,
+    "start_date": "2026-02-10T14:28:53Z",
+    "start_date_local": "2026-02-10T06:28:53Z",
+    "distance": 11442.6,
+    "start_index": 516,
+    "end_index": 1981,
+    "average_cadence": 73.5,
+    "device_watts": true,
+    "average_watts": 215.9,
+    "average_heartrate": 140.5,
+    "max_heartrate": 169.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3416081577263244504,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16222225416,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1573,
+    "moving_time": 1558,
+    "start_date": "2025-10-22T12:54:37Z",
+    "start_date_local": "2025-10-22T05:54:37Z",
+    "distance": 11442.6,
+    "start_index": 512,
+    "end_index": 2071,
+    "device_watts": false,
+    "average_heartrate": 126.7,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3372602316029435418,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14901386435,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1575,
+    "moving_time": 1534,
+    "start_date": "2025-06-24T13:23:15Z",
+    "start_date_local": "2025-06-24T06:23:15Z",
+    "distance": 11442.6,
+    "start_index": 618,
+    "end_index": 2157,
+    "average_cadence": 57.6,
+    "device_watts": true,
+    "average_watts": 187.0,
+    "average_heartrate": 108.3,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411394109989293712,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16086564133,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1577,
+    "moving_time": 1577,
+    "start_date": "2025-10-09T14:31:33Z",
+    "start_date_local": "2025-10-09T07:31:33Z",
+    "distance": 11442.6,
+    "start_index": 526,
+    "end_index": 2100,
+    "average_cadence": 70.4,
+    "device_watts": true,
+    "average_watts": 204.9,
+    "average_heartrate": 128.2,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353023234069901464,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14344373109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1578,
+    "moving_time": 1463,
+    "start_date": "2025-05-01T12:49:13Z",
+    "start_date_local": "2025-05-01T05:49:13Z",
+    "distance": 11442.6,
+    "start_index": 513,
+    "end_index": 1978,
+    "average_cadence": 66.9,
+    "device_watts": true,
+    "average_watts": 221.8,
+    "average_heartrate": 142.2,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3301226054110469144,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13079350675,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1579,
+    "moving_time": 1503,
+    "start_date": "2024-12-09T14:18:31Z",
+    "start_date_local": "2024-12-09T06:18:31Z",
+    "distance": 11442.6,
+    "start_index": 554,
+    "end_index": 2060,
+    "average_cadence": 65.0,
+    "device_watts": true,
+    "average_watts": 261.2,
+    "average_heartrate": 157.9,
+    "max_heartrate": 184.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413191635316098676,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16138354685,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1584,
+    "moving_time": 1545,
+    "start_date": "2025-10-14T13:30:48Z",
+    "start_date_local": "2025-10-14T06:30:48Z",
+    "distance": 11442.6,
+    "start_index": 513,
+    "end_index": 2061,
+    "average_cadence": 68.7,
+    "device_watts": true,
+    "average_watts": 206.9,
+    "average_heartrate": 125.8,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3459226707216751398,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 17440217222,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1585,
+    "moving_time": 1562,
+    "start_date": "2026-02-18T13:52:25Z",
+    "start_date_local": "2026-02-18T05:52:25Z",
+    "distance": 11442.6,
+    "start_index": 666,
+    "end_index": 2229,
+    "average_cadence": 73.2,
+    "device_watts": true,
+    "average_watts": 201.9,
+    "average_heartrate": 129.7,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3333113598241152756,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13814909452,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1588,
+    "moving_time": 1548,
+    "start_date": "2025-03-07T14:08:57Z",
+    "start_date_local": "2025-03-07T06:08:57Z",
+    "distance": 11442.6,
+    "start_index": 516,
+    "end_index": 2065,
+    "average_cadence": 73.5,
+    "device_watts": true,
+    "average_watts": 245.4,
+    "average_heartrate": 138.9,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3288541164581277410,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12821315476,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1591,
+    "moving_time": 1591,
+    "start_date": "2024-11-04T14:00:50Z",
+    "start_date_local": "2024-11-04T06:00:50Z",
+    "distance": 11442.6,
+    "start_index": 604,
+    "end_index": 2195,
+    "average_cadence": 62.8,
+    "device_watts": true,
+    "average_watts": 245.9,
+    "average_heartrate": 152.4,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358468015229819938,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14498888212,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1593,
+    "moving_time": 1565,
+    "start_date": "2025-05-16T13:25:40Z",
+    "start_date_local": "2025-05-16T06:25:40Z",
+    "distance": 11442.6,
+    "start_index": 508,
+    "end_index": 2076,
+    "average_cadence": 69.8,
+    "device_watts": true,
+    "average_watts": 225.3,
+    "average_heartrate": 130.8,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263157621457502102,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12246925159,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1596,
+    "moving_time": 1596,
+    "start_date": "2024-08-26T13:12:03Z",
+    "start_date_local": "2024-08-26T06:12:03Z",
+    "distance": 11442.6,
+    "start_index": 604,
+    "end_index": 2200,
+    "average_cadence": 67.3,
+    "device_watts": true,
+    "average_watts": 218.0,
+    "average_heartrate": 127.8,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365357798683321670,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14694579988,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1596,
+    "moving_time": 1595,
+    "start_date": "2025-06-04T13:33:37Z",
+    "start_date_local": "2025-06-04T06:33:37Z",
+    "distance": 11442.6,
+    "start_index": 575,
+    "end_index": 2171,
+    "average_cadence": 69.2,
+    "device_watts": true,
+    "average_watts": 194.0,
+    "average_heartrate": 114.6,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360283434643018610,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14551088220,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1598,
+    "moving_time": 1598,
+    "start_date": "2025-05-21T13:36:10Z",
+    "start_date_local": "2025-05-21T06:36:10Z",
+    "distance": 11442.6,
+    "start_index": 515,
+    "end_index": 2113,
+    "average_cadence": 70.0,
+    "device_watts": true,
+    "average_watts": 202.8,
+    "average_heartrate": 120.2,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368244400004175456,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14776856791,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1599,
+    "moving_time": 1559,
+    "start_date": "2025-06-12T12:49:01Z",
+    "start_date_local": "2025-06-12T05:49:01Z",
+    "distance": 11442.6,
+    "start_index": 593,
+    "end_index": 2157,
+    "average_cadence": 64.5,
+    "device_watts": true,
+    "average_watts": 207.0,
+    "average_heartrate": 119.2,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3335630321422789962,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13880376318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1603,
+    "moving_time": 1574,
+    "start_date": "2025-03-14T12:51:06Z",
+    "start_date_local": "2025-03-14T05:51:06Z",
+    "distance": 11442.6,
+    "start_index": 604,
+    "end_index": 2176,
+    "average_cadence": 62.0,
+    "device_watts": true,
+    "average_watts": 213.3,
+    "average_heartrate": 136.7,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3371142491060382680,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14860224848,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1605,
+    "moving_time": 1605,
+    "start_date": "2025-06-20T12:50:04Z",
+    "start_date_local": "2025-06-20T05:50:04Z",
+    "distance": 11442.6,
+    "start_index": 504,
+    "end_index": 2109,
+    "average_cadence": 67.8,
+    "device_watts": true,
+    "average_watts": 182.8,
+    "average_heartrate": 105.9,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3433500213315559888,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16694766248,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1606,
+    "moving_time": 1606,
+    "start_date": "2025-12-09T14:28:07Z",
+    "start_date_local": "2025-12-09T06:28:07Z",
+    "distance": 11442.6,
+    "start_index": 523,
+    "end_index": 2129,
+    "average_cadence": 71.0,
+    "device_watts": true,
+    "average_watts": 215.2,
+    "average_heartrate": 131.9,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3358104886163867674,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14488932577,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1619,
+    "moving_time": 1607,
+    "start_date": "2025-05-15T13:21:20Z",
+    "start_date_local": "2025-05-15T06:21:20Z",
+    "distance": 11442.6,
+    "start_index": 613,
+    "end_index": 2223,
+    "average_cadence": 65.0,
+    "device_watts": true,
+    "average_watts": 199.4,
+    "average_heartrate": 115.7,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3365709861278837744,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14704717185,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1620,
+    "moving_time": 1569,
+    "start_date": "2025-06-05T12:57:50Z",
+    "start_date_local": "2025-06-05T05:57:50Z",
+    "distance": 11442.6,
+    "start_index": 560,
+    "end_index": 2135,
+    "average_cadence": 59.1,
+    "device_watts": true,
+    "average_watts": 179.0,
+    "average_heartrate": 118.0,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3360635050004185756,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14560848197,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1623,
+    "moving_time": 1605,
+    "start_date": "2025-05-22T12:50:09Z",
+    "start_date_local": "2025-05-22T05:50:09Z",
+    "distance": 11442.6,
+    "start_index": 549,
+    "end_index": 2158,
+    "average_cadence": 69.6,
+    "device_watts": true,
+    "average_watts": 195.6,
+    "average_heartrate": 119.5,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3393992976763652962,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15547940636,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1624,
+    "moving_time": 1540,
+    "start_date": "2025-08-22T14:03:37Z",
+    "start_date_local": "2025-08-22T07:03:37Z",
+    "distance": 11442.6,
+    "start_index": 512,
+    "end_index": 2056,
+    "average_cadence": 67.0,
+    "device_watts": true,
+    "average_watts": 204.0,
+    "average_heartrate": 133.5,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3316440483654708666,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13405588752,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1627,
+    "moving_time": 1546,
+    "start_date": "2025-01-20T13:52:55Z",
+    "start_date_local": "2025-01-20T05:52:55Z",
+    "distance": 11442.6,
+    "start_index": 540,
+    "end_index": 2090,
+    "device_watts": false,
+    "average_heartrate": 143.6,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3353407475850132466,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14355401347,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1628,
+    "moving_time": 1550,
+    "start_date": "2025-05-02T13:34:39Z",
+    "start_date_local": "2025-05-02T06:34:39Z",
+    "distance": 11442.6,
+    "start_index": 524,
+    "end_index": 2076,
+    "average_cadence": 63.0,
+    "device_watts": true,
+    "average_watts": 176.0,
+    "average_heartrate": 123.7,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3348325515450975846,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14213905981,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1632,
+    "moving_time": 1614,
+    "start_date": "2025-04-18T13:28:12Z",
+    "start_date_local": "2025-04-18T06:28:12Z",
+    "distance": 11442.6,
+    "start_index": 602,
+    "end_index": 2219,
+    "average_cadence": 80.2,
+    "device_watts": true,
+    "average_watts": 204.4,
+    "average_heartrate": 126.5,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355201581755180792,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14405517047,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1632,
+    "moving_time": 1605,
+    "start_date": "2025-05-07T12:57:12Z",
+    "start_date_local": "2025-05-07T05:57:12Z",
+    "distance": 11442.6,
+    "start_index": 196,
+    "end_index": 679,
+    "device_watts": false,
+    "average_heartrate": 118.8,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3413551403727075052,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16149463484,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1632,
+    "moving_time": 1592,
+    "start_date": "2025-10-15T12:50:15Z",
+    "start_date_local": "2025-10-15T05:50:15Z",
+    "distance": 11442.6,
+    "start_index": 520,
+    "end_index": 2115,
+    "device_watts": false,
+    "average_heartrate": 123.3,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3469719673902900678,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 17779597249,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1639,
+    "moving_time": 1638,
+    "start_date": "2026-03-19T13:12:07Z",
+    "start_date_local": "2026-03-19T06:12:07Z",
+    "distance": 11442.6,
+    "start_index": 667,
+    "end_index": 2306,
+    "average_cadence": 64.6,
+    "device_watts": true,
+    "average_watts": 186.5,
+    "average_heartrate": 118.4,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3437129539904977992,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16785870213,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1642,
+    "moving_time": 1614,
+    "start_date": "2025-12-19T14:50:34Z",
+    "start_date_local": "2025-12-19T06:50:34Z",
+    "distance": 11442.6,
+    "start_index": 640,
+    "end_index": 2257,
+    "average_cadence": 73.1,
+    "device_watts": true,
+    "average_watts": 205.7,
+    "average_heartrate": 128.2,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3375860359766920464,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14994827230,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1643,
+    "moving_time": 1607,
+    "start_date": "2025-07-03T12:54:36Z",
+    "start_date_local": "2025-07-03T05:54:36Z",
+    "distance": 11442.6,
+    "start_index": 532,
+    "end_index": 2141,
+    "average_cadence": 67.5,
+    "device_watts": true,
+    "average_watts": 206.5,
+    "average_heartrate": 114.1,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3332390572735060722,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13796731729,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1646,
+    "moving_time": 1642,
+    "start_date": "2025-03-05T14:17:13Z",
+    "start_date_local": "2025-03-05T06:17:13Z",
+    "distance": 11442.6,
+    "start_index": 625,
+    "end_index": 2269,
+    "average_cadence": 66.5,
+    "device_watts": true,
+    "average_watts": 221.6,
+    "average_heartrate": 134.7,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3350134438086349916,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14262949627,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1646,
+    "moving_time": 1573,
+    "start_date": "2025-04-23T13:26:13Z",
+    "start_date_local": "2025-04-23T06:26:13Z",
+    "distance": 11442.6,
+    "start_index": 579,
+    "end_index": 2153,
+    "average_cadence": 64.7,
+    "device_watts": true,
+    "average_watts": 179.9,
+    "average_heartrate": 118.1,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3417891656916725406,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16271547183,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1646,
+    "moving_time": 1623,
+    "start_date": "2025-10-27T12:45:51Z",
+    "start_date_local": "2025-10-27T05:45:51Z",
+    "distance": 11442.6,
+    "start_index": 530,
+    "end_index": 2155,
+    "average_cadence": 71.8,
+    "device_watts": true,
+    "average_watts": 206.5,
+    "average_heartrate": 119.6,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3441113494413045982,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16885305726,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1647,
+    "moving_time": 1605,
+    "start_date": "2025-12-30T14:42:20Z",
+    "start_date_local": "2025-12-30T06:42:20Z",
+    "distance": 11442.6,
+    "start_index": 684,
+    "end_index": 2290,
+    "device_watts": false,
+    "average_heartrate": 131.2,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3355573064684188924,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14416337001,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1651,
+    "moving_time": 1596,
+    "start_date": "2025-05-08T13:36:31Z",
+    "start_date_local": "2025-05-08T06:36:31Z",
+    "distance": 11442.6,
+    "start_index": 588,
+    "end_index": 2186,
+    "average_cadence": 69.0,
+    "device_watts": true,
+    "average_watts": 210.5,
+    "average_heartrate": 123.3,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3462492485755285352,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 17542554753,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1654,
+    "moving_time": 1591,
+    "start_date": "2026-02-27T14:28:20Z",
+    "start_date_local": "2026-02-27T06:28:20Z",
+    "distance": 11442.6,
+    "start_index": 638,
+    "end_index": 2231,
+    "average_cadence": 68.3,
+    "device_watts": true,
+    "average_watts": 201.7,
+    "average_heartrate": 129.2,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250831414655374876,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 11960512797,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1656,
+    "moving_time": 1607,
+    "start_date": "2024-07-23T12:48:25Z",
+    "start_date_local": "2024-07-23T05:48:25Z",
+    "distance": 11442.6,
+    "start_index": 229,
+    "end_index": 697,
+    "device_watts": false,
+    "average_heartrate": 127.8,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3319705167041160116,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13484397149,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1656,
+    "moving_time": 1645,
+    "start_date": "2025-01-29T14:07:20Z",
+    "start_date_local": "2025-01-29T06:07:20Z",
+    "distance": 11442.6,
+    "start_index": 630,
+    "end_index": 2278,
+    "average_cadence": 65.7,
+    "device_watts": true,
+    "average_watts": 107.6,
+    "average_heartrate": 145.5,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3426975394594730870,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16525027384,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1657,
+    "moving_time": 1651,
+    "start_date": "2025-11-21T14:23:21Z",
+    "start_date_local": "2025-11-21T06:23:21Z",
+    "distance": 11442.6,
+    "start_index": 540,
+    "end_index": 2193,
+    "average_cadence": 73.4,
+    "device_watts": true,
+    "average_watts": 207.5,
+    "average_heartrate": 132.6,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449449916335911408,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 17140109075,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1664,
+    "moving_time": 1664,
+    "start_date": "2026-01-22T14:05:40Z",
+    "start_date_local": "2026-01-22T06:05:40Z",
+    "distance": 11442.6,
+    "start_index": 745,
+    "end_index": 2409,
+    "average_cadence": 76.5,
+    "device_watts": true,
+    "average_watts": 219.7,
+    "average_heartrate": 142.5,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3398322453118676202,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15683158116,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1665,
+    "moving_time": 1542,
+    "start_date": "2025-09-03T12:50:09Z",
+    "start_date_local": "2025-09-03T05:50:09Z",
+    "distance": 11442.6,
+    "start_index": 526,
+    "end_index": 2081,
+    "average_cadence": 59.0,
+    "device_watts": true,
+    "average_watts": 183.0,
+    "average_heartrate": 122.6,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3345053904543773198,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14127037659,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1670,
+    "moving_time": 1670,
+    "start_date": "2025-04-09T12:55:26Z",
+    "start_date_local": "2025-04-09T05:55:26Z",
+    "distance": 11442.6,
+    "start_index": 655,
+    "end_index": 2325,
+    "average_cadence": 64.3,
+    "device_watts": true,
+    "average_watts": 197.9,
+    "average_heartrate": 127.9,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3317169126735771066,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13423649224,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1674,
+    "moving_time": 1618,
+    "start_date": "2025-01-22T14:10:15Z",
+    "start_date_local": "2025-01-22T06:10:15Z",
+    "distance": 11442.6,
+    "start_index": 551,
+    "end_index": 2172,
+    "device_watts": false,
+    "average_heartrate": 135.0,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3458505872856192884,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 17417002169,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1674,
+    "moving_time": 1674,
+    "start_date": "2026-02-16T14:35:00Z",
+    "start_date_local": "2026-02-16T06:35:00Z",
+    "distance": 11442.6,
+    "start_index": 720,
+    "end_index": 2394,
+    "average_cadence": 73.5,
+    "device_watts": true,
+    "average_watts": 216.9,
+    "average_heartrate": 137.7,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3466566977718621078,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 17678093340,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1676,
+    "moving_time": 1576,
+    "start_date": "2026-03-10T13:15:14Z",
+    "start_date_local": "2026-03-10T06:15:14Z",
+    "distance": 11442.6,
+    "start_index": 707,
+    "end_index": 2289,
+    "average_cadence": 64.8,
+    "device_watts": true,
+    "average_watts": 195.2,
+    "average_heartrate": 123.5,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3268951875499998836,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12383740682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1680,
+    "moving_time": 1675,
+    "start_date": "2024-09-11T12:49:32Z",
+    "start_date_local": "2024-09-11T05:49:32Z",
+    "distance": 11442.6,
+    "start_index": 672,
+    "end_index": 2350,
+    "average_cadence": 57.6,
+    "device_watts": true,
+    "average_watts": 194.9,
+    "average_heartrate": 121.5,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3334185569929879314,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13842791773,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1681,
+    "moving_time": 1680,
+    "start_date": "2025-03-10T13:05:41Z",
+    "start_date_local": "2025-03-10T06:05:41Z",
+    "distance": 11442.6,
+    "start_index": 610,
+    "end_index": 2291,
+    "average_cadence": 66.8,
+    "device_watts": true,
+    "average_watts": 222.0,
+    "average_heartrate": 133.7,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3370058435504115042,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14827981626,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1689,
+    "moving_time": 1640,
+    "start_date": "2025-06-17T12:52:27Z",
+    "start_date_local": "2025-06-17T05:52:27Z",
+    "distance": 11442.6,
+    "start_index": 623,
+    "end_index": 2266,
+    "average_cadence": 60.9,
+    "device_watts": true,
+    "average_watts": 178.2,
+    "average_heartrate": 109.7,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3270763557104323058,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12424459310,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1697,
+    "moving_time": 1697,
+    "start_date": "2024-09-16T12:50:26Z",
+    "start_date_local": "2024-09-16T05:50:26Z",
+    "distance": 11442.6,
+    "start_index": 602,
+    "end_index": 2299,
+    "average_cadence": 58.4,
+    "device_watts": true,
+    "average_watts": 201.7,
+    "average_heartrate": 122.3,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3293623367838409850,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12929816287,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1703,
+    "moving_time": 1697,
+    "start_date": "2024-11-18T14:15:26Z",
+    "start_date_local": "2024-11-18T06:15:26Z",
+    "distance": 11442.6,
+    "start_index": 608,
+    "end_index": 2309,
+    "average_cadence": 63.4,
+    "device_watts": true,
+    "average_watts": 229.0,
+    "average_heartrate": 153.5,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3357743450771836158,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14478403917,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1716,
+    "moving_time": 1680,
+    "start_date": "2025-05-14T13:16:48Z",
+    "start_date_local": "2025-05-14T06:16:48Z",
+    "distance": 11442.6,
+    "start_index": 612,
+    "end_index": 2296,
+    "average_cadence": 65.0,
+    "device_watts": true,
+    "average_watts": 191.9,
+    "average_heartrate": 115.0,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3391088266301767680,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15457183494,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1716,
+    "moving_time": 1500,
+    "start_date": "2025-08-14T13:41:51Z",
+    "start_date_local": "2025-08-14T06:41:51Z",
+    "distance": 11442.6,
+    "start_index": 486,
+    "end_index": 1990,
+    "average_cadence": 58.7,
+    "device_watts": true,
+    "average_watts": 179.7,
+    "average_heartrate": 111.5,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3436775522387947610,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16777711739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1720,
+    "moving_time": 1685,
+    "start_date": "2025-12-18T15:00:47Z",
+    "start_date_local": "2025-12-18T07:00:47Z",
+    "distance": 11442.6,
+    "start_index": 669,
+    "end_index": 2356,
+    "average_cadence": 71.7,
+    "device_watts": true,
+    "average_watts": 206.7,
+    "average_heartrate": 124.8,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3440751703090814208,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16875262874,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1724,
+    "moving_time": 1690,
+    "start_date": "2025-12-29T14:42:31Z",
+    "start_date_local": "2025-12-29T06:42:31Z",
+    "distance": 11442.6,
+    "start_index": 578,
+    "end_index": 2270,
+    "device_watts": false,
+    "average_heartrate": 127.6,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3411743111946905770,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16096272291,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1745,
+    "moving_time": 1659,
+    "start_date": "2025-10-10T13:30:13Z",
+    "start_date_local": "2025-10-10T06:30:13Z",
+    "distance": 11442.6,
+    "start_index": 509,
+    "end_index": 2170,
+    "average_cadence": 69.8,
+    "device_watts": true,
+    "average_watts": 193.2,
+    "average_heartrate": 121.7,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3337813483852261766,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13936388109,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1747,
+    "moving_time": 1681,
+    "start_date": "2025-03-20T12:50:39Z",
+    "start_date_local": "2025-03-20T05:50:39Z",
+    "distance": 11442.6,
+    "start_index": 652,
+    "end_index": 2334,
+    "average_cadence": 61.9,
+    "device_watts": true,
+    "average_watts": 193.1,
+    "average_heartrate": 125.4,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3331660987145156318,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13777797816,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1748,
+    "moving_time": 1571,
+    "start_date": "2025-03-03T14:00:01Z",
+    "start_date_local": "2025-03-03T06:00:01Z",
+    "distance": 11442.6,
+    "start_index": 536,
+    "end_index": 2110,
+    "average_cadence": 54.8,
+    "device_watts": true,
+    "average_watts": 196.6,
+    "average_heartrate": 130.0,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3299416480353072072,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13045844687,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1755,
+    "moving_time": 1755,
+    "start_date": "2024-12-04T14:21:36Z",
+    "start_date_local": "2024-12-04T06:21:36Z",
+    "distance": 11442.6,
+    "start_index": 575,
+    "end_index": 2330,
+    "average_cadence": 60.6,
+    "device_watts": true,
+    "average_watts": 206.6,
+    "average_heartrate": 128.8,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3438346648392401750,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16815880803,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1755,
+    "moving_time": 1683,
+    "start_date": "2025-12-22T14:49:59Z",
+    "start_date_local": "2025-12-22T06:49:59Z",
+    "distance": 11442.6,
+    "start_index": 693,
+    "end_index": 2379,
+    "average_cadence": 70.4,
+    "device_watts": true,
+    "average_watts": 197.6,
+    "average_heartrate": 125.7,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3362814285727332980,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14621109297,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1759,
+    "moving_time": 1738,
+    "start_date": "2025-05-28T13:04:00Z",
+    "start_date_local": "2025-05-28T06:04:00Z",
+    "distance": 11442.6,
+    "start_index": 570,
+    "end_index": 2311,
+    "average_cadence": 55.9,
+    "device_watts": true,
+    "average_watts": 165.4,
+    "average_heartrate": 111.8,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3449803577074716996,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 17150751411,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1759,
+    "moving_time": 1683,
+    "start_date": "2026-01-23T13:50:04Z",
+    "start_date_local": "2026-01-23T05:50:04Z",
+    "distance": 11442.6,
+    "start_index": 705,
+    "end_index": 2395,
+    "device_watts": false,
+    "average_heartrate": 137.8,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3250473749465065030,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 11951988603,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1763,
+    "moving_time": 1749,
+    "start_date": "2024-07-22T13:04:16Z",
+    "start_date_local": "2024-07-22T06:04:16Z",
+    "distance": 11442.6,
+    "start_index": 211,
+    "end_index": 704,
+    "device_watts": false,
+    "average_heartrate": 118.7,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3263871860511152488,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 12264308936,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1801,
+    "moving_time": 1323,
+    "start_date": "2024-08-28T12:45:03Z",
+    "start_date_local": "2024-08-28T05:45:03Z",
+    "distance": 11442.6,
+    "start_index": 549,
+    "end_index": 1875,
+    "average_cadence": 65.6,
+    "device_watts": true,
+    "average_watts": 226.4,
+    "average_heartrate": 139.8,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3336721137261680844,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13907347059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1841,
+    "moving_time": 1646,
+    "start_date": "2025-03-17T13:03:33Z",
+    "start_date_local": "2025-03-17T06:03:33Z",
+    "distance": 11442.6,
+    "start_index": 607,
+    "end_index": 2255,
+    "average_cadence": 63.8,
+    "device_watts": true,
+    "average_watts": 186.1,
+    "average_heartrate": 126.4,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3390351130447765770,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15433259052,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1851,
+    "moving_time": 1441,
+    "start_date": "2025-08-12T12:53:09Z",
+    "start_date_local": "2025-08-12T05:53:09Z",
+    "distance": 11442.6,
+    "start_index": 620,
+    "end_index": 2064,
+    "average_cadence": 54.7,
+    "device_watts": true,
+    "average_watts": 177.1,
+    "average_heartrate": 114.4,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3389383147780185346,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1853,
+    "moving_time": 1338,
+    "start_date": "2025-08-09T18:56:49Z",
+    "start_date_local": "2025-08-09T11:56:49Z",
+    "distance": 11442.6,
+    "start_index": 468,
+    "end_index": 1810,
+    "average_cadence": 52.0,
+    "device_watts": true,
+    "average_watts": 179.5,
+    "average_heartrate": 121.4,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3461392619804373876,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 17506406720,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1857,
+    "moving_time": 1577,
+    "start_date": "2026-02-24T13:39:26Z",
+    "start_date_local": "2026-02-24T05:39:26Z",
+    "distance": 11442.6,
+    "start_index": 691,
+    "end_index": 2271,
+    "average_cadence": 60.0,
+    "device_watts": true,
+    "average_watts": 168.7,
+    "average_heartrate": 123.6,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304857031494436076,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 13149409450,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1860,
+    "moving_time": 1776,
+    "start_date": "2024-12-19T14:36:13Z",
+    "start_date_local": "2024-12-19T06:36:13Z",
+    "distance": 11442.6,
+    "start_index": 611,
+    "end_index": 2394,
+    "average_cadence": 56.5,
+    "device_watts": true,
+    "average_watts": 171.1,
+    "average_heartrate": 116.9,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3428055469181754218,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16552917991,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 2042,
+    "moving_time": 1669,
+    "start_date": "2025-11-24T13:46:03Z",
+    "start_date_local": "2025-11-24T05:46:03Z",
+    "distance": 11442.6,
+    "start_index": 561,
+    "end_index": 2233,
+    "average_cadence": 59.6,
+    "device_watts": true,
+    "average_watts": 172.8,
+    "average_heartrate": 113.7,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3354247835626718592,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 14380153374,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 2657,
+    "moving_time": 1292,
+    "start_date": "2025-05-04T17:51:03Z",
+    "start_date_local": "2025-05-04T10:51:03Z",
+    "distance": 11442.6,
+    "start_index": 459,
+    "end_index": 1769,
+    "average_cadence": 54.5,
+    "device_watts": true,
+    "average_watts": 123.4,
+    "average_heartrate": 116.7,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3409203698241779934,
+    "resource_state": 2,
+    "name": "Gas Works to Hunts Point",
+    "activity": {
+      "id": 16020797446,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 3167,
+    "moving_time": 1594,
+    "start_date": "2025-10-03T12:54:21Z",
+    "start_date_local": "2025-10-03T05:54:21Z",
+    "distance": 11442.6,
+    "start_index": 522,
+    "end_index": 2121,
+    "average_cadence": 60.9,
+    "device_watts": true,
+    "average_watts": 96.4,
+    "average_heartrate": 108.6,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 20278467,
+      "resource_state": 2,
+      "name": "Gas Works to Hunts Point",
+      "activity_type": "Ride",
+      "distance": 11442.6,
+      "average_grade": 0.0,
+      "maximum_grade": 13.4,
+      "elevation_high": 6.8,
+      "elevation_low": -36.6,
+      "start_latlng": [
+        47.647002,
+        -122.335997
+      ],
+      "end_latlng": [
+        47.643332,
+        -122.205875
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Seattle",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]
