@@ -38,18 +38,15 @@ def main() -> None:
            power (e.g. coasting, technical issues) and statistical outliers detected by comparing each
            effort's speed-per-watt against the segment average. You control the thresholds.
 
-        3. **Segment Comparison** — Spider charts and head-to-head tables let you compare your bikes across
+        3. **Bike Comparison** —
+               
+           **Segmented:** Spider charts and head-to-head tables let you compare your bikes across
            segment types (sprints, flats, climbs, descents). Which bike is strongest on which terrain?
+               
+           **Overall:** Head to head residual analysis to compare bikes controlling for segment type and other factors.
+           Which bike is strongest overall?
 
-        4. **Bike Head to Head** — A doubly-robust causal inference model estimates the true speed
-           difference between two bikes, controlling for segment type, gradient, and weather. This is the
-           closest we can get to a controlled experiment without a wind tunnel.
-
-        5. **CdA Estimation** — Using flat-segment efforts and basic physics, we back-calculate an estimate
-           of your aerodynamic drag coefficient (CdA) per bike. A lower CdA means a more aerodynamic
-           position. *(Work in progress)*
-
-        6. **Final Conclusions** — A summary of findings across all analyses. *(Coming soon)*
+        4. **Final Conclusions** — A summary of findings across all analyses. *(Coming soon)*
 
         ---
 

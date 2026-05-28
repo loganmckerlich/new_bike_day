@@ -21,33 +21,17 @@ from src.analytics import (
     filter_outliers_by_power_speed,
     outlier_detection_frames,
 )
-
-# ── Unit helpers ──────────────────────────────────────────────────────────────
-
-def _use_metric() -> bool:
-    return st.session_state.get("use_metric", True)
-
-
-def _spd_label() -> str:
-    return "km/h" if _use_metric() else "mph"
-
-
-def _convert_speed(kmh: float) -> float:
-    return kmh if _use_metric() else kmh * 0.621371
+from app.app_pages._ui_helpers import (
+    use_metric as _use_metric,
+    spd_label as _spd_label,
+    convert_speed as _convert_speed,
+    gear_label as _gear_label_fn,
+    compute_speed_kmh as _compute_speed_kmh,
+)
 
 
 def _gear_label(gear_id: str | None, bikes: dict[str, str]) -> str:
-    if gear_id is None:
-        return "Unknown"
-    return bikes.get(str(gear_id), str(gear_id))
-
-
-def _compute_speed_kmh(df: pd.DataFrame, distance_m: float | None = None) -> pd.Series:
-    safe_time = df["moving_time"].replace(0, pd.NA)
-    if distance_m is not None and distance_m > 0:
-        return (distance_m / safe_time * 3.6).where(safe_time.notna())
-    dist = df.get("distance", pd.Series(dtype=float))
-    return (dist / safe_time * 3.6).where(safe_time.notna() & dist.notna())
+    return _gear_label_fn(gear_id, bikes)
 
 
 # ── Page ──────────────────────────────────────────────────────────────────────

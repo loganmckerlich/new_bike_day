@@ -13,6 +13,9 @@ if str(_REPO_ROOT) not in sys.path:
 
 import app.app_pages.bike_comparison_overall as _overall
 import app.app_pages.bike_comparison_segmented as _segmented
+from app.app_pages._ui_helpers import (
+    gear_label,
+)
 
     # ── Page title ────────────────────────────────────────────────────────────
 
@@ -40,8 +43,21 @@ if _segments is None or (hasattr(_segments, "empty") and _segments.empty):
 # ── Tabs ──────────────────────────────────────────────────────────────────────
 tab_segmented, tab_overall = st.tabs(["📍 Segmented","📈 Overall"])
 
+bikes = st.session_state.get("bikes", {})
+efforts = st.session_state.get("cleaned_efforts")
+watt_efforts = efforts[efforts["average_watts"].notna()].copy()
+watt_efforts["bike_name"] = watt_efforts["gear_id"].map(lambda g: gear_label(g, bikes))
+available_bikes = sorted(watt_efforts["bike_name"].dropna().unique().tolist())
+bikes_to_compare = st.sidebar.multiselect(
+            "Bikes to compare",
+            options=available_bikes,
+            default=available_bikes[:2],
+            max_selections=5,
+            help="Select 2–5 bikes to compare.",
+        )
+
 with tab_segmented:
-    _segmented.show()
+    _segmented.show(bikes_to_compare)
 
 with tab_overall:
-    _overall.show()
+    _overall.show(bikes_to_compare)

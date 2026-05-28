@@ -138,7 +138,11 @@ class _DevSession:
             data = json.loads((_DEV_DIR / "athlete.json").read_text())
 
         elif path == "/athlete/activities":
-            data = [] if page > 1 else json.loads((_DEV_DIR / "athlete_activities.json").read_text())
+            if page == 1:
+                data = json.loads((_DEV_DIR / "athlete_activities.json").read_text())
+            else:
+                f = _DEV_DIR / f"athlete_activities_p{page}.json"
+                data = json.loads(f.read_text()) if f.exists() else []
 
         elif path == "/segments/starred":
             data = [] if page > 1 else json.loads((_DEV_DIR / "segments_starred.json").read_text())
@@ -167,7 +171,7 @@ class _DevSession:
 
 # Segment classification thresholds
 # Sprint threshold updated to 400 m to match spider chart category spec.
-_SPRINT_MAX_DISTANCE: float = 400.0   # metres
+_SPRINT_MAX_DISTANCE: float = 1000.0   # metres
 _FLAT_MIN_GRADE: float = -0.5         # percent
 _FLAT_MAX_GRADE: float = 0.5          # percent
 _ASCENT_MIN_GRADE: float = 2.0        # percent
@@ -198,21 +202,21 @@ def _classify_segment(
     dist = distance if distance is not None else float("inf")
 
     if dist < _SPRINT_MAX_DISTANCE:
-        if grade < -1.0:
+        if grade < -0.5:
             return "sprint", "sprint_downhill"
-        if grade > 1.0:
+        if grade > 0.5:
             return "sprint", "sprint_uphill"
         return "sprint", "sprint_flat"
 
     if _FLAT_MIN_GRADE <= grade <= _FLAT_MAX_GRADE:
-        if dist < 1000.0:
+        if dist < 3000.0:
             return "flat", "flat_short"
         return "flat", "flat_long"
 
     if grade > _ASCENT_MIN_GRADE:
-        if grade <= 5.0:
+        if grade <= 3.0:
             return "ascent", "ascent_shallow"
-        if grade <= 9.0:
+        if grade <= 6.0:
             return "ascent", "ascent_moderate"
         return "ascent", "ascent_steep"
 
@@ -221,7 +225,7 @@ def _classify_segment(
             return "descent", "descent_gentle"
         return "descent", "descent_steep"
 
-    if dist < 1000.0:
+    if dist < 3000.0:
         return "flat", "flat_short"
     return "flat", "flat_long"
 

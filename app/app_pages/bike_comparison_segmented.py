@@ -25,6 +25,20 @@ from src.analytics import (
     power_normalized_profile,
     outlier_detection_frames,
 )
+from src.bike_delta import power_overlap_ok, segment_power_overlap_summary
+from app.app_pages._ui_helpers import (
+    use_metric as _use_metric,
+    spd_label as _spd_label,
+    dist_label as _dist_label,
+    elev_label as _elev_label,
+    convert_speed as _convert_speed,
+    convert_dist_m as _convert_dist_m,
+    convert_elev_m as _convert_elev_m,
+    fmt_duration as _fmt_duration,
+    compute_speed_kmh as _compute_speed_kmh,
+    has_col as _has_col,
+    gear_label,
+)
 
 # ── Module-level placeholders (refreshed inside show()) ──────────────────────
 efforts: pd.DataFrame | None = None
@@ -67,63 +81,6 @@ TYPE_DETAIL_LABELS: dict[str, str] = {
 _COLOR_SEQ: list[str] = px.colors.qualitative.Set2
 _SPIDER_POLYGON_LINE_WIDTH: int = 3
 _SPIDER_POLYGON_FILL_ALPHA: float = 0.20
-
-# ── Unit helpers ─────────────────────────────────────────────────────────────
-
-def _use_metric() -> bool:
-    return st.session_state.get("use_metric", True)
-
-
-def _spd_label() -> str:
-    return "km/h" if _use_metric() else "mph"
-
-
-def _dist_label() -> str:
-    return "km" if _use_metric() else "mi"
-
-
-def _elev_label() -> str:
-    return "m" if _use_metric() else "ft"
-
-
-def _convert_speed(kmh: float) -> float:
-    """Convert km/h to display unit."""
-    return kmh if _use_metric() else kmh * 0.621371
-
-
-def _convert_dist_m(meters: float) -> float:
-    """Convert metres to display unit (km or mi)."""
-    return meters / 1000 if _use_metric() else meters / 1609.34
-
-
-def _convert_elev_m(meters: float) -> float:
-    """Convert metres to display unit (m or ft)."""
-    return meters if _use_metric() else meters * 3.28084
-
-
-# ── Helpers ───────────────────────────────────────────────────────────────────
-
-def _gear_label(gear_id: str | None) -> str:
-    if gear_id is None:
-        return "Unknown"
-    return bikes.get(str(gear_id), str(gear_id))
-
-
-def _fmt_duration(seconds: float) -> str:
-    total = int(round(seconds))
-    return f"{total // 60}:{total % 60:02d}"
-
-
-def _compute_speed_kmh(df: pd.DataFrame, distance_m: float | None = None) -> pd.Series:
-    safe_time = df["moving_time"].replace(0, pd.NA)
-    if distance_m is not None and distance_m > 0:
-        return (distance_m / safe_time * 3.6).where(safe_time.notna())
-    dist = df.get("distance", pd.Series(dtype=float))
-    return (dist / safe_time * 3.6).where(safe_time.notna() & dist.notna())
-
-
-def _has_col(df: pd.DataFrame, col: str) -> bool:
-    return col in df.columns and df[col].notna().any()
 
 
 def _get_segment_geo(segment_id: int) -> dict:
@@ -287,7 +244,7 @@ def _render_elevation_profile(geo: dict, seg_distance_m: float) -> None:
 
 
 # ── Public entry point ───────────────────────────────────────────────────────
-def show() -> None:
+def show(bikes_to_compare) -> None:
     """Render the segmented bike comparison analysis."""
     global efforts, segments, bikes, access_token
     efforts = st.session_state.get("cleaned_efforts")
@@ -307,7 +264,7 @@ def show() -> None:
         st.warning("No efforts with power data found. Ensure your rides are recorded with a power meter.")
         st.stop()
 
-    watt_efforts["bike_name"] = watt_efforts["gear_id"].map(_gear_label)
+    watt_efforts["bike_name"] = watt_efforts["gear_id"].map(lambda g: gear_label(g, bikes))
 
     # segment_type and related columns are already merged in by data_cleaning.py;
     # merge again only for columns that may be missing (e.g. total_elevation_gain).
@@ -354,14 +311,6 @@ def show() -> None:
             "Use subcategories in spider charts",
             value=False,
             help="Show spider charts by segment subcategory instead of parent category.",
-        )
-
-        bikes_to_compare = st.multiselect(
-            "Bikes to compare",
-            options=available_bikes,
-            default=available_bikes[:2],
-            max_selections=5,
-            help="Select 2–5 bikes to compare.",
         )
 
     # ── Read shared analysis params from session state (set on Data Cleaning page) ─
@@ -589,6 +538,18 @@ def show() -> None:
                     else (display["distance"] / 1609.34).round(2)
                 )
                 display["average_grade"] = display["average_grade"].round(1)
+
+                # ── KS power-overlap badge ─────────────────────────────────────
+                # Requires ≥ 2 bikes selected; only checks the first pair for display.
+                if len(bikes_to_compare) >= 2:
+                    _bike_a, _bike_b = bikes_to_compare[0], bikes_to_compare[1]
+                    _ks_labels: list[str] = []
+                    for _sid in display["segment_id"]:
+                        _seg_eff = selected_efforts[selected_efforts["segment_id"] == _sid]
+                        _ok = power_overlap_ok(_seg_eff, _bike_a, _bike_b)
+                        _ks_labels.append("✅" if _ok else "⚠️")
+                    display["Power overlap"] = _ks_labels
+
                 display.insert(0, "Select", False)
                 display = display.rename(
                     columns={
@@ -599,6 +560,10 @@ def show() -> None:
                     }
                 )
 
+                _disabled_cols = ["Segment", "Subtype", *all_rides_cols, _dist_col, "Grade (%)"]
+                if "Power overlap" in display.columns:
+                    _disabled_cols.append("Power overlap")
+
                 edited = st.data_editor(
                     display,
                     column_config={
@@ -608,7 +573,7 @@ def show() -> None:
                     hide_index=True,
                     width="stretch",
                     key=f"table_{seg_type}",
-                    disabled=["Segment", "Subtype", *all_rides_cols, _dist_col, "Grade (%)"],
+                    disabled=_disabled_cols,
                 )
 
 
