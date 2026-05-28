@@ -1,3 +1,5 @@
+# note i swapped from spline to GradientBoostingRegressor. this might mess witht he fitness trend concept of baseline
+
 """Bike speed delta estimation — segment-based statistical pipeline.
 
 Implements the 5-phase guide from the Bike Speed Delta Estimation PDF:
@@ -190,19 +192,13 @@ def fit_baseline_model(
 
     Returns
     -------
-    model : sklearn.ensemble.model
+    model : sklearn.ensemble.GradientBoostingRegressor
         Fitted regression model.
-
-    Raises
-    ------
-    ValueError
-        When the reference bike has too few efforts to fit the spline.
     """
 
     bike_df = df[df["bike_name"] == ref_bike_name].dropna(
         subset=["ride_index", "average_watts", "doy_sin", "doy_cos", "speed_per_cbrt_watt"]
     ).copy()
-
 
     X = bike_df[["average_watts","doy_sin","doy_cos"]]
     y = bike_df["speed_per_cbrt_watt"].values
