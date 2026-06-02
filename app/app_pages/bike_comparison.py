@@ -56,8 +56,17 @@ bikes_to_compare = st.sidebar.multiselect(
             help="Select 2–5 bikes to compare.",
         )
 
+min_efforts = st.sidebar.number_input(
+    "Min efforts per bike per segment",
+    min_value=1,
+    max_value=20,
+    value=3,
+    step=1,
+    help="Both bikes must have at least this many power-measured efforts on a segment.",
+)
+
 with tab_segmented:
-    _segmented.show(bikes_to_compare)
+    _segmented.show(bikes_to_compare, min_efforts)
 
 with tab_overall:
-    _overall.show(bikes_to_compare)
+    _overall.show(bikes_to_compare, min_efforts)

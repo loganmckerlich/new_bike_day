@@ -1,21 +1,20 @@
-"""Overall bike comparison page — aggregate speed-delta estimation.
+"""Overall bike comparison — XGBoost counterfactual speed pipeline.
 
-Implements the Bike Speed Delta Estimation pipeline (PDF guide):
-
-    Phase 1: Data quality overview
-    Phase 2: Spline baseline model (fit on reference bike, project onto all)
-    Phase 3: KS power-overlap filter per segment
-    Phase 4: Per-segment OLS delta estimation
-    Phase 5: Inverse-variance weighted summary, forest plot, interpretability
-
-Key design: the baseline is fit on the reference bike only to avoid absorbing
-the bike effect into the fitness/seasonal trend.  Residuals after baseline
-removal are what we attribute to the bike.
+Method
+------
+1. Train an XGBoost model to predict speed from power, grade, and seasonal
+   features using only Bike A's efforts.
+2. Apply that model to Bike B's effort features to get a counterfactual speed
+   ("how fast would Bike A have gone in these conditions?").
+3. Residual = actual Bike B speed − predicted → positive means B is faster.
+4. Repeat steps 1–3 with A and B swapped (symmetry check).
+5. Aggregate both directions: combined = (fwd_mean − rev_mean) / 2.
 """
 
 from __future__ import annotations
 
 import sys
+from itertools import combinations
 from pathlib import Path
 
 import numpy as np
@@ -23,6 +22,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
@@ -30,25 +30,34 @@ if str(_REPO_ROOT) not in sys.path:
 
 from src.bike_delta import (
     prepare_delta_dataset,
-    get_paired_segments,
-    fit_baseline_model,
-    compute_residuals,
-    segment_power_overlap_summary,
-    per_segment_delta,
-    weighted_delta_summary,
-    compute_i2,
-    delta_to_sec_per_km,
+    XGB_FEATURES,
+    XGB_WATT_FEATURES,
+    fit_xgb_speed_model,
+    apply_model_to_bike,
+    fit_xgb_watt_model,
+    apply_watt_model_to_bike,
+    aggregate_paired_delta,
 )
 from src.analytics import filter_outliers_by_power_speed
-from src.plot_colors import to_rgba
-from app.app_pages._ui_helpers import (
-    use_metric as _use_metric,
-    spd_label as _spd_label,
-    convert_speed as _convert_speed,
-    gear_label,
-)
+from app.app_pages._ui_helpers import gear_label, use_metric, spd_label
 
-_COLOR_SEQ: list[str] = px.colors.qualitative.Set2
+_COLOR_A = "#4C72B0"
+_COLOR_B = "#DD8452"
+_FASTER_COLOR = "#2ca02c"
+_SLOWER_COLOR = "#d62728"
+
+_SPEED_DISPLAY_COLS = ["speed_kmh", "predicted_speed_kmh", "speed_residual"]
+
+
+def _scale_speed_cols(df: pd.DataFrame, scale: float) -> pd.DataFrame:
+    """Return a copy of *df* with speed columns multiplied by *scale* for display."""
+    if scale == 1.0:
+        return df
+    out = df.copy()
+    for col in _SPEED_DISPLAY_COLS:
+        if col in out.columns:
+            out[col] = out[col] * scale
+    return out
 
 
 # ── Dataset builder (cached in session state) ─────────────────────────────────
@@ -59,7 +68,6 @@ def _build_delta_df(
     bikes: dict[str, str],
     z_threshold: float,
 ) -> pd.DataFrame:
-    """Prepare and outlier-filter the delta dataset, cached in session state."""
     shape_key = f"{len(efforts)}_{len(segments)}_{len(bikes)}_{z_threshold}"
     cached = st.session_state.get("_overall_delta_df")
     if cached is not None and st.session_state.get("_overall_shape_key") == shape_key:
@@ -74,14 +82,378 @@ def _build_delta_df(
     return df
 
 
+def _model_cache_key(bike_name: str, mode: str = "speed") -> str:
+    return f"_xgb_{mode}_model__{bike_name}"
+
+
+def _date_split_bike_df(
+    df: pd.DataFrame,
+    bike_name: str,
+    train_frac: float = 0.8,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Time-based 80/20 train/test split for one bike's efforts.
+
+    Sorts the bike's efforts chronologically and reserves the last *1-train_frac*
+    fraction as a holdout. Other bikes' rows are untouched in df_train_scope.
+
+    Returns
+    -------
+    df_train_scope : full df but bike_name rows limited to the training period
+    df_holdout     : holdout rows for bike_name only (for out-of-sample stats)
+    """
+    bike_mask = df["bike_name"] == bike_name
+    bike_df = df[bike_mask].sort_values("start_date")
+    n = len(bike_df)
+    split_idx = max(1, int(n * train_frac))
+    train_idx = bike_df.index[:split_idx]
+    test_idx = bike_df.index[split_idx:]
+    df_train_scope = df.loc[~bike_mask | df.index.isin(train_idx)].copy()
+    df_holdout = df.loc[df.index.isin(test_idx)].copy()
+    return df_train_scope, df_holdout
+
+def _plot_training_data(
+    train_df: pd.DataFrame,
+    bike_name: str,
+    x_col: str = "average_watts",
+    y_col: str = "speed_kmh",
+    x_label: str = "Average power (W)",
+    y_label: str = "Speed (km/h)",
+) -> go.Figure:
+    fig = px.scatter(
+        train_df.dropna(subset=[x_col, y_col, "average_grade"]),
+        x=x_col,
+        y=y_col,
+        color="average_grade",
+        color_continuous_scale="RdYlGn_r",
+        labels={
+            x_col: x_label,
+            y_col: y_label,
+            "average_grade": "Grade (%)",
+        },
+        title=f"{bike_name} — training data",
+    )
+    fig.update_traces(marker_size=7, marker_opacity=0.7)
+    fig.update_layout(height=320, plot_bgcolor="rgba(0,0,0,0)")
+    return fig
+
+
+def _plot_actual_vs_predicted(
+    df: pd.DataFrame,
+    bike_name: str,
+    color: str,
+    target_col: str = "speed_kmh",
+    pred_col: str = "predicted_speed_kmh",
+    unit: str = "km/h",
+):
+    valid = df.dropna(subset=[target_col, pred_col])
+    r2 = r2_score(valid[target_col], valid[pred_col])
+
+    lo = float(valid[[target_col, pred_col]].min().min())
+    hi = float(valid[[target_col, pred_col]].max().max())
+
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=[lo, hi], y=[lo, hi],
+        mode="lines",
+        line={"color": "grey", "dash": "dash", "width": 1.5},
+        name="Perfect fit",
+        hoverinfo="skip",
+    ))
+    fig.add_trace(go.Scatter(
+        x=valid[pred_col],
+        y=valid[target_col],
+        mode="markers",
+        marker={"color": color, "size": 7, "opacity": 0.65},
+        name=bike_name,
+        hovertemplate=f"Predicted: %{{x:.1f}} {unit}<br>Actual: %{{y:.1f}} {unit}<extra></extra>",
+    ))
+    fig.update_layout(
+        xaxis_title=f"Predicted ({unit})",
+        yaxis_title=f"Actual ({unit})",
+        title=f"Model fit — R² = {r2:.3f}",
+        height=320,
+        plot_bgcolor="rgba(0,0,0,0)",
+    )
+    return fig, r2
+
+
+def _plot_feature_importance(model, color: str, features: list[str] | None = None, target_label: str = "speed") -> go.Figure:
+    feat_list = features if features is not None else XGB_FEATURES
+    feat_df = (
+        pd.DataFrame({"feature": feat_list, "importance": model.feature_importances_})
+        .sort_values("importance")
+    )
+    fig = go.Figure(go.Bar(
+        x=feat_df["importance"],
+        y=feat_df["feature"],
+        orientation="h",
+        marker_color=color,
+    ))
+    fig.update_layout(
+        xaxis_title="Feature importance (gain)",
+        yaxis_title="",
+        title=f"What drives {target_label} predictions?",
+        height=280,
+        plot_bgcolor="rgba(0,0,0,0)",
+        margin={"l": 120},
+    )
+    return fig
+
+
+def _plot_target_vs_input(
+    df: pd.DataFrame,
+    bike_name: str,
+    color: str,
+    x_col: str = "average_watts",
+    y_col: str = "speed_kmh",
+    pred_col: str = "predicted_speed_kmh",
+    x_label: str = "Average power (W)",
+    y_label: str = "Speed (km/h)",
+    pred_fmt: str = ".1f",
+) -> go.Figure:
+    """Scatter of actual + predicted target vs the primary input variable."""
+    valid = df.dropna(subset=[x_col, y_col, pred_col])
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=valid[x_col],
+        y=valid[y_col],
+        mode="markers",
+        name="Actual",
+        marker={"color": color, "size": 7, "opacity": 0.55},
+        hovertemplate=f"{x_label}: %{{x:.0f}}<br>Actual {y_label}: %{{y:{pred_fmt}}}<extra></extra>",
+    ))
+    sorted_valid = valid.sort_values(x_col)
+    fig.add_trace(go.Scatter(
+        x=sorted_valid[x_col],
+        y=sorted_valid[pred_col],
+        mode="markers",
+        name="XGB predicted",
+        marker={"color": "black", "size": 5, "opacity": 0.35, "symbol": "cross"},
+        hovertemplate=f"{x_label}: %{{x:.0f}}<br>Predicted {y_label}: %{{y:{pred_fmt}}}<extra></extra>",
+    ))
+    fig.update_layout(
+        xaxis_title=x_label,
+        yaxis_title=y_label,
+        title=f"{y_label} vs {x_label} — {bike_name}",
+        height=320,
+        plot_bgcolor="rgba(0,0,0,0)",
+        legend={"orientation": "h", "yanchor": "bottom", "y": -0.3},
+    )
+    return fig
+
+
+def _model_stats(df: pd.DataFrame, target_col: str = "speed_kmh", pred_col: str = "predicted_speed_kmh") -> dict:
+    """Compute basic model statistics from a dataframe with actual/predicted values."""
+    valid = df.dropna(subset=[target_col, pred_col])
+    y, y_hat = valid[target_col].values, valid[pred_col].values
+    return {
+        "n": len(valid),
+        "r2": r2_score(y, y_hat),
+        "rmse": mean_squared_error(y, y_hat),
+        "mae": mean_absolute_error(y, y_hat),
+    }
+
+
+def _render_model_stats(stats: dict, unit: str = "km/h") -> None:
+    """Render a compact 4-metric row for a trained model."""
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("R\u00b2", f"{stats['r2']:.3f}", help="Fraction of variance explained (20% holdout, sorted by date).")
+    c2.metric("RMSE", f"{stats['rmse']:.3f} {unit}", help="Root-mean-squared error on held-out efforts.")
+    c3.metric("MAE", f"{stats['mae']:.3f} {unit}", help="Mean absolute error on held-out efforts.")
+    c4.metric("Efforts (n)", str(stats["n"]), help="Number of held-out efforts used to compute these stats.")
+
+
+def _render_model_details_expander(
+    model,
+    train_df: pd.DataFrame,
+    eval_df: pd.DataFrame,
+    bike_name: str,
+    color: str,
+    eval_label: str,
+    train_x_col: str,
+    train_y_col: str,
+    train_x_lbl: str,
+    train_y_lbl: str,
+    target_col: str,
+    pred_col: str,
+    features: list[str],
+    target_label: str,
+    unit: str,
+    expanded: bool = False,
+) -> float:
+    """Render model viz + stats inside an expander. Returns R²."""
+    with st.expander(f"Model details \u2014 {bike_name}", expanded=expanded):
+        col1, col2 = st.columns(2)
+        with col1:
+            st.plotly_chart(
+                _plot_training_data(train_df, bike_name, train_x_col, train_y_col, train_x_lbl, train_y_lbl),
+                width="stretch",
+            )
+            st.caption(
+                f"Each dot is one {bike_name} training effort (oldest 80%), coloured by segment grade."
+            )
+        with col2:
+            fig_fit, r2 = _plot_actual_vs_predicted(eval_df, bike_name, color, target_col, pred_col, unit)
+            st.plotly_chart(fig_fit, width="stretch")
+            st.caption(f"R\u00b2\u00a0= {r2:.3f} ({eval_label}). Points close to the diagonal = good fit.")
+        st.plotly_chart(
+            _plot_target_vs_input(
+                train_df, bike_name, color,
+                x_col=train_x_col, y_col=target_col, pred_col=pred_col,
+                x_label=train_x_lbl, y_label=train_y_lbl,
+            ),
+            width="stretch",
+        )
+        st.caption(
+            f"Actual {bike_name} training efforts (coloured) vs the XGB model\u2019s prediction (crosses). "
+            "Scatter is real variability from grade, season, and conditions."
+        )
+        _render_model_stats(_model_stats(eval_df, target_col, pred_col), unit)
+        st.plotly_chart(_plot_feature_importance(model, color, features, target_label), width="stretch")
+        st.caption(
+            f"Which features matter most for predicting {target_label}? "
+            "Grade and the primary input (power or speed) typically dominate."
+        )
+    return r2
+
+
+def _plot_counterfactual_scatter(
+    pred_df: pd.DataFrame,
+    bike_a: str,
+    bike_b: str,
+    target_col: str = "speed_kmh",
+    pred_col: str = "predicted_speed_kmh",
+    residual_col: str = "speed_residual",
+    unit: str = "km/h",
+    b_better_label: str = "{b} faster",
+    a_better_label: str = "{a} faster",
+    title: str = "Counterfactual: how fast would {a} have gone?",
+    x_axis_label: str = "Predicted — {a} model ({unit})",
+    y_axis_label: str = "Actual — {b} ({unit})",
+) -> go.Figure:
+    valid = pred_df.dropna(subset=[target_col, pred_col])
+    lo = float(valid[[target_col, pred_col]].min().min())
+    hi = float(valid[[target_col, pred_col]].max().max())
+
+    b_better = valid[valid[residual_col] >= 0]
+    a_better = valid[valid[residual_col] < 0]
+
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=[lo, hi], y=[lo, hi],
+        mode="lines",
+        line={"color": "grey", "dash": "dash", "width": 1.5},
+        name="Equal (y = x)",
+        hoverinfo="skip",
+    ))
+    for subset, label, c in [
+        (b_better, b_better_label.format(a=bike_a, b=bike_b), _FASTER_COLOR),
+        (a_better, a_better_label.format(a=bike_a, b=bike_b), _SLOWER_COLOR),
+    ]:
+        if subset.empty:
+            continue
+        fig.add_trace(go.Scatter(
+            x=subset[pred_col],
+            y=subset[target_col],
+            mode="markers",
+            name=label,
+            marker={"color": c, "size": 7, "opacity": 0.7},
+            hovertemplate=(
+                f"Predicted ({bike_a} model): %{{x:.1f}} {unit}<br>"
+                f"Actual ({bike_b}): %{{y:.1f}} {unit}<br>"
+                f"Residual: %{{customdata:.2f}} {unit}<extra></extra>"
+            ),
+            customdata=subset[residual_col].values,
+        ))
+    fig.update_layout(
+        xaxis_title=x_axis_label.format(a=bike_a, b=bike_b, unit=unit),
+        yaxis_title=y_axis_label.format(a=bike_a, b=bike_b, unit=unit),
+        title=title.format(a=bike_a, b=bike_b),
+        height=340,
+        plot_bgcolor="rgba(0,0,0,0)",
+        legend={"orientation": "h", "yanchor": "bottom", "y": -0.3},
+    )
+    return fig
+
+
+def _plot_residuals(
+    pred_df: pd.DataFrame,
+    bike_a: str,
+    bike_b: str,
+    residual_col: str = "speed_residual",
+    unit: str = "km/h",
+    positive_means: str = "{b} faster",
+) -> go.Figure:
+    resids = pred_df[residual_col].dropna()
+    mean_r = float(resids.mean())
+    fig = go.Figure()
+    fig.add_trace(go.Histogram(
+        x=resids,
+        nbinsx=25,
+        marker_color=_FASTER_COLOR if mean_r >= 0 else _SLOWER_COLOR,
+        opacity=0.75,
+        name="Efforts",
+    ))
+    fig.add_vline(x=mean_r, line_dash="dash", line_color="black", line_width=2,
+                  annotation_text=f"Mean: {mean_r:+.2f} {unit}",
+                  annotation_position="top right")
+    fig.add_vline(x=0, line_color="grey", line_width=1)
+    pos_label = positive_means.format(a=bike_a, b=bike_b)
+    fig.update_layout(
+        xaxis_title=f"Residual ({unit})  —  positive = {pos_label}",
+        yaxis_title="Number of efforts",
+        title="Distribution of differences",
+        height=300,
+        plot_bgcolor="rgba(0,0,0,0)",
+    )
+    return fig
+
+
+def _plot_aggregate(summary: dict, bike_a: str, bike_b: str, unit: str = "km/h", advantage_label: str = "Speed advantage") -> go.Figure:
+    fwd = summary["fwd_mean"]
+    rev = -summary["rev_mean"]   # negate so positive = B better
+    combined = summary["combined"]
+
+    labels = [
+        f"A→B  (model A on {bike_b})",
+        f"B→A  (model B on {bike_a}, negated)",
+        "Combined (average)",
+    ]
+    values = [fwd, rev, combined]
+    colors = [_FASTER_COLOR if v >= 0 else _SLOWER_COLOR for v in values]
+    colors[-1] = "#7f7f7f"
+
+    ci_margin = (combined - summary["ci_low"]) if not np.isnan(summary["ci_low"]) else None
+
+    fig = go.Figure()
+    for i, (label, value, color) in enumerate(zip(labels, values, colors)):
+        err = {"type": "data", "array": [ci_margin], "visible": True} if (i == 2 and ci_margin is not None) else None
+        fig.add_trace(go.Bar(
+            x=[label],
+            y=[value],
+            marker_color=color,
+            error_y=err,
+            name=label,
+            hovertemplate=f"{label}: %{{y:+.2f}} {unit}<extra></extra>",
+        ))
+    fig.add_hline(y=0, line_color="grey", line_width=1)
+    fig.update_layout(
+        yaxis_title=f"{advantage_label} of {bike_b} over {bike_a} ({unit})",
+        showlegend=False,
+        height=320,
+        plot_bgcolor="rgba(0,0,0,0)",
+    )
+    return fig
+
+
 # ── Main entry point ──────────────────────────────────────────────────────────
 
-def show(bikes_to_compare) -> None:
+def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
     """Render the overall bike comparison analysis."""
 
     # ── Guard: require loaded data ────────────────────────────────────────────
-    efforts: pd.DataFrame | None = st.session_state.get("cleaned_efforts")
-    segments: pd.DataFrame | None = st.session_state.get("segments")
+    efforts = st.session_state.get("cleaned_efforts")
+    segments = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
     z_threshold: float = float(st.session_state.get("outlier_z_threshold", 2.0))
 
@@ -90,7 +462,7 @@ def show(bikes_to_compare) -> None:
         st.stop()
 
     if segments is None or segments.empty:
-        st.warning("No starred segments found.  Star segments on Strava and reload from Step 1.")
+        st.warning("No starred segments found. Star segments on Strava and reload from Step 1.")
         st.stop()
 
     power_efforts = efforts[efforts["average_watts"].notna()].copy()
@@ -98,77 +470,9 @@ def show(bikes_to_compare) -> None:
         st.warning("No efforts with power data found.")
         st.stop()
 
-    # ── Sidebar controls ──────────────────────────────────────────────────────
-    with st.sidebar:
-        st.markdown("### 📊 Overall settings")
-
-        _all_bike_names = sorted(
-            power_efforts["gear_id"]
-            .dropna()
-            .map(lambda g: gear_label(g, bikes))
-            .unique()
-            .tolist()
-        )
-
-        if len(_all_bike_names) < 2:
-            st.warning("Need at least 2 bikes with power data.")
-            st.stop()
-
-        if len(bikes_to_compare) < 2:
-            st.warning("Select at least 2 bikes.")
-            st.stop()
-
-        ref_bike = st.selectbox(
-            "Reference bike (baseline)",
-            options=bikes_to_compare,
-            index=0,
-            help=(
-                "The baseline fitness/seasonal trend is fit on this bike only. "
-                "Choose the bike with the most efforts and most stable training period."
-            ),
-        )
-
-        spline_df_choice = st.radio(
-            "Spline flexibility (df)",
-            options=[3, 5, 7],
-            index=1,
-            horizontal=True,
-            help=(
-                "Degrees of freedom for the time-trend spline. "
-                "Higher = more flexible fitness trend. "
-                "Pick the flattest residual-vs-time result (Exp 2 notebook)."
-            ),
-        )
-
-        min_efforts = st.number_input(
-            "Min efforts per bike per segment",
-            min_value=1,
-            max_value=20,
-            value=3,
-            step=1,
-            help="Both bikes must have ≥ this many power efforts on a segment.",
-        )
-
-        ks_threshold = st.slider(
-            "KS power-overlap p-threshold",
-            min_value=0.01,
-            max_value=0.20,
-            value=0.05,
-            step=0.01,
-            help=(
-                "Segments where power distributions differ significantly "
-                "(KS p < threshold) are flagged ⚠️."
-            ),
-        )
-
-        ref_power_w = st.number_input(
-            "Reference power for interpretation (W)",
-            min_value=50,
-            max_value=600,
-            value=200,
-            step=10,
-            help="Used to convert the delta to seconds-per-km.",
-        )
+    if len(bikes_to_compare) < 2:
+        st.warning("Select at least 2 bikes in the sidebar.")
+        st.stop()
 
     # ── Build analysis dataset ────────────────────────────────────────────────
     try:
@@ -179,446 +483,375 @@ def show(bikes_to_compare) -> None:
 
     df_scope = df[df["bike_name"].isin(bikes_to_compare)].copy()
 
-    # ── Phase 1: Data quality overview ────────────────────────────────────────
-    st.subheader("Phase 1 — Data quality")
-    with st.expander("Segment coverage & effort counts", expanded=False):
-        pivot = (
-            df_scope.groupby(["segment_id", "bike_name"])["effort_id"]
-            .count()
-            .unstack(fill_value=0)
-        )
-        for b in bikes_to_compare:
-            if b not in pivot.columns:
-                pivot[b] = 0
+    # ── Assumptions expander (empty) ──────────────────────────────────────────
+    with st.expander("Assumptions", expanded=False):
+        with open(_REPO_ROOT / "src" / "assumptions.md", "r") as f:
+            st.markdown(f.read())
 
-        seg_names = segments[["segment_id", "name"]].drop_duplicates("segment_id")
-        pivot = pivot.merge(seg_names, left_index=True, right_on="segment_id", how="left")
-        pivot = pivot.set_index("name")[bikes_to_compare]
-
-        col_cov, col_meta = st.columns([3, 1])
-        with col_cov:
-            st.caption("Effort count per segment per bike")
-            fig_heat = go.Figure(
-                go.Heatmap(
-                    z=pivot.values.tolist(),
-                    x=pivot.columns.tolist(),
-                    y=pivot.index.tolist(),
-                    colorscale="Blues",
-                    text=pivot.values.tolist(),
-                    texttemplate="%{text}",
-                    showscale=True,
-                )
-            )
-            fig_heat.update_layout(
-                height=max(200, 40 * len(pivot) + 80),
-                margin={"l": 180, "r": 20, "t": 20, "b": 40},
-                xaxis_title="Bike",
-                yaxis_title="Segment",
-                plot_bgcolor="rgba(0,0,0,0)",
-            )
-            st.plotly_chart(fig_heat, width="stretch")
-
-        with col_meta:
-            paired = get_paired_segments(df_scope, bikes_to_compare, min_efforts=int(min_efforts))
-            st.metric("Total segments", len(pivot))
-            st.metric(f"Paired (≥{int(min_efforts)} each)", len(paired))
-            if len(paired) < 10:
-                st.warning(
-                    f"Only **{len(paired)} paired segments** — CIs will be wide. "
-                    "Ride more segments, or reduce the min-efforts threshold."
-                )
-
-        st.markdown("**Avg power per bike (W)**")
-        pwr_summary = (
-            df_scope.groupby("bike_name")["average_watts"]
-            .describe()[["count", "mean", "std", "min", "50%", "max"]]
-            .rename(columns={"50%": "median"})
-            .round(1)
-        )
-        st.dataframe(pwr_summary, width="stretch")
-
-    # ── Phase 2: Baseline model ────────────────────────────────────────────────
-    st.divider()
-    st.subheader("Phase 2 — Spline baseline model")
-    st.caption(
-        f"Baseline fit on **{ref_bike}** only (spline df={spline_df_choice}). "
-        "Residuals = actual efficiency − predicted trend. "
-        "Reference bike residuals should hover near zero."
-    )
-
-    paired_segs = get_paired_segments(df_scope, bikes_to_compare, min_efforts=int(min_efforts))
-    if not paired_segs:
-        st.warning(
-            f"No segments with ≥{int(min_efforts)} efforts for all selected bikes. "
-            "Adjust the threshold or select different bikes."
-        )
-        st.stop()
-
-    try:
-        with st.spinner("Fitting baseline model…"):
-            model = fit_baseline_model(
-                df_scope, ref_bike
-            )
-            df_resid = compute_residuals(df_scope, model)
-    except ValueError as e:
-        st.error(str(e))
-        st.stop()
-    except ImportError as e:
-        st.error(str(e))
-        st.stop()
-
-    # ── Residuals vs time ──────────────────────────────────────────────────────
-    resid_plot_df = df_resid.dropna(subset=["residual"]).copy()
-    resid_plot_df["_dt"] = pd.to_datetime(
-        resid_plot_df["start_date"], errors="coerce", utc=True
-    ).dt.tz_convert(None)
-
-    fig_resid = go.Figure()
-    for idx, bike in enumerate(bikes_to_compare):
-        bdata = resid_plot_df[resid_plot_df["bike_name"] == bike].sort_values("_dt")
-        color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
-        if bdata.empty:
-            continue
-        fig_resid.add_trace(
-            go.Scatter(
-                x=bdata["_dt"],
-                y=bdata["residual"],
-                mode="markers",
-                name=bike,
-                marker={"color": color, "size": 7, "opacity": 0.7},
-                hovertemplate=(
-                    "Date: %{x|%Y-%m-%d}<br>Residual: %{y:.4f}<extra>" + bike + "</extra>"
-                ),
-            )
-        )
-        # 30-day rolling mean
-        bdata_idx = bdata.set_index("_dt").sort_index()
-        roll = bdata_idx["residual"].rolling("30D", min_periods=3).mean().reset_index()
-        if len(roll) >= 3:
-            fig_resid.add_trace(
-                go.Scatter(
-                    x=roll["_dt"],
-                    y=roll["residual"],
-                    mode="lines",
-                    name=f"{bike} 30d avg",
-                    line={"color": color, "width": 2.5, "dash": "dot"},
-                    hovertemplate="30d avg: %{y:.4f}<extra>" + bike + "</extra>",
-                )
-            )
-
-    fig_resid.add_hline(y=0, line_dash="dash", line_color="grey", line_width=1)
-    fig_resid.update_layout(
-        xaxis_title="Date",
-        yaxis_title="Residual (speed/W¹⁄³)",
-        height=380,
-        plot_bgcolor="rgba(0,0,0,0)",
-        legend={"orientation": "h", "yanchor": "bottom", "y": -0.3},
-    )
-    st.plotly_chart(fig_resid, width="stretch")
-    st.caption(
-        "✅ Good: reference bike residuals near 0 throughout, level shift at bike transition. "
-        "⚠️ Residuals trending up during reference period → increase spline df."
-    )
-
-    with st.expander("Spline df sensitivity (df = 3 / 5 / 7)", expanded=False):
-        st.caption("Pick the df value that gives the flattest within-reference-bike residuals.")
-        _fig_sens = go.Figure()
-        for _dv, _dash in [(3, "dot"), (5, "solid"), (7, "dash")]:
-            try:
-                _m = fit_baseline_model(df_scope, ref_bike)
-                _dr = compute_residuals(df_scope, _m)
-                _rdata = (
-                    _dr[_dr["bike_name"] == ref_bike]
-                    .dropna(subset=["residual"])
-                    .copy()
-                )
-                _rdata["_dt"] = pd.to_datetime(
-                    _rdata["start_date"], errors="coerce", utc=True
-                ).dt.tz_convert(None)
-                _rdata = _rdata.sort_values("_dt")
-                _fig_sens.add_trace(
-                    go.Scatter(
-                        x=_rdata["_dt"],
-                        y=_rdata["residual"],
-                        mode="markers",
-                        name=f"df={_dv}",
-                        marker={"size": 6, "opacity": 0.65},
-                        line={"dash": _dash},
-                    )
-                )
-            except Exception:
-                pass
-        _fig_sens.add_hline(y=0, line_dash="dash", line_color="grey", line_width=1)
-        _fig_sens.update_layout(
-            xaxis_title="Date",
-            yaxis_title=f"{ref_bike} residuals",
-            height=300,
-            plot_bgcolor="rgba(0,0,0,0)",
-        )
-        st.plotly_chart(_fig_sens, width="stretch")
-
-    # ── Phase 3: KS power-overlap filter ──────────────────────────────────────
-    st.divider()
-    st.subheader("Phase 3 — Power distribution overlap")
-    st.caption(
-        "KS test checks whether power distributions between bikes are similar on each segment. "
-        f"Flagged (⚠️) when KS p < {ks_threshold:.2f} — potential confounding."
-    )
-
-    ks_summary = segment_power_overlap_summary(
-        df_resid, bikes_to_compare, paired_segs, p_threshold=ks_threshold
-    )
-    if not ks_summary.empty:
-        seg_names_map = (
-            dict(zip(segments["segment_id"], segments["name"]))
-            if "name" in segments.columns
-            else {}
-        )
-        ks_disp = ks_summary.copy()
-        ks_disp["segment"] = ks_summary["segment_id"].map(lambda s: seg_names_map.get(s, str(s)))
-        ks_disp["status"] = ks_summary["ks_ok"].map({True: "✅ OK", False: "⚠️ Flagged"})
-        ks_disp = ks_disp[["segment", "bike_a", "bike_b", "p_value", "status"]].rename(
-            columns={"bike_a": "Bike A", "bike_b": "Bike B",
-                     "p_value": "KS p-value", "status": "Power overlap"}
-        )
-        n_flagged = int((~ks_summary["ks_ok"]).sum())
-        if n_flagged:
-            st.warning(
-                f"**{n_flagged} segment(s)** flagged — power distributions differ between bikes. "
-                "Their deltas may reflect pacing differences rather than equipment."
-            )
-        st.dataframe(ks_disp, width="stretch", hide_index=True)
-
-    # ── Phase 4: Per-segment delta estimation ──────────────────────────────────
-    st.divider()
-    st.subheader("Phase 4 — Per-segment speed delta")
-    st.caption(
-        f"OLS: *residual ~ C(bike) + avg_power* per segment.  "
-        f"Reference: **{ref_bike}**.  Positive delta = other bike is faster."
-    )
-
-    seg_names_map = (
-        dict(zip(segments["segment_id"], segments["name"]))
-        if "name" in segments.columns
-        else {}
-    )
-
-    with st.spinner("Estimating per-segment deltas…"):
-        deltas_df = per_segment_delta(df_resid, paired_segs, ref_bike, bikes_to_compare)
-
-    if deltas_df.empty:
-        st.info("No per-segment deltas could be estimated.  Check that paired segments have enough efforts.")
-        st.stop()
-
-    deltas_disp = deltas_df.copy()
-    deltas_disp["segment"] = deltas_disp["segment_id"].map(lambda s: seg_names_map.get(s, str(s)))
-    deltas_disp["95% CI"] = deltas_disp.apply(
-        lambda r: f"[{r['delta'] - 1.96 * r['se']:.4f}, {r['delta'] + 1.96 * r['se']:.4f}]", axis=1
-    )
-    deltas_disp["delta"] = deltas_disp["delta"].round(5)
-    deltas_disp["grade (%)"] = deltas_disp["grade"].round(1)
-    deltas_disp["length (m)"] = deltas_disp["length_m"].round(0)
-    table_cols = ["segment", "other_bike", "delta", "95% CI", "n_ref", "n_other", "grade (%)", "length (m)"]
-    st.dataframe(
-        deltas_disp[[c for c in table_cols if c in deltas_disp.columns]].rename(
-            columns={"other_bike": "vs bike", "delta": "delta (speed/W¹⁄³)"}
+    # ── Mode toggle ───────────────────────────────────────────────────────────
+    watt_mode = st.toggle(
+        "Watts mode — predict power instead of speed",
+        value=False,
+        help=(
+            "**Speed mode** (default): the model learns power → speed and asks "
+            "\"how fast would Bike A have gone in Bike B's conditions?\"\n\n"
+            "**Watts mode**: the model learns speed → watts and asks "
+            "\"how many watts would Bike A have needed to match Bike B's speed?\" "
+            "Positive residual = Bike B needed fewer watts = more efficient."
         ),
-        width="stretch",
-        hide_index=True,
     )
 
-    with st.expander("Delta vs segment grade", expanded=False):
-        st.caption(
-            "Aero gains → larger deltas on flat segments. "
-            "Climbing gains → roughly grade-independent. "
-            "Random scatter → noise dominates."
-        )
-        for idx, other in enumerate([b for b in bikes_to_compare if b != ref_bike]):
-            pair_data = deltas_df[deltas_df["other_bike"] == other].dropna(subset=["grade"])
-            if pair_data.empty:
-                continue
-            fig_grade = px.scatter(
-                pair_data,
-                x="grade",
-                y="delta",
-                color_discrete_sequence=[_COLOR_SEQ[idx % len(_COLOR_SEQ)]],
-                labels={"grade": "Segment grade (%)", "delta": "Delta (speed/W¹⁄³)"},
-                title=f"{ref_bike} → {other}",
-                trendline="ols",
-            )
-            fig_grade.add_hline(y=0, line_dash="dash", line_color="grey", line_width=1)
-            fig_grade.update_layout(height=320, plot_bgcolor="rgba(0,0,0,0)")
-            st.plotly_chart(fig_grade, width="stretch")
+    if watt_mode:
+        _fit_fn       = fit_xgb_watt_model
+        _apply_fn     = apply_watt_model_to_bike
+        _features     = XGB_WATT_FEATURES
+        _target_col   = "average_watts"
+        _pred_col     = "predicted_watts"
+        _residual_col = "watts_residual"
+        _unit         = "W"
+        _mode_str     = "watt"
+        # training plot axes: x = speed input, y = watts target
+        _train_x_col, _train_y_col   = "speed_kmh", "average_watts"
+        _train_x_lbl, _train_y_lbl   = f"Speed ({spd_label()})", "Average power (W)"
+        _target_label = "watts"
+        _b_better     = "{b} more efficient"
+        _a_better     = "{a} more efficient"
+        _cf_title     = "Counterfactual: how many watts would {a} have needed?"
+        _cf_x_lbl     = "Predicted watts — {a} model ({unit})"
+        _cf_y_lbl     = "Actual watts — {b} ({unit})"
+        _adv_label    = "Watts advantage (efficiency)"
+    else:
+        _fit_fn       = fit_xgb_speed_model
+        _apply_fn     = apply_model_to_bike
+        _features     = XGB_FEATURES
+        _target_col   = "speed_kmh"
+        _pred_col     = "predicted_speed_kmh"
+        _residual_col = "speed_residual"
+        _unit         = spd_label()
+        _mode_str     = "speed"
+        _train_x_col, _train_y_col   = "average_watts", "speed_kmh"
+        _train_x_lbl, _train_y_lbl   = "Average power (W)", f"Speed ({spd_label()})"
+        _target_label = "speed"
+        _b_better     = "{b} faster"
+        _a_better     = "{a} faster"
+        _cf_title     = "Counterfactual: how fast would {a} have gone?"
+        _cf_x_lbl     = "Predicted speed — {a} model ({unit})"
+        _cf_y_lbl     = "Actual speed — {b} ({unit})"
+        _adv_label    = "Speed advantage"
 
-    # ── Phase 5: Aggregate summary ─────────────────────────────────────────────
+    # ── Pair selector ─────────────────────────────────────────────────────────
+    all_pairs = list(combinations(bikes_to_compare, 2))
+    if len(all_pairs) == 1:
+        bike_a, bike_b = all_pairs[0]
+    else:
+        pair_labels = [f"{a}  vs  {b}" for a, b in all_pairs]
+        selected_label = st.selectbox("Bike pair to inspect", options=pair_labels, index=0)
+        idx_p = pair_labels.index(selected_label)
+        bike_a, bike_b = all_pairs[idx_p]
+
+    st.markdown(f"**Comparing: {bike_a}  vs  {bike_b}**")
+
+    # Scale factor: 1.0 in watt mode or metric; km/h→mph otherwise
+    _disp_scale: float = 1.0 if (watt_mode or use_metric()) else 0.621371
+    _disp = lambda df: _scale_speed_cols(df, _disp_scale)  # noqa: E731
+
+    # ── Step 1: Train model on Bike A ─────────────────────────────────────────
     st.divider()
-    st.subheader("Phase 5 — Aggregate summary")
-
-    summary_df = weighted_delta_summary(deltas_df)
-    i2_vals = compute_i2(deltas_df)
-
-    # Forest plot
-    st.markdown("**Forest plot** — per-segment deltas with 95% CI")
-    fig_forest = go.Figure()
-    for idx, other in enumerate([b for b in bikes_to_compare if b != ref_bike]):
-        pair_key = f"{ref_bike} → {other}"
-        pair_data = deltas_df[deltas_df["other_bike"] == other].copy()
-        color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
-        seg_labels = pair_data["segment_id"].map(lambda s: seg_names_map.get(s, str(s)))
-
-        fig_forest.add_trace(
-            go.Scatter(
-                x=pair_data["delta"],
-                y=seg_labels,
-                mode="markers",
-                name=other,
-                marker={"color": color, "size": 9},
-                error_x={
-                    "type": "data",
-                    "array": (1.96 * pair_data["se"]).tolist(),
-                    "visible": True,
-                    "color": color,
-                },
-                customdata=list(
-                    zip(
-                        (pair_data["delta"] - 1.96 * pair_data["se"]).tolist(),
-                        (pair_data["delta"] + 1.96 * pair_data["se"]).tolist(),
-                    )
-                ),
-                hovertemplate=(
-                    "Segment: %{y}<br>Delta: %{x:.5f}<br>"
-                    "95% CI: [%{customdata[0]:.5f}, %{customdata[1]:.5f}]<extra>"
-                    + other + "</extra>"
-                ),
-            )
-        )
-        if pair_key in summary_df["bike_pair"].values:
-            pooled_d = float(summary_df[summary_df["bike_pair"] == pair_key]["delta"].iloc[0])
-            fig_forest.add_vline(
-                x=pooled_d,
-                line_dash="dot",
-                line_color=color,
-                line_width=2,
-                annotation_text=f"Pooled {other}",
-                annotation_position="top",
-            )
-
-    fig_forest.add_vline(x=0, line_dash="dash", line_color="grey", line_width=1.5)
-    fig_forest.update_layout(
-        xaxis_title="Delta (speed/W¹⁄³) — positive = faster than reference",
-        yaxis_title="Segment",
-        height=max(350, 35 * len(deltas_df["segment_id"].unique()) + 80),
-        plot_bgcolor="rgba(0,0,0,0)",
-        legend={"orientation": "h", "yanchor": "bottom", "y": -0.2},
-    )
-    st.plotly_chart(fig_forest, width="stretch")
-
-    # Weighted summary table
-    st.markdown("**Weighted summary** (inverse-variance weighted)")
-    _ref_speed_ms = 30.0 / 3.6
-    summary_rows = []
-    for _, row in summary_df.iterrows():
-        pair = str(row["bike_pair"])
-        delta = float(row["delta"])
-        sec_km = delta_to_sec_per_km(delta, ref_power=float(ref_power_w), ref_speed_ms=_ref_speed_ms)
-        speed_gain_kmh = delta * (float(ref_power_w) ** (1.0 / 3.0))
-        speed_gain_pct = speed_gain_kmh / 30.0 * 100
-        i2 = i2_vals.get(pair, 0.0)
-        i2_label = "🟢 Low" if i2 < 0.25 else ("🟡 Moderate" if i2 < 0.75 else "🔴 High")
-        summary_rows.append({
-            "Comparison": pair,
-            "Delta (speed/W¹⁄³)": f"{delta:+.5f}",
-            "95% CI": f"[{row['ci_low']:+.5f}, {row['ci_high']:+.5f}]",
-            f"Sec/km @ {int(ref_power_w)}W": f"{sec_km:+.1f}",
-            f"Speed Δ @ {int(ref_power_w)}W": f"{speed_gain_kmh:+.2f} km/h ({speed_gain_pct:+.1f}%)",
-            "Segments": int(row["n_segments"]),
-            "I²": f"{i2:.2f} {i2_label}",
-        })
-    st.dataframe(pd.DataFrame(summary_rows), width="stretch", hide_index=True)
-
-    # Sanity warnings
-    for row in summary_df.to_dict("records"):
-        speed_gain_pct = abs(float(row["delta"]) * (float(ref_power_w) ** (1.0 / 3.0)) / 30.0)
-        if speed_gain_pct > 0.05:
-            st.warning(
-                "⚠️ At least one estimate exceeds 5% speed gain — above the typical range "
-                "for equipment differences. Check for data errors or confounding."
-            )
-            break
-
-    if any(v > 0.75 for v in i2_vals.values()):
-        st.warning(
-            "⚠️ I² > 0.75 (high heterogeneity) — results vary substantially across segments. "
-            "Decompose by segment type before drawing conclusions. See the Exp 5 notebook."
-        )
-
-    # ── Symmetry & transitivity check ─────────────────────────────────────────
-    st.divider()
-    st.subheader("Symmetry & transitivity check")
+    st.subheader(f"Step 1 — Train model on {bike_a}")
     st.caption(
-        "Re-runs the pipeline with each other bike as reference. "
-        "A robust analysis satisfies |delta(A→B) + delta(B→A)| < 0.01."
+        f"An XGBoost model learns the relationship between riding conditions "
+        f"(power, grade, time of year, fitness trend) and speed, using only "
+        f"**{bike_a}** efforts. This model captures what {bike_a} is capable of "
+        "in any given conditions."
     )
 
-    if st.button("Run symmetry check", help="Re-fits the baseline with each other bike as reference."):
-        sym_results: list[dict] = []
-        for other_ref in [b for b in bikes_to_compare if b != ref_bike]:
-            try:
-                with st.spinner(f"Fitting baseline on {other_ref}…"):
-                    _m2 = fit_baseline_model(df_scope, other_ref)
-                    _dr2 = compute_residuals(df_scope, _m2)
-                    _d2 = per_segment_delta(_dr2, paired_segs, other_ref, bikes_to_compare)
-                    _s2 = weighted_delta_summary(_d2)
-            except Exception as e:
-                st.warning(f"Symmetry check for {other_ref} failed: {e}")
-                continue
+    df_train_scope_a, df_test_a = _date_split_bike_df(df_scope, bike_a)
+    cache_key_a = _model_cache_key(bike_a, _mode_str)
+    with st.spinner(f"Training XGBoost on {bike_a}\u2026"):
+        try:
+            if st.session_state.get(cache_key_a) is None:
+                st.session_state[cache_key_a] = _fit_fn(df_train_scope_a, bike_a)
+            model_a = st.session_state[cache_key_a]
+        except ValueError as e:
+            st.error(str(e))
+            st.stop()
 
-            fwd_key = f"{ref_bike} → {other_ref}"
-            rev_key = f"{other_ref} → {ref_bike}"
-            fwd = summary_df[summary_df["bike_pair"] == fwd_key]["delta"].values
-            rev = _s2[_s2["bike_pair"] == rev_key]["delta"].values
+    train_a = _apply_fn(model_a, df_train_scope_a, bike_a)
+    holdout_a = _apply_fn(model_a, df_test_a, bike_a)
+    _eval_a = holdout_a if not holdout_a.empty else train_a
+    _eval_a_label = "holdout" if not holdout_a.empty else "in-sample \u2014 too few efforts to hold out"
 
-            if len(fwd) and len(rev):
-                sym_error = float(fwd[0]) + float(rev[0])
-                sym_results.append({
-                    "Pair": f"{ref_bike} ↔ {other_ref}",
-                    f"δ({ref_bike}→{other_ref})": f"{float(fwd[0]):+.5f}",
-                    f"δ({other_ref}→{ref_bike})": f"{float(rev[0]):+.5f}",
-                    "Sum (≈ 0 ideal)": f"{sym_error:+.5f}",
-                    "Symmetric?": "✅" if abs(sym_error) < 0.01 else "⚠️",
-                })
+    r2_a = _render_model_details_expander(
+        model_a, _disp(train_a), _disp(_eval_a), bike_a, _COLOR_A, _eval_a_label,
+        _train_x_col, _train_y_col, _train_x_lbl, _train_y_lbl,
+        _target_col, _pred_col, _features, _target_label, _unit, expanded=True,
+    )
+    st.info(
+        f"**Step 1 in plain terms:** We've taught the model what {bike_a} is capable of — "
+        f"it explains **{r2_a:.0%}** of the variation in {bike_a}'s {_target_label}. "
+        f"We'll use this as a {bike_a} baseline and ask: what would {bike_a} have done on {bike_b}'s efforts?"
+    )
 
-            # Transitivity for 3+ bikes
-            if len(bikes_to_compare) >= 3:
-                others_for_trans = [b for b in bikes_to_compare if b not in (ref_bike, other_ref)]
-                for c_bike in others_for_trans[:1]:  # check first triplet
-                    d_ac = summary_df[summary_df["bike_pair"] == f"{ref_bike} → {c_bike}"]["delta"].values
-                    d_ab = summary_df[summary_df["bike_pair"] == f"{ref_bike} → {other_ref}"]["delta"].values
-                    d_bc = _s2[_s2["bike_pair"] == f"{other_ref} → {c_bike}"]["delta"].values
-                    if len(d_ac) and len(d_ab) and len(d_bc):
-                        trans_err = float(d_ac[0]) - (float(d_ab[0]) + float(d_bc[0]))
-                        sym_results.append({
-                            "Pair": f"Transitivity: {ref_bike}→{c_bike}",
-                            f"δ({ref_bike}→{other_ref})": f"{float(d_ab[0]):+.5f}",
-                            f"δ({other_ref}→{c_bike})": f"{float(d_bc[0]):+.5f}",
-                            "Sum (≈ 0 ideal)": f"{trans_err:+.5f}",
-                            "Symmetric?": "✅" if abs(trans_err) < 0.01 else "⚠️",
-                        })
+    # ── Step 2: Apply model A to Bike B ───────────────────────────────────────
+    st.divider()
+    if watt_mode:
+        st.subheader(f"Step 2 — Predict counterfactual watts for {bike_b}")
+        st.caption(
+            f"For every {bike_b} effort, we ask: **how many watts would {bike_a} "
+            f"have needed to achieve the same speed?** Positive residual = {bike_b} "
+            "used fewer watts = more efficient."
+        )
+    else:
+        st.subheader(f"Step 2 — Predict counterfactual speed for {bike_b}")
+        st.caption(
+            f"We now ask: for every {bike_b} effort, **what speed would {bike_a} have "
+            f"achieved in the same conditions?** The {bike_a} model answers this — treating "
+            f"the effort's power, grade, and season as inputs."
+        )
 
-        if sym_results:
-            st.dataframe(pd.DataFrame(sym_results), width="stretch", hide_index=True)
+    pred_ab = _apply_fn(model_a, df_scope, bike_b)
+    if pred_ab.empty:
+        st.warning(f"No usable {bike_b} efforts after filtering. Cannot compute counterfactual.")
+        st.stop()
+    pred_ab_d = _disp(pred_ab)
+
+    st.plotly_chart(_plot_counterfactual_scatter(
+        pred_ab_d, bike_a, bike_b,
+        target_col=_target_col, pred_col=_pred_col, residual_col=_residual_col, unit=_unit,
+        b_better_label=_b_better, a_better_label=_a_better,
+        title=_cf_title, x_axis_label=_cf_x_lbl, y_axis_label=_cf_y_lbl,
+    ), width='stretch')
+    if watt_mode:
+        st.caption(
+            f"X-axis: watts {bike_a}'s model predicts for each condition. "
+            f"Y-axis: watts {bike_b} actually used. "
+            f"**Green (above diagonal) = {bike_b} used fewer watts = more efficient.**"
+        )
+    else:
+        st.caption(
+            f"X-axis: the speed the {bike_a} model predicts for each set of conditions. "
+            f"Y-axis: what {bike_b} actually achieved. "
+            f"**Green points (above diagonal) = {bike_b} was faster than {bike_a}'s model expects.**"
+        )
+    if watt_mode:
+        st.info(
+            f"**Step 2 in plain terms:** For each {bike_b} effort, we asked — "
+            f"*how many watts would {bike_a} have needed to go the same speed?* "
+            f"Points above the line mean {bike_b} used fewer watts, i.e. it's more efficient."
+        )
+    else:
+        st.info(
+            f"**Step 2 in plain terms:** For each {bike_b} effort, we asked — "
+            f"*how fast would {bike_a} have gone in these exact conditions?* "
+            f"Points above the line mean {bike_b} was faster than {bike_a} would have been."
+        )
+
+    # ── Step 3: Residuals (A→B direction) ────────────────────────────────────
+    st.divider()
+    if watt_mode:
+        st.subheader(f"Step 3 — Watts difference: {bike_a} model → {bike_b} efforts")
+        st.caption(
+            f"Residual = predicted watts (what {bike_a} would need) − actual watts ({bike_b} used). "
+            f"Positive = {bike_b} is more efficient."
+        )
+    else:
+        st.subheader(f"Step 3 — Speed difference: {bike_a} model → {bike_b} efforts")
+        st.caption(
+            "The residual = actual speed − predicted speed. It quantifies how much faster "
+            f"(or slower) {bike_b} is relative to what {bike_a}'s model expects."
+        )
+
+    mean_ab = float(pred_ab_d[_residual_col].mean())
+    n_ab = int(pred_ab_d[_residual_col].notna().sum())
+
+    col_m1, col_m2 = st.columns([1, 2])
+    with col_m1:
+        if watt_mode:
+            sign = "more efficient" if mean_ab >= 0 else "less efficient"
+            st.metric(
+                label=f"{bike_b} vs {bike_a} model",
+                value=f"{abs(mean_ab):.1f} W {sign}",
+                delta=f"{mean_ab:+.1f} W  (n\u00a0= {n_ab} efforts)",
+                delta_color="normal",
+            )
         else:
-            st.info("No symmetry results could be computed.")
-
-        st.caption(
-            "If |sum| >> 0.01, the fitness trend may be absorbing the bike effect. "
-            "Consider bridging data (rides on both bikes in the same period), "
-            "adjusting the spline df, or using a shorter time window."
+            sign = "faster" if mean_ab >= 0 else "slower"
+            st.metric(
+                label=f"{bike_b} vs {bike_a} model",
+                value=f"{abs(mean_ab):.2f} {_unit} {sign}",
+                delta=f"{mean_ab:+.2f} {_unit}  (n\u00a0= {n_ab} efforts)",
+                delta_color="normal",
+            )
+    with col_m2:
+        st.plotly_chart(_plot_residuals(pred_ab_d, bike_a, bike_b, _residual_col, _unit, _b_better), width='stretch')
+    st.caption(
+        f"Mean residual = {mean_ab:+.2f} {_unit}. "
+        "This is the **A\u2192B direction**: positive means B is better. "
+        "Spread reflects effort-to-effort variability."
+    )
+    if watt_mode:
+        _ab_direction = "more efficient" if mean_ab >= 0 else "less efficient"
+        st.info(
+            f"**Step 3 in plain terms:** In general, if you did an effort on {bike_b} "
+            f"instead of {bike_a}, {bike_b} used **{abs(mean_ab):.1f} W {_ab_direction}** — "
+            f"based on {n_ab} matched efforts."
+        )
+    else:
+        _ab_direction = "faster" if mean_ab >= 0 else "slower"
+        st.info(
+            f"**Step 3 in plain terms:** In general, if you did an effort on {bike_b} "
+            f"instead of {bike_a}, you would've gone **{abs(mean_ab):.2f} {_unit} {_ab_direction}** — "
+            f"based on {n_ab} matched efforts."
         )
 
+    # ── Step 4: Reverse (train B, apply to A) ────────────────────────────────
+    st.divider()
+    st.subheader(f"Step 4 \u2014 Reverse: train on {bike_b}, apply to {bike_a}")
     st.caption(
-        "💡 **Dig deeper**: see the `notebooks/exp1_*` through `notebooks/exp5_*` notebooks "
-        "for step-by-step experiment checkpoints — residual QQ-plots, power overlap details, "
-        "grade decompositions, and full symmetry/transitivity tables."
+        f"We repeat steps 1\u20133 with {bike_b} as the training bike and apply the model "
+        f"to {bike_a}'s efforts. Consistent and opposite results give greater confidence."
     )
 
+    df_train_scope_b, df_test_b = _date_split_bike_df(df_scope, bike_b)
+    cache_key_b = _model_cache_key(bike_b, _mode_str)
+    with st.spinner(f"Training XGBoost on {bike_b}\u2026"):
+        try:
+            if st.session_state.get(cache_key_b) is None:
+                st.session_state[cache_key_b] = _fit_fn(df_train_scope_b, bike_b)
+            model_b = st.session_state[cache_key_b]
+        except ValueError as e:
+            st.error(str(e))
+            st.stop()
+
+    train_b = _apply_fn(model_b, df_train_scope_b, bike_b)
+    holdout_b = _apply_fn(model_b, df_test_b, bike_b)
+    _eval_b = holdout_b if not holdout_b.empty else train_b
+    _eval_b_label = "holdout" if not holdout_b.empty else "in-sample \u2014 too few efforts to hold out"
+    pred_ba = _apply_fn(model_b, df_scope, bike_a)
+    if pred_ba.empty:
+        st.warning(f"No usable {bike_a} efforts after filtering. Cannot compute reverse counterfactual.")
+        st.stop()
+    pred_ba_d = _disp(pred_ba)
+
+    r2_b = _render_model_details_expander(
+        model_b, _disp(train_b), _disp(_eval_b), bike_b, _COLOR_B, _eval_b_label,
+        _train_x_col, _train_y_col, _train_x_lbl, _train_y_lbl,
+        _target_col, _pred_col, _features, _target_label, _unit, expanded=False,
+    )
+
+    st.plotly_chart(_plot_counterfactual_scatter(
+        pred_ba_d, bike_b, bike_a,
+        target_col=_target_col, pred_col=_pred_col, residual_col=_residual_col, unit=_unit,
+        b_better_label=_a_better, a_better_label=_b_better,
+        title=_cf_title.replace("{a}", bike_b).replace("{b}", bike_a),
+        x_axis_label=_cf_x_lbl, y_axis_label=_cf_y_lbl,
+    ), width='stretch')
+    st.caption(
+        f"Same logic as Step 2, but {bike_b}'s model is applied to {bike_a}'s efforts."
+    )
+
+    mean_ba = float(pred_ba_d[_residual_col].mean())
+    n_ba = int(pred_ba_d[_residual_col].notna().sum())
+
+    col_m3, col_m4 = st.columns([1, 2])
+    with col_m3:
+        if watt_mode:
+            sign_ba = "more efficient" if mean_ba >= 0 else "less efficient"
+            st.metric(
+                label=f"{bike_a} vs {bike_b} model",
+                value=f"{abs(mean_ba):.1f} W {sign_ba}",
+                delta=f"{mean_ba:+.1f} W  (n\u00a0= {n_ba} efforts)",
+                delta_color="normal",
+            )
+        else:
+            sign_ba = "faster" if mean_ba >= 0 else "slower"
+            st.metric(
+                label=f"{bike_a} vs {bike_b} model",
+                value=f"{abs(mean_ba):.2f} {_unit} {sign_ba}",
+                delta=f"{mean_ba:+.2f} {_unit}  (n\u00a0= {n_ba} efforts)",
+                delta_color="normal",
+            )
+    with col_m4:
+        st.plotly_chart(_plot_residuals(pred_ba_d, bike_b, bike_a, _residual_col, _unit, _a_better), width='stretch')
+    st.caption(
+        f"Mean residual = {mean_ba:+.2f} {_unit} (positive = {bike_a} better). "
+        f"Negated to match direction: {-mean_ba:+.2f} {_unit} advantage for {bike_b}."
+    )
+    if watt_mode:
+        _ba_direction = "more efficient" if mean_ba <= 0 else "less efficient"
+        st.info(
+            f"**Step 4 in plain terms:** Flipping it around — if you did a {bike_a} effort "
+            f"on {bike_b} instead, {bike_b} would've been **{abs(mean_ba):.1f} W {_ba_direction}** — "
+            f"based on {n_ba} matched efforts."
+        )
+    else:
+        _ba_direction = "faster" if mean_ba <= 0 else "slower"
+        st.info(
+            f"**Step 4 in plain terms:** Flipping it around — if you did a {bike_a} effort "
+            f"on {bike_b} instead, you would've gone **{abs(mean_ba):.2f} {_unit} {_ba_direction}** — "
+            f"based on {n_ba} matched efforts."
+        )
+
+    # ── Step 5: Aggregate ─────────────────────────────────────────────────────
+    st.divider()
+    st.subheader("Step 5 \u2014 Aggregate")
+    st.caption(
+        "We combine both directions into a single estimate **weighted by effort count**: "
+        "**combined\u00a0= (fwd\u202fmean\u00a0\u00d7\u00a0n\\_fwd \u2212 rev\u202fmean\u00a0\u00d7\u00a0n\\_rev) / (n\\_fwd\u00a0+\u00a0n\\_rev)**. "
+        "The direction with more efforts carries more weight."
+    )
+
+    summary = aggregate_paired_delta(pred_ab_d[_residual_col], pred_ba_d[_residual_col])
+    combined = summary["combined"]
+    winner = bike_b if combined >= 0 else bike_a
+    loser = bike_a if combined >= 0 else bike_b
+    advantage = abs(combined)
+
+    ci_str = ""
+    if not np.isnan(summary["ci_low"]):
+        ci_str = f"  (95%\u00a0CI: {summary['ci_low']:+.2f} to {summary['ci_high']:+.2f}\u00a0{_unit})"
+
+    if watt_mode:
+        st.metric(
+            label="Overall efficiency advantage",
+            value=f"{loser} uses {advantage:.1f} W more than {winner}",
+            delta=f"{combined:+.1f} W{ci_str}",
+            delta_color="normal",
+        )
+    else:
+        st.metric(
+            label="Overall speed advantage",
+            value=f"{loser} is {advantage:.2f} {_unit} slower than {winner}",
+            delta=f"{combined:+.2f} {_unit}{ci_str}",
+            delta_color="normal",
+        )
+
+    st.plotly_chart(_plot_aggregate(summary, bike_a, bike_b, _unit, _adv_label), width='stretch')
+    better_word = "more efficient" if watt_mode else "faster"
+    st.caption(
+        f"**A\u2192B**: apply {bike_a}'s model to {bike_b}'s efforts \u2014 positive means {bike_b} {better_word}. "
+        f"**B\u2192A (negated)**: apply {bike_b}'s model to {bike_a}'s efforts, negated so positive still means {bike_b} {better_word}. "
+        "**Combined**: average of both directions \u2014 our best symmetric estimate."
+    )
+
+    fwd_sign = np.sign(summary["fwd_mean"])
+    rev_sign_as_b_adv = -np.sign(summary["rev_mean"])
+    if fwd_sign == rev_sign_as_b_adv:
+        st.success(f"Both directions agree on which bike is {better_word}, increasing confidence in the result.")
+    else:
+        st.warning(
+            f"The two directions disagree on which bike is {better_word}. "
+            "This may indicate high variability, few efforts, or conditions the model cannot fully control."
+        )
+    if watt_mode:
+        st.info(
+            f"**Step 5 in plain terms:** Putting it all together — **{winner}** is on average "
+            f"**{advantage:.1f} W more efficient** than {loser} in equivalent riding conditions."
+            + (f" (95% CI: {abs(summary['ci_low']):.1f}–{abs(summary['ci_high']):.1f} W)" if not np.isnan(summary['ci_low']) else "")
+        )
+    else:
+        st.info(
+            f"**Step 5 in plain terms:** Putting it all together — **{winner}** is on average "
+            f"**{advantage:.2f}\u00a0{_unit} faster** than {loser} in equivalent riding conditions."
+            + (f" (95%\u00a0CI: {abs(summary['ci_low']):.2f}\u2013{abs(summary['ci_high']):.2f}\u00a0{_unit})" if not np.isnan(summary['ci_low']) else "")
+        )

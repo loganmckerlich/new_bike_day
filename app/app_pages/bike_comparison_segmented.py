@@ -244,7 +244,7 @@ def _render_elevation_profile(geo: dict, seg_distance_m: float) -> None:
 
 
 # ── Public entry point ───────────────────────────────────────────────────────
-def show(bikes_to_compare) -> None:
+def show(bikes_to_compare, min_efforts: int = 3) -> None:
     """Render the segmented bike comparison analysis."""
     global efforts, segments, bikes, access_token
     efforts = st.session_state.get("cleaned_efforts")
@@ -298,15 +298,6 @@ def show(bikes_to_compare) -> None:
             )
             st.stop()
 
-        min_sample_size = st.number_input(
-            "Minimum rides per bike per segment",
-            min_value=1,
-            max_value=20,
-            value=2,
-            step=1,
-            help="Both bikes must have at least this many power-measured rides on a segment.",
-        )
-
         spider_use_subcategories = st.toggle(
             "Use subcategories in spider charts",
             value=False,
@@ -333,7 +324,7 @@ def show(bikes_to_compare) -> None:
             seg_counts[b] = 0
 
     # All selected bikes must meet the minimum sample size on a segment
-    valid_mask = (seg_counts[bikes_to_compare] >= min_sample_size).all(axis=1)
+    valid_mask = (seg_counts[bikes_to_compare] >= min_efforts).all(axis=1)
     valid_segment_ids = seg_counts[valid_mask].index.tolist()
 
     # Per-bike rides columns for the segment table
@@ -494,13 +485,13 @@ def show(bikes_to_compare) -> None:
 
     if not valid_segment_ids:
         st.info(
-            f"No segments where all selected bikes have ≥ {int(min_sample_size)} "
+            f"No segments where all selected bikes have ≥ {int(min_efforts)} "
             "power-measured rides. Try reducing the minimum sample size or selecting fewer bikes."
         )
         st.stop()
 
     st.caption(
-        f"Segments where all selected bikes have ≥ {int(min_sample_size)} "
+        f"Segments where all selected bikes have ≥ {int(min_efforts)} "
         "power-measured rides. Check any segment to open the comparison."
     )
 

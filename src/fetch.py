@@ -295,6 +295,7 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
                     "name": seg.get("name"),
                     "distance": distance,
                     "average_grade": average_grade,
+                    "maximum_grade": seg.get("maximum_grade"),
                     "climb_category": seg.get("climb_category"),
                     "total_elevation_gain": elev_gain,
                     "start_lat": start_latlng[0] if len(start_latlng) > 0 else None,

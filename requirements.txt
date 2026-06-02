@@ -3,14 +3,13 @@ requests
 pandas
 numpy
 scipy
-# pymc
 matplotlib
 seaborn
 plotly
 streamlit
 flask
 statsmodels
-
 shap
 geopy
 scikit-learn
+xgboost

@@ -1,4 +1,3 @@
-# note i swapped from spline to GradientBoostingRegressor. this might mess witht he fitness trend concept of baseline
 
 """Bike speed delta estimation — segment-based statistical pipeline.
 
@@ -35,6 +34,7 @@ import pandas as pd
 from scipy.stats import ks_2samp
 import statsmodels.formula.api as smf
 from sklearn.ensemble import GradientBoostingRegressor
+import xgboost as xgb
 
 from src.analytics import compute_speed_per_watt
 
@@ -49,6 +49,15 @@ __all__ = [
     "weighted_delta_summary",
     "compute_i2",
     "delta_to_sec_per_km",
+    # XGBoost counterfactual pipeline
+    "XGB_FEATURES",
+    "fit_xgb_speed_model",
+    "apply_model_to_bike",
+    "aggregate_paired_delta",
+    # XGBoost watts-efficiency pipeline
+    "XGB_WATT_FEATURES",
+    "fit_xgb_watt_model",
+    "apply_watt_model_to_bike",
 ]
 
 
@@ -98,12 +107,17 @@ def prepare_delta_dataset(
     )
 
     # ── Merge segment distance + grade + type ─────────────────────────────────
+    # Only bring over columns that are not already present in df (e.g. because
+    # data_cleaning.py already merged them from segments).  Re-merging a column
+    # that exists in both frames would produce _x / _y suffixes and lose the
+    # original column name.
     seg_cols = ["segment_id"]
-    for col in ("distance", "average_grade", "segment_type", "segment_type_detail"):
-        if col in segments_df.columns:
+    for col in ("distance", "average_grade", "maximum_grade", "segment_type", "segment_type_detail"):
+        if col in segments_df.columns and col not in df.columns:
             seg_cols.append(col)
-    seg_meta = segments_df[seg_cols].drop_duplicates("segment_id")
-    df = df.merge(seg_meta, on="segment_id", how="left")
+    if len(seg_cols) > 1:
+        seg_meta = segments_df[seg_cols].drop_duplicates("segment_id")
+        df = df.merge(seg_meta, on="segment_id", how="left")
 
     # ── Derive speed_kmh (segment distance / effort moving time) ──────────────
     if "speed_kmh" not in df.columns:
@@ -200,7 +214,7 @@ def fit_baseline_model(
         subset=["ride_index", "average_watts", "doy_sin", "doy_cos", "speed_per_cbrt_watt"]
     ).copy()
 
-    X = bike_df[["average_watts","doy_sin","doy_cos"]]
+    X = bike_df[["ride_index", "average_watts", "doy_sin", "doy_cos"]]
     y = bike_df["speed_per_cbrt_watt"].values
 
     model = GradientBoostingRegressor().fit(X, y)
@@ -237,7 +251,8 @@ def compute_residuals(
 
 
     try:
-        preds = model.predict(out[["average_watts","doy_sin","doy_cos"]])
+        # ride_index is used to try to account for fitness over time
+        preds = model.predict(out[["ride_index", "average_watts", "doy_sin", "doy_cos"]])
     except Exception as e:
         warnings.warn(f"Residual computation failed: {e}")
         return out
@@ -527,3 +542,263 @@ def delta_to_sec_per_km(
     t_base = 1000.0 / ref_speed_ms      # seconds to cover 1 km at base speed
     t_new = 1000.0 / new_speed_ms        # seconds to cover 1 km at new speed
     return float(t_base - t_new)         # positive = time saved = faster
+
+
+# ── XGBoost counterfactual pipeline ───────────────────────────────────────────
+
+XGB_FEATURES: list[str] = [
+    "average_watts",
+    "average_grade",
+    "maximum_grade",
+    "doy_sin",
+    "doy_cos",
+]
+
+
+def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
+    """Train an XGBoost regressor on one bike's efforts to predict speed_kmh.
+
+    Features: average_watts, average_grade, doy_sin, doy_cos, ride_index.
+    Target: speed_kmh.
+
+    Parameters
+    ----------
+    df:
+        Prepared dataset from :func:`prepare_delta_dataset` (all bikes).
+    bike_name:
+        Name of the bike to train on.
+
+    Returns
+    -------
+    xgb.XGBRegressor
+        Fitted model.
+
+    Raises
+    ------
+    ValueError
+        When fewer than 5 usable efforts exist for the bike.
+    """
+    bike_df = (
+        df[df["bike_name"] == bike_name]
+        .dropna(subset=XGB_FEATURES + ["speed_kmh"])
+        .copy()
+    )
+
+    if len(bike_df) < 5:
+        raise ValueError(
+            f"Not enough efforts for {bike_name!r} (need ≥5, got {len(bike_df)})."
+        )
+
+    X = bike_df[XGB_FEATURES]
+    y = bike_df["speed_kmh"].values
+
+    model = xgb.XGBRegressor(
+        n_estimators=200,
+        max_depth=4,
+        learning_rate=0.05,
+        subsample=0.8,
+        colsample_bytree=0.8,
+        random_state=42,
+        verbosity=0,
+    )
+    model.fit(X, y)
+    return model
+
+
+def apply_model_to_bike(
+    model: xgb.XGBRegressor,
+    df: pd.DataFrame,
+    target_bike: str,
+) -> pd.DataFrame:
+    """Apply a speed model trained on source bike to another bike's efforts.
+
+    For each effort on *target_bike*, the model predicts the speed that the
+    source bike would have achieved under the same conditions (power, grade,
+    season, fitness level).  The residual is the raw speed advantage of
+    *target_bike* over what the source bike's model expects.
+
+    Added columns
+    -------------
+    predicted_speed_kmh:
+        Model's counterfactual speed for these conditions.
+    speed_residual:
+        ``speed_kmh - predicted_speed_kmh``.
+        Positive → target_bike was faster than the source model predicts.
+
+    Parameters
+    ----------
+    model:
+        Fitted :class:`xgb.XGBRegressor` from :func:`fit_xgb_speed_model`.
+    df:
+        Full prepared dataset from :func:`prepare_delta_dataset`.
+    target_bike:
+        Bike name to apply the model to.
+
+    Returns
+    -------
+    pd.DataFrame
+        Filtered to *target_bike* efforts with new prediction columns.
+    """
+    out = (
+        df[df["bike_name"] == target_bike]
+        .dropna(subset=XGB_FEATURES + ["speed_kmh"])
+        .copy()
+    )
+
+    if out.empty:
+        return out
+
+    out["predicted_speed_kmh"] = model.predict(out[XGB_FEATURES])
+    out["speed_residual"] = out["speed_kmh"] - out["predicted_speed_kmh"]
+    return out
+
+
+def aggregate_paired_delta(
+    fwd_residuals: pd.Series,
+    rev_residuals: pd.Series,
+) -> dict[str, float]:
+    """Combine forward and reverse directional estimates into a single delta.
+
+    Forward (A→B): ``fwd_residuals`` = actual_B_speed − model_A_predicted.
+        Positive → B is faster.
+    Reverse (B→A): ``rev_residuals`` = actual_A_speed − model_B_predicted.
+        Positive → A is faster.
+
+    Combined estimate: ``(fwd_mean − rev_mean) / 2``.
+    A positive combined value means B is faster than A.
+
+    Parameters
+    ----------
+    fwd_residuals:
+        Speed residuals when model is trained on A and applied to B.
+    rev_residuals:
+        Speed residuals when model is trained on B and applied to A.
+
+    Returns
+    -------
+    dict with keys: fwd_mean, rev_mean, combined, combined_sem, ci_low,
+    ci_high, n_fwd, n_rev.
+    """
+    fwd_vals = fwd_residuals.dropna().values
+    rev_vals = rev_residuals.dropna().values
+
+    fwd_mean = float(np.mean(fwd_vals)) if len(fwd_vals) else np.nan
+    rev_mean = float(np.mean(rev_vals)) if len(rev_vals) else np.nan
+
+    fwd_sem = (
+        float(np.std(fwd_vals, ddof=1) / np.sqrt(len(fwd_vals)))
+        if len(fwd_vals) > 1 else np.nan
+    )
+    rev_sem = (
+        float(np.std(rev_vals, ddof=1) / np.sqrt(len(rev_vals)))
+        if len(rev_vals) > 1 else np.nan
+    )
+
+    if not (np.isnan(fwd_mean) or np.isnan(rev_mean)):
+        total_n = len(fwd_vals) + len(rev_vals)
+        combined = (fwd_mean * len(fwd_vals) - rev_mean * len(rev_vals)) / total_n
+        combined_sem = (
+            float(np.sqrt(len(fwd_vals) ** 2 * fwd_sem ** 2 + len(rev_vals) ** 2 * rev_sem ** 2) / total_n)
+            if not (np.isnan(fwd_sem) or np.isnan(rev_sem)) else np.nan
+        )
+    elif not np.isnan(fwd_mean):
+        combined, combined_sem = fwd_mean, fwd_sem
+    else:
+        combined, combined_sem = rev_mean, rev_sem
+
+    ci_margin = 1.96 * combined_sem if not np.isnan(combined_sem) else np.nan
+
+    return {
+        "fwd_mean": fwd_mean,
+        "rev_mean": rev_mean,
+        "combined": combined,
+        "combined_sem": combined_sem,
+        "ci_low": combined - ci_margin if not np.isnan(ci_margin) else np.nan,
+        "ci_high": combined + ci_margin if not np.isnan(ci_margin) else np.nan,
+        "n_fwd": int(len(fwd_vals)),
+        "n_rev": int(len(rev_vals)),
+    }
+
+
+# ── XGBoost watts-efficiency counterfactual pipeline ──────────────────────────
+
+XGB_WATT_FEATURES: list[str] = [
+    "speed_kmh",
+    "average_grade",
+    "maximum_grade",
+    "doy_sin",
+    "doy_cos",
+]
+
+
+def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
+    """Train an XGBoost regressor on one bike's efforts to predict average_watts.
+
+    The inverse of :func:`fit_xgb_speed_model`: given the speed achieved and
+    riding conditions, predict how many watts were required.  Used to answer
+    "how many watts would Bike A have needed to achieve Bike B's speed?"
+
+    Features: speed_kmh, average_grade, doy_sin, doy_cos, ride_index.
+    Target:   average_watts.
+
+    A positive watt residual (predicted_A_watts > actual_B_watts) means Bike B
+    achieves the same speed with fewer watts → Bike B is more efficient.
+    """
+    bike_df = (
+        df[df["bike_name"] == bike_name]
+        .dropna(subset=XGB_WATT_FEATURES + ["average_watts"])
+        .copy()
+    )
+
+    if len(bike_df) < 5:
+        raise ValueError(
+            f"Not enough efforts for {bike_name!r} (need ≥5, got {len(bike_df)})."
+        )
+
+    X = bike_df[XGB_WATT_FEATURES]
+    y = bike_df["average_watts"].values
+
+    model = xgb.XGBRegressor(
+        n_estimators=200,
+        max_depth=4,
+        learning_rate=0.05,
+        subsample=0.8,
+        colsample_bytree=0.8,
+        random_state=42,
+        verbosity=0,
+    )
+    model.fit(X, y)
+    return model
+
+
+def apply_watt_model_to_bike(
+    model: xgb.XGBRegressor,
+    df: pd.DataFrame,
+    target_bike: str,
+) -> pd.DataFrame:
+    """Apply a watt model trained on source bike to another bike's efforts.
+
+    For each *target_bike* effort, predicts how many watts the source bike
+    would have needed to achieve the same speed under the same conditions.
+
+    Added columns
+    -------------
+    predicted_watts:
+        Watts the source bike's model predicts for these conditions.
+    watts_residual:
+        ``predicted_watts - average_watts``.
+        Positive → target_bike used fewer watts at the same speed (more efficient).
+    """
+    out = (
+        df[df["bike_name"] == target_bike]
+        .dropna(subset=XGB_WATT_FEATURES + ["average_watts"])
+        .copy()
+    )
+
+    if out.empty:
+        return out
+
+    out["predicted_watts"] = model.predict(out[XGB_WATT_FEATURES])
+    # positive residual = target used fewer watts than source would have → target more efficient
+    out["watts_residual"] = out["predicted_watts"] - out["average_watts"]
+    return out
