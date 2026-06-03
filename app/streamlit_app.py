@@ -60,8 +60,8 @@ elif _oauth_code and str(_oauth_code) != st.session_state.get("last_processed_co
                     refresh_token=_token["refresh_token"],
                     expires_at=_token["expires_at"],
                 )
-        except Exception:  # noqa: BLE001
-            pass
+        except Exception as exc:  # noqa: BLE001
+            st.session_state["oauth_error"] = f"Strava token exchange failed: {exc}"
     st.query_params.clear()
 
 pg = st.navigation(
