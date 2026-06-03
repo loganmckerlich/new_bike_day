@@ -8,8 +8,8 @@ So this is more of a residual analysis that I am hoping lines up with how I feel
 #### Outlier filtering
 Outlier filtering does a lot of heavy lifting here. I am assuming that with the chosen filters in data cleaning step, we are able to remove a whole bunch of confounders. Drafting, tri bar usage, carrying heavy backpack, etc. So I would like to think that the outlier filtering step makes a lot of these assumptions a bit more reasonable. But there is no denying that there are a lot of assumptions in this analysis.
 
-#### Broadly Speaking: Transferability of the Counterfacftual
-In this analysis I am assuming my model is perfect and the speed I say I wouldve gone on the other bike is the real speed. This is likely not true because my model doesnt account for everything. 
+#### Broadly Speaking: Transferability of the Counterfactual
+In this analysis I am assuming my model is perfect and the speed I say I would've gone on the other bike is the real speed. This is likely not true because my model doesn't account for everything.
 
 #### Fitness
 I am basically assuming that fitness is entirely irrelevant because being more fit just means you make more watts and I have watt numbers. This is not entirely true. For example when more fit I can put out more watts in my aero position. So this is a stretch.
