@@ -17,7 +17,7 @@ from app.app_pages._ui_helpers import (
     gear_label,
 )
 
-    # ── Page title ────────────────────────────────────────────────────────────
+# ── Page title ────────────────────────────────────────────────────────────
 
 st.title("📊 Step 3 — Bike Comparison")
 st.markdown(
