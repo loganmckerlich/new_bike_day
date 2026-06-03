@@ -13,7 +13,7 @@ if str(_REPO_ROOT) not in sys.path:
 
 
 def main() -> None:
-    st.title("🏁 Step 6 — Final Conclusions")
+    st.title("🏁 Step 4 — Final Conclusions")
     st.info("🚧 Coming soon — this page will summarise findings from all analysis steps.")
 
 
