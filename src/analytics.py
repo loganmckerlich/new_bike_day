@@ -60,10 +60,11 @@ def filter_outliers_by_power_speed(
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Flag and remove efforts whose speed/power^(1/3) ratio is anomalous.
 
-    For each segment independently:
+    For each non-descent segment independently:
     -   Compute z-score of ``speed_per_cbrt_watt``.
     -   Mark any effort with ``|z| > z_threshold`` as an outlier.
     -   Segments with fewer than *min_efforts* valid rows are left unfiltered.
+    -   Descent efforts are never outlier-filtered.
 
     Parameters
     ----------
@@ -91,6 +92,8 @@ def filter_outliers_by_power_speed(
     out["z_score"] = np.nan
 
     valid = out["speed_per_cbrt_watt"].notna() & out["average_watts"].notna()
+    if "segment_type" in out.columns:
+        valid &= out["segment_type"] != "descent"
 
     group_cols = ["segment_id", "bike_name"] if "bike_name" in out.columns else ["segment_id"]
     for _, grp_idx in out[valid].groupby(group_cols).groups.items():

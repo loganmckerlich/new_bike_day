@@ -110,16 +110,6 @@ def main() -> None:
             ),
         )
 
-        st.session_state.setdefault("descents_exempt_watts", False)
-        descents_exempt_watts: bool = st.toggle(
-            "Descents exempt from min watts",
-            key="descents_exempt_watts",
-            help=(
-                "When enabled, descent segments bypass the minimum-watts filter. "
-                "Descents naturally have lower power output."
-            ),
-        )
-
         st.session_state.setdefault("exclude_descents", False)
         exclude_descents: bool = st.toggle(
             "Exclude descent segments",
@@ -134,7 +124,7 @@ def main() -> None:
     cleaned = apply_min_watts_filter(
         efforts_with_power,
         int(min_watts),
-        descents_exempt=descents_exempt_watts,
+        descents_exempt=True,
     )
     if exclude_descents and "segment_type" in cleaned.columns:
         cleaned = cleaned[cleaned["segment_type"] != "descent"].copy()
@@ -143,7 +133,7 @@ def main() -> None:
 
     n_raw = len(efforts_with_power)
     n_clean = len(cleaned)
-    _after_mw = apply_min_watts_filter(efforts_with_power, int(min_watts), descents_exempt=descents_exempt_watts)
+    _after_mw = apply_min_watts_filter(efforts_with_power, int(min_watts), descents_exempt=True)
 
     # ── Build segment selector options (needs cleaned data) ────────────────────
     _seg_effort_counts_ok = not cleaned.empty
@@ -199,8 +189,7 @@ def main() -> None:
             st.metric(
                 "Removed by min-watts filter",
                 n_raw - len(_after_mw),
-                help=f"Efforts with average power < {int(min_watts)} W"
-                + (" (descents exempt)" if descents_exempt_watts else ""),
+                help=f"Efforts with average power < {int(min_watts)} W (descents are always included)",
             )
         with m3:
             st.metric(
@@ -209,7 +198,7 @@ def main() -> None:
             )
         st.caption(
             f"**{n_clean}** efforts remain after filtering. "
-            f"The z-score threshold ({z_threshold:.2g}σ) is applied per-segment on the analysis pages."
+            f"The z-score threshold ({z_threshold:.2g}σ) is applied per-segment on non-descent segments."
         )
 
         st.divider()
