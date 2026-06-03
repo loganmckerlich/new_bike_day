@@ -1,5 +1,75 @@
 [
   {
+    "id": 3496913677220033660,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2026-06-02T14:31:36Z",
+    "start_date_local": "2026-06-02T07:31:36Z",
+    "distance": 1198.8,
+    "start_index": 247,
+    "end_index": 321,
+    "average_cadence": 20.8,
+    "device_watts": true,
+    "average_watts": 33.6,
+    "average_heartrate": 123.1,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3491476539241527534,
     "resource_state": 2,
     "name": "Snake",
@@ -63,7 +133,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -133,7 +203,77 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492564490290959686,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18596486933,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 76,
+    "moving_time": 76,
+    "start_date": "2026-05-21T14:23:02Z",
+    "start_date_local": "2026-05-21T07:23:02Z",
+    "distance": 1198.8,
+    "start_index": 292,
+    "end_index": 368,
+    "average_cadence": 10.8,
+    "device_watts": true,
+    "average_watts": 11.1,
+    "average_heartrate": 118.3,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -203,7 +343,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -273,7 +413,72 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978678175548,
+    "resource_state": 2,
+    "name": "Snake",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 78,
+    "moving_time": 78,
+    "start_date": "2026-05-22T14:36:44Z",
+    "start_date_local": "2026-05-22T07:36:44Z",
+    "distance": 1198.8,
+    "start_index": 280,
+    "end_index": 358,
+    "average_cadence": 5.8,
+    "device_watts": true,
+    "average_watts": 3.7,
+    "average_heartrate": 100.7,
+    "max_heartrate": 115.0,
+    "segment": {
+      "id": 29523175,
+      "resource_state": 2,
+      "name": "Snake",
+      "activity_type": "Ride",
+      "distance": 1198.8,
+      "average_grade": -8.3,
+      "maximum_grade": -3.1,
+      "elevation_high": 147.4,
+      "elevation_low": 48.4,
+      "start_latlng": [
+        47.577062,
+        -122.057112
+      ],
+      "end_latlng": [
+        47.570491,
+        -122.064488
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -343,7 +548,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -413,7 +618,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -483,7 +688,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -548,7 +753,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -618,7 +823,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -683,7 +888,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -744,7 +949,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -807,7 +1012,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -877,7 +1082,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -947,7 +1152,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1012,7 +1217,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1078,7 +1283,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1141,7 +1346,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1204,7 +1409,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1274,7 +1479,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1339,7 +1544,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1409,7 +1614,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1479,7 +1684,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1549,7 +1754,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1610,7 +1815,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1680,7 +1885,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",

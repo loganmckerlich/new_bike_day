@@ -800,6 +800,64 @@
     "kom_rank": null
   },
   {
+    "id": 3496913677218632828,
+    "resource_state": 2,
+    "name": "I90 to Gene Coulon",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 951,
+    "moving_time": 951,
+    "start_date": "2026-06-02T15:05:00Z",
+    "start_date_local": "2026-06-02T08:05:00Z",
+    "distance": 8572.1,
+    "start_index": 2126,
+    "end_index": 3077,
+    "average_cadence": 83.5,
+    "device_watts": true,
+    "average_watts": 262.0,
+    "average_heartrate": 136.7,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 36930086,
+      "resource_state": 2,
+      "name": "I90 to Gene Coulon",
+      "activity_type": "Ride",
+      "distance": 8572.1,
+      "average_grade": 0.1,
+      "maximum_grade": 6.4,
+      "elevation_high": 24.4,
+      "elevation_low": 8.3,
+      "start_latlng": [
+        47.578508,
+        -122.180773
+      ],
+      "end_latlng": [
+        47.51022,
+        -122.202351
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3382749049563877776,
     "resource_state": 2,
     "name": "I90 to Gene Coulon",
@@ -2694,6 +2752,122 @@
     "average_watts": 261.8,
     "average_heartrate": 152.2,
     "max_heartrate": 178.0,
+    "segment": {
+      "id": 36930086,
+      "resource_state": 2,
+      "name": "I90 to Gene Coulon",
+      "activity_type": "Ride",
+      "distance": 8572.1,
+      "average_grade": 0.1,
+      "maximum_grade": 6.4,
+      "elevation_high": 24.4,
+      "elevation_low": 8.3,
+      "start_latlng": [
+        47.578508,
+        -122.180773
+      ],
+      "end_latlng": [
+        47.51022,
+        -122.202351
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978673393468,
+    "resource_state": 2,
+    "name": "I90 to Gene Coulon",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1048,
+    "moving_time": 1048,
+    "start_date": "2026-05-22T15:13:39Z",
+    "start_date_local": "2026-05-22T08:13:39Z",
+    "distance": 8572.1,
+    "start_index": 2348,
+    "end_index": 3396,
+    "average_cadence": 79.6,
+    "device_watts": true,
+    "average_watts": 206.5,
+    "average_heartrate": 124.4,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 36930086,
+      "resource_state": 2,
+      "name": "I90 to Gene Coulon",
+      "activity_type": "Ride",
+      "distance": 8572.1,
+      "average_grade": 0.1,
+      "maximum_grade": 6.4,
+      "elevation_high": 24.4,
+      "elevation_low": 8.3,
+      "start_latlng": [
+        47.578508,
+        -122.180773
+      ],
+      "end_latlng": [
+        47.51022,
+        -122.202351
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492564490291220806,
+    "resource_state": 2,
+    "name": "I90 to Gene Coulon",
+    "activity": {
+      "id": 18596486933,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1050,
+    "moving_time": 1050,
+    "start_date": "2026-05-21T15:01:07Z",
+    "start_date_local": "2026-05-21T08:01:07Z",
+    "distance": 8572.1,
+    "start_index": 2474,
+    "end_index": 3524,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 124.3,
+    "max_heartrate": 137.0,
     "segment": {
       "id": 36930086,
       "resource_state": 2,

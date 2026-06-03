@@ -3898,6 +3898,64 @@
     "kom_rank": null
   },
   {
+    "id": 3496913677220032636,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 50,
+    "moving_time": 50,
+    "start_date": "2026-06-02T15:21:17Z",
+    "start_date_local": "2026-06-02T08:21:17Z",
+    "distance": 368.7,
+    "start_index": 3103,
+    "end_index": 3153,
+    "average_cadence": 40.8,
+    "device_watts": true,
+    "average_watts": 180.5,
+    "average_heartrate": 154.6,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3263157621457714070,
     "resource_state": 2,
     "name": "Last Hill above Coulon Park",
@@ -4498,6 +4556,64 @@
     "average_watts": 225.2,
     "average_heartrate": 125.5,
     "max_heartrate": 132.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492564490291581254,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18596486933,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 52,
+    "moving_time": 52,
+    "start_date": "2026-05-21T15:19:06Z",
+    "start_date_local": "2026-05-21T08:19:06Z",
+    "distance": 368.7,
+    "start_index": 3553,
+    "end_index": 3605,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 128.1,
+    "max_heartrate": 133.0,
     "segment": {
       "id": 7323508,
       "resource_state": 2,
@@ -5768,6 +5884,64 @@
     "device_watts": false,
     "average_heartrate": 143.5,
     "max_heartrate": 157.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978672881468,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 55,
+    "moving_time": 55,
+    "start_date": "2026-05-22T15:31:37Z",
+    "start_date_local": "2026-05-22T08:31:37Z",
+    "distance": 368.7,
+    "start_index": 3426,
+    "end_index": 3481,
+    "average_cadence": 74.5,
+    "device_watts": true,
+    "average_watts": 233.2,
+    "average_heartrate": 124.3,
+    "max_heartrate": 133.0,
     "segment": {
       "id": 7323508,
       "resource_state": 2,

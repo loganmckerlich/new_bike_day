@@ -6546,6 +6546,64 @@
     "kom_rank": null
   },
   {
+    "id": 3492695235473829884,
+    "resource_state": 2,
+    "name": "Lightening (sic) Strikes Coulon to 90",
+    "activity": {
+      "id": 18602311496,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1169,
+    "moving_time": 1160,
+    "start_date": "2026-05-21T22:51:58Z",
+    "start_date_local": "2026-05-21T15:51:58Z",
+    "distance": 9070.0,
+    "start_index": 178,
+    "end_index": 1341,
+    "average_cadence": 71.4,
+    "device_watts": true,
+    "average_watts": 188.8,
+    "average_heartrate": 125.7,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 37118104,
+      "resource_state": 2,
+      "name": "Lightening (sic) Strikes Coulon to 90",
+      "activity_type": "Ride",
+      "distance": 9070.0,
+      "average_grade": -0.0,
+      "maximum_grade": 7.7,
+      "elevation_high": 44.8,
+      "elevation_low": 29.2,
+      "start_latlng": [
+        47.504518,
+        -122.19948
+      ],
+      "end_latlng": [
+        47.577615,
+        -122.181192
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3376019807271970064,
     "resource_state": 2,
     "name": "Lightening (sic) Strikes Coulon to 90",
@@ -6920,6 +6978,64 @@
     "average_watts": 181.5,
     "average_heartrate": 109.7,
     "max_heartrate": 123.0,
+    "segment": {
+      "id": 37118104,
+      "resource_state": 2,
+      "name": "Lightening (sic) Strikes Coulon to 90",
+      "activity_type": "Ride",
+      "distance": 9070.0,
+      "average_grade": -0.0,
+      "maximum_grade": 7.7,
+      "elevation_high": 44.8,
+      "elevation_low": 29.2,
+      "start_latlng": [
+        47.504518,
+        -122.19948
+      ],
+      "end_latlng": [
+        47.577615,
+        -122.181192
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497042857441697152,
+    "resource_state": 2,
+    "name": "Lightening (sic) Strikes Coulon to 90",
+    "activity": {
+      "id": 18763295926,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1180,
+    "moving_time": 1180,
+    "start_date": "2026-06-02T22:43:26Z",
+    "start_date_local": "2026-06-02T15:43:26Z",
+    "distance": 9070.0,
+    "start_index": 188,
+    "end_index": 1368,
+    "average_cadence": 68.0,
+    "device_watts": true,
+    "average_watts": 183.2,
+    "average_heartrate": 119.6,
+    "max_heartrate": 133.0,
     "segment": {
       "id": 37118104,
       "resource_state": 2,
@@ -8462,6 +8578,64 @@
     "average_watts": 128.5,
     "average_heartrate": 118.9,
     "max_heartrate": 147.0,
+    "segment": {
+      "id": 37118104,
+      "resource_state": 2,
+      "name": "Lightening (sic) Strikes Coulon to 90",
+      "activity_type": "Ride",
+      "distance": 9070.0,
+      "average_grade": -0.0,
+      "maximum_grade": 7.7,
+      "elevation_high": 44.8,
+      "elevation_low": 29.2,
+      "start_latlng": [
+        47.504518,
+        -122.19948
+      ],
+      "end_latlng": [
+        47.577615,
+        -122.181192
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3493037610240679584,
+    "resource_state": 2,
+    "name": "Lightening (sic) Strikes Coulon to 90",
+    "activity": {
+      "id": 18613801540,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 1615,
+    "moving_time": 1102,
+    "start_date": "2026-05-22T21:31:03Z",
+    "start_date_local": "2026-05-22T14:31:03Z",
+    "distance": 9070.0,
+    "start_index": 173,
+    "end_index": 1279,
+    "average_cadence": 60.5,
+    "device_watts": true,
+    "average_watts": 134.4,
+    "average_heartrate": 124.0,
+    "max_heartrate": 152.0,
     "segment": {
       "id": 37118104,
       "resource_state": 2,

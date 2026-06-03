@@ -39,6 +39,45 @@
     "starred_date": "2024-12-23T09:35:09Z"
   },
   {
+    "id": 1238935,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity_type": "Ride",
+    "distance": 3698.14,
+    "average_grade": -0.9,
+    "maximum_grade": 5.9,
+    "elevation_high": 26.0,
+    "elevation_low": -19.2,
+    "start_latlng": [
+      47.567636696621776,
+      -122.09873129613698
+    ],
+    "end_latlng": [
+      47.55179054103792,
+      -122.0589411444962
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Bellevue",
+    "state": "WA",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 325,
+    "athlete_pr_effort": {
+      "id": 3497042857439032704,
+      "activity_id": 18763295926,
+      "elapsed_time": 325,
+      "distance": 3698.14,
+      "start_date": "2026-06-02T23:24:02Z",
+      "start_date_local": "2026-06-02T16:24:02Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-03T00:09:13Z"
+  },
+  {
     "id": 4457997,
     "resource_state": 2,
     "name": "Mercer Slough NB Climb",
@@ -156,6 +195,84 @@
     "starred_date": "2025-06-19T13:59:54Z"
   },
   {
+    "id": 10397266,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity_type": "Ride",
+    "distance": 2032.2,
+    "average_grade": 2.9,
+    "maximum_grade": 14.8,
+    "elevation_high": 101.5,
+    "elevation_low": 41.4,
+    "start_latlng": [
+      47.569783,
+      -122.105587
+    ],
+    "end_latlng": [
+      47.577391,
+      -122.127966
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Bellevue",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 299,
+    "athlete_pr_effort": {
+      "id": 3481691945177857514,
+      "activity_id": 18198995851,
+      "elapsed_time": 299,
+      "distance": 2032.2,
+      "start_date": "2026-04-21T14:40:06Z",
+      "start_date_local": "2026-04-21T07:40:06Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-02T18:47:27Z"
+  },
+  {
+    "id": 12757123,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity_type": "Ride",
+    "distance": 2123.3,
+    "average_grade": 3.7,
+    "maximum_grade": 10.0,
+    "elevation_high": 85.4,
+    "elevation_low": 6.8,
+    "start_latlng": [
+      47.579495,
+      -122.168712
+    ],
+    "end_latlng": [
+      47.577133,
+      -122.141808
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Bellevue",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 331,
+    "athlete_pr_effort": {
+      "id": 3386509565227157272,
+      "activity_id": 15313202807,
+      "elapsed_time": 331,
+      "distance": 2123.3,
+      "start_date": "2025-08-01T22:52:34Z",
+      "start_date_local": "2025-08-01T15:52:34Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-05-22T00:07:27Z"
+  },
+  {
     "id": 12809039,
     "resource_state": 2,
     "name": "Concrete to Coffee",
@@ -232,6 +349,45 @@
       "is_kom": true
     },
     "starred_date": "2025-06-14T19:51:53Z"
+  },
+  {
+    "id": 15432586,
+    "resource_state": 2,
+    "name": "Factoria to 136th PI SE",
+    "activity_type": "Ride",
+    "distance": 983.1,
+    "average_grade": 5.1,
+    "maximum_grade": 8.2,
+    "elevation_high": 111.0,
+    "elevation_low": 61.0,
+    "start_latlng": [
+      47.579578,
+      -122.168693
+    ],
+    "end_latlng": [
+      47.579252,
+      -122.155646
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Bellevue",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 136,
+    "athlete_pr_effort": {
+      "id": 3497042857439952256,
+      "activity_id": 18763295926,
+      "elapsed_time": 136,
+      "distance": 983.1,
+      "start_date": "2026-06-02T23:06:24Z",
+      "start_date_local": "2026-06-02T16:06:24Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-03T00:03:30Z"
   },
   {
     "id": 16679364,
@@ -468,6 +624,45 @@
     "starred_date": "2024-06-21T00:51:23Z"
   },
   {
+    "id": 17114852,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity_type": "Ride",
+    "distance": 5246.6,
+    "average_grade": 0.2,
+    "maximum_grade": 14.5,
+    "elevation_high": 24.0,
+    "elevation_low": 6.6,
+    "start_latlng": [
+      47.520938,
+      -122.208997
+    ],
+    "end_latlng": [
+      47.563375,
+      -122.187431
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Renton",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 515,
+    "athlete_pr_effort": {
+      "id": 3256056225777600354,
+      "activity_id": 12082056504,
+      "elapsed_time": 515,
+      "distance": 5246.6,
+      "start_date": "2024-08-06T23:04:38Z",
+      "start_date_local": "2024-08-06T16:04:38Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-05-22T00:07:52Z"
+  },
+  {
     "id": 17163284,
     "resource_state": 2,
     "name": "520 Bridge WB climb",
@@ -601,14 +796,14 @@
     "private": false,
     "hazardous": false,
     "starred": true,
-    "pr_time": 76,
+    "pr_time": 74,
     "athlete_pr_effort": {
-      "id": 3491476539241527534,
-      "activity_id": 18555893716,
-      "elapsed_time": 76,
+      "id": 3496913677220033660,
+      "activity_id": 18757096682,
+      "elapsed_time": 74,
       "distance": 1198.8,
-      "start_date": "2026-05-18T14:22:14Z",
-      "start_date_local": "2026-05-18T07:22:14Z",
+      "start_date": "2026-06-02T14:31:36Z",
+      "start_date_local": "2026-06-02T07:31:36Z",
       "is_kom": false
     },
     "starred_date": "2026-05-20T03:29:04Z"
@@ -690,6 +885,45 @@
       "is_kom": false
     },
     "starred_date": "2024-06-27T01:25:40Z"
+  },
+  {
+    "id": 34862870,
+    "resource_state": 2,
+    "name": "I-90 trail climb to 142nd",
+    "activity_type": "Ride",
+    "distance": 2234.5,
+    "average_grade": 3.9,
+    "maximum_grade": 10.7,
+    "elevation_high": 99.8,
+    "elevation_low": 12.1,
+    "start_latlng": [
+      47.579454,
+      -122.179787
+    ],
+    "end_latlng": [
+      47.578482,
+      -122.151148
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 1,
+    "city": "Bellevue",
+    "state": "Washington",
+    "country": "USA",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 378,
+    "athlete_pr_effort": {
+      "id": 3386509565229486872,
+      "activity_id": 15313202807,
+      "elapsed_time": 378,
+      "distance": 2234.5,
+      "start_date": "2025-08-01T22:50:16Z",
+      "start_date_local": "2025-08-01T15:50:16Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-05-22T00:06:57Z"
   },
   {
     "id": 36930086,

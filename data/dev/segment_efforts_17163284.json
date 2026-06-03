@@ -3947,6 +3947,64 @@
     "kom_rank": null
   },
   {
+    "id": 3493037610234314400,
+    "resource_state": 2,
+    "name": "520 Bridge WB climb",
+    "activity": {
+      "id": 18613801540,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 84,
+    "moving_time": 84,
+    "start_date": "2026-05-22T22:29:05Z",
+    "start_date_local": "2026-05-22T15:29:05Z",
+    "distance": 555.4,
+    "start_index": 2989,
+    "end_index": 3073,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 244.8,
+    "average_heartrate": 151.2,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 17163284,
+      "resource_state": 2,
+      "name": "520 Bridge WB climb",
+      "activity_type": "Ride",
+      "distance": 555.4,
+      "average_grade": 2.2,
+      "maximum_grade": 4.6,
+      "elevation_high": 201.4,
+      "elevation_low": 188.8,
+      "start_latlng": [
+        47.642674,
+        -122.27011
+      ],
+      "end_latlng": [
+        47.643937,
+        -122.277305
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3337959354002227836,
     "resource_state": 2,
     "name": "520 Bridge WB climb",

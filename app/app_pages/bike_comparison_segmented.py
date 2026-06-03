@@ -304,9 +304,6 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
             help="Show spider charts by segment subcategory instead of parent category.",
         )
 
-    # ── Read shared analysis params from session state (set on Data Cleaning page) ─
-    z_threshold: float = float(st.session_state.get("outlier_z_threshold", 2.0))
-
     if len(bikes_to_compare) < 2:
         st.warning("Please select at least **2 bikes** in the sidebar to compare.")
         st.stop()
@@ -351,9 +348,7 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
         "Hover to see actual values."
     )
 
-    spider_efforts = selected_efforts[selected_efforts["segment_id"].isin(valid_segment_ids)].copy()
-    spider_efforts = compute_speed_per_watt(spider_efforts)
-    spider_filtered, _ = filter_outliers_by_power_speed(spider_efforts, z_threshold=z_threshold)
+    spider_filtered = selected_efforts[selected_efforts["segment_id"].isin(valid_segment_ids)].copy()
 
     spider_dimension_col = "segment_type_detail" if spider_use_subcategories else "segment_type"
     spider_dimensions = SEGMENT_TYPE_DETAILS if spider_use_subcategories else SEGMENT_TYPES
@@ -365,7 +360,7 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
 
     # ── Chart 1: raw speed ────────────────────────────────────────────────────────
     speed_profile = mean_profile_by_segment_type(
-        spider_efforts,
+        spider_filtered,
         bikes_to_compare,
         spider_dimensions,
         valid_segment_ids,
@@ -600,6 +595,8 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                 seg_efforts["start_date"] = pd.to_datetime(seg_efforts["start_date"], errors="coerce")
                 seg_efforts["date_str"] = seg_efforts["start_date"].dt.strftime("%Y-%m-%d")
 
+                seg_efforts_clean = seg_efforts.copy()
+
                 # Segment info metrics
                 info_cols = st.columns(4)
                 with info_cols[0]:
@@ -635,14 +632,6 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                 with elev_col:
                     st.markdown("**Elevation profile**")
                     _render_elevation_profile(geo, seg_distance_m)
-
-                # Summary table
-                # Apply outlier filtering to this segment's efforts for the summary
-                seg_efforts_spw = compute_speed_per_watt(seg_efforts)
-                seg_efforts_clean, seg_efforts_ann = filter_outliers_by_power_speed(
-                    seg_efforts_spw, z_threshold=z_threshold
-                )
-                _n_seg_outliers = int(seg_efforts_ann["is_outlier"].sum()) if "is_outlier" in seg_efforts_ann.columns else 0
 
                 agg: dict[str, tuple] = {
                     "Rides": ("effort_id", "count"),
@@ -689,11 +678,6 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                         lambda v: f"{v:.4f}" if pd.notna(v) else "—"
                     )
 
-                if _n_seg_outliers:
-                    st.caption(
-                        f"Stats computed on clean efforts — **{_n_seg_outliers} outlier effort(s)** "
-                        f"excluded at z-threshold {z_threshold:.1f}. Adjust the threshold in the sidebar."
-                    )
                 st.dataframe(summary, width="stretch", hide_index=True)
 
                 # Metric tabs: Speed | Power | Heart Rate | Timeline

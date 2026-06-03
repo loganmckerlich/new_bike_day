@@ -66,17 +66,14 @@ def _build_delta_df(
     efforts: pd.DataFrame,
     segments: pd.DataFrame,
     bikes: dict[str, str],
-    z_threshold: float,
 ) -> pd.DataFrame:
-    shape_key = f"{len(efforts)}_{len(segments)}_{len(bikes)}_{z_threshold}"
+    shape_key = f"{len(efforts)}_{len(segments)}_{len(bikes)}"
     cached = st.session_state.get("_overall_delta_df")
     if cached is not None and st.session_state.get("_overall_shape_key") == shape_key:
         return cached
 
     df = prepare_delta_dataset(efforts, segments, bikes)
-    if "speed_per_cbrt_watt" in df.columns:
-        df, _ = filter_outliers_by_power_speed(df, z_threshold=z_threshold)
-
+ 
     st.session_state["_overall_delta_df"] = df
     st.session_state["_overall_shape_key"] = shape_key
     return df
@@ -455,7 +452,6 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
     efforts = st.session_state.get("cleaned_efforts")
     segments = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
-    z_threshold: float = float(st.session_state.get("outlier_z_threshold", 2.0))
 
     if efforts is None or (hasattr(efforts, "empty") and efforts.empty):
         st.info("👈 Head to **Step 1 — Data Collection** to load your Strava data first.")
@@ -476,7 +472,7 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
 
     # ── Build analysis dataset ────────────────────────────────────────────────
     try:
-        df = _build_delta_df(power_efforts, segments, bikes, z_threshold)
+        df = _build_delta_df(power_efforts, segments, bikes)
     except Exception as e:
         st.error(f"Failed to prepare analysis dataset: {e}")
         st.stop()

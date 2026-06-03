@@ -115,19 +115,23 @@ def main() -> None:
             "Exclude descent segments",
             key="exclude_descents",
             help=(
-                "Remove descent segments entirely from all analysis pages. "
-                "Descents are often wind-dominated and can skew results."
+                "Remove descent segments entirely from analysis pages. Separate from outlier filtering. "
+                "Because power doesn't create speed as much on descents our outlier detection method doesnt work for them."
             ),
         )
 
     # ── Apply filters and store cleaned efforts in session state ───────────────
-    cleaned = apply_min_watts_filter(
-        efforts_with_power,
+    efforts_with_power = compute_speed_per_watt(efforts_with_power)
+    _after_z, _ = filter_outliers_by_power_speed(efforts_with_power, z_threshold=z_threshold)
+    cleaned_pre_d = apply_min_watts_filter(
+        _after_z,
         int(min_watts),
         descents_exempt=True,
     )
-    if exclude_descents and "segment_type" in cleaned.columns:
-        cleaned = cleaned[cleaned["segment_type"] != "descent"].copy()
+    if exclude_descents and "segment_type" in cleaned_pre_d.columns:
+        cleaned = cleaned_pre_d[cleaned_pre_d["segment_type"] != "descent"].copy()
+    else:
+        cleaned = cleaned_pre_d
 
     st.session_state["cleaned_efforts"] = cleaned
 
@@ -182,24 +186,37 @@ def main() -> None:
     # ── RIGHT: filter summary + visualisations ─────────────────────────────────
     with right_col:
         st.subheader("📊 Filter summary")
-        m1, m2, m3 = st.columns(3)
+        if exclude_descents and "segment_type" in cleaned.columns:
+            m1, m2, m3, m4, mf = st.columns(5)
+        else:
+            m1, m2, m3, mf = st.columns(4)
+            m4 = None
         with m1:
-            st.metric("Raw efforts (with power)", n_raw)
+            st.metric("Raw efforts", n_raw)
         with m2:
             st.metric(
-                "Removed by min-watts filter",
-                n_raw - len(_after_mw),
-                help=f"Efforts with average power < {int(min_watts)} W (descents are always included)",
+                "Z-Score Outliers",
+                n_raw - len(_after_z),
+                help=f"Efforts where we got meaningfully more or less speed than anticipated given the watts recorded. (Windy/Drafting/Heavy Braking)",
             )
         with m3:
             st.metric(
-                "After min-watts" + (" + descent removal" if exclude_descents else "") + " filter",
-                n_clean,
+                "Min-Watts Filter",
+                n_raw - len(_after_mw),
+                help=f"Efforts with average power < {int(min_watts)} W (descents are always included)",
             )
-        st.caption(
-            f"**{n_clean}** efforts remain after filtering. "
-            f"The z-score threshold ({z_threshold:.2g}σ) is applied per-segment on non-descent segments."
-        )
+        if m4 is not None:
+            with m4:
+                st.metric(
+                    "Descent Filter",
+                    len(cleaned_pre_d[cleaned_pre_d["segment_type"] == "descent"]),
+                )
+        with mf:
+            st.metric(
+                "Remaining",
+                len(cleaned),
+                help=f"These will be used in analysis on following pages",
+            )
 
         st.divider()
 
@@ -265,153 +282,153 @@ def main() -> None:
                     )
 
                     _ann_bikes = [b for b in available_bikes if b in _plot_ann.get("bike_name", pd.Series()).values]
+                    bike_tabs = st.tabs(_ann_bikes)
                     for _bi, _bname in enumerate(_ann_bikes):
-                        _bike_color = _COLOR_SEQ[_bi % len(_COLOR_SEQ)]
-                        _bdata = _plot_ann[_plot_ann["bike_name"] == _bname].copy()
-                        _n_b_out = int(_bdata["is_outlier"].sum())
-                        _n_b_kept = len(_bdata) - _n_b_out
+                        with bike_tabs[_bi]:
+                            _bike_color = _COLOR_SEQ[_bi % len(_COLOR_SEQ)]
+                            _bdata = _plot_ann[_plot_ann["bike_name"] == _bname].copy()
+                            _n_b_out = int(_bdata["is_outlier"].sum())
+                            _n_b_kept = len(_bdata) - _n_b_out
 
-                        st.markdown(f"##### {_bname}")
-                        _sc_col, _hs_col = st.columns(2)
+                            st.markdown(f"##### {_bname}")
+                            _sc_col, _hs_col = st.columns(2)
 
-                        with _sc_col:
-                            st.markdown("Speed vs power")
-                            _fig_b_sc = go.Figure()
-                            for _is_out, _dot_color, _dot_name in [
-                                (False, _bike_color, "Normal"),
-                                (True, "#ef5350", "Outlier"),
-                            ]:
-                                _pts = _bdata[_bdata["is_outlier"] == _is_out]
-                                if _pts.empty:
-                                    continue
-                                _fig_b_sc.add_trace(go.Scatter(
-                                    x=_pts["average_watts"],
-                                    y=_pts["speed_kmh"],
-                                    mode="markers",
-                                    name=_dot_name,
-                                    marker={"color": _dot_color, "size": 10,
-                                            "line": {"width": 1, "color": "white"}},
-                                    text=_pts["z_label"],
-                                    hovertemplate=(
-                                        "Power: %{x:.0f} W<br>"
-                                        f"Speed: %{{y:.1f}} {_spd}<br>"
-                                        "Z-score: %{text}<extra>" + _dot_name + "</extra>"
-                                    ),
-                                ))
-                            _sc_spw = _bdata.dropna(subset=["speed_per_cbrt_watt", "average_watts"])
-                            if len(_sc_spw) >= 2:
-                                _sc_mean = _sc_spw["speed_per_cbrt_watt"].mean()
-                                _sc_std = _sc_spw["speed_per_cbrt_watt"].std(ddof=1)
-                                _sc_lo = _sc_mean - z_threshold * _sc_std
-                                _sc_hi = _sc_mean + z_threshold * _sc_std
-                                _w_min = float(_sc_spw["average_watts"].min())
-                                _w_max = float(_sc_spw["average_watts"].max())
-                                _w_pad = (_w_max - _w_min) * 0.05
-                                _wx = list(np.linspace(_w_min - _w_pad, _w_max + _w_pad, 60))
-                                _wx_rev = list(reversed(_wx))
-                                _fig_b_sc.add_trace(go.Scatter(
-                                    x=_wx + _wx_rev,
-                                    y=[_sc_lo * np.cbrt(w) for w in _wx] + [_sc_hi * np.cbrt(w) for w in _wx_rev],
-                                    fill="toself",
-                                    fillcolor="rgba(239,83,80,0.10)",
-                                    line={"width": 0},
-                                    hoverinfo="skip",
-                                    showlegend=False,
-                                ))
-                                _fig_b_sc.add_trace(go.Scatter(
-                                    x=_wx,
-                                    y=[_sc_mean * np.cbrt(w) for w in _wx],
-                                    mode="lines",
-                                    line={"color": "rgba(128,128,128,0.6)", "dash": "dot", "width": 1.5},
-                                    name="μ (speed/W¹⁄³)",
-                                    hovertemplate=f"μ = {_sc_mean:.4f} {_spd}/W¹⁄³<extra>mean</extra>",
-                                ))
-                                for _slope, _slabel in [(_sc_lo, f"−{z_threshold:.2g}σ"), (_sc_hi, f"+{z_threshold:.2g}σ")]:
-                                    _fig_b_sc.add_trace(go.Scatter(
-                                        x=_wx,
-                                        y=[_slope * np.cbrt(w) for w in _wx],
-                                        mode="lines",
-                                        line={"color": "#ef5350", "dash": "dash", "width": 1.5},
-                                        name=_slabel,
-                                        hovertemplate=f"{_slabel} = {_slope:.4f} {_spd}/W¹⁄³<extra>{_slabel}</extra>",
-                                    ))
-                            _fig_b_sc.update_layout(
-                                xaxis_title="Avg power (W)",
-                                yaxis_title=f"Speed ({_spd})",
-                                plot_bgcolor="rgba(0,0,0,0)",
-                                legend={"orientation": "h", "y": -0.25},
-                                height=300,
-                                margin={"t": 10, "b": 10},
-                            )
-                            st.plotly_chart(_fig_b_sc, width="stretch")
-
-                        with _hs_col:
-                            st.markdown(f"Speed/W¹⁄³ distribution ±{z_threshold:.1f}σ cutoff")
-                            _spw_b = _bdata.dropna(subset=["speed_per_cbrt_watt"])
-                            if len(_spw_b) >= 2:
-                                _b_mean = _spw_b["speed_per_cbrt_watt"].mean()
-                                _b_std = _spw_b["speed_per_cbrt_watt"].std(ddof=1)
-                                _b_lo = _b_mean - z_threshold * _b_std
-                                _b_hi = _b_mean + z_threshold * _b_std
-                                _nbins = max(6, len(_spw_b) // 2)
-
-                                _fig_b_h = go.Figure()
-                                for _is_out, _bar_color, _bar_name in [
+                            with _sc_col:
+                                st.markdown("Speed vs power")
+                                _fig_b_sc = go.Figure()
+                                for _is_out, _dot_color, _dot_name in [
                                     (False, _bike_color, "Normal"),
                                     (True, "#ef5350", "Outlier"),
                                 ]:
-                                    _pts_h = _spw_b[_spw_b["is_outlier"] == _is_out]
-                                    if _pts_h.empty:
+                                    _pts = _bdata[_bdata["is_outlier"] == _is_out]
+                                    if _pts.empty:
                                         continue
-                                    _fig_b_h.add_trace(go.Histogram(
-                                        x=_pts_h["speed_per_cbrt_watt"],
-                                        name=_bar_name,
-                                        marker_color=_bar_color,
-                                        opacity=0.8,
-                                        nbinsx=_nbins,
-                                        hovertemplate="Speed/W¹⁄³: %{x:.4f}<br>Count: %{y}<extra>" + _bar_name + "</extra>",
+                                    _fig_b_sc.add_trace(go.Scatter(
+                                        x=_pts["average_watts"],
+                                        y=_pts["speed_kmh"],
+                                        mode="markers",
+                                        name=_dot_name,
+                                        marker={"color": _dot_color, "size": 10,
+                                                "line": {"width": 1, "color": "white"}},
+                                        text=_pts["z_label"],
+                                        hovertemplate=(
+                                            "Power: %{x:.0f} W<br>"
+                                            f"Speed: %{{y:.1f}} {_spd}<br>"
+                                            "Z-score: %{text}<extra>" + _dot_name + "</extra>"
+                                        ),
                                     ))
-
-                                _xlo = float(_spw_b["speed_per_cbrt_watt"].min())
-                                _xhi = float(_spw_b["speed_per_cbrt_watt"].max())
-                                _xpad = max((_xhi - _xlo) * 0.05, 1e-6)
-                                for _sx0, _sx1 in [(_xlo - _xpad, _b_lo), (_b_hi, _xhi + _xpad)]:
-                                    _fig_b_h.add_vrect(
-                                        x0=_sx0, x1=_sx1,
-                                        fillcolor="rgba(239,83,80,0.12)",
-                                        line_width=0, layer="below",
-                                    )
-                                for _vx, _vlabel in [(_b_lo, f"−{z_threshold:.1f}σ"), (_b_hi, f"+{z_threshold:.1f}σ")]:
-                                    _fig_b_h.add_vline(
-                                        x=_vx, line_dash="dash", line_color="#ef5350",
-                                        annotation_text=_vlabel, annotation_position="top",
-                                        annotation_font_color="#ef5350",
-                                    )
-                                _fig_b_h.add_vline(
-                                    x=_b_mean, line_dash="dot",
-                                    line_color="rgba(128,128,128,0.7)",
-                                    annotation_text="μ", annotation_position="top",
-                                )
-                                _fig_b_h.update_layout(
-                                    barmode="overlay",
-                                    xaxis_title=f"Speed/W¹⁄³ ({_spd}/W¹⁄³)",
-                                    yaxis_title="Efforts",
+                                _sc_spw = _bdata.dropna(subset=["speed_per_cbrt_watt", "average_watts"])
+                                if len(_sc_spw) >= 2:
+                                    _sc_mean = _sc_spw["speed_per_cbrt_watt"].mean()
+                                    _sc_std = _sc_spw["speed_per_cbrt_watt"].std(ddof=1)
+                                    _sc_lo = _sc_mean - z_threshold * _sc_std
+                                    _sc_hi = _sc_mean + z_threshold * _sc_std
+                                    _w_min = float(_sc_spw["average_watts"].min())
+                                    _w_max = float(_sc_spw["average_watts"].max())
+                                    _w_pad = (_w_max - _w_min) * 0.05
+                                    _wx = list(np.linspace(_w_min - _w_pad, _w_max + _w_pad, 60))
+                                    _wx_rev = list(reversed(_wx))
+                                    _fig_b_sc.add_trace(go.Scatter(
+                                        x=_wx + _wx_rev,
+                                        y=[_sc_lo * np.cbrt(w) for w in _wx] + [_sc_hi * np.cbrt(w) for w in _wx_rev],
+                                        fill="toself",
+                                        fillcolor="rgba(239,83,80,0.10)",
+                                        line={"width": 0},
+                                        hoverinfo="skip",
+                                        showlegend=False,
+                                    ))
+                                    _fig_b_sc.add_trace(go.Scatter(
+                                        x=_wx,
+                                        y=[_sc_mean * np.cbrt(w) for w in _wx],
+                                        mode="lines",
+                                        line={"color": "rgba(128,128,128,0.6)", "dash": "dot", "width": 1.5},
+                                        name="μ (speed/W¹⁄³)",
+                                        hovertemplate=f"μ = {_sc_mean:.4f} {_spd}/W¹⁄³<extra>mean</extra>",
+                                    ))
+                                    for _slope, _slabel in [(_sc_lo, f"−{z_threshold:.2g}σ"), (_sc_hi, f"+{z_threshold:.2g}σ")]:
+                                        _fig_b_sc.add_trace(go.Scatter(
+                                            x=_wx,
+                                            y=[_slope * np.cbrt(w) for w in _wx],
+                                            mode="lines",
+                                            line={"color": "#ef5350", "dash": "dash", "width": 1.5},
+                                            name=_slabel,
+                                            hovertemplate=f"{_slabel} = {_slope:.4f} {_spd}/W¹⁄³<extra>{_slabel}</extra>",
+                                        ))
+                                _fig_b_sc.update_layout(
+                                    xaxis_title="Avg power (W)",
+                                    yaxis_title=f"Speed ({_spd})",
                                     plot_bgcolor="rgba(0,0,0,0)",
                                     legend={"orientation": "h", "y": -0.25},
                                     height=300,
                                     margin={"t": 10, "b": 10},
                                 )
-                                st.plotly_chart(_fig_b_h, width="stretch")
-                            else:
-                                st.caption("Not enough efforts to show distribution.")
+                                st.plotly_chart(_fig_b_sc, width="stretch")
 
-                        st.caption(
-                            f"🔴 **{_n_b_out} outlier(s)** · 🔵 **{_n_b_kept} kept** "
-                            f"(μ = {_bdata['speed_per_cbrt_watt'].mean():.4f}, "
-                            f"σ = {_bdata['speed_per_cbrt_watt'].std(ddof=1):.4f})"
-                        )
-                        if _bi < len(_ann_bikes) - 1:
-                            st.divider()
+                            with _hs_col:
+                                st.markdown(f"Speed/W¹⁄³ distribution ±{z_threshold:.1f}σ cutoff")
+                                _spw_b = _bdata.dropna(subset=["speed_per_cbrt_watt"])
+                                if len(_spw_b) >= 2:
+                                    _b_mean = _spw_b["speed_per_cbrt_watt"].mean()
+                                    _b_std = _spw_b["speed_per_cbrt_watt"].std(ddof=1)
+                                    _b_lo = _b_mean - z_threshold * _b_std
+                                    _b_hi = _b_mean + z_threshold * _b_std
+                                    _nbins = max(6, len(_spw_b) // 2)
+
+                                    _fig_b_h = go.Figure()
+                                    for _is_out, _bar_color, _bar_name in [
+                                        (False, _bike_color, "Normal"),
+                                        (True, "#ef5350", "Outlier"),
+                                    ]:
+                                        _pts_h = _spw_b[_spw_b["is_outlier"] == _is_out]
+                                        if _pts_h.empty:
+                                            continue
+                                        _fig_b_h.add_trace(go.Histogram(
+                                            x=_pts_h["speed_per_cbrt_watt"],
+                                            name=_bar_name,
+                                            marker_color=_bar_color,
+                                            opacity=0.8,
+                                            nbinsx=_nbins,
+                                            hovertemplate="Speed/W¹⁄³: %{x:.4f}<br>Count: %{y}<extra>" + _bar_name + "</extra>",
+                                        ))
+
+                                    _xlo = float(_spw_b["speed_per_cbrt_watt"].min())
+                                    _xhi = float(_spw_b["speed_per_cbrt_watt"].max())
+                                    _xpad = max((_xhi - _xlo) * 0.05, 1e-6)
+                                    for _sx0, _sx1 in [(_xlo - _xpad, _b_lo), (_b_hi, _xhi + _xpad)]:
+                                        _fig_b_h.add_vrect(
+                                            x0=_sx0, x1=_sx1,
+                                            fillcolor="rgba(239,83,80,0.12)",
+                                            line_width=0, layer="below",
+                                        )
+                                    for _vx, _vlabel in [(_b_lo, f"−{z_threshold:.1f}σ"), (_b_hi, f"+{z_threshold:.1f}σ")]:
+                                        _fig_b_h.add_vline(
+                                            x=_vx, line_dash="dash", line_color="#ef5350",
+                                            annotation_text=_vlabel, annotation_position="top",
+                                            annotation_font_color="#ef5350",
+                                        )
+                                    _fig_b_h.add_vline(
+                                        x=_b_mean, line_dash="dot",
+                                        line_color="rgba(128,128,128,0.7)",
+                                        annotation_text="μ", annotation_position="top",
+                                    )
+                                    _fig_b_h.update_layout(
+                                        barmode="overlay",
+                                        xaxis_title=f"Speed/W¹⁄³ ({_spd}/W¹⁄³)",
+                                        yaxis_title="Efforts",
+                                        plot_bgcolor="rgba(0,0,0,0)",
+                                        legend={"orientation": "h", "y": -0.25},
+                                        height=300,
+                                        margin={"t": 10, "b": 10},
+                                    )
+                                    st.plotly_chart(_fig_b_h, width="stretch")
+                                else:
+                                    st.caption("Not enough efforts to show distribution.")
+
+                            st.caption(
+                                f"🔴 **{_n_b_out} outlier(s)** · 🔵 **{_n_b_kept} kept** "
+                                f"(μ = {_bdata['speed_per_cbrt_watt'].mean():.4f}, "
+                                f"σ = {_bdata['speed_per_cbrt_watt'].std(ddof=1):.4f})"
+                            )
 
             elif step == "3 — After filtering":
                 st.caption(

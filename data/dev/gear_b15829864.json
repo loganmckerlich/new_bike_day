@@ -1,0 +1,15 @@
+{
+  "id": "b15829864",
+  "primary": false,
+  "name": "Drew bike",
+  "nickname": "Drew bike",
+  "resource_state": 3,
+  "retired": true,
+  "distance": 228851,
+  "converted_distance": 142.2,
+  "brand_name": "Drew",
+  "model_name": "Drew",
+  "frame_type": 3,
+  "description": null,
+  "weight": 25.0
+}

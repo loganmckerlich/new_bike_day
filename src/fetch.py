@@ -647,6 +647,7 @@ def get_athlete_bikes(
         except requests.RequestException:
             pass
 
+
     return bikes, distances, ftp
 
 

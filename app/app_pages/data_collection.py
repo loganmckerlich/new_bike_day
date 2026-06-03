@@ -392,29 +392,11 @@ def main() -> None:
         if use_sample_data:
             athlete_profile = load_dev_athlete_profile()
             athlete_name = athlete_profile.get("first_name") or None
-            if athlete_name:
-                st.header(f"Hello, {athlete_name} 👋")
-            profile_bits = []
-            full_name = athlete_profile.get("full_name")
-            if full_name:
-                profile_bits.append(f"Rider: **{full_name}**")
-            primary_bike = athlete_profile.get("primary_bike")
-            if primary_bike:
-                profile_bits.append(f"Primary bike: **{primary_bike}**")
-            location = ", ".join(
-                part
-                for part in [athlete_profile.get("city", ""), athlete_profile.get("country", "")]
-                if part
-            )
-            if location:
-                profile_bits.append(f"Home base: **{location}**")
-            if profile_bits:
-                st.caption(" • ".join(profile_bits))
-            st.caption("📊 Showing sample data.")
+            st.info("Using Sample Data")
         else:
-            live_athlete_name = st.session_state.get("athlete_name")
-            if live_athlete_name:
-                st.header(f"Hello, {live_athlete_name} 👋")
+            athlete_name = st.session_state.get("athlete_name")
+        if athlete_name:
+            st.header(f"Hello, {athlete_name} 👋")
         st.markdown(
             "Sign in with Strava to load your segment efforts and bike data. "
             "Once loaded, proceed to **Step 2 — Data Cleaning**."

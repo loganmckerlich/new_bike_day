@@ -1,0 +1,1658 @@
+[
+  {
+    "id": 3386509565227157272,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 15313202807,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 331,
+    "moving_time": 319,
+    "start_date": "2025-08-01T22:52:34Z",
+    "start_date_local": "2025-08-01T15:52:34Z",
+    "distance": 2123.3,
+    "start_index": 1460,
+    "end_index": 1780,
+    "average_cadence": 82.6,
+    "device_watts": true,
+    "average_watts": 333.7,
+    "average_heartrate": 153.6,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491603846346763968,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18561546769,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 381,
+    "moving_time": 354,
+    "start_date": "2026-05-18T23:01:15Z",
+    "start_date_local": "2026-05-18T16:01:15Z",
+    "distance": 2123.3,
+    "start_index": 1471,
+    "end_index": 1828,
+    "average_cadence": 75.3,
+    "device_watts": true,
+    "average_watts": 282.8,
+    "average_heartrate": 155.4,
+    "max_heartrate": 177.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3434724091058506412,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 16726472488,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 399,
+    "moving_time": 357,
+    "start_date": "2025-12-12T23:55:55Z",
+    "start_date_local": "2025-12-12T15:55:55Z",
+    "distance": 2123.3,
+    "start_index": 1539,
+    "end_index": 1901,
+    "average_cadence": 75.8,
+    "device_watts": true,
+    "average_watts": 306.3,
+    "average_heartrate": 160.2,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482549733450308450,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18232972603,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 399,
+    "moving_time": 347,
+    "start_date": "2026-04-23T23:16:27Z",
+    "start_date_local": "2026-04-23T16:16:27Z",
+    "distance": 2123.3,
+    "start_index": 1510,
+    "end_index": 1860,
+    "average_cadence": 77.1,
+    "device_watts": true,
+    "average_watts": 277.5,
+    "average_heartrate": 147.0,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3368760401924940726,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 14791244613,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 406,
+    "moving_time": 368,
+    "start_date": "2025-06-13T23:15:21Z",
+    "start_date_local": "2025-06-13T16:15:21Z",
+    "distance": 2123.3,
+    "start_index": 1318,
+    "end_index": 1687,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 262.7,
+    "average_heartrate": 141.9,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474939480154995840,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 17956160818,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 419,
+    "moving_time": 391,
+    "start_date": "2026-04-02T23:19:05Z",
+    "start_date_local": "2026-04-02T16:19:05Z",
+    "distance": 2123.3,
+    "start_index": 1385,
+    "end_index": 1779,
+    "average_cadence": 75.3,
+    "device_watts": true,
+    "average_watts": 248.3,
+    "average_heartrate": 145.4,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492695235473364988,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18602311496,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 419,
+    "moving_time": 393,
+    "start_date": "2026-05-21T23:14:40Z",
+    "start_date_local": "2026-05-21T16:14:40Z",
+    "distance": 2123.3,
+    "start_index": 1534,
+    "end_index": 1930,
+    "average_cadence": 77.6,
+    "device_watts": true,
+    "average_watts": 241.4,
+    "average_heartrate": 141.9,
+    "max_heartrate": 158.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769760485944604,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18386825130,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 424,
+    "moving_time": 361,
+    "start_date": "2026-05-04T23:07:16Z",
+    "start_date_local": "2026-05-04T16:07:16Z",
+    "distance": 2123.3,
+    "start_index": 1422,
+    "end_index": 1786,
+    "average_cadence": 72.6,
+    "device_watts": true,
+    "average_watts": 254.1,
+    "average_heartrate": 144.4,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491976785075620580,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18575688361,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 439,
+    "moving_time": 379,
+    "start_date": "2026-05-19T23:31:04Z",
+    "start_date_local": "2026-05-19T16:31:04Z",
+    "distance": 2123.3,
+    "start_index": 1538,
+    "end_index": 1920,
+    "average_cadence": 65.0,
+    "device_watts": true,
+    "average_watts": 243.1,
+    "average_heartrate": 143.1,
+    "max_heartrate": 168.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481460322330899076,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18191076840,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 444,
+    "moving_time": 411,
+    "start_date": "2026-04-20T23:12:57Z",
+    "start_date_local": "2026-04-20T16:12:57Z",
+    "distance": 2123.3,
+    "start_index": 1534,
+    "end_index": 1949,
+    "average_cadence": 75.3,
+    "device_watts": true,
+    "average_watts": 234.5,
+    "average_heartrate": 137.0,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251713560377959286,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 11982061060,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 451,
+    "moving_time": 408,
+    "start_date": "2024-07-25T23:39:57Z",
+    "start_date_local": "2024-07-25T16:39:57Z",
+    "distance": 2123.3,
+    "start_index": 430,
+    "end_index": 550,
+    "device_watts": false,
+    "average_heartrate": 139.2,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3335714254366052554,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 13882871618,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 456,
+    "moving_time": 429,
+    "start_date": "2025-03-14T18:47:46Z",
+    "start_date_local": "2025-03-14T11:47:46Z",
+    "distance": 2123.3,
+    "start_index": 1539,
+    "end_index": 1969,
+    "average_cadence": 76.8,
+    "device_watts": true,
+    "average_watts": 274.9,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480045687178374002,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18139952805,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 462,
+    "moving_time": 440,
+    "start_date": "2026-04-17T01:24:10Z",
+    "start_date_local": "2026-04-16T18:24:10Z",
+    "distance": 2123.3,
+    "start_index": 6549,
+    "end_index": 6992,
+    "average_cadence": 77.2,
+    "device_watts": true,
+    "average_watts": 236.2,
+    "average_heartrate": 143.4,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477483617867182040,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18048192213,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 471,
+    "moving_time": 446,
+    "start_date": "2026-04-09T23:38:35Z",
+    "start_date_local": "2026-04-09T16:38:35Z",
+    "distance": 2123.3,
+    "start_index": 1649,
+    "end_index": 2098,
+    "average_cadence": 71.6,
+    "device_watts": true,
+    "average_watts": 223.2,
+    "average_heartrate": 128.8,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472400210211377708,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 17871661668,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 473,
+    "moving_time": 351,
+    "start_date": "2026-03-26T23:05:48Z",
+    "start_date_local": "2026-03-26T16:05:48Z",
+    "distance": 2123.3,
+    "start_index": 1352,
+    "end_index": 1706,
+    "average_cadence": 56.9,
+    "device_watts": true,
+    "average_watts": 236.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482907451886846818,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18244968863,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 481,
+    "moving_time": 433,
+    "start_date": "2026-04-24T22:54:55Z",
+    "start_date_local": "2026-04-24T15:54:55Z",
+    "distance": 2123.3,
+    "start_index": 1541,
+    "end_index": 1977,
+    "average_cadence": 75.6,
+    "device_watts": true,
+    "average_watts": 218.5,
+    "average_heartrate": 133.5,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477837788558436250,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18059562547,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 487,
+    "moving_time": 461,
+    "start_date": "2026-04-10T22:40:42Z",
+    "start_date_local": "2026-04-10T15:40:42Z",
+    "distance": 2123.3,
+    "start_index": 1562,
+    "end_index": 2026,
+    "average_cadence": 69.1,
+    "device_watts": true,
+    "average_watts": 221.7,
+    "average_heartrate": 128.9,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020148979366886056,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 8019857590,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 492,
+    "moving_time": 485,
+    "start_date": "2022-10-25T23:35:38Z",
+    "start_date_local": "2022-10-25T16:35:38Z",
+    "distance": 2123.3,
+    "start_index": 1590,
+    "end_index": 2081,
+    "device_watts": false,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304990295791202172,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 13152258502,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 498,
+    "moving_time": 479,
+    "start_date": "2024-12-19T23:55:57Z",
+    "start_date_local": "2024-12-19T15:55:57Z",
+    "distance": 2123.3,
+    "start_index": 1590,
+    "end_index": 2071,
+    "average_cadence": 73.7,
+    "device_watts": true,
+    "average_watts": 242.5,
+    "average_heartrate": 147.0,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480376062597588422,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18151295238,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 503,
+    "moving_time": 469,
+    "start_date": "2026-04-17T23:18:09Z",
+    "start_date_local": "2026-04-17T16:18:09Z",
+    "distance": 2123.3,
+    "start_index": 1610,
+    "end_index": 2082,
+    "average_cadence": 74.4,
+    "device_watts": true,
+    "average_watts": 198.8,
+    "average_heartrate": 132.0,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476392983714499946,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18006868690,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 504,
+    "moving_time": 473,
+    "start_date": "2026-04-06T23:29:24Z",
+    "start_date_local": "2026-04-06T16:29:24Z",
+    "distance": 2123.3,
+    "start_index": 1545,
+    "end_index": 2021,
+    "average_cadence": 69.5,
+    "device_watts": true,
+    "average_watts": 199.9,
+    "average_heartrate": 122.7,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481826720763086876,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18205603068,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 504,
+    "moving_time": 446,
+    "start_date": "2026-04-21T23:19:30Z",
+    "start_date_local": "2026-04-21T16:19:30Z",
+    "distance": 2123.3,
+    "start_index": 1500,
+    "end_index": 1948,
+    "average_cadence": 74.1,
+    "device_watts": true,
+    "average_watts": 211.7,
+    "average_heartrate": 130.2,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490160378069324320,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18510804449,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 514,
+    "moving_time": 473,
+    "start_date": "2026-05-14T23:13:18Z",
+    "start_date_local": "2026-05-14T16:13:18Z",
+    "distance": 2123.3,
+    "start_index": 1713,
+    "end_index": 2189,
+    "device_watts": false,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3160406249375456410,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 10231775997,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 517,
+    "moving_time": 497,
+    "start_date": "2023-11-17T00:20:06Z",
+    "start_date_local": "2023-11-16T16:20:06Z",
+    "distance": 2123.3,
+    "start_index": 1729,
+    "end_index": 2227,
+    "device_watts": false,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3012165470958179348,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 7907474612,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 541,
+    "moving_time": 441,
+    "start_date": "2022-10-03T22:45:49Z",
+    "start_date_local": "2022-10-03T15:45:49Z",
+    "distance": 2123.3,
+    "start_index": 1524,
+    "end_index": 1984,
+    "device_watts": false,
+    "average_heartrate": 168.4,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489431744278171498,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18484506231,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 542,
+    "moving_time": 531,
+    "start_date": "2026-05-12T22:56:53Z",
+    "start_date_local": "2026-05-12T15:56:53Z",
+    "distance": 2123.3,
+    "start_index": 1819,
+    "end_index": 2353,
+    "device_watts": false,
+    "average_heartrate": 124.3,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487110365776675506,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18399537168,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 551,
+    "moving_time": 536,
+    "start_date": "2026-05-05T23:21:43Z",
+    "start_date_local": "2026-05-05T16:21:43Z",
+    "distance": 2123.3,
+    "start_index": 1734,
+    "end_index": 2272,
+    "device_watts": false,
+    "average_heartrate": 123.0,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487264724017609482,
+    "resource_state": 2,
+    "name": "SE 36th St Rise ",
+    "activity": {
+      "id": 18406314441,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 597,
+    "moving_time": 534,
+    "start_date": "2026-05-06T23:25:48Z",
+    "start_date_local": "2026-05-06T16:25:48Z",
+    "distance": 2123.3,
+    "start_index": 1733,
+    "end_index": 2270,
+    "device_watts": false,
+    "segment": {
+      "id": 12757123,
+      "resource_state": 2,
+      "name": "SE 36th St Rise ",
+      "activity_type": "Ride",
+      "distance": 2123.3,
+      "average_grade": 3.7,
+      "maximum_grade": 10.0,
+      "elevation_high": 85.4,
+      "elevation_low": 6.8,
+      "start_latlng": [
+        47.579495,
+        -122.168712
+      ],
+      "end_latlng": [
+        47.577133,
+        -122.141808
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

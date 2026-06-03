@@ -1,0 +1,2047 @@
+[
+  {
+    "id": 3481691945177857514,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18198995851,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 299,
+    "moving_time": 291,
+    "start_date": "2026-04-21T14:40:06Z",
+    "start_date_local": "2026-04-21T07:40:06Z",
+    "distance": 2032.2,
+    "start_index": 1254,
+    "end_index": 1550,
+    "average_cadence": 78.2,
+    "device_watts": true,
+    "average_watts": 340.8,
+    "average_heartrate": 170.8,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3389383147776983298,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 313,
+    "moving_time": 312,
+    "start_date": "2025-08-09T20:35:34Z",
+    "start_date_local": "2025-08-09T13:35:34Z",
+    "distance": 2032.2,
+    "start_index": 5641,
+    "end_index": 5954,
+    "average_cadence": 76.1,
+    "device_watts": true,
+    "average_watts": 289.6,
+    "average_heartrate": 158.3,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3496913677221560444,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 337,
+    "moving_time": 336,
+    "start_date": "2026-06-02T14:48:26Z",
+    "start_date_local": "2026-06-02T07:48:26Z",
+    "distance": 2032.2,
+    "start_index": 1237,
+    "end_index": 1574,
+    "average_cadence": 79.7,
+    "device_watts": true,
+    "average_watts": 295.5,
+    "average_heartrate": 144.3,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474079913193916252,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 17926029115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 343,
+    "moving_time": 342,
+    "start_date": "2026-03-31T14:13:19Z",
+    "start_date_local": "2026-03-31T07:13:19Z",
+    "distance": 2032.2,
+    "start_index": 1331,
+    "end_index": 1674,
+    "average_cadence": 75.5,
+    "device_watts": true,
+    "average_watts": 287.9,
+    "average_heartrate": 152.3,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480242032470415814,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18146236077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 346,
+    "moving_time": 344,
+    "start_date": "2026-04-17T14:36:49Z",
+    "start_date_local": "2026-04-17T07:36:49Z",
+    "distance": 2032.2,
+    "start_index": 1398,
+    "end_index": 1744,
+    "average_cadence": 69.2,
+    "device_watts": true,
+    "average_watts": 281.7,
+    "average_heartrate": 153.5,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387297855182493440,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 15336818451,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 358,
+    "moving_time": 327,
+    "start_date": "2025-08-03T19:46:39Z",
+    "start_date_local": "2025-08-03T12:46:39Z",
+    "distance": 2032.2,
+    "start_index": 8059,
+    "end_index": 8388,
+    "average_cadence": 67.1,
+    "device_watts": true,
+    "average_watts": 266.3,
+    "average_heartrate": 144.1,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472258010524912558,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 17865936615,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 363,
+    "moving_time": 362,
+    "start_date": "2026-03-26T13:55:23Z",
+    "start_date_local": "2026-03-26T06:55:23Z",
+    "distance": 2032.2,
+    "start_index": 1419,
+    "end_index": 1782,
+    "average_cadence": 69.9,
+    "device_watts": true,
+    "average_watts": 269.8,
+    "average_heartrate": 153.5,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491476539240327406,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18555893716,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 365,
+    "moving_time": 362,
+    "start_date": "2026-05-18T14:41:09Z",
+    "start_date_local": "2026-05-18T07:41:09Z",
+    "distance": 2032.2,
+    "start_index": 1397,
+    "end_index": 1762,
+    "average_cadence": 80.3,
+    "device_watts": true,
+    "average_watts": 271.6,
+    "average_heartrate": 147.3,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491841620560244018,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18569402318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 375,
+    "moving_time": 375,
+    "start_date": "2026-05-19T14:50:12Z",
+    "start_date_local": "2026-05-19T07:50:12Z",
+    "distance": 2032.2,
+    "start_index": 1460,
+    "end_index": 1835,
+    "average_cadence": 79.5,
+    "device_watts": true,
+    "average_watts": 247.6,
+    "average_heartrate": 135.5,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3434594408581259790,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 16723191540,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 378,
+    "moving_time": 378,
+    "start_date": "2025-12-12T14:59:09Z",
+    "start_date_local": "2025-12-12T06:59:09Z",
+    "distance": 2032.2,
+    "start_index": 1499,
+    "end_index": 1877,
+    "average_cadence": 76.9,
+    "device_watts": true,
+    "average_watts": 258.4,
+    "average_heartrate": 137.8,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482418679129056098,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18227023189,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 381,
+    "moving_time": 381,
+    "start_date": "2026-04-23T14:28:47Z",
+    "start_date_local": "2026-04-23T07:28:47Z",
+    "distance": 2032.2,
+    "start_index": 1429,
+    "end_index": 1810,
+    "average_cadence": 76.8,
+    "device_watts": true,
+    "average_watts": 256.9,
+    "average_heartrate": 135.9,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474805379870521368,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 17951108555,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 385,
+    "moving_time": 385,
+    "start_date": "2026-04-02T14:31:20Z",
+    "start_date_local": "2026-04-02T07:31:20Z",
+    "distance": 2032.2,
+    "start_index": 1472,
+    "end_index": 1857,
+    "average_cadence": 74.1,
+    "device_watts": true,
+    "average_watts": 246.0,
+    "average_heartrate": 147.5,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492201193558275980,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18582983778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 385,
+    "moving_time": 385,
+    "start_date": "2026-05-20T14:41:12Z",
+    "start_date_local": "2026-05-20T07:41:12Z",
+    "distance": 2032.2,
+    "start_index": 1396,
+    "end_index": 1781,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 233.4,
+    "average_heartrate": 132.3,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481328901823088434,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18185180204,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 386,
+    "moving_time": 386,
+    "start_date": "2026-04-20T14:38:23Z",
+    "start_date_local": "2026-04-20T07:38:23Z",
+    "distance": 2032.2,
+    "start_index": 1373,
+    "end_index": 1759,
+    "average_cadence": 73.3,
+    "device_watts": true,
+    "average_watts": 258.4,
+    "average_heartrate": 139.8,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3354247835626007936,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 14380153374,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 388,
+    "moving_time": 343,
+    "start_date": "2025-05-04T19:46:37Z",
+    "start_date_local": "2025-05-04T12:46:37Z",
+    "distance": 2032.2,
+    "start_index": 5770,
+    "end_index": 6114,
+    "average_cadence": 65.6,
+    "device_watts": true,
+    "average_watts": 225.2,
+    "average_heartrate": 139.4,
+    "max_heartrate": 170.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492564490289252678,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18596486933,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 388,
+    "moving_time": 387,
+    "start_date": "2026-05-21T14:44:20Z",
+    "start_date_local": "2026-05-21T07:44:20Z",
+    "distance": 2032.2,
+    "start_index": 1482,
+    "end_index": 1870,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 133.3,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476620162038729746,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18014415654,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 394,
+    "moving_time": 394,
+    "start_date": "2026-04-07T14:43:50Z",
+    "start_date_local": "2026-04-07T07:43:50Z",
+    "distance": 2032.2,
+    "start_index": 1432,
+    "end_index": 1826,
+    "average_cadence": 70.6,
+    "device_watts": true,
+    "average_watts": 236.9,
+    "average_heartrate": 136.7,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978678887228,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 399,
+    "moving_time": 399,
+    "start_date": "2026-05-22T14:55:18Z",
+    "start_date_local": "2026-05-22T07:55:18Z",
+    "distance": 2032.2,
+    "start_index": 1354,
+    "end_index": 1753,
+    "average_cadence": 78.9,
+    "device_watts": true,
+    "average_watts": 237.7,
+    "average_heartrate": 131.6,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482778953325296836,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18240132582,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 400,
+    "moving_time": 392,
+    "start_date": "2026-04-24T14:35:51Z",
+    "start_date_local": "2026-04-24T07:35:51Z",
+    "distance": 2032.2,
+    "start_index": 1423,
+    "end_index": 1819,
+    "average_cadence": 73.6,
+    "device_watts": true,
+    "average_watts": 243.9,
+    "average_heartrate": 131.5,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3479877879681409056,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18133000629,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 403,
+    "moving_time": 397,
+    "start_date": "2026-04-16T14:28:59Z",
+    "start_date_local": "2026-04-16T07:28:59Z",
+    "distance": 2032.2,
+    "start_index": 1470,
+    "end_index": 1873,
+    "average_cadence": 74.5,
+    "device_watts": true,
+    "average_watts": 240.8,
+    "average_heartrate": 137.1,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476257563191002320,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18001520259,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 407,
+    "moving_time": 406,
+    "start_date": "2026-04-06T14:43:47Z",
+    "start_date_local": "2026-04-06T07:43:47Z",
+    "distance": 2032.2,
+    "start_index": 1416,
+    "end_index": 1823,
+    "average_cadence": 72.4,
+    "device_watts": true,
+    "average_watts": 227.9,
+    "average_heartrate": 135.7,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3012128648611605524,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 7906979690,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 414,
+    "moving_time": 412,
+    "start_date": "2022-10-03T19:18:07Z",
+    "start_date_local": "2022-10-03T12:18:07Z",
+    "distance": 2032.2,
+    "start_index": 1677,
+    "end_index": 2087,
+    "device_watts": false,
+    "average_heartrate": 131.5,
+    "max_heartrate": 133.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477707428062310256,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18054908859,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 414,
+    "moving_time": 413,
+    "start_date": "2026-04-10T14:30:44Z",
+    "start_date_local": "2026-04-10T07:30:44Z",
+    "distance": 2032.2,
+    "start_index": 1483,
+    "end_index": 1897,
+    "average_cadence": 70.7,
+    "device_watts": true,
+    "average_watts": 228.7,
+    "average_heartrate": 132.7,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486401448931425560,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18373080739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 414,
+    "moving_time": 414,
+    "start_date": "2026-05-04T14:30:29Z",
+    "start_date_local": "2026-05-04T07:30:29Z",
+    "distance": 2032.2,
+    "start_index": 1453,
+    "end_index": 1867,
+    "average_cadence": 75.7,
+    "device_watts": true,
+    "average_watts": 240.0,
+    "average_heartrate": 134.7,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477343057732489402,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18042080515,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 417,
+    "moving_time": 417,
+    "start_date": "2026-04-09T14:35:12Z",
+    "start_date_local": "2026-04-09T07:35:12Z",
+    "distance": 2032.2,
+    "start_index": 1499,
+    "end_index": 1916,
+    "average_cadence": 70.6,
+    "device_watts": true,
+    "average_watts": 232.1,
+    "average_heartrate": 129.5,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476974597733389516,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18028038338,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 426,
+    "moving_time": 424,
+    "start_date": "2026-04-08T14:10:40Z",
+    "start_date_local": "2026-04-08T07:10:40Z",
+    "distance": 2032.2,
+    "start_index": 1483,
+    "end_index": 1909,
+    "device_watts": false,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769751649923936,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18386825119,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 437,
+    "moving_time": 437,
+    "start_date": "2026-05-05T14:48:17Z",
+    "start_date_local": "2026-05-05T07:48:17Z",
+    "distance": 2032.2,
+    "start_index": 1513,
+    "end_index": 1950,
+    "device_watts": false,
+    "average_heartrate": 129.3,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020008449431265960,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 8017333792,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 451,
+    "moving_time": 449,
+    "start_date": "2022-10-25T14:30:26Z",
+    "start_date_local": "2022-10-25T07:30:26Z",
+    "distance": 2032.2,
+    "start_index": 1701,
+    "end_index": 2152,
+    "device_watts": false,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489304526498820858,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18478432225,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 461,
+    "moving_time": 461,
+    "start_date": "2026-05-12T14:44:45Z",
+    "start_date_local": "2026-05-12T07:44:45Z",
+    "distance": 2032.2,
+    "start_index": 1651,
+    "end_index": 2112,
+    "device_watts": false,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487129644538088420,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18400369545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 478,
+    "moving_time": 478,
+    "start_date": "2026-05-06T14:39:58Z",
+    "start_date_local": "2026-05-06T07:39:58Z",
+    "distance": 2032.2,
+    "start_index": 1590,
+    "end_index": 2068,
+    "device_watts": false,
+    "average_heartrate": 119.8,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490027183722412786,
+    "resource_state": 2,
+    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "activity": {
+      "id": 18505534998,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 483,
+    "moving_time": 483,
+    "start_date": "2026-05-14T14:34:29Z",
+    "start_date_local": "2026-05-14T07:34:29Z",
+    "distance": 2032.2,
+    "start_index": 1679,
+    "end_index": 2162,
+    "device_watts": false,
+    "average_heartrate": 125.9,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 10397266,
+      "resource_state": 2,
+      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "activity_type": "Ride",
+      "distance": 2032.2,
+      "average_grade": 2.9,
+      "maximum_grade": 14.8,
+      "elevation_high": 101.5,
+      "elevation_low": 41.4,
+      "start_latlng": [
+        47.569783,
+        -122.105587
+      ],
+      "end_latlng": [
+        47.577391,
+        -122.127966
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

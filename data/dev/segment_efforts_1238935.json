@@ -1,0 +1,1702 @@
+[
+  {
+    "id": 3497042857439032704,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18763295926,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 325,
+    "moving_time": 325,
+    "start_date": "2026-06-02T23:24:02Z",
+    "start_date_local": "2026-06-02T16:24:02Z",
+    "distance": 3698.14,
+    "start_index": 2563,
+    "end_index": 2888,
+    "average_cadence": 78.4,
+    "device_watts": true,
+    "average_watts": 311.5,
+    "average_heartrate": 154.6,
+    "max_heartrate": 175.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481460322330455684,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18191076840,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 358,
+    "moving_time": 358,
+    "start_date": "2026-04-20T23:32:22Z",
+    "start_date_local": "2026-04-20T16:32:22Z",
+    "distance": 3698.14,
+    "start_index": 2592,
+    "end_index": 2950,
+    "average_cadence": 68.5,
+    "device_watts": true,
+    "average_watts": 205.1,
+    "average_heartrate": 127.1,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3386509565227729688,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 15313202807,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 363,
+    "moving_time": 363,
+    "start_date": "2025-08-01T23:11:46Z",
+    "start_date_local": "2025-08-01T16:11:46Z",
+    "distance": 3698.14,
+    "start_index": 2365,
+    "end_index": 2728,
+    "average_cadence": 71.9,
+    "device_watts": true,
+    "average_watts": 197.7,
+    "average_heartrate": 124.8,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472400210212985388,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 17871661668,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 369,
+    "moving_time": 356,
+    "start_date": "2026-03-26T23:25:33Z",
+    "start_date_local": "2026-03-26T16:25:33Z",
+    "distance": 3698.14,
+    "start_index": 2299,
+    "end_index": 2657,
+    "average_cadence": 66.9,
+    "device_watts": true,
+    "average_watts": 221.6,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477154365590756450,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18035806364,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 380,
+    "moving_time": 345,
+    "start_date": "2026-04-09T00:46:43Z",
+    "start_date_local": "2026-04-08T17:46:43Z",
+    "distance": 3698.14,
+    "start_index": 3123,
+    "end_index": 3471,
+    "average_cadence": 64.6,
+    "device_watts": true,
+    "average_watts": 271.2,
+    "average_heartrate": 158.1,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3251713560378399606,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 11982061060,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 384,
+    "moving_time": 384,
+    "start_date": "2024-07-25T23:59:54Z",
+    "start_date_local": "2024-07-25T16:59:54Z",
+    "distance": 3698.14,
+    "start_index": 808,
+    "end_index": 933,
+    "device_watts": false,
+    "average_heartrate": 146.0,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482907451886848866,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18244968863,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 384,
+    "moving_time": 384,
+    "start_date": "2026-04-24T23:17:27Z",
+    "start_date_local": "2026-04-24T16:17:27Z",
+    "distance": 3698.14,
+    "start_index": 2637,
+    "end_index": 3021,
+    "average_cadence": 65.1,
+    "device_watts": true,
+    "average_watts": 167.1,
+    "average_heartrate": 120.6,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3009543906647461830,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 7871148872,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 385,
+    "moving_time": 358,
+    "start_date": "2022-09-26T17:56:20Z",
+    "start_date_local": "2022-09-26T10:56:20Z",
+    "distance": 3698.14,
+    "start_index": 2894,
+    "end_index": 3253,
+    "device_watts": false,
+    "average_heartrate": 136.4,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492695235473170428,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18602311496,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 391,
+    "moving_time": 391,
+    "start_date": "2026-05-21T23:33:50Z",
+    "start_date_local": "2026-05-21T16:33:50Z",
+    "distance": 3698.14,
+    "start_index": 2572,
+    "end_index": 2963,
+    "average_cadence": 65.8,
+    "device_watts": true,
+    "average_watts": 168.4,
+    "average_heartrate": 118.1,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491976785078250212,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18575688361,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 402,
+    "moving_time": 402,
+    "start_date": "2026-05-19T23:49:51Z",
+    "start_date_local": "2026-05-19T16:49:51Z",
+    "distance": 3698.14,
+    "start_index": 2570,
+    "end_index": 2972,
+    "average_cadence": 73.0,
+    "device_watts": true,
+    "average_watts": 164.6,
+    "average_heartrate": 121.1,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480045687179477874,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18139952805,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 407,
+    "moving_time": 407,
+    "start_date": "2026-04-17T01:45:42Z",
+    "start_date_local": "2026-04-16T18:45:42Z",
+    "distance": 3698.14,
+    "start_index": 7671,
+    "end_index": 8078,
+    "average_cadence": 65.1,
+    "device_watts": true,
+    "average_watts": 155.4,
+    "average_heartrate": 122.2,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3012165470957121556,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 7907474612,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 411,
+    "moving_time": 411,
+    "start_date": "2022-10-03T23:09:56Z",
+    "start_date_local": "2022-10-03T16:09:56Z",
+    "distance": 3698.14,
+    "start_index": 2667,
+    "end_index": 3077,
+    "device_watts": false,
+    "average_heartrate": 145.3,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474939480154165376,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 17956160818,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 411,
+    "moving_time": 411,
+    "start_date": "2026-04-02T23:38:38Z",
+    "start_date_local": "2026-04-02T16:38:38Z",
+    "distance": 3698.14,
+    "start_index": 2426,
+    "end_index": 2837,
+    "average_cadence": 68.6,
+    "device_watts": true,
+    "average_watts": 160.3,
+    "average_heartrate": 122.9,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3304990295789904764,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 13152258502,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 414,
+    "moving_time": 414,
+    "start_date": "2024-12-20T00:18:24Z",
+    "start_date_local": "2024-12-19T16:18:24Z",
+    "distance": 3698.14,
+    "start_index": 2802,
+    "end_index": 3216,
+    "average_cadence": 66.7,
+    "device_watts": true,
+    "average_watts": 229.0,
+    "average_heartrate": 138.6,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3335714243127203146,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 13882871618,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 430,
+    "moving_time": 430,
+    "start_date": "2025-03-14T19:07:40Z",
+    "start_date_local": "2025-03-14T12:07:40Z",
+    "distance": 3698.14,
+    "start_index": 2584,
+    "end_index": 3014,
+    "average_cadence": 69.8,
+    "device_watts": true,
+    "average_watts": 224.5,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3434724091056002732,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 16726472488,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 447,
+    "moving_time": 411,
+    "start_date": "2025-12-13T00:17:02Z",
+    "start_date_local": "2025-12-12T16:17:02Z",
+    "distance": 3698.14,
+    "start_index": 2570,
+    "end_index": 2984,
+    "average_cadence": 61.0,
+    "device_watts": true,
+    "average_watts": 165.5,
+    "average_heartrate": 130.2,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480376062598987206,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18151295238,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 449,
+    "moving_time": 386,
+    "start_date": "2026-04-17T23:39:01Z",
+    "start_date_local": "2026-04-17T16:39:01Z",
+    "distance": 3698.14,
+    "start_index": 2757,
+    "end_index": 3146,
+    "average_cadence": 56.5,
+    "device_watts": true,
+    "average_watts": 148.1,
+    "average_heartrate": 122.1,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491603846346701504,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18561546769,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 452,
+    "moving_time": 389,
+    "start_date": "2026-05-18T23:19:23Z",
+    "start_date_local": "2026-05-18T16:19:23Z",
+    "distance": 3698.14,
+    "start_index": 2411,
+    "end_index": 2803,
+    "average_cadence": 56.9,
+    "device_watts": true,
+    "average_watts": 149.6,
+    "average_heartrate": 128.6,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482549733450736482,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18232972603,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 462,
+    "moving_time": 422,
+    "start_date": "2026-04-23T23:34:22Z",
+    "start_date_local": "2026-04-23T16:34:22Z",
+    "distance": 3698.14,
+    "start_index": 2493,
+    "end_index": 2918,
+    "average_cadence": 63.2,
+    "device_watts": true,
+    "average_watts": 149.7,
+    "average_heartrate": 119.1,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476392983711127914,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18006868690,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 466,
+    "moving_time": 398,
+    "start_date": "2026-04-06T23:50:47Z",
+    "start_date_local": "2026-04-06T16:50:47Z",
+    "distance": 3698.14,
+    "start_index": 2686,
+    "end_index": 3087,
+    "average_cadence": 52.2,
+    "device_watts": true,
+    "average_watts": 130.1,
+    "average_heartrate": 111.9,
+    "max_heartrate": 134.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020148979366583976,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 8019857590,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 467,
+    "moving_time": 467,
+    "start_date": "2022-10-26T00:00:31Z",
+    "start_date_local": "2022-10-25T17:00:31Z",
+    "distance": 3698.14,
+    "start_index": 2869,
+    "end_index": 3330,
+    "device_watts": false,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3160406249374438554,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 10231775997,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 467,
+    "moving_time": 466,
+    "start_date": "2023-11-17T00:45:34Z",
+    "start_date_local": "2023-11-16T16:45:34Z",
+    "distance": 3698.14,
+    "start_index": 3065,
+    "end_index": 3532,
+    "device_watts": false,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481826720764584988,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18205603068,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 471,
+    "moving_time": 419,
+    "start_date": "2026-04-21T23:42:11Z",
+    "start_date_local": "2026-04-21T16:42:11Z",
+    "distance": 3698.14,
+    "start_index": 2625,
+    "end_index": 3046,
+    "average_cadence": 54.6,
+    "device_watts": true,
+    "average_watts": 132.3,
+    "average_heartrate": 112.6,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477837788557976474,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18059562547,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 473,
+    "moving_time": 416,
+    "start_date": "2026-04-10T23:02:26Z",
+    "start_date_local": "2026-04-10T16:02:26Z",
+    "distance": 3698.14,
+    "start_index": 2709,
+    "end_index": 3128,
+    "average_cadence": 55.2,
+    "device_watts": true,
+    "average_watts": 143.5,
+    "average_heartrate": 115.1,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487110365774437042,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18399537168,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 481,
+    "moving_time": 464,
+    "start_date": "2026-05-05T23:45:53Z",
+    "start_date_local": "2026-05-05T16:45:53Z",
+    "distance": 3698.14,
+    "start_index": 2998,
+    "end_index": 3464,
+    "device_watts": false,
+    "average_heartrate": 110.7,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490160378069632544,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18510804449,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 486,
+    "moving_time": 486,
+    "start_date": "2026-05-14T23:35:17Z",
+    "start_date_local": "2026-05-14T16:35:17Z",
+    "distance": 3698.14,
+    "start_index": 2900,
+    "end_index": 3386,
+    "device_watts": false,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477483617864341464,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18048192213,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 526,
+    "moving_time": 430,
+    "start_date": "2026-04-10T00:03:43Z",
+    "start_date_local": "2026-04-09T17:03:43Z",
+    "distance": 3698.14,
+    "start_index": 2790,
+    "end_index": 3223,
+    "average_cadence": 43.8,
+    "device_watts": true,
+    "average_watts": 101.4,
+    "average_heartrate": 107.0,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487264724019385098,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18406314441,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 546,
+    "moving_time": 499,
+    "start_date": "2026-05-06T23:49:34Z",
+    "start_date_local": "2026-05-06T16:49:34Z",
+    "distance": 3698.14,
+    "start_index": 3018,
+    "end_index": 3520,
+    "device_watts": false,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489431744278621034,
+    "resource_state": 2,
+    "name": "East on NW Sammamish Rd",
+    "activity": {
+      "id": 18484506231,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 559,
+    "moving_time": 470,
+    "start_date": "2026-05-12T23:19:23Z",
+    "start_date_local": "2026-05-12T16:19:23Z",
+    "distance": 3698.14,
+    "start_index": 3057,
+    "end_index": 3529,
+    "device_watts": false,
+    "average_heartrate": 106.0,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 1238935,
+      "resource_state": 2,
+      "name": "East on NW Sammamish Rd",
+      "activity_type": "Ride",
+      "distance": 3698.14,
+      "average_grade": -0.9,
+      "maximum_grade": 5.9,
+      "elevation_high": 26.0,
+      "elevation_low": -19.2,
+      "start_latlng": [
+        47.567636696621776,
+        -122.09873129613698
+      ],
+      "end_latlng": [
+        47.55179054103792,
+        -122.0589411444962
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

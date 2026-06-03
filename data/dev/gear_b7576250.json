@@ -1,0 +1,15 @@
+{
+  "id": "b7576250",
+  "primary": false,
+  "name": "Titanium Horse",
+  "nickname": "Titanium Horse",
+  "resource_state": 3,
+  "retired": true,
+  "distance": 5070344,
+  "converted_distance": 3150.6,
+  "brand_name": "Airborne",
+  "model_name": "Zeppelin",
+  "frame_type": 3,
+  "description": "2002 model I think",
+  "weight": 25.0
+}

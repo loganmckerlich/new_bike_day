@@ -2,8 +2,8 @@
   "id": 56163722,
   "username": "lmckerlich",
   "resource_state": 3,
-  "firstname": "Mogan",
-  "lastname": "LcKerlich",
+  "firstname": "Logan",
+  "lastname": "McKerlich",
   "bio": " Bad luck to kill a sea bird! \ud83e\udea4",
   "city": "Seattle",
   "state": "Washington",
@@ -21,8 +21,8 @@
   "follower": null,
   "blocked": false,
   "can_follow": true,
-  "follower_count": 92,
-  "friend_count": 97,
+  "follower_count": 94,
+  "friend_count": 98,
   "mutual_friend_count": 0,
   "athlete_type": 0,
   "date_preference": "%m/%d/%Y",
@@ -277,26 +277,6 @@
   "ftp": 318,
   "bikes": [
     {
-      "id": "b15894471",
-      "primary": false,
-      "name": "Canyon Aeroad CF SLX",
-      "nickname": "Canyon Aeroad CF SLX",
-      "resource_state": 2,
-      "retired": false,
-      "distance": 8300473,
-      "converted_distance": 5157.7
-    },
-    {
-      "id": "b15829864",
-      "primary": false,
-      "name": "Drew bike",
-      "nickname": "Drew bike",
-      "resource_state": 2,
-      "retired": false,
-      "distance": 228851,
-      "converted_distance": 142.2
-    },
-    {
       "id": "b14499703",
       "primary": false,
       "name": "Fixed gear",
@@ -313,18 +293,8 @@
       "nickname": "Specialized Tarmac SL8",
       "resource_state": 2,
       "retired": false,
-      "distance": 265777,
-      "converted_distance": 165.1
-    },
-    {
-      "id": "b7576250",
-      "primary": false,
-      "name": "Titanium Horse",
-      "nickname": "Titanium Horse",
-      "resource_state": 2,
-      "retired": false,
-      "distance": 5070344,
-      "converted_distance": 3150.6
+      "distance": 751025,
+      "converted_distance": 466.7
     }
   ],
   "shoes": [
@@ -335,8 +305,8 @@
       "nickname": "Cloud Vista",
       "resource_state": 2,
       "retired": false,
-      "distance": 188585,
-      "converted_distance": 117.2
+      "distance": 197055,
+      "converted_distance": 122.4
     }
   ]
 }

@@ -63,7 +63,77 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3496913677218976892,
+    "resource_state": 2,
+    "name": "212th Way Descent",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 128,
+    "moving_time": 128,
+    "start_date": "2026-06-02T14:30:43Z",
+    "start_date_local": "2026-06-02T07:30:43Z",
+    "distance": 1661.1,
+    "start_index": 194,
+    "end_index": 322,
+    "average_cadence": 41.9,
+    "device_watts": true,
+    "average_watts": 96.9,
+    "average_heartrate": 129.9,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 7059603,
+      "resource_state": 2,
+      "name": "212th Way Descent",
+      "activity_type": "Ride",
+      "distance": 1661.1,
+      "average_grade": -6.3,
+      "maximum_grade": 6.8,
+      "elevation_high": 79.0,
+      "elevation_low": -28.2,
+      "start_latlng": [
+        47.580964,
+        -122.057015
+      ],
+      "end_latlng": [
+        47.570415,
+        -122.064305
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -133,7 +203,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -203,7 +273,72 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492564490290778438,
+    "resource_state": 2,
+    "name": "212th Way Descent",
+    "activity": {
+      "id": 18596486933,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 135,
+    "moving_time": 135,
+    "start_date": "2026-05-21T14:22:04Z",
+    "start_date_local": "2026-05-21T07:22:04Z",
+    "distance": 1661.1,
+    "start_index": 234,
+    "end_index": 369,
+    "average_cadence": 31.0,
+    "device_watts": true,
+    "average_watts": 69.7,
+    "average_heartrate": 126.0,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 7059603,
+      "resource_state": 2,
+      "name": "212th Way Descent",
+      "activity_type": "Ride",
+      "distance": 1661.1,
+      "average_grade": -6.3,
+      "maximum_grade": 6.8,
+      "elevation_high": 79.0,
+      "elevation_low": -28.2,
+      "start_latlng": [
+        47.580964,
+        -122.057015
+      ],
+      "end_latlng": [
+        47.570415,
+        -122.064305
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -273,7 +408,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -338,7 +473,72 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978677277500,
+    "resource_state": 2,
+    "name": "212th Way Descent",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 137,
+    "moving_time": 137,
+    "start_date": "2026-05-22T14:35:46Z",
+    "start_date_local": "2026-05-22T07:35:46Z",
+    "distance": 1661.1,
+    "start_index": 222,
+    "end_index": 359,
+    "average_cadence": 30.1,
+    "device_watts": true,
+    "average_watts": 57.9,
+    "average_heartrate": 114.8,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 7059603,
+      "resource_state": 2,
+      "name": "212th Way Descent",
+      "activity_type": "Ride",
+      "distance": 1661.1,
+      "average_grade": -6.3,
+      "maximum_grade": 6.8,
+      "elevation_high": 79.0,
+      "elevation_low": -28.2,
+      "start_latlng": [
+        47.580964,
+        -122.057015
+      ],
+      "end_latlng": [
+        47.570415,
+        -122.064305
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -408,7 +608,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -478,7 +678,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -543,7 +743,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -613,7 +813,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -678,7 +878,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -741,7 +941,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -811,7 +1011,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -876,7 +1076,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -946,7 +1146,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1007,7 +1207,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1072,7 +1272,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1133,7 +1333,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1198,7 +1398,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1268,7 +1468,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1331,7 +1531,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1401,7 +1601,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1464,7 +1664,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1534,7 +1734,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1595,7 +1795,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",
@@ -1665,7 +1865,7 @@
         "type_id": 7,
         "type": "segment_effort_count_leader",
         "rank": 1,
-        "effort_count": 22
+        "effort_count": 25
       }
     ],
     "visibility": "everyone",

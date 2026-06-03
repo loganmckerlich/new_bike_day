@@ -95,7 +95,7 @@ def filter_outliers_by_power_speed(
     if "segment_type" in out.columns:
         valid &= out["segment_type"] != "descent"
 
-    group_cols = ["segment_id", "bike_name"] if "bike_name" in out.columns else ["segment_id"]
+    group_cols = ["segment_id", "bike_name"]
     for _, grp_idx in out[valid].groupby(group_cols).groups.items():
         grp = out.loc[grp_idx, "speed_per_cbrt_watt"]
         if len(grp) < min_efforts:
