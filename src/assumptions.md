@@ -27,4 +27,4 @@ I have average and max grade for segments, but this isn't as representative as I
 My model does not account for traffic stoppages.
 
 #### Wind
-This is a big factor that I am not currently modeling - though I plan to bring it in using a weather api
+This is a big factor that I am not currently modeling - though I plan to bring it in using a weather API
