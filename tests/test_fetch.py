@@ -169,6 +169,39 @@ class IngestAllGearResolutionTests(unittest.TestCase):
 
     @patch("src.fetch.time.sleep")
     @patch("src.fetch.requests.get")
+    def test_retired_bike_resolved_via_gear_endpoint(self, mock_get: MagicMock, _sleep: MagicMock) -> None:
+        """A retired bike (absent from /athlete bikes) is fetched via GET /gear/{id}."""
+        activities_page1 = [
+            {"id": 1, "sport_type": "Ride", "average_watts": 200.0, "device_watts": True,
+             "gear_id": "bRETIRED", "name": "Old Ride", "start_date": "2023-01-01T07:00:00Z"},
+        ]
+        starred_segs = [
+            {"id": 99, "name": "Test Hill", "distance": 1000.0, "average_grade": 5.0,
+             "climb_category": 1, "total_elevation_gain": 50.0, "start_latlng": [51.0, -1.0]},
+        ]
+        segment_efforts = [
+            {"id": 777, "activity": {"id": 1, "resource_state": 1},
+             "start_date": "2023-01-01T07:30:00Z", "elapsed_time": 120,
+             "moving_time": 118, "average_watts": 180.0, "average_heartrate": 150.0},
+        ]
+        mock_get.side_effect = [
+            _mock_response(activities_page1),                                            # GET /athlete/activities
+            _mock_response({"bikes": []}),                                               # GET /athlete (no active bikes)
+            _mock_response({"id": "bRETIRED", "name": "Old Steel", "retired": True}),   # GET /gear/bRETIRED
+            _mock_response(starred_segs),                                                # GET /segments/starred
+            _mock_response(segment_efforts),                                             # GET /segment_efforts
+        ]
+
+        result = ingest_all("token")
+
+        bikes = result["bikes"]
+        self.assertIn("bRETIRED", bikes)
+        self.assertEqual(bikes["bRETIRED"], "Old Steel")
+        efforts_df: pd.DataFrame = result["efforts"]
+        self.assertEqual(efforts_df.iloc[0]["gear_id"], "bRETIRED")
+
+    @patch("src.fetch.time.sleep")
+    @patch("src.fetch.requests.get")
     def test_effort_unmatched_activity_gets_none_gear_id(self, mock_get: MagicMock, _sleep: MagicMock) -> None:
         """An effort whose activity_id doesn't match any power ride gets gear_id=None."""
         mock_get.side_effect = [
