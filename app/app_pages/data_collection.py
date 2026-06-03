@@ -375,6 +375,13 @@ def _load_sample_data() -> None:
     _render_bike_summaries(data, segments, bikes, bike_distances)
 
 
+def _fallback_to_sample_data(error_message: str) -> None:
+    """Show an error and fall back to sample data."""
+    st.error(error_message)
+    st.session_state["use_sample_data"] = True
+    _load_sample_data()
+
+
 def main() -> None:
     use_sample_data = st.session_state.get("use_sample_data", False)
 
@@ -434,6 +441,8 @@ def main() -> None:
             st.rerun()
 
     # ── Sample data mode ───────────────────────────────────────────────────────
+    # Handles both the post-rerun state after clicking "Use sample data" and
+    # any fallback set by an OAuth error handler below.
     if st.session_state.get("use_sample_data"):
         _load_sample_data()
         return
@@ -442,9 +451,7 @@ def main() -> None:
     error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
     if error_from_params:
-        st.error(f"Strava sign-in failed: {error_from_params}. Showing sample data instead.")
-        st.session_state["use_sample_data"] = True
-        _load_sample_data()
+        _fallback_to_sample_data(f"Strava sign-in failed: {error_from_params}. Showing sample data instead.")
         return
 
     code = _query_param_value(code_from_params)
@@ -462,22 +469,16 @@ def main() -> None:
                     if code != last_processed_code or not access_token:
                         access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
                 except (requests.RequestException, ValueError) as exc:
-                    st.error(f"Strava sign-in failed: {exc}. Showing sample data instead.")
-                    st.session_state["use_sample_data"] = True
-                    _load_sample_data()
+                    _fallback_to_sample_data(f"Strava sign-in failed: {exc}. Showing sample data instead.")
                     return
             try:
                 data, gear_frame, bikes, bike_distances, ftp = _process_data(access_token=access_token)
             except PremiumOnlyError as exc:
-                st.error(f"{exc} Showing sample data instead.")
-                st.session_state["use_sample_data"] = True
-                _load_sample_data()
+                _fallback_to_sample_data(f"{exc} Showing sample data instead.")
                 return
             except (requests.RequestException, ValueError) as exc:
                 traceback.print_exc(file=sys.stderr)
-                st.error(f"Strava sign-in failed: {exc}. Showing sample data instead.")
-                st.session_state["use_sample_data"] = True
-                _load_sample_data()
+                _fallback_to_sample_data(f"Strava sign-in failed: {exc}. Showing sample data instead.")
                 return
             _save_session(data, gear_frame, bikes, code, access_token, bike_distances, ftp)
             with status_col:
@@ -491,15 +492,11 @@ def main() -> None:
             try:
                 data, gear_frame, bikes, bike_distances, ftp = _process_data(access_token=session_token)
             except PremiumOnlyError as exc:
-                st.error(f"{exc} Showing sample data instead.")
-                st.session_state["use_sample_data"] = True
-                _load_sample_data()
+                _fallback_to_sample_data(f"{exc} Showing sample data instead.")
                 return
             except (requests.RequestException, ValueError) as exc:
                 traceback.print_exc(file=sys.stderr)
-                st.error(f"Strava sign-in failed: {exc}. Showing sample data instead.")
-                st.session_state["use_sample_data"] = True
-                _load_sample_data()
+                _fallback_to_sample_data(f"Strava sign-in failed: {exc}. Showing sample data instead.")
                 return
             _save_session(data, gear_frame, bikes, None, session_token, bike_distances, ftp)
         with status_col:
