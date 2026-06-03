@@ -110,6 +110,7 @@ class _DevSession:
     URL routing (path relative to the Strava API base):
       /athlete                 → athlete.json            (raw GET /athlete)
       /athlete/activities      → athlete_activities.json  (raw GET /athlete/activities)
+      /gear/{id}               → gear_{id}.json           (raw GET /gear/{id})
       /segments/starred        → segments_starred.json    (raw GET /segments/starred)
       /segment_efforts         → segment_efforts_{id}.json  (raw GET /segment_efforts?segment_id=id)
       /segments/{id}/streams   → segment_streams_{id}.json  (raw GET /segments/{id}/streams)
@@ -143,6 +144,11 @@ class _DevSession:
             else:
                 f = _DEV_DIR / f"athlete_activities_p{page}.json"
                 data = json.loads(f.read_text()) if f.exists() else []
+
+        elif path.startswith("/gear/"):
+            gear_id = path.split("/")[-1]
+            f = _DEV_DIR / f"gear_{gear_id}.json"
+            data = json.loads(f.read_text()) if f.exists() else {}
 
         elif path == "/segments/starred":
             data = [] if page > 1 else json.loads((_DEV_DIR / "segments_starred.json").read_text())
@@ -577,36 +583,35 @@ def get_athlete_activities(
 def get_athlete_bikes(
     access_token: str,
     *,
-    gear_to_activity: Optional[dict[str, int]] = None,
+    gear_ids: Optional[set[str]] = None,
     _http: Any = None,
 ) -> tuple[dict[str, str], dict[str, float], Optional[int]]:
-    """Resolve gear_id → bike name using two strategies in order.
+    """Resolve gear_id → bike name for both active and retired bikes.
 
-    **Strategy 1** — ``GET /athlete``: returns the full bike list when the token
+    **Step 1** — ``GET /athlete``: returns active bikes and FTP when the token
     has ``profile:read_all`` scope.  One API call, fast.
 
-    **Strategy 2** — ``GET /activities/{id}`` per unique gear_id: reads
-    ``DetailedActivity.gear.name``, which is available with ``activity:read_all``
-    scope only.  Pass ``gear_to_activity`` (a mapping of ``gear_id →
-    activity_id``) to enable this fallback; if omitted, strategy 2 is skipped.
+    **Step 2** — ``GET /gear/{id}`` per unknown gear_id: fetches any gear_id
+    seen in activities that was not in the active bike list (i.e. retired bikes).
 
     Args:
         access_token: Valid Strava OAuth access token.
-        gear_to_activity: Optional ``{gear_id: activity_id}`` mapping used as
-            a fallback when ``/athlete`` returns no bikes.  Build this from
-            the activities dict or from cached efforts.
+        gear_ids: Set of gear_ids seen in activities. Any id not returned by
+            ``GET /athlete`` (retired bikes) will be fetched via ``GET /gear/{id}``.
         _http: HTTP session override (defaults to :class:`_LoggingSession`).
 
     Returns:
         Tuple of (bikes dict, distances dict, ftp). bikes maps gear_id to bike
         name. ftp is the athlete's FTP in watts, or None if unavailable.
-        Returns empty dicts and None if both strategies fail or produce no results.
     """
     if _http is None:
         _http = _LoggingSession()
     headers = _auth_headers(access_token)
+    bikes: dict[str, str] = {}
+    distances: dict[str, float] = {}
+    ftp: Optional[int] = None
 
-    # Strategy 1: GET /athlete
+    # Step 1: GET /athlete — active bikes only
     try:
         resp = _http.get(f"{_STRAVA_API_BASE}/athlete", headers=headers, timeout=30)
         resp.raise_for_status()
@@ -617,36 +622,32 @@ def get_athlete_bikes(
             for b in bikes_list
             if b.get("id")
         }
-        distances: dict[str, float] = {
+        distances = {
             str(b["id"]): float(b["converted_distance"])
             for b in bikes_list
             if b.get("id") and b.get("converted_distance") is not None
         }
         raw_ftp = athlete_data.get("ftp")
-        ftp: Optional[int] = int(raw_ftp) if raw_ftp is not None else None
-        if bikes:
-            return bikes, distances, ftp
+        ftp = int(raw_ftp) if raw_ftp is not None else None
     except requests.RequestException:
         pass
 
-    # Strategy 2: one GET /activities/{id} per unique gear_id
-    if not gear_to_activity:
-        return {}, {}, None
-    result: dict[str, str] = {}
-    for gear_id, activity_id in gear_to_activity.items():
+    # Step 2: GET /gear/{id} — retired bikes not returned by /athlete
+    for gear_id in (gear_ids or set()):
+        if gear_id in bikes:
+            continue
         try:
-            resp = _http.get(
-                f"{_STRAVA_API_BASE}/activities/{activity_id}",
-                headers=headers,
-                timeout=30,
-            )
+            resp = _http.get(f"{_STRAVA_API_BASE}/gear/{gear_id}", headers=headers, timeout=30)
             resp.raise_for_status()
-            gear = resp.json().get("gear") or {}
+            gear = resp.json()
             name = gear.get("name") or gear.get("model_name") or str(gear_id)
-            result[str(gear_id)] = name
+            bikes[str(gear_id)] = name
+            if gear.get("converted_distance") is not None:
+                distances[str(gear_id)] = float(gear["converted_distance"])
         except requests.RequestException:
             pass
-    return result, {}, None
+
+    return bikes, distances, ftp
 
 
 def ingest_all(
@@ -660,9 +661,10 @@ def ingest_all(
 
     Follows the ordered API flow:
 
-    1. ``GET /athlete`` — fetch the athlete's bike inventory.
-    2. ``GET /athlete/activities`` — fetch cycling activities that have power
-       data; build an ``activity_id → gear_id`` lookup.
+    1. ``GET /athlete/activities`` — fetch cycling activities that have power
+       data; collect unique gear_ids.
+    2. ``GET /athlete`` — fetch active bikes and FTP.
+       ``GET /gear/{id}`` — fetch any retired bike not in the active list.
     3. ``GET /segments/starred`` — fetch the athlete's starred segments.
     4. ``GET /segment_efforts`` — fetch efforts for every starred segment.
     5. Join efforts to activities on ``activity_id`` to resolve ``gear_id``.
@@ -693,14 +695,14 @@ def ingest_all(
     _progress("📋 GET /athlete/activities — fetching cycling activities with power data…", 10)
     activities = get_athlete_activities(access_token, max_activities=max_activities, _http=_http)
 
-    # Step 2: resolve bike names — tries GET /athlete, falls back to activity details
+    # Step 2: resolve bike names — GET /athlete for active bikes, GET /gear/{id} for retired
     _progress("🚴 Resolving bike names…", 22)
-    gear_to_activity: dict[str, int] = {}
-    for act_id, act_data in activities.items():
-        gid = act_data.get("gear_id")
-        if gid and gid not in gear_to_activity:
-            gear_to_activity[gid] = act_id
-    bikes, bike_distances, ftp = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity, _http=_http)
+    gear_ids: set[str] = {
+        act_data["gear_id"]
+        for act_data in activities.values()
+        if act_data.get("gear_id")
+    }
+    bikes, bike_distances, ftp = get_athlete_bikes(access_token, gear_ids=gear_ids, _http=_http)
 
     # Step 3: starred segments
     _progress("⭐ GET /segments/starred — fetching your starred segments…", 35)
