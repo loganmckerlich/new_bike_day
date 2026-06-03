@@ -21,7 +21,7 @@ I have no data on how much time did I spend on the brakes. This is a large facto
 I don't enforce a sample size because I don't want to wait until I have more data. And especially with all my assumptions, a large N would be much better for this project.
 
 #### Average grade issue
-I have average and max grade for segments, but this isnt as representative as I would like it to be of a segment. For example a segment that goes up down up down and averages to average grade 0.
+I have average and max grade for segments, but this isn't as representative as I would like it to be of a segment. For example a segment that goes up down up down and averages to average grade 0.
 
 #### Traffic
 My model does not account for traffic stopages.
