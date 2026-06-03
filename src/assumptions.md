@@ -18,7 +18,7 @@ I am basically assuming that fitness is entirely irrelevant because being more f
 I have no data on how much time did I spend on the brakes. This is a large factor in how fast you go on a bike that I am not representing. I think accounting for curvy-ness of route could account for some of this, and maybe outlier filtering will get some of it as well. But it is a big blind spot.
 
 #### Sample Size
-I dont enforce a sample size because I dont want to wait until I have more data. And especially with all my assumptions, a large N would be much better for this project.
+I don't enforce a sample size because I don't want to wait until I have more data. And especially with all my assumptions, a large N would be much better for this project.
 
 #### Average grade issue
 I have average and max grade for segments, but this isnt as representative as I would like it to be of a segment. For example a segment that goes up down up down and averages to average grade 0.
