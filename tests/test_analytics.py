@@ -6,7 +6,12 @@ import unittest
 
 import pandas as pd
 
-from src.analytics import apply_min_watts_filter, mean_profile_by_segment_type, power_normalized_profile
+from src.analytics import (
+    apply_min_watts_filter,
+    filter_outliers_by_power_speed,
+    mean_profile_by_segment_type,
+    power_normalized_profile,
+)
 
 
 class PowerNormalizedProfileTests(unittest.TestCase):
@@ -66,6 +71,24 @@ class PowerNormalizedProfileTests(unittest.TestCase):
 
         self.assertEqual(profile["Bike A"], [30.0, 0.0, 20.0])
         self.assertEqual(profile["Bike B"], [31.0, 0.0, 21.0])
+
+    def test_outlier_filter_does_not_flag_descents(self) -> None:
+        efforts = pd.DataFrame(
+            {
+                "effort_id": ["f1", "f2", "f3", "d1", "d2", "d3"],
+                "segment_id": [1, 1, 1, 2, 2, 2],
+                "segment_type": ["flat", "flat", "flat", "descent", "descent", "descent"],
+                "average_watts": [200, 200, 200, 200, 200, 200],
+                "speed_per_cbrt_watt": [10.0, 10.0, 30.0, 10.0, 10.0, 30.0],
+            }
+        )
+
+        filtered, annotated = filter_outliers_by_power_speed(efforts, z_threshold=1.0)
+
+        self.assertTrue(bool(annotated.loc[annotated["effort_id"] == "f3", "is_outlier"].iloc[0]))
+        self.assertFalse(bool(annotated.loc[annotated["effort_id"] == "d3", "is_outlier"].iloc[0]))
+        self.assertNotIn("f3", filtered["effort_id"].tolist())
+        self.assertIn("d3", filtered["effort_id"].tolist())
 
 
 if __name__ == "__main__":
