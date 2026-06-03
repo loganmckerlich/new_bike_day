@@ -24,7 +24,7 @@ I don't enforce a sample size because I don't want to wait until I have more dat
 I have average and max grade for segments, but this isn't as representative as I would like it to be of a segment. For example a segment that goes up down up down and averages to average grade 0.
 
 #### Traffic
-My model does not account for traffic stopages.
+My model does not account for traffic stoppages.
 
 #### Wind
 This is a big factor that I am not currently modeling - though I plan to bring it in using a weather api
