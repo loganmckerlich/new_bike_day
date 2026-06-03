@@ -252,7 +252,7 @@ def apply_min_watts_filter(
         Filtered copy of *df*.
     """
     if min_watts <= 0 or "average_watts" not in df.columns:
-        return df
+        return df.copy()
 
     if descents_exempt:
         # Use a separate variable for the potentially-merged frame so it is
