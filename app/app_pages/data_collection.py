@@ -44,7 +44,6 @@ def get_and_save_data(access_token: str) -> None:
         st.error(f"Unable to process data: {exc}")
         return
     _save_session(data, gear_frame, bikes, access_token, bike_distances, ftp)
-    st.success("Activities reloaded.")
 
 # ---------------------------------------------------------------------------
 # Static cache helpers (SQLite-backed)
@@ -387,6 +386,7 @@ def main() -> None:
             st.warning("Please authorize with Strava first.")
             return
         get_and_save_data(access_token)
+        st.success("Activities reloaded.")
     # ── Sample data mode ───────────────────────────────────────────────────────
     if st.session_state.get("use_sample_data"):
         _load_sample_data()
