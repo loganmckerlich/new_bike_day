@@ -174,7 +174,11 @@ def load_segments() -> pd.DataFrame:
 def clear_segments() -> None:
     """Delete all rows from the starred_segments table."""
     with _connect() as conn:
-        conn.execute("DELETE FROM starred_segments")
+        table_exists = conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='starred_segments'"
+        ).fetchone()
+        if table_exists:
+            conn.execute("DELETE FROM starred_segments")
 
 
 # ---------------------------------------------------------------------------
@@ -218,7 +222,11 @@ def load_efforts() -> pd.DataFrame:
 def clear_efforts() -> None:
     """Delete all rows from the segment_efforts table."""
     with _connect() as conn:
-        conn.execute("DELETE FROM segment_efforts")
+        table_exists = conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='segment_efforts'"
+        ).fetchone()
+        if table_exists:
+            conn.execute("DELETE FROM segment_efforts")
 
 
 # ---------------------------------------------------------------------------
@@ -280,7 +288,11 @@ def load_bikes() -> tuple[dict[str, str], dict[str, float]]:
 def clear_bikes() -> None:
     """Delete all rows from the bikes table."""
     with _connect() as conn:
-        conn.execute("DELETE FROM bikes")
+        table_exists = conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='bikes'"
+        ).fetchone()
+        if table_exists:
+            conn.execute("DELETE FROM bikes")
 
 
 # ---------------------------------------------------------------------------
