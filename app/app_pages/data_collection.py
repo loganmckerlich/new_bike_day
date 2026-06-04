@@ -14,7 +14,6 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
-from src.auth import exchange_code, get_authorization_url
 from src.database import (
     clear_bikes,
     clear_efforts,
@@ -23,20 +22,29 @@ from src.database import (
     load_bikes,
     load_efforts,
     load_segments,
-    save_athlete_token,
     save_bikes,
     save_efforts,
     save_segments,
 )
 from src.fetch import ingest_all, PremiumOnlyError, get_athlete_bikes
 from src.home_personality import load_dev_athlete_profile
-from src.utils import link_button_no_tab, normalized_redirect_uri
+from src.auth import custom_auth_button, handle_redirect
 
-
-def _normalized_redirect_uri(raw_value: str) -> str:
-    """Thin wrapper kept for backward compatibility."""
-    return normalized_redirect_uri(raw_value)
-
+def get_and_save_data(access_token: str) -> None:
+    try:
+        data, gear_frame, bikes, bike_distances, ftp = _process_data(
+            access_token=access_token,
+            force_refresh=True,
+        )
+    except PremiumOnlyError as exc:
+        st.error(str(exc))
+        return
+    except (requests.RequestException, ValueError) as exc:
+        traceback.print_exc(file=sys.stderr)
+        st.error(f"Unable to process data: {exc}")
+        return
+    _save_session(data, gear_frame, bikes, access_token, bike_distances, ftp)
+    st.success("Activities reloaded.")
 
 # ---------------------------------------------------------------------------
 # Static cache helpers (SQLite-backed)
@@ -117,40 +125,6 @@ def _process_data(
     ftp = result.get("ftp")
     _save_to_db(efforts, segments, bikes, bike_distances)
     return efforts, segments, bikes, bike_distances, ftp
-
-
-def _query_param_value(value: object) -> str | None:
-    if isinstance(value, list):
-        return str(value[0]) if value else None
-    if value is None:
-        return None
-    return str(value)
-
-
-def _exchange_access_token(client_id: str, client_secret: str, redirect_uri: str, code: str) -> str:
-    token = exchange_code(
-        client_id=client_id,
-        client_secret=client_secret,
-        code=code,
-        redirect_uri=redirect_uri,
-    )
-    if token.get("athlete_id") and token.get("refresh_token") and token.get("access_token") and token.get("expires_at") is not None:
-        init_db()
-        save_athlete_token(
-            athlete_id=token["athlete_id"],
-            access_token=token["access_token"],
-            refresh_token=token["refresh_token"],
-            expires_at=token["expires_at"],
-        )
-    if token.get("athlete_firstname"):
-        st.session_state["athlete_name"] = token["athlete_firstname"]
-    return token["access_token"]
-
-
-def _fmt_time(seconds: float) -> str:
-    seconds = int(round(seconds))
-    return f"{seconds // 60}:{seconds % 60:02d}"
-
 
 def _gear_label(gear_id: str | None, bikes: dict[str, str]) -> str:
     # pd.isna() handles None, float NaN, and pd.NA consistently.
@@ -340,7 +314,6 @@ def _save_session(
     data: pd.DataFrame,
     segments: pd.DataFrame,
     bikes: dict[str, str],
-    code: str | None,
     access_token: str,
     bike_distances: dict[str, float] | None = None,
     ftp: int | None = None,
@@ -352,9 +325,6 @@ def _save_session(
     st.session_state["access_token"] = access_token
     if ftp is not None:
         st.session_state["ftp"] = ftp
-    if code:
-        st.session_state["last_processed_code"] = code
-
 
 def _load_sample_data() -> None:
     """Load dev sample data into session state and render results."""
@@ -363,7 +333,6 @@ def _load_sample_data() -> None:
         result["efforts"],
         result["segments"],
         result["bikes"],
-        code=None,
         access_token="",
         bike_distances=result.get("bike_distances", {}),
         ftp=result.get("ftp"),
@@ -383,6 +352,7 @@ def _fallback_to_sample_data(error_message: str) -> None:
 
 
 def main() -> None:
+    handle_redirect()
     use_sample_data = st.session_state.get("use_sample_data", False)
 
     # Hero header
@@ -403,117 +373,41 @@ def main() -> None:
         )
 
     # ── Live mode: OAuth → Strava API ─────────────────────────────────────────
-    env_client_id = st.secrets.get("STRAVA_CLIENT_ID", "")
-    env_client_secret = st.secrets.get("STRAVA_CLIENT_SECRET", "")
-    default_redirect_uri = _normalized_redirect_uri(st.secrets.get("STRAVA_REDIRECT_URI", "http://localhost:8501"))
-    env_access_token = st.secrets.get("STRAVA_ACCESS_TOKEN", "")
-
     st.divider()
 
-    if not env_client_id or not env_client_secret:
-        st.error("⚠️ Set STRAVA_CLIENT_ID and STRAVA_CLIENT_SECRET in `.streamlit/secrets.toml` to enable sign-in.")
-        return
-
-    auth_col, status_col = st.columns([2, 3])
-    with auth_col:
-        auth_url = get_authorization_url(client_id=env_client_id, redirect_uri=default_redirect_uri)
-        st.link_button("🔗 Sign in with Strava", auth_url, width="stretch")
-        if st.button("📊 Use sample data", width="stretch"):
-            st.session_state["use_sample_data"] = True
-            st.rerun()
-
+    if st.session_state.get("strava_token"):
+        st.success("✅ Connected to Strava!")
+    else:
+        custom_auth_button()
+    if not st.session_state.get("strava_token") and st.button("📊 Use sample data", width="stretch"):
+        st.session_state["use_sample_data"] = True
+        st.rerun()
+    if st.button("🔄 Reload activities", type="secondary", width="stretch"):
+        if not access_token:
+            st.warning("Please authorize with Strava first.")
+            return
+        get_and_save_data(access_token)
     # ── Sample data mode ───────────────────────────────────────────────────────
-    # Handles both the post-rerun state after clicking "Use sample data" and
-    # any fallback set by an OAuth error handler below.
     if st.session_state.get("use_sample_data"):
         _load_sample_data()
         return
 
-    code_from_params = st.query_params.get("code")
     error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
     if error_from_params:
         _fallback_to_sample_data(f"Strava sign-in failed: {error_from_params}. Showing sample data instead.")
         return
 
-    code = _query_param_value(code_from_params)
-    # Token may have already been exchanged at the app level (streamlit_app.py)
-    # when Strava redirected to the home/root page.
-    session_token = st.session_state.get("access_token")
+    access_token = st.session_state.get("strava_token")
+    if not access_token:
+        # dont load rest of page, wait for sign in
+        return
+    
+    if st.session_state.get("efforts") is None:
+        # initial load after auth, fetch data and save to session
+        get_and_save_data(access_token)
 
-    if code:
-        last_processed_code = st.session_state.get("last_processed_code")
-        should_process = code != last_processed_code
-        if should_process:
-            with st.spinner("Connecting to Strava…"):
-                try:
-                    access_token = session_token
-                    if code != last_processed_code or not access_token:
-                        access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
-                except (requests.RequestException, ValueError) as exc:
-                    _fallback_to_sample_data(f"Strava sign-in failed: {exc}. Showing sample data instead.")
-                    return
-            try:
-                data, gear_frame, bikes, bike_distances, ftp = _process_data(access_token=access_token)
-            except PremiumOnlyError as exc:
-                _fallback_to_sample_data(f"{exc} Showing sample data instead.")
-                return
-            except (requests.RequestException, ValueError) as exc:
-                traceback.print_exc(file=sys.stderr)
-                _fallback_to_sample_data(f"Strava sign-in failed: {exc}. Showing sample data instead.")
-                return
-            _save_session(data, gear_frame, bikes, code, access_token, bike_distances, ftp)
-            with status_col:
-                st.success("✅ Connected to Strava — data loaded!")
-        else:
-            with status_col:
-                st.caption("✅ Using cached Strava data.")
-    elif session_token:
-        # Code was already exchanged at the app level; fetch/load data now.
-        if st.session_state.get("efforts") is None:
-            try:
-                data, gear_frame, bikes, bike_distances, ftp = _process_data(access_token=session_token)
-            except PremiumOnlyError as exc:
-                _fallback_to_sample_data(f"{exc} Showing sample data instead.")
-                return
-            except (requests.RequestException, ValueError) as exc:
-                traceback.print_exc(file=sys.stderr)
-                _fallback_to_sample_data(f"Strava sign-in failed: {exc}. Showing sample data instead.")
-                return
-            _save_session(data, gear_frame, bikes, None, session_token, bike_distances, ftp)
-        with status_col:
-            st.success("✅ Connected to Strava — data loaded!")
-    else:
-        with status_col:
-            st.caption("👆 Click **Sign in with Strava** to authorize and load your segment data.")
-
-    reload_col, _ = st.columns([2, 4])
-    with reload_col:
-        if st.button("🔄 Reload activities", type="secondary", width="stretch"):
-            access_token = st.session_state.get("access_token") or env_access_token
-            if not access_token and code:
-                try:
-                    access_token = _exchange_access_token(env_client_id, env_client_secret, default_redirect_uri, code)
-                except (requests.RequestException, ValueError) as exc:
-                    st.error(f"Unable to exchange token: {exc}")
-                    return
-            if not access_token:
-                st.warning("Please authorize with Strava first.")
-                return
-            try:
-                data, gear_frame, bikes, bike_distances, ftp = _process_data(
-                    access_token=access_token,
-                    force_refresh=True,
-                )
-            except PremiumOnlyError as exc:
-                st.error(str(exc))
-                return
-            except (requests.RequestException, ValueError) as exc:
-                traceback.print_exc(file=sys.stderr)
-                st.error(f"Unable to process data: {exc}")
-                return
-            _save_session(data, gear_frame, bikes, code, access_token, bike_distances, ftp)
-            st.success("Activities reloaded.")
+    ## some basic viz
 
     data = st.session_state.get("efforts")
     if data is None or data.empty:
@@ -524,6 +418,5 @@ def main() -> None:
     bikes = st.session_state.get("bikes", {})
     bike_distances = st.session_state.get("bike_distances", {})
     _render_bike_summaries(data, segments, bikes, bike_distances)
-
 
 main()
