@@ -26,7 +26,7 @@ from src.analytics import (
     outlier_detection_frames,
 )
 from src.bike_delta import power_overlap_ok, segment_power_overlap_summary
-from app.app_pages._ui_helpers import (
+from src._ui_helpers import (
     use_metric as _use_metric,
     spd_label as _spd_label,
     dist_label as _dist_label,
@@ -285,24 +285,14 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
     if "speed_kmh" not in watt_efforts.columns:
         watt_efforts["speed_kmh"] = _compute_speed_kmh(watt_efforts)
 
-    available_bikes = sorted(watt_efforts["bike_name"].dropna().unique().tolist())
 
     # ── Sidebar: segment settings ──────────────────────────────────────────────────
-    with st.sidebar:
-        st.markdown("### 📊 Segment settings")
 
-        if len(available_bikes) < 2:
-            st.warning(
-                "Need at least 2 bikes with power data to compare. "
-                "Ride more segments on different bikes."
-            )
-            st.stop()
-
-        spider_use_subcategories = st.toggle(
-            "Use subcategories in spider charts",
-            value=False,
-            help="Show spider charts by segment subcategory instead of parent category.",
-        )
+    spider_use_subcategories = st.toggle(
+        "Use subcategories in spider charts",
+        value=False,
+        help="Show spider charts by segment subcategory instead of parent category.",
+    )
 
     if len(bikes_to_compare) < 2:
         st.warning("Please select at least **2 bikes** in the sidebar to compare.")
@@ -483,7 +473,7 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
             f"No segments where all selected bikes have ≥ {int(min_efforts)} "
             "power-measured rides. Try reducing the minimum sample size or selecting fewer bikes."
         )
-        st.stop()
+        return
 
     st.caption(
         f"Segments where all selected bikes have ≥ {int(min_efforts)} "

@@ -27,7 +27,7 @@ from src.plots import(
     make_fig_b_sc 
 )
 
-from app.app_pages._ui_helpers import (
+from src._ui_helpers import (
     use_metric as _use_metric,
     spd_label as _spd_label,
     convert_speed as _convert_speed,
@@ -35,6 +35,7 @@ from app.app_pages._ui_helpers import (
     compute_speed_kmh as _compute_speed_kmh,
 )
 
+from src.utils import navigator
 
 # ── Page ──────────────────────────────────────────────────────────────────────
 
@@ -52,7 +53,9 @@ def main() -> None:
     bikes: dict[str, str] = st.session_state.get("bikes", {})
 
     if raw_efforts is None or (hasattr(raw_efforts, "empty") and raw_efforts.empty):
-        st.info("👈 Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
+        st.info("Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
+        if st.button("Go to Step 1"):
+            st.switch_page("app_pages/data_collection.py")
         st.stop()
 
     if segments is None or segments.empty:
@@ -290,5 +293,6 @@ def main() -> None:
         "Proceed to **Step 3 — Segment Comparison** in the navigation."
     )
 
-
+navigator("data_cleaning1")
 main()
+navigator("data_cleaning2")

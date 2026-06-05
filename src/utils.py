@@ -34,3 +34,29 @@ def link_button_no_tab(label: str, url: str):
         ">{label}</a>""",
         unsafe_allow_html=True,
     )
+
+def navigator(on_raw):
+    on = on_raw[:-1]
+    order = [
+        "home",
+        "data_collection",
+        "data_cleaning",
+        "bike_comparison",
+        "final_conclusions",
+    ]
+    if on not in order:
+        raise ValueError(f"Unknown page '{on}' for navigator. Expected one of: {order}")
+    index = order.index(on)
+    next_page = order[index + 1] if index + 1 < len(order) else None
+    prev_page = order[index - 1] if index - 1 >= 0 else None
+
+    back, home, forward = st.columns([1, 1, 1])
+    with back:
+        if prev_page and st.button("←",use_container_width=True,key=f"back_{on_raw}"):
+            st.switch_page(f"app_pages/{prev_page}.py")
+    with home:
+        if on != "home" and st.button("🏠",use_container_width=True,key=f"home_{on_raw}"):
+            st.switch_page("app_pages/home.py")
+    with forward:
+        if next_page and st.button("→",use_container_width=True,key=f"forward_{on_raw}"):
+            st.switch_page(f"app_pages/{next_page}.py")

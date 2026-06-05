@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 
 import streamlit as st
+from src.utils import navigator
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
@@ -44,18 +45,33 @@ def main() -> None:
            **Overall:** Treating residuals as counterfactuals in a pseudo DML style analysis to compare
            bikes controlling for as many factors as we can get data on. Which bike is strongest overall?
 
-           The idea here is that Speed = <A bunch of factors> + bike so if we can represent as many of those
-           factors as possible using data from strava, then we can solve for *bike*.
+           The idea here is that ```Speed = <A bunch of factors> + bike``` so if we can represent as many of those
+           factors as possible using data from strava, then we can solve for ```bike```.
 
         4. **Final Conclusions** — A summary of findings across all analyses. *(Coming soon)*
 
         ---
-
+        First let us know if you want metric or imperial units:
+        """
+    )
+    st.session_state.setdefault("use_metric", True)
+    metric_toggle = st.toggle(
+        "🌍 Metric units",
+        value=st.session_state.get("use_metric", True),
+        help="Toggle between metric (km, m) and imperial (mi, ft).",
+    )
+    if metric_toggle != st.session_state["use_metric"]: 
+        st.session_state["use_metric"] = metric_toggle
+        st.rerun()
+    st.markdown(
+        """
         ### Get started
 
         👈 Use the navigation on the left to begin with **Step 1 — Data Collection**.
         """
     )
 
-
+navigator("home1")
 main()
+navigator("home2")
+
