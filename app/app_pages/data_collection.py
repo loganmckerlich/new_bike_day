@@ -10,9 +10,12 @@ import pandas as pd
 import requests
 import streamlit as st
 
+
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
+
+from src.utils import navigator
 
 from src.database import (
     clear_bikes,
@@ -382,10 +385,10 @@ def main() -> None:
         st.session_state["use_sample_data"] = True
         st.rerun()
     if st.button("🔄 Reload activities", type="secondary", width="stretch"):
-        if not access_token:
+        if not st.session_state.get("strava_token"):
             st.warning("Please authorize with Strava first.")
             return
-        get_and_save_data(access_token)
+        get_and_save_data(st.session_state.get("strava_token"))
         st.success("Activities reloaded.")
     # ── Sample data mode ───────────────────────────────────────────────────────
     if st.session_state.get("use_sample_data"):
@@ -398,14 +401,13 @@ def main() -> None:
         _fallback_to_sample_data(f"Strava sign-in failed: {error_from_params}. Showing sample data instead.")
         return
 
-    access_token = st.session_state.get("strava_token")
-    if not access_token:
+    if not st.session_state.get("strava_token"):
         # dont load rest of page, wait for sign in
         return
     
     if st.session_state.get("efforts") is None:
         # initial load after auth, fetch data and save to session
-        get_and_save_data(access_token)
+        get_and_save_data(st.session_state.get("strava_token"))
 
     ## some basic viz
 
@@ -419,4 +421,6 @@ def main() -> None:
     bike_distances = st.session_state.get("bike_distances", {})
     _render_bike_summaries(data, segments, bikes, bike_distances)
 
+navigator("data_collection1")
 main()
+navigator("data_collection2")

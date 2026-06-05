@@ -11,62 +11,76 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
-import app.app_pages.bike_comparison_overall as _overall
-import app.app_pages.bike_comparison_segmented as _segmented
-from app.app_pages._ui_helpers import (
+import app.app_pages.subpages.bike_comparison_overall as _overall
+import app.app_pages.subpages.bike_comparison_segmented as _segmented
+from src._ui_helpers import (
     gear_label,
 )
+from src.utils import navigator
 
 # ── Page title ────────────────────────────────────────────────────────────
 
-st.title("📊 Step 3 — Bike Comparison")
-st.markdown(
-    "Filters and cleaning are already applied (configured in **Step 2 — Data Cleaning**). "
-    "Select bikes and segments below to compare performance."
-)
+def comp_inputs():
+    bikes = st.session_state.get("bikes", {})
+    efforts = st.session_state.get("cleaned_efforts")
+    watt_efforts = efforts[efforts["average_watts"].notna()].copy()
+    watt_efforts["bike_name"] = watt_efforts["gear_id"].map(lambda g: gear_label(g, bikes))
+    available_bikes = sorted(watt_efforts["bike_name"].dropna().unique().tolist())
+    bikes_to_compare = st.multiselect(
+        "Bikes to compare",
+        options=available_bikes,
+        default=available_bikes[:2],
+        max_selections=5,
+        help="Select 2–5 bikes to compare.",
+    )
 
-# ── Guards ────────────────────────────────────────────────────────────────────
-if st.session_state.get("efforts") is None:
-    st.info("👈 Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
-    st.stop()
+    min_efforts = st.number_input(
+        "Min efforts per bike per segment",
+        min_value=1,
+        max_value=20,
+        value=3,
+        step=1,
+        help="Both bikes must have at least this many power-measured efforts on a segment.",
+    )
+    return bikes_to_compare, min_efforts
 
-_efforts = st.session_state.get("cleaned_efforts")
-if _efforts is None or (hasattr(_efforts, "empty") and _efforts.empty):
-    st.info("👈 Head to **Step 2 — Data Cleaning** to configure and apply data filters first.")
-    st.stop()
+def main() -> None:
+    st.title("📊 Step 3 — Bike Comparison")
+    st.markdown(
+        "Filters and cleaning are already applied (configured in **Step 2 — Data Cleaning**). "
+        "Select bikes and segments below to compare performance."
+    )
 
-_segments = st.session_state.get("segments")
-if _segments is None or (hasattr(_segments, "empty") and _segments.empty):
-    st.warning("No starred segments found. Star some segments on Strava and reload.")
-    st.stop()
+    bikes_to_compare, min_efforts = comp_inputs()
 
-# ── Tabs ──────────────────────────────────────────────────────────────────────
-tab_segmented, tab_overall = st.tabs(["📍 Segmented","📈 Overall"])
+    # ── Guards ────────────────────────────────────────────────────────────────────
+    if st.session_state.get("efforts") is None:
+        st.info("Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
+        if st.button("Go to Step 1"):
+            st.switch_page("app_pages/data_collection.py")
+        st.stop()
 
-bikes = st.session_state.get("bikes", {})
-efforts = st.session_state.get("cleaned_efforts")
-watt_efforts = efforts[efforts["average_watts"].notna()].copy()
-watt_efforts["bike_name"] = watt_efforts["gear_id"].map(lambda g: gear_label(g, bikes))
-available_bikes = sorted(watt_efforts["bike_name"].dropna().unique().tolist())
-bikes_to_compare = st.sidebar.multiselect(
-            "Bikes to compare",
-            options=available_bikes,
-            default=available_bikes[:2],
-            max_selections=5,
-            help="Select 2–5 bikes to compare.",
-        )
+    _efforts = st.session_state.get("cleaned_efforts")
+    if _efforts is None or (hasattr(_efforts, "empty") and _efforts.empty):
+        st.info("Head to **Step 2 — Data Cleaning** to configure and apply data filters first.")
+        if st.button("Go to Step 2"):
+            st.switch_page("app_pages/data_cleaning.py")
+        st.stop()
 
-min_efforts = st.sidebar.number_input(
-    "Min efforts per bike per segment",
-    min_value=1,
-    max_value=20,
-    value=3,
-    step=1,
-    help="Both bikes must have at least this many power-measured efforts on a segment.",
-)
+    _segments = st.session_state.get("segments")
+    if _segments is None or (hasattr(_segments, "empty") and _segments.empty):
+        st.warning("No starred segments found. Star some segments on Strava and reload.")
+        st.stop()
 
-with tab_segmented:
-    _segmented.show(bikes_to_compare, min_efforts)
+    # ── Tabs ──────────────────────────────────────────────────────────────────────
+    tab_segmented, tab_overall = st.tabs(["📍 Segmented","📈 Overall"])
 
-with tab_overall:
-    _overall.show(bikes_to_compare, min_efforts)
+    with tab_segmented:
+        _segmented.show(bikes_to_compare, min_efforts)
+
+    with tab_overall:
+        _overall.show(bikes_to_compare, min_efforts)
+
+navigator("bike_comparison1")
+main()
+navigator("bike_comparison2")

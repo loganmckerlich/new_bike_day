@@ -39,7 +39,7 @@ from src.bike_delta import (
     aggregate_paired_delta,
 )
 from src.analytics import filter_outliers_by_power_speed
-from app.app_pages._ui_helpers import gear_label, use_metric, spd_label
+from src._ui_helpers import gear_label, use_metric, spd_label
 
 _COLOR_A = "#4C72B0"
 _COLOR_B = "#DD8452"
@@ -454,7 +454,9 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
     bikes: dict[str, str] = st.session_state.get("bikes", {})
 
     if efforts is None or (hasattr(efforts, "empty") and efforts.empty):
-        st.info("👈 Head to **Step 1 — Data Collection** to load your Strava data first.")
+        st.info("Head to **Step 1 — Data Collection** to load your Strava data first.")
+        if st.button("Go to Step 1"):
+            st.switch_page("app_pages/data_collection.py")
         st.stop()
 
     if segments is None or segments.empty:
@@ -481,7 +483,7 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
 
     # ── Assumptions expander (empty) ──────────────────────────────────────────
     with st.expander("Assumptions", expanded=False):
-        with open(_REPO_ROOT / "src" / "assumptions.md", "r") as f:
+        with open(_REPO_ROOT/ ".." / "src" / "assumptions.md", "r") as f:
             st.markdown(f.read())
 
     # ── Mode toggle ───────────────────────────────────────────────────────────
