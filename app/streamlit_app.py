@@ -15,15 +15,18 @@ st.set_page_config(
     page_title="New Bike Day",
     page_icon=":material/pedal_bike:",
     layout="wide",
+    initial_sidebar_state = "auto"
 )
 
 with st.sidebar:
-    st.session_state.setdefault("use_metric", True)
-    st.session_state["use_metric"] = st.toggle(
+    metric_toggle = st.toggle(
         "🌍 Metric units",
-        value=st.session_state["use_metric"],
+        value=st.session_state.get("use_metric", True),
         help="Toggle between metric (km, m) and imperial (mi, ft).",
     )
+    if metric_toggle != st.session_state.get("use_metric", True):
+        st.session_state["use_metric"] = metric_toggle
+        st.rerun()
 
 pg = st.navigation(
     [
