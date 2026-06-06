@@ -38,8 +38,8 @@ from src.bike_delta import (
     apply_watt_model_to_bike,
     aggregate_paired_delta,
 )
-from src.analytics import filter_outliers_by_power_speed
 from src._ui_helpers import gear_label, use_metric, spd_label
+from src.utils import page_guard
 
 _COLOR_A = "#4C72B0"
 _COLOR_B = "#DD8452"
@@ -448,25 +448,11 @@ def _plot_aggregate(summary: dict, bike_a: str, bike_b: str, unit: str = "km/h",
 def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
     """Render the overall bike comparison analysis."""
 
-    # ── Guard: require loaded data ────────────────────────────────────────────
     efforts = st.session_state.get("cleaned_efforts")
     segments = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
 
-    if efforts is None or (hasattr(efforts, "empty") and efforts.empty):
-        st.info("Head to **Step 1 — Data Collection** to load your Strava data first.")
-        if st.button("Go to Step 1"):
-            st.switch_page("app_pages/data_collection.py")
-        st.stop()
-
-    if segments is None or segments.empty:
-        st.warning("No starred segments found. Star segments on Strava and reload from Step 1.")
-        st.stop()
-
-    power_efforts = efforts[efforts["average_watts"].notna()].copy()
-    if power_efforts.empty:
-        st.warning("No efforts with power data found.")
-        st.stop()
+    page_guard()
 
     if len(bikes_to_compare) < 2:
         st.warning("Select at least 2 bikes in the sidebar.")
@@ -474,7 +460,7 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
 
     # ── Build analysis dataset ────────────────────────────────────────────────
     try:
-        df = _build_delta_df(power_efforts, segments, bikes)
+        df = _build_delta_df(efforts, segments, bikes)
     except Exception as e:
         st.error(f"Failed to prepare analysis dataset: {e}")
         st.stop()

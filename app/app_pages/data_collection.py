@@ -33,11 +33,12 @@ from src.fetch import ingest_all, PremiumOnlyError, get_athlete_bikes
 from src.home_personality import load_dev_athlete_profile
 from src.auth import custom_auth_button, handle_redirect
 
-def get_and_save_data(access_token: str) -> None:
+def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = False) -> None:
     try:
         data, gear_frame, bikes, bike_distances, ftp = _process_data(
             access_token=access_token,
-            force_refresh=True,
+            athlete_id=athlete_id,
+            force_refresh=force_refresh,
         )
     except PremiumOnlyError as exc:
         st.error(str(exc))
@@ -52,11 +53,11 @@ def get_and_save_data(access_token: str) -> None:
 # Static cache helpers (SQLite-backed)
 # ---------------------------------------------------------------------------
 
-def _load_from_db() -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float]] | None:
+def _load_from_db(athlete_id: int) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float]] | None:
     init_db()
-    segments = load_segments()
-    efforts = load_efforts()
-    bikes, bike_distances = load_bikes()
+    segments = load_segments(athlete_id)
+    efforts = load_efforts(athlete_id)
+    bikes, bike_distances = load_bikes(athlete_id)
     if segments.empty and efforts.empty:
         return None
     return efforts, segments, bikes, bike_distances
@@ -66,40 +67,44 @@ def _save_to_db(
     efforts: pd.DataFrame,
     segments: pd.DataFrame,
     bikes: dict[str, str],
+    athlete_id: int,
     bike_distances: dict[str, float] | None = None,
 ) -> None:
+    print("Saving data to local cache for athlete_id", athlete_id)
     init_db()
-    save_segments(segments)
-    save_efforts(efforts)
-    save_bikes(bikes, bike_distances or {})
+    save_segments(segments, athlete_id)
+    save_efforts(efforts, athlete_id)
+    save_bikes(bikes, athlete_id, bike_distances or {})
 
 
 def _process_data(
     access_token: str,
+    athlete_id: int,
     *,
     force_refresh: bool = False,
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float], int | None]:
+
     if force_refresh:
-        clear_efforts()
-        clear_segments()
-        clear_bikes()
+        print("Force refresh enabled - clearing cache for athlete_id", athlete_id)
+        clear_efforts(athlete_id)
+        clear_segments(athlete_id)
+        clear_bikes(athlete_id)
 
         progress = st.progress(0, text="Starting…")
-
         def on_progress(msg: str, pct: int) -> None:
             progress.progress(pct, text=msg)
-
         result = ingest_all(access_token, progress_callback=on_progress)
         progress.progress(100, text="✅ Complete!")
 
         efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
         bike_distances: dict[str, float] = result.get("bike_distances", {})
         ftp: int | None = result.get("ftp")
-        _save_to_db(efforts, segments, bikes, bike_distances)
+        _save_to_db(efforts, segments, bikes, athlete_id, bike_distances)
         return efforts, segments, bikes, bike_distances, ftp
 
-    cached = _load_from_db()
+    cached = _load_from_db(athlete_id)
     if cached is not None:
+        print("Loaded data from cache for athlete_id", athlete_id)
         efforts, segments, bikes, bike_distances = cached
         # If bikes table is empty, re-resolve names: try GET /athlete first,
         # then fall back to activity details using the cached efforts' activity_ids.
@@ -114,19 +119,24 @@ def _process_data(
                 )
                 bikes, bike_distances, _ = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity)
                 if bikes:
-                    save_bikes(bikes, bike_distances)
+                    save_bikes(bikes, athlete_id, bike_distances)
             except Exception:
                 pass
         return efforts, segments, bikes, bike_distances, None
+    else:
+        print("No cache found for athlete_id", athlete_id, "- fetching from Strava API")
+        with st.spinner("⏳ Fetching your Strava data for the first time…"):
+            progress = st.progress(0, text="Starting…")
+            def on_progress(msg: str, pct: int) -> None:
+                progress.progress(pct, text=msg)
+            result = ingest_all(access_token, progress_callback=on_progress)
+            progress.progress(100, text="✅ Complete!")
 
-    with st.spinner("⏳ Fetching your Strava data for the first time…"):
-        result = ingest_all(access_token)
-
-    efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
-    bike_distances = result.get("bike_distances", {})
-    ftp = result.get("ftp")
-    _save_to_db(efforts, segments, bikes, bike_distances)
-    return efforts, segments, bikes, bike_distances, ftp
+        efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
+        bike_distances = result.get("bike_distances", {})
+        ftp = result.get("ftp")
+        _save_to_db(efforts, segments, bikes, athlete_id, bike_distances)
+        return efforts, segments, bikes, bike_distances, ftp
 
 def _gear_label(gear_id: str | None, bikes: dict[str, str]) -> str:
     # pd.isna() handles None, float NaN, and pd.NA consistently.
@@ -355,6 +365,8 @@ def _fallback_to_sample_data(error_message: str) -> None:
 
 def main() -> None:
     handle_redirect()
+    athlete_id = st.session_state.get("strava_athlete", {}).get("id")
+    athlete_id = int(athlete_id) if athlete_id is not None else None
     use_sample_data = st.session_state.get("use_sample_data", False)
 
     # Hero header
@@ -378,22 +390,26 @@ def main() -> None:
     st.divider()
 
     if st.session_state.get("strava_token"):
-        st.success("✅ Connected to Strava!")
+        status, bio = st.columns(2)
+        with status:
+            st.success("✅ Connected to Strava!")
+        with bio:
+            # st.image(st.session_state.get("strava_athlete", {}).get("profile", ""), width=80)
+            st.caption(st.session_state.get("strava_athlete", {}).get("bio", ""))
+
     else:
         custom_auth_button()
-    if not st.session_state.get("strava_token") and st.button("📊 Use sample data", width="stretch"):
-        st.session_state["use_sample_data"] = True
-        st.rerun()
+        if st.button("📊 Use sample data", width="stretch"):
+            st.session_state["use_sample_data"] = True
+            _load_sample_data()
+
     if st.button("🔄 Reload activities", type="secondary", width="stretch"):
         if not st.session_state.get("strava_token"):
             st.warning("Please authorize with Strava first.")
             return
-        get_and_save_data(st.session_state.get("strava_token"))
+        # would be better if this function only pulled new stuff
+        get_and_save_data(st.session_state.get("strava_token"), athlete_id, force_refresh=True)
         st.success("Activities reloaded.")
-    # ── Sample data mode ───────────────────────────────────────────────────────
-    if st.session_state.get("use_sample_data"):
-        _load_sample_data()
-        return
 
     error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
@@ -404,13 +420,12 @@ def main() -> None:
     if not st.session_state.get("strava_token"):
         # dont load rest of page, wait for sign in
         return
-    
-    if st.session_state.get("efforts") is None:
-        # initial load after auth, fetch data and save to session
-        get_and_save_data(st.session_state.get("strava_token"))
+    elif st.session_state.get("efforts") is None:
+        # signed in - havent loaded yet - load from db if its there
+        get_and_save_data(st.session_state.get("strava_token"), athlete_id, force_refresh=False)
+
 
     ## some basic viz
-
     data = st.session_state.get("efforts")
     if data is None or data.empty:
         st.caption("No data loaded yet. Sign in with Strava above to fetch your segment efforts.")
