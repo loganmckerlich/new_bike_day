@@ -35,7 +35,7 @@ from src._ui_helpers import (
     compute_speed_kmh as _compute_speed_kmh,
 )
 
-from src.utils import navigator
+from src.utils import navigator, page_guard
 
 # ── Page ──────────────────────────────────────────────────────────────────────
 
@@ -47,26 +47,9 @@ def main() -> None:
         "The settings you choose here are applied on every subsequent page."
     )
 
-    # ── Guard: data must be loaded ─────────────────────────────────────────────
-    raw_efforts: pd.DataFrame | None = st.session_state.get("efforts")
+    page_guard()
     segments: pd.DataFrame | None = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
-
-    if raw_efforts is None or (hasattr(raw_efforts, "empty") and raw_efforts.empty):
-        st.info("Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
-        if st.button("Go to Step 1"):
-            st.switch_page("app_pages/data_collection.py")
-        st.stop()
-
-    if segments is None or segments.empty:
-        st.warning("No starred segments found. Star some segments on Strava and reload from Step 1.")
-        st.stop()
-
-    # Keep only power efforts
-    efforts_with_power = raw_efforts[raw_efforts["average_watts"].notna()].copy()
-    if efforts_with_power.empty:
-        st.warning("No efforts with power data found. Ensure your rides are recorded with a power meter.")
-        st.stop()
 
     # Merge segment metadata so we have segment_type available
     seg_meta_cols = ["segment_id", "name", "distance", "average_grade", "maximum_grade", "segment_type"]

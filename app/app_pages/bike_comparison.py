@@ -16,7 +16,7 @@ import app.app_pages.subpages.bike_comparison_segmented as _segmented
 from src._ui_helpers import (
     gear_label,
 )
-from src.utils import navigator
+from src.utils import navigator, page_guard
 
 # ── Page title ────────────────────────────────────────────────────────────
 
@@ -53,24 +53,7 @@ def main() -> None:
 
     bikes_to_compare, min_efforts = comp_inputs()
 
-    # ── Guards ────────────────────────────────────────────────────────────────────
-    if st.session_state.get("efforts") is None:
-        st.info("Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
-        if st.button("Go to Step 1"):
-            st.switch_page("app_pages/data_collection.py")
-        st.stop()
-
-    _efforts = st.session_state.get("cleaned_efforts")
-    if _efforts is None or (hasattr(_efforts, "empty") and _efforts.empty):
-        st.info("Head to **Step 2 — Data Cleaning** to configure and apply data filters first.")
-        if st.button("Go to Step 2"):
-            st.switch_page("app_pages/data_cleaning.py")
-        st.stop()
-
-    _segments = st.session_state.get("segments")
-    if _segments is None or (hasattr(_segments, "empty") and _segments.empty):
-        st.warning("No starred segments found. Star some segments on Strava and reload.")
-        st.stop()
+    page_guard()
 
     # ── Tabs ──────────────────────────────────────────────────────────────────────
     tab_segmented, tab_overall = st.tabs(["📍 Segmented","📈 Overall"])
