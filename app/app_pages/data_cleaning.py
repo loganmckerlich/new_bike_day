@@ -47,12 +47,13 @@ def main() -> None:
         "The settings you choose here are applied on every subsequent page."
     )
 
-    page_guard()
+    page_guard("data_cleaning")
     segments: pd.DataFrame | None = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
+    efforts_with_power: pd.DataFrame | None = st.session_state.get("efforts")
 
     # Merge segment metadata so we have segment_type available
-    seg_meta_cols = ["segment_id", "name", "distance", "average_grade", "maximum_grade", "segment_type"]
+    seg_meta_cols = ["segment_id", "name", "distance", "average_grade", "maximum_grade", "segment_type", "hazardous"]
     if "segment_type_detail" in segments.columns:
         seg_meta_cols.append("segment_type_detail")
     seg_meta = segments[seg_meta_cols].copy()

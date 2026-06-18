@@ -30,8 +30,9 @@ def comp_inputs():
         "Bikes to compare",
         options=available_bikes,
         default=available_bikes[:2],
-        max_selections=5,
-        help="Select 2–5 bikes to compare.",
+        max_selections=2,
+        help="Select 2 bikes to compare.",
+        # in future allow this to be more than 2, spider plots already ready for that
     )
 
     min_efforts = st.number_input(
@@ -53,7 +54,7 @@ def main() -> None:
 
     bikes_to_compare, min_efforts = comp_inputs()
 
-    page_guard()
+    page_guard("bike_comparison")
 
     # ── Tabs ──────────────────────────────────────────────────────────────────────
     tab_segmented, tab_overall = st.tabs(["📍 Segmented","📈 Overall"])

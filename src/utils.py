@@ -53,27 +53,37 @@ def navigator(on_raw):
 
     sideways = st.container(horizontal=True)
     with sideways:
-        if prev_page and st.button("←",use_container_width=True,key=f"back_{on_raw}"):
+        if prev_page and st.button("←",width='stretch',key=f"back_{on_raw}"):
             st.switch_page(f"app_pages/{prev_page}.py")
-        if on != "home" and st.button("🏠",use_container_width=True,key=f"home_{on_raw}"):
+        if on != "home" and st.button("🏠",width='stretch',key=f"home_{on_raw}"):
             st.switch_page("app_pages/home.py")
-        if next_page and st.button("→",use_container_width=True,key=f"forward_{on_raw}"):
+        if next_page and st.button("→",width='stretch',key=f"forward_{on_raw}"):
             st.switch_page(f"app_pages/{next_page}.py")
 
-def page_guard():
+def page_guard(page_on):
+    order = [
+        "home",
+        "data_collection",
+        "data_cleaning",
+        "bike_comparison",
+        "final_conclusions",
+    ]
+    if page_on not in order:
+        raise ValueError(f"Unknown page '{page_on}' for navigator. Expected one of: {order}")
+    int_on = order.index(page_on)
     # ── Guard: data must be loaded ─────────────────────────────────────────────
     raw_efforts: pd.DataFrame | None = st.session_state.get("efforts")
     segments: pd.DataFrame | None = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
 
-    if raw_efforts is None or (hasattr(raw_efforts, "empty") and raw_efforts.empty):
+    if int_on > 1 and raw_efforts is None or (hasattr(raw_efforts, "empty") and raw_efforts.empty):
         st.info("Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
         if st.button("Go to Step 1"):
             st.switch_page("app_pages/data_collection.py")
         st.stop()
 
     cleaned_efforts = st.session_state.get("cleaned_efforts")
-    if cleaned_efforts is None or (hasattr(cleaned_efforts, "empty") and cleaned_efforts.empty):
+    if int_on > 2 and cleaned_efforts is None or (hasattr(cleaned_efforts, "empty") and cleaned_efforts.empty):
         st.info("Head to **Step 2 — Data Cleaning** to configure and apply data filters first.")
         if st.button("Go to Step 2"):
             st.switch_page("app_pages/data_cleaning.py")

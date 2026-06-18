@@ -36,7 +36,9 @@ from src.bike_delta import (
     apply_model_to_bike,
     fit_xgb_watt_model,
     apply_watt_model_to_bike,
-    aggregate_paired_delta,
+    aggregate_paired_delta_bootstrap,
+    engineer_features,
+    bootstrap_pipeline
 )
 from src._ui_helpers import gear_label, use_metric, spd_label
 from src.utils import page_guard
@@ -73,6 +75,7 @@ def _build_delta_df(
         return cached
 
     df = prepare_delta_dataset(efforts, segments, bikes)
+    df = engineer_features(df)
  
     st.session_state["_overall_delta_df"] = df
     st.session_state["_overall_shape_key"] = shape_key
@@ -406,10 +409,32 @@ def _plot_residuals(
     return fig
 
 
-def _plot_aggregate(summary: dict, bike_a: str, bike_b: str, unit: str = "km/h", advantage_label: str = "Speed advantage") -> go.Figure:
-    fwd = summary["fwd_mean"]
-    rev = -summary["rev_mean"]   # negate so positive = B better
+def _plot_aggregate(
+    summary: dict,
+    bike_a: str,
+    bike_b: str,
+    unit: str = "km/h",
+    advantage_label: str = "Speed advantage",
+) -> go.Figure:
+    """Plot forward, reverse, and combined bike effect estimates with
+    bootstrap-derived confidence intervals.
+
+    Expects summary to be the output of aggregate_paired_delta_bootstrap,
+    containing fwd_mean, rev_mean, combined, ci_low, ci_high, and the
+    underlying bootstrap arrays (fwd_estimates, rev_estimates,
+    combined_estimates) attached for per-bar CI computation.
+    """
+    fwd_estimates = summary["fwd_estimates"]
+    rev_estimates = -summary["rev_estimates"]  # negate so positive = B better
+    combined_estimates = summary["combined_estimates"]
+
+    fwd = float(np.mean(fwd_estimates))
+    rev = float(np.mean(rev_estimates))
     combined = summary["combined"]
+
+    fwd_ci_low, fwd_ci_high = np.percentile(fwd_estimates, [2.5, 97.5])
+    rev_ci_low, rev_ci_high = np.percentile(rev_estimates, [2.5, 97.5])
+    combined_ci_low, combined_ci_high = summary["ci_low"], summary["ci_high"]
 
     labels = [
         f"A→B  (model A on {bike_b})",
@@ -417,22 +442,34 @@ def _plot_aggregate(summary: dict, bike_a: str, bike_b: str, unit: str = "km/h",
         "Combined (average)",
     ]
     values = [fwd, rev, combined]
+    ci_lows = [fwd_ci_low, rev_ci_low, combined_ci_low]
+    ci_highs = [fwd_ci_high, rev_ci_high, combined_ci_high]
+
     colors = [_FASTER_COLOR if v >= 0 else _SLOWER_COLOR for v in values]
     colors[-1] = "#7f7f7f"
 
-    ci_margin = (combined - summary["ci_low"]) if not np.isnan(summary["ci_low"]) else None
-
     fig = go.Figure()
-    for i, (label, value, color) in enumerate(zip(labels, values, colors)):
-        err = {"type": "data", "array": [ci_margin], "visible": True} if (i == 2 and ci_margin is not None) else None
+    for label, value, lo, hi, color in zip(labels, values, ci_lows, ci_highs, colors):
+        err_plus = hi - value
+        err_minus = value - lo
         fig.add_trace(go.Bar(
             x=[label],
             y=[value],
             marker_color=color,
-            error_y=err,
+            error_y={
+                "type": "data",
+                "symmetric": False,
+                "array": [err_plus],
+                "arrayminus": [err_minus],
+                "visible": True,
+            },
             name=label,
-            hovertemplate=f"{label}: %{{y:+.2f}} {unit}<extra></extra>",
+            hovertemplate=(
+                f"{label}: %{{y:+.2f}} {unit}<br>"
+                f"95% CI: [{lo:+.2f}, {hi:+.2f}]<extra></extra>"
+            ),
         ))
+
     fig.add_hline(y=0, line_color="grey", line_width=1)
     fig.update_layout(
         yaxis_title=f"{advantage_label} of {bike_b} over {bike_a} ({unit})",
@@ -452,7 +489,7 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
     segments = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
 
-    page_guard()
+    page_guard("bike_comparison")
 
     if len(bikes_to_compare) < 2:
         st.warning("Select at least 2 bikes in the sidebar.")
@@ -776,6 +813,30 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
             f"based on {n_ba} matched efforts."
         )
 
+    with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage\u2026"):
+        iterations = 10
+        ab_bootstrap_results = bootstrap_pipeline(
+            df_scope,
+            train_bike=bike_a,
+            target_bike=bike_b,
+            n_iterations=iterations,
+            random_state=42,
+            apply_fn = _apply_fn,
+            fit_fn = _fit_fn,
+            label = _residual_col
+        )
+
+        ba_bootstrap_results = bootstrap_pipeline(
+            df_scope,
+            train_bike=bike_b,
+            target_bike=bike_a,
+            n_iterations=iterations,
+            random_state=42,
+            apply_fn = _apply_fn,
+            fit_fn = _fit_fn,
+            label = _residual_col
+        )
+
     # ── Step 5: Aggregate ─────────────────────────────────────────────────────
     st.divider()
     st.subheader("Step 5 \u2014 Aggregate")
@@ -784,8 +845,12 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
         "**combined\u00a0= (fwd\u202fmean\u00a0\u00d7\u00a0n\\_fwd \u2212 rev\u202fmean\u00a0\u00d7\u00a0n\\_rev) / (n\\_fwd\u00a0+\u00a0n\\_rev)**. "
         "The direction with more efforts carries more weight."
     )
+    st.caption("""
+    In previous steps models are trained with TT split, here they are retrained on full bike a/b because they are only used to predict on other bike.
+    Also bootstrapping is performed on this rerun for confidence intervals""")
 
-    summary = aggregate_paired_delta(pred_ab_d[_residual_col], pred_ba_d[_residual_col])
+    summary = aggregate_paired_delta_bootstrap(ab_bootstrap_results, ba_bootstrap_results)
+
     combined = summary["combined"]
     winner = bike_b if combined >= 0 else bike_a
     loser = bike_a if combined >= 0 else bike_b
@@ -811,6 +876,7 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
         )
 
     st.plotly_chart(_plot_aggregate(summary, bike_a, bike_b, _unit, _adv_label), width='stretch')
+
     better_word = "more efficient" if watt_mode else "faster"
     st.caption(
         f"**A\u2192B**: apply {bike_a}'s model to {bike_b}'s efforts \u2014 positive means {bike_b} {better_word}. "
@@ -839,3 +905,95 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
             f"**{advantage:.2f}\u00a0{_unit} faster** than {loser} in equivalent riding conditions."
             + (f" (95%\u00a0CI: {abs(summary['ci_low']):.2f}\u2013{abs(summary['ci_high']):.2f}\u00a0{_unit})" if not np.isnan(summary['ci_low']) else "")
         )
+
+    with st.expander("How reliable is this?"):
+        validate(pred_ab_d[_residual_col], pred_ba_d[_residual_col], bike_a, bike_b)
+
+
+def validate(ab_residuals: pd.Series, ba_residuals: pd.Series, bike_a, bike_b) -> None:
+    """
+    Visualize residual distributions for both prediction directions (A→B and B→A)
+    to assess whether the causal estimate is trustworthy.
+
+    A well-specified model should produce residuals that are roughly symmetric
+    around zero, since systematic skew suggests the model is picking up bias
+    rather than random variability. The means of the two distributions should
+    also be near-mirror images of each other (the "symmetry check") — if training
+    on A and predicting B gives a mean residual of +0.4, training on B and
+    predicting A should give roughly -0.4. Large divergence between the two
+    suggests the model isn't fully controlling for conditions.
+    """
+    st.subheader("Residual distribution")
+    st.markdown(
+        "These histograms show the gap between actual and predicted speed-per-watt "
+        "for each direction of the model. A trustworthy result looks like a roughly "
+        "symmetric bell shape centered away from zero — that center point is the "
+        "estimated bike effect, and the spread around it reflects natural ride-to-ride "
+        "variability rather than something the model is missing."
+    )
+
+    ab_mean = ab_residuals.mean()
+    ba_mean = ba_residuals.mean()
+    symmetry_gap = abs(ab_mean + ba_mean)
+
+    fig = go.Figure()
+    fig.add_trace(go.Histogram(
+        x=ab_residuals,
+        name="A → B",
+        opacity=0.6,
+        marker_color="#2ca02c",
+        nbinsx=40,
+    ))
+    fig.add_trace(go.Histogram(
+        x=ba_residuals,
+        name="B → A",
+        opacity=0.6,
+        marker_color="#ff7f0e",
+        nbinsx=40,
+    ))
+
+    fig.add_vline(
+        x=ab_mean,
+        line_dash="dash",
+        line_color="#2ca02c",
+        annotation_text=f"A→B mean: {ab_mean:.3f}",
+        annotation_position="top",
+    )
+    fig.add_vline(
+        x=ba_mean,
+        line_dash="dash",
+        line_color="#ff7f0e",
+        annotation_text=f"B→A mean: {ba_mean:.3f}",
+        annotation_position="bottom",
+    )
+    fig.add_vline(x=0, line_color="gray", line_width=1)
+
+    fig.update_layout(
+        barmode="overlay",
+        xaxis_title="Residual (actual − predicted)",
+        yaxis_title="Count",
+        legend_title="Direction",
+        height=420,
+        margin=dict(t=40, b=40),
+    )
+
+    st.plotly_chart(fig, width='stretch')
+
+    st.markdown(
+        f"**{bike_a}→{bike_b} mean residual:** {ab_mean:.3f}  \n"
+        f"**{bike_b}→{bike_a} mean residual:** {ba_mean:.3f}  \n"
+        f"**Symmetry gap:** {symmetry_gap:.3f} "
+        "(how far the two means are from being exact opposites — closer to 0 is better)"
+    )
+
+    if symmetry_gap < 0.1 * abs(ab_mean):
+        st.success("🟢 Symmetric — estimates agree closely across both directions.")
+    elif symmetry_gap < 0.25 * abs(ab_mean):
+        st.warning("🟡 Moderate — some divergence between directions, interpret with care.")
+    else:
+        st.error("🔴 Asymmetric — the two directions disagree significantly. Treat the result with caution.")
+
+    st.markdown(
+        "If these means don't roughly mirror each other, it may indicate a bug, "
+        "insufficient data, or that the model isn't fully controlling for conditions."
+    )
