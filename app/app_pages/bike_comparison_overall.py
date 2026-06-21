@@ -1,17 +1,15 @@
-"""Overall bike comparison — XGBoost counterfactual speed pipeline.
-
-Method
-------
-1. Train an XGBoost model to predict speed from power, grade, and seasonal
-   features using only Bike A's efforts.
-2. Apply that model to Bike B's effort features to get a counterfactual speed
-   ("how fast would Bike A have gone in these conditions?").
-3. Residual = actual Bike B speed − predicted → positive means B is faster.
-4. Repeat steps 1–3 with A and B swapped (symmetry check).
-5. Aggregate both directions: combined = (fwd_mean − rev_mean) / 2.
-"""
+"""Bike Comparison page – tab host for Overall and Segmented analyses."""
 
 from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+import streamlit as st
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 import sys
 from itertools import combinations
@@ -22,11 +20,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
-_REPO_ROOT = Path(__file__).resolve().parents[2]
-if str(_REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(_REPO_ROOT))
+from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 from src.bike_delta import (
     prepare_delta_dataset,
@@ -40,8 +35,23 @@ from src.bike_delta import (
     engineer_features,
     bootstrap_pipeline
 )
-from src._ui_helpers import gear_label, use_metric, spd_label
-from src.utils import page_guard
+from src._ui_helpers import use_metric, spd_label, get_available_bikes
+
+from src.utils import navigator, page_guard
+
+"""Overall bike comparison — XGBoost counterfactual speed pipeline.
+
+Method
+------
+1. Train an XGBoost model to predict speed from power, grade, and seasonal
+   features using only Bike A's efforts.
+2. Apply that model to Bike B's effort features to get a counterfactual speed
+   ("how fast would Bike A have gone in these conditions?").
+3. Residual = actual Bike B speed − predicted → positive means B is faster.
+4. Repeat steps 1–3 with A and B swapped (symmetry check).
+5. Aggregate both directions: combined = (fwd_mean − rev_mean) / 2.
+"""
+
 
 _COLOR_A = "#4C72B0"
 _COLOR_B = "#DD8452"
@@ -49,7 +59,24 @@ _FASTER_COLOR = "#2ca02c"
 _SLOWER_COLOR = "#d62728"
 
 _SPEED_DISPLAY_COLS = ["speed_kmh", "predicted_speed_kmh", "speed_residual"]
+# ── Page title ────────────────────────────────────────────────────────────
 
+def overall_comp_inputs():
+    available_bikes = get_available_bikes()
+
+    if st.session_state.get("segment_bikes") is not None:
+        defaults = st.session_state["segment_bikes"][0:2]
+    else:
+        defaults = available_bikes[:2]
+    bikes_to_compare = st.multiselect(
+        "Bikes to compare",
+        options=available_bikes,
+        default=defaults,
+        max_selections=2,
+        help="Select 2 bikes to compare.",
+        # in future allow this to be more than 2, spider plots already ready for that
+    )
+    return bikes_to_compare
 
 def _scale_speed_cols(df: pd.DataFrame, scale: float) -> pd.DataFrame:
     """Return a copy of *df* with speed columns multiplied by *scale* for display."""
@@ -482,14 +509,12 @@ def _plot_aggregate(
 
 # ── Main entry point ──────────────────────────────────────────────────────────
 
-def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
+def show(bikes_to_compare: list[str]) -> None:
     """Render the overall bike comparison analysis."""
 
     efforts = st.session_state.get("cleaned_efforts")
     segments = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
-
-    page_guard("bike_comparison")
 
     if len(bikes_to_compare) < 2:
         st.warning("Select at least 2 bikes in the sidebar.")
@@ -506,7 +531,7 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
 
     # ── Assumptions expander (empty) ──────────────────────────────────────────
     with st.expander("Assumptions", expanded=False):
-        with open(_REPO_ROOT/ ".." / "src" / "assumptions.md", "r") as f:
+        with open(_REPO_ROOT / "src" / "assumptions.md", "r") as f:
             st.markdown(f.read())
 
     # ── Mode toggle ───────────────────────────────────────────────────────────
@@ -814,7 +839,7 @@ def show(bikes_to_compare: list[str], min_efforts: int = 3) -> None:
         )
 
     with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage\u2026"):
-        iterations = 10
+        iterations = 30
         ab_bootstrap_results = bootstrap_pipeline(
             df_scope,
             train_bike=bike_a,
@@ -997,3 +1022,24 @@ def validate(ab_residuals: pd.Series, ba_residuals: pd.Series, bike_a, bike_b) -
         "If these means don't roughly mirror each other, it may indicate a bug, "
         "insufficient data, or that the model isn't fully controlling for conditions."
     )
+
+
+
+def main() -> None:
+    st.title("📊 Step 4 — Head to Head Bike Comparison")
+    st.markdown(
+        "Filters and cleaning are already applied (configured in **Step 2 — Data Cleaning**). "
+        "Select bikes and segments below to compare performance."
+    )
+
+    page_guard("bike_comparison_overall")
+
+    bikes_to_compare = overall_comp_inputs()
+
+    show(bikes_to_compare)
+
+
+
+navigator("bike_comparison_overall1")
+main()
+navigator("bike_comparison_overall2")

@@ -50,7 +50,7 @@ def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = 
     _save_session(data, gear_frame, bikes, access_token, bike_distances, ftp)
 
 # ---------------------------------------------------------------------------
-# Static cache helpers (SQLite-backed)
+# Static cache helpers (Supabase-backed)
 # ---------------------------------------------------------------------------
 
 def _load_from_db(athlete_id: int) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float]] | None:

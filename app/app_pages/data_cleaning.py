@@ -33,6 +33,7 @@ from src._ui_helpers import (
     convert_speed as _convert_speed,
     gear_label,
     compute_speed_kmh as _compute_speed_kmh,
+    get_available_bikes
 )
 
 from src.utils import navigator, page_guard
@@ -204,8 +205,7 @@ def main() -> None:
         else:
             _spd = _spd_label()
             _COLOR_SEQ = px.colors.qualitative.Set2
-            available_bikes = sorted(cleaned["bike_name"].dropna().unique().tolist())
-
+            available_bikes = get_available_bikes()
             _raw, _annotated, _filtered_seg = outlier_detection_frames(
                 cleaned, int(example_seg_id), z_threshold=z_threshold
             )
