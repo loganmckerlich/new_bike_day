@@ -42,13 +42,18 @@ pg = st.navigation(
             icon=":material/cleaning_services:",
         ),
         st.Page(
-            "app_pages/bike_comparison.py",
-            title="3 · Bike Comparison",
-            icon=":material/bar_chart:",
+            "app_pages/bike_comparison_segmented.py",
+            title="3 · Bike Comparison (Segmented)",
+            icon=":material/laps:",
+        ),
+        st.Page(
+            "app_pages/bike_comparison_overall.py",
+            title="4 · Bike Comparison (Overall)",
+            icon=":material/sports:",
         ),
         st.Page(
             "app_pages/final_conclusions.py",
-            title="4 · Final Conclusions",
+            title="5 · Final Conclusions",
             icon=":material/flag:",
         ),
     ]

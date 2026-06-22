@@ -42,7 +42,8 @@ def navigator(on_raw):
         "home",
         "data_collection",
         "data_cleaning",
-        "bike_comparison",
+        "bike_comparison_segmented",
+        "bike_comparison_overall",
         "final_conclusions",
     ]
     if on not in order:
@@ -53,38 +54,71 @@ def navigator(on_raw):
 
     sideways = st.container(horizontal=True)
     with sideways:
-        if prev_page and st.button("←",use_container_width=True,key=f"back_{on_raw}"):
+        if prev_page and st.button("←",width='stretch',key=f"back_{on_raw}"):
             st.switch_page(f"app_pages/{prev_page}.py")
-        if on != "home" and st.button("🏠",use_container_width=True,key=f"home_{on_raw}"):
+        if on != "home" and st.button("🏠",width='stretch',key=f"home_{on_raw}"):
             st.switch_page("app_pages/home.py")
-        if next_page and st.button("→",use_container_width=True,key=f"forward_{on_raw}"):
+        if next_page and st.button("→",width='stretch',key=f"forward_{on_raw}"):
             st.switch_page(f"app_pages/{next_page}.py")
 
-def page_guard():
-    # ── Guard: data must be loaded ─────────────────────────────────────────────
-    raw_efforts: pd.DataFrame | None = st.session_state.get("efforts")
-    segments: pd.DataFrame | None = st.session_state.get("segments")
-    bikes: dict[str, str] = st.session_state.get("bikes", {})
+def _redirect(message: str, button_text: str, page: str) -> None:
+    st.info(message)
+    if st.button(button_text):
+        st.switch_page(page)
+    st.stop()
 
-    if raw_efforts is None or (hasattr(raw_efforts, "empty") and raw_efforts.empty):
-        st.info("Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
-        if st.button("Go to Step 1"):
-            st.switch_page("app_pages/data_collection.py")
-        st.stop()
 
+def page_guard(page_name: str) -> None:
+    requirements = {
+        "data_cleaning": ["data_loaded"],
+        "bike_comparison_segmented": ["data_loaded", "data_cleaned"],
+        "bike_comparison_overall": ["data_loaded", "data_cleaned"],
+        "final_conclusions": ["data_loaded", "data_cleaned"],
+    }
+
+    raw_efforts = st.session_state.get("efforts")
     cleaned_efforts = st.session_state.get("cleaned_efforts")
-    if cleaned_efforts is None or (hasattr(cleaned_efforts, "empty") and cleaned_efforts.empty):
-        st.info("Head to **Step 2 — Data Cleaning** to configure and apply data filters first.")
-        if st.button("Go to Step 2"):
-            st.switch_page("app_pages/data_cleaning.py")
-        st.stop()
+    segments = st.session_state.get("segments")
+
+    checks = {
+        "data_loaded": (
+            raw_efforts is not None
+            and not raw_efforts.empty
+        ),
+        "data_cleaned": (
+            cleaned_efforts is not None
+            and not cleaned_efforts.empty
+        ),
+    }
+
+    needed = requirements.get(page_name, [])
+
+    if "data_loaded" in needed and not checks["data_loaded"]:
+        _redirect(
+            "Head to **Step 1 — Data Collection** to load your Strava data first.",
+            "Go to Step 1",
+            "app_pages/data_collection.py",
+        )
+
+    if "data_cleaned" in needed and not checks["data_cleaned"]:
+        _redirect(
+            "Head to **Step 2 — Data Cleaning** to configure and apply filters first.",
+            "Go to Step 2",
+            "app_pages/data_cleaning.py",
+        )
 
     if segments is None or segments.empty:
-        st.warning("No starred segments found. Star some segments on Strava and reload from Step 1.")
+        st.warning(
+            "No starred segments found. Star some segments on Strava and reload from Step 1."
+        )
         st.stop()
 
-    # Keep only power efforts
-    efforts_with_power = raw_efforts[raw_efforts["average_watts"].notna()].copy()
+    efforts_with_power = raw_efforts[
+        raw_efforts["average_watts"].notna()
+    ]
+
     if efforts_with_power.empty:
-        st.warning("No efforts with power data found. Ensure your rides are recorded with a power meter.")
+        st.warning(
+            "No efforts with power data found. Ensure your rides are recorded with a power meter."
+        )
         st.stop()

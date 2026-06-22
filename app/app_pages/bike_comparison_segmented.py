@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from src.utils import navigator, page_guard
 import sys
 from pathlib import Path
 
@@ -19,13 +20,10 @@ from src.fetch import get_segment_detail, get_segment_streams
 from src.database import init_db, load_segment_geo, save_segment_geo
 from src.plot_colors import to_rgba
 from src.analytics import (
-    compute_speed_per_watt,
-    filter_outliers_by_power_speed,
     mean_profile_by_segment_type,
     power_normalized_profile,
-    outlier_detection_frames,
 )
-from src.bike_delta import power_overlap_ok, segment_power_overlap_summary
+from src.bike_delta import power_overlap_ok
 from src._ui_helpers import (
     use_metric as _use_metric,
     spd_label as _spd_label,
@@ -38,6 +36,7 @@ from src._ui_helpers import (
     compute_speed_kmh as _compute_speed_kmh,
     has_col as _has_col,
     gear_label,
+    get_available_bikes
 )
 
 # ── Module-level placeholders (refreshed inside show()) ──────────────────────
@@ -82,6 +81,30 @@ _COLOR_SEQ: list[str] = px.colors.qualitative.Set2
 _SPIDER_POLYGON_LINE_WIDTH: int = 3
 _SPIDER_POLYGON_FILL_ALPHA: float = 0.20
 
+# ── Page title ────────────────────────────────────────────────────────────
+
+def comp_inputs():
+
+    available_bikes = get_available_bikes()
+
+    bikes_to_compare = st.multiselect(
+        "Bikes to compare",
+        options=available_bikes,
+        default=available_bikes[:2],
+        max_selections=5,
+        help="Select up to 5 bikes to compare.",
+    )
+    st.session_state["segment_bikes"] = bikes_to_compare
+
+    min_efforts = st.number_input(
+        "Min efforts per bike per segment",
+        min_value=1,
+        max_value=20,
+        value=3,
+        step=1,
+        help="Both bikes must have at least this many power-measured efforts on a segment.",
+    )
+    return bikes_to_compare, min_efforts
 
 def _get_segment_geo(segment_id: int) -> dict:
     cache_key = f"segment_geo_{segment_id}"
@@ -795,3 +818,22 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                         detail.rename(columns={"Time (s)": "Time"}, inplace=True)
 
                     st.dataframe(detail, width="stretch", hide_index=True)
+
+
+
+def main() -> None:
+    st.title("📊 Step 3 — Segment Level Comparison")
+    st.markdown(
+        "Filters and cleaning are already applied (configured in **Step 2 — Data Cleaning**). "
+        "Select bikes and segments below to compare performance."
+    )
+
+    page_guard("bike_comparison_segmented")
+
+    bikes_to_compare, min_efforts = comp_inputs()
+
+    show(bikes_to_compare, min_efforts)
+
+navigator("bike_comparison_segmented1")
+main()
+navigator("bike_comparison_segmented2")

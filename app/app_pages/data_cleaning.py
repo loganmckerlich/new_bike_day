@@ -33,6 +33,7 @@ from src._ui_helpers import (
     convert_speed as _convert_speed,
     gear_label,
     compute_speed_kmh as _compute_speed_kmh,
+    get_available_bikes
 )
 
 from src.utils import navigator, page_guard
@@ -47,12 +48,13 @@ def main() -> None:
         "The settings you choose here are applied on every subsequent page."
     )
 
-    page_guard()
+    page_guard("data_cleaning")
     segments: pd.DataFrame | None = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
+    efforts_with_power: pd.DataFrame | None = st.session_state.get("efforts")
 
     # Merge segment metadata so we have segment_type available
-    seg_meta_cols = ["segment_id", "name", "distance", "average_grade", "maximum_grade", "segment_type"]
+    seg_meta_cols = ["segment_id", "name", "distance", "average_grade", "maximum_grade", "segment_type", "hazardous"]
     if "segment_type_detail" in segments.columns:
         seg_meta_cols.append("segment_type_detail")
     seg_meta = segments[seg_meta_cols].copy()
@@ -203,8 +205,7 @@ def main() -> None:
         else:
             _spd = _spd_label()
             _COLOR_SEQ = px.colors.qualitative.Set2
-            available_bikes = sorted(cleaned["bike_name"].dropna().unique().tolist())
-
+            available_bikes = get_available_bikes()
             _raw, _annotated, _filtered_seg = outlier_detection_frames(
                 cleaned, int(example_seg_id), z_threshold=z_threshold
             )
