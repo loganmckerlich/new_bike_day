@@ -769,6 +769,8 @@ def bootstrap_pipeline(
     """
     rng = np.random.default_rng(random_state)
     residuals = []
+    iteration_mean_resid = []
+    all_results = pd.DataFrame()
     n_skipped = 0
 
     for _ in range(n_iterations):
@@ -787,18 +789,32 @@ def bootstrap_pipeline(
             n_skipped += 1
             continue
 
-        residuals.append(result[label].mean())
+        all_results = pd.concat([all_results, result], ignore_index=True)
+
+        iteration_mean_resid.append(result[label].mean())
+        residuals.extend(result[label].tolist())
 
     residuals = np.array(residuals)
 
+    if fit_fn == fit_xgb_speed_model:
+        target = 'speed_kmh'
+        predicted = 'predicted_speed_kmh'
+    else:
+        target = 'average_watts'
+        predicted = 'predicted_average_watts'
+
+    effort_level_agg_residual = all_results.groupby("effort_id")[[predicted,target,label]].mean().reset_index()
+
     return {
         "full_result": result,
-        "residuals": residuals,
+        "boot_residuals": residuals,
+        "effort_residuals": effort_level_agg_residual,
         "mean_residual": residuals.mean(),
         "ci_lower": np.percentile(residuals, 2.5),
         "ci_upper": np.percentile(residuals, 97.5),
         "n_successful": len(residuals),
         "n_skipped": n_skipped,
+        "per_iteration_mean_resid":iteration_mean_resid
     }
 
 def aggregate_paired_delta_bootstrap(
@@ -833,8 +849,8 @@ def aggregate_paired_delta_bootstrap(
     fwd_estimates, rev_estimates, combined_estimates, n_fwd, n_rev,
     symmetry_gap.
     """
-    fwd_residuals = fwd_boot["residuals"]
-    rev_residuals = rev_boot["residuals"]
+    fwd_residuals = np.array(fwd_boot["per_iteration_mean_resid"])
+    rev_residuals = np.array(rev_boot["per_iteration_mean_resid"])
 
     fwd_mean = fwd_boot["mean_residual"]
     rev_mean = rev_boot["mean_residual"]

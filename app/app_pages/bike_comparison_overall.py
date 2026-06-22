@@ -20,6 +20,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+import hashlib
 
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
@@ -59,6 +60,7 @@ _FASTER_COLOR = "#2ca02c"
 _SLOWER_COLOR = "#d62728"
 
 _SPEED_DISPLAY_COLS = ["speed_kmh", "predicted_speed_kmh", "speed_residual"]
+BOOT_ITERATIONS = 30
 # ── Page title ────────────────────────────────────────────────────────────
 
 def overall_comp_inputs():
@@ -109,8 +111,9 @@ def _build_delta_df(
     return df
 
 
-def _model_cache_key(bike_name: str, mode: str = "speed") -> str:
-    return f"_xgb_{mode}_model__{bike_name}"
+def _model_cache_key(bike_name: str, mode: str = "speed", unit: float = 1.0, train_df: pd.DataFrame = None) -> str:
+    data_hash = hashlib.md5(pd.util.hash_pandas_object(train_df).values).hexdigest() if train_df is not None else ""
+    return f"_xgb_{mode}_model__{bike_name}__{unit}__{data_hash}"
 
 
 def _date_split_bike_df(
@@ -612,7 +615,7 @@ def show(bikes_to_compare: list[str]) -> None:
     )
 
     df_train_scope_a, df_test_a = _date_split_bike_df(df_scope, bike_a)
-    cache_key_a = _model_cache_key(bike_a, _mode_str)
+    cache_key_a = _model_cache_key(bike_a, _mode_str, _disp_scale, df_train_scope_a)
     with st.spinner(f"Training XGBoost on {bike_a}\u2026"):
         try:
             if st.session_state.get(cache_key_a) is None:
@@ -627,6 +630,7 @@ def show(bikes_to_compare: list[str]) -> None:
     _eval_a = holdout_a if not holdout_a.empty else train_a
     _eval_a_label = "holdout" if not holdout_a.empty else "in-sample \u2014 too few efforts to hold out"
 
+
     r2_a = _render_model_details_expander(
         model_a, _disp(train_a), _disp(_eval_a), bike_a, _COLOR_A, _eval_a_label,
         _train_x_col, _train_y_col, _train_x_lbl, _train_y_lbl,
@@ -636,7 +640,7 @@ def show(bikes_to_compare: list[str]) -> None:
         f"**Step 1 in plain terms:** We've taught the model what {bike_a} is capable of — "
         f"it explains **{r2_a:.0%}** of the variation in {bike_a}'s {_target_label}. "
         f"We'll use this as a {bike_a} baseline and ask: what would {bike_a} have done on {bike_b}'s efforts?"
-    )
+    ) 
 
     # ── Step 2: Apply model A to Bike B ───────────────────────────────────────
     st.divider()
@@ -655,7 +659,27 @@ def show(bikes_to_compare: list[str]) -> None:
             f"the effort's power, grade, and season as inputs."
         )
 
-    pred_ab = _apply_fn(model_a, df_scope, bike_b)
+
+    cache_key_a_boot = _model_cache_key(bike_a, _mode_str+"_boot", _disp_scale, df_scope)
+    with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage\u2026"):
+        try:
+            if st.session_state.get(cache_key_a_boot) is None:
+                st.session_state[cache_key_a_boot] = bootstrap_pipeline(
+                    df_scope,
+                    train_bike=bike_a,
+                    target_bike=bike_b,
+                    n_iterations=BOOT_ITERATIONS,
+                    random_state=42,
+                    apply_fn = _apply_fn,
+                    fit_fn = _fit_fn,
+                    label = _residual_col
+                )
+            ab_bootstrap_results = st.session_state[cache_key_a_boot]
+        except ValueError as e:
+            st.error(str(e))
+            st.stop()
+    # this is the per effort avg from the boot model, has target and prediction and residual for each effort
+    pred_ab = ab_bootstrap_results['effort_residuals']
     if pred_ab.empty:
         st.warning(f"No usable {bike_b} efforts after filtering. Cannot compute counterfactual.")
         st.stop()
@@ -759,7 +783,7 @@ def show(bikes_to_compare: list[str]) -> None:
     )
 
     df_train_scope_b, df_test_b = _date_split_bike_df(df_scope, bike_b)
-    cache_key_b = _model_cache_key(bike_b, _mode_str)
+    cache_key_b = _model_cache_key(bike_b, _mode_str, _model_cache_key, df_train_scope_b)
     with st.spinner(f"Training XGBoost on {bike_b}\u2026"):
         try:
             if st.session_state.get(cache_key_b) is None:
@@ -773,17 +797,38 @@ def show(bikes_to_compare: list[str]) -> None:
     holdout_b = _apply_fn(model_b, df_test_b, bike_b)
     _eval_b = holdout_b if not holdout_b.empty else train_b
     _eval_b_label = "holdout" if not holdout_b.empty else "in-sample \u2014 too few efforts to hold out"
-    pred_ba = _apply_fn(model_b, df_scope, bike_a)
-    if pred_ba.empty:
-        st.warning(f"No usable {bike_a} efforts after filtering. Cannot compute reverse counterfactual.")
-        st.stop()
-    pred_ba_d = _disp(pred_ba)
 
     r2_b = _render_model_details_expander(
         model_b, _disp(train_b), _disp(_eval_b), bike_b, _COLOR_B, _eval_b_label,
         _train_x_col, _train_y_col, _train_x_lbl, _train_y_lbl,
         _target_col, _pred_col, _features, _target_label, _unit, expanded=False,
     )
+
+
+    cache_key_b_boot = _model_cache_key(bike_b, _mode_str+"_boot", _disp_scale, df_scope)
+    with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage\u2026"):
+        try:
+            if st.session_state.get(cache_key_b_boot) is None:
+                st.session_state[cache_key_b_boot] = bootstrap_pipeline(
+                    df_scope,
+                    train_bike=bike_b,
+                    target_bike=bike_a,
+                    n_iterations=BOOT_ITERATIONS,
+                    random_state=42,
+                    apply_fn = _apply_fn,
+                    fit_fn = _fit_fn,
+                    label = _residual_col
+                )
+            ba_bootstrap_results = st.session_state[cache_key_b_boot]
+        except ValueError as e:
+            st.error(str(e))
+            st.stop()
+
+    pred_ba = ba_bootstrap_results['effort_residuals']
+    if pred_ba.empty:
+        st.warning(f"No usable {bike_a} efforts after filtering. Cannot compute reverse counterfactual.")
+        st.stop()
+    pred_ba_d = _disp(pred_ba)
 
     st.plotly_chart(_plot_counterfactual_scatter(
         pred_ba_d, bike_b, bike_a,
@@ -836,30 +881,6 @@ def show(bikes_to_compare: list[str]) -> None:
             f"**Step 4 in plain terms:** Flipping it around — if you did a {bike_a} effort "
             f"on {bike_b} instead, you would've gone **{abs(mean_ba):.2f} {_unit} {_ba_direction}** — "
             f"based on {n_ba} matched efforts."
-        )
-
-    with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage\u2026"):
-        iterations = 30
-        ab_bootstrap_results = bootstrap_pipeline(
-            df_scope,
-            train_bike=bike_a,
-            target_bike=bike_b,
-            n_iterations=iterations,
-            random_state=42,
-            apply_fn = _apply_fn,
-            fit_fn = _fit_fn,
-            label = _residual_col
-        )
-
-        ba_bootstrap_results = bootstrap_pipeline(
-            df_scope,
-            train_bike=bike_b,
-            target_bike=bike_a,
-            n_iterations=iterations,
-            random_state=42,
-            apply_fn = _apply_fn,
-            fit_fn = _fit_fn,
-            label = _residual_col
         )
 
     # ── Step 5: Aggregate ─────────────────────────────────────────────────────
@@ -932,10 +953,63 @@ def show(bikes_to_compare: list[str]) -> None:
         )
 
     with st.expander("How reliable is this?"):
-        validate(pred_ab_d[_residual_col], pred_ba_d[_residual_col], bike_a, bike_b)
+        validate(ab_bootstrap_results, ba_bootstrap_results, bike_a, bike_b)
 
 
-def validate(ab_residuals: pd.Series, ba_residuals: pd.Series, bike_a, bike_b) -> None:
+def build_summary(
+    ab_boot: dict,
+    ba_boot: dict,
+) -> dict:
+    """Build a summary dict for validate() from two bootstrap_pipeline outputs.
+
+    Parameters
+    ----------
+    ab_boot:
+        Output of bootstrap_pipeline(df, train_bike=A, target_bike=B).
+    ba_boot:
+        Output of bootstrap_pipeline(df, train_bike=B, target_bike=A).
+
+    Returns
+    -------
+    dict with keys: combined, ci_low, ci_high, fwd_mean, rev_mean,
+    symmetry_gap, n_fwd, n_rev.
+    """
+    fwd_mean = ab_boot["mean_residual"]
+    rev_mean = ba_boot["mean_residual"]
+
+    # combined effect: average of both directions
+    # negate rev so positive = bike_b faster in both cases
+    combined = (fwd_mean - rev_mean) / 2
+
+    # build combined bootstrap distribution from pooled residuals
+    # by pairing fwd and rev residuals index-wise, truncated to
+    # the shorter length to keep arrays aligned
+    fwd_residuals = np.array(ab_boot["per_iteration_mean_resid"])
+    rev_residuals = np.array(ba_boot["per_iteration_mean_resid"])
+    n_paired = min(len(fwd_residuals), len(rev_residuals))
+    combined_estimates = (
+        fwd_residuals[:n_paired] - rev_residuals[:n_paired]
+    ) / 2
+
+    ci_low = float(np.percentile(combined_estimates, 2.5))
+    ci_high = float(np.percentile(combined_estimates, 97.5))
+    symmetry_gap = abs(fwd_mean + rev_mean)
+
+    return {
+        "combined": combined,
+        "ci_low": ci_low,
+        "ci_high": ci_high,
+        "fwd_mean": fwd_mean,
+        "rev_mean": rev_mean,
+        "fwd_estimates": fwd_residuals,
+        "rev_estimates": rev_residuals,
+        "combined_estimates": combined_estimates,
+        "symmetry_gap": symmetry_gap,
+        "n_fwd": ab_boot["n_successful"],
+        "n_rev": ba_boot["n_successful"],
+    }
+
+def validate(ab_bootstrap_results, ba_bootstrap_results, bike_a, bike_b) -> None:
     """
     Visualize residual distributions for both prediction directions (A→B and B→A)
     to assess whether the causal estimate is trustworthy.
@@ -947,31 +1021,47 @@ def validate(ab_residuals: pd.Series, ba_residuals: pd.Series, bike_a, bike_b) -
     on A and predicting B gives a mean residual of +0.4, training on B and
     predicting A should give roughly -0.4. Large divergence between the two
     suggests the model isn't fully controlling for conditions.
+
+    Parameters
+    ----------
+    ab_bootstrap_results:
+        Output of bootstrap_pipeline(df, train_bike=A, target_bike=B).
+    ba_bootstrap_results:
+        Output of bootstrap_pipeline(df, train_bike=B, target_bike=A).
+    bike_a:
+        Name of bike A.
+    bike_b:
+        Name of bike B.
+    summary:
+        Output of aggregate_paired_delta_bootstrap — provides combined,
+        ci_low, ci_high for the effect size vs CI width check.
     """
     st.subheader("Residual distribution")
     st.markdown(
-        "These histograms show the gap between actual and predicted speed-per-watt "
+        "These histograms show the gap between actual and predicted speed "
         "for each direction of the model. A trustworthy result looks like a roughly "
         "symmetric bell shape centered away from zero — that center point is the "
         "estimated bike effect, and the spread around it reflects natural ride-to-ride "
         "variability rather than something the model is missing."
     )
-
-    ab_mean = ab_residuals.mean()
-    ba_mean = ba_residuals.mean()
+    summary = build_summary(ab_bootstrap_results, ba_bootstrap_results)
+    ab_boot_residuals = ab_bootstrap_results["boot_residuals"]
+    ba_boot_residuals = ba_bootstrap_results["boot_residuals"]
+    ab_mean = ab_bootstrap_results["mean_residual"]
+    ba_mean = ba_bootstrap_results["mean_residual"]
     symmetry_gap = abs(ab_mean + ba_mean)
 
     fig = go.Figure()
     fig.add_trace(go.Histogram(
-        x=ab_residuals,
-        name="A → B",
+        x=ab_boot_residuals,
+        name=f"{bike_a} → {bike_b}",
         opacity=0.6,
         marker_color="#2ca02c",
         nbinsx=40,
     ))
     fig.add_trace(go.Histogram(
-        x=ba_residuals,
-        name="B → A",
+        x=ba_boot_residuals,
+        name=f"{bike_b} → {bike_a}",
         opacity=0.6,
         marker_color="#ff7f0e",
         nbinsx=40,
@@ -981,21 +1071,21 @@ def validate(ab_residuals: pd.Series, ba_residuals: pd.Series, bike_a, bike_b) -
         x=ab_mean,
         line_dash="dash",
         line_color="#2ca02c",
-        annotation_text=f"A→B mean: {ab_mean:.3f}",
+        annotation_text=f"{bike_a}→{bike_b} mean: {ab_mean:.3f}",
         annotation_position="top",
     )
     fig.add_vline(
         x=ba_mean,
         line_dash="dash",
         line_color="#ff7f0e",
-        annotation_text=f"B→A mean: {ba_mean:.3f}",
+        annotation_text=f"{bike_b}→{bike_a} mean: {ba_mean:.3f}",
         annotation_position="bottom",
     )
     fig.add_vline(x=0, line_color="gray", line_width=1)
 
     fig.update_layout(
         barmode="overlay",
-        xaxis_title="Residual (actual − predicted)",
+        xaxis_title="Residual (actual − predicted speed km/h)",
         yaxis_title="Count",
         legend_title="Direction",
         height=420,
@@ -1023,6 +1113,55 @@ def validate(ab_residuals: pd.Series, ba_residuals: pd.Series, bike_a, bike_b) -
         "insufficient data, or that the model isn't fully controlling for conditions."
     )
 
+    # --- Effect size vs CI width ---
+    st.subheader("Confidence interval width")
+    st.markdown(
+        "A statistically detectable effect is only meaningful if the uncertainty "
+        "around it is small relative to the effect itself. A confidence interval "
+        "wider than the effect means we can't reliably distinguish signal from noise."
+    )
+
+    combined = summary["combined"]
+    ci_low = summary["ci_low"]
+    ci_high = summary["ci_high"]
+    ci_width = ci_high - ci_low
+    effect_size = abs(combined)
+    ci_to_effect = ci_width / effect_size if effect_size > 0 else float("inf")
+    ci_crosses_zero = ci_low < 0 < ci_high
+
+    faster_bike = bike_b if combined > 0 else bike_a
+    effect_label = f"{effect_size:.2f} km/h"
+    ci_label = f"[{ci_low:+.2f}, {ci_high:+.2f}] km/h"
+
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Estimated effect", f"{combined:+.2f} km/h")
+    col2.metric("95% CI", ci_label)
+    col3.metric("CI width / effect size", f"{ci_to_effect:.1f}×")
+
+    if ci_crosses_zero:
+        st.error(
+            f"🔴 The confidence interval crosses zero {ci_label}. "
+            f"The data does not clearly favor either bike — the effect could be zero. "
+            f"More rides on comparable segments are needed to reach a conclusion."
+        )
+    elif ci_to_effect > 2.0:
+        st.warning(
+            f"🟡 The estimated effect is {effect_label} in favor of {faster_bike}, "
+            f"but the confidence interval is {ci_to_effect:.1f}× wider than the effect itself. "
+            f"The direction is consistent but the magnitude is uncertain — ride more segments to narrow this down."
+        )
+    elif ci_to_effect > 1.0:
+        st.warning(
+            f"🟡 Moderate confidence. {faster_bike} appears faster by {effect_label} "
+            f"and the CI does not cross zero, but uncertainty is still meaningful relative to the effect size. "
+            f"Treat the magnitude with some caution."
+        )
+    else:
+        st.success(
+            f"🟢 Strong confidence. {faster_bike} is estimated to be {effect_label} faster "
+            f"and the confidence interval is tight relative to the effect size {ci_label}. "
+            f"This is a reliable result."
+        )
 
 
 def main() -> None:

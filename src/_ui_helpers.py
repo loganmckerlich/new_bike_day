@@ -91,6 +91,7 @@ def get_available_bikes():
     efforts = st.session_state.get("cleaned_efforts")
     watt_efforts = efforts[efforts["average_watts"].notna()].copy()
     watt_efforts["bike_name"] = watt_efforts["gear_id"].map(lambda g: gear_label(g, bikes))
+    watt_efforts = watt_efforts[watt_efforts["bike_name"] != "Unknown"]
     available_bikes = watt_efforts.groupby("bike_name")["effort_id"].count()
     available_bikes = available_bikes.sort_values(ascending=False).index.tolist()
     st.session_state["available_bikes"] = available_bikes
