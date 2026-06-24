@@ -672,7 +672,9 @@ def show(bikes_to_compare: list[str]) -> None:
                     random_state=42,
                     apply_fn = _apply_fn,
                     fit_fn = _fit_fn,
-                    label = _residual_col
+                    label = _residual_col,
+                    predicted_col=_pred_col,
+                    target_col=_target_col,
                 )
             ab_bootstrap_results = st.session_state[cache_key_a_boot]
         except ValueError as e:
@@ -817,7 +819,9 @@ def show(bikes_to_compare: list[str]) -> None:
                     random_state=42,
                     apply_fn = _apply_fn,
                     fit_fn = _fit_fn,
-                    label = _residual_col
+                    label = _residual_col,
+                    predicted_col=_pred_col,
+                    target_col=_target_col,
                 )
             ba_bootstrap_results = st.session_state[cache_key_b_boot]
         except ValueError as e:

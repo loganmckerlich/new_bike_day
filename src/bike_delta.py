@@ -726,7 +726,9 @@ def bootstrap_pipeline(
     random_state: int = 42,
     apply_fn = apply_model_to_bike,
     fit_fn = fit_xgb_speed_model,
-    label: str = "speed_residual"
+    label: str = "speed_residual",
+    predicted_col: str = "predicted_speed_kmh",
+    target_col: str = "speed_kmh",
 ) -> dict:
     """Bootstrap the train/predict pipeline to quantify uncertainty in the
     estimated speed effect for one direction (e.g. train on A, predict B).
@@ -796,14 +798,7 @@ def bootstrap_pipeline(
 
     residuals = np.array(residuals)
 
-    if fit_fn == fit_xgb_speed_model:
-        target = 'speed_kmh'
-        predicted = 'predicted_speed_kmh'
-    else:
-        target = 'average_watts'
-        predicted = 'predicted_average_watts'
-
-    effort_level_agg_residual = all_results.groupby("effort_id")[[predicted,target,label]].mean().reset_index()
+    effort_level_agg_residual = all_results.groupby("effort_id")[[predicted_col,target_col,label]].mean().reset_index()
 
     return {
         "full_result": result,
