@@ -1,0 +1,300 @@
+[
+  {
+    "id": 3283273552010115238,
+    "resource_state": 2,
+    "name": "Final push",
+    "activity": {
+      "id": 3769141093,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 56,
+    "moving_time": 56,
+    "start_date": "2020-07-16T02:36:37Z",
+    "start_date_local": "2020-07-15T19:36:37Z",
+    "distance": 508.5,
+    "start_index": 1167,
+    "end_index": 1222,
+    "device_watts": false,
+    "segment": {
+      "id": 38003127,
+      "resource_state": 2,
+      "name": "Final push",
+      "activity_type": "Ride",
+      "distance": 508.5,
+      "average_grade": 0.8,
+      "maximum_grade": 9.1,
+      "elevation_high": 30.8,
+      "elevation_low": 26.6,
+      "start_latlng": [
+        47.634384,
+        -121.934928
+      ],
+      "end_latlng": [
+        47.637703,
+        -121.930968
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3369174001341047230,
+    "resource_state": 2,
+    "name": "Final push",
+    "activity": {
+      "id": 14802547020,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 57,
+    "moving_time": 57,
+    "start_date": "2025-06-15T01:03:28Z",
+    "start_date_local": "2025-06-14T18:03:28Z",
+    "distance": 508.5,
+    "start_index": 1001,
+    "end_index": 1058,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 269.5,
+    "average_heartrate": 146.8,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 38003127,
+      "resource_state": 2,
+      "name": "Final push",
+      "activity_type": "Ride",
+      "distance": 508.5,
+      "average_grade": 0.8,
+      "maximum_grade": 9.1,
+      "elevation_high": 30.8,
+      "elevation_low": 26.6,
+      "start_latlng": [
+        47.634384,
+        -121.934928
+      ],
+      "end_latlng": [
+        47.637703,
+        -121.930968
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491243340697929526,
+    "resource_state": 2,
+    "name": "Final push",
+    "activity": {
+      "id": 18549402472,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 60,
+    "moving_time": 60,
+    "start_date": "2026-05-17T22:15:33Z",
+    "start_date_local": "2026-05-17T15:15:33Z",
+    "distance": 508.5,
+    "start_index": 2239,
+    "end_index": 2299,
+    "average_cadence": 87.6,
+    "device_watts": true,
+    "average_watts": 281.0,
+    "average_heartrate": 158.5,
+    "max_heartrate": 162.0,
+    "segment": {
+      "id": 38003127,
+      "resource_state": 2,
+      "name": "Final push",
+      "activity_type": "Ride",
+      "distance": 508.5,
+      "average_grade": 0.8,
+      "maximum_grade": 9.1,
+      "elevation_high": 30.8,
+      "elevation_low": 26.6,
+      "start_latlng": [
+        47.634384,
+        -121.934928
+      ],
+      "end_latlng": [
+        47.637703,
+        -121.930968
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3501373567738737592,
+    "resource_state": 2,
+    "name": "Final push",
+    "activity": {
+      "id": 18923206262,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 60,
+    "moving_time": 60,
+    "start_date": "2026-06-14T20:57:33Z",
+    "start_date_local": "2026-06-14T13:57:33Z",
+    "distance": 508.5,
+    "start_index": 2809,
+    "end_index": 2869,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 376.1,
+    "average_heartrate": 136.5,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 38003127,
+      "resource_state": 2,
+      "name": "Final push",
+      "activity_type": "Ride",
+      "distance": 508.5,
+      "average_grade": 0.8,
+      "maximum_grade": 9.1,
+      "elevation_high": 30.8,
+      "elevation_low": 26.6,
+      "start_latlng": [
+        47.634384,
+        -121.934928
+      ],
+      "end_latlng": [
+        47.637703,
+        -121.930968
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3503540290836136684,
+    "resource_state": 2,
+    "name": "Final push",
+    "activity": {
+      "id": 19002479527,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 70,
+    "start_date": "2026-06-20T19:31:08Z",
+    "start_date_local": "2026-06-20T12:31:08Z",
+    "distance": 508.5,
+    "start_index": 2768,
+    "end_index": 2842,
+    "average_cadence": 55.2,
+    "device_watts": true,
+    "average_watts": 204.8,
+    "average_heartrate": 144.9,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 38003127,
+      "resource_state": 2,
+      "name": "Final push",
+      "activity_type": "Ride",
+      "distance": 508.5,
+      "average_grade": 0.8,
+      "maximum_grade": 9.1,
+      "elevation_high": 30.8,
+      "elevation_low": 26.6,
+      "start_latlng": [
+        47.634384,
+        -121.934928
+      ],
+      "end_latlng": [
+        47.637703,
+        -121.930968
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

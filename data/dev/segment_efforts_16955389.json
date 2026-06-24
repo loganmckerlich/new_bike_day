@@ -974,6 +974,64 @@
     "kom_rank": null
   },
   {
+    "id": 3500364122280293850,
+    "resource_state": 2,
+    "name": "See colors and puke",
+    "activity": {
+      "id": 18886071441,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 828,
+    "moving_time": 828,
+    "start_date": "2026-06-11T23:41:44Z",
+    "start_date_local": "2026-06-11T16:41:44Z",
+    "distance": 7780.9,
+    "start_index": 2524,
+    "end_index": 3352,
+    "average_cadence": 75.6,
+    "device_watts": true,
+    "average_watts": 287.5,
+    "average_heartrate": 148.4,
+    "max_heartrate": 181.0,
+    "segment": {
+      "id": 16955389,
+      "resource_state": 2,
+      "name": "See colors and puke",
+      "activity_type": "Ride",
+      "distance": 7780.9,
+      "average_grade": 0.0,
+      "maximum_grade": 29.4,
+      "elevation_high": 55.5,
+      "elevation_low": 12.4,
+      "start_latlng": [
+        47.643086,
+        -122.203533
+      ],
+      "end_latlng": [
+        47.645262,
+        -122.301394
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Kirkland",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3433642673265850588,
     "resource_state": 2,
     "name": "See colors and puke",

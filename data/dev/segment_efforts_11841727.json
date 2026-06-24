@@ -1,0 +1,2358 @@
+[
+  {
+    "id": 3504163656042686260,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 19023440714,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 66,
+    "moving_time": 66,
+    "start_date": "2026-06-22T14:37:17Z",
+    "start_date_local": "2026-06-22T07:37:17Z",
+    "distance": 729.1,
+    "start_index": 395,
+    "end_index": 461,
+    "average_cadence": 70.7,
+    "device_watts": true,
+    "average_watts": 369.9,
+    "average_heartrate": 69.8,
+    "max_heartrate": 71.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3354247835627517312,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 14380153374,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 72,
+    "moving_time": 72,
+    "start_date": "2025-05-04T19:28:53Z",
+    "start_date_local": "2025-05-04T12:28:53Z",
+    "distance": 729.1,
+    "start_index": 4783,
+    "end_index": 4855,
+    "average_cadence": 82.4,
+    "device_watts": true,
+    "average_watts": 231.4,
+    "average_heartrate": 131.8,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3389383147780933890,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2025-08-09T20:19:40Z",
+    "start_date_local": "2025-08-09T13:19:40Z",
+    "distance": 729.1,
+    "start_index": 4712,
+    "end_index": 4786,
+    "average_cadence": 88.7,
+    "device_watts": true,
+    "average_watts": 229.8,
+    "average_heartrate": 138.7,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978676228924,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 77,
+    "moving_time": 77,
+    "start_date": "2026-05-22T14:38:04Z",
+    "start_date_local": "2026-05-22T07:38:04Z",
+    "distance": 729.1,
+    "start_index": 360,
+    "end_index": 437,
+    "average_cadence": 53.4,
+    "device_watts": true,
+    "average_watts": 227.1,
+    "average_heartrate": 119.0,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500170690744529922,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18879141341,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 79,
+    "moving_time": 79,
+    "start_date": "2026-06-11T14:16:29Z",
+    "start_date_local": "2026-06-11T07:16:29Z",
+    "distance": 729.1,
+    "start_index": 325,
+    "end_index": 404,
+    "average_cadence": 70.6,
+    "device_watts": true,
+    "average_watts": 255.0,
+    "average_heartrate": 129.1,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480242032473278918,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18146236077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2026-04-17T14:19:37Z",
+    "start_date_local": "2026-04-17T07:19:37Z",
+    "distance": 729.1,
+    "start_index": 366,
+    "end_index": 446,
+    "average_cadence": 62.0,
+    "device_watts": true,
+    "average_watts": 225.6,
+    "average_heartrate": 135.4,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492201193560357772,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18582983778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2026-05-20T14:23:38Z",
+    "start_date_local": "2026-05-20T07:23:38Z",
+    "distance": 729.1,
+    "start_index": 357,
+    "end_index": 437,
+    "average_cadence": 64.0,
+    "device_watts": true,
+    "average_watts": 216.1,
+    "average_heartrate": 123.2,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491841620561017138,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18569402318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 81,
+    "moving_time": 81,
+    "start_date": "2026-05-19T14:31:56Z",
+    "start_date_local": "2026-05-19T07:31:56Z",
+    "distance": 729.1,
+    "start_index": 374,
+    "end_index": 455,
+    "average_cadence": 65.6,
+    "device_watts": true,
+    "average_watts": 184.3,
+    "average_heartrate": 117.7,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3501990990447177910,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18944935604,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 81,
+    "moving_time": 81,
+    "start_date": "2026-06-16T14:33:38Z",
+    "start_date_local": "2026-06-16T07:33:38Z",
+    "distance": 729.1,
+    "start_index": 355,
+    "end_index": 436,
+    "average_cadence": 63.2,
+    "device_watts": true,
+    "average_watts": 189.9,
+    "average_heartrate": 110.0,
+    "max_heartrate": 116.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3012128648613444628,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 7906979690,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 82,
+    "moving_time": 82,
+    "start_date": "2022-10-03T19:00:04Z",
+    "start_date_local": "2022-10-03T12:00:04Z",
+    "distance": 729.1,
+    "start_index": 601,
+    "end_index": 682,
+    "device_watts": false,
+    "average_heartrate": 127.1,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387297855184250624,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 15336818451,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 82,
+    "moving_time": 82,
+    "start_date": "2025-08-03T19:28:39Z",
+    "start_date_local": "2025-08-03T12:28:39Z",
+    "distance": 729.1,
+    "start_index": 7024,
+    "end_index": 7106,
+    "average_cadence": 70.7,
+    "device_watts": true,
+    "average_watts": 114.2,
+    "average_heartrate": 112.3,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476257563192708304,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18001520259,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-04-06T14:26:24Z",
+    "start_date_local": "2026-04-06T07:26:24Z",
+    "distance": 729.1,
+    "start_index": 373,
+    "end_index": 456,
+    "average_cadence": 58.0,
+    "device_watts": true,
+    "average_watts": 193.2,
+    "average_heartrate": 121.1,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476974597732129996,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18028038338,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-04-08T13:52:08Z",
+    "start_date_local": "2026-04-08T06:52:08Z",
+    "distance": 729.1,
+    "start_index": 371,
+    "end_index": 454,
+    "device_watts": false,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502714930939250844,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18972878811,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-06-18T14:34:30Z",
+    "start_date_local": "2026-06-18T07:34:30Z",
+    "distance": 729.1,
+    "start_index": 419,
+    "end_index": 502,
+    "average_cadence": 63.5,
+    "device_watts": true,
+    "average_watts": 179.7,
+    "average_heartrate": 89.3,
+    "max_heartrate": 100.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476620162038916114,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18014415654,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2026-04-07T14:26:03Z",
+    "start_date_local": "2026-04-07T07:26:03Z",
+    "distance": 729.1,
+    "start_index": 365,
+    "end_index": 451,
+    "average_cadence": 62.1,
+    "device_watts": true,
+    "average_watts": 197.3,
+    "average_heartrate": 72.0,
+    "max_heartrate": 72.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769751650544480,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18386825119,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 87,
+    "start_date": "2026-05-05T14:29:16Z",
+    "start_date_local": "2026-05-05T07:29:16Z",
+    "distance": 729.1,
+    "start_index": 384,
+    "end_index": 471,
+    "device_watts": false,
+    "average_heartrate": 115.6,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500540468029063654,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18892073258,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 88,
+    "moving_time": 72,
+    "start_date": "2026-06-12T14:32:51Z",
+    "start_date_local": "2026-06-12T07:32:51Z",
+    "distance": 729.1,
+    "start_index": 348,
+    "end_index": 421,
+    "average_cadence": 63.8,
+    "device_watts": true,
+    "average_watts": 249.0,
+    "average_heartrate": 115.8,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474079913193581404,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 17926029115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 89,
+    "moving_time": 85,
+    "start_date": "2026-03-31T13:55:47Z",
+    "start_date_local": "2026-03-31T06:55:47Z",
+    "distance": 729.1,
+    "start_index": 335,
+    "end_index": 424,
+    "average_cadence": 51.4,
+    "device_watts": true,
+    "average_watts": 198.9,
+    "average_heartrate": 125.5,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499088005642520960,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18837934725,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 89,
+    "moving_time": 89,
+    "start_date": "2026-06-08T14:30:59Z",
+    "start_date_local": "2026-06-08T07:30:59Z",
+    "distance": 729.1,
+    "start_index": 408,
+    "end_index": 497,
+    "average_cadence": 66.8,
+    "device_watts": true,
+    "average_watts": 170.3,
+    "average_heartrate": 104.3,
+    "max_heartrate": 115.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482418679129625442,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18227023189,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 91,
+    "moving_time": 84,
+    "start_date": "2026-04-23T14:11:16Z",
+    "start_date_local": "2026-04-23T07:11:16Z",
+    "distance": 729.1,
+    "start_index": 387,
+    "end_index": 472,
+    "average_cadence": 58.0,
+    "device_watts": true,
+    "average_watts": 186.2,
+    "average_heartrate": 121.9,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482778953325888708,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18240132582,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 91,
+    "moving_time": 91,
+    "start_date": "2026-04-24T14:18:12Z",
+    "start_date_local": "2026-04-24T07:18:12Z",
+    "distance": 729.1,
+    "start_index": 367,
+    "end_index": 458,
+    "average_cadence": 57.6,
+    "device_watts": true,
+    "average_watts": 194.8,
+    "average_heartrate": 120.0,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490027183719621362,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18505534998,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 95,
+    "moving_time": 95,
+    "start_date": "2026-05-14T14:13:23Z",
+    "start_date_local": "2026-05-14T07:13:23Z",
+    "distance": 729.1,
+    "start_index": 423,
+    "end_index": 518,
+    "device_watts": false,
+    "average_heartrate": 115.6,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491476539242127598,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18555893716,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 96,
+    "moving_time": 81,
+    "start_date": "2026-05-18T14:23:37Z",
+    "start_date_local": "2026-05-18T07:23:37Z",
+    "distance": 729.1,
+    "start_index": 359,
+    "end_index": 441,
+    "average_cadence": 53.4,
+    "device_watts": true,
+    "average_watts": 184.5,
+    "average_heartrate": 126.9,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499819134922020362,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18866437059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 98,
+    "moving_time": 83,
+    "start_date": "2026-06-10T14:38:44Z",
+    "start_date_local": "2026-06-10T07:38:44Z",
+    "distance": 729.1,
+    "start_index": 360,
+    "end_index": 444,
+    "average_cadence": 59.1,
+    "device_watts": true,
+    "average_watts": 184.0,
+    "average_heartrate": 150.0,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3434594408583238158,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 16723191540,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 99,
+    "moving_time": 99,
+    "start_date": "2025-12-12T14:40:25Z",
+    "start_date_local": "2025-12-12T06:40:25Z",
+    "distance": 729.1,
+    "start_index": 399,
+    "end_index": 498,
+    "average_cadence": 63.1,
+    "device_watts": true,
+    "average_watts": 191.7,
+    "average_heartrate": 115.3,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472258010524551086,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 17865936615,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 102,
+    "moving_time": 91,
+    "start_date": "2026-03-26T13:32:57Z",
+    "start_date_local": "2026-03-26T06:32:57Z",
+    "distance": 729.1,
+    "start_index": 353,
+    "end_index": 446,
+    "average_cadence": 55.5,
+    "device_watts": true,
+    "average_watts": 213.5,
+    "average_heartrate": 123.7,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020008449430903464,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 8017333792,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 103,
+    "moving_time": 103,
+    "start_date": "2022-10-25T14:09:42Z",
+    "start_date_local": "2022-10-25T07:09:42Z",
+    "distance": 729.1,
+    "start_index": 457,
+    "end_index": 560,
+    "device_watts": false,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3341623892797209518,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 14035221050,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 103,
+    "moving_time": 103,
+    "start_date": "2025-03-30T21:07:42Z",
+    "start_date_local": "2025-03-30T14:07:42Z",
+    "distance": 729.1,
+    "start_index": 16274,
+    "end_index": 16377,
+    "average_cadence": 75.2,
+    "device_watts": true,
+    "average_watts": 236.3,
+    "average_heartrate": 138.5,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481691945179177450,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18198995851,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 104,
+    "moving_time": 79,
+    "start_date": "2026-04-21T14:24:23Z",
+    "start_date_local": "2026-04-21T07:24:23Z",
+    "distance": 729.1,
+    "start_index": 333,
+    "end_index": 415,
+    "average_cadence": 52.0,
+    "device_watts": true,
+    "average_watts": 179.8,
+    "average_heartrate": 124.9,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3496913677220573308,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 104,
+    "moving_time": 82,
+    "start_date": "2026-06-02T14:32:53Z",
+    "start_date_local": "2026-06-02T07:32:53Z",
+    "distance": 729.1,
+    "start_index": 324,
+    "end_index": 408,
+    "average_cadence": 51.5,
+    "device_watts": true,
+    "average_watts": 184.5,
+    "average_heartrate": 121.2,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477707428062182256,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18054908859,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 105,
+    "moving_time": 89,
+    "start_date": "2026-04-10T14:11:40Z",
+    "start_date_local": "2026-04-10T07:11:40Z",
+    "distance": 729.1,
+    "start_index": 360,
+    "end_index": 454,
+    "average_cadence": 50.4,
+    "device_watts": true,
+    "average_watts": 156.8,
+    "average_heartrate": 124.6,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489304542706151168,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18478432225,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 108,
+    "moving_time": 91,
+    "start_date": "2026-05-12T14:22:31Z",
+    "start_date_local": "2026-05-12T07:22:31Z",
+    "distance": 729.1,
+    "start_index": 416,
+    "end_index": 509,
+    "device_watts": false,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3479877879680428064,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18133000629,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 113,
+    "moving_time": 93,
+    "start_date": "2026-04-16T14:10:30Z",
+    "start_date_local": "2026-04-16T07:10:30Z",
+    "distance": 729.1,
+    "start_index": 379,
+    "end_index": 474,
+    "average_cadence": 51.9,
+    "device_watts": true,
+    "average_watts": 163.4,
+    "average_heartrate": 109.9,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486401448933118232,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18373080739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 114,
+    "moving_time": 92,
+    "start_date": "2026-05-04T14:12:21Z",
+    "start_date_local": "2026-05-04T07:12:21Z",
+    "distance": 729.1,
+    "start_index": 384,
+    "end_index": 479,
+    "average_cadence": 47.9,
+    "device_watts": true,
+    "average_watts": 158.0,
+    "average_heartrate": 106.6,
+    "max_heartrate": 123.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502351043469030956,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18959278443,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 115,
+    "moving_time": 87,
+    "start_date": "2026-06-17T14:27:00Z",
+    "start_date_local": "2026-06-17T07:27:00Z",
+    "distance": 729.1,
+    "start_index": 392,
+    "end_index": 482,
+    "average_cadence": 46.1,
+    "device_watts": true,
+    "average_watts": 137.1,
+    "average_heartrate": 108.1,
+    "max_heartrate": 196.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474805379875973144,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 17951108555,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 119,
+    "moving_time": 86,
+    "start_date": "2026-04-02T14:12:27Z",
+    "start_date_local": "2026-04-02T07:12:27Z",
+    "distance": 729.1,
+    "start_index": 384,
+    "end_index": 473,
+    "average_cadence": 46.6,
+    "device_watts": true,
+    "average_watts": 158.8,
+    "average_heartrate": 118.0,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498000775847435472,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18798146628,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 121,
+    "moving_time": 89,
+    "start_date": "2026-06-05T14:30:01Z",
+    "start_date_local": "2026-06-05T07:30:01Z",
+    "distance": 729.1,
+    "start_index": 342,
+    "end_index": 433,
+    "average_cadence": 40.3,
+    "device_watts": true,
+    "average_watts": 155.7,
+    "average_heartrate": 116.9,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477343057733273786,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18042080515,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 128,
+    "moving_time": 86,
+    "start_date": "2026-04-09T14:15:49Z",
+    "start_date_local": "2026-04-09T07:15:49Z",
+    "distance": 729.1,
+    "start_index": 377,
+    "end_index": 464,
+    "average_cadence": 37.6,
+    "device_watts": true,
+    "average_watts": 147.5,
+    "average_heartrate": 151.1,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481328901821172530,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 18185180204,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 129,
+    "moving_time": 83,
+    "start_date": "2026-04-20T14:20:42Z",
+    "start_date_local": "2026-04-20T07:20:42Z",
+    "distance": 729.1,
+    "start_index": 356,
+    "end_index": 441,
+    "average_cadence": 43.5,
+    "device_watts": true,
+    "average_watts": 143.8,
+    "average_heartrate": 119.1,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3306204687262917794,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity": {
+      "id": 13172824031,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 147,
+    "moving_time": 112,
+    "start_date": "2024-12-23T03:34:14Z",
+    "start_date_local": "2024-12-22T19:34:14Z",
+    "distance": 729.1,
+    "start_index": 454,
+    "end_index": 569,
+    "average_cadence": 36.5,
+    "device_watts": true,
+    "average_watts": 111.2,
+    "average_heartrate": 122.8,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 11841727,
+      "resource_state": 2,
+      "name": "Potato Skin Descent",
+      "activity_type": "Ride",
+      "distance": 729.1,
+      "average_grade": 0.0,
+      "maximum_grade": 2.7,
+      "elevation_high": 5.6,
+      "elevation_low": 1.6,
+      "start_latlng": [
+        47.570215,
+        -122.064852
+      ],
+      "end_latlng": [
+        47.56806,
+        -122.055746
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

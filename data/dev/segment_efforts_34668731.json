@@ -1,78 +1,8 @@
 [
   {
-    "id": 3496913677220033660,
+    "id": 3500170690744355842,
     "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18757096682,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 74,
-    "moving_time": 74,
-    "start_date": "2026-06-02T14:31:36Z",
-    "start_date_local": "2026-06-02T07:31:36Z",
-    "distance": 1198.8,
-    "start_index": 247,
-    "end_index": 321,
-    "average_cadence": 20.8,
-    "device_watts": true,
-    "average_watts": 33.6,
-    "average_heartrate": 123.1,
-    "max_heartrate": 128.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 1,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 1
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3500170690746986498,
-    "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 18879141341,
       "visibility": "everyone",
@@ -82,112 +12,42 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 74,
-    "moving_time": 74,
-    "start_date": "2026-06-11T14:15:13Z",
-    "start_date_local": "2026-06-11T07:15:13Z",
-    "distance": 1198.8,
-    "start_index": 249,
-    "end_index": 323,
-    "average_cadence": 20.1,
+    "elapsed_time": 82,
+    "moving_time": 82,
+    "start_date": "2026-06-11T14:15:06Z",
+    "start_date_local": "2026-06-11T07:15:06Z",
+    "distance": 1289.6,
+    "start_index": 242,
+    "end_index": 324,
+    "average_cadence": 23.5,
     "device_watts": true,
-    "average_watts": 33.0,
-    "average_heartrate": 130.5,
-    "max_heartrate": 144.0,
+    "average_watts": 43.1,
+    "average_heartrate": 131.7,
+    "max_heartrate": 145.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 2,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 2
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3491476539241527534,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18555893716,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 76,
-    "moving_time": 76,
-    "start_date": "2026-05-18T14:22:14Z",
-    "start_date_local": "2026-05-18T07:22:14Z",
-    "distance": 1198.8,
-    "start_index": 276,
-    "end_index": 352,
-    "average_cadence": 21.5,
-    "device_watts": true,
-    "average_watts": 30.2,
-    "average_heartrate": 138.3,
-    "max_heartrate": 150.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -210,11 +70,11 @@
     "kom_rank": null
   },
   {
-    "id": 3492201193560293260,
+    "id": 3496913677220719740,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
-      "id": 18582983778,
+      "id": 18757096682,
       "visibility": "everyone",
       "resource_state": 1
     },
@@ -222,52 +82,52 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 76,
-    "moving_time": 76,
-    "start_date": "2026-05-20T14:22:18Z",
-    "start_date_local": "2026-05-20T07:22:18Z",
-    "distance": 1198.8,
-    "start_index": 277,
-    "end_index": 353,
-    "average_cadence": 21.5,
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-06-02T14:31:29Z",
+    "start_date_local": "2026-06-02T07:31:29Z",
+    "distance": 1289.6,
+    "start_index": 240,
+    "end_index": 323,
+    "average_cadence": 23.3,
     "device_watts": true,
-    "average_watts": 33.6,
-    "average_heartrate": 115.1,
-    "max_heartrate": 125.0,
+    "average_watts": 37.0,
+    "average_heartrate": 123.7,
+    "max_heartrate": 134.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
     },
-    "pr_rank": 2,
+    "pr_rank": 1,
     "achievements": [
       {
         "type_id": 3,
         "type": "pr",
-        "rank": 2
+        "rank": 1
       },
       {
         "type_id": 7,
@@ -280,9 +140,9 @@
     "kom_rank": null
   },
   {
-    "id": 3492564490290959686,
+    "id": 3492564490290217286,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 18596486933,
       "visibility": "everyone",
@@ -292,52 +152,52 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 76,
-    "moving_time": 76,
-    "start_date": "2026-05-21T14:23:02Z",
-    "start_date_local": "2026-05-21T07:23:02Z",
-    "distance": 1198.8,
-    "start_index": 292,
-    "end_index": 368,
-    "average_cadence": 10.8,
+    "elapsed_time": 84,
+    "moving_time": 84,
+    "start_date": "2026-05-21T14:22:55Z",
+    "start_date_local": "2026-05-21T07:22:55Z",
+    "distance": 1289.6,
+    "start_index": 285,
+    "end_index": 369,
+    "average_cadence": 15.6,
     "device_watts": true,
-    "average_watts": 11.1,
-    "average_heartrate": 118.3,
-    "max_heartrate": 127.0,
+    "average_watts": 22.4,
+    "average_heartrate": 119.0,
+    "max_heartrate": 128.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
     },
-    "pr_rank": 3,
+    "pr_rank": 1,
     "achievements": [
       {
         "type_id": 3,
         "type": "pr",
-        "rank": 3
+        "rank": 1
       },
       {
         "type_id": 7,
@@ -350,9 +210,149 @@
     "kom_rank": null
   },
   {
-    "id": 3498000775848636624,
+    "id": 3491476539240069358,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18555893716,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2026-05-18T14:22:08Z",
+    "start_date_local": "2026-05-18T07:22:08Z",
+    "distance": 1289.6,
+    "start_index": 270,
+    "end_index": 355,
+    "average_cadence": 23.4,
+    "device_watts": true,
+    "average_watts": 30.7,
+    "average_heartrate": 138.9,
+    "max_heartrate": 153.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492201193561331596,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18582983778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2026-05-20T14:22:11Z",
+    "start_date_local": "2026-05-20T07:22:11Z",
+    "distance": 1289.6,
+    "start_index": 270,
+    "end_index": 355,
+    "average_cadence": 23.9,
+    "device_watts": true,
+    "average_watts": 36.6,
+    "average_heartrate": 115.9,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498000775846247632,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 18798146628,
       "visibility": "everyone",
@@ -362,42 +362,42 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 76,
-    "moving_time": 76,
-    "start_date": "2026-06-05T14:28:43Z",
-    "start_date_local": "2026-06-05T07:28:43Z",
-    "distance": 1198.8,
-    "start_index": 264,
-    "end_index": 340,
-    "average_cadence": 24.3,
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2026-06-05T14:28:35Z",
+    "start_date_local": "2026-06-05T07:28:35Z",
+    "distance": 1289.6,
+    "start_index": 256,
+    "end_index": 341,
+    "average_cadence": 27.5,
     "device_watts": true,
-    "average_watts": 51.8,
-    "average_heartrate": 131.0,
+    "average_watts": 58.2,
+    "average_heartrate": 131.9,
     "max_heartrate": 142.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -415,279 +415,9 @@
     "kom_rank": null
   },
   {
-    "id": 3500540468029882854,
+    "id": 3492929978678236988,
     "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18892073258,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 77,
-    "moving_time": 77,
-    "start_date": "2026-06-12T14:31:28Z",
-    "start_date_local": "2026-06-12T07:31:28Z",
-    "distance": 1198.8,
-    "start_index": 265,
-    "end_index": 342,
-    "average_cadence": 29.2,
-    "device_watts": true,
-    "average_watts": 40.2,
-    "average_heartrate": 126.3,
-    "max_heartrate": 128.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3502351043469264428,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18959278443,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 77,
-    "moving_time": 77,
-    "start_date": "2026-06-17T14:25:41Z",
-    "start_date_local": "2026-06-17T07:25:41Z",
-    "distance": 1198.8,
-    "start_index": 313,
-    "end_index": 390,
-    "average_cadence": 17.9,
-    "device_watts": true,
-    "average_watts": 30.5,
-    "average_heartrate": 162.4,
-    "max_heartrate": 198.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3481691945178363370,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18198995851,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 78,
-    "moving_time": 78,
-    "start_date": "2026-04-21T14:23:02Z",
-    "start_date_local": "2026-04-21T07:23:02Z",
-    "distance": 1198.8,
-    "start_index": 252,
-    "end_index": 330,
-    "average_cadence": 8.1,
-    "device_watts": true,
-    "average_watts": 14.0,
-    "average_heartrate": 152.2,
-    "max_heartrate": 160.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 1,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 1
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3491841620560300338,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18569402318,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 78,
-    "moving_time": 78,
-    "start_date": "2026-05-19T14:30:36Z",
-    "start_date_local": "2026-05-19T07:30:36Z",
-    "distance": 1198.8,
-    "start_index": 294,
-    "end_index": 372,
-    "average_cadence": 15.6,
-    "device_watts": true,
-    "average_watts": 18.4,
-    "average_heartrate": 125.9,
-    "max_heartrate": 136.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 3,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 3
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3492929978678175548,
-    "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 18609778639,
       "visibility": "everyone",
@@ -697,42 +427,42 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 78,
-    "moving_time": 78,
-    "start_date": "2026-05-22T14:36:44Z",
-    "start_date_local": "2026-05-22T07:36:44Z",
-    "distance": 1198.8,
-    "start_index": 280,
-    "end_index": 358,
-    "average_cadence": 5.8,
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2026-05-22T14:36:37Z",
+    "start_date_local": "2026-05-22T07:36:37Z",
+    "distance": 1289.6,
+    "start_index": 273,
+    "end_index": 359,
+    "average_cadence": 8.3,
     "device_watts": true,
-    "average_watts": 3.7,
-    "average_heartrate": 100.7,
-    "max_heartrate": 115.0,
+    "average_watts": 5.1,
+    "average_heartrate": 102.1,
+    "max_heartrate": 121.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -750,11 +480,11 @@
     "kom_rank": null
   },
   {
-    "id": 3477707428063362928,
+    "id": 3500540468029817318,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
-      "id": 18054908859,
+      "id": 18892073258,
       "visibility": "everyone",
       "resource_state": 1
     },
@@ -762,42 +492,172 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 80,
-    "moving_time": 80,
-    "start_date": "2026-04-10T14:10:17Z",
-    "start_date_local": "2026-04-10T07:10:17Z",
-    "distance": 1198.8,
-    "start_index": 277,
-    "end_index": 357,
-    "average_cadence": 0.0,
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2026-06-12T14:31:21Z",
+    "start_date_local": "2026-06-12T07:31:21Z",
+    "distance": 1289.6,
+    "start_index": 258,
+    "end_index": 344,
+    "average_cadence": 30.8,
     "device_watts": true,
-    "average_watts": 0.0,
-    "average_heartrate": 113.0,
-    "max_heartrate": 116.0,
+    "average_watts": 46.0,
+    "average_heartrate": 126.5,
+    "max_heartrate": 131.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502351043468186156,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18959278443,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2026-06-17T14:25:33Z",
+    "start_date_local": "2026-06-17T07:25:33Z",
+    "distance": 1289.6,
+    "start_index": 305,
+    "end_index": 391,
+    "average_cadence": 20.3,
+    "device_watts": true,
+    "average_watts": 30.5,
+    "average_heartrate": 157.3,
+    "max_heartrate": 198.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481691945176134122,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18198995851,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 87,
+    "start_date": "2026-04-21T14:22:55Z",
+    "start_date_local": "2026-04-21T07:22:55Z",
+    "distance": 1289.6,
+    "start_index": 245,
+    "end_index": 332,
+    "average_cadence": 8.3,
+    "device_watts": true,
+    "average_watts": 12.6,
+    "average_heartrate": 152.6,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -820,9 +680,79 @@
     "kom_rank": null
   },
   {
-    "id": 3480242032471571910,
+    "id": 3491841620557464882,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18569402318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 87,
+    "moving_time": 87,
+    "start_date": "2026-05-19T14:30:28Z",
+    "start_date_local": "2026-05-19T07:30:28Z",
+    "distance": 1289.6,
+    "start_index": 286,
+    "end_index": 373,
+    "average_cadence": 19.5,
+    "device_watts": true,
+    "average_watts": 25.0,
+    "average_heartrate": 127.0,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480242032471479750,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 18146236077,
       "visibility": "everyone",
@@ -832,52 +762,52 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 80,
-    "moving_time": 80,
-    "start_date": "2026-04-17T14:18:14Z",
-    "start_date_local": "2026-04-17T07:18:14Z",
-    "distance": 1198.8,
-    "start_index": 283,
-    "end_index": 363,
-    "average_cadence": 3.1,
+    "elapsed_time": 88,
+    "moving_time": 88,
+    "start_date": "2026-04-17T14:18:07Z",
+    "start_date_local": "2026-04-17T07:18:07Z",
+    "distance": 1289.6,
+    "start_index": 276,
+    "end_index": 364,
+    "average_cadence": 5.5,
     "device_watts": true,
-    "average_watts": 2.2,
-    "average_heartrate": 128.6,
+    "average_watts": 3.0,
+    "average_heartrate": 128.7,
     "max_heartrate": 143.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
     },
-    "pr_rank": 2,
+    "pr_rank": 1,
     "achievements": [
       {
         "type_id": 3,
         "type": "pr",
-        "rank": 2
+        "rank": 1
       },
       {
         "type_id": 7,
@@ -890,9 +820,9 @@
     "kom_rank": null
   },
   {
-    "id": 3481328901819763506,
+    "id": 3481328901819988786,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 18185180204,
       "visibility": "everyone",
@@ -902,52 +832,52 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 80,
-    "moving_time": 80,
-    "start_date": "2026-04-20T14:19:20Z",
-    "start_date_local": "2026-04-20T07:19:20Z",
-    "distance": 1198.8,
-    "start_index": 274,
-    "end_index": 354,
-    "average_cadence": 8.9,
+    "elapsed_time": 88,
+    "moving_time": 88,
+    "start_date": "2026-04-20T14:19:13Z",
+    "start_date_local": "2026-04-20T07:19:13Z",
+    "distance": 1289.6,
+    "start_index": 267,
+    "end_index": 355,
+    "average_cadence": 8.1,
     "device_watts": true,
-    "average_watts": 13.5,
-    "average_heartrate": 118.5,
-    "max_heartrate": 124.0,
+    "average_watts": 12.3,
+    "average_heartrate": 119.1,
+    "max_heartrate": 132.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
     },
-    "pr_rank": 3,
+    "pr_rank": 2,
     "achievements": [
       {
         "type_id": 3,
         "type": "pr",
-        "rank": 3
+        "rank": 2
       },
       {
         "type_id": 7,
@@ -960,9 +890,9 @@
     "kom_rank": null
   },
   {
-    "id": 3482778953325409476,
+    "id": 3482778953325751492,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 18240132582,
       "visibility": "everyone",
@@ -972,42 +902,42 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 81,
-    "moving_time": 81,
-    "start_date": "2026-04-24T14:16:49Z",
-    "start_date_local": "2026-04-24T07:16:49Z",
-    "distance": 1198.8,
-    "start_index": 284,
-    "end_index": 365,
-    "average_cadence": 4.4,
+    "elapsed_time": 89,
+    "moving_time": 89,
+    "start_date": "2026-04-24T14:16:42Z",
+    "start_date_local": "2026-04-24T07:16:42Z",
+    "distance": 1289.6,
+    "start_index": 277,
+    "end_index": 366,
+    "average_cadence": 6.7,
     "device_watts": true,
-    "average_watts": 7.0,
-    "average_heartrate": 101.3,
-    "max_heartrate": 113.0,
+    "average_watts": 8.3,
+    "average_heartrate": 102.3,
+    "max_heartrate": 117.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -1025,9 +955,9 @@
     "kom_rank": null
   },
   {
-    "id": 3501990990445141174,
+    "id": 3501990990446367926,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 18944935604,
       "visibility": "everyone",
@@ -1037,1158 +967,42 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 81,
-    "moving_time": 81,
-    "start_date": "2026-06-16T14:32:13Z",
-    "start_date_local": "2026-06-16T07:32:13Z",
-    "distance": 1198.8,
-    "start_index": 270,
-    "end_index": 351,
-    "average_cadence": 21.5,
-    "device_watts": true,
-    "average_watts": 25.4,
-    "average_heartrate": 97.3,
-    "max_heartrate": 103.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3476620162038630418,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18014415654,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 82,
-    "moving_time": 82,
-    "start_date": "2026-04-07T14:24:37Z",
-    "start_date_local": "2026-04-07T07:24:37Z",
-    "distance": 1198.8,
-    "start_index": 279,
-    "end_index": 361,
-    "average_cadence": 6.1,
-    "device_watts": true,
-    "average_watts": 2.1,
-    "average_heartrate": 72.0,
-    "max_heartrate": 72.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 1,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 1
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3502714930938953884,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18972878811,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 82,
-    "moving_time": 82,
-    "start_date": "2026-06-18T14:32:42Z",
-    "start_date_local": "2026-06-18T07:32:42Z",
-    "distance": 1198.8,
-    "start_index": 329,
-    "end_index": 411,
-    "average_cadence": 0.0,
-    "device_watts": true,
-    "average_watts": 0.0,
-    "average_heartrate": 92.1,
-    "max_heartrate": 107.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3486401448935085336,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18373080739,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 83,
-    "moving_time": 83,
-    "start_date": "2026-05-04T14:10:54Z",
-    "start_date_local": "2026-05-04T07:10:54Z",
-    "distance": 1198.8,
-    "start_index": 297,
-    "end_index": 380,
-    "average_cadence": 0.0,
-    "device_watts": true,
-    "average_watts": 0.0,
-    "average_heartrate": 98.1,
-    "max_heartrate": 110.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3489304542705016576,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18478432225,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 83,
-    "moving_time": 83,
-    "start_date": "2026-05-12T14:21:04Z",
-    "start_date_local": "2026-05-12T07:21:04Z",
-    "distance": 1198.8,
-    "start_index": 329,
-    "end_index": 412,
-    "device_watts": false,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3497278658248040832,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18771384330,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 83,
-    "moving_time": 83,
-    "start_date": "2026-06-03T14:37:50Z",
-    "start_date_local": "2026-06-03T07:37:50Z",
-    "distance": 1198.8,
-    "start_index": 260,
-    "end_index": 343,
-    "average_cadence": 13.2,
-    "device_watts": true,
-    "average_watts": 16.6,
-    "average_heartrate": 105.2,
-    "max_heartrate": 126.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3499819134920752650,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18866437059,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 83,
-    "moving_time": 83,
-    "start_date": "2026-06-10T14:37:14Z",
-    "start_date_local": "2026-06-10T07:37:14Z",
-    "distance": 1198.8,
-    "start_index": 270,
-    "end_index": 353,
-    "average_cadence": 3.9,
-    "device_watts": true,
-    "average_watts": 3.5,
-    "average_heartrate": 122.5,
-    "max_heartrate": 154.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3486769751647748960,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18386825119,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 84,
-    "moving_time": 84,
-    "start_date": "2026-05-05T14:27:47Z",
-    "start_date_local": "2026-05-05T07:27:47Z",
-    "distance": 1198.8,
-    "start_index": 295,
-    "end_index": 379,
-    "device_watts": false,
-    "average_heartrate": 102.4,
-    "max_heartrate": 113.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3474079913192902492,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 17926029115,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 85,
-    "moving_time": 85,
-    "start_date": "2026-03-31T13:54:19Z",
-    "start_date_local": "2026-03-31T06:54:19Z",
-    "distance": 1198.8,
-    "start_index": 247,
-    "end_index": 332,
-    "average_cadence": 3.0,
-    "device_watts": true,
-    "average_watts": 1.2,
-    "average_heartrate": 114.5,
-    "max_heartrate": 124.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 1,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 1
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3477343057733450938,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18042080515,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 85,
-    "moving_time": 85,
-    "start_date": "2026-04-09T14:14:16Z",
-    "start_date_local": "2026-04-09T07:14:16Z",
-    "distance": 1198.8,
-    "start_index": 284,
-    "end_index": 369,
-    "average_cadence": 0.0,
-    "device_watts": true,
-    "average_watts": 0.0,
-    "average_heartrate": 124.2,
-    "max_heartrate": 155.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 3,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 3
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3482418679126611810,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18227023189,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 85,
-    "moving_time": 85,
-    "start_date": "2026-04-23T14:09:45Z",
-    "start_date_local": "2026-04-23T07:09:45Z",
-    "distance": 1198.8,
-    "start_index": 296,
-    "end_index": 381,
-    "average_cadence": 8.6,
-    "device_watts": true,
-    "average_watts": 8.8,
-    "average_heartrate": 139.5,
-    "max_heartrate": 143.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3476974597733471436,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18028038338,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 86,
-    "moving_time": 86,
-    "start_date": "2026-04-08T13:50:31Z",
-    "start_date_local": "2026-04-08T06:50:31Z",
-    "distance": 1198.8,
-    "start_index": 278,
-    "end_index": 364,
-    "device_watts": false,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 3,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 3
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3490027183722673906,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18505534998,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 86,
-    "moving_time": 86,
-    "start_date": "2026-05-14T14:11:54Z",
-    "start_date_local": "2026-05-14T07:11:54Z",
-    "distance": 1198.8,
-    "start_index": 334,
-    "end_index": 420,
-    "device_watts": false,
-    "average_heartrate": 110.5,
-    "max_heartrate": 114.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3504163656044366644,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 19023440714,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 86,
-    "moving_time": 86,
-    "start_date": "2026-06-22T14:35:42Z",
-    "start_date_local": "2026-06-22T07:35:42Z",
-    "distance": 1198.8,
-    "start_index": 300,
-    "end_index": 386,
-    "average_cadence": 5.5,
-    "device_watts": true,
-    "average_watts": 10.3,
-    "average_heartrate": 71.8,
-    "max_heartrate": 72.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3487129644535267300,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18400369545,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 87,
-    "moving_time": 87,
-    "start_date": "2026-05-06T14:18:17Z",
-    "start_date_local": "2026-05-06T07:18:17Z",
-    "distance": 1198.8,
-    "start_index": 316,
-    "end_index": 403,
-    "device_watts": false,
-    "average_heartrate": 86.7,
-    "max_heartrate": 100.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3499088005643383168,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18837934725,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 87,
-    "moving_time": 87,
-    "start_date": "2026-06-08T14:29:25Z",
-    "start_date_local": "2026-06-08T07:29:25Z",
-    "distance": 1198.8,
-    "start_index": 314,
-    "end_index": 401,
-    "average_cadence": 0.0,
-    "device_watts": true,
-    "average_watts": 0.0,
-    "average_heartrate": 86.6,
-    "max_heartrate": 103.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3476257563191775440,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18001520259,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 88,
-    "moving_time": 88,
-    "start_date": "2026-04-06T14:24:46Z",
-    "start_date_local": "2026-04-06T07:24:46Z",
-    "distance": 1198.8,
-    "start_index": 275,
-    "end_index": 363,
-    "average_cadence": 2.8,
-    "device_watts": true,
-    "average_watts": 0.6,
-    "average_heartrate": 110.0,
-    "max_heartrate": 117.0,
-    "segment": {
-      "id": 29523175,
-      "resource_state": 2,
-      "name": "Snake",
-      "activity_type": "Ride",
-      "distance": 1198.8,
-      "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
-      "start_latlng": [
-        47.577062,
-        -122.057112
-      ],
-      "end_latlng": [
-        47.570491,
-        -122.064488
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Sammamish",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 2,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 2
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3479877879682170912,
-    "resource_state": 2,
-    "name": "Snake",
-    "activity": {
-      "id": 18133000629,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
     "elapsed_time": 89,
     "moving_time": 89,
-    "start_date": "2026-04-16T14:08:57Z",
-    "start_date_local": "2026-04-16T07:08:57Z",
-    "distance": 1198.8,
-    "start_index": 286,
-    "end_index": 375,
-    "average_cadence": 0.0,
+    "start_date": "2026-06-16T14:32:06Z",
+    "start_date_local": "2026-06-16T07:32:06Z",
+    "distance": 1289.6,
+    "start_index": 263,
+    "end_index": 352,
+    "average_cadence": 22.9,
     "device_watts": true,
-    "average_watts": 0.0,
-    "average_heartrate": 98.4,
-    "max_heartrate": 113.0,
+    "average_watts": 25.4,
+    "average_heartrate": 97.9,
+    "max_heartrate": 105.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -2206,11 +1020,11 @@
     "kom_rank": null
   },
   {
-    "id": 3474805379875975192,
+    "id": 3477707428060224368,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
-      "id": 17951108555,
+      "id": 18054908859,
       "visibility": "everyone",
       "resource_state": 1
     },
@@ -2220,40 +1034,1151 @@
     },
     "elapsed_time": 90,
     "moving_time": 90,
-    "start_date": "2026-04-02T14:10:49Z",
-    "start_date_local": "2026-04-02T07:10:49Z",
-    "distance": 1198.8,
-    "start_index": 286,
-    "end_index": 376,
-    "average_cadence": 0.0,
+    "start_date": "2026-04-10T14:10:09Z",
+    "start_date_local": "2026-04-10T07:10:09Z",
+    "distance": 1289.6,
+    "start_index": 269,
+    "end_index": 359,
+    "average_cadence": 2.8,
     "device_watts": true,
-    "average_watts": 0.0,
-    "average_heartrate": 105.8,
-    "max_heartrate": 113.0,
+    "average_watts": 2.2,
+    "average_heartrate": 113.6,
+    "max_heartrate": 122.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497278658246094208,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18771384330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2026-06-03T14:37:44Z",
+    "start_date_local": "2026-06-03T07:37:44Z",
+    "distance": 1289.6,
+    "start_index": 254,
+    "end_index": 344,
+    "average_cadence": 17.2,
+    "device_watts": true,
+    "average_watts": 21.3,
+    "average_heartrate": 106.6,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502714930941503644,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18972878811,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2026-06-18T14:32:35Z",
+    "start_date_local": "2026-06-18T07:32:35Z",
+    "distance": 1289.6,
+    "start_index": 322,
+    "end_index": 412,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 90.4,
+    "max_heartrate": 107.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476620162039447570,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18014415654,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 91,
+    "moving_time": 91,
+    "start_date": "2026-04-07T14:24:30Z",
+    "start_date_local": "2026-04-07T07:24:30Z",
+    "distance": 1289.6,
+    "start_index": 272,
+    "end_index": 363,
+    "average_cadence": 5.5,
+    "device_watts": true,
+    "average_watts": 1.9,
+    "average_heartrate": 72.0,
+    "max_heartrate": 72.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499819134923549194,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18866437059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 92,
+    "moving_time": 92,
+    "start_date": "2026-06-10T14:37:07Z",
+    "start_date_local": "2026-06-10T07:37:07Z",
+    "distance": 1289.6,
+    "start_index": 263,
+    "end_index": 355,
+    "average_cadence": 6.2,
+    "device_watts": true,
+    "average_watts": 6.0,
+    "average_heartrate": 120.3,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486401448936196376,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18373080739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 93,
+    "moving_time": 93,
+    "start_date": "2026-05-04T14:10:46Z",
+    "start_date_local": "2026-05-04T07:10:46Z",
+    "distance": 1289.6,
+    "start_index": 289,
+    "end_index": 382,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 99.3,
+    "max_heartrate": 115.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769751647450976,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18386825119,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 93,
+    "moving_time": 93,
+    "start_date": "2026-05-05T14:27:39Z",
+    "start_date_local": "2026-05-05T07:27:39Z",
+    "distance": 1289.6,
+    "start_index": 287,
+    "end_index": 380,
+    "device_watts": false,
+    "average_heartrate": 103.7,
+    "max_heartrate": 123.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474079913192166236,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 17926029115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 94,
+    "moving_time": 94,
+    "start_date": "2026-03-31T13:54:12Z",
+    "start_date_local": "2026-03-31T06:54:12Z",
+    "distance": 1289.6,
+    "start_index": 240,
+    "end_index": 334,
+    "average_cadence": 2.7,
+    "device_watts": true,
+    "average_watts": 1.1,
+    "average_heartrate": 115.3,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489304542704270080,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18478432225,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 94,
+    "moving_time": 94,
+    "start_date": "2026-05-12T14:20:55Z",
+    "start_date_local": "2026-05-12T07:20:55Z",
+    "distance": 1289.6,
+    "start_index": 320,
+    "end_index": 414,
+    "device_watts": false,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3504163656043558708,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 19023440714,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 95,
+    "moving_time": 95,
+    "start_date": "2026-06-22T14:35:35Z",
+    "start_date_local": "2026-06-22T07:35:35Z",
+    "distance": 1289.6,
+    "start_index": 293,
+    "end_index": 388,
+    "average_cadence": 9.3,
+    "device_watts": true,
+    "average_watts": 18.5,
+    "average_heartrate": 71.8,
+    "max_heartrate": 72.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476974597732543692,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18028038338,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 96,
+    "moving_time": 96,
+    "start_date": "2026-04-08T13:50:24Z",
+    "start_date_local": "2026-04-08T06:50:24Z",
+    "distance": 1289.6,
+    "start_index": 271,
+    "end_index": 367,
+    "device_watts": false,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477343057732972730,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18042080515,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 96,
+    "moving_time": 96,
+    "start_date": "2026-04-09T14:14:08Z",
+    "start_date_local": "2026-04-09T07:14:08Z",
+    "distance": 1289.6,
+    "start_index": 276,
+    "end_index": 372,
+    "average_cadence": 2.9,
+    "device_watts": true,
+    "average_watts": 2.3,
+    "average_heartrate": 120.4,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490027183722027762,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18505534998,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 96,
+    "moving_time": 96,
+    "start_date": "2026-05-14T14:11:45Z",
+    "start_date_local": "2026-05-14T07:11:45Z",
+    "distance": 1289.6,
+    "start_index": 325,
+    "end_index": 421,
+    "device_watts": false,
+    "average_heartrate": 110.3,
+    "max_heartrate": 114.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482418679128874850,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18227023189,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 97,
+    "moving_time": 97,
+    "start_date": "2026-04-23T14:09:38Z",
+    "start_date_local": "2026-04-23T07:09:38Z",
+    "distance": 1289.6,
+    "start_index": 289,
+    "end_index": 386,
+    "average_cadence": 9.1,
+    "device_watts": true,
+    "average_watts": 7.7,
+    "average_heartrate": 139.5,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499088005642764672,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18837934725,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 98,
+    "moving_time": 98,
+    "start_date": "2026-06-08T14:29:18Z",
+    "start_date_local": "2026-06-08T07:29:18Z",
+    "distance": 1289.6,
+    "start_index": 307,
+    "end_index": 405,
+    "average_cadence": 2.5,
+    "device_watts": true,
+    "average_watts": 1.5,
+    "average_heartrate": 87.7,
+    "max_heartrate": 108.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3479877879680651296,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18133000629,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 99,
+    "moving_time": 99,
+    "start_date": "2026-04-16T14:08:49Z",
+    "start_date_local": "2026-04-16T07:08:49Z",
+    "distance": 1289.6,
+    "start_index": 278,
+    "end_index": 377,
+    "average_cadence": 2.0,
+    "device_watts": true,
+    "average_watts": 0.6,
+    "average_heartrate": 99.6,
+    "max_heartrate": 117.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487129644537294820,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18400369545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 99,
+    "moving_time": 99,
+    "start_date": "2026-05-06T14:18:08Z",
+    "start_date_local": "2026-05-06T07:18:08Z",
+    "distance": 1289.6,
+    "start_index": 307,
+    "end_index": 406,
+    "device_watts": false,
+    "average_heartrate": 88.2,
+    "max_heartrate": 110.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474805379876183064,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 17951108555,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 100,
+    "moving_time": 100,
+    "start_date": "2026-04-02T14:10:40Z",
+    "start_date_local": "2026-04-02T07:10:40Z",
+    "distance": 1289.6,
+    "start_index": 277,
+    "end_index": 377,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 106.5,
+    "max_heartrate": 120.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -2276,9 +2201,79 @@
     "kom_rank": null
   },
   {
-    "id": 3472258010523590574,
+    "id": 3476257563193133264,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
+    "activity": {
+      "id": 18001520259,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 100,
+    "moving_time": 100,
+    "start_date": "2026-04-06T14:24:38Z",
+    "start_date_local": "2026-04-06T07:24:38Z",
+    "distance": 1289.6,
+    "start_index": 267,
+    "end_index": 367,
+    "average_cadence": 2.4,
+    "device_watts": true,
+    "average_watts": 0.5,
+    "average_heartrate": 110.2,
+    "max_heartrate": 117.0,
+    "segment": {
+      "id": 34668731,
+      "resource_state": 2,
+      "name": "THE DESCENT of 212",
+      "activity_type": "Ride",
+      "distance": 1289.6,
+      "average_grade": -8.3,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
+      "start_latlng": [
+        47.577774,
+        -122.056989
+      ],
+      "end_latlng": [
+        47.570391,
+        -122.064232
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Sammamish",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472258010523723694,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 17865936615,
       "visibility": "everyone",
@@ -2288,42 +2283,42 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 96,
-    "moving_time": 96,
-    "start_date": "2026-03-26T13:31:18Z",
-    "start_date_local": "2026-03-26T06:31:18Z",
-    "distance": 1198.8,
-    "start_index": 254,
-    "end_index": 350,
-    "average_cadence": 0.0,
+    "elapsed_time": 105,
+    "moving_time": 105,
+    "start_date": "2026-03-26T13:31:10Z",
+    "start_date_local": "2026-03-26T06:31:10Z",
+    "distance": 1289.6,
+    "start_index": 246,
+    "end_index": 351,
+    "average_cadence": 2.6,
     "device_watts": true,
-    "average_watts": 0.0,
-    "average_heartrate": 122.1,
-    "max_heartrate": 125.0,
+    "average_watts": 1.4,
+    "average_heartrate": 122.3,
+    "max_heartrate": 127.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -2346,9 +2341,9 @@
     "kom_rank": null
   },
   {
-    "id": 3434594408581886478,
+    "id": 3434594408584956430,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 16723191540,
       "visibility": "everyone",
@@ -2358,42 +2353,42 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 114,
-    "moving_time": 114,
-    "start_date": "2025-12-12T14:38:27Z",
-    "start_date_local": "2025-12-12T06:38:27Z",
-    "distance": 1198.8,
-    "start_index": 281,
-    "end_index": 395,
+    "elapsed_time": 124,
+    "moving_time": 124,
+    "start_date": "2025-12-12T14:38:18Z",
+    "start_date_local": "2025-12-12T06:38:18Z",
+    "distance": 1289.6,
+    "start_index": 272,
+    "end_index": 396,
     "average_cadence": 0.0,
     "device_watts": true,
     "average_watts": 0.0,
-    "average_heartrate": 128.0,
+    "average_heartrate": 127.6,
     "max_heartrate": 151.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -2416,9 +2411,9 @@
     "kom_rank": null
   },
   {
-    "id": 3020008449432309416,
+    "id": 3104863681435172464,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 8017333792,
       "visibility": "everyone",
@@ -2428,38 +2423,38 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 126,
-    "moving_time": 126,
-    "start_date": "2022-10-25T14:07:32Z",
-    "start_date_local": "2022-10-25T07:07:32Z",
-    "distance": 1198.8,
-    "start_index": 334,
-    "end_index": 455,
+    "elapsed_time": 139,
+    "moving_time": 139,
+    "start_date": "2022-10-25T14:07:21Z",
+    "start_date_local": "2022-10-25T07:07:21Z",
+    "distance": 1289.6,
+    "start_index": 323,
+    "end_index": 456,
     "device_watts": false,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true
@@ -2477,9 +2472,9 @@
     "kom_rank": null
   },
   {
-    "id": 3306204687265317026,
+    "id": 3306204687266166946,
     "resource_state": 2,
-    "name": "Snake",
+    "name": "THE DESCENT of 212",
     "activity": {
       "id": 13172824031,
       "visibility": "everyone",
@@ -2489,42 +2484,42 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 157,
-    "moving_time": 157,
-    "start_date": "2024-12-23T03:30:19Z",
-    "start_date_local": "2024-12-22T19:30:19Z",
-    "distance": 1198.8,
-    "start_index": 274,
-    "end_index": 431,
-    "average_cadence": 1.0,
+    "elapsed_time": 172,
+    "moving_time": 172,
+    "start_date": "2024-12-23T03:30:07Z",
+    "start_date_local": "2024-12-22T19:30:07Z",
+    "distance": 1289.6,
+    "start_index": 262,
+    "end_index": 434,
+    "average_cadence": 0.9,
     "device_watts": true,
-    "average_watts": 3.1,
-    "average_heartrate": 116.5,
-    "max_heartrate": 130.0,
+    "average_watts": 2.8,
+    "average_heartrate": 117.6,
+    "max_heartrate": 138.0,
     "segment": {
-      "id": 29523175,
+      "id": 34668731,
       "resource_state": 2,
-      "name": "Snake",
+      "name": "THE DESCENT of 212",
       "activity_type": "Ride",
-      "distance": 1198.8,
+      "distance": 1289.6,
       "average_grade": -8.3,
-      "maximum_grade": -3.1,
-      "elevation_high": 147.4,
-      "elevation_low": 48.4,
+      "maximum_grade": -3.6,
+      "elevation_high": 127.9,
+      "elevation_low": 21.1,
       "start_latlng": [
-        47.577062,
-        -122.057112
+        47.577774,
+        -122.056989
       ],
       "end_latlng": [
-        47.570491,
-        -122.064488
+        47.570391,
+        -122.064232
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
       "climb_category": 0,
       "city": "Sammamish",
       "state": "Washington",
-      "country": "United States",
+      "country": "USA",
       "private": false,
       "hazardous": false,
       "starred": true

@@ -1,0 +1,130 @@
+[
+  {
+    "id": 3503540290838673132,
+    "resource_state": 2,
+    "name": "Lake Margaret CCW",
+    "activity": {
+      "id": 19002479527,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 241,
+    "moving_time": 241,
+    "start_date": "2026-06-20T20:20:58Z",
+    "start_date_local": "2026-06-20T13:20:58Z",
+    "distance": 2727.2,
+    "start_index": 5733,
+    "end_index": 5974,
+    "average_cadence": 82.8,
+    "device_watts": true,
+    "average_watts": 373.2,
+    "average_heartrate": 171.2,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 6900829,
+      "resource_state": 2,
+      "name": "Lake Margaret CCW",
+      "activity_type": "Ride",
+      "distance": 2727.2,
+      "average_grade": 0.0,
+      "maximum_grade": 22.8,
+      "elevation_high": 268.8,
+      "elevation_low": 247.5,
+      "start_latlng": [
+        47.767893,
+        -121.903963
+      ],
+      "end_latlng": [
+        47.768181,
+        -121.903981
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Duvall",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 2,
+        "type": "overall",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": 2
+  },
+  {
+    "id": 3503540290837205740,
+    "resource_state": 2,
+    "name": "Lake Margaret CCW",
+    "activity": {
+      "id": 19002479527,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 324,
+    "moving_time": 324,
+    "start_date": "2026-06-20T20:15:31Z",
+    "start_date_local": "2026-06-20T13:15:31Z",
+    "distance": 2727.2,
+    "start_index": 5406,
+    "end_index": 5730,
+    "average_cadence": 62.0,
+    "device_watts": true,
+    "average_watts": 189.1,
+    "average_heartrate": 140.4,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 6900829,
+      "resource_state": 2,
+      "name": "Lake Margaret CCW",
+      "activity_type": "Ride",
+      "distance": 2727.2,
+      "average_grade": 0.0,
+      "maximum_grade": 22.8,
+      "elevation_high": 268.8,
+      "elevation_low": 247.5,
+      "start_latlng": [
+        47.767893,
+        -121.903963
+      ],
+      "end_latlng": [
+        47.768181,
+        -121.903981
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Duvall",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

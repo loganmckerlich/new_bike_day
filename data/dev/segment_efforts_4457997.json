@@ -4408,6 +4408,64 @@
     "kom_rank": null
   },
   {
+    "id": 3500364122279930330,
+    "resource_state": 2,
+    "name": "Mercer Slough NB Climb",
+    "activity": {
+      "id": 18886071441,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 71,
+    "moving_time": 71,
+    "start_date": "2026-06-11T23:08:48Z",
+    "start_date_local": "2026-06-11T16:08:48Z",
+    "distance": 401.3,
+    "start_index": 1470,
+    "end_index": 1541,
+    "average_cadence": 79.1,
+    "device_watts": true,
+    "average_watts": 267.5,
+    "average_heartrate": 111.0,
+    "max_heartrate": 111.0,
+    "segment": {
+      "id": 4457997,
+      "resource_state": 2,
+      "name": "Mercer Slough NB Climb",
+      "activity_type": "Ride",
+      "distance": 401.3,
+      "average_grade": 3.4,
+      "maximum_grade": 5.0,
+      "elevation_high": 26.6,
+      "elevation_low": 13.1,
+      "start_latlng": [
+        47.589254,
+        -122.182489
+      ],
+      "end_latlng": [
+        47.592811,
+        -122.182862
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3289058540423518320,
     "resource_state": 2,
     "name": "Mercer Slough NB Climb",
@@ -5530,6 +5588,64 @@
     "average_watts": 266.0,
     "average_heartrate": 141.4,
     "max_heartrate": 147.0,
+    "segment": {
+      "id": 4457997,
+      "resource_state": 2,
+      "name": "Mercer Slough NB Climb",
+      "activity_type": "Ride",
+      "distance": 401.3,
+      "average_grade": 3.4,
+      "maximum_grade": 5.0,
+      "elevation_high": 26.6,
+      "elevation_low": 13.1,
+      "start_latlng": [
+        47.589254,
+        -122.182489
+      ],
+      "end_latlng": [
+        47.592811,
+        -122.182862
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3504280787622769146,
+    "resource_state": 2,
+    "name": "Mercer Slough NB Climb",
+    "activity": {
+      "id": 19028503580,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 75,
+    "moving_time": 75,
+    "start_date": "2026-06-22T22:57:04Z",
+    "start_date_local": "2026-06-22T15:57:04Z",
+    "distance": 401.3,
+    "start_index": 1493,
+    "end_index": 1568,
+    "average_cadence": 81.4,
+    "device_watts": true,
+    "average_watts": 238.7,
+    "average_heartrate": 126.5,
+    "max_heartrate": 135.0,
     "segment": {
       "id": 4457997,
       "resource_state": 2,

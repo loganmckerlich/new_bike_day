@@ -1,8 +1,8 @@
 [
   {
-    "id": 3498000775847190736,
+    "id": 3498000775848041680,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 18798146628,
       "visibility": "everyone",
@@ -12,245 +12,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 256,
-    "moving_time": 256,
-    "start_date": "2026-06-05T14:47:02Z",
-    "start_date_local": "2026-06-05T07:47:02Z",
-    "distance": 2032.2,
-    "start_index": 1333,
-    "end_index": 1589,
-    "average_cadence": 79.6,
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2026-06-05T14:47:03Z",
+    "start_date_local": "2026-06-05T07:47:03Z",
+    "distance": 551.0,
+    "start_index": 1334,
+    "end_index": 1424,
+    "average_cadence": 73.8,
     "device_watts": true,
-    "average_watts": 436.7,
-    "average_heartrate": 172.1,
-    "max_heartrate": 181.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 2,
-        "type": "overall",
-        "rank": 8
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": 8
-  },
-  {
-    "id": 3497278658246280576,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18771384330,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 273,
-    "moving_time": 271,
-    "start_date": "2026-06-03T14:56:15Z",
-    "start_date_local": "2026-06-03T07:56:15Z",
-    "distance": 2032.2,
-    "start_index": 1365,
-    "end_index": 1638,
-    "average_cadence": 80.7,
-    "device_watts": true,
-    "average_watts": 399.0,
-    "average_heartrate": 160.8,
-    "max_heartrate": 173.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 1,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 1
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3500170690746240002,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18879141341,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 273,
-    "moving_time": 273,
-    "start_date": "2026-06-11T14:32:33Z",
-    "start_date_local": "2026-06-11T07:32:33Z",
-    "distance": 2032.2,
-    "start_index": 1289,
-    "end_index": 1562,
-    "average_cadence": 79.4,
-    "device_watts": true,
-    "average_watts": 404.9,
-    "average_heartrate": 154.6,
+    "average_watts": 500.2,
+    "average_heartrate": 166.5,
     "max_heartrate": 178.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 3,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 3
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3481691945177857514,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18198995851,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 299,
-    "moving_time": 291,
-    "start_date": "2026-04-21T14:40:06Z",
-    "start_date_local": "2026-04-21T07:40:06Z",
-    "distance": 2032.2,
-    "start_index": 1254,
-    "end_index": 1550,
-    "average_cadence": 78.2,
-    "device_watts": true,
-    "average_watts": 340.8,
-    "average_heartrate": 170.8,
-    "max_heartrate": 180.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -280,79 +70,9 @@
     "kom_rank": null
   },
   {
-    "id": 3389383147776983298,
+    "id": 3499088005640180096,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 15403695090,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 313,
-    "moving_time": 312,
-    "start_date": "2025-08-09T20:35:34Z",
-    "start_date_local": "2025-08-09T13:35:34Z",
-    "distance": 2032.2,
-    "start_index": 5641,
-    "end_index": 5954,
-    "average_cadence": 76.1,
-    "device_watts": true,
-    "average_watts": 289.6,
-    "average_heartrate": 158.3,
-    "max_heartrate": 173.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 1,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 1
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3499088005642793344,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 18837934725,
       "visibility": "everyone",
@@ -362,170 +82,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 335,
-    "moving_time": 335,
+    "elapsed_time": 91,
+    "moving_time": 91,
     "start_date": "2026-06-08T14:48:03Z",
     "start_date_local": "2026-06-08T07:48:03Z",
-    "distance": 2032.2,
+    "distance": 551.0,
     "start_index": 1432,
-    "end_index": 1767,
-    "average_cadence": 73.8,
+    "end_index": 1523,
+    "average_cadence": 72.3,
     "device_watts": true,
-    "average_watts": 295.0,
-    "average_heartrate": 146.4,
+    "average_watts": 531.0,
+    "average_heartrate": 159.9,
     "max_heartrate": 174.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3496913677221560444,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18757096682,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 337,
-    "moving_time": 336,
-    "start_date": "2026-06-02T14:48:26Z",
-    "start_date_local": "2026-06-02T07:48:26Z",
-    "distance": 2032.2,
-    "start_index": 1237,
-    "end_index": 1574,
-    "average_cadence": 79.7,
-    "device_watts": true,
-    "average_watts": 295.5,
-    "average_heartrate": 144.3,
-    "max_heartrate": 159.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 3,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 3
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3474079913193916252,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 17926029115,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 343,
-    "moving_time": 342,
-    "start_date": "2026-03-31T14:13:19Z",
-    "start_date_local": "2026-03-31T07:13:19Z",
-    "distance": 2032.2,
-    "start_index": 1331,
-    "end_index": 1674,
-    "average_cadence": 75.5,
-    "device_watts": true,
-    "average_watts": 287.9,
-    "average_heartrate": 152.3,
-    "max_heartrate": 163.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -555,11 +140,11 @@
     "kom_rank": null
   },
   {
-    "id": 3480242032470415814,
+    "id": 3500170690743515138,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
-      "id": 18146236077,
+      "id": 18879141341,
       "visibility": "everyone",
       "resource_state": 1
     },
@@ -567,35 +152,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 346,
-    "moving_time": 344,
-    "start_date": "2026-04-17T14:36:49Z",
-    "start_date_local": "2026-04-17T07:36:49Z",
-    "distance": 2032.2,
-    "start_index": 1398,
-    "end_index": 1744,
-    "average_cadence": 69.2,
+    "elapsed_time": 92,
+    "moving_time": 92,
+    "start_date": "2026-06-11T14:32:34Z",
+    "start_date_local": "2026-06-11T07:32:34Z",
+    "distance": 551.0,
+    "start_index": 1290,
+    "end_index": 1382,
+    "average_cadence": 78.1,
     "device_watts": true,
-    "average_watts": 281.7,
-    "average_heartrate": 153.5,
-    "max_heartrate": 172.0,
+    "average_watts": 485.9,
+    "average_heartrate": 152.9,
+    "max_heartrate": 166.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -625,9 +210,149 @@
     "kom_rank": null
   },
   {
-    "id": 3387297855182493440,
+    "id": 3389383147775834370,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 101,
+    "moving_time": 100,
+    "start_date": "2025-08-09T20:35:35Z",
+    "start_date_local": "2025-08-09T13:35:35Z",
+    "distance": 551.0,
+    "start_index": 5642,
+    "end_index": 5743,
+    "average_cadence": 75.8,
+    "device_watts": true,
+    "average_watts": 387.4,
+    "average_heartrate": 160.7,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497278658246109568,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18771384330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 101,
+    "moving_time": 99,
+    "start_date": "2026-06-03T14:56:16Z",
+    "start_date_local": "2026-06-03T07:56:16Z",
+    "distance": 551.0,
+    "start_index": 1366,
+    "end_index": 1467,
+    "average_cadence": 78.4,
+    "device_watts": true,
+    "average_watts": 439.3,
+    "average_heartrate": 151.8,
+    "max_heartrate": 167.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387297855184224000,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 15336818451,
       "visibility": "everyone",
@@ -637,35 +362,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 358,
-    "moving_time": 327,
-    "start_date": "2025-08-03T19:46:39Z",
-    "start_date_local": "2025-08-03T12:46:39Z",
-    "distance": 2032.2,
-    "start_index": 8059,
-    "end_index": 8388,
-    "average_cadence": 67.1,
+    "elapsed_time": 102,
+    "moving_time": 102,
+    "start_date": "2025-08-03T19:46:40Z",
+    "start_date_local": "2025-08-03T12:46:40Z",
+    "distance": 551.0,
+    "start_index": 8060,
+    "end_index": 8162,
+    "average_cadence": 80.2,
     "device_watts": true,
-    "average_watts": 266.3,
-    "average_heartrate": 144.1,
+    "average_watts": 416.2,
+    "average_heartrate": 155.5,
     "max_heartrate": 163.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -695,669 +420,9 @@
     "kom_rank": null
   },
   {
-    "id": 3472258010524912558,
+    "id": 3354247835627662720,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 17865936615,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 363,
-    "moving_time": 362,
-    "start_date": "2026-03-26T13:55:23Z",
-    "start_date_local": "2026-03-26T06:55:23Z",
-    "distance": 2032.2,
-    "start_index": 1419,
-    "end_index": 1782,
-    "average_cadence": 69.9,
-    "device_watts": true,
-    "average_watts": 269.8,
-    "average_heartrate": 153.5,
-    "max_heartrate": 174.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 3,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 3
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3491476539240327406,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18555893716,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 365,
-    "moving_time": 362,
-    "start_date": "2026-05-18T14:41:09Z",
-    "start_date_local": "2026-05-18T07:41:09Z",
-    "distance": 2032.2,
-    "start_index": 1397,
-    "end_index": 1762,
-    "average_cadence": 80.3,
-    "device_watts": true,
-    "average_watts": 271.6,
-    "average_heartrate": 147.3,
-    "max_heartrate": 160.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3500540468029112806,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18892073258,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 368,
-    "moving_time": 368,
-    "start_date": "2026-06-12T14:50:29Z",
-    "start_date_local": "2026-06-12T07:50:29Z",
-    "distance": 2032.2,
-    "start_index": 1377,
-    "end_index": 1745,
-    "average_cadence": 72.2,
-    "device_watts": true,
-    "average_watts": 246.4,
-    "average_heartrate": 130.4,
-    "max_heartrate": 151.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3491841620560244018,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18569402318,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 375,
-    "moving_time": 375,
-    "start_date": "2026-05-19T14:50:12Z",
-    "start_date_local": "2026-05-19T07:50:12Z",
-    "distance": 2032.2,
-    "start_index": 1460,
-    "end_index": 1835,
-    "average_cadence": 79.5,
-    "device_watts": true,
-    "average_watts": 247.6,
-    "average_heartrate": 135.5,
-    "max_heartrate": 152.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3434594408581259790,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 16723191540,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 378,
-    "moving_time": 378,
-    "start_date": "2025-12-12T14:59:09Z",
-    "start_date_local": "2025-12-12T06:59:09Z",
-    "distance": 2032.2,
-    "start_index": 1499,
-    "end_index": 1877,
-    "average_cadence": 76.9,
-    "device_watts": true,
-    "average_watts": 258.4,
-    "average_heartrate": 137.8,
-    "max_heartrate": 157.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": 3,
-    "achievements": [
-      {
-        "type_id": 3,
-        "type": "pr",
-        "rank": 3
-      },
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3499819134920043018,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18866437059,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 379,
-    "moving_time": 379,
-    "start_date": "2026-06-10T14:54:08Z",
-    "start_date_local": "2026-06-10T07:54:08Z",
-    "distance": 2032.2,
-    "start_index": 1270,
-    "end_index": 1649,
-    "average_cadence": 76.9,
-    "device_watts": true,
-    "average_watts": 242.0,
-    "average_heartrate": 137.4,
-    "max_heartrate": 150.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3482418679129056098,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18227023189,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 381,
-    "moving_time": 381,
-    "start_date": "2026-04-23T14:28:47Z",
-    "start_date_local": "2026-04-23T07:28:47Z",
-    "distance": 2032.2,
-    "start_index": 1429,
-    "end_index": 1810,
-    "average_cadence": 76.8,
-    "device_watts": true,
-    "average_watts": 256.9,
-    "average_heartrate": 135.9,
-    "max_heartrate": 147.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3474805379870521368,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 17951108555,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 385,
-    "moving_time": 385,
-    "start_date": "2026-04-02T14:31:20Z",
-    "start_date_local": "2026-04-02T07:31:20Z",
-    "distance": 2032.2,
-    "start_index": 1472,
-    "end_index": 1857,
-    "average_cadence": 74.1,
-    "device_watts": true,
-    "average_watts": 246.0,
-    "average_heartrate": 147.5,
-    "max_heartrate": 163.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3492201193558275980,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18582983778,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 385,
-    "moving_time": 385,
-    "start_date": "2026-05-20T14:41:12Z",
-    "start_date_local": "2026-05-20T07:41:12Z",
-    "distance": 2032.2,
-    "start_index": 1396,
-    "end_index": 1781,
-    "average_cadence": 76.2,
-    "device_watts": true,
-    "average_watts": 233.4,
-    "average_heartrate": 132.3,
-    "max_heartrate": 141.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3481328901823088434,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18185180204,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 386,
-    "moving_time": 386,
-    "start_date": "2026-04-20T14:38:23Z",
-    "start_date_local": "2026-04-20T07:38:23Z",
-    "distance": 2032.2,
-    "start_index": 1373,
-    "end_index": 1759,
-    "average_cadence": 73.3,
-    "device_watts": true,
-    "average_watts": 258.4,
-    "average_heartrate": 139.8,
-    "max_heartrate": 154.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3354247835626007936,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 14380153374,
       "visibility": "everyone",
@@ -1367,35 +432,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 388,
-    "moving_time": 343,
-    "start_date": "2025-05-04T19:46:37Z",
-    "start_date_local": "2025-05-04T12:46:37Z",
-    "distance": 2032.2,
-    "start_index": 5770,
-    "end_index": 6114,
-    "average_cadence": 65.6,
+    "elapsed_time": 110,
+    "moving_time": 110,
+    "start_date": "2025-05-04T19:46:38Z",
+    "start_date_local": "2025-05-04T12:46:38Z",
+    "distance": 551.0,
+    "start_index": 5771,
+    "end_index": 5881,
+    "average_cadence": 73.1,
     "device_watts": true,
-    "average_watts": 225.2,
-    "average_heartrate": 139.4,
+    "average_watts": 364.2,
+    "average_heartrate": 159.2,
     "max_heartrate": 170.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -1425,11 +490,11 @@
     "kom_rank": null
   },
   {
-    "id": 3492564490289252678,
+    "id": 3480242032473108934,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
-      "id": 18596486933,
+      "id": 18146236077,
       "visibility": "everyone",
       "resource_state": 1
     },
@@ -1437,35 +502,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 388,
-    "moving_time": 387,
-    "start_date": "2026-05-21T14:44:20Z",
-    "start_date_local": "2026-05-21T07:44:20Z",
-    "distance": 2032.2,
-    "start_index": 1482,
-    "end_index": 1870,
-    "average_cadence": 0.0,
+    "elapsed_time": 111,
+    "moving_time": 109,
+    "start_date": "2026-04-17T14:36:50Z",
+    "start_date_local": "2026-04-17T07:36:50Z",
+    "distance": 551.0,
+    "start_index": 1399,
+    "end_index": 1510,
+    "average_cadence": 60.0,
     "device_watts": true,
-    "average_watts": 0.0,
-    "average_heartrate": 133.3,
-    "max_heartrate": 145.0,
+    "average_watts": 376.8,
+    "average_heartrate": 162.2,
+    "max_heartrate": 172.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -1490,9 +555,594 @@
     "kom_rank": null
   },
   {
-    "id": 3476620162038729746,
+    "id": 3481691945176413674,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18198995851,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 112,
+    "moving_time": 104,
+    "start_date": "2026-04-21T14:40:06Z",
+    "start_date_local": "2026-04-21T07:40:06Z",
+    "distance": 551.0,
+    "start_index": 1254,
+    "end_index": 1363,
+    "average_cadence": 73.3,
+    "device_watts": true,
+    "average_watts": 385.3,
+    "average_heartrate": 171.4,
+    "max_heartrate": 180.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3496913677217792124,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 117,
+    "moving_time": 116,
+    "start_date": "2026-06-02T14:48:27Z",
+    "start_date_local": "2026-06-02T07:48:27Z",
+    "distance": 551.0,
+    "start_index": 1238,
+    "end_index": 1355,
+    "average_cadence": 82.4,
+    "device_watts": true,
+    "average_watts": 362.6,
+    "average_heartrate": 148.9,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472258010525785006,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 17865936615,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 118,
+    "moving_time": 117,
+    "start_date": "2026-03-26T13:55:23Z",
+    "start_date_local": "2026-03-26T06:55:23Z",
+    "distance": 551.0,
+    "start_index": 1419,
+    "end_index": 1537,
+    "average_cadence": 64.6,
+    "device_watts": true,
+    "average_watts": 367.4,
+    "average_heartrate": 166.3,
+    "max_heartrate": 174.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474079913192982364,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 17926029115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 122,
+    "moving_time": 121,
+    "start_date": "2026-03-31T14:13:19Z",
+    "start_date_local": "2026-03-31T07:13:19Z",
+    "distance": 551.0,
+    "start_index": 1331,
+    "end_index": 1453,
+    "average_cadence": 69.7,
+    "device_watts": true,
+    "average_watts": 343.6,
+    "average_heartrate": 153.3,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500540468032009702,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18892073258,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 126,
+    "moving_time": 126,
+    "start_date": "2026-06-12T14:50:30Z",
+    "start_date_local": "2026-06-12T07:50:30Z",
+    "distance": 551.0,
+    "start_index": 1378,
+    "end_index": 1504,
+    "average_cadence": 75.1,
+    "device_watts": true,
+    "average_watts": 317.4,
+    "average_heartrate": 140.5,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3434594408584901134,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 16723191540,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 132,
+    "moving_time": 132,
+    "start_date": "2025-12-12T14:59:09Z",
+    "start_date_local": "2025-12-12T06:59:09Z",
+    "distance": 551.0,
+    "start_index": 1499,
+    "end_index": 1631,
+    "average_cadence": 75.1,
+    "device_watts": true,
+    "average_watts": 325.2,
+    "average_heartrate": 144.8,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474805379870680088,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 17951108555,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 137,
+    "moving_time": 137,
+    "start_date": "2026-04-02T14:31:20Z",
+    "start_date_local": "2026-04-02T07:31:20Z",
+    "distance": 551.0,
+    "start_index": 1472,
+    "end_index": 1609,
+    "average_cadence": 71.2,
+    "device_watts": true,
+    "average_watts": 294.5,
+    "average_heartrate": 152.7,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491476539242986734,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18555893716,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 138,
+    "moving_time": 135,
+    "start_date": "2026-05-18T14:41:10Z",
+    "start_date_local": "2026-05-18T07:41:10Z",
+    "distance": 551.0,
+    "start_index": 1398,
+    "end_index": 1536,
+    "average_cadence": 83.0,
+    "device_watts": true,
+    "average_watts": 310.8,
+    "average_heartrate": 148.7,
+    "max_heartrate": 160.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491841620560084274,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18569402318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 139,
+    "moving_time": 139,
+    "start_date": "2026-05-19T14:50:13Z",
+    "start_date_local": "2026-05-19T07:50:13Z",
+    "distance": 551.0,
+    "start_index": 1461,
+    "end_index": 1600,
+    "average_cadence": 81.7,
+    "device_watts": true,
+    "average_watts": 288.1,
+    "average_heartrate": 139.6,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476620162041614354,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 18014415654,
       "visibility": "everyone",
@@ -1502,35 +1152,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 394,
-    "moving_time": 394,
+    "elapsed_time": 145,
+    "moving_time": 145,
     "start_date": "2026-04-07T14:43:50Z",
     "start_date_local": "2026-04-07T07:43:50Z",
-    "distance": 2032.2,
+    "distance": 551.0,
     "start_index": 1432,
-    "end_index": 1826,
-    "average_cadence": 70.6,
+    "end_index": 1577,
+    "average_cadence": 71.4,
     "device_watts": true,
-    "average_watts": 236.9,
-    "average_heartrate": 136.7,
+    "average_watts": 294.4,
+    "average_heartrate": 141.9,
     "max_heartrate": 152.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -1555,11 +1205,11 @@
     "kom_rank": null
   },
   {
-    "id": 3504163656046536500,
+    "id": 3499819134922707466,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
-      "id": 19023440714,
+      "id": 18866437059,
       "visibility": "everyone",
       "resource_state": 1
     },
@@ -1567,35 +1217,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 397,
-    "moving_time": 395,
-    "start_date": "2026-06-22T14:54:09Z",
-    "start_date_local": "2026-06-22T07:54:09Z",
-    "distance": 2032.2,
-    "start_index": 1407,
-    "end_index": 1804,
-    "average_cadence": 75.1,
+    "elapsed_time": 145,
+    "moving_time": 145,
+    "start_date": "2026-06-10T14:54:09Z",
+    "start_date_local": "2026-06-10T07:54:09Z",
+    "distance": 551.0,
+    "start_index": 1271,
+    "end_index": 1416,
+    "average_cadence": 76.0,
     "device_watts": true,
-    "average_watts": 224.0,
-    "average_heartrate": 127.7,
-    "max_heartrate": 143.0,
+    "average_watts": 278.7,
+    "average_heartrate": 144.2,
+    "max_heartrate": 150.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -1620,269 +1270,9 @@
     "kom_rank": null
   },
   {
-    "id": 3492929978678887228,
+    "id": 3012128648615205908,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18609778639,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 399,
-    "moving_time": 399,
-    "start_date": "2026-05-22T14:55:18Z",
-    "start_date_local": "2026-05-22T07:55:18Z",
-    "distance": 2032.2,
-    "start_index": 1354,
-    "end_index": 1753,
-    "average_cadence": 78.9,
-    "device_watts": true,
-    "average_watts": 237.7,
-    "average_heartrate": 131.6,
-    "max_heartrate": 147.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3482778953325296836,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18240132582,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 400,
-    "moving_time": 392,
-    "start_date": "2026-04-24T14:35:51Z",
-    "start_date_local": "2026-04-24T07:35:51Z",
-    "distance": 2032.2,
-    "start_index": 1423,
-    "end_index": 1819,
-    "average_cadence": 73.6,
-    "device_watts": true,
-    "average_watts": 243.9,
-    "average_heartrate": 131.5,
-    "max_heartrate": 141.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3479877879681409056,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18133000629,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 403,
-    "moving_time": 397,
-    "start_date": "2026-04-16T14:28:59Z",
-    "start_date_local": "2026-04-16T07:28:59Z",
-    "distance": 2032.2,
-    "start_index": 1470,
-    "end_index": 1873,
-    "average_cadence": 74.5,
-    "device_watts": true,
-    "average_watts": 240.8,
-    "average_heartrate": 137.1,
-    "max_heartrate": 151.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3476257563191002320,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18001520259,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 407,
-    "moving_time": 406,
-    "start_date": "2026-04-06T14:43:47Z",
-    "start_date_local": "2026-04-06T07:43:47Z",
-    "distance": 2032.2,
-    "start_index": 1416,
-    "end_index": 1823,
-    "average_cadence": 72.4,
-    "device_watts": true,
-    "average_watts": 227.9,
-    "average_heartrate": 135.7,
-    "max_heartrate": 148.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3012128648611605524,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 7906979690,
       "visibility": "everyone",
@@ -1892,33 +1282,33 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 414,
-    "moving_time": 412,
+    "elapsed_time": 149,
+    "moving_time": 147,
     "start_date": "2022-10-03T19:18:07Z",
     "start_date_local": "2022-10-03T12:18:07Z",
-    "distance": 2032.2,
+    "distance": 551.0,
     "start_index": 1677,
-    "end_index": 2087,
+    "end_index": 1825,
     "device_watts": false,
-    "average_heartrate": 131.5,
+    "average_heartrate": 133.0,
     "max_heartrate": 133.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -1943,9 +1333,529 @@
     "kom_rank": null
   },
   {
-    "id": 3477707428062310256,
+    "id": 3482418679128062818,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18227023189,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 149,
+    "moving_time": 149,
+    "start_date": "2026-04-23T14:28:47Z",
+    "start_date_local": "2026-04-23T07:28:47Z",
+    "distance": 551.0,
+    "start_index": 1429,
+    "end_index": 1578,
+    "average_cadence": 78.2,
+    "device_watts": true,
+    "average_watts": 291.5,
+    "average_heartrate": 138.7,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481328901819880242,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18185180204,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 150,
+    "moving_time": 150,
+    "start_date": "2026-04-20T14:38:23Z",
+    "start_date_local": "2026-04-20T07:38:23Z",
+    "distance": 551.0,
+    "start_index": 1373,
+    "end_index": 1523,
+    "average_cadence": 73.8,
+    "device_watts": true,
+    "average_watts": 294.6,
+    "average_heartrate": 141.9,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492201193559106444,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18582983778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 151,
+    "moving_time": 151,
+    "start_date": "2026-05-20T14:41:13Z",
+    "start_date_local": "2026-05-20T07:41:13Z",
+    "distance": 551.0,
+    "start_index": 1397,
+    "end_index": 1548,
+    "average_cadence": 76.9,
+    "device_watts": true,
+    "average_watts": 261.2,
+    "average_heartrate": 134.2,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3504163656042977076,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 19023440714,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 151,
+    "moving_time": 149,
+    "start_date": "2026-06-22T14:54:09Z",
+    "start_date_local": "2026-06-22T07:54:09Z",
+    "distance": 551.0,
+    "start_index": 1407,
+    "end_index": 1558,
+    "average_cadence": 77.4,
+    "device_watts": true,
+    "average_watts": 253.3,
+    "average_heartrate": 131.5,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476257563194309840,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18001520259,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 153,
+    "moving_time": 152,
+    "start_date": "2026-04-06T14:43:47Z",
+    "start_date_local": "2026-04-06T07:43:47Z",
+    "distance": 551.0,
+    "start_index": 1416,
+    "end_index": 1569,
+    "average_cadence": 74.0,
+    "device_watts": true,
+    "average_watts": 262.8,
+    "average_heartrate": 139.8,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3479877879679463456,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18133000629,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 153,
+    "moving_time": 147,
+    "start_date": "2026-04-16T14:29:00Z",
+    "start_date_local": "2026-04-16T07:29:00Z",
+    "distance": 551.0,
+    "start_index": 1471,
+    "end_index": 1624,
+    "average_cadence": 74.5,
+    "device_watts": true,
+    "average_watts": 280.9,
+    "average_heartrate": 139.7,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492564490288326982,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18596486933,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 155,
+    "moving_time": 154,
+    "start_date": "2026-05-21T14:44:21Z",
+    "start_date_local": "2026-05-21T07:44:21Z",
+    "distance": 551.0,
+    "start_index": 1483,
+    "end_index": 1638,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 134.5,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978677997372,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 155,
+    "moving_time": 155,
+    "start_date": "2026-05-22T14:55:18Z",
+    "start_date_local": "2026-05-22T07:55:18Z",
+    "distance": 551.0,
+    "start_index": 1354,
+    "end_index": 1509,
+    "average_cadence": 78.6,
+    "device_watts": true,
+    "average_watts": 263.5,
+    "average_heartrate": 133.5,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477707428062583664,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 18054908859,
       "visibility": "everyone",
@@ -1955,35 +1865,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 414,
-    "moving_time": 413,
+    "elapsed_time": 156,
+    "moving_time": 155,
     "start_date": "2026-04-10T14:30:44Z",
     "start_date_local": "2026-04-10T07:30:44Z",
-    "distance": 2032.2,
+    "distance": 551.0,
     "start_index": 1483,
-    "end_index": 1897,
-    "average_cadence": 70.7,
+    "end_index": 1639,
+    "average_cadence": 72.9,
     "device_watts": true,
-    "average_watts": 228.7,
-    "average_heartrate": 132.7,
+    "average_watts": 268.2,
+    "average_heartrate": 137.4,
     "max_heartrate": 144.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -2008,204 +1918,9 @@
     "kom_rank": null
   },
   {
-    "id": 3486401448931425560,
+    "id": 3476974597730182348,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18373080739,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 414,
-    "moving_time": 414,
-    "start_date": "2026-05-04T14:30:29Z",
-    "start_date_local": "2026-05-04T07:30:29Z",
-    "distance": 2032.2,
-    "start_index": 1453,
-    "end_index": 1867,
-    "average_cadence": 75.7,
-    "device_watts": true,
-    "average_watts": 240.0,
-    "average_heartrate": 134.7,
-    "max_heartrate": 150.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3502351043468354092,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18959278443,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 416,
-    "moving_time": 416,
-    "start_date": "2026-06-17T14:45:44Z",
-    "start_date_local": "2026-06-17T07:45:44Z",
-    "distance": 2032.2,
-    "start_index": 1468,
-    "end_index": 1884,
-    "average_cadence": 74.7,
-    "device_watts": true,
-    "average_watts": 207.2,
-    "average_heartrate": 117.4,
-    "max_heartrate": 131.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3477343057732489402,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
-    "activity": {
-      "id": 18042080515,
-      "visibility": "everyone",
-      "resource_state": 1
-    },
-    "athlete": {
-      "id": 56163722,
-      "resource_state": 1
-    },
-    "elapsed_time": 417,
-    "moving_time": 417,
-    "start_date": "2026-04-09T14:35:12Z",
-    "start_date_local": "2026-04-09T07:35:12Z",
-    "distance": 2032.2,
-    "start_index": 1499,
-    "end_index": 1916,
-    "average_cadence": 70.6,
-    "device_watts": true,
-    "average_watts": 232.1,
-    "average_heartrate": 129.5,
-    "max_heartrate": 140.0,
-    "segment": {
-      "id": 10397266,
-      "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
-      "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
-      "start_latlng": [
-        47.569783,
-        -122.105587
-      ],
-      "end_latlng": [
-        47.577391,
-        -122.127966
-      ],
-      "elevation_profile": null,
-      "elevation_profiles": null,
-      "climb_category": 0,
-      "city": "Bellevue",
-      "state": "Washington",
-      "country": "United States",
-      "private": false,
-      "hazardous": false,
-      "starred": true
-    },
-    "pr_rank": null,
-    "achievements": [
-      {
-        "type_id": 7,
-        "type": "segment_effort_count_leader",
-        "rank": 1,
-        "effort_count": 35
-      }
-    ],
-    "visibility": "everyone",
-    "kom_rank": null
-  },
-  {
-    "id": 3476974597733389516,
-    "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 18028038338,
       "visibility": "everyone",
@@ -2215,31 +1930,31 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 426,
-    "moving_time": 424,
-    "start_date": "2026-04-08T14:10:40Z",
-    "start_date_local": "2026-04-08T07:10:40Z",
-    "distance": 2032.2,
-    "start_index": 1483,
-    "end_index": 1909,
+    "elapsed_time": 160,
+    "moving_time": 158,
+    "start_date": "2026-04-08T14:10:41Z",
+    "start_date_local": "2026-04-08T07:10:41Z",
+    "distance": 551.0,
+    "start_index": 1484,
+    "end_index": 1644,
     "device_watts": false,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -2264,11 +1979,11 @@
     "kom_rank": null
   },
   {
-    "id": 3502714930937768092,
+    "id": 3482778953323056324,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
-      "id": 18972878811,
+      "id": 18240132582,
       "visibility": "everyone",
       "resource_state": 1
     },
@@ -2276,35 +1991,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 436,
-    "moving_time": 435,
-    "start_date": "2026-06-18T14:53:14Z",
-    "start_date_local": "2026-06-18T07:53:14Z",
-    "distance": 2032.2,
-    "start_index": 1539,
-    "end_index": 1975,
-    "average_cadence": 74.9,
+    "elapsed_time": 160,
+    "moving_time": 152,
+    "start_date": "2026-04-24T14:35:51Z",
+    "start_date_local": "2026-04-24T07:35:51Z",
+    "distance": 551.0,
+    "start_index": 1423,
+    "end_index": 1579,
+    "average_cadence": 75.6,
     "device_watts": true,
-    "average_watts": 202.1,
-    "average_heartrate": 114.0,
-    "max_heartrate": 123.0,
+    "average_watts": 267.2,
+    "average_heartrate": 133.2,
+    "max_heartrate": 141.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -2329,11 +2044,11 @@
     "kom_rank": null
   },
   {
-    "id": 3486769751649923936,
+    "id": 3486401448934337816,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
-      "id": 18386825119,
+      "id": 18373080739,
       "visibility": "everyone",
       "resource_state": 1
     },
@@ -2341,33 +2056,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 437,
-    "moving_time": 437,
-    "start_date": "2026-05-05T14:48:17Z",
-    "start_date_local": "2026-05-05T07:48:17Z",
-    "distance": 2032.2,
-    "start_index": 1513,
-    "end_index": 1950,
-    "device_watts": false,
-    "average_heartrate": 129.3,
-    "max_heartrate": 140.0,
+    "elapsed_time": 160,
+    "moving_time": 160,
+    "start_date": "2026-05-04T14:30:30Z",
+    "start_date_local": "2026-05-04T07:30:30Z",
+    "distance": 551.0,
+    "start_index": 1454,
+    "end_index": 1614,
+    "average_cadence": 74.0,
+    "device_watts": true,
+    "average_watts": 273.0,
+    "average_heartrate": 138.5,
+    "max_heartrate": 150.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -2392,9 +2109,74 @@
     "kom_rank": null
   },
   {
-    "id": 3020008449431265960,
+    "id": 3477343057733895354,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18042080515,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 161,
+    "moving_time": 161,
+    "start_date": "2026-04-09T14:35:12Z",
+    "start_date_local": "2026-04-09T07:35:12Z",
+    "distance": 551.0,
+    "start_index": 1499,
+    "end_index": 1660,
+    "average_cadence": 73.0,
+    "device_watts": true,
+    "average_watts": 264.3,
+    "average_heartrate": 130.6,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020008449433650856,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 8017333792,
       "visibility": "everyone",
@@ -2404,31 +2186,31 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 451,
-    "moving_time": 449,
+    "elapsed_time": 164,
+    "moving_time": 162,
     "start_date": "2022-10-25T14:30:26Z",
     "start_date_local": "2022-10-25T07:30:26Z",
-    "distance": 2032.2,
+    "distance": 551.0,
     "start_index": 1701,
-    "end_index": 2152,
+    "end_index": 1865,
     "device_watts": false,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -2458,11 +2240,11 @@
     "kom_rank": null
   },
   {
-    "id": 3501990990445425846,
+    "id": 3502351043466339884,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
-      "id": 18944935604,
+      "id": 18959278443,
       "visibility": "everyone",
       "resource_state": 1
     },
@@ -2470,35 +2252,35 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 453,
-    "moving_time": 452,
-    "start_date": "2026-06-16T14:52:02Z",
-    "start_date_local": "2026-06-16T07:52:02Z",
-    "distance": 2032.2,
-    "start_index": 1459,
-    "end_index": 1912,
-    "average_cadence": 69.6,
+    "elapsed_time": 168,
+    "moving_time": 168,
+    "start_date": "2026-06-17T14:45:44Z",
+    "start_date_local": "2026-06-17T07:45:44Z",
+    "distance": 551.0,
+    "start_index": 1468,
+    "end_index": 1636,
+    "average_cadence": 77.2,
     "device_watts": true,
-    "average_watts": 190.0,
-    "average_heartrate": 111.6,
-    "max_heartrate": 122.0,
+    "average_watts": 226.5,
+    "average_heartrate": 120.2,
+    "max_heartrate": 130.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -2523,9 +2305,9 @@
     "kom_rank": null
   },
   {
-    "id": 3489304526498820858,
+    "id": 3489304526496917242,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 18478432225,
       "visibility": "everyone",
@@ -2535,31 +2317,31 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 461,
-    "moving_time": 461,
-    "start_date": "2026-05-12T14:44:45Z",
-    "start_date_local": "2026-05-12T07:44:45Z",
-    "distance": 2032.2,
-    "start_index": 1651,
-    "end_index": 2112,
+    "elapsed_time": 173,
+    "moving_time": 173,
+    "start_date": "2026-05-12T14:44:46Z",
+    "start_date_local": "2026-05-12T07:44:46Z",
+    "distance": 551.0,
+    "start_index": 1652,
+    "end_index": 1825,
     "device_watts": false,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -2584,9 +2366,202 @@
     "kom_rank": null
   },
   {
-    "id": 3487129644538088420,
+    "id": 3502714930938065052,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18972878811,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 173,
+    "moving_time": 172,
+    "start_date": "2026-06-18T14:53:14Z",
+    "start_date_local": "2026-06-18T07:53:14Z",
+    "distance": 551.0,
+    "start_index": 1539,
+    "end_index": 1712,
+    "average_cadence": 75.0,
+    "device_watts": true,
+    "average_watts": 225.9,
+    "average_heartrate": 116.1,
+    "max_heartrate": 123.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769751647422304,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18386825119,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 174,
+    "moving_time": 174,
+    "start_date": "2026-05-05T14:48:18Z",
+    "start_date_local": "2026-05-05T07:48:18Z",
+    "distance": 551.0,
+    "start_index": 1514,
+    "end_index": 1688,
+    "device_watts": false,
+    "average_heartrate": 128.5,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3501990990447378614,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity": {
+      "id": 18944935604,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 185,
+    "moving_time": 184,
+    "start_date": "2026-06-16T14:52:03Z",
+    "start_date_local": "2026-06-16T07:52:03Z",
+    "distance": 551.0,
+    "start_index": 1460,
+    "end_index": 1645,
+    "average_cadence": 72.1,
+    "device_watts": true,
+    "average_watts": 210.9,
+    "average_heartrate": 113.8,
+    "max_heartrate": 122.0,
+    "segment": {
+      "id": 11965938,
+      "resource_state": 2,
+      "name": "W Sammamish I-90 Switchbacks",
+      "activity_type": "Ride",
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
+      "start_latlng": [
+        47.569827,
+        -122.10564
+      ],
+      "end_latlng": [
+        47.570823,
+        -122.110571
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487129644537529316,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 18400369545,
       "visibility": "everyone",
@@ -2596,33 +2571,33 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 478,
-    "moving_time": 478,
+    "elapsed_time": 188,
+    "moving_time": 188,
     "start_date": "2026-05-06T14:39:58Z",
     "start_date_local": "2026-05-06T07:39:58Z",
-    "distance": 2032.2,
+    "distance": 551.0,
     "start_index": 1590,
-    "end_index": 2068,
+    "end_index": 1778,
     "device_watts": false,
-    "average_heartrate": 119.8,
+    "average_heartrate": 123.0,
     "max_heartrate": 138.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,
@@ -2647,9 +2622,9 @@
     "kom_rank": null
   },
   {
-    "id": 3490027183722412786,
+    "id": 3490027183718926066,
     "resource_state": 2,
-    "name": "Sunset Elem. to Eastgate on Bike Path",
+    "name": "W Sammamish I-90 Switchbacks",
     "activity": {
       "id": 18505534998,
       "visibility": "everyone",
@@ -2659,33 +2634,33 @@
       "id": 56163722,
       "resource_state": 1
     },
-    "elapsed_time": 483,
-    "moving_time": 483,
+    "elapsed_time": 198,
+    "moving_time": 198,
     "start_date": "2026-05-14T14:34:29Z",
     "start_date_local": "2026-05-14T07:34:29Z",
-    "distance": 2032.2,
+    "distance": 551.0,
     "start_index": 1679,
-    "end_index": 2162,
+    "end_index": 1877,
     "device_watts": false,
-    "average_heartrate": 125.9,
+    "average_heartrate": 126.8,
     "max_heartrate": 136.0,
     "segment": {
-      "id": 10397266,
+      "id": 11965938,
       "resource_state": 2,
-      "name": "Sunset Elem. to Eastgate on Bike Path",
+      "name": "W Sammamish I-90 Switchbacks",
       "activity_type": "Ride",
-      "distance": 2032.2,
-      "average_grade": 2.9,
-      "maximum_grade": 14.8,
-      "elevation_high": 101.5,
-      "elevation_low": 41.4,
+      "distance": 551.0,
+      "average_grade": 5.8,
+      "maximum_grade": 10.2,
+      "elevation_high": 73.6,
+      "elevation_low": 41.2,
       "start_latlng": [
-        47.569783,
-        -122.105587
+        47.569827,
+        -122.10564
       ],
       "end_latlng": [
-        47.577391,
-        -122.127966
+        47.570823,
+        -122.110571
       ],
       "elevation_profile": null,
       "elevation_profiles": null,

@@ -39,6 +39,45 @@
     "starred_date": "2024-12-23T09:35:09Z"
   },
   {
+    "id": 647908,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity_type": "Ride",
+    "distance": 3514.3,
+    "average_grade": 1.3,
+    "maximum_grade": 7.3,
+    "elevation_high": 26.6,
+    "elevation_low": -20.8,
+    "start_latlng": [
+      47.55205515772104,
+      -122.05982451327145
+    ],
+    "end_latlng": [
+      47.56683396175504,
+      -122.09824087098241
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Issaquah",
+    "state": "WA",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 367,
+    "athlete_pr_effort": {
+      "id": 3499819134920434186,
+      "activity_id": 18866437059,
+      "elapsed_time": 367,
+      "distance": 3514.3,
+      "start_date": "2026-06-10T14:46:39Z",
+      "start_date_local": "2026-06-10T07:46:39Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-05T19:00:40Z"
+  },
+  {
     "id": 1238935,
     "resource_state": 2,
     "name": "East on NW Sammamish Rd",
@@ -65,14 +104,14 @@
     "private": false,
     "hazardous": false,
     "starred": true,
-    "pr_time": 325,
+    "pr_time": 322,
     "athlete_pr_effort": {
-      "id": 3497042857439032704,
-      "activity_id": 18763295926,
-      "elapsed_time": 325,
+      "id": 3497402457893400818,
+      "activity_id": 18777094929,
+      "elapsed_time": 322,
       "distance": 3698.14,
-      "start_date": "2026-06-02T23:24:02Z",
-      "start_date_local": "2026-06-02T16:24:02Z",
+      "start_date": "2026-06-03T23:20:49Z",
+      "start_date_local": "2026-06-03T16:20:49Z",
       "is_kom": false
     },
     "starred_date": "2026-06-03T00:09:13Z"
@@ -115,6 +154,45 @@
       "is_kom": false
     },
     "starred_date": "2025-06-19T16:41:44Z"
+  },
+  {
+    "id": 6900829,
+    "resource_state": 2,
+    "name": "Lake Margaret CCW",
+    "activity_type": "Ride",
+    "distance": 2727.2,
+    "average_grade": 0.0,
+    "maximum_grade": 22.8,
+    "elevation_high": 268.8,
+    "elevation_low": 247.5,
+    "start_latlng": [
+      47.767893,
+      -121.903963
+    ],
+    "end_latlng": [
+      47.768181,
+      -121.903981
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Duvall",
+    "state": "WA",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 241,
+    "athlete_pr_effort": {
+      "id": 3503540290838673132,
+      "activity_id": 19002479527,
+      "elapsed_time": 241,
+      "distance": 2727.2,
+      "start_date": "2026-06-20T20:20:58Z",
+      "start_date_local": "2026-06-20T13:20:58Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-20T16:17:55Z"
   },
   {
     "id": 7059603,
@@ -195,6 +273,162 @@
     "starred_date": "2025-06-19T13:59:54Z"
   },
   {
+    "id": 7323545,
+    "resource_state": 2,
+    "name": "Spint up 29th St.",
+    "activity_type": "Ride",
+    "distance": 342.8,
+    "average_grade": 3.2,
+    "maximum_grade": 7.0,
+    "elevation_high": 24.8,
+    "elevation_low": 13.8,
+    "start_latlng": [
+      47.520691,
+      -122.20906
+    ],
+    "end_latlng": [
+      47.517692,
+      -122.209153
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Renton",
+    "state": "WA",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 30,
+    "athlete_pr_effort": {
+      "id": 3504163656046505780,
+      "activity_id": 19023440714,
+      "elapsed_time": 30,
+      "distance": 342.8,
+      "start_date": "2026-06-22T15:26:09Z",
+      "start_date_local": "2026-06-22T08:26:09Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-22T15:48:07Z"
+  },
+  {
+    "id": 7789390,
+    "resource_state": 2,
+    "name": "Beastmode",
+    "activity_type": "Ride",
+    "distance": 460.2,
+    "average_grade": -0.9,
+    "maximum_grade": 5.0,
+    "elevation_high": 15.6,
+    "elevation_low": 10.8,
+    "start_latlng": [
+      47.53576,
+      -122.196347
+    ],
+    "end_latlng": [
+      47.53216,
+      -122.199348
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Renton",
+    "state": "WA",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 36,
+    "athlete_pr_effort": {
+      "id": 3382749049565227408,
+      "activity_id": 15198606207,
+      "elapsed_time": 36,
+      "distance": 460.2,
+      "start_date": "2025-07-22T14:25:11Z",
+      "start_date_local": "2025-07-22T07:25:11Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-05T19:01:49Z"
+  },
+  {
+    "id": 8609945,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity_type": "Ride",
+    "distance": 784.4,
+    "average_grade": -5.6,
+    "maximum_grade": -4.1,
+    "elevation_high": 77.8,
+    "elevation_low": 33.9,
+    "start_latlng": [
+      47.579307,
+      -122.156968
+    ],
+    "end_latlng": [
+      47.579586,
+      -122.167382
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Bellevue",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 50,
+    "athlete_pr_effort": {
+      "id": 3482418679128307554,
+      "activity_id": 18227023189,
+      "elapsed_time": 50,
+      "distance": 784.4,
+      "start_date": "2026-04-23T14:42:22Z",
+      "start_date_local": "2026-04-23T07:42:22Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-05T19:05:45Z"
+  },
+  {
+    "id": 8640076,
+    "resource_state": 2,
+    "name": "Sprint down 36th L.WA",
+    "activity_type": "Ride",
+    "distance": 359.5,
+    "average_grade": -0.5,
+    "maximum_grade": 3.4,
+    "elevation_high": 23.8,
+    "elevation_low": 18.8,
+    "start_latlng": [
+      47.520315,
+      -122.20919
+    ],
+    "end_latlng": [
+      47.523237,
+      -122.2072
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Renton",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 27,
+    "athlete_pr_effort": {
+      "id": 3390512962482824118,
+      "activity_id": 15439333050,
+      "elapsed_time": 27,
+      "distance": 359.5,
+      "start_date": "2025-08-12T23:23:34Z",
+      "start_date_local": "2025-08-12T16:23:34Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-05T19:04:07Z"
+  },
+  {
     "id": 10397266,
     "resource_state": 2,
     "name": "Sunset Elem. to Eastgate on Bike Path",
@@ -221,17 +455,95 @@
     "private": false,
     "hazardous": false,
     "starred": true,
-    "pr_time": 299,
+    "pr_time": 256,
     "athlete_pr_effort": {
-      "id": 3481691945177857514,
-      "activity_id": 18198995851,
-      "elapsed_time": 299,
+      "id": 3498000775847190736,
+      "activity_id": 18798146628,
+      "elapsed_time": 256,
       "distance": 2032.2,
-      "start_date": "2026-04-21T14:40:06Z",
-      "start_date_local": "2026-04-21T07:40:06Z",
+      "start_date": "2026-06-05T14:47:02Z",
+      "start_date_local": "2026-06-05T07:47:02Z",
       "is_kom": false
     },
     "starred_date": "2026-06-02T18:47:27Z"
+  },
+  {
+    "id": 11841727,
+    "resource_state": 2,
+    "name": "Potato Skin Descent",
+    "activity_type": "Ride",
+    "distance": 729.1,
+    "average_grade": 0.0,
+    "maximum_grade": 2.7,
+    "elevation_high": 5.6,
+    "elevation_low": 1.6,
+    "start_latlng": [
+      47.570215,
+      -122.064852
+    ],
+    "end_latlng": [
+      47.56806,
+      -122.055746
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Sammamish",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 66,
+    "athlete_pr_effort": {
+      "id": 3504163656042686260,
+      "activity_id": 19023440714,
+      "elapsed_time": 66,
+      "distance": 729.1,
+      "start_date": "2026-06-22T14:37:17Z",
+      "start_date_local": "2026-06-22T07:37:17Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-05T18:59:59Z"
+  },
+  {
+    "id": 11965938,
+    "resource_state": 2,
+    "name": "W Sammamish I-90 Switchbacks",
+    "activity_type": "Ride",
+    "distance": 551.0,
+    "average_grade": 5.8,
+    "maximum_grade": 10.2,
+    "elevation_high": 73.6,
+    "elevation_low": 41.2,
+    "start_latlng": [
+      47.569827,
+      -122.10564
+    ],
+    "end_latlng": [
+      47.570823,
+      -122.110571
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Bellevue",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 90,
+    "athlete_pr_effort": {
+      "id": 3498000775848041680,
+      "activity_id": 18798146628,
+      "elapsed_time": 90,
+      "distance": 551.0,
+      "start_date": "2026-06-05T14:47:03Z",
+      "start_date_local": "2026-06-05T07:47:03Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-05T19:01:02Z"
   },
   {
     "id": 12757123,
@@ -351,6 +663,45 @@
     "starred_date": "2025-06-14T19:51:53Z"
   },
   {
+    "id": 14707631,
+    "resource_state": 2,
+    "name": "Hup! Hup! Hup!",
+    "activity_type": "Ride",
+    "distance": 343.9,
+    "average_grade": 3.8,
+    "maximum_grade": 6.8,
+    "elevation_high": 124.2,
+    "elevation_low": 111.0,
+    "start_latlng": [
+      47.586653,
+      -122.014172
+    ],
+    "end_latlng": [
+      47.583563,
+      -122.014165
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Sammamish",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 29,
+    "athlete_pr_effort": {
+      "id": 3501373567744878520,
+      "activity_id": 18923206262,
+      "elapsed_time": 29,
+      "distance": 343.9,
+      "start_date": "2026-06-14T20:03:35Z",
+      "start_date_local": "2026-06-14T13:03:35Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-20T22:22:48Z"
+  },
+  {
     "id": 15432586,
     "resource_state": 2,
     "name": "Factoria to 136th PI SE",
@@ -388,6 +739,45 @@
       "is_kom": false
     },
     "starred_date": "2026-06-03T00:03:30Z"
+  },
+  {
+    "id": 16228937,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity_type": "Ride",
+    "distance": 541.5,
+    "average_grade": 2.3,
+    "maximum_grade": 6.3,
+    "elevation_high": 100.1,
+    "elevation_low": 87.4,
+    "start_latlng": [
+      47.574834,
+      -122.121503
+    ],
+    "end_latlng": [
+      47.577153,
+      -122.127827
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": null,
+    "state": null,
+    "country": null,
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 52,
+    "athlete_pr_effort": {
+      "id": 3500170690744435714,
+      "activity_id": 18879141341,
+      "elapsed_time": 52,
+      "distance": 541.5,
+      "start_date": "2026-06-11T14:36:11Z",
+      "start_date_local": "2026-06-11T07:36:11Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-03T15:42:08Z"
   },
   {
     "id": 16679364,
@@ -624,6 +1014,45 @@
     "starred_date": "2024-06-21T00:51:23Z"
   },
   {
+    "id": 17015237,
+    "resource_state": 2,
+    "name": "Machete Squad Gravel Goals (Southbound)",
+    "activity_type": "Ride",
+    "distance": 5285.4,
+    "average_grade": -0.2,
+    "maximum_grade": 23.3,
+    "elevation_high": 24.2,
+    "elevation_low": 6.8,
+    "start_latlng": [
+      47.56381,
+      -122.187379
+    ],
+    "end_latlng": [
+      47.520936,
+      -122.209088
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Bellevue",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 504,
+    "athlete_pr_effort": {
+      "id": 3491841620555417906,
+      "activity_id": 18569402318,
+      "elapsed_time": 504,
+      "distance": 5285.4,
+      "start_date": "2026-05-19T15:12:00Z",
+      "start_date_local": "2026-05-19T08:12:00Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-05T19:02:27Z"
+  },
+  {
     "id": 17114852,
     "resource_state": 2,
     "name": "Strada Azzurra",
@@ -700,6 +1129,45 @@
       "is_kom": false
     },
     "starred_date": "2026-05-20T21:31:11Z"
+  },
+  {
+    "id": 18824643,
+    "resource_state": 2,
+    "name": "The VMAC Attack",
+    "activity_type": "Ride",
+    "distance": 790.0,
+    "average_grade": 1.5,
+    "maximum_grade": 4.8,
+    "elevation_high": 23.2,
+    "elevation_low": 11.5,
+    "start_latlng": [
+      47.53711,
+      -122.195096
+    ],
+    "end_latlng": [
+      47.543915,
+      -122.19583
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Renton",
+    "state": "Washington",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 71,
+    "athlete_pr_effort": {
+      "id": 3396639673332084724,
+      "activity_id": 15630841781,
+      "elapsed_time": 71,
+      "distance": 790.0,
+      "start_date": "2025-08-29T21:26:47Z",
+      "start_date_local": "2025-08-29T14:26:47Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-12T21:49:12Z"
   },
   {
     "id": 20278467,
@@ -887,6 +1355,45 @@
     "starred_date": "2024-06-27T01:25:40Z"
   },
   {
+    "id": 34668731,
+    "resource_state": 2,
+    "name": "THE DESCENT of 212",
+    "activity_type": "Ride",
+    "distance": 1289.6,
+    "average_grade": -8.3,
+    "maximum_grade": -3.6,
+    "elevation_high": 127.9,
+    "elevation_low": 21.1,
+    "start_latlng": [
+      47.577774,
+      -122.056989
+    ],
+    "end_latlng": [
+      47.570391,
+      -122.064232
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Sammamish",
+    "state": "Washington",
+    "country": "USA",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 82,
+    "athlete_pr_effort": {
+      "id": 3500170690744355842,
+      "activity_id": 18879141341,
+      "elapsed_time": 82,
+      "distance": 1289.6,
+      "start_date": "2026-06-11T14:15:06Z",
+      "start_date_local": "2026-06-11T07:15:06Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-11T15:13:30Z"
+  },
+  {
     "id": 34862870,
     "resource_state": 2,
     "name": "I-90 trail climb to 142nd",
@@ -924,6 +1431,45 @@
       "is_kom": false
     },
     "starred_date": "2026-05-22T00:06:57Z"
+  },
+  {
+    "id": 35057638,
+    "resource_state": 2,
+    "name": "GRAVEL-KENNY B/PARK",
+    "activity_type": "Ride",
+    "distance": 1650.8,
+    "average_grade": 0.0,
+    "maximum_grade": 2.2,
+    "elevation_high": 12.1,
+    "elevation_low": 10.7,
+    "start_latlng": [
+      47.537364,
+      -122.195471
+    ],
+    "end_latlng": [
+      47.524696,
+      -122.206664
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": "Renton",
+    "state": "Washington",
+    "country": "USA",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 170,
+    "athlete_pr_effort": {
+      "id": 3491841620554486066,
+      "activity_id": 18569402318,
+      "elapsed_time": 170,
+      "distance": 1650.8,
+      "start_date": "2026-05-19T15:16:52Z",
+      "start_date_local": "2026-05-19T08:16:52Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-05T19:02:15Z"
   },
   {
     "id": 36930086,
@@ -1002,5 +1548,73 @@
       "is_kom": false
     },
     "starred_date": "2026-05-20T21:30:28Z"
+  },
+  {
+    "id": 38003127,
+    "resource_state": 2,
+    "name": "Final push",
+    "activity_type": "Ride",
+    "distance": 508.5,
+    "average_grade": 0.8,
+    "maximum_grade": 9.1,
+    "elevation_high": 30.8,
+    "elevation_low": 26.6,
+    "start_latlng": [
+      47.634384,
+      -121.934928
+    ],
+    "end_latlng": [
+      47.637703,
+      -121.930968
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": null,
+    "state": "Washington",
+    "country": "USA",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "pr_time": 56,
+    "athlete_pr_effort": {
+      "id": 3283273552010115238,
+      "activity_id": 3769141093,
+      "elapsed_time": 56,
+      "distance": 508.5,
+      "start_date": "2020-07-16T02:36:37Z",
+      "start_date_local": "2020-07-15T19:36:37Z",
+      "is_kom": false
+    },
+    "starred_date": "2026-06-14T19:13:45Z"
+  },
+  {
+    "id": 39103484,
+    "resource_state": 2,
+    "name": "Lake Marg CW Loop",
+    "activity_type": "Ride",
+    "distance": 2581.0,
+    "average_grade": -0.1,
+    "maximum_grade": 7.2,
+    "elevation_high": 264.0,
+    "elevation_low": 250.4,
+    "start_latlng": [
+      47.768481,
+      -121.904076
+    ],
+    "end_latlng": [
+      47.767412,
+      -121.903689
+    ],
+    "elevation_profile": null,
+    "elevation_profiles": null,
+    "climb_category": 0,
+    "city": null,
+    "state": "Washington",
+    "country": "USA",
+    "private": false,
+    "hazardous": false,
+    "starred": true,
+    "starred_date": "2026-06-21T00:56:37Z"
   }
 ]

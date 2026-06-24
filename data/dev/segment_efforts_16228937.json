@@ -1,0 +1,2762 @@
+[
+  {
+    "id": 3500170690744435714,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18879141341,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 52,
+    "moving_time": 52,
+    "start_date": "2026-06-11T14:36:11Z",
+    "start_date_local": "2026-06-11T07:36:11Z",
+    "distance": 541.5,
+    "start_index": 1507,
+    "end_index": 1559,
+    "average_cadence": 86.7,
+    "device_watts": true,
+    "average_watts": 589.5,
+    "average_heartrate": 172.6,
+    "max_heartrate": 178.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 2,
+        "type": "overall",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": 1
+  },
+  {
+    "id": 3498000775846844624,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18798146628,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 59,
+    "moving_time": 59,
+    "start_date": "2026-06-05T14:50:16Z",
+    "start_date_local": "2026-06-05T07:50:16Z",
+    "distance": 541.5,
+    "start_index": 1527,
+    "end_index": 1586,
+    "average_cadence": 84.9,
+    "device_watts": true,
+    "average_watts": 458.0,
+    "average_heartrate": 177.9,
+    "max_heartrate": 181.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497278658245882240,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18771384330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 62,
+    "moving_time": 62,
+    "start_date": "2026-06-03T14:59:43Z",
+    "start_date_local": "2026-06-03T07:59:43Z",
+    "distance": 541.5,
+    "start_index": 1573,
+    "end_index": 1635,
+    "average_cadence": 89.9,
+    "device_watts": true,
+    "average_watts": 421.6,
+    "average_heartrate": 169.8,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481691945178212842,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18198995851,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 73,
+    "moving_time": 73,
+    "start_date": "2026-04-21T14:43:49Z",
+    "start_date_local": "2026-04-21T07:43:49Z",
+    "distance": 541.5,
+    "start_index": 1474,
+    "end_index": 1547,
+    "average_cadence": 81.9,
+    "device_watts": true,
+    "average_watts": 320.7,
+    "average_heartrate": 169.6,
+    "max_heartrate": 173.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3389383147776645378,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 78,
+    "moving_time": 78,
+    "start_date": "2025-08-09T20:39:26Z",
+    "start_date_local": "2025-08-09T13:39:26Z",
+    "distance": 541.5,
+    "start_index": 5873,
+    "end_index": 5951,
+    "average_cadence": 83.1,
+    "device_watts": true,
+    "average_watts": 265.3,
+    "average_heartrate": 159.2,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387297855184652032,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 15336818451,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2025-08-03T19:51:13Z",
+    "start_date_local": "2025-08-03T12:51:13Z",
+    "distance": 541.5,
+    "start_index": 8304,
+    "end_index": 8384,
+    "average_cadence": 73.1,
+    "device_watts": true,
+    "average_watts": 278.1,
+    "average_heartrate": 148.6,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474079913192174428,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 17926029115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 81,
+    "moving_time": 81,
+    "start_date": "2026-03-31T14:17:37Z",
+    "start_date_local": "2026-03-31T07:17:37Z",
+    "distance": 541.5,
+    "start_index": 1589,
+    "end_index": 1670,
+    "average_cadence": 82.2,
+    "device_watts": true,
+    "average_watts": 285.2,
+    "average_heartrate": 152.8,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3496913677219473532,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-06-02T14:52:36Z",
+    "start_date_local": "2026-06-02T07:52:36Z",
+    "distance": 541.5,
+    "start_index": 1487,
+    "end_index": 1570,
+    "average_cadence": 82.0,
+    "device_watts": true,
+    "average_watts": 268.7,
+    "average_heartrate": 138.3,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492564490291545414,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18596486933,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2026-05-21T14:49:19Z",
+    "start_date_local": "2026-05-21T07:49:19Z",
+    "distance": 541.5,
+    "start_index": 1781,
+    "end_index": 1866,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 139.6,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480242032472663494,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18146236077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2026-04-17T14:41:05Z",
+    "start_date_local": "2026-04-17T07:41:05Z",
+    "distance": 541.5,
+    "start_index": 1654,
+    "end_index": 1740,
+    "average_cadence": 77.9,
+    "device_watts": true,
+    "average_watts": 257.6,
+    "average_heartrate": 148.4,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491476539240090862,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18555893716,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 86,
+    "moving_time": 86,
+    "start_date": "2026-05-18T14:45:44Z",
+    "start_date_local": "2026-05-18T07:45:44Z",
+    "distance": 541.5,
+    "start_index": 1672,
+    "end_index": 1758,
+    "average_cadence": 81.1,
+    "device_watts": true,
+    "average_watts": 263.4,
+    "average_heartrate": 149.1,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3354247835625230720,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 14380153374,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 88,
+    "moving_time": 88,
+    "start_date": "2025-05-04T19:51:33Z",
+    "start_date_local": "2025-05-04T12:51:33Z",
+    "distance": 541.5,
+    "start_index": 6022,
+    "end_index": 6110,
+    "average_cadence": 68.7,
+    "device_watts": true,
+    "average_watts": 234.9,
+    "average_heartrate": 133.2,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3341623892798567342,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 14035221050,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 89,
+    "moving_time": 89,
+    "start_date": "2025-03-30T21:59:30Z",
+    "start_date_local": "2025-03-30T14:59:30Z",
+    "distance": 541.5,
+    "start_index": 18089,
+    "end_index": 18178,
+    "average_cadence": 70.5,
+    "device_watts": true,
+    "average_watts": 252.4,
+    "average_heartrate": 151.0,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481328901821177650,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18185180204,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 89,
+    "moving_time": 89,
+    "start_date": "2026-04-20T14:43:16Z",
+    "start_date_local": "2026-04-20T07:43:16Z",
+    "distance": 541.5,
+    "start_index": 1666,
+    "end_index": 1755,
+    "average_cadence": 75.2,
+    "device_watts": true,
+    "average_watts": 263.1,
+    "average_heartrate": 144.6,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499819134920726026,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18866437059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 89,
+    "moving_time": 89,
+    "start_date": "2026-06-10T14:58:55Z",
+    "start_date_local": "2026-06-10T07:58:55Z",
+    "distance": 541.5,
+    "start_index": 1557,
+    "end_index": 1646,
+    "average_cadence": 79.0,
+    "device_watts": true,
+    "average_watts": 233.6,
+    "average_heartrate": 135.7,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3434594408582971918,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 16723191540,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2025-12-12T15:03:54Z",
+    "start_date_local": "2025-12-12T07:03:54Z",
+    "distance": 541.5,
+    "start_index": 1784,
+    "end_index": 1874,
+    "average_cadence": 81.3,
+    "device_watts": true,
+    "average_watts": 254.9,
+    "average_heartrate": 137.0,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472258010526416814,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 17865936615,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2026-03-26T13:59:52Z",
+    "start_date_local": "2026-03-26T06:59:52Z",
+    "distance": 541.5,
+    "start_index": 1688,
+    "end_index": 1778,
+    "average_cadence": 72.7,
+    "device_watts": true,
+    "average_watts": 242.2,
+    "average_heartrate": 148.0,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482418679127371618,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18227023189,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2026-04-23T14:33:34Z",
+    "start_date_local": "2026-04-23T07:33:34Z",
+    "distance": 541.5,
+    "start_index": 1716,
+    "end_index": 1806,
+    "average_cadence": 77.7,
+    "device_watts": true,
+    "average_watts": 247.5,
+    "average_heartrate": 140.2,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491841620558426418,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18569402318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2026-05-19T14:54:52Z",
+    "start_date_local": "2026-05-19T07:54:52Z",
+    "distance": 541.5,
+    "start_index": 1740,
+    "end_index": 1830,
+    "average_cadence": 75.6,
+    "device_watts": true,
+    "average_watts": 229.3,
+    "average_heartrate": 135.0,
+    "max_heartrate": 141.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492201193559440268,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18582983778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 90,
+    "moving_time": 90,
+    "start_date": "2026-05-20T14:46:02Z",
+    "start_date_local": "2026-05-20T07:46:02Z",
+    "distance": 541.5,
+    "start_index": 1686,
+    "end_index": 1776,
+    "average_cadence": 74.7,
+    "device_watts": true,
+    "average_watts": 227.3,
+    "average_heartrate": 133.8,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474805379873763352,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 17951108555,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 92,
+    "moving_time": 92,
+    "start_date": "2026-04-02T14:36:08Z",
+    "start_date_local": "2026-04-02T07:36:08Z",
+    "distance": 541.5,
+    "start_index": 1760,
+    "end_index": 1852,
+    "average_cadence": 74.5,
+    "device_watts": true,
+    "average_watts": 231.9,
+    "average_heartrate": 145.0,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476257563192854736,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18001520259,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 93,
+    "moving_time": 93,
+    "start_date": "2026-04-06T14:48:56Z",
+    "start_date_local": "2026-04-06T07:48:56Z",
+    "distance": 541.5,
+    "start_index": 1725,
+    "end_index": 1818,
+    "average_cadence": 74.8,
+    "device_watts": true,
+    "average_watts": 229.1,
+    "average_heartrate": 138.5,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477343057732791482,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18042080515,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 93,
+    "moving_time": 93,
+    "start_date": "2026-04-09T14:40:31Z",
+    "start_date_local": "2026-04-09T07:40:31Z",
+    "distance": 541.5,
+    "start_index": 1818,
+    "end_index": 1911,
+    "average_cadence": 73.7,
+    "device_watts": true,
+    "average_watts": 241.6,
+    "average_heartrate": 134.9,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978678229820,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 93,
+    "moving_time": 93,
+    "start_date": "2026-05-22T15:00:20Z",
+    "start_date_local": "2026-05-22T08:00:20Z",
+    "distance": 541.5,
+    "start_index": 1656,
+    "end_index": 1749,
+    "average_cadence": 78.6,
+    "device_watts": true,
+    "average_watts": 238.7,
+    "average_heartrate": 134.4,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500540468032993766,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18892073258,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 93,
+    "moving_time": 93,
+    "start_date": "2026-06-12T14:55:00Z",
+    "start_date_local": "2026-06-12T07:55:00Z",
+    "distance": 541.5,
+    "start_index": 1648,
+    "end_index": 1741,
+    "average_cadence": 69.8,
+    "device_watts": true,
+    "average_watts": 220.0,
+    "average_heartrate": 125.8,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502351043469021740,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18959278443,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 93,
+    "moving_time": 93,
+    "start_date": "2026-06-17T14:51:03Z",
+    "start_date_local": "2026-06-17T07:51:03Z",
+    "distance": 541.5,
+    "start_index": 1787,
+    "end_index": 1880,
+    "average_cadence": 78.8,
+    "device_watts": true,
+    "average_watts": 226.7,
+    "average_heartrate": 122.5,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3504163656044046132,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 19023440714,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 93,
+    "moving_time": 93,
+    "start_date": "2026-06-22T14:59:10Z",
+    "start_date_local": "2026-06-22T07:59:10Z",
+    "distance": 541.5,
+    "start_index": 1708,
+    "end_index": 1801,
+    "average_cadence": 75.7,
+    "device_watts": true,
+    "average_watts": 223.5,
+    "average_heartrate": 129.4,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482778953324179652,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18240132582,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 94,
+    "moving_time": 94,
+    "start_date": "2026-04-24T14:40:53Z",
+    "start_date_local": "2026-04-24T07:40:53Z",
+    "distance": 541.5,
+    "start_index": 1721,
+    "end_index": 1815,
+    "average_cadence": 72.7,
+    "device_watts": true,
+    "average_watts": 241.0,
+    "average_heartrate": 134.2,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3479877879681588256,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18133000629,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 95,
+    "moving_time": 95,
+    "start_date": "2026-04-16T14:34:03Z",
+    "start_date_local": "2026-04-16T07:34:03Z",
+    "distance": 541.5,
+    "start_index": 1774,
+    "end_index": 1869,
+    "average_cadence": 75.9,
+    "device_watts": true,
+    "average_watts": 234.4,
+    "average_heartrate": 141.0,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499088005641760128,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18837934725,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 96,
+    "moving_time": 96,
+    "start_date": "2026-06-08T14:51:57Z",
+    "start_date_local": "2026-06-08T07:51:57Z",
+    "distance": 541.5,
+    "start_index": 1666,
+    "end_index": 1762,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 214.7,
+    "average_heartrate": 129.7,
+    "max_heartrate": 133.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3012128648611568660,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 7906979690,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 98,
+    "moving_time": 98,
+    "start_date": "2022-10-03T19:23:18Z",
+    "start_date_local": "2022-10-03T12:23:18Z",
+    "distance": 541.5,
+    "start_index": 1986,
+    "end_index": 2082,
+    "device_watts": false,
+    "average_heartrate": 129.0,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476974597733260492,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18028038338,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 98,
+    "moving_time": 98,
+    "start_date": "2026-04-08T14:16:04Z",
+    "start_date_local": "2026-04-08T07:16:04Z",
+    "distance": 541.5,
+    "start_index": 1807,
+    "end_index": 1905,
+    "device_watts": false,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477707428061735792,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18054908859,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 98,
+    "moving_time": 98,
+    "start_date": "2026-04-10T14:35:56Z",
+    "start_date_local": "2026-04-10T07:35:56Z",
+    "distance": 541.5,
+    "start_index": 1795,
+    "end_index": 1893,
+    "average_cadence": 70.8,
+    "device_watts": true,
+    "average_watts": 223.6,
+    "average_heartrate": 132.6,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476620162039311378,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18014415654,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 99,
+    "moving_time": 99,
+    "start_date": "2026-04-07T14:48:40Z",
+    "start_date_local": "2026-04-07T07:48:40Z",
+    "distance": 541.5,
+    "start_index": 1722,
+    "end_index": 1821,
+    "average_cadence": 73.2,
+    "device_watts": true,
+    "average_watts": 213.3,
+    "average_heartrate": 133.0,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486401448933582104,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18373080739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 99,
+    "moving_time": 99,
+    "start_date": "2026-05-04T14:35:40Z",
+    "start_date_local": "2026-05-04T07:35:40Z",
+    "distance": 541.5,
+    "start_index": 1764,
+    "end_index": 1863,
+    "average_cadence": 75.7,
+    "device_watts": true,
+    "average_watts": 222.6,
+    "average_heartrate": 134.9,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769751647493984,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18386825119,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 100,
+    "moving_time": 100,
+    "start_date": "2026-05-05T14:53:50Z",
+    "start_date_local": "2026-05-05T07:53:50Z",
+    "distance": 541.5,
+    "start_index": 1846,
+    "end_index": 1946,
+    "device_watts": false,
+    "average_heartrate": 135.5,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3501990990446057654,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18944935604,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 102,
+    "moving_time": 102,
+    "start_date": "2026-06-16T14:57:49Z",
+    "start_date_local": "2026-06-16T07:57:49Z",
+    "distance": 541.5,
+    "start_index": 1806,
+    "end_index": 1908,
+    "average_cadence": 69.1,
+    "device_watts": true,
+    "average_watts": 185.4,
+    "average_heartrate": 114.6,
+    "max_heartrate": 119.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502714930941854876,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18972878811,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 104,
+    "moving_time": 104,
+    "start_date": "2026-06-18T14:58:43Z",
+    "start_date_local": "2026-06-18T07:58:43Z",
+    "distance": 541.5,
+    "start_index": 1868,
+    "end_index": 1972,
+    "average_cadence": 73.5,
+    "device_watts": true,
+    "average_watts": 190.6,
+    "average_heartrate": 114.8,
+    "max_heartrate": 119.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020008449433172648,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 8017333792,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 109,
+    "moving_time": 109,
+    "start_date": "2022-10-25T14:36:04Z",
+    "start_date_local": "2022-10-25T07:36:04Z",
+    "distance": 541.5,
+    "start_index": 2039,
+    "end_index": 2148,
+    "device_watts": false,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487129644538234852,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18400369545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 111,
+    "moving_time": 111,
+    "start_date": "2026-05-06T14:46:01Z",
+    "start_date_local": "2026-05-06T07:46:01Z",
+    "distance": 541.5,
+    "start_index": 1953,
+    "end_index": 2064,
+    "device_watts": false,
+    "average_heartrate": 122.2,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489304526498880250,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18478432225,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 111,
+    "moving_time": 111,
+    "start_date": "2026-05-12T14:50:30Z",
+    "start_date_local": "2026-05-12T07:50:30Z",
+    "distance": 541.5,
+    "start_index": 1996,
+    "end_index": 2107,
+    "device_watts": false,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490027183722420978,
+    "resource_state": 2,
+    "name": "Blackberry trail West",
+    "activity": {
+      "id": 18505534998,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 115,
+    "moving_time": 115,
+    "start_date": "2026-05-14T14:40:33Z",
+    "start_date_local": "2026-05-14T07:40:33Z",
+    "distance": 541.5,
+    "start_index": 2043,
+    "end_index": 2158,
+    "device_watts": false,
+    "average_heartrate": 126.3,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 16228937,
+      "resource_state": 2,
+      "name": "Blackberry trail West",
+      "activity_type": "Ride",
+      "distance": 541.5,
+      "average_grade": 2.3,
+      "maximum_grade": 6.3,
+      "elevation_high": 100.1,
+      "elevation_low": 87.4,
+      "start_latlng": [
+        47.574834,
+        -122.121503
+      ],
+      "end_latlng": [
+        47.577153,
+        -122.127827
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

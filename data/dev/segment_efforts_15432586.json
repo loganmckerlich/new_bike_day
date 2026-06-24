@@ -312,6 +312,64 @@
     "kom_rank": null
   },
   {
+    "id": 3499222138840530898,
+    "resource_state": 2,
+    "name": "Factoria to 136th PI SE",
+    "activity": {
+      "id": 18844084630,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 172,
+    "moving_time": 172,
+    "start_date": "2026-06-08T23:22:35Z",
+    "start_date_local": "2026-06-08T16:22:35Z",
+    "distance": 983.1,
+    "start_index": 1519,
+    "end_index": 1691,
+    "average_cadence": 85.1,
+    "device_watts": true,
+    "average_watts": 353.1,
+    "average_heartrate": 146.5,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 15432586,
+      "resource_state": 2,
+      "name": "Factoria to 136th PI SE",
+      "activity_type": "Ride",
+      "distance": 983.1,
+      "average_grade": 5.1,
+      "maximum_grade": 8.2,
+      "elevation_high": 111.0,
+      "elevation_low": 61.0,
+      "start_latlng": [
+        47.579578,
+        -122.168693
+      ],
+      "end_latlng": [
+        47.579252,
+        -122.155646
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3486769760487244060,
     "resource_state": 2,
     "name": "Factoria to 136th PI SE",
@@ -678,6 +736,120 @@
     "kom_rank": null
   },
   {
+    "id": 3502475152189346410,
+    "resource_state": 2,
+    "name": "Factoria to 136th PI SE",
+    "activity": {
+      "id": 18964953090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 203,
+    "moving_time": 203,
+    "start_date": "2026-06-17T22:52:07Z",
+    "start_date_local": "2026-06-17T15:52:07Z",
+    "distance": 983.1,
+    "start_index": 1408,
+    "end_index": 1611,
+    "average_cadence": 83.3,
+    "device_watts": true,
+    "average_watts": 265.8,
+    "average_heartrate": 138.1,
+    "max_heartrate": 145.0,
+    "segment": {
+      "id": 15432586,
+      "resource_state": 2,
+      "name": "Factoria to 136th PI SE",
+      "activity_type": "Ride",
+      "distance": 983.1,
+      "average_grade": 5.1,
+      "maximum_grade": 8.2,
+      "elevation_high": 111.0,
+      "elevation_low": 61.0,
+      "start_latlng": [
+        47.579578,
+        -122.168693
+      ],
+      "end_latlng": [
+        47.579252,
+        -122.155646
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499972906430893772,
+    "resource_state": 2,
+    "name": "Factoria to 136th PI SE",
+    "activity": {
+      "id": 18872776650,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 210,
+    "moving_time": 210,
+    "start_date": "2026-06-11T01:14:37Z",
+    "start_date_local": "2026-06-10T18:14:37Z",
+    "distance": 983.1,
+    "start_index": 1460,
+    "end_index": 1670,
+    "average_cadence": 78.1,
+    "device_watts": true,
+    "average_watts": 267.6,
+    "segment": {
+      "id": 15432586,
+      "resource_state": 2,
+      "name": "Factoria to 136th PI SE",
+      "activity_type": "Ride",
+      "distance": 983.1,
+      "average_grade": 5.1,
+      "maximum_grade": 8.2,
+      "elevation_high": 111.0,
+      "elevation_low": 61.0,
+      "start_latlng": [
+        47.579578,
+        -122.168693
+      ],
+      "end_latlng": [
+        47.579252,
+        -122.155646
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3481460322328486532,
     "resource_state": 2,
     "name": "Factoria to 136th PI SE",
@@ -940,6 +1112,122 @@
     "average_watts": 259.0,
     "average_heartrate": 131.9,
     "max_heartrate": 143.0,
+    "segment": {
+      "id": 15432586,
+      "resource_state": 2,
+      "name": "Factoria to 136th PI SE",
+      "activity_type": "Ride",
+      "distance": 983.1,
+      "average_grade": 5.1,
+      "maximum_grade": 8.2,
+      "elevation_high": 111.0,
+      "elevation_low": 61.0,
+      "start_latlng": [
+        47.579578,
+        -122.168693
+      ],
+      "end_latlng": [
+        47.579252,
+        -122.155646
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502865342084047818,
+    "resource_state": 2,
+    "name": "Factoria to 136th PI SE",
+    "activity": {
+      "id": 18978898053,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 236,
+    "moving_time": 236,
+    "start_date": "2026-06-19T00:49:06Z",
+    "start_date_local": "2026-06-18T17:49:06Z",
+    "distance": 983.1,
+    "start_index": 1484,
+    "end_index": 1720,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 246.8,
+    "average_heartrate": 133.5,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 15432586,
+      "resource_state": 2,
+      "name": "Factoria to 136th PI SE",
+      "activity_type": "Ride",
+      "distance": 983.1,
+      "average_grade": 5.1,
+      "maximum_grade": 8.2,
+      "elevation_high": 111.0,
+      "elevation_low": 61.0,
+      "start_latlng": [
+        47.579578,
+        -122.168693
+      ],
+      "end_latlng": [
+        47.579252,
+        -122.155646
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497402457894497522,
+    "resource_state": 2,
+    "name": "Factoria to 136th PI SE",
+    "activity": {
+      "id": 18777094929,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 237,
+    "moving_time": 237,
+    "start_date": "2026-06-03T23:01:08Z",
+    "start_date_local": "2026-06-03T16:01:08Z",
+    "distance": 983.1,
+    "start_index": 1432,
+    "end_index": 1669,
+    "average_cadence": 78.3,
+    "device_watts": true,
+    "average_watts": 235.5,
+    "average_heartrate": 133.4,
+    "max_heartrate": 140.0,
     "segment": {
       "id": 15432586,
       "resource_state": 2,
@@ -1324,6 +1612,64 @@
     "kom_rank": null
   },
   {
+    "id": 3502151499267426250,
+    "resource_state": 2,
+    "name": "Factoria to 136th PI SE",
+    "activity": {
+      "id": 18952255473,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 255,
+    "moving_time": 254,
+    "start_date": "2026-06-17T01:28:13Z",
+    "start_date_local": "2026-06-16T18:28:13Z",
+    "distance": 983.1,
+    "start_index": 1595,
+    "end_index": 1850,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 219.7,
+    "average_heartrate": 125.8,
+    "max_heartrate": 132.0,
+    "segment": {
+      "id": 15432586,
+      "resource_state": 2,
+      "name": "Factoria to 136th PI SE",
+      "activity_type": "Ride",
+      "distance": 983.1,
+      "average_grade": 5.1,
+      "maximum_grade": 8.2,
+      "elevation_high": 111.0,
+      "elevation_low": 61.0,
+      "start_latlng": [
+        47.579578,
+        -122.168693
+      ],
+      "end_latlng": [
+        47.579252,
+        -122.155646
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3477837788558010266,
     "resource_state": 2,
     "name": "Factoria to 136th PI SE",
@@ -1348,6 +1694,64 @@
     "average_watts": 239.7,
     "average_heartrate": 129.2,
     "max_heartrate": 137.0,
+    "segment": {
+      "id": 15432586,
+      "resource_state": 2,
+      "name": "Factoria to 136th PI SE",
+      "activity_type": "Ride",
+      "distance": 983.1,
+      "average_grade": 5.1,
+      "maximum_grade": 8.2,
+      "elevation_high": 111.0,
+      "elevation_low": 61.0,
+      "start_latlng": [
+        47.579578,
+        -122.168693
+      ],
+      "end_latlng": [
+        47.579252,
+        -122.155646
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500661989298097834,
+    "resource_state": 2,
+    "name": "Factoria to 136th PI SE",
+    "activity": {
+      "id": 18896368704,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 257,
+    "moving_time": 257,
+    "start_date": "2026-06-12T22:45:38Z",
+    "start_date_local": "2026-06-12T15:45:38Z",
+    "distance": 983.1,
+    "start_index": 1615,
+    "end_index": 1872,
+    "average_cadence": 77.5,
+    "device_watts": true,
+    "average_watts": 215.6,
+    "average_heartrate": 121.5,
+    "max_heartrate": 131.0,
     "segment": {
       "id": 15432586,
       "resource_state": 2,
@@ -1636,6 +2040,64 @@
     "start_index": 1734,
     "end_index": 2030,
     "device_watts": false,
+    "segment": {
+      "id": 15432586,
+      "resource_state": 2,
+      "name": "Factoria to 136th PI SE",
+      "activity_type": "Ride",
+      "distance": 983.1,
+      "average_grade": 5.1,
+      "maximum_grade": 8.2,
+      "elevation_high": 111.0,
+      "elevation_low": 61.0,
+      "start_latlng": [
+        47.579578,
+        -122.168693
+      ],
+      "end_latlng": [
+        47.579252,
+        -122.155646
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498138073833999124,
+    "resource_state": 2,
+    "name": "Factoria to 136th PI SE",
+    "activity": {
+      "id": 18803245094,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 297,
+    "moving_time": 297,
+    "start_date": "2026-06-05T23:35:19Z",
+    "start_date_local": "2026-06-05T16:35:19Z",
+    "distance": 983.1,
+    "start_index": 1464,
+    "end_index": 1761,
+    "average_cadence": 80.3,
+    "device_watts": true,
+    "average_watts": 196.2,
+    "average_heartrate": 121.2,
+    "max_heartrate": 129.0,
     "segment": {
       "id": 15432586,
       "resource_state": 2,
