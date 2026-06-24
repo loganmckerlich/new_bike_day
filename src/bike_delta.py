@@ -879,12 +879,24 @@ def aggregate_paired_delta_bootstrap(
     }
 # ── XGBoost watts-efficiency counterfactual pipeline ──────────────────────────
 
+# add some transformations of speed ie cbrt or sqrt
 XGB_WATT_FEATURES: list[str] = [
     "speed_kmh",
-    "average_grade",
-    "maximum_grade",
-    "doy_sin",
-    "doy_cos",
+    'average_grade',
+    'maximum_grade',
+    'doy_sin',
+    'doy_cos',
+    'distance_km',
+    'heartrate',
+    'effort_count',
+    'segtype_detail_sprint_uphill',
+    'woy_cos',
+    'month_sin',
+    'month_cos',
+    'woy_sin',
+    'segtype_ascent',
+    'segtype_detail_sprint_flat',
+    'segtype_detail_sprint_downhill'
 ]
 
 
