@@ -93,8 +93,6 @@ def get_available_bikes() -> list[str]:
     watt_efforts = efforts[efforts["average_watts"].notna()].copy()
     watt_efforts = watt_efforts.dropna(subset=["gear_id"])
 
-    st.dataframe(watt_efforts)
-
     available_bikes = (
         watt_efforts.groupby("bike_name")["effort_id"]
         .count()
