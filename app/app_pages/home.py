@@ -37,18 +37,16 @@ def main() -> None:
            effort's speed watt effeciency against the segment average. You can trim the thresholds based on
            the visualizations to see what feels right.
 
-        3. **Bike Comparison** —
-               
-           **Segmented:** Spider charts and head-to-head tables let you compare your bikes across
+        3. **Bike Comparison Segment Mode** — Spider charts and head-to-head tables let you compare your bikes across
            segment types (sprints, flats, climbs, descents). Which bike is strongest on which terrain?
                
-           **Overall:** Treating residuals as counterfactuals in a pseudo DML style analysis to compare
+        4. **Bike Comparison Overall Mode** — Treating residuals as counterfactuals in a pseudo DML style analysis to compare
            bikes controlling for as many factors as we can get data on. Which bike is strongest overall?
 
            The idea here is that ```Speed = <A bunch of factors> + bike``` so if we can represent as many of those
            factors as possible using data from strava, then we can solve for ```bike```.
 
-        4. **Final Conclusions** — A summary of findings across all analyses. *(Coming soon)*
+        5. **Final Conclusions** — A summary of findings across all analyses. *(Coming soon)*
 
         ---
         First let us know if you want metric or imperial units:
