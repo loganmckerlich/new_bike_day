@@ -72,6 +72,3 @@ def main() -> None:
 navigator("home1")
 main()
 navigator("home2")
-
-st.write(st.session_state.get("available_bikes"))
-st.write(st.session_state.get("bikes"))
