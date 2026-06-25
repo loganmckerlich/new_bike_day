@@ -65,6 +65,12 @@ CREATE TABLE IF NOT EXISTS bikes (
 )
 """
 
+_CREATE_FTP: str = """
+CREATE TABLE IF NOT EXISTS athlete_ftp (
+    athlete_id INTEGER PRIMARY KEY,
+    ftp        INTEGER
+)"""
+
 _CREATE_ATHLETE_TOKENS: str = """
 CREATE TABLE IF NOT EXISTS athlete_tokens (
     athlete_id    INTEGER PRIMARY KEY,
@@ -132,6 +138,7 @@ def init_db() -> None:
         conn.execute(_CREATE_BIKES)
         conn.execute(_CREATE_ATHLETE_TOKENS)
         conn.execute(_CREATE_SEGMENT_GEO)
+        conn.execute(_CREATE_FTP)
 
 # ---------------------------------------------------------------------------
 # Starred segments
@@ -247,6 +254,51 @@ def clear_efforts(athlete_id: int) -> None:
         if table_exists:
             conn.execute("DELETE FROM segment_efforts WHERE athlete_id = ?", (athlete_id,))
 
+
+# =======
+# FTP
+# =======
+
+def save_ftp(ftp: int | None, athlete_id: int) -> None:
+    """Persist the athlete's FTP value in the database.
+
+    Args:
+        ftp: The athlete's FTP value (watts), or None to clear it.
+        athlete_id: The athlete's Strava user ID.
+    """
+    with _connect() as conn:
+        conn.execute(
+            "INSERT OR REPLACE INTO athlete_ftp (athlete_id, ftp) VALUES (?, ?)",
+            (athlete_id, ftp),
+        )
+
+def load_ftp(athlete_id: int) -> int | None:
+    """Load the athlete's FTP value from the database.
+
+    Args:
+        athlete_id: The athlete's Strava user ID.
+
+    Returns:
+        The athlete's FTP value (watts), or None if not set.
+    """
+    with _connect() as conn:
+        try:
+            row = conn.execute(
+                "SELECT ftp FROM athlete_ftp WHERE athlete_id = ?",
+                (athlete_id,),
+            ).fetchone()
+            return row[0] if row is not None else None
+        except sqlite3.OperationalError:
+            return None
+
+def clear_ftp(athlete_id: int) -> None:
+    """Delete the athlete's FTP value from the database."""
+    with _connect() as conn:
+        table_exists = conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='athlete_ftp'"
+        ).fetchone()
+        if table_exists:
+            conn.execute("DELETE FROM athlete_ftp WHERE athlete_id = ?", (athlete_id,))
 
 # ---------------------------------------------------------------------------
 # Bikes (gear_id → name mapping)

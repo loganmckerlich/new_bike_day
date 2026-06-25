@@ -71,8 +71,8 @@ def main() -> None:
     with left_col:
         st.subheader("⚙️ Cleaning parameters")
 
-        ftp: int | None = st.session_state.get("ftp")
-        _default_min_watts = int(round(ftp * 0.75)) if ftp is not None and ftp > 0 else 0
+        ftp = st.session_state.get("ftp")
+        _default_min_watts = int(round(ftp * 0.5)) if ftp is not None and ftp > 0 else 0
         st.session_state.setdefault("min_watts", _default_min_watts)
         min_watts: int = st.number_input(
             "Minimum watts",
@@ -82,7 +82,7 @@ def main() -> None:
             key="min_watts",
             help=(
                 "Efforts with average power below this threshold are excluded from analysis. "
-                "Default is 75 % of your FTP (if available). Set to 0 to disable."
+                "Default is 50 % of your FTP (if available). Set to 0 to disable."
             ),
         )
 

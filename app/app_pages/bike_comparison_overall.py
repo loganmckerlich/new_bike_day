@@ -652,7 +652,6 @@ def show(bikes_to_compare: list[str]) -> None:
             label = _residual_col,
             predicted_col=_pred_col,
             target_col=_target_col,
-            cache_key = str(_mode_str) + str(_disp_scale)
         )
 
     # this is the per effort avg from the boot model, has target and prediction and residual for each effort
@@ -761,7 +760,7 @@ def show(bikes_to_compare: list[str]) -> None:
 
     df_train_scope_b, df_test_b = _date_split_bike_df(df_scope, bike_b)
     with st.spinner(f"Training XGBoost on {bike_b}\u2026"):
-        model_b = _fit_fn(df_train_scope_b, bike_b, str(_mode_str) + str(_disp_scale)))
+        model_b = _fit_fn(df_train_scope_b, bike_b, str(_mode_str) + str(_disp_scale))
 
     train_b = _apply_fn(model_b, df_train_scope_b, bike_b)
     holdout_b = _apply_fn(model_b, df_test_b, bike_b)
@@ -787,7 +786,6 @@ def show(bikes_to_compare: list[str]) -> None:
             label = _residual_col,
             predicted_col=_pred_col,
             target_col=_target_col,
-            cache_key = str(_mode_str) + str(_disp_scale)
         )
 
 

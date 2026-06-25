@@ -674,7 +674,6 @@ def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str, cache_key: str = None)
     model.fit(X, y)
     return model
 
-@st.cache_data(ttl=3600)
 def apply_model_to_bike(
     model: xgb.XGBRegressor,
     df: pd.DataFrame,
@@ -722,7 +721,6 @@ def apply_model_to_bike(
     out["speed_residual"] = out["speed_kmh"] - out["predicted_speed_kmh"]
     return out
 
-@st.cache_data(ttl=3600)
 def bootstrap_pipeline(
     df: pd.DataFrame,
     train_bike: str,
@@ -734,47 +732,8 @@ def bootstrap_pipeline(
     label: str = "speed_residual",
     predicted_col: str = "predicted_speed_kmh",
     target_col: str = "speed_kmh",
-    cache_key: str | None = None,
 ) -> dict:
-    """Bootstrap the train/predict pipeline to quantify uncertainty in the
-    estimated speed effect for one direction (e.g. train on A, predict B).
 
-    On each iteration, resamples the full dataset with replacement, refits
-    fit_xgb_speed_model on train_bike, applies it to target_bike via
-    apply_model_to_bike, and records the mean speed_residual as that
-    iteration's effect estimate. The spread of estimates across iterations
-    forms the confidence interval for the reported effect.
-
-    Iterations where either bike falls below min_efforts_per_bike after
-    resampling are skipped rather than raising, since rare imbalanced draws
-    are expected with resampling.
-
-    Parameters
-    ----------
-    df:
-        Prepared dataset from prepare_delta_dataset (all bikes).
-    train_bike:
-        Bike to train the model on.
-    target_bike:
-        Bike to predict and compute residuals for.
-    n_iterations:
-        Number of bootstrap resamples.
-    min_efforts_per_bike:
-        Minimum usable efforts required for either bike in a resample,
-        below which that iteration is skipped.
-    random_state:
-        Seed for reproducibility.
-
-    Returns
-    -------
-    dict
-        estimates: np.ndarray of per-iteration mean residuals
-        mean_estimate: float, mean across all successful iterations
-        ci_lower: float, 2.5th percentile
-        ci_upper: float, 97.5th percentile
-        n_successful: int, iterations that didn't get skipped
-        n_skipped: int, iterations skipped for insufficient data
-    """
     rng = np.random.default_rng(random_state)
     residuals = []
     iteration_mean_resid = []
@@ -947,7 +906,6 @@ def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str, cache_key: str = None) 
     model.fit(X, y)
     return model
 
-@st.cache_data(ttl=3600)
 def apply_watt_model_to_bike(
     model: xgb.XGBRegressor,
     df: pd.DataFrame,
