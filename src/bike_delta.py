@@ -35,7 +35,7 @@ from scipy.stats import ks_2samp
 import statsmodels.formula.api as smf
 from sklearn.ensemble import GradientBoostingRegressor
 import xgboost as xgb
-
+import streamlit as st
 from src.analytics import compute_speed_per_watt
 
 __all__ = [
@@ -580,6 +580,10 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     # ── Power transforms ──────────────────────────────────────────────────────
     out["log_watts"] = np.log1p(out["average_watts"])
     out["cbrt_watts"] = np.cbrt(out["average_watts"])
+
+    # Speed transforms
+    out["log_speed"] = np.log1p(out["speed_kmh"])
+    out["cbrt_speed"] = np.cbrt(out["speed_kmh"])
     
     # ── Interaction: power efficiency on a slope ──────────────────────────────
     safe_grade = out["average_grade"].replace(0, np.nan)
@@ -620,8 +624,8 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     
     return out.reset_index(drop=True)
 
-
-def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
+@st.cache_resource(ttl=3600)
+def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str, cache_key: str = None) -> xgb.XGBRegressor:
     """Train an XGBoost regressor on one bike's efforts to predict speed_kmh.
 
     Features: average_watts, average_grade, doy_sin, doy_cos, ride_index.
@@ -670,7 +674,7 @@ def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
     model.fit(X, y)
     return model
 
-
+@st.cache_data(ttl=3600)
 def apply_model_to_bike(
     model: xgb.XGBRegressor,
     df: pd.DataFrame,
@@ -718,6 +722,7 @@ def apply_model_to_bike(
     out["speed_residual"] = out["speed_kmh"] - out["predicted_speed_kmh"]
     return out
 
+@st.cache_data(ttl=3600)
 def bootstrap_pipeline(
     df: pd.DataFrame,
     train_bike: str,
@@ -729,6 +734,7 @@ def bootstrap_pipeline(
     label: str = "speed_residual",
     predicted_col: str = "predicted_speed_kmh",
     target_col: str = "speed_kmh",
+    cache_key: str | None = None,
 ) -> dict:
     """Bootstrap the train/predict pipeline to quantify uncertainty in the
     estimated speed effect for one direction (e.g. train on A, predict B).
@@ -896,11 +902,13 @@ XGB_WATT_FEATURES: list[str] = [
     'woy_sin',
     'segtype_ascent',
     'segtype_detail_sprint_flat',
-    'segtype_detail_sprint_downhill'
+    'segtype_detail_sprint_downhill',
+    'log_speed',
+    'cbrt_speed'
 ]
 
-
-def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
+@st.cache_resource(ttl=3600)
+def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str, cache_key: str = None) -> xgb.XGBRegressor:
     """Train an XGBoost regressor on one bike's efforts to predict average_watts.
 
     The inverse of :func:`fit_xgb_speed_model`: given the speed achieved and
@@ -939,7 +947,7 @@ def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
     model.fit(X, y)
     return model
 
-
+@st.cache_data(ttl=3600)
 def apply_watt_model_to_bike(
     model: xgb.XGBRegressor,
     df: pd.DataFrame,

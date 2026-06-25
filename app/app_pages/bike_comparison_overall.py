@@ -92,29 +92,16 @@ def _scale_speed_cols(df: pd.DataFrame, scale: float) -> pd.DataFrame:
 
 
 # ── Dataset builder (cached in session state) ─────────────────────────────────
-
+st.cache_data(ttl=3600)
 def _build_delta_df(
     efforts: pd.DataFrame,
     segments: pd.DataFrame,
     bikes: dict[str, str],
 ) -> pd.DataFrame:
-    shape_key = f"{len(efforts)}_{len(segments)}_{len(bikes)}"
-    cached = st.session_state.get("_overall_delta_df")
-    if cached is not None and st.session_state.get("_overall_shape_key") == shape_key:
-        return cached
 
     df = prepare_delta_dataset(efforts, segments, bikes)
     df = engineer_features(df)
- 
-    st.session_state["_overall_delta_df"] = df
-    st.session_state["_overall_shape_key"] = shape_key
     return df
-
-
-def _model_cache_key(bike_name: str, mode: str = "speed", unit: float = 1.0, train_df: pd.DataFrame = None) -> str:
-    data_hash = hashlib.md5(pd.util.hash_pandas_object(train_df).values).hexdigest() if train_df is not None else ""
-    return f"_xgb_{mode}_model__{bike_name}__{unit}__{data_hash}"
-
 
 def _date_split_bike_df(
     df: pd.DataFrame,
@@ -615,15 +602,9 @@ def show(bikes_to_compare: list[str]) -> None:
     )
 
     df_train_scope_a, df_test_a = _date_split_bike_df(df_scope, bike_a)
-    cache_key_a = _model_cache_key(bike_a, _mode_str, _disp_scale, df_train_scope_a)
     with st.spinner(f"Training XGBoost on {bike_a}\u2026"):
-        try:
-            if st.session_state.get(cache_key_a) is None:
-                st.session_state[cache_key_a] = _fit_fn(df_train_scope_a, bike_a)
-            model_a = st.session_state[cache_key_a]
-        except ValueError as e:
-            st.error(str(e))
-            st.stop()
+        model_a = _fit_fn(df_train_scope_a, bike_a, str(_mode_str) + str(_disp_scale))
+
 
     train_a = _apply_fn(model_a, df_train_scope_a, bike_a)
     holdout_a = _apply_fn(model_a, df_test_a, bike_a)
@@ -659,27 +640,21 @@ def show(bikes_to_compare: list[str]) -> None:
             f"the effort's power, grade, and season as inputs."
         )
 
-
-    cache_key_a_boot = _model_cache_key(bike_a, _mode_str+"_boot", _disp_scale, df_scope)
     with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage\u2026"):
-        try:
-            if st.session_state.get(cache_key_a_boot) is None:
-                st.session_state[cache_key_a_boot] = bootstrap_pipeline(
-                    df_scope,
-                    train_bike=bike_a,
-                    target_bike=bike_b,
-                    n_iterations=BOOT_ITERATIONS,
-                    random_state=42,
-                    apply_fn = _apply_fn,
-                    fit_fn = _fit_fn,
-                    label = _residual_col,
-                    predicted_col=_pred_col,
-                    target_col=_target_col,
-                )
-            ab_bootstrap_results = st.session_state[cache_key_a_boot]
-        except ValueError as e:
-            st.error(str(e))
-            st.stop()
+        ab_bootstrap_results = bootstrap_pipeline(
+            df_scope,
+            train_bike=bike_a,
+            target_bike=bike_b,
+            n_iterations=BOOT_ITERATIONS,
+            random_state=42,
+            apply_fn = _apply_fn,
+            fit_fn = _fit_fn,
+            label = _residual_col,
+            predicted_col=_pred_col,
+            target_col=_target_col,
+            cache_key = str(_mode_str) + str(_disp_scale)
+        )
+
     # this is the per effort avg from the boot model, has target and prediction and residual for each effort
     pred_ab = ab_bootstrap_results['effort_residuals']
     if pred_ab.empty:
@@ -785,15 +760,8 @@ def show(bikes_to_compare: list[str]) -> None:
     )
 
     df_train_scope_b, df_test_b = _date_split_bike_df(df_scope, bike_b)
-    cache_key_b = _model_cache_key(bike_b, _mode_str, _model_cache_key, df_train_scope_b)
     with st.spinner(f"Training XGBoost on {bike_b}\u2026"):
-        try:
-            if st.session_state.get(cache_key_b) is None:
-                st.session_state[cache_key_b] = _fit_fn(df_train_scope_b, bike_b)
-            model_b = st.session_state[cache_key_b]
-        except ValueError as e:
-            st.error(str(e))
-            st.stop()
+        model_b = _fit_fn(df_train_scope_b, bike_b, str(_mode_str) + str(_disp_scale)))
 
     train_b = _apply_fn(model_b, df_train_scope_b, bike_b)
     holdout_b = _apply_fn(model_b, df_test_b, bike_b)
@@ -807,26 +775,21 @@ def show(bikes_to_compare: list[str]) -> None:
     )
 
 
-    cache_key_b_boot = _model_cache_key(bike_b, _mode_str+"_boot", _disp_scale, df_scope)
     with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage\u2026"):
-        try:
-            if st.session_state.get(cache_key_b_boot) is None:
-                st.session_state[cache_key_b_boot] = bootstrap_pipeline(
-                    df_scope,
-                    train_bike=bike_b,
-                    target_bike=bike_a,
-                    n_iterations=BOOT_ITERATIONS,
-                    random_state=42,
-                    apply_fn = _apply_fn,
-                    fit_fn = _fit_fn,
-                    label = _residual_col,
-                    predicted_col=_pred_col,
-                    target_col=_target_col,
-                )
-            ba_bootstrap_results = st.session_state[cache_key_b_boot]
-        except ValueError as e:
-            st.error(str(e))
-            st.stop()
+        ba_bootstrap_results = bootstrap_pipeline(
+            df_scope,
+            train_bike=bike_b,
+            target_bike=bike_a,
+            n_iterations=BOOT_ITERATIONS,
+            random_state=42,
+            apply_fn = _apply_fn,
+            fit_fn = _fit_fn,
+            label = _residual_col,
+            predicted_col=_pred_col,
+            target_col=_target_col,
+            cache_key = str(_mode_str) + str(_disp_scale)
+        )
+
 
     pred_ba = ba_bootstrap_results['effort_residuals']
     if pred_ba.empty:

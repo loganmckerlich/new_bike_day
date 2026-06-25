@@ -50,7 +50,7 @@ def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = 
     _save_session(data, gear_frame, bikes, access_token, bike_distances, ftp)
 
 # ---------------------------------------------------------------------------
-# Static cache helpers (Supabase-backed)
+# Static cache helpers (Supabase-backed (soon))
 # ---------------------------------------------------------------------------
 
 def _load_from_db(athlete_id: int) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float]] | None:
@@ -77,18 +77,22 @@ def _save_to_db(
     save_bikes(bikes, athlete_id, bike_distances or {})
 
 
+@st.cache_data(ttl=3600)
 def _process_data(
     access_token: str,
     athlete_id: int,
-    *,
     force_refresh: bool = False,
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float], int | None]:
+    db_cached = _load_from_db(athlete_id)
 
-    if force_refresh:
-        print("Force refresh enabled - clearing cache for athlete_id", athlete_id)
-        clear_efforts(athlete_id)
-        clear_segments(athlete_id)
-        clear_bikes(athlete_id)
+    if force_refresh or db_cached is None:
+        if force_refresh:
+            print("Force refresh enabled - clearing cache for athlete_id", athlete_id)
+            clear_efforts(athlete_id)
+            clear_segments(athlete_id)
+            clear_bikes(athlete_id)
+        else:
+            print("No db cache found for athlete_id", athlete_id, "- fetching from Strava API")
 
         progress = st.progress(0, text="Starting…")
         def on_progress(msg: str, pct: int) -> None:
@@ -98,14 +102,13 @@ def _process_data(
 
         efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
         bike_distances: dict[str, float] = result.get("bike_distances", {})
-        ftp: int | None = result.get("ftp")
+        ftp = result.get("ftp")
         _save_to_db(efforts, segments, bikes, athlete_id, bike_distances)
         return efforts, segments, bikes, bike_distances, ftp
 
-    cached = _load_from_db(athlete_id)
-    if cached is not None:
-        print("Loaded data from cache for athlete_id", athlete_id)
-        efforts, segments, bikes, bike_distances = cached
+    elif db_cached is not None:
+        print("Loaded data from db cache for athlete_id", athlete_id)
+        efforts, segments, bikes, bike_distances = db_cached
         # If bikes table is empty, re-resolve names: try GET /athlete first,
         # then fall back to activity details using the cached efforts' activity_ids.
         if not bikes and access_token:
@@ -124,19 +127,9 @@ def _process_data(
                 pass
         return efforts, segments, bikes, bike_distances, None
     else:
-        print("No cache found for athlete_id", athlete_id, "- fetching from Strava API")
-        with st.spinner("⏳ Fetching your Strava data for the first time…"):
-            progress = st.progress(0, text="Starting…")
-            def on_progress(msg: str, pct: int) -> None:
-                progress.progress(pct, text=msg)
-            result = ingest_all(access_token, progress_callback=on_progress)
-            progress.progress(100, text="✅ Complete!")
+        st.error("OOP, This shouldnt happen")
+        st.stop()
 
-        efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
-        bike_distances = result.get("bike_distances", {})
-        ftp = result.get("ftp")
-        _save_to_db(efforts, segments, bikes, athlete_id, bike_distances)
-        return efforts, segments, bikes, bike_distances, ftp
 
 def _gear_label(gear_id: str | None, bikes: dict[str, str]) -> str:
     # pd.isna() handles None, float NaN, and pd.NA consistently.
