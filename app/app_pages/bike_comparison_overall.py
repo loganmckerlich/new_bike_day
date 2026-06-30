@@ -1,5 +1,15 @@
-"""Bike Comparison page – tab host for Overall and Segmented analyses."""
+# """Overall bike comparison — XGBoost counterfactual speed pipeline.
 
+# Method
+# ------
+# 1. Train an XGBoost model to predict speed from power, grade, and seasonal
+#    features using only Bike A's efforts.
+# 2. Apply that model to Bike B's effort features to get a counterfactual speed
+#    ("how fast would Bike A have gone in these conditions?").
+# 3. Residual = actual Bike B speed − predicted → positive means B is faster.
+# 4. Repeat steps 1–3 with A and B swapped (symmetry check).
+# 5. Aggregate both directions: combined = (fwd_mean − rev_mean) / 2.
+# """
 from __future__ import annotations
 
 import sys
@@ -20,7 +30,6 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-import hashlib
 
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
@@ -39,19 +48,6 @@ from src.bike_delta import (
 from src._ui_helpers import use_metric, spd_label, get_available_bikes
 
 from src.utils import navigator, page_guard
-
-"""Overall bike comparison — XGBoost counterfactual speed pipeline.
-
-Method
-------
-1. Train an XGBoost model to predict speed from power, grade, and seasonal
-   features using only Bike A's efforts.
-2. Apply that model to Bike B's effort features to get a counterfactual speed
-   ("how fast would Bike A have gone in these conditions?").
-3. Residual = actual Bike B speed − predicted → positive means B is faster.
-4. Repeat steps 1–3 with A and B swapped (symmetry check).
-5. Aggregate both directions: combined = (fwd_mean − rev_mean) / 2.
-"""
 
 
 _COLOR_A = "#4C72B0"

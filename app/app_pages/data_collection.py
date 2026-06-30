@@ -32,7 +32,7 @@ from src.database import (
     save_segments,
     save_ftp
 )
-from src.fetch import ingest_all, PremiumOnlyError, get_athlete_bikes
+from src.fetch import ingest_all, PremiumOnlyError
 from src.home_personality import load_dev_athlete_profile
 from src.auth import custom_auth_button, handle_redirect
 
