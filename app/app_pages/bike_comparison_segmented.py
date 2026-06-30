@@ -106,27 +106,20 @@ def comp_inputs():
     )
     return bikes_to_compare, min_efforts
 
+@st.cache_data(ttl=3600)
 def _get_segment_geo(segment_id: int) -> dict:
-    cache_key = f"segment_geo_{segment_id}"
-    cached = st.session_state.get(cache_key)
-    if cached is not None:
-        return cached
-
     init_db()
     db_cached = load_segment_geo(segment_id)
     if db_cached is not None:
-        st.session_state[cache_key] = db_cached
         return db_cached
 
     if not access_token:
-        st.session_state[cache_key] = {}
         return {}
 
     detail = get_segment_detail(access_token, segment_id)
     streams = get_segment_streams(access_token, segment_id)
     save_segment_geo(segment_id, detail, streams)
     result = {**detail, "streams": streams}
-    st.session_state[cache_key] = result
     return result
 
 

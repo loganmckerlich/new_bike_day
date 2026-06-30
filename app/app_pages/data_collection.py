@@ -21,15 +21,18 @@ from src.database import (
     clear_bikes,
     clear_efforts,
     clear_segments,
+    clear_ftp,
     init_db,
     load_bikes,
     load_efforts,
     load_segments,
+    load_ftp,
     save_bikes,
     save_efforts,
     save_segments,
+    save_ftp
 )
-from src.fetch import ingest_all, PremiumOnlyError, get_athlete_bikes
+from src.fetch import ingest_all, PremiumOnlyError
 from src.home_personality import load_dev_athlete_profile
 from src.auth import custom_auth_button, handle_redirect
 
@@ -50,7 +53,7 @@ def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = 
     _save_session(data, gear_frame, bikes, access_token, bike_distances, ftp)
 
 # ---------------------------------------------------------------------------
-# Static cache helpers (Supabase-backed)
+# Static cache helpers (Supabase-backed (soon))
 # ---------------------------------------------------------------------------
 
 def _load_from_db(athlete_id: int) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float]] | None:
@@ -58,9 +61,10 @@ def _load_from_db(athlete_id: int) -> tuple[pd.DataFrame, pd.DataFrame, dict[str
     segments = load_segments(athlete_id)
     efforts = load_efforts(athlete_id)
     bikes, bike_distances = load_bikes(athlete_id)
+    ftp = load_ftp(athlete_id)
     if segments.empty and efforts.empty:
         return None
-    return efforts, segments, bikes, bike_distances
+    return efforts, segments, bikes, bike_distances, ftp
 
 
 def _save_to_db(
@@ -69,26 +73,33 @@ def _save_to_db(
     bikes: dict[str, str],
     athlete_id: int,
     bike_distances: dict[str, float] | None = None,
+    ftp: int | None = None,
 ) -> None:
     print("Saving data to local cache for athlete_id", athlete_id)
     init_db()
     save_segments(segments, athlete_id)
     save_efforts(efforts, athlete_id)
     save_bikes(bikes, athlete_id, bike_distances or {})
+    save_ftp(ftp, athlete_id)
 
 
+@st.cache_data(ttl=3600, show_spinner=False)
 def _process_data(
     access_token: str,
     athlete_id: int,
-    *,
     force_refresh: bool = False,
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, str], dict[str, float], int | None]:
+    db_cached = _load_from_db(athlete_id)
 
-    if force_refresh:
-        print("Force refresh enabled - clearing cache for athlete_id", athlete_id)
-        clear_efforts(athlete_id)
-        clear_segments(athlete_id)
-        clear_bikes(athlete_id)
+    if force_refresh or db_cached is None:
+        if force_refresh:
+            print("Force refresh enabled - clearing cache for athlete_id", athlete_id)
+            clear_efforts(athlete_id)
+            clear_segments(athlete_id)
+            clear_bikes(athlete_id)
+            clear_ftp(athlete_id)
+        else:
+            print("No db cache found for athlete_id", athlete_id, "- fetching from Strava API")
 
         progress = st.progress(0, text="Starting…")
         def on_progress(msg: str, pct: int) -> None:
@@ -98,45 +109,34 @@ def _process_data(
 
         efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
         bike_distances: dict[str, float] = result.get("bike_distances", {})
-        ftp: int | None = result.get("ftp")
-        _save_to_db(efforts, segments, bikes, athlete_id, bike_distances)
-        return efforts, segments, bikes, bike_distances, ftp
-
-    cached = _load_from_db(athlete_id)
-    if cached is not None:
-        print("Loaded data from cache for athlete_id", athlete_id)
-        efforts, segments, bikes, bike_distances = cached
-        # If bikes table is empty, re-resolve names: try GET /athlete first,
-        # then fall back to activity details using the cached efforts' activity_ids.
-        if not bikes and access_token:
-            try:
-                gear_to_activity: dict[str, int] = (
-                    efforts.dropna(subset=["gear_id", "activity_id"])
-                    .drop_duplicates("gear_id")
-                    .assign(activity_id=lambda d: d["activity_id"].astype(int))
-                    .set_index("gear_id")["activity_id"]
-                    .to_dict()
-                )
-                bikes, bike_distances, _ = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity)
-                if bikes:
-                    save_bikes(bikes, athlete_id, bike_distances)
-            except Exception:
-                pass
-        return efforts, segments, bikes, bike_distances, None
-    else:
-        print("No cache found for athlete_id", athlete_id, "- fetching from Strava API")
-        with st.spinner("⏳ Fetching your Strava data for the first time…"):
-            progress = st.progress(0, text="Starting…")
-            def on_progress(msg: str, pct: int) -> None:
-                progress.progress(pct, text=msg)
-            result = ingest_all(access_token, progress_callback=on_progress)
-            progress.progress(100, text="✅ Complete!")
-
-        efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
-        bike_distances = result.get("bike_distances", {})
         ftp = result.get("ftp")
-        _save_to_db(efforts, segments, bikes, athlete_id, bike_distances)
+        _save_to_db(efforts, segments, bikes, athlete_id, bike_distances, ftp)
         return efforts, segments, bikes, bike_distances, ftp
+
+    elif db_cached is not None:
+        print("Loaded data from db cache for athlete_id", athlete_id)
+        efforts, segments, bikes, bike_distances, ftp = db_cached
+        # # If bikes table is empty, re-resolve names: try GET /athlete first,
+        # # then fall back to activity details using the cached efforts' activity_ids.
+        # if not bikes and access_token:
+        #     try:
+        #         gear_to_activity: dict[str, int] = (
+        #             efforts.dropna(subset=["gear_id", "activity_id"])
+        #             .drop_duplicates("gear_id")
+        #             .assign(activity_id=lambda d: d["activity_id"].astype(int))
+        #             .set_index("gear_id")["activity_id"]
+        #             .to_dict()
+        #         )
+        #         bikes, bike_distances, _ = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity)
+        #         if bikes:
+        #             save_bikes(bikes, athlete_id, bike_distances)
+        #     except Exception:
+        #         pass
+        return efforts, segments, bikes, bike_distances, ftp
+    else:
+        st.error("OOP, This shouldnt happen")
+        st.stop()
+
 
 def _gear_label(gear_id: str | None, bikes: dict[str, str]) -> str:
     # pd.isna() handles None, float NaN, and pd.NA consistently.
