@@ -22,6 +22,7 @@ from src.database import (
     clear_efforts,
     clear_segments,
     clear_ftp,
+    cleanup_if_needed,
     init_db,
     load_bikes,
     load_efforts,
@@ -101,6 +102,7 @@ def _process_data(
         else:
             print("No db cache found for athlete_id", athlete_id, "- fetching from Strava API")
 
+        cleanup_if_needed(athlete_id)
         progress = st.progress(0, text="Starting…")
         def on_progress(msg: str, pct: int) -> None:
             progress.progress(pct, text=msg)

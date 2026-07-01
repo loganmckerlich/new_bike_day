@@ -156,7 +156,7 @@ def main() -> None:
             example_seg_id: int = st.selectbox(
                 "Example segment",
                 options=_seg_options_sorted,
-                format_func=lambda sid: _seg_name_map.get(sid, str(sid)),
+                format_func=lambda sid: _seg_name_map.get(int(sid), str(sid)),
                 index=0,
                 key="cleaning_explainer_seg",
             )
@@ -205,13 +205,12 @@ def main() -> None:
         else:
             _spd = _spd_label()
             _COLOR_SEQ = px.colors.qualitative.Set2
-            available_bikes = get_available_bikes()
             _raw, _annotated, _filtered_seg = outlier_detection_frames(
                 cleaned, int(example_seg_id), z_threshold=z_threshold
             )
             _seg_dist_m = float(
-                segments.loc[segments["segment_id"] == example_seg_id, "distance"].iloc[0]
-                if not segments[segments["segment_id"] == example_seg_id].empty
+                segments.loc[segments["segment_id"].astype(str) == str(example_seg_id), "distance"].iloc[0]
+                if not segments[segments["segment_id"].astype(str) == str(example_seg_id)].empty
                 else 0
             )
             for _df in [_raw, _annotated, _filtered_seg]:
@@ -234,42 +233,43 @@ def main() -> None:
                     lambda z: f"z = {z:.2f}" if pd.notna(z) else ""
                 )
 
-                _ann_bikes = [b for b in available_bikes if b in _plot_ann.get("bike_name", pd.Series()).values]
-                bike_tabs = st.tabs(_ann_bikes)
-                for _bi, _bname in enumerate(_ann_bikes):
-                    with bike_tabs[_bi]:
-                        _bike_color = _COLOR_SEQ[_bi % len(_COLOR_SEQ)]
-                        _bdata = _plot_ann[_plot_ann["bike_name"] == _bname].copy()
-                        _n_b_out = int(_bdata["is_outlier"].sum())
-                        _n_b_kept = len(_bdata) - _n_b_out
+                _ann_bikes = sorted(_plot_ann["bike_name"].dropna().unique().tolist())
+                if _ann_bikes:
+                    bike_tabs = st.tabs(_ann_bikes)
+                    for _bi, _bname in enumerate(_ann_bikes):
+                        with bike_tabs[_bi]:
+                            _bike_color = _COLOR_SEQ[_bi % len(_COLOR_SEQ)]
+                            _bdata = _plot_ann[_plot_ann["bike_name"] == _bname].copy()
+                            _n_b_out = int(_bdata["is_outlier"].sum())
+                            _n_b_kept = len(_bdata) - _n_b_out
 
-                        _spw_b = _bdata.dropna(subset=["speed_per_cbrt_watt"])
-                        if len(_spw_b) >= 2:
+                            _spw_b = _bdata.dropna(subset=["speed_per_cbrt_watt"])
+                            if len(_spw_b) < 2:
+                                st.caption("Not enough efforts to show distribution.")
+                                continue
                             _b_mean = _spw_b["speed_per_cbrt_watt"].mean()
                             _b_std = _spw_b["speed_per_cbrt_watt"].std(ddof=1)
                             _b_lo = _b_mean - z_threshold * _b_std
                             _b_hi = _b_mean + z_threshold * _b_std
                             _nbins = max(6, len(_spw_b) // 2)
-                        else:
-                            st.caption("Not enough efforts to show distribution.")
-                        st.markdown(f"##### {_bname}")
-                        _sc_col, _hs_col = st.columns(2)
+                            st.markdown(f"##### {_bname}")
+                            _sc_col, _hs_col = st.columns(2)
 
-                        with _sc_col:
-                            st.markdown("Speed vs power")
-                            _fig_b_sc = make_fig_b_sc(_bike_color, _bdata, _spd, z_threshold, _b_lo, _b_hi, _b_mean) 
-                            st.plotly_chart(_fig_b_sc, width="stretch", config={"staticPlot": True})
+                            with _sc_col:
+                                st.markdown("Speed vs power")
+                                _fig_b_sc = make_fig_b_sc(_bike_color, _bdata, _spd, z_threshold, _b_lo, _b_hi, _b_mean) 
+                                st.plotly_chart(_fig_b_sc, width="stretch", config={"staticPlot": True})
 
-                        with _hs_col:
-                            st.markdown(f"Speed/W¹⁄³ distribution ±{z_threshold:.1f}σ cutoff")
-                            _fig_b_h = make_fig_b_h(_bike_color, _spw_b, _b_lo, _b_hi, _b_mean, _nbins, _spd, z_threshold) 
-                            st.plotly_chart(_fig_b_h, width="stretch", config={"staticPlot": True})
+                            with _hs_col:
+                                st.markdown(f"Speed/W¹⁄³ distribution ±{z_threshold:.1f}σ cutoff")
+                                _fig_b_h = make_fig_b_h(_bike_color, _spw_b, _b_lo, _b_hi, _b_mean, _nbins, _spd, z_threshold) 
+                                st.plotly_chart(_fig_b_h, width="stretch", config={"staticPlot": True})
 
-                        st.caption(
-                            f"🔴 **{_n_b_out} outlier(s)** · 🔵 **{_n_b_kept} kept** "
-                            f"(μ = {_bdata['speed_per_cbrt_watt'].mean():.4f}, "
-                            f"σ = {_bdata['speed_per_cbrt_watt'].std(ddof=1):.4f})"
-                        )
+                            st.caption(
+                                f"🔴 **{_n_b_out} outlier(s)** · 🔵 **{_n_b_kept} kept** "
+                                f"(μ = {_bdata['speed_per_cbrt_watt'].mean():.4f}, "
+                                f"σ = {_bdata['speed_per_cbrt_watt'].std(ddof=1):.4f})"
+                            )
 
     st.divider()
     st.success(

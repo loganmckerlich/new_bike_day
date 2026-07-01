@@ -19,25 +19,7 @@ def custom_auth_button() -> None:
     )
 
     st.markdown("### Connect your Strava account")
-    st.markdown(
-            f"""
-            <a href="{auth_url}"
-            target="_top"
-            style="
-                display: inline-block;
-                padding: 0.5rem 1.2rem;
-                background-color: #FC4C02;
-                color: white;
-                font-size: 16px;
-                font-weight: bold;
-                border-radius: 6px;
-                text-decoration: none;
-            ">
-            🚴 Connect Strava
-            </a>
-            """,
-            unsafe_allow_html=True,
-        )
+    st.link_button("🚴 Connect Strava", auth_url, type="primary")
 
 
 def get_authorization_url(
@@ -80,6 +62,10 @@ def handle_redirect() -> None:
     if "access_token" in token_data:
         st.session_state["strava_token"] = token_data["access_token"]
         st.session_state["strava_athlete"] = token_data.get("athlete", {})
+        athlete_id = token_data.get("athlete", {}).get("id")
+        if athlete_id is not None:
+            from src.database import touch_user  # noqa: PLC0415 — lazy to avoid init at import
+            touch_user(athlete_id)
         st.success("✅ Connected to Strava!")
         st.query_params.clear()
         st.rerun()
