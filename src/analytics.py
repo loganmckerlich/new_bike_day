@@ -217,7 +217,7 @@ def outlier_detection_frames(
     filtered : pd.DataFrame
         Efforts after outlier removal.
     """
-    seg_efforts = efforts[efforts["segment_id"] == segment_id].copy()
+    seg_efforts = efforts[efforts["segment_id"].astype(str) == str(segment_id)].copy()
     if "speed_per_cbrt_watt" not in seg_efforts.columns:
         seg_efforts = compute_speed_per_watt(seg_efforts)
     filtered, annotated = filter_outliers_by_power_speed(seg_efforts, z_threshold=z_threshold)

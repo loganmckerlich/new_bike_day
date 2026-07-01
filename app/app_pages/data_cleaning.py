@@ -209,8 +209,8 @@ def main() -> None:
                 cleaned, int(example_seg_id), z_threshold=z_threshold
             )
             _seg_dist_m = float(
-                segments.loc[segments["segment_id"] == example_seg_id, "distance"].iloc[0]
-                if not segments[segments["segment_id"] == example_seg_id].empty
+                segments.loc[segments["segment_id"].astype(str) == str(example_seg_id), "distance"].iloc[0]
+                if not segments[segments["segment_id"].astype(str) == str(example_seg_id)].empty
                 else 0
             )
             for _df in [_raw, _annotated, _filtered_seg]:
@@ -244,14 +244,14 @@ def main() -> None:
                             _n_b_kept = len(_bdata) - _n_b_out
 
                             _spw_b = _bdata.dropna(subset=["speed_per_cbrt_watt"])
-                            if len(_spw_b) >= 2:
-                                _b_mean = _spw_b["speed_per_cbrt_watt"].mean()
-                                _b_std = _spw_b["speed_per_cbrt_watt"].std(ddof=1)
-                                _b_lo = _b_mean - z_threshold * _b_std
-                                _b_hi = _b_mean + z_threshold * _b_std
-                                _nbins = max(6, len(_spw_b) // 2)
-                            else:
+                            if len(_spw_b) < 2:
                                 st.caption("Not enough efforts to show distribution.")
+                                continue
+                            _b_mean = _spw_b["speed_per_cbrt_watt"].mean()
+                            _b_std = _spw_b["speed_per_cbrt_watt"].std(ddof=1)
+                            _b_lo = _b_mean - z_threshold * _b_std
+                            _b_hi = _b_mean + z_threshold * _b_std
+                            _nbins = max(6, len(_spw_b) // 2)
                             st.markdown(f"##### {_bname}")
                             _sc_col, _hs_col = st.columns(2)
 
