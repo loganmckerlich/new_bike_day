@@ -2,15 +2,17 @@
 
 from __future__ import annotations
 
-from src.utils import navigator, page_guard
+import math
 import sys
 from pathlib import Path
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+
+from src.utils import navigator, page_guard
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
@@ -20,6 +22,7 @@ from src.fetch import get_segment_detail, get_segment_streams
 from src.database import init_db, load_segment_geo, save_segment_geo
 from src.plot_colors import to_rgba
 from src.analytics import (
+    compute_speed_per_watt,
     mean_profile_by_segment_type,
     power_normalized_profile,
 )
@@ -80,6 +83,54 @@ TYPE_DETAIL_LABELS: dict[str, str] = {
 _COLOR_SEQ: list[str] = px.colors.qualitative.Set2
 _SPIDER_POLYGON_LINE_WIDTH: int = 3
 _SPIDER_POLYGON_FILL_ALPHA: float = 0.20
+_EFFICIENCY_LABEL: str = "Efficiency (km/h / W^(1/3))"
+
+
+def _highlight_best_value(series: pd.Series, ascending: bool = False) -> list[str]:
+    """Highlight the best numeric value in a column in green.
+
+    By default, the largest numeric value is highlighted; pass ``ascending=True``
+    to highlight the smallest value instead.
+    """
+    if not pd.api.types.is_numeric_dtype(series):
+        return [""] * len(series)
+
+    values = series.dropna()
+    if values.empty:
+        return [""] * len(series)
+
+    best_value = values.min() if ascending else values.max()
+    return [
+        "background-color: #dcfce7; color: #166534; font-weight: 600"
+        if pd.notna(v) and ((v <= best_value) if ascending else (v >= best_value))
+        else ""
+        for v in series
+    ]
+
+
+def _straightness_index(geo: dict) -> float | None:
+    """Return a 0-1 straightness index for a route, if route points are available."""
+    points = geo.get("polyline_points") or []
+    if len(points) < 2:
+        return None
+
+    coords = [(float(p[0]), float(p[1])) for p in points if len(p) >= 2]
+    if len(coords) < 2:
+        return None
+
+    def _haversine(start: tuple[float, float], end: tuple[float, float]) -> float:
+        lat1, lon1 = map(math.radians, start)
+        lat2, lon2 = map(math.radians, end)
+        dlat = lat2 - lat1
+        dlon = lon2 - lon1
+        a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+        return 2 * 6371000 * math.asin(math.sqrt(a))
+
+    total_path = sum(_haversine(coords[i], coords[i + 1]) for i in range(len(coords) - 1))
+    if total_path <= 0:
+        return None
+    return _haversine(coords[0], coords[-1]) / total_path
+
 
 # ── Page title ────────────────────────────────────────────────────────────
 
@@ -601,7 +652,8 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                 seg_efforts["start_date"] = pd.to_datetime(seg_efforts["start_date"], errors="coerce")
                 seg_efforts["date_str"] = seg_efforts["start_date"].dt.strftime("%Y-%m-%d")
 
-                seg_efforts_clean = seg_efforts.copy()
+                seg_efforts_clean = compute_speed_per_watt(seg_efforts.copy())
+                seg_efforts = seg_efforts_clean.copy()
 
                 # Segment info metrics
                 info_cols = st.columns(4)
@@ -627,10 +679,84 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                     stype = seg_row.get("segment_type", "—")
                     st.metric("Type", str(stype).capitalize() if stype else "—")
 
-                # Map + elevation
                 with st.spinner("Loading segment map…"):
                     geo = _get_segment_geo(int(seg_id))
 
+                segment_detail = seg_row.get("segment_type_detail") or seg_row.get("segment_type")
+                segment_label = TYPE_DETAIL_LABELS.get(
+                    segment_detail,
+                    str(segment_detail or "—").replace("_", " ").title(),
+                )
+                straightness = _straightness_index(geo)
+                metadata = pd.DataFrame(
+                    [
+                        {
+                            "Segment": segment_label,
+                            "Distance": dist_metric_str,
+                            "Average grade": f"{grade:.1f}%" if pd.notna(grade) else "—",
+                            "Straightness index": f"{straightness:.2f}" if straightness is not None else "—",
+                        }
+                    ]
+                )
+                st.dataframe(
+                    metadata.style.hide(axis="index").set_properties(
+                        **{"background-color": "#f8fafc", "font-weight": "600"}
+                    ),
+                    width="stretch",
+                    hide_index=True,
+                )
+
+                bike_names = seg_efforts_clean["bike_name"].dropna().unique().tolist()
+                summary = pd.DataFrame({"Bike name": bike_names})
+                grouped = seg_efforts_clean.groupby("bike_name")
+                summary_metrics = grouped.agg(
+                    mean_speed_kmh=("speed_kmh", "mean"),
+                    mean_watts=("average_watts", "mean"),
+                    num_efforts=("effort_id", "count"),
+                    best_effort_time=("moving_time", "min"),
+                )
+                summary_metrics["mean_hr"] = (
+                    grouped["average_heartrate"].mean()
+                    if _has_col(seg_efforts_clean, "average_heartrate")
+                    else np.nan
+                )
+                summary_metrics["mean_efficiency"] = grouped["speed_per_cbrt_watt"].mean()
+                summary_metrics = summary_metrics.reindex(bike_names)
+                summary["Mean speed (km/h)"] = summary_metrics["mean_speed_kmh"].to_numpy()
+                summary["Mean watts"] = summary_metrics["mean_watts"].to_numpy()
+                summary["Mean HR"] = summary_metrics["mean_hr"].to_numpy()
+                summary["Mean efficiency"] = summary_metrics["mean_efficiency"].to_numpy()
+                summary["Number of efforts"] = summary_metrics["num_efforts"].to_numpy()
+                summary["Best effort time"] = summary_metrics["best_effort_time"].to_numpy()
+
+                styler = summary.style.hide(axis="index")
+                styler = styler.format(
+                    {
+                        "Mean speed (km/h)": lambda v: f"{_convert_speed(v):.1f}" if pd.notna(v) else "—",
+                        "Mean watts": lambda v: f"{v:.1f}" if pd.notna(v) else "—",
+                        "Mean HR": lambda v: f"{v:.1f}" if pd.notna(v) else "—",
+                        "Mean efficiency": lambda v: f"{v:.4f}" if pd.notna(v) else "—",
+                        "Number of efforts": lambda v: f"{int(v)}" if pd.notna(v) else "—",
+                        "Best effort time": lambda v: _fmt_duration(v) if pd.notna(v) else "—",
+                    }
+                )
+                for col, ascending in [
+                    ("Mean speed (km/h)", False),
+                    ("Mean watts", False),
+                    ("Mean HR", False),
+                    ("Mean efficiency", False),
+                    ("Number of efforts", False),
+                    ("Best effort time", True),
+                ]:
+                    styler = styler.apply(
+                        lambda s: _highlight_best_value(s, ascending=ascending),
+                        axis=0,
+                        subset=[col],
+                    )
+                styler = styler.set_properties(**{"white-space": "nowrap"})
+                st.dataframe(styler, width="stretch", hide_index=True)
+
+                # Map + elevation
                 map_col, elev_col = st.columns(2)
                 with map_col:
                     st.markdown("**Route**")
@@ -638,53 +764,6 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                 with elev_col:
                     st.markdown("**Elevation profile**")
                     _render_elevation_profile(geo, seg_distance_m)
-
-                agg: dict[str, tuple] = {
-                    "Rides": ("effort_id", "count"),
-                    "Best time": ("moving_time", "min"),
-                    "Avg time": ("moving_time", "mean"),
-                    "Avg power (W)": ("average_watts", "mean"),
-                    "Max power (W)": ("average_watts", "max"),
-                }
-                if _has_col(seg_efforts, "average_heartrate"):
-                    agg["Avg HR (bpm)"] = ("average_heartrate", "mean")
-                _spd_col_avg = f"Avg speed ({_spd_label()})"
-                _spd_col_max = f"Max speed ({_spd_label()})"
-                if _has_col(seg_efforts, "speed_kmh"):
-                    agg[_spd_col_avg] = ("speed_kmh", "mean")
-                    agg[_spd_col_max] = ("speed_kmh", "max")
-                # Power-normalised efficiency (computed on clean efforts)
-                _spw_col = f"Speed/W\u00b9\u141f\u00b3 ({_spd_label()}/W\u00b9\u141f\u00b3)"
-                if _has_col(seg_efforts_clean, "speed_per_cbrt_watt"):
-                    agg[_spw_col] = ("speed_per_cbrt_watt", "mean")
-
-                summary = seg_efforts_clean.groupby("bike_name").agg(**agg).reset_index()
-                summary.rename(columns={"bike_name": "Bike"}, inplace=True)
-
-                # Convert speed columns to display unit
-                for col_name in [_spd_col_avg, _spd_col_max]:
-                    if col_name in summary.columns:
-                        summary[col_name] = summary[col_name].apply(
-                            lambda v: _convert_speed(v) if pd.notna(v) else v
-                        )
-
-                for col_name in ["Best time", "Avg time"]:
-                    if col_name in summary.columns:
-                        summary[col_name] = summary[col_name].apply(
-                            lambda s: _fmt_duration(s) if pd.notna(s) else "—"
-                        )
-                for col_name in ["Avg power (W)", "Max power (W)", "Avg HR (bpm)",
-                                 _spd_col_avg, _spd_col_max]:
-                    if col_name in summary.columns:
-                        summary[col_name] = summary[col_name].apply(
-                            lambda v: f"{v:.1f}" if pd.notna(v) else "—"
-                        )
-                if _spw_col in summary.columns:
-                    summary[_spw_col] = summary[_spw_col].apply(
-                        lambda v: f"{v:.4f}" if pd.notna(v) else "—"
-                    )
-
-                st.dataframe(summary, width="stretch", hide_index=True)
 
                 # Metric tabs: Speed | Power | Heart Rate | Timeline
                 chart_tab_labels: list[str] = []
@@ -698,7 +777,7 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                     chart_tab_labels.append("⚡ Power")
                 if has_hr:
                     chart_tab_labels.append("❤️ Heart rate")
-                chart_tab_labels.append("📅 Timeline")
+                chart_tab_labels.extend(["📅 Timeline", "📈 Efficiency scatter", "🎻 Efficiency distribution"])
 
                 chart_tabs = st.tabs(chart_tab_labels)
                 ct_idx = 0
@@ -778,6 +857,91 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                         st.plotly_chart(fig, width="stretch")
                     else:
                         st.caption("No date information available.")
+                    ct_idx += 1
+
+                with chart_tabs[ct_idx]:
+                    efficiency_df = seg_efforts_clean.dropna(subset=["average_watts", "speed_kmh"]).copy()
+                    st.caption("Efficiency scatter by bike with cube-root curve")
+                    if not efficiency_df.empty:
+                        fig = go.Figure()
+                        fit_x = np.cbrt(efficiency_df["average_watts"].astype(float).to_numpy())
+                        fit_y = efficiency_df["speed_kmh"].astype(float).to_numpy()
+                        mask = np.isfinite(fit_x) & np.isfinite(fit_y)
+                        if mask.sum() >= 2:
+                            denom = np.dot(fit_x[mask], fit_x[mask])
+                            if denom > 0:
+                                slope = np.dot(fit_x[mask], fit_y[mask]) / denom
+                                curve_watts = np.linspace(float(efficiency_df["average_watts"].min()), float(efficiency_df["average_watts"].max()), 100)
+                                fig.add_trace(
+                                    go.Scatter(
+                                        x=curve_watts,
+                                        y=slope * np.cbrt(curve_watts),
+                                        mode="lines",
+                                        line={"color": "#64748b", "width": 2, "dash": "dash"},
+                                        name="Theoretical curve",
+                                        showlegend=False,
+                                        hoverinfo="skip",
+                                    )
+                                )
+                        bike_names = efficiency_df["bike_name"].dropna().unique().tolist()
+                        for idx, bike_name in enumerate(bike_names):
+                            bike_data = efficiency_df[efficiency_df["bike_name"] == bike_name]
+                            fig.add_trace(
+                                go.Scatter(
+                                    x=bike_data["average_watts"],
+                                    y=bike_data["speed_kmh"],
+                                    mode="markers",
+                                    name=bike_name,
+                                    marker={"color": _COLOR_SEQ[idx % len(_COLOR_SEQ)], "size": 8},
+                                    hovertemplate=(
+                                        f"{bike_name}<br>Power: %{{x:.0f}} W<br>Speed: %{{y:.1f}} {_spd_label()}<extra></extra>"
+                                    ),
+                                )
+                            )
+                        fig.update_layout(
+                            xaxis_title="Average power (W)",
+                            yaxis_title=f"Speed ({_spd_label()})",
+                            plot_bgcolor="rgba(0,0,0,0)",
+                            paper_bgcolor="rgba(0,0,0,0)",
+                        )
+                        st.plotly_chart(fig, width="stretch")
+                    else:
+                        st.caption("No power/speed pairs available for efficiency scatter.")
+                    ct_idx += 1
+
+                with chart_tabs[ct_idx]:
+                    efficiency_distribution = seg_efforts_clean.dropna(subset=["speed_per_cbrt_watt"]).copy()
+                    st.caption("Efficiency distribution by bike")
+                    if not efficiency_distribution.empty:
+                        fig = go.Figure()
+                        bike_names = efficiency_distribution["bike_name"].dropna().unique().tolist()
+                        for idx, bike_name in enumerate(bike_names):
+                            bike_data = efficiency_distribution[efficiency_distribution["bike_name"] == bike_name]
+                            color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
+                            fig.add_trace(
+                                go.Violin(
+                                    y=bike_data["speed_per_cbrt_watt"],
+                                    x=[bike_name] * len(bike_data),
+                                    name=bike_name,
+                                    line={"color": color},
+                                    fillcolor=to_rgba(color, 0.25),
+                                    box_visible=True,
+                                    meanline_visible=True,
+                                    points=False,
+                                    hovertemplate=(
+                                        f"{bike_name}<br>Efficiency: %{{y:.4f}}<extra></extra>"
+                                    ),
+                                )
+                            )
+                        fig.update_layout(
+                            xaxis_title="Bike",
+                            yaxis_title=_EFFICIENCY_LABEL,
+                            plot_bgcolor="rgba(0,0,0,0)",
+                            paper_bgcolor="rgba(0,0,0,0)",
+                        )
+                        st.plotly_chart(fig, width="stretch")
+                    else:
+                        st.caption("No efficiency values available for this segment.")
 
                 # Individual efforts expander
                 with st.expander("All efforts for this segment", expanded=False):
@@ -827,6 +991,7 @@ def main() -> None:
 
     show(bikes_to_compare, min_efforts)
 
-navigator("bike_comparison_segmented1")
-main()
-navigator("bike_comparison_segmented2")
+if __name__ == "__main__":
+    navigator("bike_comparison_segmented1")
+    main()
+    navigator("bike_comparison_segmented2")
