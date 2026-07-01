@@ -3,6 +3,7 @@ from __future__ import annotations
 from urllib.parse import urlsplit, urlunsplit
 
 import streamlit as st
+import pandas as pd
 
 
 def normalized_redirect_uri(raw_value: str) -> str:
@@ -41,7 +42,8 @@ def navigator(on_raw):
         "home",
         "data_collection",
         "data_cleaning",
-        "bike_comparison",
+        "bike_comparison_segmented",
+        "bike_comparison_overall",
         "final_conclusions",
     ]
     if on not in order:
@@ -50,13 +52,73 @@ def navigator(on_raw):
     next_page = order[index + 1] if index + 1 < len(order) else None
     prev_page = order[index - 1] if index - 1 >= 0 else None
 
-    back, home, forward = st.columns([1, 1, 1])
-    with back:
-        if prev_page and st.button("←",use_container_width=True,key=f"back_{on_raw}"):
+    sideways = st.container(horizontal=True)
+    with sideways:
+        if prev_page and st.button("←",width='stretch',key=f"back_{on_raw}"):
             st.switch_page(f"app_pages/{prev_page}.py")
-    with home:
-        if on != "home" and st.button("🏠",use_container_width=True,key=f"home_{on_raw}"):
+        if on != "home" and st.button("🏠",width='stretch',key=f"home_{on_raw}"):
             st.switch_page("app_pages/home.py")
-    with forward:
-        if next_page and st.button("→",use_container_width=True,key=f"forward_{on_raw}"):
+        if next_page and st.button("→",width='stretch',key=f"forward_{on_raw}"):
             st.switch_page(f"app_pages/{next_page}.py")
+
+def _redirect(message: str, button_text: str, page: str) -> None:
+    st.info(message)
+    if st.button(button_text):
+        st.switch_page(page)
+    st.stop()
+
+
+def page_guard(page_name: str) -> None:
+    requirements = {
+        "data_cleaning": ["data_loaded"],
+        "bike_comparison_segmented": ["data_loaded", "data_cleaned"],
+        "bike_comparison_overall": ["data_loaded", "data_cleaned"],
+        "final_conclusions": ["data_loaded", "data_cleaned"],
+    }
+
+    raw_efforts = st.session_state.get("efforts")
+    cleaned_efforts = st.session_state.get("cleaned_efforts")
+    segments = st.session_state.get("segments")
+
+    checks = {
+        "data_loaded": (
+            raw_efforts is not None
+            and not raw_efforts.empty
+        ),
+        "data_cleaned": (
+            cleaned_efforts is not None
+            and not cleaned_efforts.empty
+        ),
+    }
+
+    needed = requirements.get(page_name, [])
+
+    if "data_loaded" in needed and not checks["data_loaded"]:
+        _redirect(
+            "Head to **Step 1 — Data Collection** to load your Strava data first.",
+            "Go to Step 1",
+            "app_pages/data_collection.py",
+        )
+
+    if "data_cleaned" in needed and not checks["data_cleaned"]:
+        _redirect(
+            "Head to **Step 2 — Data Cleaning** to configure and apply filters first.",
+            "Go to Step 2",
+            "app_pages/data_cleaning.py",
+        )
+
+    if segments is None or segments.empty:
+        st.warning(
+            "No starred segments found. Star some segments on Strava and reload from Step 1."
+        )
+        st.stop()
+
+    efforts_with_power = raw_efforts[
+        raw_efforts["average_watts"].notna()
+    ]
+
+    if efforts_with_power.empty:
+        st.warning(
+            "No efforts with power data found. Ensure your rides are recorded with a power meter."
+        )
+        st.stop()

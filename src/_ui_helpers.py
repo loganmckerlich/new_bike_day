@@ -84,6 +84,25 @@ def gear_label(gear_id: str | None, bikes: dict[str, str]) -> str:
         return "Unknown"
     return bikes.get(str(gear_id), str(gear_id))
 
+def get_available_bikes() -> list[str]:
+    if "available_bikes" in st.session_state:
+        return st.session_state["available_bikes"]
+
+    efforts = st.session_state.get("cleaned_efforts")
+
+    watt_efforts = efforts[efforts["average_watts"].notna()].copy()
+    watt_efforts = watt_efforts.dropna(subset=["gear_id"])
+
+    available_bikes = (
+        watt_efforts.groupby("bike_name")["effort_id"]
+        .count()
+        .sort_values(ascending=False)
+        .index.tolist()
+    )
+
+    st.session_state["available_bikes"] = available_bikes
+    return available_bikes
+
 
 def fmt_duration(seconds: float) -> str:
     """Format a duration in seconds as ``mm:ss``."""

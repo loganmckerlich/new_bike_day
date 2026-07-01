@@ -128,6 +128,70 @@
     "kom_rank": null
   },
   {
+    "id": 3502475152189445738,
+    "resource_state": 2,
+    "name": "I-90 trail climb to 142nd",
+    "activity": {
+      "id": 18964953090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 408,
+    "moving_time": 408,
+    "start_date": "2026-06-17T22:50:01Z",
+    "start_date_local": "2026-06-17T15:50:01Z",
+    "distance": 2234.5,
+    "start_index": 1282,
+    "end_index": 1690,
+    "average_cadence": 82.4,
+    "device_watts": true,
+    "average_watts": 277.4,
+    "average_heartrate": 139.3,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 34862870,
+      "resource_state": 2,
+      "name": "I-90 trail climb to 142nd",
+      "activity_type": "Ride",
+      "distance": 2234.5,
+      "average_grade": 3.9,
+      "maximum_grade": 10.7,
+      "elevation_high": 99.8,
+      "elevation_low": 12.1,
+      "start_latlng": [
+        47.579454,
+        -122.179787
+      ],
+      "end_latlng": [
+        47.578482,
+        -122.151148
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3491603846348449472,
     "resource_state": 2,
     "name": "I-90 trail climb to 142nd",
@@ -256,6 +320,64 @@
     "kom_rank": null
   },
   {
+    "id": 3499222138840939474,
+    "resource_state": 2,
+    "name": "I-90 trail climb to 142nd",
+    "activity": {
+      "id": 18844084630,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 438,
+    "moving_time": 415,
+    "start_date": "2026-06-08T23:20:12Z",
+    "start_date_local": "2026-06-08T16:20:12Z",
+    "distance": 2234.5,
+    "start_index": 1376,
+    "end_index": 1793,
+    "average_cadence": 77.8,
+    "device_watts": true,
+    "average_watts": 280.9,
+    "average_heartrate": 139.0,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 34862870,
+      "resource_state": 2,
+      "name": "I-90 trail climb to 142nd",
+      "activity_type": "Ride",
+      "distance": 2234.5,
+      "average_grade": 3.9,
+      "maximum_grade": 10.7,
+      "elevation_high": 99.8,
+      "elevation_low": 12.1,
+      "start_latlng": [
+        47.579454,
+        -122.179787
+      ],
+      "end_latlng": [
+        47.578482,
+        -122.151148
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3368760401925027766,
     "resource_state": 2,
     "name": "I-90 trail climb to 142nd",
@@ -316,6 +438,62 @@
         "rank": 1
       }
     ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499972906431926988,
+    "resource_state": 2,
+    "name": "I-90 trail climb to 142nd",
+    "activity": {
+      "id": 18872776650,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 453,
+    "moving_time": 436,
+    "start_date": "2026-06-11T01:12:08Z",
+    "start_date_local": "2026-06-10T18:12:08Z",
+    "distance": 2234.5,
+    "start_index": 1311,
+    "end_index": 1750,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 257.7,
+    "segment": {
+      "id": 34862870,
+      "resource_state": 2,
+      "name": "I-90 trail climb to 142nd",
+      "activity_type": "Ride",
+      "distance": 2234.5,
+      "average_grade": 3.9,
+      "maximum_grade": 10.7,
+      "elevation_high": 99.8,
+      "elevation_low": 12.1,
+      "start_latlng": [
+        47.579454,
+        -122.179787
+      ],
+      "end_latlng": [
+        47.578482,
+        -122.151148
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -910,6 +1088,122 @@
     "kom_rank": null
   },
   {
+    "id": 3502865342082342858,
+    "resource_state": 2,
+    "name": "I-90 trail climb to 142nd",
+    "activity": {
+      "id": 18978898053,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 520,
+    "moving_time": 500,
+    "start_date": "2026-06-19T00:46:26Z",
+    "start_date_local": "2026-06-18T17:46:26Z",
+    "distance": 2234.5,
+    "start_index": 1324,
+    "end_index": 1827,
+    "average_cadence": 81.0,
+    "device_watts": true,
+    "average_watts": 222.1,
+    "average_heartrate": 131.5,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 34862870,
+      "resource_state": 2,
+      "name": "I-90 trail climb to 142nd",
+      "activity_type": "Ride",
+      "distance": 2234.5,
+      "average_grade": 3.9,
+      "maximum_grade": 10.7,
+      "elevation_high": 99.8,
+      "elevation_low": 12.1,
+      "start_latlng": [
+        47.579454,
+        -122.179787
+      ],
+      "end_latlng": [
+        47.578482,
+        -122.151148
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497402457892721906,
+    "resource_state": 2,
+    "name": "I-90 trail climb to 142nd",
+    "activity": {
+      "id": 18777094929,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 524,
+    "moving_time": 487,
+    "start_date": "2026-06-03T22:58:23Z",
+    "start_date_local": "2026-06-03T15:58:23Z",
+    "distance": 2234.5,
+    "start_index": 1267,
+    "end_index": 1757,
+    "average_cadence": 77.2,
+    "device_watts": true,
+    "average_watts": 224.5,
+    "average_heartrate": 129.5,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 34862870,
+      "resource_state": 2,
+      "name": "I-90 trail climb to 142nd",
+      "activity_type": "Ride",
+      "distance": 2234.5,
+      "average_grade": 3.9,
+      "maximum_grade": 10.7,
+      "elevation_high": 99.8,
+      "elevation_low": 12.1,
+      "start_latlng": [
+        47.579454,
+        -122.179787
+      ],
+      "end_latlng": [
+        47.578482,
+        -122.151148
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3480045687180087154,
     "resource_state": 2,
     "name": "I-90 trail climb to 142nd",
@@ -1314,6 +1608,64 @@
     "kom_rank": null
   },
   {
+    "id": 3502151499268013002,
+    "resource_state": 2,
+    "name": "I-90 trail climb to 142nd",
+    "activity": {
+      "id": 18952255473,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 551,
+    "moving_time": 533,
+    "start_date": "2026-06-17T01:25:25Z",
+    "start_date_local": "2026-06-16T18:25:25Z",
+    "distance": 2234.5,
+    "start_index": 1427,
+    "end_index": 1966,
+    "average_cadence": 72.0,
+    "device_watts": true,
+    "average_watts": 210.9,
+    "average_heartrate": 126.0,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 34862870,
+      "resource_state": 2,
+      "name": "I-90 trail climb to 142nd",
+      "activity_type": "Ride",
+      "distance": 2234.5,
+      "average_grade": 3.9,
+      "maximum_grade": 10.7,
+      "elevation_high": 99.8,
+      "elevation_low": 12.1,
+      "start_latlng": [
+        47.579454,
+        -122.179787
+      ],
+      "end_latlng": [
+        47.578482,
+        -122.151148
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3476392983712236906,
     "resource_state": 2,
     "name": "I-90 trail climb to 142nd",
@@ -1454,6 +1806,122 @@
     "average_watts": 205.0,
     "average_heartrate": 130.5,
     "max_heartrate": 146.0,
+    "segment": {
+      "id": 34862870,
+      "resource_state": 2,
+      "name": "I-90 trail climb to 142nd",
+      "activity_type": "Ride",
+      "distance": 2234.5,
+      "average_grade": 3.9,
+      "maximum_grade": 10.7,
+      "elevation_high": 99.8,
+      "elevation_low": 12.1,
+      "start_latlng": [
+        47.579454,
+        -122.179787
+      ],
+      "end_latlng": [
+        47.578482,
+        -122.151148
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500661989299594922,
+    "resource_state": 2,
+    "name": "I-90 trail climb to 142nd",
+    "activity": {
+      "id": 18896368704,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 570,
+    "moving_time": 554,
+    "start_date": "2026-06-12T22:42:37Z",
+    "start_date_local": "2026-06-12T15:42:37Z",
+    "distance": 2234.5,
+    "start_index": 1434,
+    "end_index": 1992,
+    "average_cadence": 73.1,
+    "device_watts": true,
+    "average_watts": 197.1,
+    "average_heartrate": 119.1,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 34862870,
+      "resource_state": 2,
+      "name": "I-90 trail climb to 142nd",
+      "activity_type": "Ride",
+      "distance": 2234.5,
+      "average_grade": 3.9,
+      "maximum_grade": 10.7,
+      "elevation_high": 99.8,
+      "elevation_low": 12.1,
+      "start_latlng": [
+        47.579454,
+        -122.179787
+      ],
+      "end_latlng": [
+        47.578482,
+        -122.151148
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "USA",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498138073831750420,
+    "resource_state": 2,
+    "name": "I-90 trail climb to 142nd",
+    "activity": {
+      "id": 18803245094,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 580,
+    "moving_time": 547,
+    "start_date": "2026-06-05T23:32:49Z",
+    "start_date_local": "2026-06-05T16:32:49Z",
+    "distance": 2234.5,
+    "start_index": 1314,
+    "end_index": 1867,
+    "average_cadence": 74.7,
+    "device_watts": true,
+    "average_watts": 201.3,
+    "average_heartrate": 124.0,
+    "max_heartrate": 151.0,
     "segment": {
       "id": 34862870,
       "resource_state": 2,

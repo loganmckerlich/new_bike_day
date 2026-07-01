@@ -33,9 +33,10 @@ from src._ui_helpers import (
     convert_speed as _convert_speed,
     gear_label,
     compute_speed_kmh as _compute_speed_kmh,
+    get_available_bikes
 )
 
-from src.utils import navigator
+from src.utils import navigator, page_guard
 
 # ── Page ──────────────────────────────────────────────────────────────────────
 
@@ -47,29 +48,13 @@ def main() -> None:
         "The settings you choose here are applied on every subsequent page."
     )
 
-    # ── Guard: data must be loaded ─────────────────────────────────────────────
-    raw_efforts: pd.DataFrame | None = st.session_state.get("efforts")
+    page_guard("data_cleaning")
     segments: pd.DataFrame | None = st.session_state.get("segments")
     bikes: dict[str, str] = st.session_state.get("bikes", {})
-
-    if raw_efforts is None or (hasattr(raw_efforts, "empty") and raw_efforts.empty):
-        st.info("Head to **Step 1 — Data Collection** to sign in with Strava and load your data first.")
-        if st.button("Go to Step 1"):
-            st.switch_page("app_pages/data_collection.py")
-        st.stop()
-
-    if segments is None or segments.empty:
-        st.warning("No starred segments found. Star some segments on Strava and reload from Step 1.")
-        st.stop()
-
-    # Keep only power efforts
-    efforts_with_power = raw_efforts[raw_efforts["average_watts"].notna()].copy()
-    if efforts_with_power.empty:
-        st.warning("No efforts with power data found. Ensure your rides are recorded with a power meter.")
-        st.stop()
+    efforts_with_power: pd.DataFrame | None = st.session_state.get("efforts")
 
     # Merge segment metadata so we have segment_type available
-    seg_meta_cols = ["segment_id", "name", "distance", "average_grade", "maximum_grade", "segment_type"]
+    seg_meta_cols = ["segment_id", "name", "distance", "average_grade", "maximum_grade", "segment_type", "hazardous"]
     if "segment_type_detail" in segments.columns:
         seg_meta_cols.append("segment_type_detail")
     seg_meta = segments[seg_meta_cols].copy()
@@ -86,8 +71,8 @@ def main() -> None:
     with left_col:
         st.subheader("⚙️ Cleaning parameters")
 
-        ftp: int | None = st.session_state.get("ftp")
-        _default_min_watts = int(round(ftp * 0.75)) if ftp is not None and ftp > 0 else 0
+        ftp = st.session_state.get("ftp")
+        _default_min_watts = int(round(ftp * 0.5)) if ftp is not None and ftp > 0 else 0
         st.session_state.setdefault("min_watts", _default_min_watts)
         min_watts: int = st.number_input(
             "Minimum watts",
@@ -97,7 +82,7 @@ def main() -> None:
             key="min_watts",
             help=(
                 "Efforts with average power below this threshold are excluded from analysis. "
-                "Default is 75 % of your FTP (if available). Set to 0 to disable."
+                "Default is 50 % of your FTP (if available). Set to 0 to disable."
             ),
         )
 
@@ -220,8 +205,7 @@ def main() -> None:
         else:
             _spd = _spd_label()
             _COLOR_SEQ = px.colors.qualitative.Set2
-            available_bikes = sorted(cleaned["bike_name"].dropna().unique().tolist())
-
+            available_bikes = get_available_bikes()
             _raw, _annotated, _filtered_seg = outlier_detection_frames(
                 cleaned, int(example_seg_id), z_threshold=z_threshold
             )

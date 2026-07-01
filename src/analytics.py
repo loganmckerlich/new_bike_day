@@ -274,4 +274,3 @@ def apply_min_watts_filter(
 
     return df[df["average_watts"] >= min_watts].copy()
 
-# Force module reload for Streamlit Cloud cache

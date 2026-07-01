@@ -1,0 +1,2682 @@
+[
+  {
+    "id": 3499819134920434186,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18866437059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 367,
+    "moving_time": 367,
+    "start_date": "2026-06-10T14:46:39Z",
+    "start_date_local": "2026-06-10T07:46:39Z",
+    "distance": 3514.3,
+    "start_index": 821,
+    "end_index": 1188,
+    "average_cadence": 85.6,
+    "device_watts": true,
+    "average_watts": 359.9,
+    "average_heartrate": 149.0,
+    "max_heartrate": 177.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3389383147781029122,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 400,
+    "moving_time": 400,
+    "start_date": "2025-08-09T20:27:33Z",
+    "start_date_local": "2025-08-09T13:27:33Z",
+    "distance": 3514.3,
+    "start_index": 5160,
+    "end_index": 5560,
+    "average_cadence": 88.9,
+    "device_watts": true,
+    "average_watts": 300.6,
+    "average_heartrate": 151.4,
+    "max_heartrate": 169.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3496913677218060412,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 403,
+    "moving_time": 403,
+    "start_date": "2026-06-02T14:40:23Z",
+    "start_date_local": "2026-06-02T07:40:23Z",
+    "distance": 3514.3,
+    "start_index": 754,
+    "end_index": 1157,
+    "average_cadence": 80.9,
+    "device_watts": true,
+    "average_watts": 304.4,
+    "average_heartrate": 141.4,
+    "max_heartrate": 164.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481691945178486250,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18198995851,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 407,
+    "moving_time": 407,
+    "start_date": "2026-04-21T14:32:06Z",
+    "start_date_local": "2026-04-21T07:32:06Z",
+    "distance": 3514.3,
+    "start_index": 774,
+    "end_index": 1181,
+    "average_cadence": 85.3,
+    "device_watts": true,
+    "average_watts": 321.8,
+    "average_heartrate": 157.1,
+    "max_heartrate": 176.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500170690745431042,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18879141341,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 449,
+    "moving_time": 449,
+    "start_date": "2026-06-11T14:23:43Z",
+    "start_date_local": "2026-06-11T07:23:43Z",
+    "distance": 3514.3,
+    "start_index": 759,
+    "end_index": 1208,
+    "average_cadence": 82.8,
+    "device_watts": true,
+    "average_watts": 254.1,
+    "average_heartrate": 130.4,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387297855182410496,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 15336818451,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 459,
+    "moving_time": 459,
+    "start_date": "2025-08-03T19:37:37Z",
+    "start_date_local": "2025-08-03T12:37:37Z",
+    "distance": 3514.3,
+    "start_index": 7517,
+    "end_index": 7976,
+    "average_cadence": 84.5,
+    "device_watts": true,
+    "average_watts": 257.4,
+    "average_heartrate": 131.5,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978675453756,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 464,
+    "moving_time": 464,
+    "start_date": "2026-05-22T14:46:05Z",
+    "start_date_local": "2026-05-22T07:46:05Z",
+    "distance": 3514.3,
+    "start_index": 801,
+    "end_index": 1265,
+    "average_cadence": 82.3,
+    "device_watts": true,
+    "average_watts": 248.4,
+    "average_heartrate": 137.9,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474079913191568220,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 17926029115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 466,
+    "moving_time": 466,
+    "start_date": "2026-03-31T14:04:18Z",
+    "start_date_local": "2026-03-31T07:04:18Z",
+    "distance": 3514.3,
+    "start_index": 790,
+    "end_index": 1256,
+    "average_cadence": 83.1,
+    "device_watts": true,
+    "average_watts": 257.2,
+    "average_heartrate": 142.5,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481328901822449458,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18185180204,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 467,
+    "moving_time": 467,
+    "start_date": "2026-04-20T14:29:13Z",
+    "start_date_local": "2026-04-20T07:29:13Z",
+    "distance": 3514.3,
+    "start_index": 823,
+    "end_index": 1290,
+    "average_cadence": 81.0,
+    "device_watts": true,
+    "average_watts": 269.1,
+    "average_heartrate": 140.4,
+    "max_heartrate": 159.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498000775847591120,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18798146628,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 468,
+    "moving_time": 468,
+    "start_date": "2026-06-05T14:38:03Z",
+    "start_date_local": "2026-06-05T07:38:03Z",
+    "distance": 3514.3,
+    "start_index": 794,
+    "end_index": 1262,
+    "average_cadence": 82.7,
+    "device_watts": true,
+    "average_watts": 235.3,
+    "average_heartrate": 136.0,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499088005642899840,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18837934725,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 468,
+    "moving_time": 468,
+    "start_date": "2026-06-08T14:38:52Z",
+    "start_date_local": "2026-06-08T07:38:52Z",
+    "distance": 3514.3,
+    "start_index": 881,
+    "end_index": 1349,
+    "average_cadence": 82.9,
+    "device_watts": true,
+    "average_watts": 261.6,
+    "average_heartrate": 132.6,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491476539242730734,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18555893716,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 475,
+    "moving_time": 475,
+    "start_date": "2026-05-18T14:31:42Z",
+    "start_date_local": "2026-05-18T07:31:42Z",
+    "distance": 3514.3,
+    "start_index": 830,
+    "end_index": 1305,
+    "average_cadence": 85.0,
+    "device_watts": true,
+    "average_watts": 243.5,
+    "average_heartrate": 134.6,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3354247835624299904,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 14380153374,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 476,
+    "moving_time": 449,
+    "start_date": "2025-05-04T19:37:15Z",
+    "start_date_local": "2025-05-04T12:37:15Z",
+    "distance": 3514.3,
+    "start_index": 5234,
+    "end_index": 5684,
+    "average_cadence": 79.4,
+    "device_watts": true,
+    "average_watts": 262.6,
+    "average_heartrate": 145.5,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482418679127438178,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18227023189,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 477,
+    "moving_time": 477,
+    "start_date": "2026-04-23T14:19:18Z",
+    "start_date_local": "2026-04-23T07:19:18Z",
+    "distance": 3514.3,
+    "start_index": 860,
+    "end_index": 1337,
+    "average_cadence": 81.1,
+    "device_watts": true,
+    "average_watts": 259.8,
+    "average_heartrate": 135.8,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497278658245252480,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18771384330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 477,
+    "moving_time": 477,
+    "start_date": "2026-06-03T14:47:03Z",
+    "start_date_local": "2026-06-03T07:47:03Z",
+    "distance": 3514.3,
+    "start_index": 813,
+    "end_index": 1290,
+    "average_cadence": 83.4,
+    "device_watts": true,
+    "average_watts": 234.3,
+    "average_heartrate": 125.2,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472258010527451054,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 17865936615,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 481,
+    "moving_time": 481,
+    "start_date": "2026-03-26T13:46:01Z",
+    "start_date_local": "2026-03-26T06:46:01Z",
+    "distance": 3514.3,
+    "start_index": 858,
+    "end_index": 1338,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 260.5,
+    "average_heartrate": 146.9,
+    "max_heartrate": 166.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476620162041525266,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18014415654,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 487,
+    "moving_time": 487,
+    "start_date": "2026-04-07T14:34:17Z",
+    "start_date_local": "2026-04-07T07:34:17Z",
+    "distance": 3514.3,
+    "start_index": 859,
+    "end_index": 1346,
+    "average_cadence": 79.3,
+    "device_watts": true,
+    "average_watts": 237.0,
+    "average_heartrate": 134.3,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3504163656046095156,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 19023440714,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 488,
+    "moving_time": 488,
+    "start_date": "2026-06-22T14:44:30Z",
+    "start_date_local": "2026-06-22T07:44:30Z",
+    "distance": 3514.3,
+    "start_index": 828,
+    "end_index": 1316,
+    "average_cadence": 79.1,
+    "device_watts": true,
+    "average_watts": 217.2,
+    "average_heartrate": 122.7,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476257563193949392,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18001520259,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 489,
+    "moving_time": 489,
+    "start_date": "2026-04-06T14:34:15Z",
+    "start_date_local": "2026-04-06T07:34:15Z",
+    "distance": 3514.3,
+    "start_index": 844,
+    "end_index": 1333,
+    "average_cadence": 76.2,
+    "device_watts": true,
+    "average_watts": 234.2,
+    "average_heartrate": 135.8,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500540468031693286,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18892073258,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 491,
+    "moving_time": 491,
+    "start_date": "2026-06-12T14:40:50Z",
+    "start_date_local": "2026-06-12T07:40:50Z",
+    "distance": 3514.3,
+    "start_index": 798,
+    "end_index": 1289,
+    "average_cadence": 80.8,
+    "device_watts": true,
+    "average_watts": 236.1,
+    "average_heartrate": 124.7,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486401448932166936,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18373080739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 493,
+    "moving_time": 493,
+    "start_date": "2026-05-04T14:20:52Z",
+    "start_date_local": "2026-05-04T07:20:52Z",
+    "distance": 3514.3,
+    "start_index": 876,
+    "end_index": 1369,
+    "average_cadence": 81.7,
+    "device_watts": true,
+    "average_watts": 243.9,
+    "average_heartrate": 130.0,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3012128648614645780,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 7906979690,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 495,
+    "moving_time": 495,
+    "start_date": "2022-10-03T19:08:10Z",
+    "start_date_local": "2022-10-03T12:08:10Z",
+    "distance": 3514.3,
+    "start_index": 1083,
+    "end_index": 1576,
+    "device_watts": false,
+    "average_heartrate": 137.8,
+    "max_heartrate": 154.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502351043469475372,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18959278443,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 495,
+    "moving_time": 495,
+    "start_date": "2026-06-17T14:36:04Z",
+    "start_date_local": "2026-06-17T07:36:04Z",
+    "distance": 3514.3,
+    "start_index": 888,
+    "end_index": 1383,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 213.8,
+    "average_heartrate": 119.2,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3434594408582346254,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 16723191540,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 496,
+    "moving_time": 496,
+    "start_date": "2025-12-12T14:49:18Z",
+    "start_date_local": "2025-12-12T06:49:18Z",
+    "distance": 3514.3,
+    "start_index": 908,
+    "end_index": 1404,
+    "average_cadence": 81.0,
+    "device_watts": true,
+    "average_watts": 255.1,
+    "average_heartrate": 133.3,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474805379870973976,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 17951108555,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 497,
+    "moving_time": 497,
+    "start_date": "2026-04-02T14:21:24Z",
+    "start_date_local": "2026-04-02T07:21:24Z",
+    "distance": 3514.3,
+    "start_index": 876,
+    "end_index": 1373,
+    "average_cadence": 82.0,
+    "device_watts": true,
+    "average_watts": 230.8,
+    "average_heartrate": 138.7,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482778953322765508,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18240132582,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 498,
+    "moving_time": 498,
+    "start_date": "2026-04-24T14:26:09Z",
+    "start_date_local": "2026-04-24T07:26:09Z",
+    "distance": 3514.3,
+    "start_index": 841,
+    "end_index": 1339,
+    "average_cadence": 79.5,
+    "device_watts": true,
+    "average_watts": 245.2,
+    "average_heartrate": 129.7,
+    "max_heartrate": 150.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480242032470633926,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18146236077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 500,
+    "moving_time": 500,
+    "start_date": "2026-04-17T14:27:11Z",
+    "start_date_local": "2026-04-17T07:27:11Z",
+    "distance": 3514.3,
+    "start_index": 820,
+    "end_index": 1320,
+    "average_cadence": 81.8,
+    "device_watts": true,
+    "average_watts": 222.4,
+    "average_heartrate": 136.0,
+    "max_heartrate": 156.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491841620558602546,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18569402318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 506,
+    "moving_time": 506,
+    "start_date": "2026-05-19T14:40:27Z",
+    "start_date_local": "2026-05-19T07:40:27Z",
+    "distance": 3514.3,
+    "start_index": 875,
+    "end_index": 1381,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 209.0,
+    "average_heartrate": 120.2,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3479877879682129952,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18133000629,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 511,
+    "moving_time": 511,
+    "start_date": "2026-04-16T14:18:59Z",
+    "start_date_local": "2026-04-16T07:18:59Z",
+    "distance": 3514.3,
+    "start_index": 870,
+    "end_index": 1381,
+    "average_cadence": 81.1,
+    "device_watts": true,
+    "average_watts": 234.5,
+    "average_heartrate": 131.7,
+    "max_heartrate": 157.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492564490287917382,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18596486933,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 511,
+    "moving_time": 506,
+    "start_date": "2026-05-21T14:34:21Z",
+    "start_date_local": "2026-05-21T07:34:21Z",
+    "distance": 3514.3,
+    "start_index": 885,
+    "end_index": 1394,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 131.5,
+    "max_heartrate": 148.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492201193561044876,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18582983778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 512,
+    "moving_time": 494,
+    "start_date": "2026-05-20T14:31:16Z",
+    "start_date_local": "2026-05-20T07:31:16Z",
+    "distance": 3514.3,
+    "start_index": 815,
+    "end_index": 1312,
+    "average_cadence": 74.0,
+    "device_watts": true,
+    "average_watts": 221.8,
+    "average_heartrate": 129.8,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3501990990444817590,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18944935604,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 530,
+    "moving_time": 530,
+    "start_date": "2026-06-16T14:41:42Z",
+    "start_date_local": "2026-06-16T07:41:42Z",
+    "distance": 3514.3,
+    "start_index": 839,
+    "end_index": 1369,
+    "average_cadence": 77.8,
+    "device_watts": true,
+    "average_watts": 197.9,
+    "average_heartrate": 113.9,
+    "max_heartrate": 133.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477343057734120634,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18042080515,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 534,
+    "moving_time": 534,
+    "start_date": "2026-04-09T14:24:45Z",
+    "start_date_local": "2026-04-09T07:24:45Z",
+    "distance": 3514.3,
+    "start_index": 872,
+    "end_index": 1406,
+    "average_cadence": 74.7,
+    "device_watts": true,
+    "average_watts": 215.9,
+    "average_heartrate": 122.3,
+    "max_heartrate": 139.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769751650214752,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18386825119,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 535,
+    "moving_time": 534,
+    "start_date": "2026-05-05T14:38:00Z",
+    "start_date_local": "2026-05-05T07:38:00Z",
+    "distance": 3514.3,
+    "start_index": 896,
+    "end_index": 1431,
+    "device_watts": false,
+    "average_heartrate": 124.8,
+    "max_heartrate": 142.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502714930941700252,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18972878811,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 539,
+    "moving_time": 539,
+    "start_date": "2026-06-18T14:42:51Z",
+    "start_date_local": "2026-06-18T07:42:51Z",
+    "distance": 3514.3,
+    "start_index": 916,
+    "end_index": 1455,
+    "average_cadence": 79.4,
+    "device_watts": true,
+    "average_watts": 201.3,
+    "average_heartrate": 104.9,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476974597730216140,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18028038338,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 540,
+    "moving_time": 540,
+    "start_date": "2026-04-08T14:00:20Z",
+    "start_date_local": "2026-04-08T07:00:20Z",
+    "distance": 3514.3,
+    "start_index": 863,
+    "end_index": 1403,
+    "device_watts": false,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477707428062340976,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18054908859,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 545,
+    "moving_time": 545,
+    "start_date": "2026-04-10T14:20:18Z",
+    "start_date_local": "2026-04-10T07:20:18Z",
+    "distance": 3514.3,
+    "start_index": 857,
+    "end_index": 1402,
+    "average_cadence": 76.3,
+    "device_watts": true,
+    "average_watts": 216.1,
+    "average_heartrate": 131.0,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020008449431324328,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 8017333792,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 550,
+    "moving_time": 550,
+    "start_date": "2022-10-25T14:19:30Z",
+    "start_date_local": "2022-10-25T07:19:30Z",
+    "distance": 3514.3,
+    "start_index": 1045,
+    "end_index": 1595,
+    "device_watts": false,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489304526497640186,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18478432225,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 558,
+    "moving_time": 558,
+    "start_date": "2026-05-12T14:34:00Z",
+    "start_date_local": "2026-05-12T07:34:00Z",
+    "distance": 3514.3,
+    "start_index": 1006,
+    "end_index": 1564,
+    "device_watts": false,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487129644536326116,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18400369545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 566,
+    "moving_time": 566,
+    "start_date": "2026-05-06T14:29:05Z",
+    "start_date_local": "2026-05-06T07:29:05Z",
+    "distance": 3514.3,
+    "start_index": 937,
+    "end_index": 1503,
+    "device_watts": false,
+    "average_heartrate": 119.6,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490027183722021618,
+    "resource_state": 2,
+    "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+    "activity": {
+      "id": 18505534998,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 588,
+    "moving_time": 588,
+    "start_date": "2026-05-14T14:23:14Z",
+    "start_date_local": "2026-05-14T07:23:14Z",
+    "distance": 3514.3,
+    "start_index": 1004,
+    "end_index": 1592,
+    "device_watts": false,
+    "average_heartrate": 124.8,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 647908,
+      "resource_state": 2,
+      "name": "17th Ave NW to 180th Ave SE via W Lk Sammamish Pkwy SE",
+      "activity_type": "Ride",
+      "distance": 3514.3,
+      "average_grade": 1.3,
+      "maximum_grade": 7.3,
+      "elevation_high": 26.6,
+      "elevation_low": -20.8,
+      "start_latlng": [
+        47.55205515772104,
+        -122.05982451327145
+      ],
+      "end_latlng": [
+        47.56683396175504,
+        -122.09824087098241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Issaquah",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

@@ -21,8 +21,8 @@
   "follower": null,
   "blocked": false,
   "can_follow": true,
-  "follower_count": 94,
-  "friend_count": 98,
+  "follower_count": 96,
+  "friend_count": 100,
   "mutual_friend_count": 0,
   "athlete_type": 0,
   "date_preference": "%m/%d/%Y",
@@ -106,8 +106,8 @@
       "name": "Brooks Run Club - Seattle",
       "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/596296/13868213/2/medium.jpg",
       "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/596296/13868213/2/large.jpg",
-      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/596296/13866157/3/large.jpg",
-      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/596296/13866157/3/small.jpg",
+      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/596296/13866157/4/large.jpg",
+      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/596296/13866157/4/small.jpg",
       "activity_types": [
         "Run",
         "VirtualRun",
@@ -287,14 +287,24 @@
       "converted_distance": 43.6
     },
     {
+      "id": "b18111244",
+      "primary": false,
+      "name": "Marinoni ",
+      "nickname": "Marinoni ",
+      "resource_state": 2,
+      "retired": false,
+      "distance": 52806,
+      "converted_distance": 32.8
+    },
+    {
       "id": "b17974179",
       "primary": false,
       "name": "Specialized Tarmac SL8",
       "nickname": "Specialized Tarmac SL8",
       "resource_state": 2,
       "retired": false,
-      "distance": 751025,
-      "converted_distance": 466.7
+      "distance": 1505184,
+      "converted_distance": 935.3
     }
   ],
   "shoes": [
@@ -305,8 +315,8 @@
       "nickname": "Cloud Vista",
       "resource_state": 2,
       "retired": false,
-      "distance": 197055,
-      "converted_distance": 122.4
+      "distance": 202077,
+      "converted_distance": 125.6
     }
   ]
 }

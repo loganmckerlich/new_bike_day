@@ -58,6 +58,12 @@
         "type_id": 2,
         "type": "overall",
         "rank": 4
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -122,6 +128,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -186,6 +198,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -250,6 +268,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -309,7 +333,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -372,6 +403,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -436,6 +473,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -495,7 +538,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -553,7 +603,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -616,6 +673,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -675,7 +738,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -731,7 +801,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -787,7 +864,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -843,7 +927,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -901,7 +992,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -959,7 +1057,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1022,6 +1127,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -1086,6 +1197,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -1148,6 +1265,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -1212,6 +1335,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -1271,7 +1400,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1329,7 +1465,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1387,7 +1530,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1448,6 +1598,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -1507,7 +1663,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1565,7 +1728,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1623,7 +1793,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1681,7 +1858,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1739,7 +1923,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500170690744946690,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18879141341,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 40,
+    "moving_time": 40,
+    "start_date": "2026-06-11T15:03:57Z",
+    "start_date_local": "2026-06-11T08:03:57Z",
+    "distance": 368.7,
+    "start_index": 3109,
+    "end_index": 3149,
+    "average_cadence": 86.2,
+    "device_watts": true,
+    "average_watts": 433.9,
+    "average_heartrate": 158.7,
+    "max_heartrate": 165.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1800,6 +2056,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -1859,7 +2121,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1917,7 +2186,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1978,6 +2254,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -2037,7 +2319,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2095,7 +2384,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2156,6 +2452,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -2213,7 +2515,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2271,7 +2580,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2329,7 +2645,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2387,7 +2710,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2445,7 +2775,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2506,6 +2843,142 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499819134922862090,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18866437059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 45,
+    "moving_time": 45,
+    "start_date": "2026-06-10T15:29:38Z",
+    "start_date_local": "2026-06-10T08:29:38Z",
+    "distance": 368.7,
+    "start_index": 3300,
+    "end_index": 3345,
+    "average_cadence": 80.7,
+    "device_watts": true,
+    "average_watts": 309.2,
+    "average_heartrate": 145.9,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502351043469391404,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18959278443,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 45,
+    "moving_time": 45,
+    "start_date": "2026-06-17T15:26:19Z",
+    "start_date_local": "2026-06-17T08:26:19Z",
+    "distance": 368.7,
+    "start_index": 3729,
+    "end_index": 3774,
+    "average_cadence": 75.7,
+    "device_watts": true,
+    "average_watts": 318.6,
+    "average_heartrate": 130.9,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -2563,7 +3036,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2619,7 +3099,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2677,7 +3164,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2735,7 +3229,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2793,7 +3294,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2851,7 +3359,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2909,7 +3424,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2967,7 +3489,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3025,7 +3554,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3083,7 +3619,144 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499088005639835008,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18837934725,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 47,
+    "moving_time": 47,
+    "start_date": "2026-06-08T15:21:01Z",
+    "start_date_local": "2026-06-08T08:21:01Z",
+    "distance": 368.7,
+    "start_index": 3381,
+    "end_index": 3428,
+    "average_cadence": 78.9,
+    "device_watts": true,
+    "average_watts": 284.0,
+    "average_heartrate": 134.7,
+    "max_heartrate": 140.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502714930940460188,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18972878811,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 47,
+    "moving_time": 47,
+    "start_date": "2026-06-18T15:32:00Z",
+    "start_date_local": "2026-06-18T08:32:00Z",
+    "distance": 368.7,
+    "start_index": 3751,
+    "end_index": 3798,
+    "average_cadence": 77.2,
+    "device_watts": true,
+    "average_watts": 236.6,
+    "average_heartrate": 123.0,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3144,6 +3817,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -3203,7 +3882,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3261,7 +3947,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3319,7 +4012,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497278658249098624,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18771384330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 48,
+    "moving_time": 48,
+    "start_date": "2026-06-03T15:30:50Z",
+    "start_date_local": "2026-06-03T08:30:50Z",
+    "distance": 368.7,
+    "start_index": 3263,
+    "end_index": 3311,
+    "average_cadence": 80.9,
+    "device_watts": true,
+    "average_watts": 297.0,
+    "average_heartrate": 139.1,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3375,7 +4140,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3433,7 +4205,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3491,7 +4270,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3549,7 +4335,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3607,7 +4400,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3665,7 +4465,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3723,7 +4530,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3781,7 +4595,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3839,7 +4660,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3893,7 +4721,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3951,7 +4786,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4009,7 +4851,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4067,7 +4916,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4125,7 +4981,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4183,7 +5046,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4237,7 +5107,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4295,7 +5172,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4353,7 +5237,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4411,7 +5302,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4469,7 +5367,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4527,7 +5432,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4585,7 +5497,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4643,7 +5562,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4699,7 +5625,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4757,7 +5690,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4815,7 +5755,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4873,7 +5820,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4931,7 +5885,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4989,7 +5950,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5047,7 +6015,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5105,7 +6080,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5163,7 +6145,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5221,7 +6210,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5279,7 +6275,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5337,7 +6340,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5395,7 +6405,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5453,7 +6470,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500540468032401894,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18892073258,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 54,
+    "moving_time": 54,
+    "start_date": "2026-06-12T15:33:01Z",
+    "start_date_local": "2026-06-12T08:33:01Z",
+    "distance": 368.7,
+    "start_index": 3543,
+    "end_index": 3597,
+    "average_cadence": 76.9,
+    "device_watts": true,
+    "average_watts": 224.3,
+    "average_heartrate": 122.9,
+    "max_heartrate": 128.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5509,7 +6598,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5567,7 +6663,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5625,7 +6728,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5683,7 +6793,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5741,7 +6858,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5799,7 +6923,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5857,7 +6988,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5913,7 +7051,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5971,7 +7116,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498000775844184272,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18798146628,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 55,
+    "moving_time": 55,
+    "start_date": "2026-06-05T15:20:24Z",
+    "start_date_local": "2026-06-05T08:20:24Z",
+    "distance": 368.7,
+    "start_index": 3335,
+    "end_index": 3390,
+    "average_cadence": 77.1,
+    "device_watts": true,
+    "average_watts": 279.9,
+    "average_heartrate": 139.4,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6030,6 +7247,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -6089,7 +7312,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6145,7 +7375,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6203,7 +7440,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6261,7 +7505,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6319,7 +7570,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6377,7 +7635,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6435,7 +7700,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6491,7 +7763,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6549,7 +7828,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6607,7 +7893,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6661,7 +7954,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6717,7 +8017,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6775,7 +8082,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6831,7 +8145,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6889,7 +8210,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6947,7 +8275,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7005,7 +8340,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7063,7 +8405,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7119,7 +8468,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7177,7 +8533,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7235,7 +8598,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7293,7 +8663,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7349,7 +8726,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7407,7 +8791,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3501990990444896438,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 18944935604,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 59,
+    "moving_time": 59,
+    "start_date": "2026-06-16T15:30:13Z",
+    "start_date_local": "2026-06-16T08:30:13Z",
+    "distance": 368.7,
+    "start_index": 3709,
+    "end_index": 3768,
+    "average_cadence": 65.2,
+    "device_watts": true,
+    "average_watts": 184.3,
+    "average_heartrate": 112.2,
+    "max_heartrate": 122.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7465,7 +8921,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7523,7 +8986,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7581,7 +9051,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7639,7 +9116,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7697,7 +9181,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7755,7 +9246,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7811,7 +9309,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7870,6 +9375,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
       }
     ],
     "visibility": "everyone",
@@ -7927,7 +9438,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7985,7 +9503,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8043,7 +9568,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8101,7 +9633,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8157,7 +9696,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8215,7 +9761,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8271,7 +9824,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8327,7 +9887,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8383,7 +9950,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8441,7 +10015,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8499,7 +10080,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8557,7 +10145,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8615,7 +10210,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8671,7 +10273,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8727,7 +10336,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8785,7 +10401,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8843,7 +10466,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8899,7 +10529,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -8957,7 +10594,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -9015,7 +10659,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3504163656044127028,
+    "resource_state": 2,
+    "name": "Last Hill above Coulon Park",
+    "activity": {
+      "id": 19023440714,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 69,
+    "moving_time": 69,
+    "start_date": "2026-06-22T15:29:09Z",
+    "start_date_local": "2026-06-22T08:29:09Z",
+    "distance": 368.7,
+    "start_index": 3487,
+    "end_index": 3556,
+    "average_cadence": 71.8,
+    "device_watts": true,
+    "average_watts": 198.9,
+    "average_heartrate": 127.5,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 7323508,
+      "resource_state": 2,
+      "name": "Last Hill above Coulon Park",
+      "activity_type": "Ride",
+      "distance": 368.7,
+      "average_grade": 2.2,
+      "maximum_grade": 5.5,
+      "elevation_high": 21.6,
+      "elevation_low": 12.6,
+      "start_latlng": [
+        47.507796,
+        -122.201171
+      ],
+      "end_latlng": [
+        47.50465,
+        -122.19965
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 35
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   }

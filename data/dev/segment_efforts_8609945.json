@@ -1,0 +1,2484 @@
+[
+  {
+    "id": 3482418679128307554,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18227023189,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 50,
+    "moving_time": 50,
+    "start_date": "2026-04-23T14:42:22Z",
+    "start_date_local": "2026-04-23T07:42:22Z",
+    "distance": 784.4,
+    "start_index": 2207,
+    "end_index": 2257,
+    "average_cadence": 70.6,
+    "device_watts": true,
+    "average_watts": 274.7,
+    "average_heartrate": 144.5,
+    "max_heartrate": 155.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491841620560241970,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18569402318,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 52,
+    "moving_time": 52,
+    "start_date": "2026-05-19T15:05:34Z",
+    "start_date_local": "2026-05-19T08:05:34Z",
+    "distance": 784.4,
+    "start_index": 2256,
+    "end_index": 2308,
+    "average_cadence": 74.6,
+    "device_watts": true,
+    "average_watts": 199.2,
+    "average_heartrate": 137.0,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498000775845237968,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18798146628,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 54,
+    "moving_time": 54,
+    "start_date": "2026-06-05T14:58:38Z",
+    "start_date_local": "2026-06-05T07:58:38Z",
+    "distance": 784.4,
+    "start_index": 2029,
+    "end_index": 2083,
+    "average_cadence": 87.1,
+    "device_watts": true,
+    "average_watts": 224.5,
+    "average_heartrate": 136.8,
+    "max_heartrate": 143.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3341623892795533230,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 14035221050,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 55,
+    "moving_time": 55,
+    "start_date": "2025-03-30T22:07:54Z",
+    "start_date_local": "2025-03-30T15:07:54Z",
+    "distance": 784.4,
+    "start_index": 18518,
+    "end_index": 18573,
+    "average_cadence": 2.9,
+    "device_watts": true,
+    "average_watts": 3.8,
+    "average_heartrate": 109.6,
+    "max_heartrate": 117.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 1,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 1
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481691945176934890,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18198995851,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 55,
+    "moving_time": 55,
+    "start_date": "2026-04-21T14:52:00Z",
+    "start_date_local": "2026-04-21T07:52:00Z",
+    "distance": 784.4,
+    "start_index": 1897,
+    "end_index": 1952,
+    "average_cadence": 72.4,
+    "device_watts": true,
+    "average_watts": 181.2,
+    "average_heartrate": 147.4,
+    "max_heartrate": 152.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474079913191026524,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 17926029115,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 56,
+    "moving_time": 56,
+    "start_date": "2026-03-31T14:25:55Z",
+    "start_date_local": "2026-03-31T07:25:55Z",
+    "distance": 784.4,
+    "start_index": 2062,
+    "end_index": 2118,
+    "average_cadence": 50.9,
+    "device_watts": true,
+    "average_watts": 105.3,
+    "average_heartrate": 115.8,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3480242032471523782,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18146236077,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 56,
+    "moving_time": 56,
+    "start_date": "2026-04-17T14:50:11Z",
+    "start_date_local": "2026-04-17T07:50:11Z",
+    "distance": 784.4,
+    "start_index": 2152,
+    "end_index": 2208,
+    "average_cadence": 37.5,
+    "device_watts": true,
+    "average_watts": 69.2,
+    "average_heartrate": 120.9,
+    "max_heartrate": 124.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 3,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 3
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3491476539242387694,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18555893716,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 56,
+    "moving_time": 56,
+    "start_date": "2026-05-18T14:56:05Z",
+    "start_date_local": "2026-05-18T07:56:05Z",
+    "distance": 784.4,
+    "start_index": 2167,
+    "end_index": 2223,
+    "average_cadence": 72.5,
+    "device_watts": true,
+    "average_watts": 171.1,
+    "average_heartrate": 140.2,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3389383147776604418,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 15403695090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 57,
+    "moving_time": 57,
+    "start_date": "2025-08-09T20:48:15Z",
+    "start_date_local": "2025-08-09T13:48:15Z",
+    "distance": 784.4,
+    "start_index": 6349,
+    "end_index": 6406,
+    "average_cadence": 52.7,
+    "device_watts": true,
+    "average_watts": 80.5,
+    "average_heartrate": 123.3,
+    "max_heartrate": 127.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492564490289887558,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18596486933,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 57,
+    "moving_time": 57,
+    "start_date": "2026-05-21T14:58:12Z",
+    "start_date_local": "2026-05-21T07:58:12Z",
+    "distance": 784.4,
+    "start_index": 2299,
+    "end_index": 2356,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 112.7,
+    "max_heartrate": 120.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3481328901820077874,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18185180204,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 58,
+    "moving_time": 58,
+    "start_date": "2026-04-20T14:52:14Z",
+    "start_date_local": "2026-04-20T07:52:14Z",
+    "distance": 784.4,
+    "start_index": 2170,
+    "end_index": 2228,
+    "average_cadence": 27.4,
+    "device_watts": true,
+    "average_watts": 37.5,
+    "average_heartrate": 110.3,
+    "max_heartrate": 114.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3496913677217879164,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18757096682,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 58,
+    "moving_time": 58,
+    "start_date": "2026-06-02T15:02:13Z",
+    "start_date_local": "2026-06-02T08:02:13Z",
+    "distance": 784.4,
+    "start_index": 1959,
+    "end_index": 2017,
+    "average_cadence": 44.0,
+    "device_watts": true,
+    "average_watts": 94.3,
+    "average_heartrate": 114.8,
+    "max_heartrate": 121.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499819134920713738,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18866437059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 58,
+    "moving_time": 58,
+    "start_date": "2026-06-10T15:09:15Z",
+    "start_date_local": "2026-06-10T08:09:15Z",
+    "distance": 784.4,
+    "start_index": 2077,
+    "end_index": 2135,
+    "average_cadence": 35.8,
+    "device_watts": true,
+    "average_watts": 54.4,
+    "average_heartrate": 111.9,
+    "max_heartrate": 118.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500170690746521602,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18879141341,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 58,
+    "moving_time": 58,
+    "start_date": "2026-06-11T14:44:25Z",
+    "start_date_local": "2026-06-11T07:44:25Z",
+    "distance": 784.4,
+    "start_index": 1937,
+    "end_index": 1995,
+    "average_cadence": 62.4,
+    "device_watts": true,
+    "average_watts": 127.8,
+    "average_heartrate": 124.9,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3504163656046373684,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 19023440714,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 58,
+    "moving_time": 58,
+    "start_date": "2026-06-22T15:08:24Z",
+    "start_date_local": "2026-06-22T08:08:24Z",
+    "distance": 784.4,
+    "start_index": 2242,
+    "end_index": 2300,
+    "average_cadence": 40.6,
+    "device_watts": true,
+    "average_watts": 52.0,
+    "average_heartrate": 107.2,
+    "max_heartrate": 112.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3474805379872816152,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 17951108555,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 59,
+    "moving_time": 59,
+    "start_date": "2026-04-02T14:46:55Z",
+    "start_date_local": "2026-04-02T07:46:55Z",
+    "distance": 784.4,
+    "start_index": 2282,
+    "end_index": 2341,
+    "average_cadence": 45.3,
+    "device_watts": true,
+    "average_watts": 74.6,
+    "average_heartrate": 117.5,
+    "max_heartrate": 122.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476974597732438220,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18028038338,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 59,
+    "moving_time": 59,
+    "start_date": "2026-04-08T14:26:32Z",
+    "start_date_local": "2026-04-08T07:26:32Z",
+    "distance": 784.4,
+    "start_index": 2387,
+    "end_index": 2446,
+    "device_watts": false,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3501990990444745910,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18944935604,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 59,
+    "moving_time": 59,
+    "start_date": "2026-06-16T15:08:00Z",
+    "start_date_local": "2026-06-16T08:08:00Z",
+    "distance": 784.4,
+    "start_index": 2376,
+    "end_index": 2435,
+    "average_cadence": 32.1,
+    "device_watts": true,
+    "average_watts": 37.4,
+    "average_heartrate": 88.8,
+    "max_heartrate": 94.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476257563192387792,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18001520259,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 60,
+    "moving_time": 60,
+    "start_date": "2026-04-06T14:57:53Z",
+    "start_date_local": "2026-04-06T07:57:53Z",
+    "distance": 784.4,
+    "start_index": 2214,
+    "end_index": 2274,
+    "average_cadence": 21.2,
+    "device_watts": true,
+    "average_watts": 27.8,
+    "average_heartrate": 110.9,
+    "max_heartrate": 117.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486401448931301656,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18373080739,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 60,
+    "moving_time": 60,
+    "start_date": "2026-05-04T14:46:05Z",
+    "start_date_local": "2026-05-04T07:46:05Z",
+    "distance": 784.4,
+    "start_index": 2297,
+    "end_index": 2357,
+    "average_cadence": 25.5,
+    "device_watts": true,
+    "average_watts": 26.3,
+    "average_heartrate": 103.4,
+    "max_heartrate": 107.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497278658246161792,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18771384330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 60,
+    "moving_time": 60,
+    "start_date": "2026-06-03T15:10:18Z",
+    "start_date_local": "2026-06-03T08:10:18Z",
+    "distance": 784.4,
+    "start_index": 2031,
+    "end_index": 2091,
+    "average_cadence": 36.8,
+    "device_watts": true,
+    "average_watts": 48.9,
+    "average_heartrate": 110.8,
+    "max_heartrate": 116.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3387297855184320256,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 15336818451,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2025-08-03T20:01:02Z",
+    "start_date_local": "2025-08-03T13:01:02Z",
+    "distance": 784.4,
+    "start_index": 8800,
+    "end_index": 8861,
+    "average_cadence": 15.2,
+    "device_watts": true,
+    "average_watts": 22.5,
+    "average_heartrate": 107.9,
+    "max_heartrate": 112.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3476620162041809938,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18014415654,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2026-04-07T14:59:07Z",
+    "start_date_local": "2026-04-07T07:59:07Z",
+    "distance": 784.4,
+    "start_index": 2268,
+    "end_index": 2329,
+    "average_cadence": 0.0,
+    "device_watts": true,
+    "average_watts": 0.0,
+    "average_heartrate": 96.8,
+    "max_heartrate": 104.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477343057732221114,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18042080515,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2026-04-09T14:50:42Z",
+    "start_date_local": "2026-04-09T07:50:42Z",
+    "distance": 784.4,
+    "start_index": 2392,
+    "end_index": 2453,
+    "average_cadence": 15.6,
+    "device_watts": true,
+    "average_watts": 17.6,
+    "average_heartrate": 95.0,
+    "max_heartrate": 100.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3477707428060587888,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18054908859,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2026-04-10T14:46:06Z",
+    "start_date_local": "2026-04-10T07:46:06Z",
+    "distance": 784.4,
+    "start_index": 2312,
+    "end_index": 2373,
+    "average_cadence": 7.1,
+    "device_watts": true,
+    "average_watts": 3.2,
+    "average_heartrate": 101.2,
+    "max_heartrate": 107.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3479877879682207776,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18133000629,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2026-04-16T14:43:47Z",
+    "start_date_local": "2026-04-16T07:43:47Z",
+    "distance": 784.4,
+    "start_index": 2337,
+    "end_index": 2398,
+    "average_cadence": 60.5,
+    "device_watts": true,
+    "average_watts": 116.4,
+    "average_heartrate": 122.0,
+    "max_heartrate": 129.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492201193554354060,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18582983778,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2026-05-20T14:54:39Z",
+    "start_date_local": "2026-05-20T07:54:39Z",
+    "distance": 784.4,
+    "start_index": 2190,
+    "end_index": 2251,
+    "average_cadence": 32.2,
+    "device_watts": true,
+    "average_watts": 29.9,
+    "average_heartrate": 100.1,
+    "max_heartrate": 104.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499088005643529600,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18837934725,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2026-06-08T15:01:05Z",
+    "start_date_local": "2026-06-08T08:01:05Z",
+    "distance": 784.4,
+    "start_index": 2185,
+    "end_index": 2246,
+    "average_cadence": 22.5,
+    "device_watts": true,
+    "average_watts": 22.0,
+    "average_heartrate": 104.7,
+    "max_heartrate": 107.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502351043469111852,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18959278443,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 61,
+    "moving_time": 61,
+    "start_date": "2026-06-17T15:03:06Z",
+    "start_date_local": "2026-06-17T08:03:06Z",
+    "distance": 784.4,
+    "start_index": 2336,
+    "end_index": 2397,
+    "average_cadence": 38.2,
+    "device_watts": true,
+    "average_watts": 46.3,
+    "average_heartrate": 89.8,
+    "max_heartrate": 96.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500540468030943718,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18892073258,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 62,
+    "moving_time": 62,
+    "start_date": "2026-06-12T15:04:10Z",
+    "start_date_local": "2026-06-12T08:04:10Z",
+    "distance": 784.4,
+    "start_index": 2165,
+    "end_index": 2227,
+    "average_cadence": 31.4,
+    "device_watts": true,
+    "average_watts": 43.5,
+    "average_heartrate": 100.7,
+    "max_heartrate": 105.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3354247835626071424,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 14380153374,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 63,
+    "moving_time": 63,
+    "start_date": "2025-05-04T20:02:36Z",
+    "start_date_local": "2025-05-04T13:02:36Z",
+    "distance": 784.4,
+    "start_index": 6558,
+    "end_index": 6621,
+    "average_cadence": 38.8,
+    "device_watts": true,
+    "average_watts": 55.9,
+    "average_heartrate": 112.2,
+    "max_heartrate": 119.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502714930938211484,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18972878811,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 63,
+    "moving_time": 63,
+    "start_date": "2026-06-18T15:09:26Z",
+    "start_date_local": "2026-06-18T08:09:26Z",
+    "distance": 784.4,
+    "start_index": 2397,
+    "end_index": 2460,
+    "average_cadence": 28.3,
+    "device_watts": true,
+    "average_watts": 36.1,
+    "average_heartrate": 87.9,
+    "max_heartrate": 95.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3482778953323366596,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18240132582,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 64,
+    "moving_time": 64,
+    "start_date": "2026-04-24T14:51:09Z",
+    "start_date_local": "2026-04-24T07:51:09Z",
+    "distance": 784.4,
+    "start_index": 2240,
+    "end_index": 2304,
+    "average_cadence": 28.8,
+    "device_watts": true,
+    "average_watts": 41.0,
+    "average_heartrate": 95.8,
+    "max_heartrate": 106.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3492929978679104316,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18609778639,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 64,
+    "moving_time": 64,
+    "start_date": "2026-05-22T15:10:30Z",
+    "start_date_local": "2026-05-22T08:10:30Z",
+    "distance": 784.4,
+    "start_index": 2159,
+    "end_index": 2223,
+    "average_cadence": 9.8,
+    "device_watts": true,
+    "average_watts": 8.8,
+    "average_heartrate": 89.7,
+    "max_heartrate": 104.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3486769751648198496,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18386825119,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 66,
+    "moving_time": 66,
+    "start_date": "2026-05-05T15:04:23Z",
+    "start_date_local": "2026-05-05T08:04:23Z",
+    "distance": 784.4,
+    "start_index": 2410,
+    "end_index": 2476,
+    "device_watts": false,
+    "average_heartrate": 95.5,
+    "max_heartrate": 101.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3012128648613724180,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 7906979690,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 67,
+    "moving_time": 67,
+    "start_date": "2022-10-03T19:36:42Z",
+    "start_date_local": "2022-10-03T12:36:42Z",
+    "distance": 784.4,
+    "start_index": 2620,
+    "end_index": 2687,
+    "device_watts": false,
+    "average_heartrate": 138.0,
+    "max_heartrate": 138.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3434594408584843790,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 16723191540,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 67,
+    "moving_time": 67,
+    "start_date": "2025-12-12T15:13:30Z",
+    "start_date_local": "2025-12-12T07:13:30Z",
+    "distance": 784.4,
+    "start_index": 2305,
+    "end_index": 2372,
+    "average_cadence": 16.1,
+    "device_watts": true,
+    "average_watts": 18.5,
+    "average_heartrate": 105.4,
+    "max_heartrate": 113.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3472258010526476206,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 17865936615,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 67,
+    "moving_time": 67,
+    "start_date": "2026-03-26T14:09:32Z",
+    "start_date_local": "2026-03-26T07:09:32Z",
+    "distance": 784.4,
+    "start_index": 2194,
+    "end_index": 2261,
+    "average_cadence": 12.5,
+    "device_watts": true,
+    "average_watts": 29.1,
+    "average_heartrate": 108.3,
+    "max_heartrate": 114.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3020008449431626408,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 8017333792,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 68,
+    "moving_time": 68,
+    "start_date": "2022-10-25T14:46:50Z",
+    "start_date_local": "2022-10-25T07:46:50Z",
+    "distance": 784.4,
+    "start_index": 2621,
+    "end_index": 2689,
+    "device_watts": false,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": 2,
+    "achievements": [
+      {
+        "type_id": 3,
+        "type": "pr",
+        "rank": 2
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3489304526500442874,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18478432225,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 68,
+    "moving_time": 68,
+    "start_date": "2026-05-12T15:00:13Z",
+    "start_date_local": "2026-05-12T08:00:13Z",
+    "distance": 784.4,
+    "start_index": 2571,
+    "end_index": 2639,
+    "device_watts": false,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3490027157157064006,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18505534998,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 68,
+    "moving_time": 68,
+    "start_date": "2026-05-14T14:49:58Z",
+    "start_date_local": "2026-05-14T07:49:58Z",
+    "distance": 784.4,
+    "start_index": 2603,
+    "end_index": 2671,
+    "device_watts": false,
+    "average_heartrate": 98.2,
+    "max_heartrate": 102.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3487129644536893412,
+    "resource_state": 2,
+    "name": "36th DH after 136th",
+    "activity": {
+      "id": 18400369545,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 69,
+    "moving_time": 69,
+    "start_date": "2026-05-06T14:58:08Z",
+    "start_date_local": "2026-05-06T07:58:08Z",
+    "distance": 784.4,
+    "start_index": 2566,
+    "end_index": 2635,
+    "device_watts": false,
+    "average_heartrate": 87.1,
+    "max_heartrate": 95.0,
+    "segment": {
+      "id": 8609945,
+      "resource_state": 2,
+      "name": "36th DH after 136th",
+      "activity_type": "Ride",
+      "distance": 784.4,
+      "average_grade": -5.6,
+      "maximum_grade": -4.1,
+      "elevation_high": 77.8,
+      "elevation_low": 33.9,
+      "start_latlng": [
+        47.579307,
+        -122.156968
+      ],
+      "end_latlng": [
+        47.579586,
+        -122.167382
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Bellevue",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  }
+]

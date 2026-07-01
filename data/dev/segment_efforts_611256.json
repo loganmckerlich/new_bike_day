@@ -58,6 +58,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
       }
     ],
     "visibility": "everyone",
@@ -122,6 +128,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
       }
     ],
     "visibility": "everyone",
@@ -186,6 +198,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
       }
     ],
     "visibility": "everyone",
@@ -245,7 +263,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -308,6 +333,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
       }
     ],
     "visibility": "everyone",
@@ -367,7 +398,77 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499972906430615244,
+    "resource_state": 2,
+    "name": "212th Way SE",
+    "activity": {
+      "id": 18872776650,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 343,
+    "moving_time": 342,
+    "start_date": "2026-06-11T01:49:07Z",
+    "start_date_local": "2026-06-10T18:49:07Z",
+    "distance": 1276.95,
+    "start_index": 3330,
+    "end_index": 3673,
+    "average_cadence": 87.5,
+    "device_watts": true,
+    "average_watts": 357.9,
+    "segment": {
+      "id": 611256,
+      "resource_state": 2,
+      "name": "212th Way SE",
+      "activity_type": "Ride",
+      "distance": 1276.95,
+      "average_grade": 8.4,
+      "maximum_grade": 13.5,
+      "elevation_high": 120.0,
+      "elevation_low": 12.9,
+      "start_latlng": [
+        47.570025,
+        -122.064127
+      ],
+      "end_latlng": [
+        47.577282,
+        -122.056991
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -428,6 +529,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
       }
     ],
     "visibility": "everyone",
@@ -492,6 +599,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
       }
     ],
     "visibility": "everyone",
@@ -549,7 +662,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -607,7 +727,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -665,7 +792,144 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502475152189594218,
+    "resource_state": 2,
+    "name": "212th Way SE",
+    "activity": {
+      "id": 18964953090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 399,
+    "moving_time": 387,
+    "start_date": "2026-06-17T23:26:56Z",
+    "start_date_local": "2026-06-17T16:26:56Z",
+    "distance": 1276.95,
+    "start_index": 3252,
+    "end_index": 3642,
+    "average_cadence": 78.4,
+    "device_watts": true,
+    "average_watts": 297.7,
+    "average_heartrate": 145.7,
+    "max_heartrate": 172.0,
+    "segment": {
+      "id": 611256,
+      "resource_state": 2,
+      "name": "212th Way SE",
+      "activity_type": "Ride",
+      "distance": 1276.95,
+      "average_grade": 8.4,
+      "maximum_grade": 13.5,
+      "elevation_high": 120.0,
+      "elevation_low": 12.9,
+      "start_latlng": [
+        47.570025,
+        -122.064127
+      ],
+      "end_latlng": [
+        47.577282,
+        -122.056991
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499222138844019666,
+    "resource_state": 2,
+    "name": "212th Way SE",
+    "activity": {
+      "id": 18844084630,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 401,
+    "moving_time": 385,
+    "start_date": "2026-06-08T23:57:08Z",
+    "start_date_local": "2026-06-08T16:57:08Z",
+    "distance": 1276.95,
+    "start_index": 3340,
+    "end_index": 3728,
+    "average_cadence": 75.6,
+    "device_watts": true,
+    "average_watts": 310.4,
+    "average_heartrate": 141.6,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 611256,
+      "resource_state": 2,
+      "name": "212th Way SE",
+      "activity_type": "Ride",
+      "distance": 1276.95,
+      "average_grade": 8.4,
+      "maximum_grade": 13.5,
+      "elevation_high": 120.0,
+      "elevation_low": 12.9,
+      "start_latlng": [
+        47.570025,
+        -122.064127
+      ],
+      "end_latlng": [
+        47.577282,
+        -122.056991
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -723,7 +987,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -781,7 +1052,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -842,6 +1120,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
       }
     ],
     "visibility": "everyone",
@@ -901,7 +1185,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -957,7 +1248,144 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502865342082330570,
+    "resource_state": 2,
+    "name": "212th Way SE",
+    "activity": {
+      "id": 18978898053,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 431,
+    "moving_time": 356,
+    "start_date": "2026-06-19T01:24:01Z",
+    "start_date_local": "2026-06-18T18:24:01Z",
+    "distance": 1276.95,
+    "start_index": 3359,
+    "end_index": 3723,
+    "average_cadence": 66.8,
+    "device_watts": true,
+    "average_watts": 290.3,
+    "average_heartrate": 149.6,
+    "max_heartrate": 182.0,
+    "segment": {
+      "id": 611256,
+      "resource_state": 2,
+      "name": "212th Way SE",
+      "activity_type": "Ride",
+      "distance": 1276.95,
+      "average_grade": 8.4,
+      "maximum_grade": 13.5,
+      "elevation_high": 120.0,
+      "elevation_low": 12.9,
+      "start_latlng": [
+        47.570025,
+        -122.064127
+      ],
+      "end_latlng": [
+        47.577282,
+        -122.056991
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497402457892703474,
+    "resource_state": 2,
+    "name": "212th Way SE",
+    "activity": {
+      "id": 18777094929,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 432,
+    "moving_time": 421,
+    "start_date": "2026-06-03T23:36:01Z",
+    "start_date_local": "2026-06-03T16:36:01Z",
+    "distance": 1276.95,
+    "start_index": 3256,
+    "end_index": 3681,
+    "average_cadence": 74.8,
+    "device_watts": true,
+    "average_watts": 281.1,
+    "average_heartrate": 149.6,
+    "max_heartrate": 161.0,
+    "segment": {
+      "id": 611256,
+      "resource_state": 2,
+      "name": "212th Way SE",
+      "activity_type": "Ride",
+      "distance": 1276.95,
+      "average_grade": 8.4,
+      "maximum_grade": 13.5,
+      "elevation_high": 120.0,
+      "elevation_low": 12.9,
+      "start_latlng": [
+        47.570025,
+        -122.064127
+      ],
+      "end_latlng": [
+        47.577282,
+        -122.056991
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1015,7 +1443,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1074,6 +1509,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
       }
     ],
     "visibility": "everyone",
@@ -1133,7 +1574,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502151499268277194,
+    "resource_state": 2,
+    "name": "212th Way SE",
+    "activity": {
+      "id": 18952255473,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 444,
+    "moving_time": 444,
+    "start_date": "2026-06-17T02:05:58Z",
+    "start_date_local": "2026-06-16T19:05:58Z",
+    "distance": 1276.95,
+    "start_index": 3706,
+    "end_index": 4150,
+    "average_cadence": 73.9,
+    "device_watts": true,
+    "average_watts": 265.3,
+    "average_heartrate": 130.0,
+    "max_heartrate": 146.0,
+    "segment": {
+      "id": 611256,
+      "resource_state": 2,
+      "name": "212th Way SE",
+      "activity_type": "Ride",
+      "distance": 1276.95,
+      "average_grade": 8.4,
+      "maximum_grade": 13.5,
+      "elevation_high": 120.0,
+      "elevation_low": 12.9,
+      "start_latlng": [
+        47.570025,
+        -122.064127
+      ],
+      "end_latlng": [
+        47.577282,
+        -122.056991
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1187,7 +1700,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1245,7 +1765,144 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500661989292990122,
+    "resource_state": 2,
+    "name": "212th Way SE",
+    "activity": {
+      "id": 18896368704,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 500,
+    "moving_time": 476,
+    "start_date": "2026-06-12T23:22:59Z",
+    "start_date_local": "2026-06-12T16:22:59Z",
+    "distance": 1276.95,
+    "start_index": 3648,
+    "end_index": 4126,
+    "average_cadence": 67.3,
+    "device_watts": true,
+    "average_watts": 236.9,
+    "average_heartrate": 130.2,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 611256,
+      "resource_state": 2,
+      "name": "212th Way SE",
+      "activity_type": "Ride",
+      "distance": 1276.95,
+      "average_grade": 8.4,
+      "maximum_grade": 13.5,
+      "elevation_high": 120.0,
+      "elevation_low": 12.9,
+      "start_latlng": [
+        47.570025,
+        -122.064127
+      ],
+      "end_latlng": [
+        47.577282,
+        -122.056991
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498138073832781588,
+    "resource_state": 2,
+    "name": "212th Way SE",
+    "activity": {
+      "id": 18803245094,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 523,
+    "moving_time": 462,
+    "start_date": "2026-06-06T00:17:02Z",
+    "start_date_local": "2026-06-05T17:17:02Z",
+    "distance": 1276.95,
+    "start_index": 3688,
+    "end_index": 4154,
+    "average_cadence": 63.0,
+    "device_watts": true,
+    "average_watts": 226.7,
+    "average_heartrate": 128.1,
+    "max_heartrate": 151.0,
+    "segment": {
+      "id": 611256,
+      "resource_state": 2,
+      "name": "212th Way SE",
+      "activity_type": "Ride",
+      "distance": 1276.95,
+      "average_grade": 8.4,
+      "maximum_grade": 13.5,
+      "elevation_high": 120.0,
+      "elevation_low": 12.9,
+      "start_latlng": [
+        47.570025,
+        -122.064127
+      ],
+      "end_latlng": [
+        47.577282,
+        -122.056991
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Sammamish",
+      "state": "WA",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1303,7 +1960,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1357,7 +2021,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1413,7 +2084,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1471,7 +2149,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1527,7 +2212,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1581,7 +2273,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1639,7 +2338,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1697,7 +2403,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1755,7 +2468,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1811,7 +2531,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 28
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   }

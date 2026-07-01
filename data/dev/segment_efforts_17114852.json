@@ -2114,6 +2114,64 @@
     "kom_rank": null
   },
   {
+    "id": 3502475152189878890,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 18964953090,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 580,
+    "moving_time": 580,
+    "start_date": "2026-06-17T22:36:15Z",
+    "start_date_local": "2026-06-17T15:36:15Z",
+    "distance": 5246.6,
+    "start_index": 456,
+    "end_index": 1036,
+    "average_cadence": 82.0,
+    "device_watts": true,
+    "average_watts": 229.8,
+    "average_heartrate": 125.3,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3380715790776950398,
     "resource_state": 2,
     "name": "Strada Azzurra",
@@ -2574,6 +2632,62 @@
     "kom_rank": null
   },
   {
+    "id": 3499972906432365260,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 18872776650,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 596,
+    "moving_time": 596,
+    "start_date": "2026-06-11T00:58:00Z",
+    "start_date_local": "2026-06-10T17:58:00Z",
+    "distance": 5246.6,
+    "start_index": 463,
+    "end_index": 1059,
+    "average_cadence": 80.6,
+    "device_watts": true,
+    "average_watts": 238.2,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3349549313309246278,
     "resource_state": 2,
     "name": "Strada Azzurra",
@@ -2690,6 +2804,64 @@
         "rank": 2
       }
     ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497402457896210674,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 18777094929,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 600,
+    "moving_time": 600,
+    "start_date": "2026-06-03T22:44:07Z",
+    "start_date_local": "2026-06-03T15:44:07Z",
+    "distance": 5246.6,
+    "start_index": 411,
+    "end_index": 1011,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 208.9,
+    "average_heartrate": 126.0,
+    "max_heartrate": 135.0,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3350,6 +3522,64 @@
     "average_watts": 216.6,
     "average_heartrate": 158.0,
     "max_heartrate": 175.0,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498138073831889684,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 18803245094,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 611,
+    "moving_time": 611,
+    "start_date": "2026-06-05T23:18:34Z",
+    "start_date_local": "2026-06-05T16:18:34Z",
+    "distance": 5246.6,
+    "start_index": 459,
+    "end_index": 1070,
+    "average_cadence": 80.4,
+    "device_watts": true,
+    "average_watts": 198.6,
+    "average_heartrate": 116.8,
+    "max_heartrate": 159.0,
     "segment": {
       "id": 17114852,
       "resource_state": 2,
@@ -4484,6 +4714,64 @@
     "kom_rank": null
   },
   {
+    "id": 3502865342081870794,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 18978898053,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 629,
+    "moving_time": 629,
+    "start_date": "2026-06-19T00:31:47Z",
+    "start_date_local": "2026-06-18T17:31:47Z",
+    "distance": 5246.6,
+    "start_index": 445,
+    "end_index": 1074,
+    "average_cadence": 81.7,
+    "device_watts": true,
+    "average_watts": 213.5,
+    "average_heartrate": 121.6,
+    "max_heartrate": 137.0,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3393036212855782548,
     "resource_state": 2,
     "name": "Strada Azzurra",
@@ -5236,6 +5524,64 @@
     "kom_rank": null
   },
   {
+    "id": 3499222138844002258,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 18844084630,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 638,
+    "moving_time": 638,
+    "start_date": "2026-06-08T23:05:08Z",
+    "start_date_local": "2026-06-08T16:05:08Z",
+    "distance": 5246.6,
+    "start_index": 472,
+    "end_index": 1110,
+    "average_cadence": 77.7,
+    "device_watts": true,
+    "average_watts": 203.1,
+    "average_heartrate": 115.6,
+    "max_heartrate": 126.0,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3476392983711519082,
     "resource_state": 2,
     "name": "Strada Azzurra",
@@ -5662,6 +6008,64 @@
     "average_watts": 213.3,
     "average_heartrate": 118.5,
     "max_heartrate": 138.0,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500364122281458138,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 18886071441,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 644,
+    "moving_time": 630,
+    "start_date": "2026-06-11T22:51:25Z",
+    "start_date_local": "2026-06-11T15:51:25Z",
+    "distance": 5246.6,
+    "start_index": 438,
+    "end_index": 1071,
+    "average_cadence": 70.1,
+    "device_watts": true,
+    "average_watts": 204.4,
+    "average_heartrate": 111.0,
+    "max_heartrate": 111.0,
     "segment": {
       "id": 17114852,
       "resource_state": 2,
@@ -6354,6 +6758,64 @@
     "average_watts": 232.6,
     "average_heartrate": 134.6,
     "max_heartrate": 157.0,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3504280787624239610,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 19028503580,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 655,
+    "moving_time": 655,
+    "start_date": "2026-06-22T22:39:40Z",
+    "start_date_local": "2026-06-22T15:39:40Z",
+    "distance": 5246.6,
+    "start_index": 449,
+    "end_index": 1104,
+    "average_cadence": 76.7,
+    "device_watts": true,
+    "average_watts": 199.4,
+    "average_heartrate": 120.0,
+    "max_heartrate": 135.0,
     "segment": {
       "id": 17114852,
       "resource_state": 2,
@@ -7310,6 +7772,64 @@
     "kom_rank": null
   },
   {
+    "id": 3502151499264797642,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 18952255473,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 671,
+    "moving_time": 671,
+    "start_date": "2026-06-17T01:09:48Z",
+    "start_date_local": "2026-06-16T18:09:48Z",
+    "distance": 5246.6,
+    "start_index": 490,
+    "end_index": 1161,
+    "average_cadence": 77.7,
+    "device_watts": true,
+    "average_watts": 201.7,
+    "average_heartrate": 118.8,
+    "max_heartrate": 130.0,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3239032100177325118,
     "resource_state": 2,
     "name": "Strada Azzurra",
@@ -7960,6 +8480,64 @@
     "average_watts": 173.1,
     "average_heartrate": 115.7,
     "max_heartrate": 126.0,
+    "segment": {
+      "id": 17114852,
+      "resource_state": 2,
+      "name": "Strada Azzurra",
+      "activity_type": "Ride",
+      "distance": 5246.6,
+      "average_grade": 0.2,
+      "maximum_grade": 14.5,
+      "elevation_high": 24.0,
+      "elevation_low": 6.6,
+      "start_latlng": [
+        47.520938,
+        -122.208997
+      ],
+      "end_latlng": [
+        47.563375,
+        -122.187431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500661989299887786,
+    "resource_state": 2,
+    "name": "Strada Azzurra",
+    "activity": {
+      "id": 18896368704,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 695,
+    "moving_time": 695,
+    "start_date": "2026-06-12T22:26:32Z",
+    "start_date_local": "2026-06-12T15:26:32Z",
+    "distance": 5246.6,
+    "start_index": 469,
+    "end_index": 1164,
+    "average_cadence": 72.4,
+    "device_watts": true,
+    "average_watts": 186.2,
+    "average_heartrate": 112.9,
+    "max_heartrate": 119.0,
     "segment": {
       "id": 17114852,
       "resource_state": 2,

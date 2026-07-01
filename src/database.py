@@ -22,22 +22,27 @@ _DB_PATH: Path = Path(os.environ["NEW_BIKE_DAY_DB_PATH"]) if "NEW_BIKE_DAY_DB_PA
 
 _CREATE_STARRED_SEGMENTS: str = """
 CREATE TABLE IF NOT EXISTS starred_segments (
-    segment_id           INTEGER PRIMARY KEY,
+    athlete_id           INTEGER NOT NULL,
+    segment_id           INTEGER NOT NULL,
     name                 TEXT,
     distance             REAL,
     average_grade        REAL,
+    maximum_grade        REAL,
     climb_category       INTEGER,
+    hazardous            BOOLEAN,
     total_elevation_gain REAL,
     start_lat            REAL,
     start_lng            REAL,
     segment_type         TEXT,
-    segment_type_detail  TEXT
+    segment_type_detail  TEXT,
+    PRIMARY KEY (athlete_id, segment_id)
 )
 """
 
 _CREATE_SEGMENT_EFFORTS: str = """
 CREATE TABLE IF NOT EXISTS segment_efforts (
-    effort_id         INTEGER PRIMARY KEY,
+    athlete_id        INTEGER NOT NULL,
+    effort_id         INTEGER NOT NULL,
     segment_id        INTEGER,
     activity_id       INTEGER,
     gear_id           TEXT,
@@ -45,17 +50,26 @@ CREATE TABLE IF NOT EXISTS segment_efforts (
     elapsed_time      INTEGER,
     moving_time       INTEGER,
     average_watts     REAL,
-    average_heartrate REAL
+    average_heartrate REAL,
+    PRIMARY KEY (athlete_id, effort_id)
 )
 """
 
 _CREATE_BIKES: str = """
 CREATE TABLE IF NOT EXISTS bikes (
-    gear_id            TEXT PRIMARY KEY,
+    athlete_id         INTEGER NOT NULL,
+    gear_id            TEXT NOT NULL,
     name               TEXT,
-    converted_distance REAL
+    converted_distance REAL,
+    PRIMARY KEY (athlete_id, gear_id)
 )
 """
+
+_CREATE_FTP: str = """
+CREATE TABLE IF NOT EXISTS athlete_ftp (
+    athlete_id INTEGER PRIMARY KEY,
+    ftp        INTEGER
+)"""
 
 _CREATE_ATHLETE_TOKENS: str = """
 CREATE TABLE IF NOT EXISTS athlete_tokens (
@@ -81,11 +95,14 @@ CREATE TABLE IF NOT EXISTS segment_geo_cache (
 """
 
 _SEGMENTS_COLS: list[str] = [
+    "athlete_id",
     "segment_id",
     "name",
     "distance",
     "average_grade",
+    "maximum_grade",
     "climb_category",
+    "hazardous",
     "total_elevation_gain",
     "start_lat",
     "start_lng",
@@ -94,6 +111,7 @@ _SEGMENTS_COLS: list[str] = [
 ]
 
 _EFFORTS_COLS: list[str] = [
+    "athlete_id",
     "effort_id",
     "segment_id",
     "activity_id",
@@ -120,24 +138,13 @@ def init_db() -> None:
         conn.execute(_CREATE_BIKES)
         conn.execute(_CREATE_ATHLETE_TOKENS)
         conn.execute(_CREATE_SEGMENT_GEO)
-
-        # Migration: add activity_id column to segment_efforts if it was created
-        # before this column was introduced.
-        try:
-            conn.execute("ALTER TABLE segment_efforts ADD COLUMN activity_id INTEGER")
-        except sqlite3.OperationalError:
-            pass  # Column already exists — nothing to do.
-        try:
-            conn.execute("ALTER TABLE starred_segments ADD COLUMN segment_type_detail TEXT")
-        except sqlite3.OperationalError:
-            pass  # Column already exists — nothing to do.
-
+        conn.execute(_CREATE_FTP)
 
 # ---------------------------------------------------------------------------
 # Starred segments
 # ---------------------------------------------------------------------------
 
-def save_segments(df: pd.DataFrame) -> None:
+def save_segments(df: pd.DataFrame, athlete_id: int) -> None:
     """Upsert rows into the starred_segments table.
 
     Existing rows are replaced so that segment metadata stays current after a
@@ -149,16 +156,23 @@ def save_segments(df: pd.DataFrame) -> None:
     """
     if df.empty:
         return
+    df['athlete_id'] = [athlete_id] * len(df)
     available = [c for c in _SEGMENTS_COLS if c in df.columns]
-    col_list = ", ".join(available)
-    placeholders = ", ".join("?" * len(available))
+    col_list = ", ".join(available + ["athlete_id"])
+    placeholders = ", ".join("?" * (len(available) + 1))
     sql = f"INSERT OR REPLACE INTO starred_segments ({col_list}) VALUES ({placeholders})"
     with _connect() as conn:
-        conn.executemany(sql, df[available].itertuples(index=False, name=None))
+        conn.executemany(
+            sql,
+            [tuple(row) + (athlete_id,) for row in df[available].itertuples(index=False, name=None)],
+        )
 
 
-def load_segments() -> pd.DataFrame:
-    """Load all rows from the starred_segments table.
+def load_segments(athlete_id: int) -> pd.DataFrame:
+    """Load all starred segments for a given athlete.
+
+    Args:
+        athlete_id: The athlete's Strava user ID.
 
     Returns:
         DataFrame with columns matching the starred_segments schema, or an
@@ -166,26 +180,30 @@ def load_segments() -> pd.DataFrame:
     """
     with _connect() as conn:
         try:
-            return pd.read_sql_query("SELECT * FROM starred_segments", conn)
+            return pd.read_sql_query(
+                "SELECT * FROM starred_segments WHERE athlete_id = ?",
+                conn,
+                params=(athlete_id,),
+            )
         except sqlite3.OperationalError:
             return pd.DataFrame(columns=_SEGMENTS_COLS)
 
 
-def clear_segments() -> None:
-    """Delete all rows from the starred_segments table."""
+def clear_segments(athlete_id: int) -> None:
+    """Delete all starred segment rows for a given athlete."""
     with _connect() as conn:
         table_exists = conn.execute(
             "SELECT 1 FROM sqlite_master WHERE type='table' AND name='starred_segments'"
         ).fetchone()
         if table_exists:
-            conn.execute("DELETE FROM starred_segments")
+            conn.execute("DELETE FROM starred_segments WHERE athlete_id = ?", (athlete_id,))
 
 
 # ---------------------------------------------------------------------------
 # Segment efforts
 # ---------------------------------------------------------------------------
 
-def save_efforts(df: pd.DataFrame) -> None:
+def save_efforts(df: pd.DataFrame, athlete_id: int) -> None:
     """Upsert rows into the segment_efforts table.
 
     Existing rows are replaced so that gear_id and other fields stay current
@@ -197,6 +215,7 @@ def save_efforts(df: pd.DataFrame) -> None:
     """
     if df.empty:
         return
+    df["athlete_id"] = [athlete_id] * len(df)
     available = [c for c in _EFFORTS_COLS if c in df.columns]
     col_list = ", ".join(available)
     placeholders = ", ".join("?" * len(available))
@@ -205,8 +224,11 @@ def save_efforts(df: pd.DataFrame) -> None:
         conn.executemany(sql, df[available].itertuples(index=False, name=None))
 
 
-def load_efforts() -> pd.DataFrame:
-    """Load all rows from the segment_efforts table.
+def load_efforts(athlete_id: int) -> pd.DataFrame:
+    """Load all segment efforts for a given athlete.
+
+    Args:
+        athlete_id: The athlete's Strava user ID.
 
     Returns:
         DataFrame with columns matching the segment_efforts schema, or an
@@ -214,20 +236,69 @@ def load_efforts() -> pd.DataFrame:
     """
     with _connect() as conn:
         try:
-            return pd.read_sql_query("SELECT * FROM segment_efforts", conn)
+            return pd.read_sql_query(
+                "SELECT * FROM segment_efforts WHERE athlete_id = ?",
+                conn,
+                params=(athlete_id,),
+            )
         except sqlite3.OperationalError:
             return pd.DataFrame(columns=_EFFORTS_COLS)
 
 
-def clear_efforts() -> None:
-    """Delete all rows from the segment_efforts table."""
+def clear_efforts(athlete_id: int) -> None:
+    """Delete all segment effort rows for a given athlete."""
     with _connect() as conn:
         table_exists = conn.execute(
             "SELECT 1 FROM sqlite_master WHERE type='table' AND name='segment_efforts'"
         ).fetchone()
         if table_exists:
-            conn.execute("DELETE FROM segment_efforts")
+            conn.execute("DELETE FROM segment_efforts WHERE athlete_id = ?", (athlete_id,))
 
+
+# =======
+# FTP
+# =======
+
+def save_ftp(ftp: int | None, athlete_id: int) -> None:
+    """Persist the athlete's FTP value in the database.
+
+    Args:
+        ftp: The athlete's FTP value (watts), or None to clear it.
+        athlete_id: The athlete's Strava user ID.
+    """
+    with _connect() as conn:
+        conn.execute(
+            "INSERT OR REPLACE INTO athlete_ftp (athlete_id, ftp) VALUES (?, ?)",
+            (athlete_id, ftp),
+        )
+
+def load_ftp(athlete_id: int) -> int | None:
+    """Load the athlete's FTP value from the database.
+
+    Args:
+        athlete_id: The athlete's Strava user ID.
+
+    Returns:
+        The athlete's FTP value (watts), or None if not set.
+    """
+    with _connect() as conn:
+        try:
+            row = conn.execute(
+                "SELECT ftp FROM athlete_ftp WHERE athlete_id = ?",
+                (athlete_id,),
+            ).fetchone()
+            return row[0] if row is not None else None
+        except sqlite3.OperationalError:
+            return None
+
+def clear_ftp(athlete_id: int) -> None:
+    """Delete the athlete's FTP value from the database."""
+    with _connect() as conn:
+        table_exists = conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='athlete_ftp'"
+        ).fetchone()
+        if table_exists:
+            conn.execute("DELETE FROM athlete_ftp WHERE athlete_id = ?", (athlete_id,))
 
 # ---------------------------------------------------------------------------
 # Bikes (gear_id → name mapping)
@@ -235,12 +306,14 @@ def clear_efforts() -> None:
 
 def save_bikes(
     bikes: dict[str, str],
+    athlete_id: int,
     distances: dict[str, float] | None = None,
 ) -> None:
     """Upsert the athlete's bike inventory into the bikes table.
 
     Args:
         bikes: Dict mapping gear_id to a human-readable bike name.
+        athlete_id: The athlete's Strava user ID.
         distances: Optional dict mapping gear_id to converted_distance
             (in the athlete's preferred unit, as returned by Strava).
     """
@@ -248,10 +321,10 @@ def save_bikes(
         return
     distances = distances or {}
     sql = """
-        INSERT OR REPLACE INTO bikes (gear_id, name, converted_distance)
-        VALUES (?, ?, ?)
+        INSERT OR REPLACE INTO bikes (athlete_id, gear_id, name, converted_distance)
+        VALUES (?, ?, ?, ?)
     """
-    rows = [(gid, name, distances.get(gid)) for gid, name in bikes.items()]
+    rows = [(athlete_id, gid, name, distances.get(gid)) for gid, name in bikes.items()]
     with _connect() as conn:
         # Add column if it doesn't exist yet (handles existing databases).
         try:
@@ -261,8 +334,11 @@ def save_bikes(
         conn.executemany(sql, rows)
 
 
-def load_bikes() -> tuple[dict[str, str], dict[str, float]]:
-    """Load the bike inventory from the bikes table.
+def load_bikes(athlete_id: int) -> tuple[dict[str, str], dict[str, float]]:
+    """Load the bike inventory for a given athlete.
+
+    Args:
+        athlete_id: The athlete's Strava user ID.
 
     Returns:
         A 2-tuple of:
@@ -272,7 +348,8 @@ def load_bikes() -> tuple[dict[str, str], dict[str, float]]:
     with _connect() as conn:
         try:
             rows = conn.execute(
-                "SELECT gear_id, name, converted_distance FROM bikes"
+                "SELECT gear_id, name, converted_distance FROM bikes WHERE athlete_id = ?",
+                (athlete_id,),
             ).fetchall()
             names = {gear_id: name for gear_id, name, _ in rows}
             distances = {
@@ -285,14 +362,14 @@ def load_bikes() -> tuple[dict[str, str], dict[str, float]]:
             return {}, {}
 
 
-def clear_bikes() -> None:
-    """Delete all rows from the bikes table."""
+def clear_bikes(athlete_id: int) -> None:
+    """Delete all bike rows for a given athlete."""
     with _connect() as conn:
         table_exists = conn.execute(
             "SELECT 1 FROM sqlite_master WHERE type='table' AND name='bikes'"
         ).fetchone()
         if table_exists:
-            conn.execute("DELETE FROM bikes")
+            conn.execute("DELETE FROM bikes WHERE athlete_id = ?", (athlete_id,))
 
 
 # ---------------------------------------------------------------------------

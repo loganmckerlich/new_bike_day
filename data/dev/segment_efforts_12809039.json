@@ -58,6 +58,12 @@
         "type_id": 2,
         "type": "overall",
         "rank": 6
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -122,6 +128,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -186,6 +198,12 @@
         "type_id": 2,
         "type": "overall",
         "rank": 7
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -250,6 +268,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -312,6 +336,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -371,7 +401,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -429,7 +466,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -487,7 +531,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -545,7 +596,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -608,6 +666,12 @@
         "type_id": 2,
         "type": "overall",
         "rank": 10
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -670,6 +734,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -732,6 +802,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -789,7 +865,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -845,7 +928,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -906,6 +996,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -965,7 +1061,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1023,7 +1126,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1082,6 +1192,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 1
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -1144,6 +1260,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -1206,6 +1328,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -1263,7 +1391,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1321,7 +1456,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1379,7 +1521,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1437,7 +1586,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1495,7 +1651,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1553,7 +1716,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1614,6 +1784,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -1673,7 +1849,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1731,7 +1914,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500170690747334658,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18879141341,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 63,
+    "moving_time": 63,
+    "start_date": "2026-06-11T15:05:38Z",
+    "start_date_local": "2026-06-11T08:05:38Z",
+    "distance": 612.4,
+    "start_index": 3210,
+    "end_index": 3273,
+    "average_cadence": 91.6,
+    "device_watts": true,
+    "average_watts": 348.8,
+    "average_heartrate": 154.5,
+    "max_heartrate": 163.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1787,7 +2042,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1843,7 +2105,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1901,7 +2170,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -1959,7 +2235,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2017,7 +2300,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2075,7 +2365,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2136,6 +2433,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 3
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -2195,7 +2498,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2253,7 +2563,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2311,7 +2628,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2369,7 +2693,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2427,7 +2758,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2485,7 +2823,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2543,7 +2888,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2599,7 +2951,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2657,7 +3016,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2715,7 +3081,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2773,7 +3146,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2831,7 +3211,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2889,7 +3276,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499819134920429066,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18866437059,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 70,
+    "moving_time": 70,
+    "start_date": "2026-06-10T15:31:34Z",
+    "start_date_local": "2026-06-10T08:31:34Z",
+    "distance": 612.4,
+    "start_index": 3416,
+    "end_index": 3486,
+    "average_cadence": 80.9,
+    "device_watts": true,
+    "average_watts": 272.5,
+    "average_heartrate": 145.0,
+    "max_heartrate": 149.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -2945,7 +3404,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3003,7 +3469,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3061,7 +3534,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3119,7 +3599,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3177,7 +3664,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3235,7 +3729,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3293,7 +3794,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3349,7 +3857,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3407,7 +3922,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3465,7 +3987,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3523,7 +4052,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3577,7 +4113,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3635,7 +4178,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3693,7 +4243,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3751,7 +4308,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3809,7 +4373,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3867,7 +4438,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3925,7 +4503,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -3983,7 +4568,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4041,7 +4633,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4099,7 +4698,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4155,7 +4761,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4213,7 +4826,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4271,7 +4891,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4329,7 +4956,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4387,7 +5021,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4445,7 +5086,144 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3500540468030705126,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18892073258,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2026-06-12T15:35:01Z",
+    "start_date_local": "2026-06-12T08:35:01Z",
+    "distance": 612.4,
+    "start_index": 3663,
+    "end_index": 3737,
+    "average_cadence": 76.7,
+    "device_watts": true,
+    "average_watts": 202.9,
+    "average_heartrate": 118.3,
+    "max_heartrate": 121.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502714930941786268,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18972878811,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 74,
+    "moving_time": 74,
+    "start_date": "2026-06-18T15:35:02Z",
+    "start_date_local": "2026-06-18T08:35:02Z",
+    "distance": 612.4,
+    "start_index": 3860,
+    "end_index": 3934,
+    "average_cadence": 79.2,
+    "device_watts": true,
+    "average_watts": 220.0,
+    "average_heartrate": 122.3,
+    "max_heartrate": 136.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4503,7 +5281,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4561,7 +5346,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4619,7 +5411,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4677,7 +5476,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4735,7 +5541,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4793,7 +5606,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4851,7 +5671,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4909,7 +5736,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -4967,7 +5801,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5023,7 +5864,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5081,7 +5929,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5139,7 +5994,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5195,7 +6057,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5253,7 +6122,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5311,7 +6187,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5369,7 +6252,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5427,7 +6317,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5485,7 +6382,144 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3497278658248581504,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18771384330,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 77,
+    "moving_time": 77,
+    "start_date": "2026-06-03T15:32:45Z",
+    "start_date_local": "2026-06-03T08:32:45Z",
+    "distance": 612.4,
+    "start_index": 3378,
+    "end_index": 3455,
+    "average_cadence": 71.5,
+    "device_watts": true,
+    "average_watts": 249.1,
+    "average_heartrate": 137.4,
+    "max_heartrate": 144.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3499088005638344064,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18837934725,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 77,
+    "moving_time": 77,
+    "start_date": "2026-06-08T15:22:57Z",
+    "start_date_local": "2026-06-08T08:22:57Z",
+    "distance": 612.4,
+    "start_index": 3497,
+    "end_index": 3574,
+    "average_cadence": 82.9,
+    "device_watts": true,
+    "average_watts": 244.7,
+    "average_heartrate": 129.7,
+    "max_heartrate": 131.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5543,7 +6577,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5601,7 +6642,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5659,7 +6707,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5715,7 +6770,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5773,7 +6835,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5831,7 +6900,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5889,7 +6965,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -5947,7 +7030,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6005,7 +7095,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6063,7 +7160,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6119,7 +7223,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3498000775842023632,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18798146628,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 80,
+    "moving_time": 80,
+    "start_date": "2026-06-05T15:22:23Z",
+    "start_date_local": "2026-06-05T08:22:23Z",
+    "distance": 612.4,
+    "start_index": 3454,
+    "end_index": 3534,
+    "average_cadence": 79.5,
+    "device_watts": true,
+    "average_watts": 281.5,
+    "average_heartrate": 141.6,
+    "max_heartrate": 147.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6175,7 +7351,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6231,7 +7414,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6289,7 +7479,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6343,7 +7540,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6401,7 +7605,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6459,7 +7670,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6517,7 +7735,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6575,7 +7800,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6629,7 +7861,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3501990990445052086,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18944935604,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 83,
+    "moving_time": 83,
+    "start_date": "2026-06-16T15:32:13Z",
+    "start_date_local": "2026-06-16T08:32:13Z",
+    "distance": 612.4,
+    "start_index": 3829,
+    "end_index": 3912,
+    "average_cadence": 77.1,
+    "device_watts": true,
+    "average_watts": 186.3,
+    "average_heartrate": 108.6,
+    "max_heartrate": 112.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6685,7 +7989,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6743,7 +8054,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6801,7 +8119,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6859,7 +8184,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6917,7 +8249,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -6976,6 +8315,12 @@
         "type_id": 3,
         "type": "pr",
         "rank": 2
+      },
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
       }
     ],
     "visibility": "everyone",
@@ -7035,7 +8380,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3504163656046519092,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 19023440714,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 85,
+    "moving_time": 85,
+    "start_date": "2026-06-22T15:31:33Z",
+    "start_date_local": "2026-06-22T08:31:33Z",
+    "distance": 612.4,
+    "start_index": 3620,
+    "end_index": 3705,
+    "average_cadence": 70.6,
+    "device_watts": true,
+    "average_watts": 196.7,
+    "average_heartrate": 121.8,
+    "max_heartrate": 125.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7093,7 +8510,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7149,7 +8573,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7207,7 +8638,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7265,7 +8703,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7323,7 +8768,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7379,7 +8831,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7437,7 +8896,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7493,7 +8959,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7549,7 +9022,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7607,7 +9087,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7663,7 +9150,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7719,7 +9213,79 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
+    "id": 3502351043468944940,
+    "resource_state": 2,
+    "name": "Concrete to Coffee",
+    "activity": {
+      "id": 18959278443,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 98,
+    "moving_time": 81,
+    "start_date": "2026-06-17T15:28:13Z",
+    "start_date_local": "2026-06-17T08:28:13Z",
+    "distance": 612.4,
+    "start_index": 3843,
+    "end_index": 3925,
+    "average_cadence": 63.2,
+    "device_watts": true,
+    "average_watts": 178.5,
+    "average_heartrate": 112.0,
+    "max_heartrate": 120.0,
+    "segment": {
+      "id": 12809039,
+      "resource_state": 2,
+      "name": "Concrete to Coffee",
+      "activity_type": "Ride",
+      "distance": 612.4,
+      "average_grade": 0.2,
+      "maximum_grade": 1.3,
+      "elevation_high": 52.6,
+      "elevation_low": 51.6,
+      "start_latlng": [
+        47.501348,
+        -122.197695
+      ],
+      "end_latlng": [
+        47.49621,
+        -122.194846
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Renton",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   },
@@ -7775,7 +9341,14 @@
       "starred": true
     },
     "pr_rank": null,
-    "achievements": [],
+    "achievements": [
+      {
+        "type_id": 7,
+        "type": "segment_effort_count_leader",
+        "rank": 1,
+        "effort_count": 34
+      }
+    ],
     "visibility": "everyone",
     "kom_rank": null
   }

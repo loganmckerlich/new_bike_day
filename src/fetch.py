@@ -303,6 +303,7 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
                     "average_grade": average_grade,
                     "maximum_grade": seg.get("maximum_grade"),
                     "climb_category": seg.get("climb_category"),
+                    "hazardous": seg.get("hazardous"),
                     "total_elevation_gain": elev_gain,
                     "start_lat": start_latlng[0] if len(start_latlng) > 0 else None,
                     "start_lng": start_latlng[1] if len(start_latlng) > 1 else None,
@@ -654,9 +655,9 @@ def get_athlete_bikes(
 def ingest_all(
     access_token: str,
     max_activities: Optional[int] = None,
-    progress_callback: Optional[Callable[[str, int], None]] = None,
     *,
     dev: bool = False,
+    progress_callback: Optional[Callable[[str, int], None]] = None,
 ) -> dict[str, pd.DataFrame | dict[str, str]]:
     """Ingest all data needed to compare segment efforts by bike.
 
@@ -689,9 +690,11 @@ def ingest_all(
     _http: Any = _DevSession() if dev else _LoggingSession()
 
     def _progress(msg: str, pct: int) -> None:
+        
         if progress_callback is not None:
             progress_callback(msg, pct)
 
+    
     # Step 1: cycling activities with power — build activity_id → gear_id map
     _progress("📋 GET /athlete/activities — fetching cycling activities with power data…", 10)
     activities = get_athlete_activities(access_token, max_activities=max_activities, _http=_http)
@@ -738,4 +741,4 @@ def ingest_all(
     elif not efforts.empty:
         efforts["gear_id"] = None
 
-    return {"bikes": bikes, "bike_distances": bike_distances, "ftp": ftp, "segments": segments_df, "efforts": efforts}
+    return {"bikes": bikes, "bike_distances": bike_distances, "ftp": ftp, "segments": segments_df, "efforts": efforts, "activities": activities}

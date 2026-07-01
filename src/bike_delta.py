@@ -35,7 +35,7 @@ from scipy.stats import ks_2samp
 import statsmodels.formula.api as smf
 from sklearn.ensemble import GradientBoostingRegressor
 import xgboost as xgb
-
+import streamlit as st
 from src.analytics import compute_speed_per_watt
 
 __all__ = [
@@ -106,13 +106,15 @@ def prepare_delta_dataset(
         lambda g: bikes_dict.get(str(g), str(g)) if g is not None else "Unknown"
     )
 
+    df = df[df["bike_name"] != 'nan'].copy()  # Drop efforts with missing gear_id
+
     # ── Merge segment distance + grade + type ─────────────────────────────────
     # Only bring over columns that are not already present in df (e.g. because
     # data_cleaning.py already merged them from segments).  Re-merging a column
     # that exists in both frames would produce _x / _y suffixes and lose the
     # original column name.
     seg_cols = ["segment_id"]
-    for col in ("distance", "average_grade", "maximum_grade", "segment_type", "segment_type_detail"):
+    for col in ("distance", "average_grade", "maximum_grade", "segment_type", "segment_type_detail", "climb_category", "hazardous", "total_elevation_gain"):
         if col in segments_df.columns and col not in df.columns:
             seg_cols.append(col)
     if len(seg_cols) > 1:
@@ -547,15 +549,83 @@ def delta_to_sec_per_km(
 # ── XGBoost counterfactual pipeline ───────────────────────────────────────────
 
 XGB_FEATURES: list[str] = [
-    "average_watts",
-    "average_grade",
-    "maximum_grade",
-    "doy_sin",
-    "doy_cos",
+    'average_watts',
+    'average_grade',
+    'maximum_grade',
+    'doy_sin',
+    'doy_cos',
+    'log_watts',
+    'watts_per_grade',
+    'distance_km',
+    'heartrate',
+    'effort_count',
+    'segtype_detail_sprint_uphill',
+    'woy_cos',
+    'month_sin',
+    'month_cos',
+    'cbrt_watts',
+    'woy_sin',
+    'segtype_ascent',
+    'segtype_detail_sprint_flat',
+    'segtype_detail_sprint_downhill'
 ]
 
+def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
+    """Add candidate features to the prepared dataset.
+    Edit freely — comment out or add columns as you experiment.
+    """
+    out = df.copy()
+    ts = pd.to_datetime(out["start_date"], errors="coerce", utc=True).dt.tz_convert(None)
 
-def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
+    # ── Power transforms ──────────────────────────────────────────────────────
+    out["log_watts"] = np.log1p(out["average_watts"])
+    out["cbrt_watts"] = np.cbrt(out["average_watts"])
+
+    # Speed transforms
+    out["log_speed"] = np.log1p(out["speed_kmh"])
+    out["cbrt_speed"] = np.cbrt(out["speed_kmh"])
+    
+    # ── Interaction: power efficiency on a slope ──────────────────────────────
+    safe_grade = out["average_grade"].replace(0, np.nan)
+    out["watts_per_grade"] = out["average_watts"] / safe_grade.abs()
+
+    # ── Segment length ────────────────────────────────────────────────────────
+    if "distance" in out.columns:
+        out["distance_km"] = out["distance"] / 1000.0
+
+    # ── Pacing: elapsed vs moving time ───────────────────────────────────────
+    if "elapsed_time" in out.columns and "moving_time" in out.columns:
+        safe_moving = out["moving_time"].replace(0, np.nan)
+        out["elapsed_ratio"] = out["elapsed_time"] / safe_moving
+
+    # ── Heart rate (when available) ───────────────────────────────────────────
+    if "average_heartrate" in out.columns:
+        out["heartrate"] = out["average_heartrate"]
+
+    # ── Finer cyclical seasonality (week of year) ─────────────────────────────
+    woy = ts.dt.isocalendar().week.astype(float)
+    out["woy_sin"] = np.sin(2 * np.pi * woy / 52.0)
+    out["woy_cos"] = np.cos(2 * np.pi * woy / 52.0)
+
+    # ── Cumulative effort count as fitness ramp proxy ─────────────────────────
+    out = out.sort_values("start_date")
+    out["effort_count"] = np.arange(1, len(out) + 1, dtype=float)
+
+    # ── Month encoded cyclically ──────────────────────────────────────────────
+    month = ts.dt.month.astype(float)
+    out["month_sin"] = np.sin(2 * np.pi * month / 12.0)
+    out["month_cos"] = np.cos(2 * np.pi * month / 12.0)
+
+    dummies = pd.get_dummies(out["segment_type_detail"], prefix="segtype_detail", dummy_na=True, dtype=float)
+    out = pd.concat([out, dummies], axis=1)
+
+    dummies = pd.get_dummies(out["segment_type"], prefix="segtype", dummy_na=True, dtype=float)
+    out = pd.concat([out, dummies], axis=1)
+    
+    return out.reset_index(drop=True)
+
+@st.cache_resource(ttl=3600)
+def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str, cache_key: str = None) -> xgb.XGBRegressor:
     """Train an XGBoost regressor on one bike's efforts to predict speed_kmh.
 
     Features: average_watts, average_grade, doy_sin, doy_cos, ride_index.
@@ -604,7 +674,6 @@ def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
     model.fit(X, y)
     return model
 
-
 def apply_model_to_bike(
     model: xgb.XGBRegressor,
     df: pd.DataFrame,
@@ -652,86 +721,153 @@ def apply_model_to_bike(
     out["speed_residual"] = out["speed_kmh"] - out["predicted_speed_kmh"]
     return out
 
+def bootstrap_pipeline(
+    df: pd.DataFrame,
+    train_bike: str,
+    target_bike: str,
+    n_iterations: int = 1000,
+    random_state: int = 42,
+    apply_fn = apply_model_to_bike,
+    fit_fn = fit_xgb_speed_model,
+    label: str = "speed_residual",
+    predicted_col: str = "predicted_speed_kmh",
+    target_col: str = "speed_kmh",
+) -> dict:
 
-def aggregate_paired_delta(
-    fwd_residuals: pd.Series,
-    rev_residuals: pd.Series,
+    rng = np.random.default_rng(random_state)
+    residuals = []
+    iteration_mean_resid = []
+    all_results = pd.DataFrame()
+    n_skipped = 0
+
+    for _ in range(n_iterations):
+        boot_sample = df.sample(
+            n=len(df), replace=True, random_state=rng.integers(0, 1_000_000)
+        )
+        try:
+            model = fit_fn(boot_sample, train_bike)
+            result = apply_fn(model, boot_sample, target_bike)
+        except ValueError:
+            n_skipped += 1
+            result = pd.DataFrame()
+            continue
+
+        if result.empty:
+            n_skipped += 1
+            continue
+
+        all_results = pd.concat([all_results, result], ignore_index=True)
+
+        iteration_mean_resid.append(result[label].mean())
+        residuals.extend(result[label].tolist())
+
+    residuals = np.array(residuals)
+
+    effort_level_agg_residual = all_results.groupby("effort_id")[[predicted_col,target_col,label]].mean().reset_index()
+
+    return {
+        "full_result": result,
+        "boot_residuals": residuals,
+        "effort_residuals": effort_level_agg_residual,
+        "mean_residual": residuals.mean(),
+        "ci_lower": np.percentile(residuals, 2.5),
+        "ci_upper": np.percentile(residuals, 97.5),
+        "n_successful": len(residuals),
+        "n_skipped": n_skipped,
+        "per_iteration_mean_resid":iteration_mean_resid
+    }
+
+def aggregate_paired_delta_bootstrap(
+    fwd_boot: dict,
+    rev_boot: dict,
 ) -> dict[str, float]:
-    """Combine forward and reverse directional estimates into a single delta.
+    """Combine forward and reverse bootstrap results into a single delta
+    with a percentile-based confidence interval.
 
-    Forward (A→B): ``fwd_residuals`` = actual_B_speed − model_A_predicted.
-        Positive → B is faster.
-    Reverse (B→A): ``rev_residuals`` = actual_A_speed − model_B_predicted.
-        Positive → A is faster.
+    Forward (A→B): fwd_boot["residuals"] = bootstrap distribution of
+        mean(actual_B_speed − model_A_predicted). Positive → B is faster.
+    Reverse (B→A): rev_boot["residuals"] = bootstrap distribution of
+        mean(actual_A_speed − model_B_predicted). Positive → A is faster.
 
-    Combined estimate: ``(fwd_mean − rev_mean) / 2``.
-    A positive combined value means B is faster than A.
+    For each bootstrap iteration i, the combined estimate is
+    (fwd_residuals[i] - rev_residuals[i]) / 2. A positive combined value
+    means B is faster than A. The confidence interval comes from the
+    percentiles of this combined distribution rather than a normal
+    approximation, since the bootstrap already captures the empirical
+    sampling distribution directly.
 
     Parameters
     ----------
-    fwd_residuals:
-        Speed residuals when model is trained on A and applied to B.
-    rev_residuals:
-        Speed residuals when model is trained on B and applied to A.
+    fwd_boot:
+        Output of bootstrap_pipeline(df, train_bike=A, target_bike=B).
+    rev_boot:
+        Output of bootstrap_pipeline(df, train_bike=B, target_bike=A).
 
     Returns
     -------
-    dict with keys: fwd_mean, rev_mean, combined, combined_sem, ci_low,
-    ci_high, n_fwd, n_rev.
+    dict with keys: fwd_mean, rev_mean, combined, ci_low, ci_high,
+    fwd_estimates, rev_estimates, combined_estimates, n_fwd, n_rev,
+    symmetry_gap.
     """
-    fwd_vals = fwd_residuals.dropna().values
-    rev_vals = rev_residuals.dropna().values
+    fwd_residuals = np.array(fwd_boot["per_iteration_mean_resid"])
+    rev_residuals = np.array(rev_boot["per_iteration_mean_resid"])
 
-    fwd_mean = float(np.mean(fwd_vals)) if len(fwd_vals) else np.nan
-    rev_mean = float(np.mean(rev_vals)) if len(rev_vals) else np.nan
+    fwd_mean = fwd_boot["mean_residual"]
+    rev_mean = rev_boot["mean_residual"]
 
-    fwd_sem = (
-        float(np.std(fwd_vals, ddof=1) / np.sqrt(len(fwd_vals)))
-        if len(fwd_vals) > 1 else np.nan
-    )
-    rev_sem = (
-        float(np.std(rev_vals, ddof=1) / np.sqrt(len(rev_vals)))
-        if len(rev_vals) > 1 else np.nan
-    )
+    # pair iterations index-wise to preserve correlation structure;
+    # truncate to the shorter length if iteration counts differ
+    # (e.g. due to skipped iterations in one direction)
+    n_paired = min(len(fwd_residuals), len(rev_residuals))
+    fwd_residuals_paired = fwd_residuals[:n_paired]
+    rev_residuals_paired = rev_residuals[:n_paired]
+    combined_estimates = (fwd_residuals_paired - rev_residuals_paired) / 2
 
-    if not (np.isnan(fwd_mean) or np.isnan(rev_mean)):
-        total_n = len(fwd_vals) + len(rev_vals)
-        combined = (fwd_mean * len(fwd_vals) - rev_mean * len(rev_vals)) / total_n
-        combined_sem = (
-            float(np.sqrt(len(fwd_vals) ** 2 * fwd_sem ** 2 + len(rev_vals) ** 2 * rev_sem ** 2) / total_n)
-            if not (np.isnan(fwd_sem) or np.isnan(rev_sem)) else np.nan
-        )
-    elif not np.isnan(fwd_mean):
-        combined, combined_sem = fwd_mean, fwd_sem
-    else:
-        combined, combined_sem = rev_mean, rev_sem
+    combined = float(combined_estimates.mean())
+    ci_low = float(np.percentile(combined_estimates, 2.5))
+    ci_high = float(np.percentile(combined_estimates, 97.5))
 
-    ci_margin = 1.96 * combined_sem if not np.isnan(combined_sem) else np.nan
+    symmetry_gap = abs(fwd_mean + rev_mean)
 
     return {
         "fwd_mean": fwd_mean,
         "rev_mean": rev_mean,
         "combined": combined,
-        "combined_sem": combined_sem,
-        "ci_low": combined - ci_margin if not np.isnan(ci_margin) else np.nan,
-        "ci_high": combined + ci_margin if not np.isnan(ci_margin) else np.nan,
-        "n_fwd": int(len(fwd_vals)),
-        "n_rev": int(len(rev_vals)),
+        "fwd_estimates": fwd_residuals_paired,
+        "rev_estimates": rev_residuals_paired,
+        "combined_estimates": combined_estimates,
+        "ci_low": ci_low,
+        "ci_high": ci_high,
+        "n_fwd": fwd_boot["n_successful"],
+        "n_rev": rev_boot["n_successful"],
+        "symmetry_gap": symmetry_gap,
     }
-
-
 # ── XGBoost watts-efficiency counterfactual pipeline ──────────────────────────
 
+# add some transformations of speed ie cbrt or sqrt
 XGB_WATT_FEATURES: list[str] = [
     "speed_kmh",
-    "average_grade",
-    "maximum_grade",
-    "doy_sin",
-    "doy_cos",
+    'average_grade',
+    'maximum_grade',
+    'doy_sin',
+    'doy_cos',
+    'distance_km',
+    'heartrate',
+    'effort_count',
+    'segtype_detail_sprint_uphill',
+    'woy_cos',
+    'month_sin',
+    'month_cos',
+    'woy_sin',
+    'segtype_ascent',
+    'segtype_detail_sprint_flat',
+    'segtype_detail_sprint_downhill',
+    'log_speed',
+    'cbrt_speed'
 ]
 
-
-def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
+@st.cache_resource(ttl=3600)
+def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str, cache_key: str = None) -> xgb.XGBRegressor:
     """Train an XGBoost regressor on one bike's efforts to predict average_watts.
 
     The inverse of :func:`fit_xgb_speed_model`: given the speed achieved and
@@ -769,7 +905,6 @@ def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str) -> xgb.XGBRegressor:
     )
     model.fit(X, y)
     return model
-
 
 def apply_watt_model_to_bike(
     model: xgb.XGBRegressor,

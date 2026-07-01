@@ -800,6 +800,64 @@
     "kom_rank": null
   },
   {
+    "id": 3500364122279964122,
+    "resource_state": 2,
+    "name": "520 Westbound Gate to Gate",
+    "activity": {
+      "id": 18886071441,
+      "visibility": "everyone",
+      "resource_state": 1
+    },
+    "athlete": {
+      "id": 56163722,
+      "resource_state": 1
+    },
+    "elapsed_time": 201,
+    "moving_time": 201,
+    "start_date": "2026-06-11T23:48:49Z",
+    "start_date_local": "2026-06-11T16:48:49Z",
+    "distance": 2333.7,
+    "start_index": 2949,
+    "end_index": 3150,
+    "average_cadence": 84.8,
+    "device_watts": true,
+    "average_watts": 386.2,
+    "average_heartrate": 156.3,
+    "max_heartrate": 181.0,
+    "segment": {
+      "id": 16679746,
+      "resource_state": 2,
+      "name": "520 Westbound Gate to Gate",
+      "activity_type": "Ride",
+      "distance": 2333.7,
+      "average_grade": 0.0,
+      "maximum_grade": 0.7,
+      "elevation_high": 5.0,
+      "elevation_low": 4.0,
+      "start_latlng": [
+        47.638665,
+        -122.24376
+      ],
+      "end_latlng": [
+        47.643316,
+        -122.273961
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Medina",
+      "state": "Washington",
+      "country": "United States",
+      "private": false,
+      "hazardous": false,
+      "starred": true
+    },
+    "pr_rank": null,
+    "achievements": [],
+    "visibility": "everyone",
+    "kom_rank": null
+  },
+  {
     "id": 3395939725500114946,
     "resource_state": 2,
     "name": "520 Westbound Gate to Gate",
