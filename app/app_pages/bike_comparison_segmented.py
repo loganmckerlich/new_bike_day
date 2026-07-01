@@ -777,7 +777,7 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                     chart_tab_labels.append("⚡ Power")
                 if has_hr:
                     chart_tab_labels.append("❤️ Heart rate")
-                chart_tab_labels.extend(["📅 Timeline", "📈 Efficiency scatter", "⏱️ Efficiency over time", "🎻 Efficiency distribution"])
+                chart_tab_labels.extend(["📅 Timeline", "📈 Efficiency scatter", "🎻 Efficiency distribution"])
 
                 chart_tabs = st.tabs(chart_tab_labels)
                 ct_idx = 0
@@ -907,38 +907,6 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
                         st.plotly_chart(fig, width="stretch")
                     else:
                         st.caption("No power/speed pairs available for efficiency scatter.")
-                    ct_idx += 1
-
-                with chart_tabs[ct_idx]:
-                    efficiency_over_time = seg_efforts_clean.dropna(subset=["start_date", "speed_per_cbrt_watt"]).copy()
-                    st.caption("Efficiency over time by bike")
-                    if not efficiency_over_time.empty:
-                        fig = go.Figure()
-                        bike_names = efficiency_over_time["bike_name"].dropna().unique().tolist()
-                        for idx, bike_name in enumerate(bike_names):
-                            bike_data = efficiency_over_time[efficiency_over_time["bike_name"] == bike_name].sort_values("start_date")
-                            fig.add_trace(
-                                go.Scatter(
-                                    x=bike_data["start_date"],
-                                    y=bike_data["speed_per_cbrt_watt"],
-                                    mode="lines+markers",
-                                    name=bike_name,
-                                    line={"color": _COLOR_SEQ[idx % len(_COLOR_SEQ)]},
-                                    marker={"color": _COLOR_SEQ[idx % len(_COLOR_SEQ)], "size": 6},
-                                    hovertemplate=(
-                                        f"{bike_name}<br>Date: %{{x|%Y-%m-%d}}<br>Efficiency: %{{y:.4f}}<extra></extra>"
-                                    ),
-                                )
-                            )
-                        fig.update_layout(
-                            xaxis_title="Date",
-                            yaxis_title=_EFFICIENCY_LABEL,
-                            plot_bgcolor="rgba(0,0,0,0)",
-                            paper_bgcolor="rgba(0,0,0,0)",
-                        )
-                        st.plotly_chart(fig, width="stretch")
-                    else:
-                        st.caption("No efficiency history available for this segment.")
                     ct_idx += 1
 
                 with chart_tabs[ct_idx]:
