@@ -842,14 +842,16 @@ def aggregate_paired_delta_bootstrap(
 # ── XGBoost watts-efficiency counterfactual pipeline ──────────────────────────
 
 XGB_PARAMS: dict = dict(
-    n_estimators=100,
+    n_estimators=200,
     max_depth=4,
     learning_rate=0.05,
     subsample=0.8,
     colsample_bytree=0.8,
+    tree_method="hist",
     random_state=42,
     verbosity=0,
 )
+
 # ponytail: faster params for bootstrap resamples; lr=0.1 converges in ~half the trees
 XGB_BOOT_PARAMS: dict = dict(
     n_estimators=100,
@@ -857,6 +859,8 @@ XGB_BOOT_PARAMS: dict = dict(
     learning_rate=0.1,
     subsample=0.8,
     colsample_bytree=0.8,
+    tree_method="hist",
+    nthread=1,
     random_state=42,
     verbosity=0,
 )
