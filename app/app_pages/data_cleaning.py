@@ -156,7 +156,7 @@ def main() -> None:
             example_seg_id: int = st.selectbox(
                 "Example segment",
                 options=_seg_options_sorted,
-                format_func=lambda sid: _seg_name_map.get(sid, str(sid)),
+                format_func=lambda sid: _seg_name_map.get(int(sid), str(sid)),
                 index=0,
                 key="cleaning_explainer_seg",
             )
@@ -205,7 +205,6 @@ def main() -> None:
         else:
             _spd = _spd_label()
             _COLOR_SEQ = px.colors.qualitative.Set2
-            available_bikes = get_available_bikes()
             _raw, _annotated, _filtered_seg = outlier_detection_frames(
                 cleaned, int(example_seg_id), z_threshold=z_threshold
             )
@@ -234,7 +233,7 @@ def main() -> None:
                     lambda z: f"z = {z:.2f}" if pd.notna(z) else ""
                 )
 
-                _ann_bikes = [b for b in available_bikes if b in _plot_ann.get("bike_name", pd.Series()).values]
+                _ann_bikes = sorted(_plot_ann["bike_name"].dropna().unique().tolist())
                 if _ann_bikes:
                     bike_tabs = st.tabs(_ann_bikes)
                     for _bi, _bname in enumerate(_ann_bikes):
