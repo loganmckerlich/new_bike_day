@@ -8,11 +8,11 @@ requested or when the cache is empty on first use.
 from __future__ import annotations
 
 import json
-import os
 from datetime import datetime, timezone
 from typing import Any
 
 import pandas as pd
+import streamlit as st
 from supabase import create_client
 
 _CREATE_DB_SIZE_MB_FUNCTION_SQL: str = """
@@ -25,8 +25,8 @@ $$ LANGUAGE sql;
 _CLEANUP_TRIGGER_MB = 450.0
 _CLEANUP_TARGET_MB = 425.0
 
-_SUPABASE_URL = os.environ.get("SUPABASE_URL")
-_SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
+_SUPABASE_URL = st.secrets.get("SUPABASE_URL")
+_SUPABASE_KEY = st.secrets.get("SUPABASE_KEY")
 
 supabase = create_client(_SUPABASE_URL, _SUPABASE_KEY) if _SUPABASE_URL and _SUPABASE_KEY else None
 
