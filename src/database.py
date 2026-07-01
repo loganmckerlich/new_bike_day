@@ -1,29 +1,39 @@
-"""SQLite-backed persistence for starred segments, segment efforts, and athlete tokens.
+"""Supabase-backed persistence for starred segments, segment efforts, and athlete tokens.
 
-All API responses are stored here as a static cache.  The application serves data
-from this cache and only calls the Strava API when a webhook event notifies that
-data has changed, or when the cache is empty on first use.
+All API responses are stored here as a shared cache in Supabase. The application
+serves data from this cache and only calls the Strava API when a refresh is
+requested or when the cache is empty on first use.
 """
 
 from __future__ import annotations
 
 import json
 import os
-import sqlite3
-from pathlib import Path
+from datetime import datetime, timezone
 from typing import Any
 
 import pandas as pd
+from supabase import create_client
 
-_DEFAULT_DB_PATH: Path = Path(__file__).resolve().parents[1] / "data" / "new_bike_day.db"
+_CREATE_DB_SIZE_MB_FUNCTION_SQL: str = """
+CREATE OR REPLACE FUNCTION get_db_size_mb()
+RETURNS FLOAT AS $$
+  SELECT pg_database_size(current_database()) / 1000000.0;
+$$ LANGUAGE sql;
+"""
 
-# Allow override via environment variable for testing or alternate deployments.
-_DB_PATH: Path = Path(os.environ["NEW_BIKE_DAY_DB_PATH"]) if "NEW_BIKE_DAY_DB_PATH" in os.environ else _DEFAULT_DB_PATH
+_CLEANUP_TRIGGER_MB = 450.0
+_CLEANUP_TARGET_MB = 425.0
+
+_SUPABASE_URL = os.environ.get("SUPABASE_URL")
+_SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
+
+supabase = create_client(_SUPABASE_URL, _SUPABASE_KEY) if _SUPABASE_URL and _SUPABASE_KEY else None
 
 _CREATE_STARRED_SEGMENTS: str = """
 CREATE TABLE IF NOT EXISTS starred_segments (
-    athlete_id           INTEGER NOT NULL,
-    segment_id           INTEGER NOT NULL,
+    athlete_id           TEXT NOT NULL,
+    segment_id           TEXT NOT NULL,
     name                 TEXT,
     distance             REAL,
     average_grade        REAL,
@@ -41,12 +51,12 @@ CREATE TABLE IF NOT EXISTS starred_segments (
 
 _CREATE_SEGMENT_EFFORTS: str = """
 CREATE TABLE IF NOT EXISTS segment_efforts (
-    athlete_id        INTEGER NOT NULL,
-    effort_id         INTEGER NOT NULL,
-    segment_id        INTEGER,
-    activity_id       INTEGER,
+    athlete_id        TEXT NOT NULL,
+    effort_id         TEXT NOT NULL,
+    segment_id        TEXT,
+    activity_id       TEXT,
     gear_id           TEXT,
-    start_date        TEXT,
+    start_date        TIMESTAMP,
     elapsed_time      INTEGER,
     moving_time       INTEGER,
     average_watts     REAL,
@@ -57,7 +67,7 @@ CREATE TABLE IF NOT EXISTS segment_efforts (
 
 _CREATE_BIKES: str = """
 CREATE TABLE IF NOT EXISTS bikes (
-    athlete_id         INTEGER NOT NULL,
+    athlete_id         TEXT NOT NULL,
     gear_id            TEXT NOT NULL,
     name               TEXT,
     converted_distance REAL,
@@ -67,22 +77,31 @@ CREATE TABLE IF NOT EXISTS bikes (
 
 _CREATE_FTP: str = """
 CREATE TABLE IF NOT EXISTS athlete_ftp (
-    athlete_id INTEGER PRIMARY KEY,
+    athlete_id TEXT PRIMARY KEY,
     ftp        INTEGER
-)"""
+)
+"""
 
 _CREATE_ATHLETE_TOKENS: str = """
 CREATE TABLE IF NOT EXISTS athlete_tokens (
-    athlete_id    INTEGER PRIMARY KEY,
+    athlete_id    TEXT PRIMARY KEY,
     access_token  TEXT NOT NULL,
     refresh_token TEXT NOT NULL,
     expires_at    INTEGER NOT NULL
 )
 """
 
+_CREATE_USERS: str = """
+CREATE TABLE IF NOT EXISTS users (
+    athlete_id TEXT PRIMARY KEY,
+    last_accessed TIMESTAMP,
+    created_at TIMESTAMP
+)
+"""
+
 _CREATE_SEGMENT_GEO: str = """
 CREATE TABLE IF NOT EXISTS segment_geo_cache (
-    segment_id     INTEGER PRIMARY KEY,
+    segment_id     TEXT PRIMARY KEY,
     polyline_json  TEXT,
     elevation_low  REAL,
     elevation_high REAL,
@@ -124,181 +143,196 @@ _EFFORTS_COLS: list[str] = [
 ]
 
 
-def _connect() -> sqlite3.Connection:
-    """Open a connection to the SQLite database, creating the file if needed."""
-    _DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    return sqlite3.connect(_DB_PATH)
+def _get_supabase() -> Any:
+    if supabase is None:
+        raise RuntimeError("SUPABASE_URL and SUPABASE_KEY must be configured")
+    return supabase
+
+
+def _normalize_athlete_id(athlete_id: int | str | None) -> str | None:
+    if athlete_id is None:
+        return None
+    return str(athlete_id)
+
+
+def _clean_value(value: Any) -> Any:
+    if value is None or value is pd.NA:
+        return None
+    if isinstance(value, (float, int)):
+        return None if pd.isna(value) else value
+    if isinstance(value, str):
+        return value
+    if hasattr(value, "to_pydatetime"):
+        return value.to_pydatetime().isoformat()
+    if hasattr(value, "isoformat"):
+        return value.isoformat()
+    return value
+
+
+def _rows_to_dataframe(rows: list[dict[str, Any]], columns: list[str]) -> pd.DataFrame:
+    if not rows:
+        return pd.DataFrame(columns=columns)
+    cleaned_rows = []
+    for row in rows:
+        cleaned_rows.append({column: _clean_value(row.get(column)) for column in columns})
+    return pd.DataFrame(cleaned_rows, columns=columns)
 
 
 def init_db() -> None:
-    """Create all tables and apply schema migrations if needed."""
-    with _connect() as conn:
-        conn.execute(_CREATE_STARRED_SEGMENTS)
-        conn.execute(_CREATE_SEGMENT_EFFORTS)
-        conn.execute(_CREATE_BIKES)
-        conn.execute(_CREATE_ATHLETE_TOKENS)
-        conn.execute(_CREATE_SEGMENT_GEO)
-        conn.execute(_CREATE_FTP)
+    """Ensure the Supabase client is configured for the app.
+
+    The schema itself is expected to be created in the Supabase SQL editor so
+    the app can focus on data access and user-scoping.
+    """
+    _get_supabase()
+
+
+# ---------------------------------------------------------------------------
+# Users
+# ---------------------------------------------------------------------------
+
+def touch_user(athlete_id: int | str) -> None:
+    """Create or update the user row and refresh last_accessed."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    now = datetime.now(timezone.utc).isoformat()
+    client = _get_supabase()
+    existing = client.table("users").select("created_at").eq("athlete_id", athlete_key).limit(1).execute()
+    created_at = existing.data[0].get("created_at") if existing.data else now
+    payload = {
+        "athlete_id": athlete_key,
+        "last_accessed": now,
+        "created_at": created_at,
+    }
+    client.table("users").upsert(payload, on_conflict="athlete_id").execute()
+
 
 # ---------------------------------------------------------------------------
 # Starred segments
 # ---------------------------------------------------------------------------
 
-def save_segments(df: pd.DataFrame, athlete_id: int) -> None:
-    """Upsert rows into the starred_segments table.
-
-    Existing rows are replaced so that segment metadata stays current after a
-    re-ingest triggered by a webhook.
-
-    Args:
-        df: DataFrame containing starred segment data.  Only columns that
-            appear in the database schema are written.
-    """
+def save_segments(df: pd.DataFrame, athlete_id: int | str) -> None:
+    """Upsert rows into the starred_segments table."""
     if df.empty:
         return
-    df['athlete_id'] = [athlete_id] * len(df)
-    available = [c for c in _SEGMENTS_COLS if c in df.columns]
-    col_list = ", ".join(available + ["athlete_id"])
-    placeholders = ", ".join("?" * (len(available) + 1))
-    sql = f"INSERT OR REPLACE INTO starred_segments ({col_list}) VALUES ({placeholders})"
-    with _connect() as conn:
-        conn.executemany(
-            sql,
-            [tuple(row) + (athlete_id,) for row in df[available].itertuples(index=False, name=None)],
-        )
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    columns = [c for c in _SEGMENTS_COLS if c in df.columns and c != "athlete_id"]
+    records = []
+    for row in df[columns].itertuples(index=False, name=None):
+        record = {column: _clean_value(value) for column, value in zip(columns, row)}
+        record["athlete_id"] = athlete_key
+        records.append(record)
+    if records:
+        _get_supabase().table("starred_segments").upsert(records, on_conflict="athlete_id,segment_id").execute()
 
 
-def load_segments(athlete_id: int) -> pd.DataFrame:
-    """Load all starred segments for a given athlete.
-
-    Args:
-        athlete_id: The athlete's Strava user ID.
-
-    Returns:
-        DataFrame with columns matching the starred_segments schema, or an
-        empty DataFrame if the table is empty or does not exist yet.
-    """
-    with _connect() as conn:
-        try:
-            return pd.read_sql_query(
-                "SELECT * FROM starred_segments WHERE athlete_id = ?",
-                conn,
-                params=(athlete_id,),
-            )
-        except sqlite3.OperationalError:
-            return pd.DataFrame(columns=_SEGMENTS_COLS)
+def load_segments(athlete_id: int | str) -> pd.DataFrame:
+    """Load all starred segments for a given athlete."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return pd.DataFrame(columns=_SEGMENTS_COLS)
+    try:
+        response = _get_supabase().table("starred_segments").select("*").eq("athlete_id", athlete_key).execute()
+        return _rows_to_dataframe(response.data or [], _SEGMENTS_COLS)
+    except Exception:
+        return pd.DataFrame(columns=_SEGMENTS_COLS)
 
 
-def clear_segments(athlete_id: int) -> None:
+def clear_segments(athlete_id: int | str) -> None:
     """Delete all starred segment rows for a given athlete."""
-    with _connect() as conn:
-        table_exists = conn.execute(
-            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='starred_segments'"
-        ).fetchone()
-        if table_exists:
-            conn.execute("DELETE FROM starred_segments WHERE athlete_id = ?", (athlete_id,))
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    try:
+        _get_supabase().table("starred_segments").delete().eq("athlete_id", athlete_key).execute()
+    except Exception:
+        return
 
 
 # ---------------------------------------------------------------------------
 # Segment efforts
 # ---------------------------------------------------------------------------
 
-def save_efforts(df: pd.DataFrame, athlete_id: int) -> None:
-    """Upsert rows into the segment_efforts table.
-
-    Existing rows are replaced so that gear_id and other fields stay current
-    after a re-ingest triggered by a webhook.
-
-    Args:
-        df: DataFrame containing segment effort data.  Only columns that
-            appear in the database schema are written.
-    """
+def save_efforts(df: pd.DataFrame, athlete_id: int | str) -> None:
+    """Upsert rows into the segment_efforts table."""
     if df.empty:
         return
-    df["athlete_id"] = [athlete_id] * len(df)
-    available = [c for c in _EFFORTS_COLS if c in df.columns]
-    col_list = ", ".join(available)
-    placeholders = ", ".join("?" * len(available))
-    sql = f"INSERT OR REPLACE INTO segment_efforts ({col_list}) VALUES ({placeholders})"
-    with _connect() as conn:
-        conn.executemany(sql, df[available].itertuples(index=False, name=None))
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    columns = [c for c in _EFFORTS_COLS if c in df.columns and c != "athlete_id"]
+    records = []
+    for row in df[columns].itertuples(index=False, name=None):
+        record = {column: _clean_value(value) for column, value in zip(columns, row)}
+        record["athlete_id"] = athlete_key
+        records.append(record)
+    if records:
+        _get_supabase().table("segment_efforts").upsert(records, on_conflict="athlete_id,effort_id").execute()
 
 
-def load_efforts(athlete_id: int) -> pd.DataFrame:
-    """Load all segment efforts for a given athlete.
-
-    Args:
-        athlete_id: The athlete's Strava user ID.
-
-    Returns:
-        DataFrame with columns matching the segment_efforts schema, or an
-        empty DataFrame if the table is empty or does not exist yet.
-    """
-    with _connect() as conn:
-        try:
-            return pd.read_sql_query(
-                "SELECT * FROM segment_efforts WHERE athlete_id = ?",
-                conn,
-                params=(athlete_id,),
-            )
-        except sqlite3.OperationalError:
-            return pd.DataFrame(columns=_EFFORTS_COLS)
+def load_efforts(athlete_id: int | str) -> pd.DataFrame:
+    """Load all segment efforts for a given athlete."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return pd.DataFrame(columns=_EFFORTS_COLS)
+    try:
+        response = _get_supabase().table("segment_efforts").select("*").eq("athlete_id", athlete_key).execute()
+        return _rows_to_dataframe(response.data or [], _EFFORTS_COLS)
+    except Exception:
+        return pd.DataFrame(columns=_EFFORTS_COLS)
 
 
-def clear_efforts(athlete_id: int) -> None:
+def clear_efforts(athlete_id: int | str) -> None:
     """Delete all segment effort rows for a given athlete."""
-    with _connect() as conn:
-        table_exists = conn.execute(
-            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='segment_efforts'"
-        ).fetchone()
-        if table_exists:
-            conn.execute("DELETE FROM segment_efforts WHERE athlete_id = ?", (athlete_id,))
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    try:
+        _get_supabase().table("segment_efforts").delete().eq("athlete_id", athlete_key).execute()
+    except Exception:
+        return
 
 
 # =======
 # FTP
 # =======
 
-def save_ftp(ftp: int | None, athlete_id: int) -> None:
-    """Persist the athlete's FTP value in the database.
+def save_ftp(ftp: int | None, athlete_id: int | str) -> None:
+    """Persist the athlete's FTP value in the database."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    payload = {"athlete_id": athlete_key, "ftp": ftp}
+    _get_supabase().table("athlete_ftp").upsert(payload, on_conflict="athlete_id").execute()
 
-    Args:
-        ftp: The athlete's FTP value (watts), or None to clear it.
-        athlete_id: The athlete's Strava user ID.
-    """
-    with _connect() as conn:
-        conn.execute(
-            "INSERT OR REPLACE INTO athlete_ftp (athlete_id, ftp) VALUES (?, ?)",
-            (athlete_id, ftp),
-        )
 
-def load_ftp(athlete_id: int) -> int | None:
-    """Load the athlete's FTP value from the database.
-
-    Args:
-        athlete_id: The athlete's Strava user ID.
-
-    Returns:
-        The athlete's FTP value (watts), or None if not set.
-    """
-    with _connect() as conn:
-        try:
-            row = conn.execute(
-                "SELECT ftp FROM athlete_ftp WHERE athlete_id = ?",
-                (athlete_id,),
-            ).fetchone()
-            return row[0] if row is not None else None
-        except sqlite3.OperationalError:
+def load_ftp(athlete_id: int | str) -> int | None:
+    """Load the athlete's FTP value from the database."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return None
+    try:
+        response = _get_supabase().table("athlete_ftp").select("ftp").eq("athlete_id", athlete_key).limit(1).execute()
+        if not response.data:
             return None
+        return response.data[0].get("ftp")
+    except Exception:
+        return None
 
-def clear_ftp(athlete_id: int) -> None:
+
+def clear_ftp(athlete_id: int | str) -> None:
     """Delete the athlete's FTP value from the database."""
-    with _connect() as conn:
-        table_exists = conn.execute(
-            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='athlete_ftp'"
-        ).fetchone()
-        if table_exists:
-            conn.execute("DELETE FROM athlete_ftp WHERE athlete_id = ?", (athlete_id,))
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    try:
+        _get_supabase().table("athlete_ftp").delete().eq("athlete_id", athlete_key).execute()
+    except Exception:
+        return
+
 
 # ---------------------------------------------------------------------------
 # Bikes (gear_id → name mapping)
@@ -306,70 +340,56 @@ def clear_ftp(athlete_id: int) -> None:
 
 def save_bikes(
     bikes: dict[str, str],
-    athlete_id: int,
+    athlete_id: int | str,
     distances: dict[str, float] | None = None,
 ) -> None:
-    """Upsert the athlete's bike inventory into the bikes table.
-
-    Args:
-        bikes: Dict mapping gear_id to a human-readable bike name.
-        athlete_id: The athlete's Strava user ID.
-        distances: Optional dict mapping gear_id to converted_distance
-            (in the athlete's preferred unit, as returned by Strava).
-    """
+    """Upsert the athlete's bike inventory into the bikes table."""
     if not bikes:
         return
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
     distances = distances or {}
-    sql = """
-        INSERT OR REPLACE INTO bikes (athlete_id, gear_id, name, converted_distance)
-        VALUES (?, ?, ?, ?)
-    """
-    rows = [(athlete_id, gid, name, distances.get(gid)) for gid, name in bikes.items()]
-    with _connect() as conn:
-        # Add column if it doesn't exist yet (handles existing databases).
-        try:
-            conn.execute("ALTER TABLE bikes ADD COLUMN converted_distance REAL")
-        except sqlite3.OperationalError:
-            pass  # Column already exists
-        conn.executemany(sql, rows)
+    records = [
+        {
+            "athlete_id": athlete_key,
+            "gear_id": gear_id,
+            "name": name,
+            "converted_distance": _clean_value(distances.get(gear_id)),
+        }
+        for gear_id, name in bikes.items()
+    ]
+    _get_supabase().table("bikes").upsert(records, on_conflict="athlete_id,gear_id").execute()
 
 
-def load_bikes(athlete_id: int) -> tuple[dict[str, str], dict[str, float]]:
-    """Load the bike inventory for a given athlete.
-
-    Args:
-        athlete_id: The athlete's Strava user ID.
-
-    Returns:
-        A 2-tuple of:
-        - Dict mapping gear_id to bike name (empty dict if none stored).
-        - Dict mapping gear_id to converted_distance (empty if not stored).
-    """
-    with _connect() as conn:
-        try:
-            rows = conn.execute(
-                "SELECT gear_id, name, converted_distance FROM bikes WHERE athlete_id = ?",
-                (athlete_id,),
-            ).fetchall()
-            names = {gear_id: name for gear_id, name, _ in rows}
-            distances = {
-                gear_id: dist
-                for gear_id, _, dist in rows
-                if dist is not None
-            }
-            return names, distances
-        except sqlite3.OperationalError:
-            return {}, {}
+def load_bikes(athlete_id: int | str) -> tuple[dict[str, str], dict[str, float]]:
+    """Load the bike inventory for a given athlete."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return {}, {}
+    try:
+        response = _get_supabase().table("bikes").select("gear_id, name, converted_distance").eq("athlete_id", athlete_key).execute()
+        rows = response.data or []
+        names = {row.get("gear_id"): row.get("name") for row in rows if row.get("gear_id") is not None}
+        distances = {
+            row.get("gear_id"): row.get("converted_distance")
+            for row in rows
+            if row.get("gear_id") is not None and row.get("converted_distance") is not None
+        }
+        return names, distances
+    except Exception:
+        return {}, {}
 
 
-def clear_bikes(athlete_id: int) -> None:
+def clear_bikes(athlete_id: int | str) -> None:
     """Delete all bike rows for a given athlete."""
-    with _connect() as conn:
-        table_exists = conn.execute(
-            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='bikes'"
-        ).fetchone()
-        if table_exists:
-            conn.execute("DELETE FROM bikes WHERE athlete_id = ?", (athlete_id,))
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    try:
+        _get_supabase().table("bikes").delete().eq("athlete_id", athlete_key).execute()
+    except Exception:
+        return
 
 
 # ---------------------------------------------------------------------------
@@ -377,136 +397,157 @@ def clear_bikes(athlete_id: int) -> None:
 # ---------------------------------------------------------------------------
 
 def save_athlete_token(
-    athlete_id: int,
+    athlete_id: int | str,
     access_token: str,
     refresh_token: str,
     expires_at: int,
 ) -> None:
-    """Persist or update the OAuth tokens for an athlete.
-
-    Tokens are needed by the webhook server to call the Strava API when an
-    event arrives without user interaction.
-
-    Args:
-        athlete_id: The athlete's Strava user ID.
-        access_token: Current short-lived access token.
-        refresh_token: Long-lived refresh token used to obtain a new access token.
-        expires_at: Unix timestamp at which the access_token expires.
-    """
-    sql = """
-        INSERT OR REPLACE INTO athlete_tokens
-            (athlete_id, access_token, refresh_token, expires_at)
-        VALUES (?, ?, ?, ?)
-    """
-    with _connect() as conn:
-        conn.execute(sql, (athlete_id, access_token, refresh_token, expires_at))
+    """Persist or update the OAuth tokens for an athlete."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    payload = {
+        "athlete_id": athlete_key,
+        "access_token": access_token,
+        "refresh_token": refresh_token,
+        "expires_at": expires_at,
+    }
+    _get_supabase().table("athlete_tokens").upsert(payload, on_conflict="athlete_id").execute()
 
 
-def load_athlete_token(athlete_id: int | None = None) -> dict[str, Any] | None:
+def load_athlete_token(athlete_id: int | str | None = None) -> dict[str, Any] | None:
     """Load token information for an athlete.
 
-    Args:
-        athlete_id: The athlete's Strava user ID.  If ``None``, returns the
-            first row found (useful for single-user deployments).
-
-    Returns:
-        Dict with keys ``athlete_id``, ``access_token``, ``refresh_token``,
-        ``expires_at``, or ``None`` if no token is stored.
+    In multi-user mode, an athlete_id should be provided so reads stay scoped to a
+    single user and never cross-contaminate another athlete's data. Passing
+    ``None`` returns ``None`` to keep the data access boundary explicit.
     """
-    with _connect() as conn:
-        try:
-            if athlete_id is not None:
-                row = conn.execute(
-                    "SELECT athlete_id, access_token, refresh_token, expires_at "
-                    "FROM athlete_tokens WHERE athlete_id = ?",
-                    (athlete_id,),
-                ).fetchone()
-            else:
-                row = conn.execute(
-                    "SELECT athlete_id, access_token, refresh_token, expires_at "
-                    "FROM athlete_tokens LIMIT 1"
-                ).fetchone()
-        except sqlite3.OperationalError:
-            return None
-
-    if row is None:
+    if athlete_id is None:
         return None
-    return {
-        "athlete_id": row[0],
-        "access_token": row[1],
-        "refresh_token": row[2],
-        "expires_at": row[3],
-    }
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return None
+    try:
+        response = _get_supabase().table("athlete_tokens").select("*").eq("athlete_id", athlete_key).limit(1).execute()
+        if not response.data:
+            return None
+        row = response.data[0]
+        return {
+            "athlete_id": row.get("athlete_id"),
+            "access_token": row.get("access_token"),
+            "refresh_token": row.get("refresh_token"),
+            "expires_at": row.get("expires_at"),
+        }
+    except Exception:
+        return None
 
 
 # ---------------------------------------------------------------------------
 # Segment geo cache (polyline, elevation, streams)
 # ---------------------------------------------------------------------------
 
-def save_segment_geo(segment_id: int, detail: dict[str, Any], streams: dict[str, list[float]]) -> None:
-    """Persist geo and stream data for a segment.
-
-    Args:
-        segment_id: Strava segment identifier.
-        detail: Dict returned by :func:`src.fetch.get_segment_detail`.
-        streams: Dict returned by :func:`src.fetch.get_segment_streams`.
-    """
+def save_segment_geo(segment_id: int | str, detail: dict[str, Any], streams: dict[str, list[float]]) -> None:
+    """Persist geo and stream data for a segment."""
     polyline_points = detail.get("polyline_points") or []
     start_latlng = detail.get("start_latlng") or []
     end_latlng = detail.get("end_latlng") or []
-
-    sql = """
-        INSERT OR REPLACE INTO segment_geo_cache
-            (segment_id, polyline_json, elevation_low, elevation_high,
-             start_lat, start_lng, end_lat, end_lng, streams_json)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """
-    with _connect() as conn:
-        conn.execute(sql, (
-            segment_id,
-            json.dumps(polyline_points),
-            detail.get("elevation_low"),
-            detail.get("elevation_high"),
-            start_latlng[0] if len(start_latlng) > 0 else None,
-            start_latlng[1] if len(start_latlng) > 1 else None,
-            end_latlng[0] if len(end_latlng) > 0 else None,
-            end_latlng[1] if len(end_latlng) > 1 else None,
-            json.dumps(streams) if streams else None,
-        ))
+    payload = {
+        "segment_id": str(segment_id),
+        "polyline_json": json.dumps(polyline_points),
+        "elevation_low": detail.get("elevation_low"),
+        "elevation_high": detail.get("elevation_high"),
+        "start_lat": start_latlng[0] if len(start_latlng) > 0 else None,
+        "start_lng": start_latlng[1] if len(start_latlng) > 1 else None,
+        "end_lat": end_latlng[0] if len(end_latlng) > 0 else None,
+        "end_lng": end_latlng[1] if len(end_latlng) > 1 else None,
+        "streams_json": json.dumps(streams) if streams else None,
+    }
+    _get_supabase().table("segment_geo_cache").upsert(payload, on_conflict="segment_id").execute()
 
 
-def load_segment_geo(segment_id: int) -> dict[str, Any] | None:
-    """Load cached geo and stream data for a segment.
-
-    Returns:
-        Dict compatible with what :func:`app.pages.1_Segment_Comparison._get_segment_geo`
-        expects, or ``None`` if the segment has not been cached yet.
-    """
-    with _connect() as conn:
-        try:
-            row = conn.execute(
-                "SELECT polyline_json, elevation_low, elevation_high, "
-                "start_lat, start_lng, end_lat, end_lng, streams_json "
-                "FROM segment_geo_cache WHERE segment_id = ?",
-                (segment_id,),
-            ).fetchone()
-        except sqlite3.OperationalError:
+def load_segment_geo(segment_id: int | str) -> dict[str, Any] | None:
+    """Load cached geo and stream data for a segment."""
+    try:
+        response = _get_supabase().table("segment_geo_cache").select("*").eq("segment_id", str(segment_id)).limit(1).execute()
+        if not response.data:
             return None
-
-    if row is None:
+        row = response.data[0]
+        polyline_points = json.loads(row.get("polyline_json") or "[]") if row.get("polyline_json") else []
+        streams = json.loads(row.get("streams_json") or "{}") if row.get("streams_json") else {}
+        start_lat, start_lng = row.get("start_lat"), row.get("start_lng")
+        end_lat, end_lng = row.get("end_lat"), row.get("end_lng")
+        return {
+            "polyline_points": [tuple(point) for point in polyline_points if isinstance(point, (list, tuple))],
+            "elevation_low": row.get("elevation_low"),
+            "elevation_high": row.get("elevation_high"),
+            "start_latlng": [start_lat, start_lng] if start_lat is not None else [],
+            "end_latlng": [end_lat, end_lng] if end_lat is not None else [],
+            "streams": streams,
+        }
+    except Exception:
         return None
 
-    polyline_points = json.loads(row[0]) if row[0] else []
-    streams = json.loads(row[7]) if row[7] else {}
 
-    start_lat, start_lng = row[3], row[4]
-    end_lat, end_lng = row[5], row[6]
+# ---------------------------------------------------------------------------
+# Storage management
+# ---------------------------------------------------------------------------
 
-    return {
-        "polyline_points": [tuple(p) for p in polyline_points if hasattr(p, "__iter__")],
-        "elevation_low": row[1],
-        "elevation_high": row[2],
-        "start_latlng": [start_lat, start_lng] if start_lat is not None else [],
-        "end_latlng": [end_lat, end_lng] if end_lat is not None else [],
-        "streams": streams,
-    }
+def get_db_size_mb() -> float:
+    """Return the current database size in megabytes via the Supabase RPC."""
+    try:
+        response = _get_supabase().rpc("get_db_size_mb").execute()
+        data = response.data or []
+        if not data:
+            return 0.0
+        if isinstance(data, list):
+            first = data[0]
+            if isinstance(first, dict):
+                for key in ("get_db_size_mb", "db_size_mb", "value"):
+                    if key in first:
+                        return float(first[key])
+                return float(first.get("value", 0.0))
+            return float(first)
+        return float(data)
+    except Exception:
+        return 0.0
+
+
+def _delete_user_data(athlete_id: int | str) -> None:
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    client = _get_supabase()
+    try:
+        client.table("segment_efforts").delete().eq("athlete_id", athlete_key).execute()
+        client.table("starred_segments").delete().eq("athlete_id", athlete_key).execute()
+        client.table("bikes").delete().eq("athlete_id", athlete_key).execute()
+        client.table("athlete_ftp").delete().eq("athlete_id", athlete_key).execute()
+        client.table("athlete_tokens").delete().eq("athlete_id", athlete_key).execute()
+        client.table("users").delete().eq("athlete_id", athlete_key).execute()
+    except Exception:
+        return
+
+
+def cleanup_if_needed(athlete_id: int | str) -> None:
+    """Evict least recently accessed users when database usage is high."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    current_size_mb = get_db_size_mb()
+    # ponytail: 450MB is the trigger point and 425MB is the safety target to stay under the 500MB free-tier limit (85% threshold).
+    if current_size_mb <= _CLEANUP_TRIGGER_MB:
+        return
+    while current_size_mb > _CLEANUP_TARGET_MB:
+        try:
+            response = _get_supabase().table("users").select("athlete_id,last_accessed").order("last_accessed", desc=False).limit(1).execute()
+            candidates = [
+                row for row in (response.data or [])
+                if str(row.get("athlete_id")) != athlete_key and row.get("athlete_id") is not None
+            ]
+            if not candidates:
+                break
+            target = candidates[0]
+            _delete_user_data(target["athlete_id"])
+        except Exception:
+            break
+        current_size_mb = get_db_size_mb()

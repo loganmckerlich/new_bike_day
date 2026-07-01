@@ -12,12 +12,11 @@ new-bike-day/
 ├── requirements.txt
 ├── README.md
 ├── data/
-│   └── new_bike_day.db    ← SQLite static cache (created on first run)
 ├── notebooks/01_eda.ipynb
 ├── src/
 │   ├── auth.py            ← OAuth + token refresh
 │   ├── causal_inference.py← Doubly robust causal effect estimation
-│   ├── database.py        ← SQLite persistence layer
+│   ├── database.py        ← Supabase persistence layer
 │   ├── dev_data.py        ← Dev-mode static data
 │   ├── fetch.py           ← Strava API helpers
 │   ├── weather.py         ← Weather enrichment (stubbed values for now)
@@ -71,18 +70,18 @@ At app startup:
 1. Configure `.streamlit/secrets.toml` with your Strava client ID, client secret, and redirect URI.
 2. Click **Sign in with Strava SSO**.
 3. Authorize Strava access and return to the app.
-4. On the first sign-in the app fetches all data from Strava and stores it in the local SQLite database (`data/new_bike_day.db`).
-5. On subsequent page loads the app serves data directly from the SQLite cache — **no Strava API calls are made**.
+4. On the first sign-in the app fetches all data from Strava and stores it in Supabase.
+5. On subsequent page loads the app serves data directly from the Supabase cache — **no Strava API calls are made**.
 6. Use the **Reload Activities** button to force a full re-sync from the Strava API.
 
 ## Data caching strategy
 
 The app follows a **webhook-driven, static-cache** model:
 
-- **Single initial load**: The Strava API is called once when the SQLite cache is empty.
+- **Single initial load**: The Strava API is called once when the Supabase cache is empty.
 - **Webhook-triggered updates**: When Strava notifies you that an activity has been created, updated, or deleted, the webhook server re-ingests data from the API and refreshes the cache.
-- **All other reads**: Served directly from the SQLite file — no network calls.
-- **Segment geometry**: Polylines, elevation, and altitude streams are cached permanently in SQLite; they are fetched at most once per segment.
+- **All other reads**: Served directly from Supabase — no network calls.
+- **Segment geometry**: Polylines, elevation, and altitude streams are cached permanently in Supabase; they are fetched at most once per segment.
 
 ## Webhook server
 

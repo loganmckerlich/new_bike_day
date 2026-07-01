@@ -13,3 +13,4 @@ shap
 geopy
 scikit-learn
 xgboost
+supabase
