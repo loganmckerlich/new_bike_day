@@ -7,8 +7,6 @@ from typing import Final
 import streamlit as st
 import requests
 
-from src.database import touch_user
-
 TOKEN_URL: Final[str] = "https://www.strava.com/oauth/token"
 AUTHORIZE_URL: Final[str] = "https://www.strava.com/oauth/authorize"
 
@@ -84,6 +82,7 @@ def handle_redirect() -> None:
         st.session_state["strava_athlete"] = token_data.get("athlete", {})
         athlete_id = token_data.get("athlete", {}).get("id")
         if athlete_id is not None:
+            from src.database import touch_user  # noqa: PLC0415 — lazy to avoid init at import
             touch_user(athlete_id)
         st.success("✅ Connected to Strava!")
         st.query_params.clear()
