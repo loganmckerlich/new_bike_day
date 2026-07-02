@@ -83,6 +83,7 @@ TYPE_DETAIL_LABELS: dict[str, str] = {
 _COLOR_SEQ: list[str] = px.colors.qualitative.Set2
 _SPIDER_POLYGON_LINE_WIDTH: int = 3
 _SPIDER_POLYGON_FILL_ALPHA: float = 0.20
+_SPIDER_AXIS_PADDING: float = 1.2
 _EFFICIENCY_LABEL: str = "Efficiency (km/h / W^(1/3))"
 
 
@@ -399,8 +400,8 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
     # ── Performance profile (spider charts) ──────────────────────────────────────
     st.subheader("Performance profile")
     st.caption(
-        f"{bikes_label} — axes are normalised (0–100) so the full chart area is used; "
-        "gaps between bikes are proportional to real differences. "
+        f"{bikes_label} — values are mean-centred (grand mean subtracted) to amplify bike-to-bike differences. "
+        "Zero line = grand mean across all efforts. "
         "Left shows speed, right shows speed / W\u00b9\u2044\u00b3 (power-normalised efficiency using cube-root scaling). "
         "Hover to see actual values."
     )
@@ -427,41 +428,31 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
 
     _spd = _spd_label()
 
-
-    def _normalize_profile(profile: dict[str, list[float]]) -> dict[str, list[float]]:
-        """Global min-max normalize so all values map to [0, 100].
-
-        Using a single global scale across all bikes and dimensions preserves the
-        proportional gaps between bikes: if bike A is 10 km/h faster on sprints and
-        5 km/h faster on hills, the radial distance on hills will be exactly half
-        that of sprints.
-        """
+    def _mean_center(profile: dict[str, list[float]]) -> tuple[dict[str, list[float]], float, float]:
+        """Subtract grand mean from all values; return scaled profile + symmetric axis bounds."""
         all_vals = [v for vals in profile.values() for v in vals if v is not None and not (v != v)]
         if not all_vals:
-            return profile
-        lo, hi = min(all_vals), max(all_vals)
-        if hi == lo:
-            return {b: [50.0] * len(vals) for b, vals in profile.items()}
-        return {
-            b: [10.0 + (v - lo) / (hi - lo) * 90 for v in vals]
-            for b, vals in profile.items()
-        }
+            return profile, -1.0, 1.0
+        grand_mean = sum(all_vals) / len(all_vals)
+        scaled = {b: [v - grand_mean for v in vals] for b, vals in profile.items()}
+        all_scaled = [v for vals in scaled.values() for v in vals]
+        lo, hi = min(all_scaled), max(all_scaled)
+        return scaled, lo, hi
 
-
-    # Convert speed values for display, then normalize for radial position
+    # Convert speed values for display, then mean-centre for radial position
     speed_display = {b: [_convert_speed(v) for v in speed_profile[b]] for b in bikes_to_compare}
-    speed_norm = _normalize_profile(speed_display)
+    speed_scaled, spd_lo, spd_hi = _mean_center(speed_display)
 
     fig_spider = go.Figure()
     for idx, b in enumerate(bikes_to_compare):
-        norm_vals = speed_norm[b]
+        scaled_vals = speed_scaled[b]
         raw_vals = speed_display[b]
-        norm_closed = norm_vals + [norm_vals[0]]
+        scaled_closed = scaled_vals + [scaled_vals[0]]
         raw_closed = raw_vals + [raw_vals[0]]
         color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
         fig_spider.add_trace(
             go.Scatterpolar(
-                r=norm_closed,
+                r=scaled_closed,
                 theta=categories_closed,
                 fill="toself",
                 name=b,
@@ -473,7 +464,12 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
         )
     fig_spider.update_layout(
         polar={
-            "radialaxis": {"visible": True, "tickvals": [0, 25, 50, 75, 100], "ticktext": ["", "", "", "", ""], "range": [0, 100]},
+            "radialaxis": {
+                "visible": True,
+                "title": f"Speed vs mean ({_spd})",
+                "range": [spd_lo * _SPIDER_AXIS_PADDING, spd_hi * _SPIDER_AXIS_PADDING],
+                "showline": True,
+            },
             "angularaxis": {"categoryorder": "array", "categoryarray": categories},
         },
         showlegend=True,
@@ -492,18 +488,18 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
     )
 
     eff_display = {b: [_convert_speed(v) for v in eff_profile[b]] for b in bikes_to_compare}
-    eff_norm = _normalize_profile(eff_display)
+    eff_scaled, eff_lo, eff_hi = _mean_center(eff_display)
 
     fig_efficiency = go.Figure()
     for idx, b in enumerate(bikes_to_compare):
-        norm_vals = eff_norm[b]
+        scaled_vals = eff_scaled[b]
         raw_vals = eff_display[b]
-        norm_closed = norm_vals + [norm_vals[0]]
+        scaled_closed = scaled_vals + [scaled_vals[0]]
         raw_closed = raw_vals + [raw_vals[0]]
         color = _COLOR_SEQ[idx % len(_COLOR_SEQ)]
         fig_efficiency.add_trace(
             go.Scatterpolar(
-                r=norm_closed,
+                r=scaled_closed,
                 theta=categories_closed,
                 fill="toself",
                 name=b,
@@ -516,7 +512,12 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
         )
     fig_efficiency.update_layout(
         polar={
-            "radialaxis": {"visible": True, "tickvals": [0, 25, 50, 75, 100], "ticktext": ["", "", "", "", ""], "range": [0, 100]},
+            "radialaxis": {
+                "visible": True,
+                "title": "Efficiency vs mean",
+                "range": [eff_lo * _SPIDER_AXIS_PADDING, eff_hi * _SPIDER_AXIS_PADDING],
+                "showline": True,
+            },
             "angularaxis": {"categoryorder": "array", "categoryarray": categories},
         },
         showlegend=False,
