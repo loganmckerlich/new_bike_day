@@ -400,9 +400,10 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
     # ── Performance profile (spider charts) ──────────────────────────────────────
     st.subheader("Performance profile")
     st.caption(
-        f"{bikes_label} — values are mean-centred (grand mean subtracted) to amplify bike-to-bike differences. "
-        "Zero line = grand mean across all efforts. "
-        "Left shows speed, right shows speed / W\u00b9\u2044\u00b3 (power-normalised efficiency using cube-root scaling). "
+        f"{bikes_label} — each spoke is centred on the field average **for that terrain type**, "
+        "so zero = bikes are equal on that terrain. "
+        "Gap size is comparable across spokes; raw speed values are not. "
+        "Left shows speed, right shows speed / W\u00b9\u2044\u00b3 (power-normalised efficiency). "
         "Hover to see actual values."
     )
 
@@ -428,20 +429,32 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
 
     _spd = _spd_label()
 
-    def _mean_center(profile: dict[str, list[float]]) -> tuple[dict[str, list[float]], float, float]:
-        """Subtract grand mean from all values; return scaled profile + symmetric axis bounds."""
-        all_vals = [v for vals in profile.values() for v in vals if v is not None and not (v != v)]
-        if not all_vals:
+    def _center_per_axis(profile: dict[str, list[float]]) -> tuple[dict[str, list[float]], float, float]:
+        """For each spoke, subtract the mean across bikes for that spoke.
+
+        Zero = field average on that terrain type. Bounds are symmetric
+        (±max absolute deviation) so gap sizes are comparable across spokes
+        but raw speed levels don't dominate the scale.
+        """
+        bikes = list(profile.keys())
+        if not bikes:
             return profile, -1.0, 1.0
-        grand_mean = sum(all_vals) / len(all_vals)
-        scaled = {b: [v - grand_mean for v in vals] for b, vals in profile.items()}
-        all_scaled = [v for vals in scaled.values() for v in vals]
-        lo, hi = min(all_scaled), max(all_scaled)
-        return scaled, lo, hi
+        n_dims = len(profile[bikes[0]])
+        scaled = {b: list(vals) for b, vals in profile.items()}
+        for i in range(n_dims):
+            axis_vals = [profile[b][i] for b in bikes if profile[b][i] == profile[b][i]]
+            if not axis_vals:
+                continue
+            axis_mean = sum(axis_vals) / len(axis_vals)
+            for b in scaled:
+                scaled[b][i] -= axis_mean
+        all_scaled = [v for vals in scaled.values() for v in vals if v == v]
+        abs_max = max((abs(v) for v in all_scaled), default=1.0)
+        return scaled, -abs_max, abs_max
 
     # Convert speed values for display, then mean-centre for radial position
     speed_display = {b: [_convert_speed(v) for v in speed_profile[b]] for b in bikes_to_compare}
-    speed_scaled, spd_lo, spd_hi = _mean_center(speed_display)
+    speed_scaled, spd_lo, spd_hi = _center_per_axis(speed_display)
 
     fig_spider = go.Figure()
     for idx, b in enumerate(bikes_to_compare):
@@ -466,7 +479,7 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
         polar={
             "radialaxis": {
                 "visible": True,
-                "title": f"Speed vs mean ({_spd})",
+                "title": f"Speed advantage ({_spd})",
                 "range": [spd_lo * _SPIDER_AXIS_PADDING, spd_hi * _SPIDER_AXIS_PADDING],
                 "showline": True,
             },
@@ -488,7 +501,7 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
     )
 
     eff_display = {b: [_convert_speed(v) for v in eff_profile[b]] for b in bikes_to_compare}
-    eff_scaled, eff_lo, eff_hi = _mean_center(eff_display)
+    eff_scaled, eff_lo, eff_hi = _center_per_axis(eff_display)
 
     fig_efficiency = go.Figure()
     for idx, b in enumerate(bikes_to_compare):
@@ -514,7 +527,7 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
         polar={
             "radialaxis": {
                 "visible": True,
-                "title": "Efficiency vs mean",
+                "title": "Efficiency advantage",
                 "range": [eff_lo * _SPIDER_AXIS_PADDING, eff_hi * _SPIDER_AXIS_PADDING],
                 "showline": True,
             },
@@ -527,9 +540,16 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
 
     spider_col1, spider_col2 = st.columns(2)
     with spider_col1:
-        st.plotly_chart(fig_spider, width="stretch")
+        st.plotly_chart(fig_spider, width="stretch", config={"staticPlot": True})
     with spider_col2:
-        st.plotly_chart(fig_efficiency, width="stretch")
+        st.plotly_chart(fig_efficiency, width="stretch", config={"staticPlot": True})
+    st.caption(
+        "Outward = advantage on that terrain type. Inward = disadvantage. "
+        "The gap between polygons is what matters — not how far out they sit overall. "
+        "A bigger gap on climbs means one bike is meaningfully faster on climbs, regardless of how climbs compare to sprints. "
+        "Inter-segment gaps are scaled. So if a bike is 2x better than a bike at one thing but 4x better at another, " \
+        "the gap in the second would be twice as big."
+    )
 
 
     # ── Valid segment selector ────────────────────────────────────────────────────

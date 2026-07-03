@@ -28,6 +28,26 @@ _CLEANUP_TARGET_MB = 425.0
 _SUPABASE_URL = st.secrets.get("SUPABASE_URL")
 _SUPABASE_KEY = st.secrets.get("SUPABASE_KEY")
 
+_PAGE_SIZE = 1000
+
+
+def _paginated_select(table: str, eq_col: str, eq_val: str) -> list[dict]:
+    """Fetch all rows from a table using range-based pagination."""
+    # ponytail: Supabase PostgREST caps responses at 1000 rows by default;
+    # this walks pages until a short page signals the end.
+    client = _get_supabase()
+    rows: list[dict] = []
+    start = 0
+    while True:
+        end = start + _PAGE_SIZE - 1
+        page = client.table(table).select("*").eq(eq_col, eq_val).range(start, end).execute()
+        batch = page.data or []
+        rows.extend(batch)
+        if len(batch) < _PAGE_SIZE:
+            break
+        start += _PAGE_SIZE
+    return rows
+
 supabase = create_client(_SUPABASE_URL, _SUPABASE_KEY) if _SUPABASE_URL and _SUPABASE_KEY else None
 
 _CREATE_STARRED_SEGMENTS: str = """
@@ -270,8 +290,8 @@ def load_segments(athlete_id: int | str) -> pd.DataFrame:
     if not athlete_key:
         return pd.DataFrame(columns=_SEGMENTS_COLS)
     try:
-        response = _get_supabase().table("starred_segments").select("*").eq("athlete_id", athlete_key).execute()
-        return _rows_to_dataframe(response.data or [], _SEGMENTS_COLS)
+        rows = _paginated_select("starred_segments", "athlete_id", athlete_key)
+        return _rows_to_dataframe(rows, _SEGMENTS_COLS)
     except Exception:
         return pd.DataFrame(columns=_SEGMENTS_COLS)
 
@@ -314,8 +334,8 @@ def load_efforts(athlete_id: int | str) -> pd.DataFrame:
     if not athlete_key:
         return pd.DataFrame(columns=_EFFORTS_COLS)
     try:
-        response = _get_supabase().table("segment_efforts").select("*").eq("athlete_id", athlete_key).execute()
-        return _rows_to_dataframe(response.data or [], _EFFORTS_COLS)
+        rows = _paginated_select("segment_efforts", "athlete_id", athlete_key)
+        return _rows_to_dataframe(rows, _EFFORTS_COLS)
     except Exception:
         return pd.DataFrame(columns=_EFFORTS_COLS)
 
@@ -358,8 +378,8 @@ def load_rides(athlete_id: int | str) -> pd.DataFrame:
     if not athlete_key:
         return pd.DataFrame(columns=_RIDES_COLS)
     try:
-        response = _get_supabase().table("rides").select("*").eq("athlete_id", athlete_key).execute()
-        return _rows_to_dataframe(response.data or [], _RIDES_COLS)
+        rows = _paginated_select("rides", "athlete_id", athlete_key)
+        return _rows_to_dataframe(rows, _RIDES_COLS)
     except Exception:
         return pd.DataFrame(columns=_RIDES_COLS)
 
