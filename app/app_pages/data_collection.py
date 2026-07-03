@@ -38,7 +38,7 @@ from src.database import (
 )
 from src.fetch import ingest_all, PremiumOnlyError
 from src.home_personality import load_dev_athlete_profile
-from src.auth import custom_auth_button, handle_redirect
+from src.auth import custom_auth_button, handle_redirect, get_demo_access_token
 
 def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = False) -> None:
     try:
@@ -363,8 +363,17 @@ def _save_session(
     if ftp is not None:
         st.session_state["ftp"] = ftp
 
-def _load_sample_data() -> None:
-    """Load dev sample data into session state and render results."""
+def _load_demo_data() -> None:
+    """Load demo data: live from my Strava account, falling back to static dev JSON."""
+    token_result = get_demo_access_token()
+    if token_result is not None:
+        access_token, athlete_id = token_result
+        if athlete_id is not None:
+            athlete_id = int(athlete_id)
+            st.session_state["strava_athlete"] = {"id": athlete_id}
+            get_and_save_data(access_token, athlete_id, force_refresh=False)
+            return
+    # ponytail: fall back to static snapshots if secret is missing or token refresh fails
     result = ingest_all(access_token="", dev=True)
     _save_session(
         result["efforts"],
@@ -384,10 +393,10 @@ def _load_sample_data() -> None:
 
 
 def _fallback_to_sample_data(error_message: str) -> None:
-    """Show an error and fall back to sample data."""
+    """Show an error and fall back to demo data."""
     st.error(error_message)
     st.session_state["use_sample_data"] = True
-    _load_sample_data()
+    _load_demo_data()
 
 
 def main() -> None:
@@ -403,7 +412,7 @@ def main() -> None:
         if use_sample_data:
             athlete_profile = load_dev_athlete_profile()
             athlete_name = athlete_profile.get("first_name") or None
-            st.info("Using Sample Data")
+            st.info("Viewing Logan's Strava data")
         else:
             athlete_name = st.session_state.get("athlete_name")
         if athlete_name:
@@ -426,11 +435,12 @@ def main() -> None:
 
     else:
         custom_auth_button()
-        if st.button("📊 Use sample data", width="stretch"):
+        if not st.session_state.get("use_sample_data") and st.button("📊 View Logans Data", width="stretch"):
             st.session_state["use_sample_data"] = True
-            _load_sample_data()
+            _load_demo_data()
+            st.rerun()
 
-    if st.button("🔄 Reload activities", type="secondary", width="stretch"):
+    if st.session_state.get("strava_token") and st.button("🔄 Reload activities", type="secondary", width="stretch"):
         if not st.session_state.get("strava_token"):
             st.warning("Please authorize with Strava first.")
             return
@@ -444,10 +454,10 @@ def main() -> None:
         _fallback_to_sample_data(f"Strava sign-in failed: {error_from_params}. Showing sample data instead.")
         return
 
-    if not st.session_state.get("strava_token"):
+    if not st.session_state.get("strava_token") and not st.session_state.get("use_sample_data"):
         # dont load rest of page, wait for sign in
         return
-    elif st.session_state.get("efforts") is None:
+    elif st.session_state.get("efforts") is None and st.session_state.get("strava_token"):
         # signed in - havent loaded yet - load from db if its there
         get_and_save_data(st.session_state.get("strava_token"), athlete_id, force_refresh=False)
 
