@@ -19,7 +19,26 @@ def custom_auth_button() -> None:
     )
 
     st.markdown("### Connect your Strava account")
-    st.link_button("🚴 Connect Strava", auth_url, type="primary")
+    # st.link_button("🚴 Connect Strava", auth_url, type="primary")
+    st.markdown(
+        f"""
+        <a href="{auth_url}"
+        target="_top"
+        style="
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background-color: #FC4C02;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+        ">
+        🚴 Connect Strava
+        </a>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 def get_authorization_url(
