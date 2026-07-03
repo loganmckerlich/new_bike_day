@@ -57,11 +57,30 @@ CREATE TABLE IF NOT EXISTS segment_efforts (
     activity_id       TEXT,
     gear_id           TEXT,
     start_date        TIMESTAMP,
-    elapsed_time      INTEGER,
-    moving_time       INTEGER,
-    average_watts     REAL,
-    average_heartrate REAL,
+    elapsed_time           INTEGER,
+    moving_time            INTEGER,
+    average_watts          REAL,
+    average_heartrate      REAL,
     PRIMARY KEY (athlete_id, effort_id)
+)
+"""
+
+_CREATE_RIDES: str = """
+CREATE TABLE IF NOT EXISTS rides (
+    athlete_id           TEXT NOT NULL,
+    activity_id          TEXT NOT NULL,
+    gear_id              TEXT,
+    name                 TEXT,
+    sport_type           TEXT,
+    start_date           TIMESTAMP,
+    moving_time          INTEGER,
+    elapsed_time         INTEGER,
+    distance             REAL,
+    total_elevation_gain REAL,
+    average_watts        REAL,
+    average_heartrate    REAL,
+    average_speed        REAL,
+    PRIMARY KEY (athlete_id, activity_id)
 )
 """
 
@@ -140,6 +159,22 @@ _EFFORTS_COLS: list[str] = [
     "moving_time",
     "average_watts",
     "average_heartrate",
+]
+
+_RIDES_COLS: list[str] = [
+    "athlete_id",
+    "activity_id",
+    "gear_id",
+    "name",
+    "sport_type",
+    "start_date",
+    "moving_time",
+    "elapsed_time",
+    "distance",
+    "total_elevation_gain",
+    "average_watts",
+    "average_heartrate",
+    "average_speed",
 ]
 
 
@@ -292,6 +327,50 @@ def clear_efforts(athlete_id: int | str) -> None:
         return
     try:
         _get_supabase().table("segment_efforts").delete().eq("athlete_id", athlete_key).execute()
+    except Exception:
+        return
+
+
+# ---------------------------------------------------------------------------
+# Rides (activity-level)
+# ---------------------------------------------------------------------------
+
+def save_rides(df: pd.DataFrame, athlete_id: int | str) -> None:
+    """Upsert rows into the rides table."""
+    if df.empty:
+        return
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    columns = [c for c in _RIDES_COLS if c in df.columns and c != "athlete_id"]
+    records = []
+    for row in df[columns].itertuples(index=False, name=None):
+        record = {col: _clean_value(val) for col, val in zip(columns, row)}
+        record["athlete_id"] = athlete_key
+        records.append(record)
+    if records:
+        _get_supabase().table("rides").upsert(records, on_conflict="athlete_id,activity_id").execute()
+
+
+def load_rides(athlete_id: int | str) -> pd.DataFrame:
+    """Load all rides for a given athlete."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return pd.DataFrame(columns=_RIDES_COLS)
+    try:
+        response = _get_supabase().table("rides").select("*").eq("athlete_id", athlete_key).execute()
+        return _rows_to_dataframe(response.data or [], _RIDES_COLS)
+    except Exception:
+        return pd.DataFrame(columns=_RIDES_COLS)
+
+
+def clear_rides(athlete_id: int | str) -> None:
+    """Delete all ride rows for a given athlete."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    try:
+        _get_supabase().table("rides").delete().eq("athlete_id", athlete_key).execute()
     except Exception:
         return
 

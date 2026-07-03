@@ -20,16 +20,19 @@ from src.utils import navigator
 from src.database import (
     clear_bikes,
     clear_efforts,
+    clear_rides,
     clear_segments,
     clear_ftp,
     cleanup_if_needed,
     init_db,
     load_bikes,
     load_efforts,
+    load_rides,
     load_segments,
     load_ftp,
     save_bikes,
     save_efforts,
+    save_rides,
     save_segments,
     save_ftp
 )
@@ -39,7 +42,7 @@ from src.auth import custom_auth_button, handle_redirect
 
 def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = False) -> None:
     try:
-        data, gear_frame, bikes, bike_distances, ftp = _process_data(
+        data, gear_frame, bikes, bike_distances, ftp, rides = _process_data(
             access_token=access_token,
             athlete_id=athlete_id,
             force_refresh=force_refresh,
@@ -51,7 +54,7 @@ def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = 
         traceback.print_exc(file=sys.stderr)
         st.error(f"Unable to process data: {exc}")
         return
-    _save_session(data, gear_frame, bikes, access_token, bike_distances, ftp)
+    _save_session(data, gear_frame, bikes, access_token, bike_distances, ftp, rides)
 
 # ---------------------------------------------------------------------------
 # Static cache helpers (Supabase-backed (soon))
@@ -63,9 +66,10 @@ def _load_from_db(athlete_id: int) -> tuple[pd.DataFrame, pd.DataFrame, dict[str
     efforts = load_efforts(athlete_id)
     bikes, bike_distances = load_bikes(athlete_id)
     ftp = load_ftp(athlete_id)
+    rides = load_rides(athlete_id)
     if segments.empty and efforts.empty:
         return None
-    return efforts, segments, bikes, bike_distances, ftp
+    return efforts, segments, bikes, bike_distances, ftp, rides
 
 
 def _save_to_db(
@@ -75,6 +79,7 @@ def _save_to_db(
     athlete_id: int,
     bike_distances: dict[str, float] | None = None,
     ftp: int | None = None,
+    rides: pd.DataFrame | None = None,
 ) -> None:
     print("Saving data to local cache for athlete_id", athlete_id)
     init_db()
@@ -82,6 +87,8 @@ def _save_to_db(
     save_efforts(efforts, athlete_id)
     save_bikes(bikes, athlete_id, bike_distances or {})
     save_ftp(ftp, athlete_id)
+    if rides is not None and not rides.empty:
+        save_rides(rides, athlete_id)
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
@@ -99,6 +106,7 @@ def _process_data(
             clear_segments(athlete_id)
             clear_bikes(athlete_id)
             clear_ftp(athlete_id)
+            clear_rides(athlete_id)
         else:
             print("No db cache found for athlete_id", athlete_id, "- fetching from Strava API")
 
@@ -112,29 +120,14 @@ def _process_data(
         efforts, segments, bikes = result["efforts"], result["segments"], result.get("bikes", {})
         bike_distances: dict[str, float] = result.get("bike_distances", {})
         ftp = result.get("ftp")
-        _save_to_db(efforts, segments, bikes, athlete_id, bike_distances, ftp)
-        return efforts, segments, bikes, bike_distances, ftp
+        rides: pd.DataFrame = result.get("rides", pd.DataFrame())
+        _save_to_db(efforts, segments, bikes, athlete_id, bike_distances, ftp, rides)
+        return efforts, segments, bikes, bike_distances, ftp, rides
 
     elif db_cached is not None:
         print("Loaded data from db cache for athlete_id", athlete_id)
-        efforts, segments, bikes, bike_distances, ftp = db_cached
-        # # If bikes table is empty, re-resolve names: try GET /athlete first,
-        # # then fall back to activity details using the cached efforts' activity_ids.
-        # if not bikes and access_token:
-        #     try:
-        #         gear_to_activity: dict[str, int] = (
-        #             efforts.dropna(subset=["gear_id", "activity_id"])
-        #             .drop_duplicates("gear_id")
-        #             .assign(activity_id=lambda d: d["activity_id"].astype(int))
-        #             .set_index("gear_id")["activity_id"]
-        #             .to_dict()
-        #         )
-        #         bikes, bike_distances, _ = get_athlete_bikes(access_token, gear_to_activity=gear_to_activity)
-        #         if bikes:
-        #             save_bikes(bikes, athlete_id, bike_distances)
-        #     except Exception:
-        #         pass
-        return efforts, segments, bikes, bike_distances, ftp
+        efforts, segments, bikes, bike_distances, ftp, rides = db_cached
+        return efforts, segments, bikes, bike_distances, ftp, rides
     else:
         st.error("OOP, This shouldnt happen")
         st.stop()
@@ -201,9 +194,10 @@ def _render_bike_card(row: pd.Series) -> None:
     brand = parts[0].upper()
     model = parts[1] if len(parts) > 1 else parts[0]
 
-    watts_str = f"{int(row['avg_watts'])} W" if pd.notna(row["avg_watts"]) else "—"
-    hr_str = f"{int(row['avg_heartrate'])} bpm" if pd.notna(row["avg_heartrate"]) else "—"
-    hours = f"{row['total_moving_hours']:.1f} hrs"
+    watts_str = f"{int(row['avg_watts'])} W *" if pd.notna(row["avg_watts"]) else "—"
+    hr_str = f"{int(row['avg_heartrate'])} bpm *" if pd.notna(row["avg_heartrate"]) else "—"
+    moving_hours = row.get("total_moving_hours")
+    hours = f"{moving_hours:.1f} hrs" if pd.notna(moving_hours) else "—"
     dist = row.get("converted_distance")  # stored as miles from Strava odometer
     if pd.notna(dist):
         if use_metric:
@@ -223,7 +217,11 @@ def _render_bike_card(row: pd.Series) -> None:
             <span class="bc-val">{dist_str}</span>
           </div>
           <div class="bc-row">
-            <span class="bc-label">Efforts</span>
+            <span class="bc-label">Rides</span>
+            <span class="bc-val">{int(row['total_rides'])}</span>
+          </div>
+          <div class="bc-row">
+            <span class="bc-label">Segment Efforts</span>
             <span class="bc-val">{int(row['total_efforts'])}</span>
           </div>
           <div class="bc-row">
@@ -239,6 +237,7 @@ def _render_bike_card(row: pd.Series) -> None:
             <span class="bc-val">{hr_str}</span>
           </div>
         </div>
+        <p style="font-size:0.65rem; color: rgba(255,255,255,0.4); margin-top:0.2rem;">* mean of per-effort averages</p>
         """,
         unsafe_allow_html=True,
     )
@@ -249,17 +248,39 @@ def _render_bike_summaries(
     segments: pd.DataFrame,
     bikes: dict[str, str],
     bike_distances: dict[str, float] | None = None,
+    rides: pd.DataFrame | None = None,
 ) -> None:
     st.subheader("Your bikes at a glance")
 
     agg_metrics = {
         "total_efforts": ("effort_id", "count"),
-        "total_moving_hours": ("moving_time", "sum"),
         "avg_watts": ("average_watts", "mean"),
         "avg_heartrate": ("average_heartrate", "mean"),
     }
     bike_stats = efforts.groupby("gear_id", dropna=False).agg(**agg_metrics).reset_index()
-    bike_stats["total_moving_hours"] = (bike_stats["total_moving_hours"] / 3600).round(1)
+
+    # Rides + moving time — sourced from the rides table (one row per activity)
+    if rides is not None and not rides.empty and "gear_id" in rides.columns:
+        ride_agg = (
+            rides.dropna(subset=["gear_id"])
+            .groupby("gear_id")
+            .agg(total_rides=("activity_id", "count"), total_moving_seconds=("moving_time", "sum"))
+            .reset_index()
+        )
+        ride_agg["total_moving_hours"] = (ride_agg["total_moving_seconds"] / 3600).round(1)
+        bike_stats = bike_stats.merge(ride_agg[["gear_id", "total_rides", "total_moving_hours"]], on="gear_id", how="left")
+    else:
+        # Fallback: count distinct activity_ids from efforts (moving time unavailable)
+        rides_per_bike = (
+            efforts.dropna(subset=["activity_id"])
+            .groupby("gear_id")["activity_id"]
+            .nunique()
+            .rename("total_rides")
+        )
+        bike_stats = bike_stats.merge(rides_per_bike, on="gear_id", how="left")
+        bike_stats["total_moving_hours"] = float("nan")
+
+    bike_stats["total_rides"] = bike_stats.get("total_rides", pd.Series(0, index=bike_stats.index)).fillna(0).astype(int)
     bike_stats["avg_watts"] = bike_stats["avg_watts"].round(0)
     bike_stats["avg_heartrate"] = bike_stats["avg_heartrate"].round(0)
     bike_stats["bike_name"] = bike_stats["gear_id"].map(lambda g: _gear_label(g, bikes))
@@ -278,7 +299,7 @@ def _render_bike_summaries(
     for i, (_, row) in enumerate(bike_stats.iterrows()):
         with cols[i]:
             _render_bike_card(row)
-
+    st.caption("Fields with * are calculated as mean of mean unweighted so are not exact")
     # ── Starred segments ─────────────────────────────────────────────────────
     if not segments.empty:
         st.divider()
@@ -331,12 +352,14 @@ def _save_session(
     access_token: str,
     bike_distances: dict[str, float] | None = None,
     ftp: int | None = None,
+    rides: pd.DataFrame | None = None,
 ) -> None:
     st.session_state["efforts"] = data
     st.session_state["segments"] = segments
     st.session_state["bikes"] = bikes
     st.session_state["bike_distances"] = bike_distances or {}
     st.session_state["access_token"] = access_token
+    st.session_state["rides"] = rides if rides is not None else pd.DataFrame()
     if ftp is not None:
         st.session_state["ftp"] = ftp
 
@@ -350,12 +373,14 @@ def _load_sample_data() -> None:
         access_token="",
         bike_distances=result.get("bike_distances", {}),
         ftp=result.get("ftp"),
+        rides=result.get("rides", pd.DataFrame()),
     )
     data = st.session_state.get("efforts")
     segments = st.session_state.get("segments", pd.DataFrame())
     bikes = st.session_state.get("bikes", {})
     bike_distances = st.session_state.get("bike_distances", {})
-    _render_bike_summaries(data, segments, bikes, bike_distances)
+    rides = st.session_state.get("rides", pd.DataFrame())
+    _render_bike_summaries(data, segments, bikes, bike_distances, rides)
 
 
 def _fallback_to_sample_data(error_message: str) -> None:
@@ -436,7 +461,8 @@ def main() -> None:
     segments = st.session_state.get("segments", pd.DataFrame())
     bikes = st.session_state.get("bikes", {})
     bike_distances = st.session_state.get("bike_distances", {})
-    _render_bike_summaries(data, segments, bikes, bike_distances)
+    rides = st.session_state.get("rides", pd.DataFrame())
+    _render_bike_summaries(data, segments, bikes, bike_distances, rides)
 
 navigator("data_collection1")
 main()
