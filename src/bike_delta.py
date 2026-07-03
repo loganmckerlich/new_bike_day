@@ -671,7 +671,7 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     
     return out.reset_index(drop=True)
 
-@st.cache_resource(ttl=3600)
+@st.cache_resource(ttl=3600, show_spinner=False)
 def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str, cache_key: str = None, xgb_params: dict | None = None) -> xgb.XGBRegressor:
     """Train an XGBoost regressor on one bike's efforts to predict speed_kmh.
 
@@ -886,7 +886,7 @@ def aggregate_paired_delta_bootstrap(
     }
 # ── XGBoost watts-efficiency counterfactual pipeline ──────────────────────────
 
-@st.cache_resource(ttl=3600)
+@st.cache_resource(ttl=3600, show_spinner=False)
 def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str, cache_key: str = None, xgb_params: dict | None = None) -> xgb.XGBRegressor:
     """Train an XGBoost regressor on one bike's efforts to predict average_watts.
 
