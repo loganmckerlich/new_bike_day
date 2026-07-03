@@ -561,7 +561,7 @@ XGB_FEATURES: list[str] = [
     'distance_km',
     'heartrate',
     'effort_count',
-    'segtype_detail_sprint_uphill',
+    # 'segtype_detail_sprint_uphill',
     'woy_cos',
     'month_sin',
     'month_cos',
@@ -571,6 +571,51 @@ XGB_FEATURES: list[str] = [
     # 'segtype_detail_sprint_flat',
     # 'segtype_detail_sprint_downhill'
 ]
+
+XGB_WATT_FEATURES: list[str] = [
+    "speed_kmh",
+    'average_grade',
+    'maximum_grade',
+    'doy_sin',
+    'doy_cos',
+    'distance_km',
+    'heartrate',
+    'effort_count',
+    # 'segtype_detail_sprint_uphill',
+    'woy_cos',
+    'month_sin',
+    'month_cos',
+    'woy_sin',
+    # 'segtype_ascent',
+    # 'segtype_detail_sprint_flat',
+    # 'segtype_detail_sprint_downhill',
+    'log_speed',
+    'cbrt_speed'
+]
+
+XGB_PARAMS: dict = dict(
+    n_estimators=200,
+    max_depth=4,
+    learning_rate=0.05,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    tree_method="hist",
+    random_state=42,
+    verbosity=0,
+)
+
+# ponytail: faster params for bootstrap resamples; lr=0.1 converges in ~half the trees
+XGB_BOOT_PARAMS: dict = dict(
+    n_estimators=100,
+    max_depth=4,
+    learning_rate=0.1,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    tree_method="hist",
+    nthread=1,
+    random_state=42,
+    verbosity=0,
+)
 
 def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     """Add candidate features to the prepared dataset.
@@ -840,50 +885,6 @@ def aggregate_paired_delta_bootstrap(
         "symmetry_gap": symmetry_gap,
     }
 # ── XGBoost watts-efficiency counterfactual pipeline ──────────────────────────
-
-XGB_PARAMS: dict = dict(
-    n_estimators=200,
-    max_depth=4,
-    learning_rate=0.05,
-    subsample=0.8,
-    colsample_bytree=0.8,
-    tree_method="hist",
-    random_state=42,
-    verbosity=0,
-)
-
-# ponytail: faster params for bootstrap resamples; lr=0.1 converges in ~half the trees
-XGB_BOOT_PARAMS: dict = dict(
-    n_estimators=100,
-    max_depth=4,
-    learning_rate=0.1,
-    subsample=0.8,
-    colsample_bytree=0.8,
-    tree_method="hist",
-    nthread=1,
-    random_state=42,
-    verbosity=0,
-)
-XGB_WATT_FEATURES: list[str] = [
-    "speed_kmh",
-    'average_grade',
-    'maximum_grade',
-    'doy_sin',
-    'doy_cos',
-    'distance_km',
-    'heartrate',
-    'effort_count',
-    'segtype_detail_sprint_uphill',
-    'woy_cos',
-    'month_sin',
-    'month_cos',
-    'woy_sin',
-    'segtype_ascent',
-    'segtype_detail_sprint_flat',
-    'segtype_detail_sprint_downhill',
-    'log_speed',
-    'cbrt_speed'
-]
 
 @st.cache_resource(ttl=3600)
 def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str, cache_key: str = None, xgb_params: dict | None = None) -> xgb.XGBRegressor:

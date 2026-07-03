@@ -599,7 +599,7 @@ def show(bikes_to_compare: list[str]) -> None:
 
     df_train_scope_a, df_test_a = _date_split_bike_df(df_scope, bike_a)
     with st.spinner(f"Training XGBoost on {bike_a}\u2026"):
-        model_a = _fit_fn(df_train_scope_a, bike_a, str(_mode_str) + str(_disp_scale))
+        model_a = _fit_fn(df_train_scope_a, bike_a, str(_mode_str))
 
 
     train_a = _apply_fn(model_a, df_train_scope_a, bike_a)
@@ -711,19 +711,21 @@ def show(bikes_to_compare: list[str]) -> None:
         if watt_mode:
             sign = "more efficient" if mean_ab >= 0 else "less efficient"
             st.metric(
-                label=f"{bike_b} vs {bike_a} model",
+                label=f"{bike_b} is",
                 value=f"{abs(mean_ab):.1f} W {sign}",
                 delta=f"{mean_ab:+.1f} W  (n\u00a0= {n_ab} efforts)",
                 delta_color="normal",
             )
+            st.caption(f"than {bike_a} model")
         else:
             sign = "faster" if mean_ab >= 0 else "slower"
             st.metric(
-                label=f"{bike_b} vs {bike_a} model",
+                label=f"{bike_b} is",
                 value=f"{abs(mean_ab):.2f} {_unit} {sign}",
                 delta=f"{mean_ab:+.2f} {_unit}  (n\u00a0= {n_ab} efforts)",
                 delta_color="normal",
             )
+            st.caption(f"than {bike_a} model")
     with col_m2:
         st.plotly_chart(_plot_residuals(pred_ab_d, bike_a, bike_b, _residual_col, _unit, _b_better), width='stretch')
     st.caption(
@@ -732,10 +734,15 @@ def show(bikes_to_compare: list[str]) -> None:
         "Spread reflects effort-to-effort variability."
     )
     if watt_mode:
-        _ab_direction = "more efficient" if mean_ab >= 0 else "less efficient"
+        # watts_residual = predicted_a_watts − actual_b_watts  (see apply_watt_model_to_bike)
+        # Step 2 asked: "how many watts would bike_a need to go bike_b's speed?"
+        # mean_ab > 0 → bike_a's model predicts MORE watts than bike_b used → bike_b is more efficient
+        # mean_ab < 0 → bike_a's model predicts FEWER watts than bike_b used → bike_a is more efficient
+        # Subject must be bike_a (the model) to directly answer the Step 2 question.
+        _ab_direction = "more" if mean_ab >= 0 else "fewer"
         st.info(
-            f"**Step 3 in plain terms:** In general, if you did an effort on {bike_b} "
-            f"instead of {bike_a}, {bike_b} used **{abs(mean_ab):.1f} W {_ab_direction}** — "
+            f"**Step 3 in plain terms:** In general, for the same efforts, {bike_a} would have required "
+            f"**{abs(mean_ab):.1f} W {_ab_direction}** than {bike_b} used to go the same speed — "
             f"based on {n_ab} matched efforts."
         )
     else:
@@ -744,6 +751,31 @@ def show(bikes_to_compare: list[str]) -> None:
             f"**Step 3 in plain terms:** In general, if you did an effort on {bike_b} "
             f"instead of {bike_a}, you would've gone **{abs(mean_ab):.2f} {_unit} {_ab_direction}** — "
             f"based on {n_ab} matched efforts."
+        )
+
+    # ── Halftime summary ─────────────────────────────────────────────────────
+    st.markdown("---")
+    if watt_mode:
+        st.info(
+            f"**Where we are so far:** We trained a model on {bike_a}'s efforts that, "
+            f"given speed, grade, and conditions, predicts how many watts {bike_a} typically requires. "
+            f"We then fed {bike_b}'s actual effort conditions into that model — "
+            f"so for each effort we have: *how many watts the model thinks {bike_a} would've needed* "
+            f"vs *how many watts {bike_b} actually used*. "
+            f"The mean of those differences ({mean_ab:+.1f} W) is our first estimate of the efficiency gap.\n\n"
+            f"**Now we do it in reverse** — train on {bike_b}, feed in {bike_a}'s conditions — "
+            f"to get an independent second estimate and check that both directions agree."
+        )
+    else:
+        st.info(
+            f"**Where we are so far:** We trained a model on {bike_a}'s efforts that, "
+            f"given power, grade, and conditions, predicts the speed {bike_a} typically produces. "
+            f"We then fed {bike_b}'s actual effort conditions into that model — "
+            f"so for each effort we have: *how fast the model thinks {bike_a} would've gone* "
+            f"vs *how fast {bike_b} actually went*. "
+            f"The mean of those differences ({mean_ab:+.2f} {_unit}) is our first estimate of the speed gap.\n\n"
+            f"**Now we do it in reverse** — train on {bike_b}, feed in {bike_a}'s conditions — "
+            f"to get an independent second estimate and check that both directions agree."
         )
 
     # ── Step 4: Reverse (train B, apply to A) ────────────────────────────────
@@ -756,7 +788,7 @@ def show(bikes_to_compare: list[str]) -> None:
 
     df_train_scope_b, df_test_b = _date_split_bike_df(df_scope, bike_b)
     with st.spinner(f"Training XGBoost on {bike_b}\u2026"):
-        model_b = _fit_fn(df_train_scope_b, bike_b, str(_mode_str) + str(_disp_scale))
+        model_b = _fit_fn(df_train_scope_b, bike_b, str(_mode_str))
 
     train_b = _apply_fn(model_b, df_train_scope_b, bike_b)
     holdout_b = _apply_fn(model_b, df_test_b, bike_b)
@@ -810,19 +842,21 @@ def show(bikes_to_compare: list[str]) -> None:
         if watt_mode:
             sign_ba = "more efficient" if mean_ba >= 0 else "less efficient"
             st.metric(
-                label=f"{bike_a} vs {bike_b} model",
+                label=f"{bike_a} is",
                 value=f"{abs(mean_ba):.1f} W {sign_ba}",
                 delta=f"{mean_ba:+.1f} W  (n\u00a0= {n_ba} efforts)",
                 delta_color="normal",
             )
+            st.caption(f"than {bike_b} model")
         else:
             sign_ba = "faster" if mean_ba >= 0 else "slower"
             st.metric(
-                label=f"{bike_a} vs {bike_b} model",
+                label=f"{bike_a}",
                 value=f"{abs(mean_ba):.2f} {_unit} {sign_ba}",
                 delta=f"{mean_ba:+.2f} {_unit}  (n\u00a0= {n_ba} efforts)",
                 delta_color="normal",
             )
+            st.caption(f"than {bike_b} model")
     with col_m4:
         st.plotly_chart(_plot_residuals(pred_ba_d, bike_b, bike_a, _residual_col, _unit, _a_better), width='stretch')
     st.caption(
@@ -830,10 +864,15 @@ def show(bikes_to_compare: list[str]) -> None:
         f"Negated to match direction: {-mean_ba:+.2f} {_unit} advantage for {bike_b}."
     )
     if watt_mode:
-        _ba_direction = "more efficient" if mean_ba <= 0 else "less efficient"
+        # watts_residual = predicted_b_watts − actual_a_watts  (see apply_watt_model_to_bike)
+        # Step 4 asked: "how many watts would bike_b need to go bike_a's speed?"
+        # mean_ba > 0 → bike_b's model predicts MORE watts than bike_a used → bike_a is more efficient
+        # mean_ba < 0 → bike_b's model predicts FEWER watts than bike_a used → bike_b is more efficient
+        # Subject must be bike_b (the model) to directly answer the Step 4 question.
+        _ba_direction = "more" if mean_ba >= 0 else "fewer"
         st.info(
-            f"**Step 4 in plain terms:** Flipping it around — if you did a {bike_a} effort "
-            f"on {bike_b} instead, {bike_b} would've been **{abs(mean_ba):.1f} W {_ba_direction}** — "
+            f"**Step 4 in plain terms:** Flipping it around — for the same efforts, {bike_b} would have required "
+            f"**{abs(mean_ba):.1f} W {_ba_direction}** than {bike_a} used to go the same speed — "
             f"based on {n_ba} matched efforts."
         )
     else:
@@ -858,6 +897,16 @@ def show(bikes_to_compare: list[str]) -> None:
 
     summary = aggregate_paired_delta_bootstrap(ab_bootstrap_results, ba_bootstrap_results)
 
+    # Bootstrap residuals are always in km/h (training data is never scaled).
+    # Scale all summary values to the display unit so metrics, CIs, and the
+    # aggregate plot are consistent with _unit. Watt mode is unaffected
+    # because _disp_scale is 1.0 in that case.
+    if _disp_scale != 1.0:
+        for _k in ("combined", "ci_low", "ci_high", "fwd_mean", "rev_mean", "symmetry_gap"):
+            summary[_k] = summary[_k] * _disp_scale
+        for _k in ("fwd_estimates", "rev_estimates", "combined_estimates"):
+            summary[_k] = summary[_k] * _disp_scale
+
     combined = summary["combined"]
     winner = bike_b if combined >= 0 else bike_a
     loser = bike_a if combined >= 0 else bike_b
@@ -877,7 +926,7 @@ def show(bikes_to_compare: list[str]) -> None:
     else:
         st.metric(
             label="Overall speed advantage",
-            value=f"{loser} is {advantage:.2f} {_unit} slower than {winner}",
+            value=f"{winner} is {advantage:.2f} {_unit} faster than {loser}",
             delta=f"{combined:+.2f} {_unit}{ci_str}",
             delta_color="normal",
         )
@@ -1010,7 +1059,7 @@ def validate(ab_bootstrap_results, ba_bootstrap_results, bike_a, bike_b) -> None
     ba_boot_residuals = ba_bootstrap_results["boot_residuals"]
     ab_mean = ab_bootstrap_results["mean_residual"]
     ba_mean = ba_bootstrap_results["mean_residual"]
-    symmetry_gap = abs(ab_mean + ba_mean)
+    symmetry_gap = summary["symmetry_gap"]
 
     fig = go.Figure()
     fig.add_trace(go.Histogram(
@@ -1059,19 +1108,30 @@ def validate(ab_bootstrap_results, ba_bootstrap_results, bike_a, bike_b) -> None
         f"**{bike_a}→{bike_b} mean residual:** {ab_mean:.3f}  \n"
         f"**{bike_b}→{bike_a} mean residual:** {ba_mean:.3f}  \n"
         f"**Symmetry gap:** {symmetry_gap:.3f} "
-        "(how far the two means are from being exact opposites — closer to 0 is better)"
+        f"(how far the two means are from being exact opposites — closer to 0 is better)  \n"
+        f"**Combined effect size:** {summary['combined']:.3f} "
+        f"(the estimated effect of the bike)."
     )
+    st.info("""
+        These being near exact opposites is good because it is like saying 
+        "Bike A is X faster than bike B, and bike B is Y slower than bike A"
+        Inherently, in real life X=Y so in our experiment X being close to Y is good
+    """)
+    effect_size = abs(summary["combined"])
 
-    if symmetry_gap < 0.1 * abs(ab_mean):
-        st.success("🟢 Symmetric — estimates agree closely across both directions.")
-    elif symmetry_gap < 0.25 * abs(ab_mean):
-        st.warning("🟡 Moderate — some divergence between directions, interpret with care.")
+    # in a perfect world symmetry gap = 0
+    # effect size is my mean combined estimate (effect of bike) - center of my distribution
+    if symmetry_gap < 0.2 * effect_size:
+        st.success(f"🟢 Symmetric — estimates are within 20% this indicates a strong relationship.")
+    elif symmetry_gap < 0.50 * effect_size:
+        st.warning(f"🟡 Moderate — some divergence between directions, interpret with care. (20%-50%)")
     else:
-        st.error("🔴 Asymmetric — the two directions disagree significantly. Treat the result with caution.")
+        st.error(f"🔴 Asymmetric — the two directions disagree significantly. Treat the result with caution. (>50%)")
 
     st.markdown(
         "If these means don't roughly mirror each other, it may indicate a bug, "
-        "insufficient data, or that the model isn't fully controlling for conditions."
+        "insufficient data, or that the model isn't fully controlling for conditions." \
+        "Because the effect size is generally quite small, I was generous with what % we consider Symmetric and Moderate"
     )
 
     # --- Effect size vs CI width ---
