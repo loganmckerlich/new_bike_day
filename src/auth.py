@@ -99,7 +99,7 @@ def custom_auth_button() -> None:
     )
 
     st.markdown("### Connect your Strava account")
-    st.link_button_same_tab("🚴 Connect Strava", auth_url, type="primary")
+    link_button_same_tab("🚴 Connect Strava", auth_url, type="primary")
     # st.link_button("🚴 Connect Strava", auth_url, type="primary")
     # st.html(
     #     f"""
