@@ -28,6 +28,26 @@ _CLEANUP_TARGET_MB = 425.0
 _SUPABASE_URL = st.secrets.get("SUPABASE_URL")
 _SUPABASE_KEY = st.secrets.get("SUPABASE_KEY")
 
+_PAGE_SIZE = 1000
+
+
+def _paginated_select(table: str, eq_col: str, eq_val: str) -> list[dict]:
+    """Fetch all rows from a table using range-based pagination."""
+    # ponytail: Supabase PostgREST caps responses at 1000 rows by default;
+    # this walks pages until a short page signals the end.
+    client = _get_supabase()
+    rows: list[dict] = []
+    start = 0
+    while True:
+        end = start + _PAGE_SIZE - 1
+        page = client.table(table).select("*").eq(eq_col, eq_val).range(start, end).execute()
+        batch = page.data or []
+        rows.extend(batch)
+        if len(batch) < _PAGE_SIZE:
+            break
+        start += _PAGE_SIZE
+    return rows
+
 supabase = create_client(_SUPABASE_URL, _SUPABASE_KEY) if _SUPABASE_URL and _SUPABASE_KEY else None
 
 _CREATE_STARRED_SEGMENTS: str = """
@@ -57,11 +77,30 @@ CREATE TABLE IF NOT EXISTS segment_efforts (
     activity_id       TEXT,
     gear_id           TEXT,
     start_date        TIMESTAMP,
-    elapsed_time      INTEGER,
-    moving_time       INTEGER,
-    average_watts     REAL,
-    average_heartrate REAL,
+    elapsed_time           INTEGER,
+    moving_time            INTEGER,
+    average_watts          REAL,
+    average_heartrate      REAL,
     PRIMARY KEY (athlete_id, effort_id)
+)
+"""
+
+_CREATE_RIDES: str = """
+CREATE TABLE IF NOT EXISTS rides (
+    athlete_id           TEXT NOT NULL,
+    activity_id          TEXT NOT NULL,
+    gear_id              TEXT,
+    name                 TEXT,
+    sport_type           TEXT,
+    start_date           TIMESTAMP,
+    moving_time          INTEGER,
+    elapsed_time         INTEGER,
+    distance             REAL,
+    total_elevation_gain REAL,
+    average_watts        REAL,
+    average_heartrate    REAL,
+    average_speed        REAL,
+    PRIMARY KEY (athlete_id, activity_id)
 )
 """
 
@@ -140,6 +179,22 @@ _EFFORTS_COLS: list[str] = [
     "moving_time",
     "average_watts",
     "average_heartrate",
+]
+
+_RIDES_COLS: list[str] = [
+    "athlete_id",
+    "activity_id",
+    "gear_id",
+    "name",
+    "sport_type",
+    "start_date",
+    "moving_time",
+    "elapsed_time",
+    "distance",
+    "total_elevation_gain",
+    "average_watts",
+    "average_heartrate",
+    "average_speed",
 ]
 
 
@@ -235,8 +290,8 @@ def load_segments(athlete_id: int | str) -> pd.DataFrame:
     if not athlete_key:
         return pd.DataFrame(columns=_SEGMENTS_COLS)
     try:
-        response = _get_supabase().table("starred_segments").select("*").eq("athlete_id", athlete_key).execute()
-        return _rows_to_dataframe(response.data or [], _SEGMENTS_COLS)
+        rows = _paginated_select("starred_segments", "athlete_id", athlete_key)
+        return _rows_to_dataframe(rows, _SEGMENTS_COLS)
     except Exception:
         return pd.DataFrame(columns=_SEGMENTS_COLS)
 
@@ -279,8 +334,8 @@ def load_efforts(athlete_id: int | str) -> pd.DataFrame:
     if not athlete_key:
         return pd.DataFrame(columns=_EFFORTS_COLS)
     try:
-        response = _get_supabase().table("segment_efforts").select("*").eq("athlete_id", athlete_key).execute()
-        return _rows_to_dataframe(response.data or [], _EFFORTS_COLS)
+        rows = _paginated_select("segment_efforts", "athlete_id", athlete_key)
+        return _rows_to_dataframe(rows, _EFFORTS_COLS)
     except Exception:
         return pd.DataFrame(columns=_EFFORTS_COLS)
 
@@ -292,6 +347,50 @@ def clear_efforts(athlete_id: int | str) -> None:
         return
     try:
         _get_supabase().table("segment_efforts").delete().eq("athlete_id", athlete_key).execute()
+    except Exception:
+        return
+
+
+# ---------------------------------------------------------------------------
+# Rides (activity-level)
+# ---------------------------------------------------------------------------
+
+def save_rides(df: pd.DataFrame, athlete_id: int | str) -> None:
+    """Upsert rows into the rides table."""
+    if df.empty:
+        return
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    columns = [c for c in _RIDES_COLS if c in df.columns and c != "athlete_id"]
+    records = []
+    for row in df[columns].itertuples(index=False, name=None):
+        record = {col: _clean_value(val) for col, val in zip(columns, row)}
+        record["athlete_id"] = athlete_key
+        records.append(record)
+    if records:
+        _get_supabase().table("rides").upsert(records, on_conflict="athlete_id,activity_id").execute()
+
+
+def load_rides(athlete_id: int | str) -> pd.DataFrame:
+    """Load all rides for a given athlete."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return pd.DataFrame(columns=_RIDES_COLS)
+    try:
+        rows = _paginated_select("rides", "athlete_id", athlete_key)
+        return _rows_to_dataframe(rows, _RIDES_COLS)
+    except Exception:
+        return pd.DataFrame(columns=_RIDES_COLS)
+
+
+def clear_rides(athlete_id: int | str) -> None:
+    """Delete all ride rows for a given athlete."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    try:
+        _get_supabase().table("rides").delete().eq("athlete_id", athlete_key).execute()
     except Exception:
         return
 

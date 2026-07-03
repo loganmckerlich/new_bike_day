@@ -50,6 +50,8 @@ __all__ = [
     "compute_i2",
     "delta_to_sec_per_km",
     # XGBoost counterfactual pipeline
+    "XGB_PARAMS",
+    "XGB_BOOT_PARAMS",
     "XGB_FEATURES",
     "fit_xgb_speed_model",
     "apply_model_to_bike",
@@ -559,16 +561,61 @@ XGB_FEATURES: list[str] = [
     'distance_km',
     'heartrate',
     'effort_count',
-    'segtype_detail_sprint_uphill',
+    # 'segtype_detail_sprint_uphill',
     'woy_cos',
     'month_sin',
     'month_cos',
     'cbrt_watts',
     'woy_sin',
-    'segtype_ascent',
-    'segtype_detail_sprint_flat',
-    'segtype_detail_sprint_downhill'
+    # 'segtype_ascent',
+    # 'segtype_detail_sprint_flat',
+    # 'segtype_detail_sprint_downhill'
 ]
+
+XGB_WATT_FEATURES: list[str] = [
+    "speed_kmh",
+    'average_grade',
+    'maximum_grade',
+    'doy_sin',
+    'doy_cos',
+    'distance_km',
+    'heartrate',
+    'effort_count',
+    # 'segtype_detail_sprint_uphill',
+    'woy_cos',
+    'month_sin',
+    'month_cos',
+    'woy_sin',
+    # 'segtype_ascent',
+    # 'segtype_detail_sprint_flat',
+    # 'segtype_detail_sprint_downhill',
+    'log_speed',
+    'cbrt_speed'
+]
+
+XGB_PARAMS: dict = dict(
+    n_estimators=200,
+    max_depth=4,
+    learning_rate=0.05,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    tree_method="hist",
+    random_state=42,
+    verbosity=0,
+)
+
+# ponytail: faster params for bootstrap resamples; lr=0.1 converges in ~half the trees
+XGB_BOOT_PARAMS: dict = dict(
+    n_estimators=100,
+    max_depth=4,
+    learning_rate=0.1,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    tree_method="hist",
+    nthread=1,
+    random_state=42,
+    verbosity=0,
+)
 
 def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     """Add candidate features to the prepared dataset.
@@ -625,7 +672,7 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     return out.reset_index(drop=True)
 
 @st.cache_resource(ttl=3600)
-def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str, cache_key: str = None) -> xgb.XGBRegressor:
+def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str, cache_key: str = None, xgb_params: dict | None = None) -> xgb.XGBRegressor:
     """Train an XGBoost regressor on one bike's efforts to predict speed_kmh.
 
     Features: average_watts, average_grade, doy_sin, doy_cos, ride_index.
@@ -662,15 +709,7 @@ def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str, cache_key: str = None)
     X = bike_df[XGB_FEATURES]
     y = bike_df["speed_kmh"].values
 
-    model = xgb.XGBRegressor(
-        n_estimators=200,
-        max_depth=4,
-        learning_rate=0.05,
-        subsample=0.8,
-        colsample_bytree=0.8,
-        random_state=42,
-        verbosity=0,
-    )
+    model = xgb.XGBRegressor(**(xgb_params if xgb_params is not None else XGB_PARAMS))
     model.fit(X, y)
     return model
 
@@ -732,12 +771,14 @@ def bootstrap_pipeline(
     label: str = "speed_residual",
     predicted_col: str = "predicted_speed_kmh",
     target_col: str = "speed_kmh",
+    xgb_params: dict | None = None,
 ) -> dict:
 
+    params = xgb_params if xgb_params is not None else XGB_BOOT_PARAMS
     rng = np.random.default_rng(random_state)
     residuals = []
     iteration_mean_resid = []
-    all_results = pd.DataFrame()
+    all_results_list = []
     n_skipped = 0
 
     for _ in range(n_iterations):
@@ -745,7 +786,7 @@ def bootstrap_pipeline(
             n=len(df), replace=True, random_state=rng.integers(0, 1_000_000)
         )
         try:
-            model = fit_fn(boot_sample, train_bike)
+            model = fit_fn(boot_sample, train_bike, xgb_params=params)
             result = apply_fn(model, boot_sample, target_bike)
         except ValueError:
             n_skipped += 1
@@ -756,14 +797,15 @@ def bootstrap_pipeline(
             n_skipped += 1
             continue
 
-        all_results = pd.concat([all_results, result], ignore_index=True)
+        all_results_list.append(result)
 
         iteration_mean_resid.append(result[label].mean())
         residuals.extend(result[label].tolist())
 
     residuals = np.array(residuals)
 
-    effort_level_agg_residual = all_results.groupby("effort_id")[[predicted_col,target_col,label]].mean().reset_index()
+    all_results = pd.concat(all_results_list, ignore_index=True) if all_results_list else pd.DataFrame()
+    effort_level_agg_residual = all_results.groupby("effort_id")[[predicted_col, target_col, label]].mean().reset_index()
 
     return {
         "full_result": result,
@@ -844,30 +886,8 @@ def aggregate_paired_delta_bootstrap(
     }
 # ── XGBoost watts-efficiency counterfactual pipeline ──────────────────────────
 
-# add some transformations of speed ie cbrt or sqrt
-XGB_WATT_FEATURES: list[str] = [
-    "speed_kmh",
-    'average_grade',
-    'maximum_grade',
-    'doy_sin',
-    'doy_cos',
-    'distance_km',
-    'heartrate',
-    'effort_count',
-    'segtype_detail_sprint_uphill',
-    'woy_cos',
-    'month_sin',
-    'month_cos',
-    'woy_sin',
-    'segtype_ascent',
-    'segtype_detail_sprint_flat',
-    'segtype_detail_sprint_downhill',
-    'log_speed',
-    'cbrt_speed'
-]
-
 @st.cache_resource(ttl=3600)
-def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str, cache_key: str = None) -> xgb.XGBRegressor:
+def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str, cache_key: str = None, xgb_params: dict | None = None) -> xgb.XGBRegressor:
     """Train an XGBoost regressor on one bike's efforts to predict average_watts.
 
     The inverse of :func:`fit_xgb_speed_model`: given the speed achieved and
@@ -894,15 +914,7 @@ def fit_xgb_watt_model(df: pd.DataFrame, bike_name: str, cache_key: str = None) 
     X = bike_df[XGB_WATT_FEATURES]
     y = bike_df["average_watts"].values
 
-    model = xgb.XGBRegressor(
-        n_estimators=200,
-        max_depth=4,
-        learning_rate=0.05,
-        subsample=0.8,
-        colsample_bytree=0.8,
-        random_state=42,
-        verbosity=0,
-    )
+    model = xgb.XGBRegressor(**(xgb_params if xgb_params is not None else XGB_PARAMS))
     model.fit(X, y)
     return model
 

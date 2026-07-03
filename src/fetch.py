@@ -572,6 +572,13 @@ def get_athlete_activities(
                 "name": act.get("name") or "",
                 "start_date": act.get("start_date") or "",
                 "average_watts": average_watts,
+                "moving_time": act.get("moving_time"),
+                "elapsed_time": act.get("elapsed_time"),
+                "distance": act.get("distance"),
+                "total_elevation_gain": act.get("total_elevation_gain"),
+                "average_heartrate": act.get("average_heartrate"),
+                "average_speed": act.get("average_speed"),
+                "sport_type": act.get("sport_type") or act.get("type") or "",
             }
 
         if len(data) < batch_size:
@@ -741,4 +748,9 @@ def ingest_all(
     elif not efforts.empty:
         efforts["gear_id"] = None
 
-    return {"bikes": bikes, "bike_distances": bike_distances, "ftp": ftp, "segments": segments_df, "efforts": efforts, "activities": activities}
+    # Build a rides DataFrame (one row per activity) from the activities dict
+    rides = pd.DataFrame(
+        [{"activity_id": str(aid), **data} for aid, data in activities.items()]
+    ) if activities else pd.DataFrame()
+
+    return {"bikes": bikes, "bike_distances": bike_distances, "ftp": ftp, "segments": segments_df, "efforts": efforts, "rides": rides, "activities": activities}
