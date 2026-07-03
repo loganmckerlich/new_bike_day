@@ -598,7 +598,7 @@ def show(bikes_to_compare: list[str]) -> None:
     )
 
     df_train_scope_a, df_test_a = _date_split_bike_df(df_scope, bike_a)
-    with st.spinner(f"Training XGBoost on {bike_a}\u2026"):
+    with st.spinner(f"Training XGBoost on {bike_a}\u2026 (This might take a min)"):
         model_a = _fit_fn(df_train_scope_a, bike_a, str(_mode_str))
 
 
@@ -636,7 +636,7 @@ def show(bikes_to_compare: list[str]) -> None:
             f"the effort's power, grade, and season as inputs."
         )
 
-    with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage\u2026"):
+    with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage. (This might take a min)"):
         ab_bootstrap_results = bootstrap_pipeline(
             df_scope,
             train_bike=bike_a,
@@ -787,7 +787,7 @@ def show(bikes_to_compare: list[str]) -> None:
     )
 
     df_train_scope_b, df_test_b = _date_split_bike_df(df_scope, bike_b)
-    with st.spinner(f"Training XGBoost on {bike_b}\u2026"):
+    with st.spinner(f"Training XGBoost on {bike_b} (This might take a min)"):
         model_b = _fit_fn(df_train_scope_b, bike_b, str(_mode_str))
 
     train_b = _apply_fn(model_b, df_train_scope_b, bike_b)
@@ -802,7 +802,7 @@ def show(bikes_to_compare: list[str]) -> None:
     )
 
 
-    with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage\u2026"):
+    with st.spinner("Retraining for bootstrapping confidence intervals and increased model coverage (This might take a min)"):
         ba_bootstrap_results = bootstrap_pipeline(
             df_scope,
             train_bike=bike_b,
