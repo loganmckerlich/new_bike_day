@@ -1,6 +1,8 @@
 """Authentication helpers for Strava API access."""
 
 from __future__ import annotations
+import html as html_lib
+import uuid
 
 from urllib.parse import urlencode
 from typing import Final
