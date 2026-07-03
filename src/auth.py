@@ -19,11 +19,11 @@ def custom_auth_button() -> None:
     )
 
     st.markdown("### Connect your Strava account")
-    import streamlit.components.v1 as components  # noqa: PLC0415
-    components.html(
+    # st.link_button("🚴 Connect Strava", auth_url, type="primary")
+    st.html(
         f"""
         <a href="{auth_url}"
-        onclick="window.top.location.href='{auth_url}'; return false;"
+        target="_top"
         style="
             display: inline-block;
             padding: 0.5rem 1.2rem;
@@ -33,12 +33,10 @@ def custom_auth_button() -> None:
             font-weight: bold;
             border-radius: 6px;
             text-decoration: none;
-            font-family: sans-serif;
         ">
         🚴 Connect Strava
         </a>
-        """,
-        height=60,
+        """
     )
 
 
