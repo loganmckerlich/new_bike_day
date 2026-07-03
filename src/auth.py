@@ -89,3 +89,28 @@ def handle_redirect() -> None:
     else:
         st.error("❌ Failed to authenticate")
         st.json(token_data)
+
+
+def get_demo_access_token() -> tuple[str, int] | None:
+    """Exchange the stored demo refresh token for a fresh access token.
+
+    Returns (access_token, athlete_id) or None if the secret is missing/invalid.
+    """
+    refresh_token = st.secrets.get("STRAVA_DEMO_REFRESH_TOKEN")
+    if not refresh_token:
+        return None
+
+    resp = requests.post(
+        TOKEN_URL,
+        data={
+            "client_id": st.secrets["STRAVA_CLIENT_ID"],
+            "client_secret": st.secrets["STRAVA_CLIENT_SECRET"],
+            "grant_type": "refresh_token",
+            "refresh_token": refresh_token,
+        },
+        timeout=10,
+    )
+    data = resp.json()
+    if "access_token" not in data:
+        return None
+    return data["access_token"], data.get("athlete", {}).get("id") or st.secrets.get("STRAVA_DEMO_ATHLETE_ID")
