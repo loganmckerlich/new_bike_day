@@ -23,7 +23,6 @@ def custom_auth_button() -> None:
     st.html(
         f"""
         <a href="{auth_url}"
-        target="_top"
         style="
             display: inline-block;
             padding: 0.5rem 1.2rem;
