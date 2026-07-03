@@ -82,9 +82,9 @@ def handle_redirect() -> None:
         st.session_state["strava_token"] = token_data["access_token"]
         st.session_state["strava_athlete"] = token_data.get("athlete", {})
         athlete_id = token_data.get("athlete", {}).get("id")
-        if athlete_id is not None:
-            from src.database import touch_user  # noqa: PLC0415 — lazy to avoid init at import
-            touch_user(athlete_id)
+        # if athlete_id is not None:
+        #     from src.database import touch_user  # noqa: PLC0415 — lazy to avoid init at import
+        #     touch_user(athlete_id)
         st.success("✅ Connected to Strava!")
         st.query_params.clear()
         st.rerun()
