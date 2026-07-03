@@ -19,11 +19,11 @@ def custom_auth_button() -> None:
     )
 
     st.markdown("### Connect your Strava account")
-    # st.link_button("🚴 Connect Strava", auth_url, type="primary")
-    st.markdown(
+    import streamlit.components.v1 as components  # noqa: PLC0415
+    components.html(
         f"""
         <a href="{auth_url}"
-        target="_top"
+        onclick="window.top.location.href='{auth_url}'; return false;"
         style="
             display: inline-block;
             padding: 0.5rem 1.2rem;
@@ -33,11 +33,12 @@ def custom_auth_button() -> None:
             font-weight: bold;
             border-radius: 6px;
             text-decoration: none;
+            font-family: sans-serif;
         ">
         🚴 Connect Strava
         </a>
         """,
-        unsafe_allow_html=True,
+        height=60,
     )
 
 
@@ -82,9 +83,9 @@ def handle_redirect() -> None:
         st.session_state["strava_token"] = token_data["access_token"]
         st.session_state["strava_athlete"] = token_data.get("athlete", {})
         athlete_id = token_data.get("athlete", {}).get("id")
-        # if athlete_id is not None:
-        #     from src.database import touch_user  # noqa: PLC0415 — lazy to avoid init at import
-        #     touch_user(athlete_id)
+        if athlete_id is not None:
+            from src.database import touch_user  # noqa: PLC0415 — lazy to avoid init at import
+            touch_user(athlete_id)
         st.success("✅ Connected to Strava!")
         st.query_params.clear()
         st.rerun()
