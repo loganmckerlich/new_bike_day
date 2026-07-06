@@ -434,6 +434,12 @@ def main() -> None:
             st.caption(st.session_state.get("strava_athlete", {}).get("bio", ""))
 
     else:
+        st.caption("""
+            User created Strava applications are limited on how many users can sign in.
+            If you dont record a large number of rides with heart rate and power meter
+            data, and/or you dont have rides recorded and labeled under multiple bikes,
+            please use my sample data to explore the app!
+            """)
         custom_auth_button()
         if not st.session_state.get("use_sample_data") and st.button("📊 View Logans Data", width="stretch"):
             st.session_state["use_sample_data"] = True
