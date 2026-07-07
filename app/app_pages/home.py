@@ -24,7 +24,7 @@ def main() -> None:
         determine which of the bikes you have ridden is the fastest one, and by how much.
 
         ---
-        They all claim to be the fastes, but there can only be one!
+        They all claim to be the fastest, but there can only be one!
         """)
     st.image("src/bike_comp.jpeg")
     st.markdown(
