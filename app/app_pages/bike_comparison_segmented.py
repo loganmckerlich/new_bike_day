@@ -545,11 +545,25 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
         st.plotly_chart(fig_efficiency, width="stretch", config={"staticPlot": True})
     st.caption(
         "Outward = advantage on that terrain type. Inward = disadvantage. "
-        "The gap between polygons is what matters — not how far out they sit overall. "
-        "A bigger gap on climbs means one bike is meaningfully faster on climbs, regardless of how climbs compare to sprints. "
-        "Inter-segment gaps are scaled. So if a bike is 2x better than a bike at one thing but 4x better at another, " \
-        "the gap in the second would be twice as big."
+        "The gap between polygons is what matters — not how far out they sit overall."
     )
+    with st.expander("Methodology"):
+        st.markdown(
+            """
+Only segments ridden on **both** bikes are included — this keeps the comparison fair and holds
+terrain constant across bikes.
+
+For each of those segment efforts, speed is divided by the cube root of average power
+(`speed / W¹ᐟ³`). This controls for effort: going faster because you pushed harder doesn't count as a win for the bike.
+The cube root comes from aerodynamics — at steady state, speed scales as power^(1/3), so this
+ratio is roughly constant for a given bike regardless of effort level.
+
+Those efficiency values are then averaged by terrain type (sprint, flat, climb, descent) to
+produce each spoke of the chart.
+
+The speed chart shows the same data but without the power-normalisation step, so it reflects raw speed.
+"""
+        )
 
 
     # ── Valid segment selector ────────────────────────────────────────────────────
