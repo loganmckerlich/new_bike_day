@@ -28,6 +28,13 @@ with st.sidebar:
         st.session_state["use_metric"] = metric_toggle
         st.rerun()
 
+if "_page_view_logged" not in st.session_state:
+    st.session_state["_page_view_logged"] = True
+    import sys
+    sys.path.insert(0, str(_REPO_ROOT))
+    from src.database import log_page_view
+    log_page_view("app_open")
+
 pg = st.navigation(
     [
         st.Page("app_pages/home.py", title="Home", icon=":material/home:"),
