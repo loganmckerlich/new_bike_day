@@ -404,7 +404,6 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
         "so zero = bikes are equal on that terrain. "
         "Gap size is comparable across spokes; raw speed values are not. "
         "Left shows speed, right shows speed / W\u00b9\u2044\u00b3 (power-normalised efficiency). "
-        "Hover to see actual values."
     )
 
     spider_filtered = selected_efforts[selected_efforts["segment_id"].isin(valid_segment_ids)].copy()
