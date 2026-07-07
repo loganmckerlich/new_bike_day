@@ -6,7 +6,8 @@ requested or when the cache is empty on first use.
 """
 
 from __future__ import annotations
-
+        
+from streamlit.runtime.scriptrunner import get_script_run_ctx
 import json
 from datetime import datetime, timezone
 from typing import Any
@@ -14,13 +15,6 @@ from typing import Any
 import pandas as pd
 import streamlit as st
 from supabase import create_client
-
-_CREATE_DB_SIZE_MB_FUNCTION_SQL: str = """
-CREATE OR REPLACE FUNCTION get_db_size_mb()
-RETURNS FLOAT AS $$
-  SELECT pg_database_size(current_database()) / 1000000.0;
-$$ LANGUAGE sql;
-"""
 
 _CLEANUP_TRIGGER_MB = 450.0
 _CLEANUP_TARGET_MB = 425.0
@@ -261,6 +255,24 @@ def touch_user(athlete_id: int | str) -> None:
         "created_at": created_at,
     }
     client.table("users").upsert(payload, on_conflict="athlete_id").execute()
+
+
+# ---------------------------------------------------------------------------
+# Page view tracking
+# ---------------------------------------------------------------------------
+
+
+def log_page_view(page: str) -> None:
+    """Insert one row into page_views. Silent no-op if Supabase is not configured."""
+    # ponytail: session_id is stable per browser tab; use it for distinct-session queries.
+    # Not truly unique users — incognito or a new tab = new session.
+    try:
+        ctx = get_script_run_ctx()
+        session_id = ctx.session_id if ctx else None
+        client = _get_supabase()
+        client.table("page_views").insert({"page": page, "session_id": session_id}).execute()
+    except Exception:
+        pass  # never break the app over analytics
 
 
 # ---------------------------------------------------------------------------
