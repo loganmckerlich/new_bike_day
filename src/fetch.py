@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Optional
 
@@ -31,10 +32,41 @@ _BIKE_SPORT_TYPES: frozenset[str] = frozenset(
 )
 
 def is_near_read_rate_limit(headers, threshold=0.9):
-    usage_15min, usage_daily = map(int, headers["x-readratelimit-usage"].split(","))
-    limit_15min, limit_daily = map(int, headers["x-readratelimit-limit"].split(","))
-
+    limits, usage = parse_rate_limit_headers(headers)
+    if limits is None or usage is None:
+        return False
+    limit_15min, limit_daily = limits
+    usage_15min, usage_daily = usage
+    if not limit_15min or not limit_daily:
+        return False
     return (usage_15min / limit_15min >= threshold) or (usage_daily / limit_daily >= threshold)
+
+
+def parse_rate_limit_headers(headers: Any) -> tuple[tuple[int, int] | None, tuple[int, int] | None]:
+    if headers is None:
+        return None, None
+    if hasattr(headers, "get"):
+        get_header = headers.get
+    else:
+        return None, None
+    limit_value = (
+        get_header("X-RateLimit-Limit")
+        or get_header("x-ratelimit-limit")
+        or get_header("x-readratelimit-limit")
+    )
+    usage_value = (
+        get_header("X-RateLimit-Usage")
+        or get_header("x-ratelimit-usage")
+        or get_header("x-readratelimit-usage")
+    )
+    if not limit_value or not usage_value:
+        return None, None
+    try:
+        limit_15min, limit_daily = map(int, str(limit_value).split(","))
+        usage_15min, usage_daily = map(int, str(usage_value).split(","))
+    except (TypeError, ValueError):
+        return None, None
+    return (limit_15min, limit_daily), (usage_15min, usage_daily)
 class PremiumOnlyError(Exception):
     """Raised when a 402 Payment Required response is received from Strava API.
 
@@ -280,6 +312,7 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
             raise
 
         data: list[dict[str, Any]] = resp.json()
+        near_limit = is_near_read_rate_limit(getattr(resp, "headers", {}))
         if not data:
             break
 
@@ -316,10 +349,10 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
                 }
             )
 
-        if len(data) < per_page:
-            break
-        if is_near_read_rate_limit(resp.headers):
+        if near_limit:
             print("[get_starred_segments] WARNING: near Strava API read rate limit.")
+            break
+        if len(data) < per_page:
             break
         page += 1
 
@@ -394,6 +427,239 @@ def get_segment_efforts(access_token: str, segment_id: int, *, _http: Any = requ
         page += 1
 
     return pd.DataFrame(rows)
+
+
+def get_activity_map_for_window(
+    access_token: str,
+    window_start: datetime,
+    window_end: datetime,
+    *,
+    _http: Any = requests,
+) -> tuple[dict[int, dict[str, Any]], pd.DataFrame, bool, bool]:
+    """Fetch cycling activities in a time window and build activity_id lookup."""
+    url = f"{_STRAVA_API_BASE}/athlete/activities"
+    headers = _auth_headers(access_token)
+    rows: list[dict[str, Any]] = []
+    activities: dict[int, dict[str, Any]] = {}
+    page = 1
+    per_page = 200
+    threshold_reached = False
+    incomplete_window = False
+    after_epoch = int(window_start.replace(tzinfo=timezone.utc).timestamp())
+    before_epoch = int(window_end.replace(tzinfo=timezone.utc).timestamp())
+
+    while True:
+        resp = _http.get(
+            url,
+            headers=headers,
+            params={
+                "page": page,
+                "per_page": per_page,
+                "after": after_epoch,
+                "before": before_epoch,
+            },
+            timeout=30,
+        )
+        resp.raise_for_status()
+        threshold_reached = threshold_reached or is_near_read_rate_limit(getattr(resp, "headers", {}))
+
+        data: list[dict[str, Any]] = resp.json()
+        if not data:
+            break
+
+        for act in data:
+            sport_type: str = act.get("sport_type") or act.get("type") or ""
+            if sport_type not in _BIKE_SPORT_TYPES:
+                continue
+            activity_id = act.get("id")
+            if activity_id is None:
+                continue
+            activity_key = int(activity_id)
+            payload = {
+                "gear_id": act.get("gear_id"),
+                "name": act.get("name") or "",
+                "start_date": act.get("start_date") or "",
+                "average_watts": act.get("average_watts"),
+                "moving_time": act.get("moving_time"),
+                "elapsed_time": act.get("elapsed_time"),
+                "distance": act.get("distance"),
+                "total_elevation_gain": act.get("total_elevation_gain"),
+                "average_heartrate": act.get("average_heartrate"),
+                "average_speed": act.get("average_speed"),
+                "sport_type": sport_type,
+            }
+            activities[activity_key] = payload
+            rows.append({"activity_id": str(activity_key), **payload})
+
+        if len(data) < per_page:
+            break
+        if threshold_reached:
+            incomplete_window = True
+            break
+        page += 1
+
+    rides = pd.DataFrame(rows) if rows else pd.DataFrame()
+    return activities, rides, threshold_reached, incomplete_window
+
+
+def get_segment_efforts_for_window(
+    access_token: str,
+    segment_id: int,
+    window_start: datetime,
+    window_end: datetime,
+    *,
+    _http: Any = requests,
+) -> tuple[pd.DataFrame, bool, bool]:
+    """Fetch all efforts for one segment in a time window."""
+    url = f"{_STRAVA_API_BASE}/segment_efforts"
+    headers = _auth_headers(access_token)
+    rows: list[dict[str, Any]] = []
+    page = 1
+    per_page = 200
+    threshold_reached = False
+    incomplete_segment = False
+    start_iso = window_start.replace(tzinfo=timezone.utc).isoformat()
+    end_iso = window_end.replace(tzinfo=timezone.utc).isoformat()
+
+    while True:
+        try:
+            resp = _http.get(
+                url,
+                headers=headers,
+                params={
+                    "segment_id": segment_id,
+                    "start_date_local": start_iso,
+                    "end_date_local": end_iso,
+                    "page": page,
+                    "per_page": per_page,
+                },
+                timeout=30,
+            )
+            resp.raise_for_status()
+        except requests.exceptions.HTTPError as exc:
+            if exc.response is not None and exc.response.status_code == 402:
+                raise PremiumOnlyError(_PREMIUM_ONLY_ERROR_MESSAGE) from exc
+            raise
+
+        threshold_reached = threshold_reached or is_near_read_rate_limit(getattr(resp, "headers", {}))
+        data: list[dict[str, Any]] = resp.json()
+        if not data:
+            break
+
+        for effort in data:
+            activity: dict[str, Any] = effort.get("activity") or {}
+            rows.append(
+                {
+                    "effort_id": effort.get("id"),
+                    "segment_id": segment_id,
+                    "activity_id": activity.get("id"),
+                    "start_date": effort.get("start_date"),
+                    "elapsed_time": effort.get("elapsed_time"),
+                    "moving_time": effort.get("moving_time"),
+                    "average_watts": effort.get("average_watts"),
+                    "average_heartrate": effort.get("average_heartrate"),
+                }
+            )
+
+        if len(data) < per_page:
+            break
+        if threshold_reached:
+            incomplete_segment = True
+            break
+        page += 1
+
+    return pd.DataFrame(rows), threshold_reached, incomplete_segment
+
+
+def ingest_window(
+    access_token: str,
+    segments: pd.DataFrame,
+    window_start: datetime,
+    window_end: datetime,
+    *,
+    progress_callback: Optional[Callable[[str, int], None]] = None,
+    _http: Any = requests,
+) -> dict[str, Any]:
+    """Ingest one 30-day window and return data + completion status."""
+    activities, rides, threshold_reached, incomplete_window = get_activity_map_for_window(
+        access_token,
+        window_start,
+        window_end,
+        _http=_http,
+    )
+
+    if incomplete_window:
+        return {
+            "complete": False,
+            "threshold_reached": threshold_reached,
+            "mid_window_rate_limit": True,
+            "efforts": pd.DataFrame(),
+            "rides": pd.DataFrame(),
+            "activities": {},
+            "processed_segments": 0,
+            "total_segments": int(len(segments.index)),
+        }
+
+    activity_gear_map = {activity_id: data.get("gear_id") for activity_id, data in activities.items()}
+    all_efforts: list[pd.DataFrame] = []
+    n_segments = int(len(segments.index))
+    segment_ids = [int(segment_id) for segment_id in segments.get("segment_id", pd.Series(dtype=int)).tolist()]
+    processed_segments = 0
+    mid_window_rate_limit = False
+
+    for index, segment_id in enumerate(segment_ids):
+        if progress_callback is not None:
+            progress_callback(
+                f"Fetching segment efforts ({index + 1}/{n_segments}) for {window_start.date()} → {window_end.date()}",
+                index + 1,
+            )
+        segment_efforts, reached_now, incomplete_segment = get_segment_efforts_for_window(
+            access_token,
+            segment_id,
+            window_start,
+            window_end,
+            _http=_http,
+        )
+        threshold_reached = threshold_reached or reached_now
+        if incomplete_segment or (reached_now and index < n_segments - 1):
+            mid_window_rate_limit = True
+            break
+        if not segment_efforts.empty:
+            all_efforts.append(segment_efforts)
+        processed_segments += 1
+        if threshold_reached and index < n_segments - 1:
+            mid_window_rate_limit = True
+            break
+
+    if mid_window_rate_limit:
+        return {
+            "complete": False,
+            "threshold_reached": True,
+            "mid_window_rate_limit": True,
+            "efforts": pd.DataFrame(),
+            "rides": pd.DataFrame(),
+            "activities": {},
+            "processed_segments": processed_segments,
+            "total_segments": n_segments,
+        }
+
+    efforts = pd.concat(all_efforts, ignore_index=True) if all_efforts else pd.DataFrame()
+    if not efforts.empty:
+        efforts["gear_id"] = efforts["activity_id"].map(
+            lambda aid: activity_gear_map.get(int(aid)) if pd.notna(aid) else None
+        )
+        efforts = efforts[efforts["gear_id"].notna()].copy()
+
+    return {
+        "complete": True,
+        "threshold_reached": threshold_reached,
+        "mid_window_rate_limit": False,
+        "efforts": efforts,
+        "rides": rides,
+        "activities": activities,
+        "processed_segments": processed_segments,
+        "total_segments": n_segments,
+    }
 
 
 def _decode_polyline(encoded: str) -> list[tuple[float, float]]:
