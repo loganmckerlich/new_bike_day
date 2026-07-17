@@ -16,8 +16,6 @@ from supabase import create_client, Client
 
 logger = logging.getLogger(__name__)
 app = FastAPI()
-import json
-logger.info(json.dumps(dict(os.environ), default=str))
 
 def _get_supabase() -> Client:
     """Create and return a Supabase client using environment variables."""
@@ -59,7 +57,7 @@ async def verify_webhook(request: Request):
     params = request.query_params
 
     if params.get("hub.verify_token") != verify_token:
-        raise HTTPException(status_code=403, detail="Invalid verify token")
+        raise HTTPException(status_code=403, detail=f"Invalid verify token got {params.get('hub.verify_token')} expected {verify_token}")
 
     challenge = params.get("hub.challenge")
     if not challenge:
