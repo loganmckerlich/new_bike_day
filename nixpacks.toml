@@ -2,7 +2,7 @@
 nixPkgs = ["python311"]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = ["python3 -m ensurepip --upgrade", "python3 -m pip install -r requirements.txt"]
 
 [phases.build]
 cmds = []
