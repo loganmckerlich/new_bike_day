@@ -31,7 +31,7 @@ class _Http:
 
 
 class ChunkedIngestTests(unittest.TestCase):
-    def test_ingest_window_joins_gear_and_skips_unmatched_activity(self):
+    def test_ingest_window_joins_gear_from_activity_summary_and_filters_unmatched_efforts(self):
         http = _Http(
             activities=[
                 {"id": 1, "gear_id": "g1", "sport_type": "Ride", "start_date": "2026-01-01T00:00:00Z"},

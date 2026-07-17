@@ -436,7 +436,11 @@ def get_activity_map_for_window(
     *,
     _http: Any = requests,
 ) -> tuple[dict[int, dict[str, Any]], pd.DataFrame, bool, bool]:
-    """Fetch cycling activities in a time window and build activity_id lookup."""
+    """Fetch cycling activities in a time window and build activity_id lookup.
+
+    Returns:
+        Tuple of ``(activities, rides, threshold_reached, incomplete_window)``.
+    """
     url = f"{_STRAVA_API_BASE}/athlete/activities"
     headers = _auth_headers(access_token)
     rows: list[dict[str, Any]] = []
@@ -510,7 +514,11 @@ def get_segment_efforts_for_window(
     *,
     _http: Any = requests,
 ) -> tuple[pd.DataFrame, bool, bool]:
-    """Fetch all efforts for one segment in a time window."""
+    """Fetch all efforts for one segment in a time window.
+
+    Returns:
+        Tuple of ``(efforts_df, threshold_reached, incomplete_segment)``.
+    """
     url = f"{_STRAVA_API_BASE}/segment_efforts"
     headers = _auth_headers(access_token)
     rows: list[dict[str, Any]] = []

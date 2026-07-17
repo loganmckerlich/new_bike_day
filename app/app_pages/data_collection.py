@@ -151,8 +151,8 @@ def _run_chunked_ingest(
 
     progress = st.progress(0, text="Starting chunked ingest…")
 
-    def update_progress(text: str, current: int, total: int) -> None:
-        pct = int((current / max(total, 1)) * 100)
+    def update_progress(text: str, completed_windows: int, total_windows: int) -> None:
+        pct = int((completed_windows / max(total_windows, 1)) * 100)
         progress.progress(pct, text=text)
 
     segments = existing_segments
@@ -235,11 +235,6 @@ def _run_chunked_ingest(
         threshold_hit = window_result["threshold_reached"]
         if threshold_hit:
             break
-        update_progress(
-            _window_message(window_start, window_end, window_result["total_segments"], len(window_efforts.index)),
-            index,
-            len(window_bounds),
-        )
 
     current_start_dates = existing_efforts.get("start_date") if not existing_efforts.empty else None
     actual_oldest = _to_utc_timestamp(current_start_dates.min() if current_start_dates is not None else None)
