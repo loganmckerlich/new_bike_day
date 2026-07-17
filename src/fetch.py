@@ -453,18 +453,25 @@ def get_activity_map_for_window(
     before_epoch = int(window_end.replace(tzinfo=timezone.utc).timestamp())
 
     while True:
-        resp = _http.get(
-            url,
-            headers=headers,
-            params={
-                "page": page,
-                "per_page": per_page,
-                "after": after_epoch,
-                "before": before_epoch,
-            },
-            timeout=30,
-        )
-        resp.raise_for_status()
+        try:
+            resp = _http.get(
+                url,
+                headers=headers,
+                params={
+                    "page": page,
+                    "per_page": per_page,
+                    "after": after_epoch,
+                    "before": before_epoch,
+                },
+                timeout=30,
+            )
+            resp.raise_for_status()
+        except requests.exceptions.HTTPError as exc:
+            if exc.response is not None and exc.response.status_code == 429:
+                incomplete_window = True
+                threshold_reached = True
+                break
+            raise
         threshold_reached = threshold_reached or is_near_read_rate_limit(getattr(resp, "headers", {}))
 
         data: list[dict[str, Any]] = resp.json()
@@ -547,6 +554,10 @@ def get_segment_efforts_for_window(
         except requests.exceptions.HTTPError as exc:
             if exc.response is not None and exc.response.status_code == 402:
                 raise PremiumOnlyError(_PREMIUM_ONLY_ERROR_MESSAGE) from exc
+            if exc.response is not None and exc.response.status_code == 429:
+                incomplete_segment = True
+                threshold_reached = True
+                break
             raise
 
         threshold_reached = threshold_reached or is_near_read_rate_limit(getattr(resp, "headers", {}))

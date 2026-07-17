@@ -166,22 +166,33 @@ def _run_chunked_ingest(
         segments = get_starred_segments(access_token)
         save_segments(segments, athlete_id)
 
+    # Fetch bikes and FTP once before the window loop — saves 1+ API calls per window.
+    bikes, distances, ftp = get_athlete_bikes(access_token)
+    if bikes:
+        existing_bikes.update(bikes)
+        existing_distances.update(distances)
+        save_bikes(bikes, athlete_id, distances)
+    if ftp is not None:
+        existing_ftp = ftp
+        save_ftp(ftp, athlete_id)
+    seen_gear_ids: set[str] = set(existing_bikes.keys())
+
     window_bounds: list[tuple[datetime, datetime]] = []
     if initial:
         end_cursor = now
         while end_cursor > three_years_ago:
-            start_cursor = max(three_years_ago, end_cursor - timedelta(days=30))
+            start_cursor = max(three_years_ago, end_cursor - timedelta(days=60))
             window_bounds.append((start_cursor, end_cursor))
             end_cursor = start_cursor
     elif direction == "newer":
-        start_cursor = _date_floor(last_ingested or now - timedelta(days=30))
+        start_cursor = _date_floor(last_ingested or now - timedelta(days=60))
         while start_cursor < now:
-            window_end = min(start_cursor + timedelta(days=30), now)
+            window_end = min(start_cursor + timedelta(days=60), now)
             window_bounds.append((start_cursor, window_end))
             start_cursor = window_end
     else:
         end_cursor = _date_floor(oldest_ingested or now)
-        lower_bound = max(three_years_ago, end_cursor - timedelta(days=30))
+        lower_bound = max(three_years_ago, end_cursor - timedelta(days=60))
         if end_cursor > lower_bound:
             window_bounds.append((lower_bound, end_cursor))
 
@@ -218,15 +229,18 @@ def _run_chunked_ingest(
             existing_rides = pd.concat([existing_rides, window_rides], ignore_index=True)
             existing_rides = _drop_duplicates_on(existing_rides, "activity_id")
 
-        gear_ids = {entry.get("gear_id") for entry in window_result["activities"].values() if entry.get("gear_id")}
-        bikes, distances, ftp = get_athlete_bikes(access_token, gear_ids=gear_ids)
-        if bikes:
-            existing_bikes.update(bikes)
-            existing_distances.update(distances)
-            save_bikes(bikes, athlete_id, distances)
-        if ftp is not None:
-            existing_ftp = ftp
-            save_ftp(ftp, athlete_id)
+        # Only fetch gear details for retired bikes not yet known — avoids GET /athlete per window.
+        new_gear_ids = {
+            entry.get("gear_id") for entry in window_result["activities"].values()
+            if entry.get("gear_id")
+        } - seen_gear_ids
+        if new_gear_ids:
+            new_bikes, new_distances, _ = get_athlete_bikes(access_token, gear_ids=new_gear_ids)
+            if new_bikes:
+                existing_bikes.update(new_bikes)
+                existing_distances.update(new_distances)
+                save_bikes(new_bikes, athlete_id, new_distances)
+            seen_gear_ids.update(new_gear_ids)
 
         if direction == "newer":
             last_ingested = window_end
@@ -646,20 +660,30 @@ def main() -> None:
         newer_col, older_col = st.columns(2)
         with newer_col:
             if st.button("Get newer data", type="secondary", width="stretch"):
-                message = _run_chunked_ingest(
-                    st.session_state.get("strava_token"),
-                    athlete_id,
-                    direction="newer",
-                )
-                st.success(message)
+                try:
+                    message = _run_chunked_ingest(
+                        st.session_state.get("strava_token"),
+                        athlete_id,
+                        direction="newer",
+                    )
+                    st.success(message)
+                except PremiumOnlyError as exc:
+                    st.error(str(exc))
+                except (requests.RequestException, ValueError) as exc:
+                    st.error(f"Unable to fetch data: {exc}")
         with older_col:
             if st.button("Get older data", type="secondary", width="stretch"):
-                message = _run_chunked_ingest(
-                    st.session_state.get("strava_token"),
-                    athlete_id,
-                    direction="older",
-                )
-                st.success(message)
+                try:
+                    message = _run_chunked_ingest(
+                        st.session_state.get("strava_token"),
+                        athlete_id,
+                        direction="older",
+                    )
+                    st.success(message)
+                except PremiumOnlyError as exc:
+                    st.error(str(exc))
+                except (requests.RequestException, ValueError) as exc:
+                    st.error(f"Unable to fetch data: {exc}")
 
     error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
