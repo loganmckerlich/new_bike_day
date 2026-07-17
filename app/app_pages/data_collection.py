@@ -124,6 +124,12 @@ def _window_message(start: datetime, end: datetime, segments: int, efforts: int)
     )
 
 
+def _drop_duplicates_on(df: pd.DataFrame, column: str) -> pd.DataFrame:
+    if column not in df.columns:
+        return df
+    return df.drop_duplicates(subset=[column], keep="last")
+
+
 def _run_chunked_ingest(
     access_token: str,
     athlete_id: int,
@@ -206,13 +212,11 @@ def _run_chunked_ingest(
         if not window_efforts.empty:
             save_efforts(window_efforts, athlete_id)
             existing_efforts = pd.concat([existing_efforts, window_efforts], ignore_index=True)
-            if "effort_id" in existing_efforts.columns:
-                existing_efforts = existing_efforts.drop_duplicates(subset=["effort_id"], keep="last")
+            existing_efforts = _drop_duplicates_on(existing_efforts, "effort_id")
         if not window_rides.empty:
             save_rides(window_rides, athlete_id)
             existing_rides = pd.concat([existing_rides, window_rides], ignore_index=True)
-            if "activity_id" in existing_rides.columns:
-                existing_rides = existing_rides.drop_duplicates(subset=["activity_id"], keep="last")
+            existing_rides = _drop_duplicates_on(existing_rides, "activity_id")
 
         gear_ids = {entry.get("gear_id") for entry in window_result["activities"].values() if entry.get("gear_id")}
         bikes, distances, ftp = get_athlete_bikes(access_token, gear_ids=gear_ids)

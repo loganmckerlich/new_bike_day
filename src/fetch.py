@@ -652,6 +652,7 @@ def ingest_window(
     if not efforts.empty:
         efforts_activity_ids = pd.to_numeric(efforts["activity_id"], errors="coerce")
         efforts["gear_id"] = efforts_activity_ids.map(activity_gear_map)
+        # ponytail: keep only efforts tied to cycling activities that exposed gear_id in this window.
         efforts = efforts[efforts["gear_id"].notna()].copy()
 
     return {
