@@ -117,10 +117,9 @@ def _date_floor(dt: datetime) -> datetime:
     return datetime(dt.year, dt.month, dt.day, tzinfo=timezone.utc)
 
 
-def _window_message(start: datetime, end: datetime, segments: int, efforts: int) -> str:
+def _window_message(segments: int, activities: int, riding_activities: int) -> str:
     return (
-        f"Fetched {start.date()} → {end.date()} across {segments} segments "
-        f"({efforts} efforts)."
+        f"Fetched {segments} segments, {activities} activities ({riding_activities} riding)."
     )
 
 
@@ -202,6 +201,8 @@ def _run_chunked_ingest(
 
     completed_ranges: list[tuple[datetime, datetime]] = []
     threshold_hit = False
+    total_activities = 0
+    riding_activities = 0
     for index, (window_start, window_end) in enumerate(window_bounds, start=1):
         update_progress(
             f"Loading {window_start.date()} → {window_end.date()} ({index}/{len(window_bounds)})…",
@@ -228,6 +229,9 @@ def _run_chunked_ingest(
             save_rides(window_rides, athlete_id)
             existing_rides = pd.concat([existing_rides, window_rides], ignore_index=True)
             existing_rides = _drop_duplicates_on(existing_rides, "activity_id")
+            total_activities += len(window_rides)
+            if "gear_id" in window_rides.columns:
+                riding_activities += int(window_rides["gear_id"].notna().sum())
 
         # Only fetch gear details for retired bikes not yet known — avoids GET /athlete per window.
         new_gear_ids = {
@@ -294,10 +298,7 @@ def _run_chunked_ingest(
     progress.progress(100, text="✅ Chunked ingest complete.")
     total_segments = int(len(segments.index))
     if completed_ranges:
-        first_start, _ = completed_ranges[0]
-        _, last_end = completed_ranges[-1]
-        effort_count = len(existing_efforts.index)
-        return _window_message(first_start, last_end, total_segments, effort_count)
+        return _window_message(total_segments, total_activities, riding_activities)
     return "No data fetched."
 
 
@@ -572,6 +573,9 @@ def _save_session(
     st.session_state["rides"] = rides if rides is not None else pd.DataFrame()
     if ftp is not None:
         st.session_state["ftp"] = ftp
+    # Invalidate downstream caches so the cleaning page and bike selectors recalculate.
+    st.session_state.pop("cleaned_efforts", None)
+    st.session_state.pop("available_bikes", None)
 
 def _load_demo_data() -> None:
     """Load demo data: live from my Strava account, falling back to static dev JSON."""
@@ -666,11 +670,12 @@ def main() -> None:
                         athlete_id,
                         direction="newer",
                     )
-                    st.success(message)
+                    st.session_state["_ingest_message"] = ("success", message)
                 except PremiumOnlyError as exc:
-                    st.error(str(exc))
+                    st.session_state["_ingest_message"] = ("error", str(exc))
                 except (requests.RequestException, ValueError) as exc:
-                    st.error(f"Unable to fetch data: {exc}")
+                    st.session_state["_ingest_message"] = ("error", f"Unable to fetch data: {exc}")
+                st.rerun()
         with older_col:
             if st.button("Get older data", type="secondary", width="stretch"):
                 try:
@@ -679,11 +684,19 @@ def main() -> None:
                         athlete_id,
                         direction="older",
                     )
-                    st.success(message)
+                    st.session_state["_ingest_message"] = ("success", message)
                 except PremiumOnlyError as exc:
-                    st.error(str(exc))
+                    st.session_state["_ingest_message"] = ("error", str(exc))
                 except (requests.RequestException, ValueError) as exc:
-                    st.error(f"Unable to fetch data: {exc}")
+                    st.session_state["_ingest_message"] = ("error", f"Unable to fetch data: {exc}")
+                st.rerun()
+
+    if "_ingest_message" in st.session_state:
+        msg_type, msg = st.session_state.pop("_ingest_message")
+        if msg_type == "success":
+            st.success(msg)
+        else:
+            st.error(msg)
 
     error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
