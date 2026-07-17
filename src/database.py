@@ -257,7 +257,7 @@ def touch_user(athlete_id: int | str) -> None:
         .execute()
     )
     existing_row = existing.data[0] if existing.data else {}
-    created_at = existing.data[0].get("created_at") if existing.data else now
+    created_at = existing_row.get("created_at") or now
     payload = {
         "athlete_id": athlete_key,
         "last_accessed": now,

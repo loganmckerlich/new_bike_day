@@ -627,9 +627,6 @@ def ingest_window(
         if not segment_efforts.empty:
             all_efforts.append(segment_efforts)
         processed_segments += 1
-        if threshold_reached and index < n_segments - 1:
-            mid_window_rate_limit = True
-            break
 
     if mid_window_rate_limit:
         return {

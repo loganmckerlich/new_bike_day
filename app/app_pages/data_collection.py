@@ -142,8 +142,9 @@ def _run_chunked_ingest(
     three_years_ago = now - timedelta(days=365 * 3)
     last_ingested = _to_utc_timestamp(saved_last)
     oldest_ingested = _to_utc_timestamp(saved_oldest)
-    newest_effort = _to_utc_timestamp(existing_efforts.get("start_date").max() if not existing_efforts.empty else None)
-    oldest_effort = _to_utc_timestamp(existing_efforts.get("start_date").min() if not existing_efforts.empty else None)
+    start_dates = existing_efforts.get("start_date") if not existing_efforts.empty else None
+    newest_effort = _to_utc_timestamp(start_dates.max() if start_dates is not None else None)
+    oldest_effort = _to_utc_timestamp(start_dates.min() if start_dates is not None else None)
 
     last_ingested = last_ingested or newest_effort
     oldest_ingested = oldest_ingested or oldest_effort
