@@ -30,7 +30,11 @@ _BIKE_SPORT_TYPES: frozenset[str] = frozenset(
     }
 )
 
+def is_near_read_rate_limit(headers, threshold=0.9):
+    usage_15min, usage_daily = map(int, headers["x-readratelimit-usage"].split(","))
+    limit_15min, limit_daily = map(int, headers["x-readratelimit-limit"].split(","))
 
+    return (usage_15min / limit_15min >= threshold) or (usage_daily / limit_daily >= threshold)
 class PremiumOnlyError(Exception):
     """Raised when a 402 Payment Required response is received from Strava API.
 
@@ -314,6 +318,9 @@ def get_starred_segments(access_token: str, *, _http: Any = requests) -> pd.Data
 
         if len(data) < per_page:
             break
+        if is_near_read_rate_limit(resp.headers):
+            print("[get_starred_segments] WARNING: near Strava API read rate limit.")
+            break
         page += 1
 
     return pd.DataFrame(rows)
@@ -380,6 +387,9 @@ def get_segment_efforts(access_token: str, segment_id: int, *, _http: Any = requ
             )
 
         if len(data) < per_page:
+            break
+        if is_near_read_rate_limit(resp.headers):
+            print("[get_segment_efforts] WARNING: near Strava API read rate limit.")
             break
         page += 1
 
@@ -582,6 +592,10 @@ def get_athlete_activities(
             }
 
         if len(data) < batch_size:
+            break
+
+        if is_near_read_rate_limit(resp.headers):
+            print("[get_athlete_activities] WARNING: near Strava API read rate limit.")
             break
         page += 1
 
