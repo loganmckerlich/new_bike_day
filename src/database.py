@@ -36,8 +36,15 @@ def _upsert_batched(table: str, records: list[dict], on_conflict: str) -> None:
     Supabase raises its limit or if fields grow.
     """
     client = _get_supabase()
-    for i in range(0, len(records), _UPSERT_BATCH_SIZE):
-        client.table(table).upsert(records[i : i + _UPSERT_BATCH_SIZE], on_conflict=on_conflict).execute()
+    total_batches = (len(records) + _UPSERT_BATCH_SIZE - 1) // _UPSERT_BATCH_SIZE
+    for batch_index, i in enumerate(range(0, len(records), _UPSERT_BATCH_SIZE)):
+        try:
+            client.table(table).upsert(records[i : i + _UPSERT_BATCH_SIZE], on_conflict=on_conflict).execute()
+        except Exception as exc:
+            raise RuntimeError(
+                f"Upsert to '{table}' failed on batch {batch_index + 1}/{total_batches} "
+                f"(rows {i}–{min(i + _UPSERT_BATCH_SIZE, len(records)) - 1})"
+            ) from exc
 
 
 def _paginated_select(table: str, eq_col: str, eq_val: str) -> list[dict]:
