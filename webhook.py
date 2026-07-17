@@ -45,7 +45,7 @@ def _delete_user_data(athlete_id: int | str) -> None:
 
 
 @app.get("/webhook")
-async def verify_webhook(request: Request) -> Response:
+async def verify_webhook(request: Request):
     """Handle Strava's webhook verification challenge.
 
     Strava sends a GET request to verify the endpoint before activating
@@ -66,7 +66,7 @@ async def verify_webhook(request: Request) -> Response:
 
 
 @app.post("/webhook")
-async def handle_webhook(request: Request) -> Response:
+async def handle_webhook(request: Request):
     """Handle incoming Strava webhook events.
 
     Only processes athlete deauthorization events (aspect_type == "delete").
