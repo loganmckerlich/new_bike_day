@@ -10,25 +10,53 @@ Strava docs: https://developers.strava.com/docs/webhooks/
 
 import os
 import logging
-from fastapi import FastAPI, Request, Response, HTTPException
-from src.database import _delete_user_data
+
+from fastapi import FastAPI, Request, HTTPException
+from supabase import create_client, Client
 
 logger = logging.getLogger(__name__)
 app = FastAPI()
 
-VERIFY_TOKEN = os.environ["STRAVA_VERIFY_TOKEN"]
+def _get_supabase() -> Client:
+    """Create and return a Supabase client using environment variables."""
+    return create_client(
+        os.environ["SUPABASE_URL"],
+        os.environ["SUPABASE_KEY"]
+    )
+
+def _normalize_athlete_id(athlete_id: int | str | None) -> str | None:
+    if athlete_id is None:
+        return None
+    return str(athlete_id)
+
+def _delete_user_data(athlete_id: int | str) -> None:
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    client = _get_supabase()
+    try:
+        client.table("segment_efforts").delete().eq("athlete_id", athlete_key).execute()
+        client.table("starred_segments").delete().eq("athlete_id", athlete_key).execute()
+        client.table("bikes").delete().eq("athlete_id", athlete_key).execute()
+        client.table("athlete_ftp").delete().eq("athlete_id", athlete_key).execute()
+        client.table("athlete_tokens").delete().eq("athlete_id", athlete_key).execute()
+        client.table("users").delete().eq("athlete_id", athlete_key).execute()
+    except Exception:
+        return
 
 
 @app.get("/webhook")
-async def verify_webhook(request: Request) -> Response:
+async def verify_webhook(request: Request):
     """Handle Strava's webhook verification challenge.
 
     Strava sends a GET request to verify the endpoint before activating
     the subscription. Must respond with the hub.challenge value.
     """
+    verify_token = os.environ["STRAVA_VERIFY_TOKEN"]
+
     params = request.query_params
 
-    if params.get("hub.verify_token") != VERIFY_TOKEN:
+    if params.get("hub.verify_token") != verify_token:
         raise HTTPException(status_code=403, detail="Invalid verify token")
 
     challenge = params.get("hub.challenge")
@@ -39,7 +67,7 @@ async def verify_webhook(request: Request) -> Response:
 
 
 @app.post("/webhook")
-async def handle_webhook(request: Request) -> Response:
+async def handle_webhook(request: Request):
     """Handle incoming Strava webhook events.
 
     Only processes athlete deauthorization events (aspect_type == "delete").

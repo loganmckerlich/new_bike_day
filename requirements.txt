@@ -14,5 +14,3 @@ geopy
 scikit-learn
 xgboost
 supabase
-fastapi
-uvicorn[standard]
