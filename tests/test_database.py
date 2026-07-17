@@ -87,8 +87,14 @@ class FakeQuery:
             rows.sort(key=lambda row: row.get("last_accessed") or "")
             return Response(rows)
         if self.table_name in self.store and self._payload is not None:
-            self.store[self.table_name].append(self._payload)
-            return Response([self._payload])
+            payload = self._payload
+            if isinstance(payload, list):
+                self.store[self.table_name].extend(payload)
+                self.store.setdefault("_upsert_calls", []).append((self.table_name, len(payload)))
+            else:
+                self.store[self.table_name].append(payload)
+                self.store.setdefault("_upsert_calls", []).append((self.table_name, 1))
+            return Response(payload if isinstance(payload, list) else [payload])
         if self.table_name in self.store and self._filters:
             rows = self._rows_for_athlete()
             return Response(rows)
@@ -151,6 +157,36 @@ class DatabaseTests(unittest.TestCase):
             last_ingested, oldest_ingested = db.load_user_ingest_dates(42)
         self.assertEqual(last_ingested, "2026-01-31T00:00:00+00:00")
         self.assertEqual(oldest_ingested, "2025-01-01T00:00:00+00:00")
+
+    def test_save_efforts_batches_large_datasets(self) -> None:
+        """save_efforts must split >_UPSERT_BATCH_SIZE records into multiple calls."""
+        n = db._UPSERT_BATCH_SIZE + 10
+        df = pd.DataFrame(
+            [
+                {
+                    "effort_id": str(i),
+                    "segment_id": "1",
+                    "activity_id": str(i),
+                    "gear_id": "g1",
+                    "start_date": "2026-01-01T00:00:00Z",
+                    "elapsed_time": 60,
+                    "moving_time": 55,
+                    "average_watts": 200.0,
+                    "average_heartrate": 150.0,
+                }
+                for i in range(n)
+            ]
+        )
+        client = FakeClient()
+        with patch.object(db, "supabase", client):
+            db.save_efforts(df, 42)
+
+        upsert_calls = [c for c in client.store.get("_upsert_calls", []) if c[0] == "segment_efforts"]
+        self.assertEqual(len(upsert_calls), 2, "Expected 2 batches for n > _UPSERT_BATCH_SIZE")
+        self.assertEqual(upsert_calls[0][1], db._UPSERT_BATCH_SIZE)
+        self.assertEqual(upsert_calls[1][1], 10)
+        # All records made it into the store
+        self.assertEqual(len(client.store["segment_efforts"]), n)
 
 
 if __name__ == "__main__":
