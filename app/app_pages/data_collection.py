@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import sys
 import traceback
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -30,23 +31,35 @@ from src.database import (
     load_rides,
     load_segments,
     load_ftp,
+    load_user_ingest_dates,
     save_bikes,
     save_efforts,
     save_rides,
     save_segments,
-    save_ftp
+    save_ftp,
+    save_user_ingest_dates,
 )
-from src.fetch import ingest_all, PremiumOnlyError
+from src.fetch import ingest_all, ingest_window, get_athlete_bikes, get_starred_segments, PremiumOnlyError
 from src.home_personality import load_dev_athlete_profile
 from src.auth import custom_auth_button, handle_redirect, get_demo_access_token
 
 def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = False) -> None:
     try:
-        data, gear_frame, bikes, bike_distances, ftp, rides = _process_data(
-            access_token=access_token,
-            athlete_id=athlete_id,
-            force_refresh=force_refresh,
-        )
+        db_cached = _load_from_db(athlete_id)
+        if force_refresh:
+            clear_efforts(athlete_id)
+            clear_segments(athlete_id)
+            clear_bikes(athlete_id)
+            clear_ftp(athlete_id)
+            clear_rides(athlete_id)
+            message = _run_chunked_ingest(access_token, athlete_id, direction="older", initial=True)
+            st.info(message)
+            return
+        if db_cached is None:
+            message = _run_chunked_ingest(access_token, athlete_id, direction="older", initial=True)
+            st.info(message)
+            return
+        data, gear_frame, bikes, bike_distances, ftp, rides = db_cached
     except PremiumOnlyError as exc:
         st.error(str(exc))
         return
@@ -89,6 +102,203 @@ def _save_to_db(
     save_ftp(ftp, athlete_id)
     if rides is not None and not rides.empty:
         save_rides(rides, athlete_id)
+
+
+def _to_utc_timestamp(value: object) -> datetime | None:
+    if value is None:
+        return None
+    parsed = pd.to_datetime(value, utc=True, errors="coerce")
+    if pd.isna(parsed):
+        return None
+    return parsed.to_pydatetime()
+
+
+def _date_floor(dt: datetime) -> datetime:
+    return datetime(dt.year, dt.month, dt.day, tzinfo=timezone.utc)
+
+
+def _window_message(start: datetime, end: datetime, segments: int, efforts: int) -> str:
+    return (
+        f"Fetched {start.date()} → {end.date()} across {segments} segments "
+        f"({efforts} efforts)."
+    )
+
+
+def _drop_duplicates_on(df: pd.DataFrame, column: str) -> pd.DataFrame:
+    if column not in df.columns:
+        return df
+    return df.drop_duplicates(subset=[column], keep="last")
+
+
+def _run_chunked_ingest(
+    access_token: str,
+    athlete_id: int,
+    *,
+    direction: str,
+    initial: bool = False,
+) -> str:
+    existing_efforts = load_efforts(athlete_id)
+    existing_segments = load_segments(athlete_id)
+    existing_bikes, existing_distances = load_bikes(athlete_id)
+    existing_ftp = load_ftp(athlete_id)
+    existing_rides = load_rides(athlete_id)
+    saved_last, saved_oldest = load_user_ingest_dates(athlete_id)
+
+    now = _date_floor(datetime.now(timezone.utc))
+    three_years_ago = now - timedelta(days=365 * 3)
+    last_ingested = _to_utc_timestamp(saved_last)
+    oldest_ingested = _to_utc_timestamp(saved_oldest)
+    start_dates = existing_efforts.get("start_date") if not existing_efforts.empty else None
+    newest_effort = _to_utc_timestamp(start_dates.max() if start_dates is not None else None)
+    oldest_effort = _to_utc_timestamp(start_dates.min() if start_dates is not None else None)
+
+    last_ingested = last_ingested or newest_effort
+    oldest_ingested = oldest_ingested or oldest_effort
+
+    progress = st.progress(0, text="Starting chunked ingest…")
+
+    def update_progress(text: str, completed_windows: int, total_windows: int) -> None:
+        pct = int((completed_windows / max(total_windows, 1)) * 100)
+        progress.progress(pct, text=text)
+
+    segments = existing_segments
+    if segments.empty:
+        segments = get_starred_segments(access_token)
+        save_segments(segments, athlete_id)
+
+    # Fetch bikes and FTP once before the window loop — saves 1+ API calls per window.
+    bikes, distances, ftp = get_athlete_bikes(access_token)
+    if bikes:
+        existing_bikes.update(bikes)
+        existing_distances.update(distances)
+        save_bikes(bikes, athlete_id, distances)
+    if ftp is not None:
+        existing_ftp = ftp
+        save_ftp(ftp, athlete_id)
+    seen_gear_ids: set[str] = set(existing_bikes.keys())
+
+    window_bounds: list[tuple[datetime, datetime]] = []
+    if initial:
+        end_cursor = now
+        while end_cursor > three_years_ago:
+            start_cursor = max(three_years_ago, end_cursor - timedelta(days=90))
+            window_bounds.append((start_cursor, end_cursor))
+            end_cursor = start_cursor
+    elif direction == "newer":
+        start_cursor = _date_floor(last_ingested or now - timedelta(days=90))
+        while start_cursor < now:
+            window_end = min(start_cursor + timedelta(days=90), now)
+            window_bounds.append((start_cursor, window_end))
+            start_cursor = window_end
+    else:
+        end_cursor = _date_floor(oldest_ingested or now)
+        lower_bound = max(three_years_ago, end_cursor - timedelta(days=90))
+        if end_cursor > lower_bound:
+            window_bounds.append((lower_bound, end_cursor))
+
+    if not window_bounds:
+        progress.progress(100, text="No new windows to ingest.")
+        return "No new windows to ingest."
+
+    completed_ranges: list[tuple[datetime, datetime]] = []
+    threshold_hit = False
+    for index, (window_start, window_end) in enumerate(window_bounds, start=1):
+        update_progress(
+            f"Loading {window_start.date()} → {window_end.date()} ({index}/{len(window_bounds)})…",
+            index - 1,
+            len(window_bounds),
+        )
+        window_result = ingest_window(
+            access_token,
+            segments,
+            window_start,
+            window_end,
+        )
+        if window_result["mid_window_rate_limit"]:
+            threshold_hit = True
+            break
+
+        window_efforts: pd.DataFrame = window_result["efforts"]
+        window_rides: pd.DataFrame = window_result["rides"]
+        if not window_efforts.empty:
+            save_efforts(window_efforts, athlete_id)
+            existing_efforts = pd.concat([existing_efforts, window_efforts], ignore_index=True)
+            existing_efforts = _drop_duplicates_on(existing_efforts, "effort_id")
+        if not window_rides.empty:
+            save_rides(window_rides, athlete_id)
+            existing_rides = pd.concat([existing_rides, window_rides], ignore_index=True)
+            existing_rides = _drop_duplicates_on(existing_rides, "activity_id")
+
+        # Only fetch gear details for retired bikes not yet known — avoids GET /athlete per window.
+        new_gear_ids = {
+            entry.get("gear_id") for entry in window_result["activities"].values()
+            if entry.get("gear_id")
+        } - seen_gear_ids
+        if new_gear_ids:
+            new_bikes, new_distances, _ = get_athlete_bikes(access_token, gear_ids=new_gear_ids)
+            if new_bikes:
+                existing_bikes.update(new_bikes)
+                existing_distances.update(new_distances)
+                save_bikes(new_bikes, athlete_id, new_distances)
+            seen_gear_ids.update(new_gear_ids)
+
+        if direction == "newer":
+            last_ingested = window_end
+            save_user_ingest_dates(athlete_id, last_ingested_date=window_end)
+        else:
+            oldest_ingested = window_start
+            save_user_ingest_dates(athlete_id, oldest_ingested_date=window_start)
+        completed_ranges.append((window_start, window_end))
+
+        threshold_hit = window_result["threshold_reached"]
+        if threshold_hit:
+            break
+
+    current_start_dates = existing_efforts.get("start_date") if not existing_efforts.empty else None
+    actual_oldest = _to_utc_timestamp(current_start_dates.min() if current_start_dates is not None else None)
+    actual_newest = _to_utc_timestamp(current_start_dates.max() if current_start_dates is not None else None)
+    if initial and current_start_dates is not None:
+        save_user_ingest_dates(
+            athlete_id,
+            oldest_ingested_date=actual_oldest,
+            last_ingested_date=actual_newest,
+        )
+    elif current_start_dates is not None and not completed_ranges:
+        save_user_ingest_dates(
+            athlete_id,
+            oldest_ingested_date=actual_oldest,
+            last_ingested_date=actual_newest,
+        )
+
+    _save_session(
+        existing_efforts,
+        segments,
+        existing_bikes,
+        access_token,
+        existing_distances,
+        existing_ftp,
+        existing_rides,
+    )
+
+    if threshold_hit:
+        if completed_ranges:
+            _, last_end = completed_ranges[-1]
+            progress.progress(100, text="Rate limit reached. Saved completed windows.")
+            return (
+                f"Rate limit reached mid-window. Progress up to {last_end.date()} has been saved. "
+                "Come back later to continue."
+            )
+        progress.progress(100, text="Rate limit reached before any full window completed.")
+        return "Rate limit reached before a full window completed. Come back later to continue."
+
+    progress.progress(100, text="✅ Chunked ingest complete.")
+    total_segments = int(len(segments.index))
+    if completed_ranges:
+        first_start, _ = completed_ranges[0]
+        _, last_end = completed_ranges[-1]
+        effort_count = len(existing_efforts.index)
+        return _window_message(first_start, last_end, total_segments, effort_count)
+    return "No data fetched."
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
@@ -446,13 +656,34 @@ def main() -> None:
             _load_demo_data()
             st.rerun()
 
-    if st.session_state.get("strava_token") and st.button("🔄 Reload activities", type="secondary", width="stretch"):
-        if not st.session_state.get("strava_token"):
-            st.warning("Please authorize with Strava first.")
-            return
-        # would be better if this function only pulled new stuff
-        get_and_save_data(st.session_state.get("strava_token"), athlete_id, force_refresh=True)
-        st.success("Activities reloaded.")
+    if st.session_state.get("strava_token"):
+        newer_col, older_col = st.columns(2)
+        with newer_col:
+            if st.button("Get newer data", type="secondary", width="stretch"):
+                try:
+                    message = _run_chunked_ingest(
+                        st.session_state.get("strava_token"),
+                        athlete_id,
+                        direction="newer",
+                    )
+                    st.success(message)
+                except PremiumOnlyError as exc:
+                    st.error(str(exc))
+                except (requests.RequestException, ValueError) as exc:
+                    st.error(f"Unable to fetch data: {exc}")
+        with older_col:
+            if st.button("Get older data", type="secondary", width="stretch"):
+                try:
+                    message = _run_chunked_ingest(
+                        st.session_state.get("strava_token"),
+                        athlete_id,
+                        direction="older",
+                    )
+                    st.success(message)
+                except PremiumOnlyError as exc:
+                    st.error(str(exc))
+                except (requests.RequestException, ValueError) as exc:
+                    st.error(f"Unable to fetch data: {exc}")
 
     error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
@@ -468,11 +699,12 @@ def main() -> None:
         get_and_save_data(st.session_state.get("strava_token"), athlete_id, force_refresh=False)
 
 
-    oldest = pd.to_datetime(st.session_state.get("efforts", pd.DataFrame()).get("start_date").min()).strftime("%Y-%m-%d")
-    newest = pd.to_datetime(st.session_state.get("efforts", pd.DataFrame()).get("start_date").max()).strftime("%Y-%m-%d")
+    oldest_raw = st.session_state.get("efforts", pd.DataFrame()).get("start_date").min()
+    newest_raw = st.session_state.get("efforts", pd.DataFrame()).get("start_date").max()
+    oldest = pd.to_datetime(oldest_raw).strftime("%Y-%m-%d") if pd.notna(oldest_raw) else "N/A"
+    newest = pd.to_datetime(newest_raw).strftime("%Y-%m-%d") if pd.notna(newest_raw) else "N/A"
 
     st.markdown(f"Using Data from {oldest} to {newest}")
-    # TODO Add button for get newer data and add button for get older data
 
     ## some basic viz
     data = st.session_state.get("efforts")
