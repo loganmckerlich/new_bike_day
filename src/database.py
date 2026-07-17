@@ -128,7 +128,9 @@ _CREATE_USERS: str = """
 CREATE TABLE IF NOT EXISTS users (
     athlete_id TEXT PRIMARY KEY,
     last_accessed TIMESTAMP,
-    created_at TIMESTAMP
+    created_at TIMESTAMP,
+    last_ingested_date TIMESTAMP,
+    oldest_ingested_date TIMESTAMP
 )
 """
 
@@ -247,14 +249,85 @@ def touch_user(athlete_id: int | str) -> None:
         return
     now = datetime.now(timezone.utc).isoformat()
     client = _get_supabase()
-    existing = client.table("users").select("created_at").eq("athlete_id", athlete_key).limit(1).execute()
-    created_at = existing.data[0].get("created_at") if existing.data else now
+    existing = (
+        client.table("users")
+        .select("created_at,last_ingested_date,oldest_ingested_date")
+        .eq("athlete_id", athlete_key)
+        .limit(1)
+        .execute()
+    )
+    existing_row = existing.data[0] if existing.data else {}
+    created_at = existing_row.get("created_at") or now
     payload = {
         "athlete_id": athlete_key,
         "last_accessed": now,
         "created_at": created_at,
+        "last_ingested_date": existing_row.get("last_ingested_date"),
+        "oldest_ingested_date": existing_row.get("oldest_ingested_date"),
     }
     client.table("users").upsert(payload, on_conflict="athlete_id").execute()
+
+
+def load_user_ingest_dates(athlete_id: int | str) -> tuple[str | None, str | None]:
+    """Load (last_ingested_date, oldest_ingested_date) for a user."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return None, None
+    try:
+        response = (
+            _get_supabase()
+            .table("users")
+            .select("last_ingested_date,oldest_ingested_date")
+            .eq("athlete_id", athlete_key)
+            .limit(1)
+            .execute()
+        )
+        if not response.data:
+            return None, None
+        row = response.data[0]
+        return row.get("last_ingested_date"), row.get("oldest_ingested_date")
+    except Exception:
+        return None, None
+
+
+def save_user_ingest_dates(
+    athlete_id: int | str,
+    *,
+    last_ingested_date: Any | None = None,
+    oldest_ingested_date: Any | None = None,
+) -> None:
+    """Persist ingestion watermark dates on the users table."""
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    now = datetime.now(timezone.utc).isoformat()
+    client = _get_supabase()
+    try:
+        existing = (
+            client.table("users")
+            .select("created_at,last_ingested_date,oldest_ingested_date")
+            .eq("athlete_id", athlete_key)
+            .limit(1)
+            .execute()
+        )
+    except Exception:
+        return
+    row = existing.data[0] if existing.data else {}
+    payload = {
+        "athlete_id": athlete_key,
+        "last_accessed": now,
+        "created_at": row.get("created_at") or now,
+        "last_ingested_date": _clean_value(
+            last_ingested_date if last_ingested_date is not None else row.get("last_ingested_date")
+        ),
+        "oldest_ingested_date": _clean_value(
+            oldest_ingested_date if oldest_ingested_date is not None else row.get("oldest_ingested_date")
+        ),
+    }
+    try:
+        client.table("users").upsert(payload, on_conflict="athlete_id").execute()
+    except Exception:
+        return
 
 
 # ---------------------------------------------------------------------------

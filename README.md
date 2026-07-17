@@ -47,7 +47,7 @@ new-bike-day/
     - `STRAVA_CLIENT_ID`
     - `STRAVA_CLIENT_SECRET`
     - `STRAVA_REDIRECT_URI` (example: `http://localhost:8501/`)
-    - `STRAVA_ACCESS_TOKEN` (optional, used by **Reload Activities**)
+    - `STRAVA_ACCESS_TOKEN` (optional)
     - `STRAVA_WEBHOOK_VERIFY_TOKEN` (secret string you choose; required for webhooks)
 
 ## Strava API Credentials
@@ -72,7 +72,7 @@ At app startup:
 3. Authorize Strava access and return to the app.
 4. On the first sign-in the app fetches all data from Strava and stores it in Supabase.
 5. On subsequent page loads the app serves data directly from the Supabase cache — **no Strava API calls are made**.
-6. Use the **Reload Activities** button to force a full re-sync from the Strava API.
+6. Use **Get newer data** or **Get older data** to incrementally ingest 30-day windows from Strava.
 
 ## Data caching strategy
 

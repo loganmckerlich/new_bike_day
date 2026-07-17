@@ -71,6 +71,10 @@ class FakeQuery:
         if self._delete and self.table_name in self.store:
             return Response(self._delete_matching_rows())
         if self.table_name == "users" and self._payload is not None:
+            athlete_id = self._payload.get("athlete_id")
+            self.store[self.table_name] = [
+                row for row in self.store[self.table_name] if row.get("athlete_id") != athlete_id
+            ]
             self.store[self.table_name].append(self._payload)
             return Response([self._payload])
         if self.table_name == "users" and self._filters:
@@ -135,6 +139,18 @@ class DatabaseTests(unittest.TestCase):
         self.assertEqual(client.store["athlete_ftp"], [])
         self.assertEqual(client.store["athlete_tokens"], [])
         self.assertEqual(client.store["users"], [])
+
+    def test_save_and_load_user_ingest_dates(self) -> None:
+        client = FakeClient()
+        with patch.object(db, "supabase", client):
+            db.save_user_ingest_dates(
+                42,
+                last_ingested_date="2026-01-31T00:00:00+00:00",
+                oldest_ingested_date="2025-01-01T00:00:00+00:00",
+            )
+            last_ingested, oldest_ingested = db.load_user_ingest_dates(42)
+        self.assertEqual(last_ingested, "2026-01-31T00:00:00+00:00")
+        self.assertEqual(oldest_ingested, "2025-01-01T00:00:00+00:00")
 
 
 if __name__ == "__main__":
