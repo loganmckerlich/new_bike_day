@@ -18,6 +18,36 @@ app = FastAPI()
 
 VERIFY_TOKEN = os.environ["STRAVA_VERIFY_TOKEN"]
 
+import os
+from supabase import create_client, Client
+
+def _get_supabase() -> Client:
+    """Create and return a Supabase client using environment variables."""
+    return create_client(
+        os.environ["SUPABASE_URL"],
+        os.environ["SUPABASE_KEY"]
+    )
+
+def _normalize_athlete_id(athlete_id: int | str | None) -> str | None:
+    if athlete_id is None:
+        return None
+    return str(athlete_id)
+
+def _delete_user_data(athlete_id: int | str) -> None:
+    athlete_key = _normalize_athlete_id(athlete_id)
+    if not athlete_key:
+        return
+    client = _get_supabase()
+    try:
+        client.table("segment_efforts").delete().eq("athlete_id", athlete_key).execute()
+        client.table("starred_segments").delete().eq("athlete_id", athlete_key).execute()
+        client.table("bikes").delete().eq("athlete_id", athlete_key).execute()
+        client.table("athlete_ftp").delete().eq("athlete_id", athlete_key).execute()
+        client.table("athlete_tokens").delete().eq("athlete_id", athlete_key).execute()
+        client.table("users").delete().eq("athlete_id", athlete_key).execute()
+    except Exception:
+        return
+
 
 @app.get("/webhook")
 async def verify_webhook(request: Request) -> Response:
