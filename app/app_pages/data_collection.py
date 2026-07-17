@@ -241,19 +241,20 @@ def _run_chunked_ingest(
             len(window_bounds),
         )
 
-    if initial and not existing_efforts.empty:
-        actual_oldest = _to_utc_timestamp(existing_efforts.get("start_date").min())
-        actual_newest = _to_utc_timestamp(existing_efforts.get("start_date").max())
+    current_start_dates = existing_efforts.get("start_date") if not existing_efforts.empty else None
+    actual_oldest = _to_utc_timestamp(current_start_dates.min() if current_start_dates is not None else None)
+    actual_newest = _to_utc_timestamp(current_start_dates.max() if current_start_dates is not None else None)
+    if initial and current_start_dates is not None:
         save_user_ingest_dates(
             athlete_id,
             oldest_ingested_date=actual_oldest,
             last_ingested_date=actual_newest,
         )
-    elif not existing_efforts.empty and not completed_ranges:
+    elif current_start_dates is not None and not completed_ranges:
         save_user_ingest_dates(
             athlete_id,
-            oldest_ingested_date=_to_utc_timestamp(existing_efforts.get("start_date").min()),
-            last_ingested_date=_to_utc_timestamp(existing_efforts.get("start_date").max()),
+            oldest_ingested_date=actual_oldest,
+            last_ingested_date=actual_newest,
         )
 
     _save_session(

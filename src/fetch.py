@@ -642,9 +642,8 @@ def ingest_window(
 
     efforts = pd.concat(all_efforts, ignore_index=True) if all_efforts else pd.DataFrame()
     if not efforts.empty:
-        efforts["gear_id"] = efforts["activity_id"].map(
-            lambda aid: activity_gear_map.get(int(aid)) if pd.notna(aid) else None
-        )
+        efforts_activity_ids = pd.to_numeric(efforts["activity_id"], errors="coerce")
+        efforts["gear_id"] = efforts_activity_ids.map(activity_gear_map)
         efforts = efforts[efforts["gear_id"].notna()].copy()
 
     return {
