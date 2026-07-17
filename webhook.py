@@ -57,7 +57,7 @@ async def verify_webhook(request: Request):
     params = request.query_params
 
     if params.get("hub.verify_token") != verify_token:
-        raise HTTPException(status_code=403, detail=f"Invalid verify token got {params.get('hub.verify_token')} expected {verify_token}")
+        raise HTTPException(status_code=403, detail="Invalid verify token")
 
     challenge = params.get("hub.challenge")
     if not challenge:
