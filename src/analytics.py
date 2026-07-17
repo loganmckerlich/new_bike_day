@@ -48,7 +48,7 @@ def compute_speed_per_watt(df: pd.DataFrame) -> pd.DataFrame:
     Rows where either value is missing or zero watts are left as NaN.
     """
     out = df.copy()
-    safe_watts = out["average_watts"].replace(0, np.nan)
+    safe_watts = pd.to_numeric(out["average_watts"], errors="coerce").replace(0, np.nan)
     out["speed_per_cbrt_watt"] = out["speed_kmh"] / np.cbrt(safe_watts)
     return out
 
