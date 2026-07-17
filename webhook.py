@@ -11,15 +11,13 @@ Strava docs: https://developers.strava.com/docs/webhooks/
 import os
 import logging
 from fastapi import FastAPI, Request, Response, HTTPException
-from src.database import _delete_user_data
+import os
+from supabase import create_client, Client
 
 logger = logging.getLogger(__name__)
 app = FastAPI()
 
 VERIFY_TOKEN = os.environ["STRAVA_VERIFY_TOKEN"]
-
-import os
-from supabase import create_client, Client
 
 def _get_supabase() -> Client:
     """Create and return a Supabase client using environment variables."""
