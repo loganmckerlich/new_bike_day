@@ -468,6 +468,12 @@ def main() -> None:
         get_and_save_data(st.session_state.get("strava_token"), athlete_id, force_refresh=False)
 
 
+    oldest = pd.to_datetime(st.session_state.get("efforts", pd.DataFrame()).get("start_date").min()).strftime("%Y-%m-%d")
+    newest = pd.to_datetime(st.session_state.get("efforts", pd.DataFrame()).get("start_date").max()).strftime("%Y-%m-%d")
+
+    st.markdown(f"Using Data from {oldest} to {newest}")
+    # TODO Add button for get newer data and add button for get older data
+
     ## some basic viz
     data = st.session_state.get("efforts")
     if data is None or data.empty:
