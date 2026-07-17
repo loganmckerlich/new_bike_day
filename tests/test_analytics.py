@@ -35,9 +35,6 @@ class ComputeSpeedPerWattTest(unittest.TestCase):
     def test_object_dtype_does_not_crash(self) -> None:
         """Simulates first-load: pd.concat of an empty DataFrame with fresh API data
         produces object dtype; compute_speed_per_watt must not raise TypeError."""
-    def test_object_dtype_does_not_crash(self) -> None:
-        """Simulates first-load: pd.concat of an empty DataFrame with fresh API data
-        produces object dtype; compute_speed_per_watt must not raise TypeError."""
         empty = pd.DataFrame(columns=_EFFORTS_COLS)  # all object dtype
         window = pd.DataFrame([
             {
