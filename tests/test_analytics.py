@@ -39,10 +39,20 @@ class ComputeSpeedPerWattTest(unittest.TestCase):
         ]
         empty = pd.DataFrame(columns=_EFFORTS_COLS)  # all object dtype
         window = pd.DataFrame([
-            {"effort_id": "1", "segment_id": 123, "activity_id": "456", "gear_id": "b1",
-             "average_watts": 200.0, "speed_kmh": 30.0},
-            {"effort_id": "2", "segment_id": 123, "activity_id": "457", "gear_id": "b1",
-             "average_watts": 180.0, "speed_kmh": 28.0},
+            {
+                "athlete_id": None, "effort_id": "1", "segment_id": 123,
+                "activity_id": "456", "gear_id": "b1", "start_date": "2024-01-01",
+                "elapsed_time": 65, "moving_time": 60,
+                "average_watts": 200.0, "average_heartrate": 150.0,
+                "speed_kmh": 30.0,
+            },
+            {
+                "athlete_id": None, "effort_id": "2", "segment_id": 123,
+                "activity_id": "457", "gear_id": "b1", "start_date": "2024-01-02",
+                "elapsed_time": 70, "moving_time": 65,
+                "average_watts": 180.0, "average_heartrate": 155.0,
+                "speed_kmh": 28.0,
+            },
         ])
         df = pd.concat([empty, window], ignore_index=True)
         self.assertEqual(df["average_watts"].dtype, object)  # confirm object dtype
