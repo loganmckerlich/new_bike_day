@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+import requests
 
 from src.fetch import ingest_window
 
@@ -17,6 +18,16 @@ class _Response:
         return None
 
 
+class _RateLimitedResponse:
+    """Simulates a 429 Too Many Requests response."""
+    status_code = 429
+    headers = {}
+
+    def raise_for_status(self):
+        exc = requests.exceptions.HTTPError(response=self)
+        raise exc
+
+
 class _Http:
     def __init__(self, activities, segment_responses):
         self.activities = activities
@@ -28,6 +39,27 @@ class _Http:
         segment_id = int(params.get("segment_id"))
         response_data, response_headers = self.segment_responses[segment_id]
         return _Response(response_data, headers=response_headers)
+
+
+class _Http429Activities:
+    """Returns 429 for the activities endpoint."""
+
+    def get(self, url, headers=None, params=None, timeout=None):
+        if url.endswith("/athlete/activities"):
+            return _RateLimitedResponse()
+        return _Response([])
+
+
+class _Http429Segment:
+    """Returns 429 for the first segment effort request."""
+
+    def __init__(self, activities):
+        self.activities = activities
+
+    def get(self, url, headers=None, params=None, timeout=None):
+        if url.endswith("/athlete/activities"):
+            return _Response(self.activities, headers={"X-RateLimit-Limit": "200,2000", "X-RateLimit-Usage": "10,100"})
+        return _RateLimitedResponse()
 
 
 class ChunkedIngestTests(unittest.TestCase):
@@ -69,6 +101,31 @@ class ChunkedIngestTests(unittest.TestCase):
         )
         segments = pd.DataFrame([{"segment_id": 10}, {"segment_id": 11}])
         result = ingest_window("token", segments, pd.Timestamp("2026-01-01"), pd.Timestamp("2026-01-31"), _http=http)
+        self.assertFalse(result["complete"])
+        self.assertTrue(result["mid_window_rate_limit"])
+        self.assertTrue(result["efforts"].empty)
+
+    def test_ingest_window_handles_429_on_activities(self):
+        segments = pd.DataFrame([{"segment_id": 10}])
+        result = ingest_window(
+            "token", segments,
+            pd.Timestamp("2026-01-01"), pd.Timestamp("2026-01-31"),
+            _http=_Http429Activities(),
+        )
+        self.assertFalse(result["complete"])
+        self.assertTrue(result["mid_window_rate_limit"])
+        self.assertTrue(result["efforts"].empty)
+
+    def test_ingest_window_handles_429_on_segment_efforts(self):
+        http = _Http429Segment(
+            activities=[{"id": 1, "gear_id": "g1", "sport_type": "Ride", "start_date": "2026-01-01T00:00:00Z"}]
+        )
+        segments = pd.DataFrame([{"segment_id": 10}])
+        result = ingest_window(
+            "token", segments,
+            pd.Timestamp("2026-01-01"), pd.Timestamp("2026-01-31"),
+            _http=http,
+        )
         self.assertFalse(result["complete"])
         self.assertTrue(result["mid_window_rate_limit"])
         self.assertTrue(result["efforts"].empty)
