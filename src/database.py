@@ -23,6 +23,21 @@ _SUPABASE_URL = st.secrets.get("SUPABASE_URL")
 _SUPABASE_KEY = st.secrets.get("SUPABASE_KEY")
 
 _PAGE_SIZE = 1000
+_UPSERT_BATCH_SIZE = 500
+
+
+def _upsert_batched(table: str, records: list[dict], on_conflict: str) -> None:
+    """Upsert records in chunks to avoid Supabase PostgREST payload size limits.
+
+    PostgREST rejects request bodies above ~1 MB; for large users a single
+    ingest window can contain thousands of rows, so we split into batches.
+    ponytail: 500 rows × ~10 fields × ~30 bytes ≈ 150 KB per batch, well
+    under the 1 MB limit. Upgrade path: increase _UPSERT_BATCH_SIZE if
+    Supabase raises its limit or if fields grow.
+    """
+    client = _get_supabase()
+    for i in range(0, len(records), _UPSERT_BATCH_SIZE):
+        client.table(table).upsert(records[i : i + _UPSERT_BATCH_SIZE], on_conflict=on_conflict).execute()
 
 
 def _paginated_select(table: str, eq_col: str, eq_val: str) -> list[dict]:
@@ -366,7 +381,7 @@ def save_segments(df: pd.DataFrame, athlete_id: int | str) -> None:
         record["athlete_id"] = athlete_key
         records.append(record)
     if records:
-        _get_supabase().table("starred_segments").upsert(records, on_conflict="athlete_id,segment_id").execute()
+        _upsert_batched("starred_segments", records, "athlete_id,segment_id")
 
 
 def load_segments(athlete_id: int | str) -> pd.DataFrame:
@@ -410,7 +425,7 @@ def save_efforts(df: pd.DataFrame, athlete_id: int | str) -> None:
         record["athlete_id"] = athlete_key
         records.append(record)
     if records:
-        _get_supabase().table("segment_efforts").upsert(records, on_conflict="athlete_id,effort_id").execute()
+        _upsert_batched("segment_efforts", records, "athlete_id,effort_id")
 
 
 def load_efforts(athlete_id: int | str) -> pd.DataFrame:
@@ -454,7 +469,7 @@ def save_rides(df: pd.DataFrame, athlete_id: int | str) -> None:
         record["athlete_id"] = athlete_key
         records.append(record)
     if records:
-        _get_supabase().table("rides").upsert(records, on_conflict="athlete_id,activity_id").execute()
+        _upsert_batched("rides", records, "athlete_id,activity_id")
 
 
 def load_rides(athlete_id: int | str) -> pd.DataFrame:
