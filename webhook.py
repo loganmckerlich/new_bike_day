@@ -10,14 +10,11 @@ Strava docs: https://developers.strava.com/docs/webhooks/
 
 import os
 import logging
-from fastapi import FastAPI, Request, Response, HTTPException
-import os
+from fastapi import FastAPI, Request, HTTPException
 from supabase import create_client, Client
 
 logger = logging.getLogger(__name__)
 app = FastAPI()
-
-VERIFY_TOKEN = os.environ["STRAVA_VERIFY_TOKEN"]
 
 def _get_supabase() -> Client:
     """Create and return a Supabase client using environment variables."""
@@ -54,9 +51,11 @@ async def verify_webhook(request: Request) -> Response:
     Strava sends a GET request to verify the endpoint before activating
     the subscription. Must respond with the hub.challenge value.
     """
+    verify_token = os.environ["STRAVA_VERIFY_TOKEN"]
+
     params = request.query_params
 
-    if params.get("hub.verify_token") != VERIFY_TOKEN:
+    if params.get("hub.verify_token") != verify_token:
         raise HTTPException(status_code=403, detail="Invalid verify token")
 
     challenge = params.get("hub.challenge")
