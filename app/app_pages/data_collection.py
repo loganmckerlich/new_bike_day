@@ -230,8 +230,7 @@ def _run_chunked_ingest(
             existing_rides = pd.concat([existing_rides, window_rides], ignore_index=True)
             existing_rides = _drop_duplicates_on(existing_rides, "activity_id")
             total_activities += len(window_rides)
-            if "gear_id" in window_rides.columns:
-                riding_activities += int(window_rides["gear_id"].notna().sum())
+            riding_activities += int(window_rides["gear_id"].notna().sum())
 
         # Only fetch gear details for retired bikes not yet known — avoids GET /athlete per window.
         new_gear_ids = {
