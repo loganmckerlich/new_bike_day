@@ -129,6 +129,7 @@ class _MockResponse:
     """Minimal requests.Response stand-in returned by _DevSession."""
 
     status_code: int = 200
+    headers: dict = {}
 
     def __init__(self, data: Any) -> None:
         self._data = data
