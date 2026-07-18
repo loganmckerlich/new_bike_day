@@ -15,6 +15,7 @@ from fastapi import FastAPI, Request, HTTPException
 from supabase import create_client, Client
 
 logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
 app = FastAPI()
 
 def _get_supabase() -> Client:
@@ -41,6 +42,7 @@ def _delete_user_data(athlete_id: int | str) -> None:
         client.table("athlete_ftp").delete().eq("athlete_id", athlete_key).execute()
         client.table("athlete_tokens").delete().eq("athlete_id", athlete_key).execute()
         client.table("users").delete().eq("athlete_id", athlete_key).execute()
+        logger.info(f"Deleted all data for athlete_id={athlete_key}")
     except Exception:
         return
 
