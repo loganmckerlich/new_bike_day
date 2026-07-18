@@ -67,24 +67,22 @@ async def verify_webhook(request: Request):
 
     return {"hub.challenge": challenge}
 
-
 @app.post("/webhook")
 async def handle_webhook(request: Request):
-    """Handle incoming Strava webhook events.
-
-    Only processes athlete deauthorization events (aspect_type == "delete").
-    All other event types are acknowledged and ignored.
-
-    Strava expects a 200 response quickly — deletion runs after response
-    is returned to avoid timeouts.
-    """
     body = await request.json()
+    logger.info(f"Webhook body: {body}")
 
     object_type = body.get("object_type")
     aspect_type = body.get("aspect_type")
     athlete_id = str(body.get("owner_id", ""))
 
-    if object_type != "athlete" or aspect_type != "delete":
+    is_deauth = (
+        object_type == "athlete" and
+        aspect_type == "update" and
+        body.get("updates", {}).get("authorized") == "false"
+    )
+
+    if not is_deauth:
         logger.info(f"Ignoring event: object_type={object_type} aspect_type={aspect_type}")
         return {"status": "ignored"}
 
@@ -99,8 +97,6 @@ async def handle_webhook(request: Request):
         logger.info(f"Successfully deleted data for athlete_id={athlete_id}")
     except Exception as e:
         logger.error(f"Failed to delete data for athlete_id={athlete_id}: {e}")
-        # still return 200 — Strava will retry on failure which could
-        # cause issues. Log the error and handle cleanup manually if needed.
 
     return {"status": "ok"}
 
