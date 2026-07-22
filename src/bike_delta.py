@@ -270,6 +270,11 @@ def compute_residuals(
 
 # ── Phase 3 — Power distribution overlap check ────────────────────────────────
 
+def _bike_watts(seg_df: pd.DataFrame, bike_name: str) -> np.ndarray:
+    """Return non-null average_watts for *bike_name* in *seg_df* as a NumPy array."""
+    return seg_df[seg_df["bike_name"] == bike_name]["average_watts"].dropna().to_numpy()
+
+
 def power_overlap_ok(
     seg_df: pd.DataFrame,
     bike_a: str,
@@ -291,8 +296,8 @@ def power_overlap_ok(
     p_threshold:
         KS test p-value threshold. Default 0.05.
     """
-    a = seg_df[seg_df["bike_name"] == bike_a]["average_watts"].dropna()
-    b = seg_df[seg_df["bike_name"] == bike_b]["average_watts"].dropna()
+    a = _bike_watts(seg_df, bike_a)
+    b = _bike_watts(seg_df, bike_b)
     if len(a) < 3 or len(b) < 3:
         return False
     _, p = ks_2samp(a, b)
@@ -318,8 +323,8 @@ def segment_power_overlap_summary(
     for seg_id in segment_ids:
         seg_df = df[df["segment_id"] == seg_id]
         for bike_a, bike_b in pairs:
-            a = seg_df[seg_df["bike_name"] == bike_a]["average_watts"].dropna()
-            b = seg_df[seg_df["bike_name"] == bike_b]["average_watts"].dropna()
+            a = _bike_watts(seg_df, bike_a)
+            b = _bike_watts(seg_df, bike_b)
             if len(a) < 3 or len(b) < 3:
                 records.append(
                     {"segment_id": seg_id, "bike_a": bike_a, "bike_b": bike_b,

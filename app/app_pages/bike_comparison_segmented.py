@@ -139,10 +139,12 @@ def comp_inputs():
 
     available_bikes = get_available_bikes()
 
+    stored_bikes = st.session_state.get("seg_bikes_plain", [])
+    filtered_bikes = [b for b in stored_bikes if b in available_bikes] or available_bikes[:2]
     bikes_to_compare = st.multiselect(
         "Bikes to compare",
         options=available_bikes,
-        default=st.session_state.get("seg_bikes_plain", available_bikes[:2]),
+        default=filtered_bikes,
         max_selections=5,
         help="Select up to 5 bikes to compare.",
         key="seg_bikes_select",
