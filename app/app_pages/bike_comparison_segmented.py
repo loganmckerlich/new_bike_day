@@ -142,20 +142,24 @@ def comp_inputs():
     bikes_to_compare = st.multiselect(
         "Bikes to compare",
         options=available_bikes,
-        default=available_bikes[:2],
+        default=st.session_state.get("seg_bikes_plain", available_bikes[:2]),
         max_selections=5,
         help="Select up to 5 bikes to compare.",
+        key="seg_bikes_select",
     )
-    st.session_state["segment_bikes"] = bikes_to_compare
+    st.session_state["seg_bikes_plain"] = bikes_to_compare
+    st.caption("Only bikes with ≥ 20 segments after outlier filtering are shown.")
 
     min_efforts = st.number_input(
         "Min efforts per bike per segment",
         min_value=1,
         max_value=20,
-        value=3,
+        value=st.session_state.get("seg_min_efforts_plain", 3),
         step=1,
         help="Both bikes must have at least this many power-measured efforts on a segment.",
+        key="seg_min_efforts",
     )
+    st.session_state["seg_min_efforts_plain"] = min_efforts
     return bikes_to_compare, min_efforts
 
 @st.cache_data(ttl=3600)
@@ -358,9 +362,11 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
 
     spider_use_subcategories = st.toggle(
         "Use subcategories in spider charts",
-        value=False,
+        value=st.session_state.get("seg_spider_plain", False),
+        key="seg_spider_subcategories",
         help="Show spider charts by segment subcategory instead of parent category.",
     )
+    st.session_state["seg_spider_plain"] = spider_use_subcategories
 
     if len(bikes_to_compare) < 2:
         st.warning("Please select at least **2 bikes** in the sidebar to compare.")

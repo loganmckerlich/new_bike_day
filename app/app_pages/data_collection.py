@@ -417,6 +417,10 @@ def _render_bike_card(row: pd.Series) -> None:
     else:
         dist_str = "—"
 
+    loaded = row.get("loaded_efforts")
+    loaded_str = str(int(loaded)) if pd.notna(loaded) else "—"
+    loaded_flag = " ⚠️" if pd.notna(loaded) and int(loaded) < 20 else ""
+
     st.markdown(
         f"""
         <div class="bike-card">
@@ -431,8 +435,8 @@ def _render_bike_card(row: pd.Series) -> None:
             <span class="bc-val">{int(row['total_rides'])}</span>
           </div>
           <div class="bc-row">
-            <span class="bc-label">Segment Efforts</span>
-            <span class="bc-val">{int(row['total_efforts'])}</span>
+            <span class="bc-label">Segments for analysis</span>
+            <span class="bc-val">{loaded_str}{loaded_flag}</span>
           </div>
           <div class="bc-row">
             <span class="bc-label">Moving time</span>
@@ -463,7 +467,6 @@ def _render_bike_summaries(
     st.subheader("Your bikes at a glance")
 
     agg_metrics = {
-        "total_efforts": ("effort_id", "count"),
         "avg_watts": ("average_watts", "mean"),
         "avg_heartrate": ("average_heartrate", "mean"),
     }
@@ -501,7 +504,15 @@ def _render_bike_summaries(
         bike_stats["converted_distance"] = bike_stats["gear_id"].map(bike_distances)
     else:
         bike_stats["converted_distance"] = float("nan")
-    bike_stats = bike_stats.sort_values("total_efforts", ascending=False)
+
+    loaded_counts = (
+        efforts[efforts["average_watts"].notna() & efforts["gear_id"].notna()]
+        .groupby("gear_id")["effort_id"]
+        .count()
+        .rename("loaded_efforts")
+    )
+    bike_stats = bike_stats.merge(loaded_counts, on="gear_id", how="left")
+    bike_stats = bike_stats.sort_values("loaded_efforts", ascending=False)
 
     st.markdown(_BIKE_CARD_CSS, unsafe_allow_html=True)
 

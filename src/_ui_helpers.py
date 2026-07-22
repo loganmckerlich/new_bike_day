@@ -93,12 +93,12 @@ def get_available_bikes() -> list[str]:
     watt_efforts = efforts[efforts["average_watts"].notna()].copy()
     watt_efforts = watt_efforts.dropna(subset=["gear_id"])
 
-    available_bikes = (
+    counts = (
         watt_efforts.groupby("bike_name")["effort_id"]
         .count()
         .sort_values(ascending=False)
-        .index.tolist()
     )
+    available_bikes = counts[counts >= 20].index.tolist()
 
     st.session_state["available_bikes"] = available_bikes
     return available_bikes
