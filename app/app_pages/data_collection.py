@@ -180,18 +180,18 @@ def _run_chunked_ingest(
     if initial:
         end_cursor = now
         while end_cursor > three_years_ago:
-            start_cursor = max(three_years_ago, end_cursor - timedelta(days=365))
+            start_cursor = max(three_years_ago, end_cursor - timedelta(days=200))
             window_bounds.append((start_cursor, end_cursor))
             end_cursor = start_cursor
     elif direction == "newer":
-        start_cursor = _date_floor(last_ingested or now - timedelta(days=365))
+        start_cursor = _date_floor(last_ingested or now - timedelta(days=200))
         while start_cursor < now:
-            window_end = min(start_cursor + timedelta(days=365), now)
+            window_end = min(start_cursor + timedelta(days=200), now)
             window_bounds.append((start_cursor, window_end))
             start_cursor = window_end
     else:
         end_cursor = _date_floor(oldest_ingested or now)
-        lower_bound = max(three_years_ago, end_cursor - timedelta(days=365))
+        lower_bound = max(three_years_ago, end_cursor - timedelta(days=200))
         if end_cursor > lower_bound:
             window_bounds.append((lower_bound, end_cursor))
 
