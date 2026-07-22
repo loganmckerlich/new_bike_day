@@ -72,8 +72,10 @@ def overall_comp_inputs():
         default=defaults,
         max_selections=2,
         help="Select 2 bikes to compare.",
+        key="overall_bikes_select",
         # in future allow this to be more than 2, spider plots already ready for that
     )
+    st.caption("Only bikes with ≥ 20 loaded segment efforts are shown.")
     return bikes_to_compare
 
 def _scale_speed_cols(df: pd.DataFrame, scale: float) -> pd.DataFrame:
@@ -524,6 +526,7 @@ def show(bikes_to_compare: list[str]) -> None:
     watt_mode = st.toggle(
         "Watts mode — predict power instead of speed",
         value=False,
+        key="overall_watt_mode",
         help=(
             "**Speed mode** (default): the model learns power → speed and asks "
             "\"how fast would Bike A have gone in Bike B's conditions?\"\n\n"
@@ -577,7 +580,7 @@ def show(bikes_to_compare: list[str]) -> None:
         bike_a, bike_b = all_pairs[0]
     else:
         pair_labels = [f"{a}  vs  {b}" for a, b in all_pairs]
-        selected_label = st.selectbox("Bike pair to inspect", options=pair_labels, index=0)
+        selected_label = st.selectbox("Bike pair to inspect", options=pair_labels, index=0, key="overall_pair_select")
         idx_p = pair_labels.index(selected_label)
         bike_a, bike_b = all_pairs[idx_p]
 

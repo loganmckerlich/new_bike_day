@@ -145,8 +145,9 @@ def comp_inputs():
         default=available_bikes[:2],
         max_selections=5,
         help="Select up to 5 bikes to compare.",
+        key="seg_bikes_select",
     )
-    st.session_state["segment_bikes"] = bikes_to_compare
+    st.caption("Only bikes with ≥ 20 loaded segment efforts are shown.")
 
     min_efforts = st.number_input(
         "Min efforts per bike per segment",
@@ -155,6 +156,7 @@ def comp_inputs():
         value=3,
         step=1,
         help="Both bikes must have at least this many power-measured efforts on a segment.",
+        key="seg_min_efforts",
     )
     return bikes_to_compare, min_efforts
 
@@ -359,6 +361,7 @@ def show(bikes_to_compare, min_efforts: int = 3) -> None:
     spider_use_subcategories = st.toggle(
         "Use subcategories in spider charts",
         value=False,
+        key="seg_spider_subcategories",
         help="Show spider charts by segment subcategory instead of parent category.",
     )
 

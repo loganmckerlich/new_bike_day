@@ -126,6 +126,7 @@ def main() -> None:
 
     #save for later
     st.session_state["cleaned_efforts"] = cleaned
+    st.session_state.pop("available_bikes", None)  # clear cache so dropdown re-filters
 
     n_raw = len(efforts_with_power)
     n_clean = len(cleaned)
