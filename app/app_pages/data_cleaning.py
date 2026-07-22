@@ -73,25 +73,26 @@ def main() -> None:
 
         ftp = st.session_state.get("ftp")
         _default_min_watts = int(round(ftp * 0.5)) if ftp is not None and ftp > 0 else 0
-        st.session_state.setdefault("min_watts", _default_min_watts)
         min_watts: int = st.number_input(
             "Minimum watts",
             min_value=0,
             max_value=999,
             step=5,
+            value=st.session_state.get("min_watts_value", _default_min_watts),
             key="min_watts",
             help=(
                 "Efforts with average power below this threshold are excluded from analysis. "
                 "Default is 50 % of your FTP (if available). Set to 0 to disable."
             ),
         )
+        st.session_state["min_watts_value"] = min_watts
 
-        st.session_state.setdefault("outlier_z_threshold", 2.0)
         z_threshold: float = st.slider(
             "Outlier z-score threshold",
             min_value=0.25,
             max_value=3.5,
             step=0.25,
+            value=st.session_state.get("outlier_z_threshold_value", 2.0),
             key="outlier_z_threshold",
             help=(
                 "Z-score = how many standard deviations an effort's speed/W^(1/3) sits "
@@ -99,16 +100,18 @@ def main() -> None:
                 "Lower = more aggressive filtering."
             ),
         )
+        st.session_state["outlier_z_threshold_value"] = z_threshold
 
-        st.session_state.setdefault("exclude_descents", False)
         exclude_descents: bool = st.toggle(
             "Exclude descent segments",
+            value=st.session_state.get("exclude_descents_value", False),
             key="exclude_descents",
             help=(
                 "Remove descent segments entirely from analysis pages. Separate from outlier filtering. "
                 "Because power doesn't create speed as much on descents our outlier detection method doesnt work for them."
             ),
         )
+        st.session_state["exclude_descents_value"] = exclude_descents
 
 
     # ── Apply filters and store cleaned efforts in session state ───────────────

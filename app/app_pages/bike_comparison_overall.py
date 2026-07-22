@@ -62,20 +62,19 @@ BOOT_ITERATIONS = 30
 def overall_comp_inputs():
     available_bikes = get_available_bikes()
 
-    if st.session_state.get("segment_bikes") is not None:
-        defaults = st.session_state["segment_bikes"][0:2]
-    else:
-        defaults = available_bikes[:2]
     bikes_to_compare = st.multiselect(
         "Bikes to compare",
         options=available_bikes,
-        default=defaults,
+        # if just coming from seg comp, look at first 2 from that
+        default=st.session_state.get(
+            "overall_bikes_plain", st.session_state.get(
+                "seg_bikes_plain", available_bikes)[:2]),
         max_selections=2,
         help="Select 2 bikes to compare.",
         key="overall_bikes_select",
-        # in future allow this to be more than 2, spider plots already ready for that
     )
-    st.caption("Only bikes with ≥ 20 loaded segment efforts are shown.")
+    st.session_state["overall_bikes_plain"] = bikes_to_compare
+    st.caption("Only bikes with ≥ 20 segments after outlier filtering are shown.")
     return bikes_to_compare
 
 def _scale_speed_cols(df: pd.DataFrame, scale: float) -> pd.DataFrame:
@@ -525,7 +524,7 @@ def show(bikes_to_compare: list[str]) -> None:
     # ── Mode toggle ───────────────────────────────────────────────────────────
     watt_mode = st.toggle(
         "Watts mode — predict power instead of speed",
-        value=False,
+        value=st.session_state.get("overall_watt_mode_plain", False),
         key="overall_watt_mode",
         help=(
             "**Speed mode** (default): the model learns power → speed and asks "
@@ -535,6 +534,7 @@ def show(bikes_to_compare: list[str]) -> None:
             "Positive residual = Bike B needed fewer watts = more efficient."
         ),
     )
+    st.session_state["overall_watt_mode_plain"] = watt_mode
 
     if watt_mode:
         _fit_fn       = fit_xgb_watt_model

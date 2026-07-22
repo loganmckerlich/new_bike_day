@@ -435,11 +435,7 @@ def _render_bike_card(row: pd.Series) -> None:
             <span class="bc-val">{int(row['total_rides'])}</span>
           </div>
           <div class="bc-row">
-            <span class="bc-label">Segment Efforts</span>
-            <span class="bc-val">{int(row['total_efforts'])}</span>
-          </div>
-          <div class="bc-row">
-            <span class="bc-label">Loaded for comparison</span>
+            <span class="bc-label">Segments for analysis</span>
             <span class="bc-val">{loaded_str}{loaded_flag}</span>
           </div>
           <div class="bc-row">
@@ -471,7 +467,6 @@ def _render_bike_summaries(
     st.subheader("Your bikes at a glance")
 
     agg_metrics = {
-        "total_efforts": ("effort_id", "count"),
         "avg_watts": ("average_watts", "mean"),
         "avg_heartrate": ("average_heartrate", "mean"),
     }
@@ -509,19 +504,15 @@ def _render_bike_summaries(
         bike_stats["converted_distance"] = bike_stats["gear_id"].map(bike_distances)
     else:
         bike_stats["converted_distance"] = float("nan")
-    bike_stats = bike_stats.sort_values("total_efforts", ascending=False)
 
-    cleaned = st.session_state.get("cleaned_efforts")
-    if cleaned is not None and "gear_id" in cleaned.columns:
-        loaded_counts = (
-            cleaned[cleaned["average_watts"].notna() & cleaned["gear_id"].notna()]
-            .groupby("gear_id")["effort_id"]
-            .count()
-            .rename("loaded_efforts")
-        )
-        bike_stats = bike_stats.merge(loaded_counts, on="gear_id", how="left")
-    else:
-        bike_stats["loaded_efforts"] = float("nan")
+    loaded_counts = (
+        efforts[efforts["average_watts"].notna() & efforts["gear_id"].notna()]
+        .groupby("gear_id")["effort_id"]
+        .count()
+        .rename("loaded_efforts")
+    )
+    bike_stats = bike_stats.merge(loaded_counts, on="gear_id", how="left")
+    bike_stats = bike_stats.sort_values("loaded_efforts", ascending=False)
 
     st.markdown(_BIKE_CARD_CSS, unsafe_allow_html=True)
 
