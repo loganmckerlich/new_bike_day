@@ -62,7 +62,7 @@ def navigator(on_raw):
             st.switch_page(f"app_pages/{next_page}.py")
     if on_raw[-1] == "2":
         st.markdown("All Data Comes From Strava.")
-        st.image("src/strava_logo.png", width=150, link="https://www.strava.com/")
+        st.image("src/api_logo_pwrdBy_strava_horiz_orange.png", width=150, link="https://www.strava.com/")
 
 def _redirect(message: str, button_text: str, page: str) -> None:
     st.info(message)
