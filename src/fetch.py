@@ -213,8 +213,7 @@ class _DevSession:
 
 
 # Segment classification thresholds
-# Sprint threshold updated to 400 m to match spider chart category spec.
-_SPRINT_MAX_DISTANCE: float = 1000.0   # metres
+_SPRINT_MAX_DISTANCE: float = 600.0   # metres
 _FLAT_MIN_GRADE: float = -0.5         # percent
 _FLAT_MAX_GRADE: float = 0.5          # percent
 _ASCENT_MIN_GRADE: float = 2.0        # percent
@@ -245,9 +244,9 @@ def _classify_segment(
     dist = distance if distance is not None else float("inf")
 
     if dist < _SPRINT_MAX_DISTANCE:
-        if grade < -0.5:
+        if grade < -1.0:
             return "sprint", "sprint_downhill"
-        if grade > 0.5:
+        if grade > 1.0:
             return "sprint", "sprint_uphill"
         return "sprint", "sprint_flat"
 
@@ -258,17 +257,15 @@ def _classify_segment(
 
     if grade > _ASCENT_MIN_GRADE:
         if grade <= 3.0:
-            return "ascent", "ascent_shallow"
-        if grade <= 6.0:
             return "ascent", "ascent_moderate"
         return "ascent", "ascent_steep"
 
     if grade < _DESCENT_MAX_GRADE:
-        if grade >= -4.0:
+        if grade >= -3.0:
             return "descent", "descent_gentle"
         return "descent", "descent_steep"
 
-    if dist < 3000.0:
+    if dist < 4000.0:
         return "flat", "flat_short"
     return "flat", "flat_long"
 
