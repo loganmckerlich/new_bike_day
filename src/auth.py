@@ -19,7 +19,7 @@ def custom_auth_button() -> None:
     )
 
     st.markdown("### Connect your Strava account")
-    st.image("src/btn_strava_connect_with_orange_x2.png.png", link = auth_url)
+    st.image("src/btn_strava_connect_with_orange_x2.png", link = auth_url)
     # st.link_button("🚴 Connect Strava", auth_url, type="primary")
     # st.html(
     #     f"""
