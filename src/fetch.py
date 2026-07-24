@@ -265,7 +265,7 @@ def _classify_segment(
             return "descent", "descent_gentle"
         return "descent", "descent_steep"
 
-    if dist < 3000.0:
+    if dist < 4000.0:
         return "flat", "flat_short"
     return "flat", "flat_long"
 

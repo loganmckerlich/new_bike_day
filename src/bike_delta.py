@@ -571,7 +571,10 @@ XGB_FEATURES: list[str] = [
     # 'segtype_detail_sprint_flat',
     # 'segtype_detail_sprint_downhill'
 ]
-
+# Would be nice to get
+# - weather
+# - enterance speed
+# - gradient of section before segment
 XGB_WATT_FEATURES: list[str] = [
     "speed_kmh",
     'average_grade',
