@@ -25,6 +25,7 @@ from src.analytics import (
     compute_speed_per_watt,
     mean_profile_by_segment_type,
     power_normalized_profile,
+    straightness_index as _straightness_index_fn,
 )
 from src.bike_delta import power_overlap_ok
 from src._ui_helpers import (
@@ -108,27 +109,8 @@ def _highlight_best_value(series: pd.Series, ascending: bool = False) -> list[st
 
 
 def _straightness_index(geo: dict) -> float | None:
-    """Return a 0-1 straightness index for a route, if route points are available."""
-    points = geo.get("polyline_points") or []
-    if len(points) < 2:
-        return None
-
-    coords = [(float(p[0]), float(p[1])) for p in points if len(p) >= 2]
-    if len(coords) < 2:
-        return None
-
-    def _haversine(start: tuple[float, float], end: tuple[float, float]) -> float:
-        lat1, lon1 = map(math.radians, start)
-        lat2, lon2 = map(math.radians, end)
-        dlat = lat2 - lat1
-        dlon = lon2 - lon1
-        a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
-        return 2 * 6371000 * math.asin(math.sqrt(a))
-
-    total_path = sum(_haversine(coords[i], coords[i + 1]) for i in range(len(coords) - 1))
-    if total_path <= 0:
-        return None
-    return _haversine(coords[0], coords[-1]) / total_path
+    """Thin wrapper around src.analytics.straightness_index for geo dicts."""
+    return _straightness_index_fn(geo.get("polyline_points") or [])
 
 
 # ── Page title ────────────────────────────────────────────────────────────
