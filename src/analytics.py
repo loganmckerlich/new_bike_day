@@ -18,6 +18,7 @@ Methodology
 
 from __future__ import annotations
 
+import math
 from typing import Sequence
 
 import numpy as np
@@ -35,6 +36,29 @@ __all__ = [
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
+
+def straightness_index(polyline_points: list) -> float | None:
+    """Return a 0–1 straightness index for a segment given its polyline points.
+
+    1.0 = perfectly straight. Lower = more winding.
+    Returns None when fewer than 2 valid points are available.
+    """
+    coords = [(float(p[0]), float(p[1])) for p in polyline_points if len(p) >= 2]
+    if len(coords) < 2:
+        return None
+
+    def _haversine(a: tuple[float, float], b: tuple[float, float]) -> float:
+        lat1, lon1 = map(math.radians, a)
+        lat2, lon2 = map(math.radians, b)
+        dlat, dlon = lat2 - lat1, lon2 - lon1
+        h = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+        return 2 * 6_371_000 * math.asin(math.sqrt(h))
+
+    total_path = sum(_haversine(coords[i], coords[i + 1]) for i in range(len(coords) - 1))
+    if total_path <= 0:
+        return None
+    return _haversine(coords[0], coords[-1]) / total_path
+
 
 def compute_speed_per_watt(df: pd.DataFrame) -> pd.DataFrame:
     """Add a ``speed_per_cbrt_watt`` column to *df* and return a copy.
