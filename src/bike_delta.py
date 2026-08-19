@@ -590,13 +590,54 @@ def delta_to_sec_per_km(
 
 # ── XGBoost counterfactual pipeline ───────────────────────────────────────────
 
-XGB_SPEED_FEATURES: list[str] = ['average_watts', 'average_grade', 'maximum_grade', 'doy_sin', 'doy_cos', 'log_watts', 'watts_per_grade', 'distance_km', 'heartrate', 'effort_count', 'woy_cos', 'month_sin', 'month_cos', 'cbrt_watts', 'woy_sin', 'straightness_index', 'segtype_descent']
+XGB_SPEED_FEATURES: list[str] = [
+    'average_watts',
+    'average_grade',
+    'maximum_grade',
+    'doy_sin',
+    'doy_cos',
+    'log_watts',
+    'watts_per_grade',
+    'distance_km',
+    'heartrate',
+    'effort_count',
+    'woy_cos',
+    'month_sin',
+    'month_cos',
+    'cbrt_watts',
+    'woy_sin',
+    'straightness_index',
+    # 'segtype_descent'
+]
 
 # Would be nice to get
 # - weather
 # - entrance speed
 # - gradient of section before segment
-XGB_WATT_FEATURES: list[str] = ['speed_kmh', 'average_grade', 'maximum_grade', 'doy_sin', 'doy_cos', 'distance_km', 'heartrate', 'effort_count', 'woy_cos', 'month_sin', 'month_cos', 'woy_sin', 'log_speed', 'cbrt_speed', 'straightness_index', 'segtype_descent', 'speed_per_grade', 'elapsed_ratio', 'segtype_detail_descent_steep', 'segtype_detail_sprint_uphill', 'segtype_sprint', 'segtype_detail_sprint_flat']
+XGB_WATT_FEATURES: list[str] = [
+    'speed_kmh',
+    'average_grade',
+    'maximum_grade',
+    'doy_sin',
+    'doy_cos',
+    'distance_km',
+    'heartrate',
+    'effort_count',
+    'woy_cos',
+    'month_sin',
+    'month_cos',
+    'woy_sin',
+    'log_speed',
+    'cbrt_speed',
+    'straightness_index',
+    # 'segtype_descent',
+    'speed_per_grade',
+    'elapsed_ratio',
+    # 'segtype_detail_descent_steep',
+    # 'segtype_detail_sprint_uphill',
+    # 'segtype_sprint',
+    # 'segtype_detail_sprint_flat'
+    ]
 
 
 XGB_PARAMS: dict = dict(
