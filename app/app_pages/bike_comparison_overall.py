@@ -35,7 +35,7 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 from src.bike_delta import (
     prepare_delta_dataset,
-    XGB_FEATURES,
+    XGB_SPEED_FEATURES,
     XGB_WATT_FEATURES,
     fit_xgb_speed_model,
     apply_model_to_bike,
@@ -192,7 +192,7 @@ def _plot_actual_vs_predicted(
 
 
 def _plot_feature_importance(model, color: str, features: list[str] | None = None, target_label: str = "speed") -> go.Figure:
-    feat_list = features if features is not None else XGB_FEATURES
+    feat_list = features if features is not None else XGB_SPEED_FEATURES
     feat_df = (
         pd.DataFrame({"feature": feat_list, "importance": model.feature_importances_})
         .sort_values("importance")
@@ -558,7 +558,7 @@ def show(bikes_to_compare: list[str]) -> None:
     else:
         _fit_fn       = fit_xgb_speed_model
         _apply_fn     = apply_model_to_bike
-        _features     = XGB_FEATURES
+        _features     = XGB_SPEED_FEATURES
         _target_col   = "speed_kmh"
         _pred_col     = "predicted_speed_kmh"
         _residual_col = "speed_residual"

@@ -36,7 +36,8 @@ import statsmodels.formula.api as smf
 from sklearn.ensemble import GradientBoostingRegressor
 import xgboost as xgb
 import streamlit as st
-from src.analytics import compute_speed_per_watt
+from src.analytics import compute_speed_per_watt, straightness_index as _straightness_index
+from src.database import load_segment_geo as _load_segment_geo, save_segment_geo as _save_segment_geo
 
 __all__ = [
     "prepare_delta_dataset",
@@ -52,7 +53,7 @@ __all__ = [
     # XGBoost counterfactual pipeline
     "XGB_PARAMS",
     "XGB_BOOT_PARAMS",
-    "XGB_FEATURES",
+    "XGB_SPEED_FEATURES",
     "fit_xgb_speed_model",
     "apply_model_to_bike",
     "aggregate_paired_delta",
@@ -144,6 +145,40 @@ def prepare_delta_dataset(
     # Reuses the existing compute_speed_per_watt function which produces
     # speed_per_cbrt_watt = speed_kmh / average_watts^(1/3)
     df = compute_speed_per_watt(df)
+
+    # ── Segment straightness ───────────────────────────────────────────────────
+    # For any segment not yet in the geo cache, fetch from Strava and save so
+    # subsequent runs are instant.  Requires STRAVA_DEMO_REFRESH_TOKEN in secrets.
+    unique_sids = df["segment_id"].dropna().unique()
+    missing_sids = [sid for sid in unique_sids if _load_segment_geo(sid) is None]
+    if missing_sids:
+        try:
+            import time as _time
+            from src.auth import get_demo_access_token as _get_token
+            from src.fetch import get_segment_detail as _get_detail, get_segment_streams as _get_streams
+            _tok = _get_token()
+            _access_token = _tok[0] if _tok else None
+        except Exception:
+            _access_token = None
+
+        if _access_token:
+            for _sid in missing_sids:
+                try:
+                    _detail  = _get_detail(_access_token, int(_sid))
+                    _streams = _get_streams(_access_token, int(_sid))
+                    _save_segment_geo(int(_sid), _detail, _streams)
+                    _time.sleep(0.3)  # stay under Strava rate limit
+                except Exception:
+                    pass  # cache miss is handled below; geo stays None
+
+    si_map: dict = {}
+    for sid in unique_sids:
+        try:
+            geo = _load_segment_geo(sid)
+            si_map[sid] = _straightness_index((geo or {}).get("polyline_points") or [])
+        except Exception:
+            si_map[sid] = None
+    df["straightness_index"] = df["segment_id"].map(si_map)
 
     # ── Date features for baseline model ──────────────────────────────────────
     # Parse to UTC-normalised naive datetime so arithmetic is straightforward.
@@ -555,51 +590,55 @@ def delta_to_sec_per_km(
 
 # ── XGBoost counterfactual pipeline ───────────────────────────────────────────
 
-XGB_FEATURES: list[str] = [
+XGB_SPEED_FEATURES: list[str] = [
     'average_watts',
     'average_grade',
     'maximum_grade',
-    'doy_sin',
-    'doy_cos',
+    # 'doy_sin',
+    # 'doy_cos',
     'log_watts',
     'watts_per_grade',
     'distance_km',
     'heartrate',
     'effort_count',
-    # 'segtype_detail_sprint_uphill',
-    'woy_cos',
-    'month_sin',
-    'month_cos',
+    # 'woy_cos',
+    # 'month_sin',
+    # 'month_cos',
     'cbrt_watts',
-    'woy_sin',
-    # 'segtype_ascent',
-    # 'segtype_detail_sprint_flat',
-    # 'segtype_detail_sprint_downhill'
+    # 'woy_sin',
+    'straightness_index',
+    # 'segtype_descent'
 ]
+
 # Would be nice to get
 # - weather
-# - enterance speed
+# - entrance speed
 # - gradient of section before segment
 XGB_WATT_FEATURES: list[str] = [
-    "speed_kmh",
+    'speed_kmh',
     'average_grade',
     'maximum_grade',
-    'doy_sin',
-    'doy_cos',
+    # 'doy_sin',
+    # 'doy_cos',
     'distance_km',
     'heartrate',
     'effort_count',
-    # 'segtype_detail_sprint_uphill',
-    'woy_cos',
-    'month_sin',
-    'month_cos',
-    'woy_sin',
-    # 'segtype_ascent',
-    # 'segtype_detail_sprint_flat',
-    # 'segtype_detail_sprint_downhill',
+    # 'woy_cos',
+    # 'month_sin',
+    # 'month_cos',
+    # 'woy_sin',
     'log_speed',
-    'cbrt_speed'
-]
+    'cbrt_speed',
+    'straightness_index',
+    # 'segtype_descent',
+    'speed_per_grade',
+    'elapsed_ratio',
+    # 'segtype_detail_descent_steep',
+    # 'segtype_detail_sprint_uphill',
+    # 'segtype_sprint',
+    # 'segtype_detail_sprint_flat'
+    ]
+
 
 XGB_PARAMS: dict = dict(
     n_estimators=200,
@@ -637,12 +676,13 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     out["cbrt_watts"] = np.cbrt(out["average_watts"])
 
     # Speed transforms
-    out["log_speed"] = np.log1p(out["speed_kmh"])
+    out["log_speed"]  = np.log1p(out["speed_kmh"])
     out["cbrt_speed"] = np.cbrt(out["speed_kmh"])
-    
-    # ── Interaction: power efficiency on a slope ──────────────────────────────
+
+    # ── Interaction: power / speed efficiency on a slope ──────────────────────
     safe_grade = out["average_grade"].replace(0, np.nan)
     out["watts_per_grade"] = out["average_watts"] / safe_grade.abs()
+    out["speed_per_grade"] = out["speed_kmh"]     / safe_grade.abs()
 
     # ── Segment length ────────────────────────────────────────────────────────
     if "distance" in out.columns:
@@ -705,7 +745,7 @@ def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str, cache_key: str = None,
     """
     bike_df = (
         df[df["bike_name"] == bike_name]
-        .dropna(subset=XGB_FEATURES + ["speed_kmh"])
+        .dropna(subset=XGB_SPEED_FEATURES + ["speed_kmh"])
         .copy()
     )
 
@@ -714,7 +754,7 @@ def fit_xgb_speed_model(df: pd.DataFrame, bike_name: str, cache_key: str = None,
             f"Not enough efforts for {bike_name!r} (need ≥5, got {len(bike_df)})."
         )
 
-    X = bike_df[XGB_FEATURES]
+    X = bike_df[XGB_SPEED_FEATURES]
     y = bike_df["speed_kmh"].values
 
     model = xgb.XGBRegressor(**(xgb_params if xgb_params is not None else XGB_PARAMS))
@@ -757,14 +797,14 @@ def apply_model_to_bike(
     """
     out = (
         df[df["bike_name"] == target_bike]
-        .dropna(subset=XGB_FEATURES + ["speed_kmh"])
+        .dropna(subset=XGB_SPEED_FEATURES + ["speed_kmh"])
         .copy()
     )
 
     if out.empty:
         return out
 
-    out["predicted_speed_kmh"] = model.predict(out[XGB_FEATURES])
+    out["predicted_speed_kmh"] = model.predict(out[XGB_SPEED_FEATURES])
     out["speed_residual"] = out["speed_kmh"] - out["predicted_speed_kmh"]
     return out
 
