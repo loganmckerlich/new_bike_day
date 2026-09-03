@@ -18,6 +18,13 @@ from supabase import create_client
 
 _CLEANUP_TRIGGER_MB = 450.0
 _CLEANUP_TARGET_MB = 425.0
+_SUPABASE_PAUSE_HINTS = (
+    "paused",
+    "wake",
+    "restoring",
+    "project is paused",
+    "project has been paused",
+)
 
 _SUPABASE_URL = st.secrets.get("SUPABASE_URL")
 _SUPABASE_KEY = st.secrets.get("SUPABASE_KEY")
@@ -220,6 +227,14 @@ def _get_supabase() -> Any:
     if supabase is None:
         raise RuntimeError("SUPABASE_URL and SUPABASE_KEY must be configured")
     return supabase
+
+
+def is_supabase_pause_error(error: BaseException | str | None) -> bool:
+    """Return True when an error message looks like a paused Supabase project."""
+    if error is None:
+        return False
+    message = str(error).lower()
+    return any(hint in message for hint in _SUPABASE_PAUSE_HINTS)
 
 
 def _normalize_athlete_id(athlete_id: int | str | None) -> str | None:

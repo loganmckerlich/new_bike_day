@@ -38,10 +38,11 @@ from src.database import (
     save_segments,
     save_ftp,
     save_user_ingest_dates,
+    is_supabase_pause_error,
 )
 from src.fetch import ingest_all, ingest_window, get_athlete_bikes, get_starred_segments, PremiumOnlyError
 from src.home_personality import load_dev_athlete_profile
-from src.auth import custom_auth_button, handle_redirect, get_demo_access_token
+from src.auth import custom_auth_button, handle_redirect, get_demo_access_token, is_strava_capacity_error
 
 def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = False) -> None:
     try:
@@ -64,6 +65,16 @@ def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = 
         st.error(str(exc))
         return
     except (requests.RequestException, ValueError) as exc:
+        traceback.print_exc(file=sys.stderr)
+        st.error(f"Unable to process data: {exc}")
+        return
+    except Exception as exc:
+        if is_supabase_pause_error(exc):
+            _fallback_to_sample_data(
+                "Supabase is currently waking up after being paused. "
+                "Showing Logan sample data for now."
+            )
+            return
         traceback.print_exc(file=sys.stderr)
         st.error(f"Unable to process data: {exc}")
         return
@@ -595,8 +606,11 @@ def _load_demo_data() -> None:
         if athlete_id is not None:
             athlete_id = int(athlete_id)
             st.session_state["strava_athlete"] = {"id": athlete_id}
-            get_and_save_data(access_token, athlete_id, force_refresh=False)
-            return
+            try:
+                get_and_save_data(access_token, athlete_id, force_refresh=False)
+                return
+            except Exception:
+                pass
     # ponytail: fall back to static snapshots if secret is missing or token refresh fails
     result = ingest_all(access_token="", dev=True)
     _save_session(
@@ -621,6 +635,15 @@ def _fallback_to_sample_data(error_message: str) -> None:
     st.error(error_message)
     st.session_state["use_sample_data"] = True
     _load_demo_data()
+
+
+def _oauth_failure_message(error_message: str) -> str:
+    if is_strava_capacity_error(error_message):
+        return (
+            "This Strava app is currently at its maximum allowed users. "
+            "Showing Logan sample data instead."
+        )
+    return f"Strava sign-in failed: {error_message}. Showing sample data instead."
 
 
 def main() -> None:
@@ -711,7 +734,7 @@ def main() -> None:
     error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
     if error_from_params:
-        _fallback_to_sample_data(f"Strava sign-in failed: {error_from_params}. Showing sample data instead.")
+        _fallback_to_sample_data(_oauth_failure_message(str(error_from_params)))
         return
 
     if not st.session_state.get("strava_token") and not st.session_state.get("use_sample_data"):
