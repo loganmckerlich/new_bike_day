@@ -10,12 +10,48 @@ import requests
 TOKEN_URL: Final[str] = "https://www.strava.com/oauth/token"
 AUTHORIZE_URL: Final[str] = "https://www.strava.com/oauth/authorize"
 _STRAVA_CAPACITY_HINTS: Final[tuple[str, ...]] = (
-    "capacity",
-    "limit",
-    "maximum",
+    "athlete capacity",
+    "athlete limit",
+    "user limit",
+    "users limit",
     "max users",
+    "maximum users",
+    "maximum allowed users",
+    "maximum allowed athletes",
     "too many athletes",
 )
+
+
+def _contains_hint(message: str | None, hints: tuple[str, ...]) -> bool:
+    if not message:
+        return False
+    normalized = str(message).lower()
+    return any(hint in normalized for hint in hints)
+
+
+def _oauth_error_details(token_data: dict) -> str:
+    errors = token_data.get("errors")
+    fallback_detail: str | None = None
+    if isinstance(errors, list):
+        for entry in errors:
+            if isinstance(entry, dict):
+                detail = entry.get("message")
+                if detail:
+                    return str(detail)
+                fallback_detail = fallback_detail or entry.get("field") or entry.get("resource") or entry.get("code")
+            elif entry:
+                return str(entry)
+    message = token_data.get("message")
+    if message:
+        return str(message)
+    error = token_data.get("error")
+    if error:
+        return str(error)
+    if fallback_detail:
+        return str(fallback_detail)
+    if errors:
+        return str(errors)
+    return "Failed to authenticate"
 
 
 def custom_auth_button() -> None:
@@ -85,37 +121,42 @@ def handle_redirect() -> None:
     token_data = token_response.json()
 
     if "access_token" in token_data:
-        try:
-            st.session_state["strava_token"] = token_data["access_token"]
-            st.session_state["strava_athlete"] = token_data.get("athlete", {})
-            athlete_id = token_data.get("athlete", {}).get("id")
-            if athlete_id is not None:
-                from src.database import touch_user  # noqa: PLC0415 — lazy to avoid init at import
+        st.session_state["strava_token"] = token_data["access_token"]
+        st.session_state["strava_athlete"] = token_data.get("athlete", {})
+        athlete_id = token_data.get("athlete", {}).get("id")
+        if athlete_id is not None:
+            from src.database import is_supabase_pause_error, touch_user  # noqa: PLC0415 — lazy to avoid init at import
+            try:
                 touch_user(athlete_id)
-            st.success("✅ Connected to Strava!")
-            st.query_params.clear()
-            st.rerun()
-        except Exception as exc:
-            st.session_state["oauth_error"] = str(exc)
-            st.query_params.clear()
-            return
+            except Exception as exc:
+                if is_supabase_pause_error(exc):
+                    st.session_state["oauth_error"] = str(exc)
+                    st.query_params.clear()
+                    return
+                raise
+        st.success("✅ Connected to Strava!")
+        st.query_params.clear()
+        st.rerun()
     else:
-        details = str(
-            token_data.get("message")
-            or token_data.get("error")
-            or token_data.get("errors")
-            or "Failed to authenticate"
-        )
+        details = _oauth_error_details(token_data)
         st.session_state["oauth_error"] = details
         st.query_params.clear()
 
 
 def is_strava_capacity_error(error_message: str | None) -> bool:
     """Return True when Strava auth failed due to app athlete capacity."""
-    if not error_message:
-        return False
-    message = str(error_message).lower()
-    return any(hint in message for hint in _STRAVA_CAPACITY_HINTS)
+    return _contains_hint(error_message, _STRAVA_CAPACITY_HINTS)
+
+
+def format_oauth_failure_message(error_message: str | None) -> str:
+    """Return a clean user-facing auth failure message."""
+    if is_strava_capacity_error(error_message):
+        return (
+            "This Strava app is currently at its maximum allowed users. "
+            "Showing Logan sample data instead."
+        )
+    details = error_message or "unknown error"
+    return f"Strava sign-in failed: {details}. Showing sample data instead."
 
 
 def get_demo_access_token() -> tuple[str, int] | None:

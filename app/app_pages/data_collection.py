@@ -42,7 +42,7 @@ from src.database import (
 )
 from src.fetch import ingest_all, ingest_window, get_athlete_bikes, get_starred_segments, PremiumOnlyError
 from src.home_personality import load_dev_athlete_profile
-from src.auth import custom_auth_button, handle_redirect, get_demo_access_token, is_strava_capacity_error
+from src.auth import custom_auth_button, handle_redirect, get_demo_access_token, format_oauth_failure_message
 
 def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = False) -> None:
     try:
@@ -70,10 +70,12 @@ def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = 
         return
     except Exception as exc:
         if is_supabase_pause_error(exc):
-            _fallback_to_sample_data(
+            st.warning(
                 "Supabase is currently waking up after being paused. "
                 "Showing Logan sample data for now."
             )
+            st.session_state["use_sample_data"] = True
+            _load_static_demo_data()
             return
         traceback.print_exc(file=sys.stderr)
         st.error(f"Unable to process data: {exc}")
@@ -598,19 +600,8 @@ def _save_session(
     st.session_state.pop("cleaned_efforts", None)
     st.session_state.pop("available_bikes", None)
 
-def _load_demo_data() -> None:
-    """Load demo data: live from my Strava account, falling back to static dev JSON."""
-    token_result = get_demo_access_token()
-    if token_result is not None:
-        access_token, athlete_id = token_result
-        if athlete_id is not None:
-            athlete_id = int(athlete_id)
-            st.session_state["strava_athlete"] = {"id": athlete_id}
-            try:
-                get_and_save_data(access_token, athlete_id, force_refresh=False)
-                return
-            except Exception:
-                pass
+def _load_static_demo_data() -> None:
+    """Load static demo snapshots from local dev JSON."""
     # ponytail: fall back to static snapshots if secret is missing or token refresh fails
     result = ingest_all(access_token="", dev=True)
     _save_session(
@@ -630,20 +621,24 @@ def _load_demo_data() -> None:
     _render_bike_summaries(data, segments, bikes, bike_distances, rides)
 
 
+def _load_demo_data() -> None:
+    """Load demo data: live from my Strava account, falling back to static dev JSON."""
+    token_result = get_demo_access_token()
+    if token_result is not None:
+        access_token, athlete_id = token_result
+        if athlete_id is not None:
+            athlete_id = int(athlete_id)
+            st.session_state["strava_athlete"] = {"id": athlete_id}
+            get_and_save_data(access_token, athlete_id, force_refresh=False)
+            return
+    _load_static_demo_data()
+
+
 def _fallback_to_sample_data(error_message: str) -> None:
     """Show an error and fall back to demo data."""
     st.error(error_message)
     st.session_state["use_sample_data"] = True
     _load_demo_data()
-
-
-def _oauth_failure_message(error_message: str) -> str:
-    if is_strava_capacity_error(error_message):
-        return (
-            "This Strava app is currently at its maximum allowed users. "
-            "Showing Logan sample data instead."
-        )
-    return f"Strava sign-in failed: {error_message}. Showing sample data instead."
 
 
 def main() -> None:
@@ -734,7 +729,7 @@ def main() -> None:
     error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
     if error_from_params:
-        _fallback_to_sample_data(_oauth_failure_message(str(error_from_params)))
+        _fallback_to_sample_data(format_oauth_failure_message(str(error_from_params)))
         return
 
     if not st.session_state.get("strava_token") and not st.session_state.get("use_sample_data"):
