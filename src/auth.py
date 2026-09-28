@@ -153,10 +153,10 @@ def format_oauth_failure_message(error_message: str | None) -> str:
     if is_strava_capacity_error(error_message):
         return (
             "This Strava app is currently at its maximum allowed users. "
-            "Showing Logan sample data instead."
+            "Choose Logan sample data below to continue."
         )
     details = error_message or "unknown error"
-    return f"Strava sign-in failed: {details}. Showing sample data instead."
+    return f"Strava sign-in failed: {details}. Choose Logan sample data below to continue."
 
 
 def get_demo_access_token() -> tuple[str, int] | None:

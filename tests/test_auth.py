@@ -31,10 +31,12 @@ class AuthErrorTests(unittest.TestCase):
     def test_format_oauth_failure_message_for_capacity(self) -> None:
         msg = format_oauth_failure_message("application has reached athlete capacity")
         self.assertIn("maximum allowed users", msg)
+        self.assertIn("Choose Logan sample data below", msg)
 
     def test_format_oauth_failure_message_for_generic_error(self) -> None:
         msg = format_oauth_failure_message("invalid redirect uri")
         self.assertIn("Strava sign-in failed", msg)
+        self.assertIn("Choose Logan sample data below", msg)
 
     def test_format_oauth_failure_message_handles_missing_details(self) -> None:
         msg = format_oauth_failure_message(None)
