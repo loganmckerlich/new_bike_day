@@ -120,6 +120,14 @@ class FakeClient:
 
 
 class DatabaseTests(unittest.TestCase):
+    def test_is_supabase_pause_error_matches_pause_messages(self) -> None:
+        self.assertTrue(db.is_supabase_pause_error("Project is paused due to inactivity"))
+        self.assertTrue(db.is_supabase_pause_error(RuntimeError("Supabase is restoring database")))
+
+    def test_is_supabase_pause_error_ignores_unrelated_messages(self) -> None:
+        self.assertFalse(db.is_supabase_pause_error("invalid api key"))
+        self.assertFalse(db.is_supabase_pause_error(None))
+
     def test_touch_user_creates_row_with_athlete_scope(self) -> None:
         client = FakeClient()
         with patch.object(db, "supabase", client):

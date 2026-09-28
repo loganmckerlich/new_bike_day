@@ -38,12 +38,27 @@ from src.database import (
     save_segments,
     save_ftp,
     save_user_ingest_dates,
+    is_supabase_pause_error,
 )
 from src.fetch import ingest_all, ingest_window, get_athlete_bikes, get_starred_segments, PremiumOnlyError
 from src.home_personality import load_dev_athlete_profile
-from src.auth import custom_auth_button, handle_redirect, get_demo_access_token
+from src.auth import custom_auth_button, handle_redirect, get_demo_access_token, format_oauth_failure_message
 
-def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = False) -> None:
+def _queue_sample_data_confirmation(message: str) -> None:
+    st.session_state["_sample_data_prompt_message"] = message
+
+
+def _clear_sample_data_confirmation() -> None:
+    st.session_state.pop("_sample_data_prompt_message", None)
+
+
+def get_and_save_data(
+    access_token: str,
+    athlete_id: int,
+    force_refresh: bool = False,
+    *,
+    sample_fallback_mode: str = "prompt",
+) -> bool:
     try:
         db_cached = _load_from_db(athlete_id)
         if force_refresh:
@@ -54,20 +69,53 @@ def get_and_save_data(access_token: str, athlete_id: int, force_refresh: bool = 
             clear_rides(athlete_id)
             message = _run_chunked_ingest(access_token, athlete_id, direction="older", initial=True)
             st.info(message)
-            return
+            _clear_sample_data_confirmation()
+            return True
         if db_cached is None:
             message = _run_chunked_ingest(access_token, athlete_id, direction="older", initial=True)
             st.info(message)
-            return
+            _clear_sample_data_confirmation()
+            return True
         data, gear_frame, bikes, bike_distances, ftp, rides = db_cached
     except PremiumOnlyError as exc:
         st.error(str(exc))
-        return
+        _queue_sample_data_confirmation("Live data failed to load. Choose Logan sample data below to continue.")
+        return False
     except (requests.RequestException, ValueError) as exc:
         traceback.print_exc(file=sys.stderr)
         st.error(f"Unable to process data: {exc}")
-        return
+        _queue_sample_data_confirmation("Live data failed to load. Choose Logan sample data below to continue.")
+        return False
+    except Exception as exc:
+        if is_supabase_pause_error(exc):
+            if sample_fallback_mode == "auto_static":
+                _load_static_demo_data(
+                    reason=(
+                        "Logan's live sample data from Supabase is unavailable right now. "
+                        "Falling back to static Logan sample data."
+                    )
+                )
+                return True
+            _queue_sample_data_confirmation(
+                "Supabase is currently waking up after being paused. "
+                "Choose Logan sample data below to continue."
+            )
+            return False
+        traceback.print_exc(file=sys.stderr)
+        st.error(f"Unable to process data: {exc}")
+        if sample_fallback_mode == "auto_static":
+            _load_static_demo_data(
+                reason=(
+                    "Logan's live sample data from Supabase could not be loaded. "
+                    "Falling back to static Logan sample data."
+                )
+            )
+            return True
+        _queue_sample_data_confirmation("Live data failed to load. Choose Logan sample data below to continue.")
+        return False
     _save_session(data, gear_frame, bikes, access_token, bike_distances, ftp, rides)
+    _clear_sample_data_confirmation()
+    return True
 
 # ---------------------------------------------------------------------------
 # Static cache helpers (Supabase-backed (soon))
@@ -587,16 +635,11 @@ def _save_session(
     st.session_state.pop("cleaned_efforts", None)
     st.session_state.pop("available_bikes", None)
 
-def _load_demo_data() -> None:
-    """Load demo data: live from my Strava account, falling back to static dev JSON."""
-    token_result = get_demo_access_token()
-    if token_result is not None:
-        access_token, athlete_id = token_result
-        if athlete_id is not None:
-            athlete_id = int(athlete_id)
-            st.session_state["strava_athlete"] = {"id": athlete_id}
-            get_and_save_data(access_token, athlete_id, force_refresh=False)
-            return
+def _load_static_demo_data(*, reason: str | None = None) -> None:
+    """Load static demo snapshots from local dev JSON."""
+    if reason:
+        st.warning(reason)
+    st.info("Using static Logan sample data from this repository.")
     # ponytail: fall back to static snapshots if secret is missing or token refresh fails
     result = ingest_all(access_token="", dev=True)
     _save_session(
@@ -616,11 +659,40 @@ def _load_demo_data() -> None:
     _render_bike_summaries(data, segments, bikes, bike_distances, rides)
 
 
+def _load_demo_data() -> None:
+    """Load demo data: live from my Strava account, falling back to static dev JSON."""
+    token_result = get_demo_access_token()
+    if token_result is not None:
+        access_token, athlete_id = token_result
+        if athlete_id is not None:
+            athlete_id = int(athlete_id)
+            st.session_state["strava_athlete"] = {"id": athlete_id}
+            st.info("Trying Logan's live sample data from Supabase…")
+            if get_and_save_data(
+                access_token,
+                athlete_id,
+                force_refresh=False,
+                sample_fallback_mode="auto_static",
+            ):
+                return
+    _load_static_demo_data(reason="Logan's live sample data is unavailable. Falling back to static Logan sample data.")
+
+
 def _fallback_to_sample_data(error_message: str) -> None:
-    """Show an error and fall back to demo data."""
-    st.error(error_message)
-    st.session_state["use_sample_data"] = True
-    _load_demo_data()
+    """Queue a user-confirmed fallback to Logan sample data."""
+    _queue_sample_data_confirmation(error_message)
+
+
+def _render_sample_data_confirmation() -> None:
+    message = st.session_state.get("_sample_data_prompt_message")
+    if not message or st.session_state.get("use_sample_data"):
+        return
+    st.warning(message)
+    if st.button("Use Logan sample data", key="confirm-logan-sample-data", type="primary", width="stretch"):
+        _clear_sample_data_confirmation()
+        st.session_state["use_sample_data"] = True
+        _load_demo_data()
+        st.rerun()
 
 
 def main() -> None:
@@ -666,6 +738,7 @@ def main() -> None:
             """)
         custom_auth_button()
         if not st.session_state.get("use_sample_data") and st.button("📊 View Logans Data", width="stretch"):
+            _clear_sample_data_confirmation()
             st.session_state["use_sample_data"] = True
             _load_demo_data()
             st.rerun()
@@ -711,8 +784,9 @@ def main() -> None:
     error_from_params = st.query_params.get("error") or st.session_state.pop("oauth_error", None)
 
     if error_from_params:
-        _fallback_to_sample_data(f"Strava sign-in failed: {error_from_params}. Showing sample data instead.")
-        return
+        _fallback_to_sample_data(format_oauth_failure_message(str(error_from_params)))
+
+    _render_sample_data_confirmation()
 
     if not st.session_state.get("strava_token") and not st.session_state.get("use_sample_data"):
         # dont load rest of page, wait for sign in
